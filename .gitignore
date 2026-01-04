@@ -3,6 +3,7 @@ _site/
 .quarto/
 *_files/
 *.html
+!docs/**/*.html
 !*.qmd
 
 # R artifacts
