@@ -4,7 +4,7 @@
     "href": "week12/index.html",
     "title": "Week 12: Distributions & Variability",
     "section": "",
-    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your Data Olympics dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
+    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16,7 +16,7 @@
     "href": "week12/index.html#overview",
     "title": "Week 12: Distributions & Variability",
     "section": "",
-    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your Data Olympics dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
+    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
     "crumbs": [
       "Home",
       "Term 2",
@@ -40,7 +40,7 @@
     "href": "week12/index.html#before-the-lecture",
     "title": "Week 12: Distributions & Variability",
     "section": "Before the Lecture",
-    "text": "Before the Lecture\n\n\n\n\n\n\nImportantRequired Preparation\n\n\n\n\nWatch the preview video (10 minutes)\nRead the lecture reading — covers distributions and variability concepts\nReview your Data Olympics results — we’ll use this data in class",
+    "text": "Before the Lecture\n\n\n\n\n\n\nImportantRequired Preparation\n\n\n\n\nWatch the preview video (10 minutes)\nRead the lecture reading — covers distributions and variability concepts\nReview your DataLab results — we’ll use this data in class",
     "crumbs": [
       "Home",
       "Term 2",
@@ -52,7 +52,7 @@
     "href": "week12/index.html#the-big-picture",
     "title": "Week 12: Distributions & Variability",
     "section": "The Big Picture",
-    "text": "The Big Picture\nThis week answers the question: How do we summarise data?\nBefore we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:\n\nLocate where the data is centred (central tendency)\nDescribe how spread out the data is (variability)\nVisualise the shape of the distribution\n\nWe’ll apply these tools to YOUR Data Olympics data — the reaction times, memory scores, and estimations you generated last week.",
+    "text": "The Big Picture\nThis week answers the question: How do we summarise data?\nBefore we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:\n\nLocate where the data is centred (central tendency)\nDescribe how spread out the data is (variability)\nVisualise the shape of the distribution\n\nWe’ll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -64,7 +64,7 @@
     "href": "week12/index.html#materials",
     "title": "Week 12: Distributions & Variability",
     "section": "Materials",
-    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nWhat to expect this week (watch before lecture)\n\n\nLecture Slides\nFull lecture presentation\n\n\nLecture Reading\nDistributions, central tendency, variability\n\n\nLab Reading\nIntroduction to R and descriptive statistics\n\n\nLab Slides\nOpening slides for the lab session\n\n\nLab Activity\nWebR exercises with Data Olympics data\n\n\nHomework\nPractice exercises (formative)",
+    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nWhat to expect this week (watch before lecture)\n\n\nLecture Slides\nFull lecture presentation\n\n\nLecture Reading\nDistributions, central tendency, variability\n\n\nLab Reading\nIntroduction to R and descriptive statistics\n\n\nLab Slides\nOpening slides for the lab session\n\n\nLab Activity\nWebR exercises with DataLab data\n\n\nHomework\nPractice exercises (formative)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -180,7 +180,7 @@
     "href": "week12/lab/reading.html#preparing-for-the-lab",
     "title": "Week 12 Lab Reading",
     "section": "Preparing for the Lab",
-    "text": "Preparing for the Lab\n\nWhat You’ll Do\nIn the lab, you’ll:\n\nLoad the Data Olympics dataset\nExplore the variables (columns)\nCalculate means, medians, and SDs for different measures\nCompare Room A vs Room B\nVisualise distributions with histograms\n\n\n\nBefore You Arrive\n\nRead this page (you’re doing that now!)\nHave the Lecture Reading fresh in mind\nBring a laptop or phone (WebR runs in any modern browser)\n\n\n\nWhat to Focus On\nThe goal isn’t to memorise R syntax. Focus on:\n\nWhat each statistic tells you (meaning over mechanics)\nHow the statistics relate to your Data Olympics experience\nWhy we compute these particular measures"
+    "text": "Preparing for the Lab\n\nWhat You’ll Do\nIn the lab, you’ll:\n\nLoad the DataLab dataset\nExplore the variables (columns)\nCalculate means, medians, and SDs for different measures\nCompare Room A vs Room B\nVisualise distributions with histograms\n\n\n\nBefore You Arrive\n\nRead this page (you’re doing that now!)\nHave the Lecture Reading fresh in mind\nBring a laptop or phone (WebR runs in any modern browser)\n\n\n\nWhat to Focus On\nThe goal isn’t to memorise R syntax. Focus on:\n\nWhat each statistic tells you (meaning over mechanics)\nHow the statistics relate to your DataLab experience\nWhy we compute these particular measures"
   },
   {
     "objectID": "week12/lab/reading.html#key-terms",
@@ -309,11 +309,11 @@
     "text": "Why Distribution Shape Matters\nDistribution shape affects:\n\nWhich central tendency to report: Use median for skewed data\nWhich statistical tests to use: Some tests assume normality\nHow to interpret the data: Skew suggests something interesting is happening\nOutlier detection: What counts as “unusual” depends on the distribution"
   },
   {
-    "objectID": "week12/lecture/reading.html#applying-this-to-the-data-olympics",
-    "href": "week12/lecture/reading.html#applying-this-to-the-data-olympics",
+    "objectID": "week12/lecture/reading.html#applying-this-to-datalab",
+    "href": "week12/lecture/reading.html#applying-this-to-datalab",
     "title": "Week 12 Reading",
-    "section": "Applying This to the Data Olympics",
-    "text": "Applying This to the Data Olympics\nYour Data Olympics data provides real examples:\n\nReaction Times\n\nLikely right-skewed (some slow responses, but can’t go below zero)\nShould we use mean or median?\nWhat does the SD tell us about consistency?\n\n\n\nMemory Scores\n\nMight be roughly normal (most people near average, fewer at extremes)\nIs there a ceiling effect (many people at maximum)?\nDoes variability differ between tasks?\n\n\n\nEstimation\n\nLikely skewed (errors often in one direction)\nCompare individual vs group estimates\nWhich is more variable?"
+    "section": "Applying This to DataLab",
+    "text": "Applying This to DataLab\nYour DataLab data provides real examples:\n\nReaction Times\n\nLikely right-skewed (some slow responses, but can’t go below zero)\nShould we use mean or median?\nWhat does the SD tell us about consistency?\n\n\n\nMemory Scores\n\nMight be roughly normal (most people near average, fewer at extremes)\nIs there a ceiling effect (many people at maximum)?\nDoes variability differ between tasks?\n\n\n\nEstimation\n\nLikely skewed (errors often in one direction)\nCompare individual vs group estimates\nWhich is more variable?"
   },
   {
     "objectID": "week12/lecture/reading.html#reporting-descriptives-in-apa-format",
@@ -346,121 +346,121 @@
   {
     "objectID": "week11/index.html",
     "href": "week11/index.html",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "",
-    "text": "ImportantFirst Week of Term\n\n\n\nThis is your first session of PS50008A. There is no lecture this week—your first contact is the Thursday lab where you’ll participate in the Data Olympics.\n\n\nThis week: Generate the dataset you’ll analyse throughout the term by participating in the Data Olympics—a series of cognitive tasks and group activities.\nLab: Thursday 10:00-12:00 (two parallel sessions)",
+    "text": "ImportantFirst Week of Term\n\n\n\nThis is your first session of PS50008A. There is no lecture this week—your first contact is the Thursday lab where you’ll participate in DataLab.\n\n\nThis week: Generate the dataset you’ll analyse throughout the term by participating in DataLab—a series of cognitive tasks and group activities.\nLab: Thursday 10:00-12:00 (two parallel sessions)",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#overview",
     "href": "week11/index.html#overview",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "",
-    "text": "ImportantFirst Week of Term\n\n\n\nThis is your first session of PS50008A. There is no lecture this week—your first contact is the Thursday lab where you’ll participate in the Data Olympics.\n\n\nThis week: Generate the dataset you’ll analyse throughout the term by participating in the Data Olympics—a series of cognitive tasks and group activities.\nLab: Thursday 10:00-12:00 (two parallel sessions)",
+    "text": "ImportantFirst Week of Term\n\n\n\nThis is your first session of PS50008A. There is no lecture this week—your first contact is the Thursday lab where you’ll participate in DataLab.\n\n\nThis week: Generate the dataset you’ll analyse throughout the term by participating in DataLab—a series of cognitive tasks and group activities.\nLab: Thursday 10:00-12:00 (two parallel sessions)",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
-    "objectID": "week11/index.html#what-is-the-data-olympics",
-    "href": "week11/index.html#what-is-the-data-olympics",
-    "title": "Week 11: Data Olympics",
-    "section": "What is the Data Olympics?",
-    "text": "What is the Data Olympics?\nThe Data Olympics is a series of rotating stations where you’ll:\n\nComplete cognitive tasks (reaction time, memory, estimation)\nWork in pairs and small groups\nGenerate real data about your own performance\nExperience being both participant and tester\n\nThis data becomes the teaching dataset for the entire module. When we learn about distributions, t-tests, and correlations, we’ll use your data.",
+    "objectID": "week11/index.html#what-is-datalab",
+    "href": "week11/index.html#what-is-datalab",
+    "title": "Week 11: DataLab",
+    "section": "What is DataLab?",
+    "text": "What is DataLab?\nDataLab is a series of rotating stations where you’ll:\n\nComplete cognitive tasks (reaction time, memory, estimation)\nWork in pairs and small groups\nGenerate real data about your own performance\nExperience being both participant and tester\n\nThis data becomes the teaching dataset for the entire module. When we learn about distributions, t-tests, and correlations, we’ll use your data.",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#before-the-lab",
     "href": "week11/index.html#before-the-lab",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "Before the Lab",
     "text": "Before the Lab\n\n\n\n\n\n\nNoteRequired Preparation\n\n\n\n\nWatch the preview video (5 minutes) — an introduction to the module\nCheck your lab allocation (Group A or Group B)\nArrive on time — we need to start promptly\n\n\n\n\nPreview Video",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#during-the-lab",
     "href": "week11/index.html#during-the-lab",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "During the Lab",
     "text": "During the Lab\nYou will rotate through 6 stations in pairs:\n\nSimple Reaction Time — How fast can you respond to a stimulus?\nChoice Reaction Time — How does decision-making affect speed?\nMemory Task — How many items can you recall?\nEstimation Task — How accurate are your judgments?\nGroup Estimation — Does group discussion improve accuracy?\nConfidence Ratings — How well do you know what you know?\n\nAt each station, you’ll record your data in Qualtrics.",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#form-your-groups",
     "href": "week11/index.html#form-your-groups",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "Form Your Groups",
     "text": "Form Your Groups\nBy the end of this lab, you should have formed your project groups (3-4 students). These groups will:\n\nWork together on the group project throughout the term\nConduct labs together from Week 16 onwards\nGenerate data for your Research Report\n\n\n\n\n\n\n\nTipChoosing Group Members\n\n\n\nConsider people you can reliably meet with outside class. You’ll be working together for the whole term.",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#learning-objectives",
     "href": "week11/index.html#learning-objectives",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "Learning Objectives",
     "text": "Learning Objectives\nBy the end of this week, you will be able to:\n\nDescribe what variables are and how they can vary\nExperience the difference between being a participant and a tester\nUnderstand that the same measurement gives different results each time\nWork systematically to record data",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#materials",
     "href": "week11/index.html#materials",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "Materials",
-    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nModule introduction (watch before lab)\n\n\nPreview Slides\nSlides from the preview video\n\n\nWeek 11 Reading\nIntroduction to research methods\n\n\nLab Reading\nBackground on the Data Olympics tasks\n\n\nLab Activity\nData Olympics stations and instructions\n\n\nLab Slides\nOpening slides for the lab session",
+    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nModule introduction (watch before lab)\n\n\nPreview Slides\nSlides from the preview video\n\n\nWeek 11 Reading\nIntroduction to research methods\n\n\nLab Reading\nBackground on the DataLab tasks\n\n\nLab Activity\nDataLab stations and instructions\n\n\nLab Slides\nOpening slides for the lab session",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#whats-next",
     "href": "week11/index.html#whats-next",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "What’s Next?",
-    "text": "What’s Next?\n\nWeek 12: Your first lecture (2 hours). We’ll analyse the Data Olympics results together.\nBy end of Week 11: Form your project groups.",
+    "text": "What’s Next?\n\nWeek 12: Your first lecture (2 hours). We’ll analyse the DataLab results together.\nBy end of Week 11: Form your project groups.",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
     "objectID": "week11/index.html#key-concepts-introduced",
     "href": "week11/index.html#key-concepts-introduced",
-    "title": "Week 11: Data Olympics",
+    "title": "Week 11: DataLab",
     "section": "Key Concepts Introduced",
     "text": "Key Concepts Introduced\n\nVariables as things that vary\nObservational data (no manipulation—we’re just measuring)\nSampling variability (two rooms, same protocol, different results?)\nSystematic data recording",
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: Data Olympics"
+      "Week 11: DataLab"
     ]
   },
   {
@@ -468,21 +468,21 @@
     "href": "week11/lab/reading.html",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the Data Olympics lab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
   },
   {
     "objectID": "week11/lab/reading.html#overview",
     "href": "week11/lab/reading.html#overview",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the Data Olympics lab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
   },
   {
     "objectID": "week11/lab/reading.html#what-youll-be-measuring",
     "href": "week11/lab/reading.html#what-youll-be-measuring",
     "title": "Week 11 Lab Reading",
     "section": "What You’ll Be Measuring",
-    "text": "What You’ll Be Measuring\nThe Data Olympics includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\nThe memory task measures how many items you can hold in working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement.\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)?"
+    "text": "What You’ll Be Measuring\nDataLab includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\nThe memory task measures how many items you can hold in working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement.\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)?"
   },
   {
     "objectID": "week11/lab/reading.html#why-generate-our-own-data",
@@ -604,11 +604,11 @@
     "text": "SLIDE 3: Why Research Methods?\n[Show: Why research methods slide]\nPsychology is a science. That means we don’t just have opinions about human behaviour — we test those opinions systematically.\nTo make credible claims about how people think, feel, and behave, we need: - Systematic observation - Controlled experiments - Statistical analysis - And peer review\nThis module gives you the tools to do all of this."
   },
   {
-    "objectID": "week11/lecture/video-script.html#slide-4-data-olympics-section-header",
-    "href": "week11/lecture/video-script.html#slide-4-data-olympics-section-header",
+    "objectID": "week11/lecture/video-script.html#slide-4-datalab-section-header",
+    "href": "week11/lecture/video-script.html#slide-4-datalab-section-header",
     "title": "",
-    "section": "SLIDE 4: Data Olympics Section Header",
-    "text": "SLIDE 4: Data Olympics Section Header\n[Show: “The Data Olympics” section header]\nLet’s talk about what’s happening this week."
+    "section": "SLIDE 4: DataLab Section Header",
+    "text": "SLIDE 4: DataLab Section Header\n[Show: “DataLab” section header]\nLet’s talk about what’s happening this week."
   },
   {
     "objectID": "week11/lecture/video-script.html#slide-5-thursday-your-first-session",
@@ -618,18 +618,18 @@
     "text": "SLIDE 5: Thursday — Your First Session\n[Show: No lecture callout slide]\nYour first contact with this module is NOT a lecture — it’s your Thursday lab session.\nThere’s no Monday lecture in Week 11 because of employability events across the university.\nSo your first contact is Thursday, 10 o’clock, in your allocated lab room."
   },
   {
-    "objectID": "week11/lecture/video-script.html#slide-6-what-are-the-data-olympics",
-    "href": "week11/lecture/video-script.html#slide-6-what-are-the-data-olympics",
+    "objectID": "week11/lecture/video-script.html#slide-6-what-is-datalab",
+    "href": "week11/lecture/video-script.html#slide-6-what-is-datalab",
     "title": "",
-    "section": "SLIDE 6: What Are the Data Olympics?",
-    "text": "SLIDE 6: What Are the Data Olympics?\n[Show: Data Olympics description slide]\nThe Data Olympics is a series of six cognitive task stations.\nYou’ll test your reaction times, complete memory tasks, make estimations, and rate your confidence.\nYou’ll work in pairs — taking turns as participant and tester. And you’ll record everything in Qualtrics using your phone or laptop."
+    "section": "SLIDE 6: What Is DataLab?",
+    "text": "SLIDE 6: What Is DataLab?\n[Show: DataLab description slide]\nDataLab is a series of six cognitive task stations.\nYou’ll test your reaction times, complete memory tasks, make estimations, and rate your confidence.\nYou’ll work in pairs — taking turns as participant and tester. And you’ll record everything in Qualtrics using your phone or laptop."
   },
   {
-    "objectID": "week11/lecture/video-script.html#slide-7-why-olympics",
-    "href": "week11/lecture/video-script.html#slide-7-why-olympics",
+    "objectID": "week11/lecture/video-script.html#slide-7-why-datalab",
+    "href": "week11/lecture/video-script.html#slide-7-why-datalab",
     "title": "",
-    "section": "SLIDE 7: Why “Olympics”?",
-    "text": "SLIDE 7: Why “Olympics”?\n[Show: Table showing how student data maps to topics]\nWhy do we call it the Olympics? Because the data YOU generate becomes our teaching dataset for the entire term.\nWhen we learn about distributions, we’ll look at YOUR reaction times. When we learn about t-tests, we’ll compare Room A versus Room B. When we learn about correlations, we’ll explore YOUR memory and confidence scores.\nYou’ll learn statistics using YOUR own data — not abstract textbook examples."
+    "section": "SLIDE 7: Why DataLab?",
+    "text": "SLIDE 7: Why DataLab?\n[Show: Table showing how student data maps to topics]\nWhy do we call it DataLab? Because the data YOU generate becomes our teaching dataset for the entire term.\nWhen we learn about distributions, we’ll look at YOUR reaction times. When we learn about t-tests, we’ll compare Room A versus Room B. When we learn about correlations, we’ll explore YOUR memory and confidence scores.\nYou’ll learn statistics using YOUR own data — not abstract textbook examples."
   },
   {
     "objectID": "week11/lecture/video-script.html#slide-8-the-6-stations-first-three",
@@ -706,7 +706,7 @@
     "href": "week11/lecture/video-script.html#slide-18-summary",
     "title": "",
     "section": "SLIDE 18: Summary",
-    "text": "SLIDE 18: Summary\n[Show: Summary slide with Thursday details]\nTo summarise: your first session is Thursday at 10 o’clock. You’ll participate in the Data Olympics and form your project groups.\nBring your phone or laptop, arrive on time, and come ready to have some fun with data.\nIf you have any questions before Thursday, email me at g.wright@gold.ac.uk or post in the VLE discussion board.\nSee you Thursday!"
+    "text": "SLIDE 18: Summary\n[Show: Summary slide with Thursday details]\nTo summarise: your first session is Thursday at 10 o’clock. You’ll participate in DataLab and form your project groups.\nBring your phone or laptop, arrive on time, and come ready to have some fun with data.\nIf you have any questions before Thursday, email me at g.wright@gold.ac.uk or post in the VLE discussion board.\nSee you Thursday!"
   },
   {
     "objectID": "week11/lecture/video-script.html#recording-notes",
@@ -744,18 +744,18 @@
     "text": "Thursday: Your First Session\n\n\n\n\n\n\nNo Lecture This Week\n\n\nYour first contact is Thursday’s lab session (10:00-12:00).\nThere is no Monday lecture in Week 11."
   },
   {
-    "objectID": "week11/lecture/slides.html#what-are-the-data-olympics",
-    "href": "week11/lecture/slides.html#what-are-the-data-olympics",
+    "objectID": "week11/lecture/slides.html#what-is-datalab",
+    "href": "week11/lecture/slides.html#what-is-datalab",
     "title": "Welcome to Research Methods",
-    "section": "What Are the Data Olympics?",
-    "text": "What Are the Data Olympics?\nA series of 6 cognitive task stations where you:\n\n\n\nTest reaction times\nComplete memory tasks\nMake estimations\nRate your confidence\n\n\n\nWork in pairs\nRecord data in Qualtrics\nExperience being a participant\nExperience being a tester"
+    "section": "What Is DataLab?",
+    "text": "What Is DataLab?\nA series of 6 cognitive task stations where you:\n\n\n\nTest reaction times\nComplete memory tasks\nMake estimations\nRate your confidence\n\n\n\nWork in pairs\nRecord data in Qualtrics\nExperience being a participant\nExperience being a tester"
   },
   {
-    "objectID": "week11/lecture/slides.html#why-olympics",
-    "href": "week11/lecture/slides.html#why-olympics",
+    "objectID": "week11/lecture/slides.html#why-datalab",
+    "href": "week11/lecture/slides.html#why-datalab",
     "title": "Welcome to Research Methods",
-    "section": "Why “Olympics”?",
-    "text": "Why “Olympics”?\nThe data you generate becomes our teaching dataset.\nWhen we learn about:\n\n\n\nTopic\nYour Data\n\n\n\n\nDistributions\nYour reaction times\n\n\nt-tests\nRoom A vs Room B\n\n\nCorrelations\nMemory vs confidence\n\n\n\n…we use your data, not abstract examples."
+    "section": "Why DataLab?",
+    "text": "Why DataLab?\nThe data you generate becomes our teaching dataset.\nWhen we learn about:\n\n\n\nTopic\nYour Data\n\n\n\n\nDistributions\nYour reaction times\n\n\nt-tests\nRoom A vs Room B\n\n\nCorrelations\nMemory vs confidence\n\n\n\n…we use your data, not abstract examples."
   },
   {
     "objectID": "week11/lecture/slides.html#the-6-stations",
@@ -811,7 +811,7 @@
     "href": "week11/lecture/slides.html#summary",
     "title": "Welcome to Research Methods",
     "section": "Summary",
-    "text": "Summary\n\nThursday 10:00-12:00\nData Olympics + Form Groups\n\nQuestions? Email g.wright@gold.ac.uk"
+    "text": "Summary\n\nThursday 10:00-12:00\nDataLab + Form Groups\n\nQuestions? Email g.wright@gold.ac.uk"
   },
   {
     "objectID": "week11/lecture/slides.html#quick-links",
@@ -957,7 +957,7 @@
     "href": "syllabus.html#module-description",
     "title": "Syllabus",
     "section": "Module Description",
-    "text": "Module Description\nThis module introduces foundation students to the principles of psychological research. You will learn how to design experiments, collect and analyse data, and report findings in accordance with professional standards.\nA distinctive feature of this module is the Data Olympics—in Week 11, you generate the dataset you’ll analyse throughout the term. This means you learn statistics using your own data, not abstract examples.",
+    "text": "Module Description\nThis module introduces foundation students to the principles of psychological research. You will learn how to design experiments, collect and analyse data, and report findings in accordance with professional standards.\nA distinctive feature of this module is DataLab—in Week 11, you generate the dataset you’ll analyse throughout the term. This means you learn statistics using your own data, not abstract examples.",
     "crumbs": [
       "Home",
       "Overview",
@@ -981,7 +981,7 @@
     "href": "syllabus.html#teaching-schedule",
     "title": "Syllabus",
     "section": "Teaching Schedule",
-    "text": "Teaching Schedule\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nMonday\nTBC\nTBC\n\n\nLab Group A\nThursday\n10:00-12:00\nTBC\n\n\nLab Group B\nThursday\n10:00-12:00\nTBC\n\n\n\n\n\n\n\n\n\nNoteWeek 11\n\n\n\nThere is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for the Data Olympics.",
+    "text": "Teaching Schedule\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nMonday\nTBC\nTBC\n\n\nLab Group A\nThursday\n10:00-12:00\nTBC\n\n\nLab Group B\nThursday\n10:00-12:00\nTBC\n\n\n\n\n\n\n\n\n\nNoteWeek 11\n\n\n\nThere is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for DataLab.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1053,7 +1053,7 @@
     "href": "syllabus.html#attendance-policy",
     "title": "Syllabus",
     "section": "Attendance Policy",
-    "text": "Attendance Policy\nAttendance at all lectures and labs is expected and required. This module builds cumulatively—missing sessions will affect your understanding of later material.\n\nAttendance is recorded via SEATS in both lectures and labs\nPreparation and independent study are expected each week\nPreview videos should be watched before lectures\nReadings should be completed as specified\n\n\n\n\n\n\n\nWarningThe Data Olympics\n\n\n\nYou must attend Week 11 to participate in the Data Olympics. This generates the dataset used throughout the term.",
+    "text": "Attendance Policy\nAttendance at all lectures and labs is expected and required. This module builds cumulatively—missing sessions will affect your understanding of later material.\n\nAttendance is recorded via SEATS in both lectures and labs\nPreparation and independent study are expected each week\nPreview videos should be watched before lectures\nReadings should be completed as specified\n\n\n\n\n\n\n\nWarningDataLab\n\n\n\nYou must attend Week 11 to participate in DataLab. This generates the dataset used throughout the term.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1145,11 +1145,11 @@
     ]
   },
   {
-    "objectID": "index.html#the-data-olympics",
-    "href": "index.html#the-data-olympics",
+    "objectID": "index.html#datalab",
+    "href": "index.html#datalab",
     "title": "PS50008A Research Methods & Experimental Design",
-    "section": "The Data Olympics",
-    "text": "The Data Olympics\nIn Week 11, you’ll participate in the Data Olympics—a series of cognitive tasks and group activities that generate the dataset you’ll analyse throughout the term. This means you’ll learn statistics using your own data, not abstract examples.",
+    "section": "DataLab",
+    "text": "DataLab\nIn Week 11, you’ll participate in DataLab—a series of cognitive tasks and group activities that generate the dataset you’ll analyse throughout the term. This means you’ll learn statistics using your own data, not abstract examples.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1209,7 +1209,7 @@
     "href": "index.html#quick-links",
     "title": "PS50008A Research Methods & Experimental Design",
     "section": "Quick Links",
-    "text": "Quick Links\n\n\nThis Week\n\nWeek 11: Data Olympics\n\n\n\nKey Pages\n\nSchedule\nAssessments\nResources",
+    "text": "Quick Links\n\n\nThis Week\n\nWeek 11: DataLab\n\n\n\nKey Pages\n\nSchedule\nAssessments\nResources",
     "crumbs": [
       "Home",
       "Overview",
@@ -1245,7 +1245,7 @@
     "href": "schedule.html#weekly-overview",
     "title": "Schedule",
     "section": "Weekly Overview",
-    "text": "Weekly Overview\n\n\n\nWeek\nDates\nTopic\nLecture\nLab\nAssessment\n\n\n\n\n11\n12-16 Jan\nData Olympics\nVideo only\nData Olympics\nForm groups\n\n\n12\n19-23 Jan\nDistributions & Variability\nYes\nDescriptives in R\n\n\n\n13\n26-30 Jan\nEstimation & CIs\nYes\nBootstrap CIs\n\n\n\n14\n2-6 Feb\nInference & t-tests\nYes\nt-tests in R\n\n\n\n15\n9-13 Feb\nCorrelation\nYes\nCorrelation in R\n\n\n\n—\n16-20 Feb\nReading Week\n—\n—\nWork on Research Plan\n\n\n16\n23-27 Feb\nRegression\nYes\nProject groups\nResearch Plan due Fri 27 Feb\n\n\n17\n2-6 Mar\nInterpretation & Credibility\nYes\nProject groups\n\n\n\n18\n9-13 Mar\nMCQ Exam\nMCQ Exam\nProject groups\nMCQ Exam Mon 9 Mar\n\n\n19\n16-20 Mar\nProject Workshop\nYes\nProject groups\n\n\n\n20\n23-27 Mar\nEDS Prep\nNo\nEDS support\nEDS due Fri 20 Mar",
+    "text": "Weekly Overview\n\n\n\nWeek\nDates\nTopic\nLecture\nLab\nAssessment\n\n\n\n\n11\n12-16 Jan\nDataLab\nVideo only\nDataLab\nForm groups\n\n\n12\n19-23 Jan\nDistributions & Variability\nYes\nDescriptives in R\n\n\n\n13\n26-30 Jan\nEstimation & CIs\nYes\nBootstrap CIs\n\n\n\n14\n2-6 Feb\nInference & t-tests\nYes\nt-tests in R\n\n\n\n15\n9-13 Feb\nCorrelation\nYes\nCorrelation in R\n\n\n\n—\n16-20 Feb\nReading Week\n—\n—\nWork on Research Plan\n\n\n16\n23-27 Feb\nRegression\nYes\nProject groups\nResearch Plan due Fri 27 Feb\n\n\n17\n2-6 Mar\nInterpretation & Credibility\nYes\nProject groups\n\n\n\n18\n9-13 Mar\nMCQ Exam\nMCQ Exam\nProject groups\nMCQ Exam Mon 9 Mar\n\n\n19\n16-20 Mar\nProject Workshop\nYes\nProject groups\n\n\n\n20\n23-27 Mar\nEDS Prep\nNo\nEDS support\nEDS due Fri 20 Mar",
     "crumbs": [
       "Home",
       "Overview",
@@ -1281,7 +1281,7 @@
     "href": "schedule.html#week-by-week-detail",
     "title": "Schedule",
     "section": "Week-by-Week Detail",
-    "text": "Week-by-Week Detail\n\nFirst Half: Building Skills (Weeks 11-15)\nWeek 11: Data Olympics\n\nGenerate the dataset you’ll use all term\nForm your project groups\nNo lecture—preview video only\n\nWeek 12: Distributions & Variability\n\nFirst lecture (2 hours)\nMean, median, mode, standard deviation\nIntroduction to R for descriptives\nReport writing: Descriptive statistics\n\nWeek 13: Estimation & Confidence Intervals\n\nPoint estimates vs interval estimates\nBootstrap confidence intervals\nEffect sizes (Cohen’s d)\nReport writing: CIs and effect sizes\n\nWeek 14: Inference & t-tests\n\nNull hypothesis logic\np-values and significance\nBetween vs within designs\nt-tests and their nonparametric alternatives\nReport writing: t-test results\n\nWeek 15: Correlation\n\nScatterplots and relationships\nPearson vs Spearman\nCorrelation ≠ causation\nLast week before Reading Week\nReport writing: Correlation results\n\n\n\nReading Week\n\nWork on your Research Plan (due Week 16)\nReview material for MCQ (Week 18)\nNo taught sessions\n\n\n\nSecond Half: Application & Assessment (Weeks 16-20)\nWeek 16: Regression\n\nResearch Plan due Friday\nFrom correlation to prediction\nLine of best fit\nLabs now in project groups\nReport writing: Methods section\n\nWeek 17: Interpretation & Credibility\n\nP-hacking and HARKing\nReplication crisis\nMCQ prep in lecture\nReport writing: Introduction section\n\nWeek 18: MCQ Exam\n\nMCQ Exam Monday (in lecture slot)\nLab is project support\nReport writing: Introduction continued\n\nWeek 19: Project Workshop\n\nAPA results reporting\nProject analysis support\nEDS preview\nReport writing: Discussion preview\n\nWeek 20: EDS Prep\n\nEDS Assignment due Friday\nNo lecture\nLab support for EDS and projects\nReport writing: Discussion section",
+    "text": "Week-by-Week Detail\n\nFirst Half: Building Skills (Weeks 11-15)\nWeek 11: DataLab\n\nGenerate the dataset you’ll use all term\nForm your project groups\nNo lecture—preview video only\n\nWeek 12: Distributions & Variability\n\nFirst lecture (2 hours)\nMean, median, mode, standard deviation\nIntroduction to R for descriptives\nReport writing: Descriptive statistics\n\nWeek 13: Estimation & Confidence Intervals\n\nPoint estimates vs interval estimates\nBootstrap confidence intervals\nEffect sizes (Cohen’s d)\nReport writing: CIs and effect sizes\n\nWeek 14: Inference & t-tests\n\nNull hypothesis logic\np-values and significance\nBetween vs within designs\nt-tests and their nonparametric alternatives\nReport writing: t-test results\n\nWeek 15: Correlation\n\nScatterplots and relationships\nPearson vs Spearman\nCorrelation ≠ causation\nLast week before Reading Week\nReport writing: Correlation results\n\n\n\nReading Week\n\nWork on your Research Plan (due Week 16)\nReview material for MCQ (Week 18)\nNo taught sessions\n\n\n\nSecond Half: Application & Assessment (Weeks 16-20)\nWeek 16: Regression\n\nResearch Plan due Friday\nFrom correlation to prediction\nLine of best fit\nLabs now in project groups\nReport writing: Methods section\n\nWeek 17: Interpretation & Credibility\n\nP-hacking and HARKing\nReplication crisis\nMCQ prep in lecture\nReport writing: Introduction section\n\nWeek 18: MCQ Exam\n\nMCQ Exam Monday (in lecture slot)\nLab is project support\nReport writing: Introduction continued\n\nWeek 19: Project Workshop\n\nAPA results reporting\nProject analysis support\nEDS preview\nReport writing: Discussion preview\n\nWeek 20: EDS Prep\n\nEDS Assignment due Friday\nNo lecture\nLab support for EDS and projects\nReport writing: Discussion section",
     "crumbs": [
       "Home",
       "Overview",
@@ -1293,7 +1293,7 @@
     "href": "schedule.html#key-dates-summary",
     "title": "Schedule",
     "section": "Key Dates Summary",
-    "text": "Key Dates Summary\nJan 12-16     Week 11: Data Olympics (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 9         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nMay 1         Research Report due (noon)",
+    "text": "Key Dates Summary\nJan 12-16     Week 11: DataLab (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 9         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nMay 1         Research Report due (noon)",
     "crumbs": [
       "Home",
       "Overview",
@@ -1377,7 +1377,7 @@
     "href": "resources.html#datasets",
     "title": "Resources",
     "section": "Datasets",
-    "text": "Datasets\nThe main dataset for this module is generated in Week 11 (Data Olympics). Additional practice datasets will be provided for specific activities.\n\n\n\nDataset\nWeek\nDescription\n\n\n\n\nData Olympics\n11\nClass dataset used throughout term\n\n\nEDS Practice\n14+\nPractice data for EDS preparation",
+    "text": "Datasets\nThe main dataset for this module is generated in Week 11 (DataLab). Additional practice datasets will be provided for specific activities.\n\n\n\nDataset\nWeek\nDescription\n\n\n\n\nDataLab\n11\nClass dataset used throughout term\n\n\nEDS Practice\n14+\nPractice data for EDS preparation",
     "crumbs": [
       "Home",
       "Overview",
@@ -1488,7 +1488,7 @@
     "href": "week11/lecture/reading.html#variables-things-that-vary",
     "title": "Week 11 Reading",
     "section": "Variables: Things That Vary",
-    "text": "Variables: Things That Vary\nA variable is anything that can take different values.\n\nExamples of Variables\n\n\n\nVariable\nPossible Values\n\n\n\n\nHeight\n150cm, 165cm, 180cm…\n\n\nReaction time\n200ms, 350ms, 420ms…\n\n\nMood\nHappy, sad, anxious, neutral…\n\n\nNumber of words recalled\n0, 1, 2, 3… 20\n\n\nExam score\n0-100\n\n\n\n\n\nWhy Variables Matter\nResearch is fundamentally about understanding how variables relate to each other:\n\nDoes study time affect exam performance?\nDoes sleep quality predict reaction time?\nIs age related to memory capacity?\n\nIn the Data Olympics, you’ll measure several variables and see how they differ between people and across conditions.\n\n\nTypes of Variables\nContinuous variables can take any value within a range: - Height (175.3cm) - Reaction time (287.4ms) - Temperature (36.8°C)\nCategorical variables fall into distinct categories: - Gender (male, female, non-binary) - Experimental condition (control, treatment) - Handedness (left, right, ambidextrous)\nDiscrete variables are countable whole numbers: - Number of items recalled (7) - Number of errors (3) - Number of children (2)\nUnderstanding variable types helps you choose appropriate statistical analyses — something you’ll learn throughout this module."
+    "text": "Variables: Things That Vary\nA variable is anything that can take different values.\n\nExamples of Variables\n\n\n\nVariable\nPossible Values\n\n\n\n\nHeight\n150cm, 165cm, 180cm…\n\n\nReaction time\n200ms, 350ms, 420ms…\n\n\nMood\nHappy, sad, anxious, neutral…\n\n\nNumber of words recalled\n0, 1, 2, 3… 20\n\n\nExam score\n0-100\n\n\n\n\n\nWhy Variables Matter\nResearch is fundamentally about understanding how variables relate to each other:\n\nDoes study time affect exam performance?\nDoes sleep quality predict reaction time?\nIs age related to memory capacity?\n\nIn DataLab, you’ll measure several variables and see how they differ between people and across conditions.\n\n\nTypes of Variables\nContinuous variables can take any value within a range: - Height (175.3cm) - Reaction time (287.4ms) - Temperature (36.8°C)\nCategorical variables fall into distinct categories: - Gender (male, female, non-binary) - Experimental condition (control, treatment) - Handedness (left, right, ambidextrous)\nDiscrete variables are countable whole numbers: - Number of items recalled (7) - Number of errors (3) - Number of children (2)\nUnderstanding variable types helps you choose appropriate statistical analyses — something you’ll learn throughout this module."
   },
   {
     "objectID": "week11/lecture/reading.html#how-empirical-evidence-helps-us-understand-behaviour",
@@ -1498,11 +1498,11 @@
     "text": "How Empirical Evidence Helps Us Understand Behaviour\n\nMoving Beyond Speculation\nWithout data, debates about human behaviour often go in circles. Everyone has opinions, but how do we know whose is correct?\nEmpirical evidence allows us to:\n\nTest competing theories — Instead of arguing, we can design studies to see which prediction holds\nDiscover unexpected findings — Data often reveals patterns we wouldn’t have predicted\nQuantify effects — Not just “X affects Y” but “X increases Y by approximately this much”\nIdentify boundary conditions — Under what circumstances does a finding hold or not hold?\n\n\n\nAn Example: Does Punishment Deter Crime?\nCommon sense might suggest that harsher punishments reduce crime. But what does the evidence show?\nResearch has found: - Certainty of punishment matters more than severity - Very harsh sentences may actually increase recidivism in some cases - Deterrent effects vary by crime type and offender characteristics\nWithout systematic data collection, we’d have no way to discover these nuances."
   },
   {
-    "objectID": "week11/lecture/reading.html#connecting-to-the-data-olympics",
-    "href": "week11/lecture/reading.html#connecting-to-the-data-olympics",
+    "objectID": "week11/lecture/reading.html#connecting-to-datalab",
+    "href": "week11/lecture/reading.html#connecting-to-datalab",
     "title": "Week 11 Reading",
-    "section": "Connecting to the Data Olympics",
-    "text": "Connecting to the Data Olympics\nIn Thursday’s lab, you’ll experience research from both perspectives:\n\nAs a participant — completing cognitive tasks\nAs a tester — administering tasks and recording data\n\nThis dual perspective helps you understand:\n\nWhy standardised procedures matter (you’ll see what happens when instructions vary)\nHow measurement introduces variability (the same person gives different responses across trials)\nWhat it feels like to generate data that will be analysed\n\nThe data you generate will be used throughout the term. When we discuss distributions in Week 12, we’ll look at the distribution of your reaction times. When we learn about t-tests in Week 14, we’ll compare performance between Room A and Room B."
+    "section": "Connecting to DataLab",
+    "text": "Connecting to DataLab\nIn Thursday’s lab, you’ll experience research from both perspectives:\n\nAs a participant — completing cognitive tasks\nAs a tester — administering tasks and recording data\n\nThis dual perspective helps you understand:\n\nWhy standardised procedures matter (you’ll see what happens when instructions vary)\nHow measurement introduces variability (the same person gives different responses across trials)\nWhat it feels like to generate data that will be analysed\n\nThe data you generate will be used throughout the term. When we discuss distributions in Week 12, we’ll look at the distribution of your reaction times. When we learn about t-tests in Week 14, we’ll compare performance between Room A and Room B."
   },
   {
     "objectID": "week11/lecture/reading.html#summary",
@@ -1544,14 +1544,14 @@
     "href": "week11/lecture/video.html#what-this-video-covers",
     "title": "Week 11 Preview Video",
     "section": "What This Video Covers",
-    "text": "What This Video Covers\n\nWelcome to the module — who we are, what you’ll learn\nThe assessments — four assessments across the term\nThe Data Olympics — what will happen in your first lab\nWhat to bring — just yourself and a phone/laptop\nForming groups — you’ll form project groups by the end of Week 11"
+    "text": "What This Video Covers\n\nWelcome to the module — who we are, what you’ll learn\nThe assessments — four assessments across the term\nDataLab — what will happen in your first lab\nWhat to bring — just yourself and a phone/laptop\nForming groups — you’ll form project groups by the end of Week 11"
   },
   {
     "objectID": "week11/lecture/video.html#key-points",
     "href": "week11/lecture/video.html#key-points",
     "title": "Week 11 Preview Video",
     "section": "Key Points",
-    "text": "Key Points\n\nAbout the Module\nThis module teaches you to think like a researcher:\n\nHow do we design studies that can answer our questions?\nHow do we analyse data to draw conclusions?\nHow do we report findings professionally?\n\n\n\nThe Data Olympics\nYour first lab is the Data Olympics—a series of cognitive tasks where you’ll generate the dataset used throughout the term. You’ll learn statistics using your own data.\n\n\nAssessments\n\n\n\nAssessment\nWeight\nWhen\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nSee the Assessments page for details.\n\n\nProject Groups\nBy the end of Week 11, you should have formed your project groups (3-4 students). Choose people you can reliably work with throughout the term."
+    "text": "Key Points\n\nAbout the Module\nThis module teaches you to think like a researcher:\n\nHow do we design studies that can answer our questions?\nHow do we analyse data to draw conclusions?\nHow do we report findings professionally?\n\n\n\nDataLab\nYour first lab is DataLab—a series of cognitive tasks where you’ll generate the dataset used throughout the term. You’ll learn statistics using your own data.\n\n\nAssessments\n\n\n\nAssessment\nWeight\nWhen\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nSee the Assessments page for details.\n\n\nProject Groups\nBy the end of Week 11, you should have formed your project groups (3-4 students). Choose people you can reliably work with throughout the term."
   },
   {
     "objectID": "week11/lecture/video.html#before-your-lab",
@@ -1570,163 +1570,163 @@
   {
     "objectID": "week11/lab/slides.html#welcome-to-ps50008a",
     "href": "week11/lab/slides.html#welcome-to-ps50008a",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Welcome to PS50008A!",
     "text": "Welcome to PS50008A!\nResearch Methods & Experimental Design\nYour first session of the module"
   },
   {
-    "objectID": "week11/lab/slides.html#today-the-data-olympics",
-    "href": "week11/lab/slides.html#today-the-data-olympics",
-    "title": "Data Olympics",
-    "section": "Today: The Data Olympics",
-    "text": "Today: The Data Olympics\n\nToday You Will:\n\nRotate through 6 stations in pairs\nComplete cognitive tasks\nRecord your data in Qualtrics\nForm your project groups"
+    "objectID": "week11/lab/slides.html#today-datalab",
+    "href": "week11/lab/slides.html#today-datalab",
+    "title": "DataLab",
+    "section": "Today: DataLab",
+    "text": "Today: DataLab\n\nToday You Will:\n\nRotate through 6 stations in pairs\nComplete cognitive tasks\nRecord your data in Qualtrics\nForm your project groups"
   },
   {
-    "objectID": "week11/lab/slides.html#why-data-olympics",
-    "href": "week11/lab/slides.html#why-data-olympics",
-    "title": "Data Olympics",
-    "section": "Why “Data Olympics”?",
-    "text": "Why “Data Olympics”?\nThe data you generate today becomes our teaching dataset for the term.\nWhen we learn about:\n\nDistributions → your reaction times\nt-tests → Room A vs Room B\nCorrelations → your variables\n\n…we’ll use your data."
+    "objectID": "week11/lab/slides.html#why-datalab",
+    "href": "week11/lab/slides.html#why-datalab",
+    "title": "DataLab",
+    "section": "Why DataLab?",
+    "text": "Why DataLab?\nThe data you generate today becomes our teaching dataset for the term.\nWhen we learn about:\n\nDistributions → your reaction times\nt-tests → Room A vs Room B\nCorrelations → your variables\n\n…we’ll use your data."
   },
   {
     "objectID": "week11/lab/slides.html#six-stations",
     "href": "week11/lab/slides.html#six-stations",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Six Stations",
     "text": "Six Stations\n\n\n\n1. Simple Reaction Time\nHow fast can you respond?\n\n\n2. Choice Reaction Time\nDoes decision-making slow you down?\n\n\n3. Memory Task\nHow many items can you recall?\n\n\n\n4. Estimation Task\nHow accurate are your judgments?\n\n\n5. Group Estimation\nDoes discussion improve accuracy?\n\n\n6. Confidence Ratings\nHow well do you know what you know?"
   },
   {
     "objectID": "week11/lab/slides.html#the-process",
     "href": "week11/lab/slides.html#the-process",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "The Process",
     "text": "The Process\n\nFind a partner\nGo to your assigned starting station\nComplete the task (one tests, one participates)\nRecord data in Qualtrics\nSwap roles\nMove to next station when signalled"
   },
   {
     "objectID": "week11/lab/slides.html#recording-your-data",
     "href": "week11/lab/slides.html#recording-your-data",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Recording Your Data",
     "text": "Recording Your Data\n\n\n\n\n\n\nThis is Real Research!\n\n\nRecord data carefully—your data will be used throughout the term.\n\n\n\n\nUse the Qualtrics link on your phone/laptop\nEnter your participant ID (we’ll assign these)\nFollow the instructions at each station"
   },
   {
     "objectID": "week11/lab/slides.html#timing",
     "href": "week11/lab/slides.html#timing",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Timing",
     "text": "Timing\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:15\nWelcome & setup\n\n\n10:15-11:30\nStation rotations (~12 min each)\n\n\n11:30-11:50\nForm project groups\n\n\n11:50-12:00\nWrap-up"
   },
   {
     "objectID": "week11/lab/slides.html#form-your-groups",
     "href": "week11/lab/slides.html#form-your-groups",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Form Your Groups",
     "text": "Form Your Groups\nBy the end of today, form groups of 3-4 students.\n\n\n\n\n\n\nConsider:\n\n\n\nCan you meet outside class?\nWill you be reliable partners?\nYou’ll work together all term"
   },
   {
     "objectID": "week11/lab/slides.html#what-groups-do",
     "href": "week11/lab/slides.html#what-groups-do",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "What Groups Do",
     "text": "What Groups Do\nYour group will:\n\nWork together on the group research project\nConduct labs together from Week 16\nGenerate data for the Research Report (Week 22)"
   },
   {
     "objectID": "week11/lab/slides.html#questions",
     "href": "week11/lab/slides.html#questions",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Questions?",
     "text": "Questions?\n\nAny questions before we start?"
   },
   {
     "objectID": "week11/lab/slides.html#station-instructions",
     "href": "week11/lab/slides.html#station-instructions",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station Instructions",
     "text": "Station Instructions\nSee the Lab Activity page for detailed instructions at each station.\n\n\n\n\n\n\nQualtrics Link\n\n\n[Link TBC]\n\n\n\n\n\nAssign participant IDs\nDirect students to starting stations\nSet timer for 12 minutes per rotation\nSignal rotation changes clearly"
   },
   {
     "objectID": "week11/lab/activity.html",
     "href": "week11/lab/activity.html",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "",
-    "text": "ImportantData Olympics Stations\n\n\n\nThis page contains instructions for each Data Olympics station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
+    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
   },
   {
     "objectID": "week11/lab/activity.html#overview",
     "href": "week11/lab/activity.html#overview",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "",
-    "text": "ImportantData Olympics Stations\n\n\n\nThis page contains instructions for each Data Olympics station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
+    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
   },
   {
     "objectID": "week11/lab/activity.html#before-you-start",
     "href": "week11/lab/activity.html#before-you-start",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Before You Start",
     "text": "Before You Start\n\nFind a partner\nGet your participant ID from the instructors\nOpen the Qualtrics survey: [Link TBC]"
   },
   {
     "objectID": "week11/lab/activity.html#station-1-simple-reaction-time",
     "href": "week11/lab/activity.html#station-1-simple-reaction-time",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 1: Simple Reaction Time",
     "text": "Station 1: Simple Reaction Time\nTask: How fast can you respond to a simple stimulus?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Number of trials"
   },
   {
     "objectID": "week11/lab/activity.html#station-2-choice-reaction-time",
     "href": "week11/lab/activity.html#station-2-choice-reaction-time",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 2: Choice Reaction Time",
     "text": "Station 2: Choice Reaction Time\nTask: How does having to make a decision affect your response time?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Accuracy - Number of trials"
   },
   {
     "objectID": "week11/lab/activity.html#station-3-memory-task",
     "href": "week11/lab/activity.html#station-3-memory-task",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 3: Memory Task",
     "text": "Station 3: Memory Task\nTask: How many items can you recall?\nProcedure: TBC\nWhat you’ll record: - Number of items recalled - Type of items"
   },
   {
     "objectID": "week11/lab/activity.html#station-4-estimation-task",
     "href": "week11/lab/activity.html#station-4-estimation-task",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 4: Estimation Task",
     "text": "Station 4: Estimation Task\nTask: How accurate are your judgments?\nProcedure: TBC\nWhat you’ll record: - Your estimate - Actual value - Estimation error"
   },
   {
     "objectID": "week11/lab/activity.html#station-5-group-estimation",
     "href": "week11/lab/activity.html#station-5-group-estimation",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 5: Group Estimation",
     "text": "Station 5: Group Estimation\nTask: Does group discussion improve estimation accuracy?\nProcedure: TBC\nWhat you’ll record: - Individual estimates - Group estimate - Actual value"
   },
   {
     "objectID": "week11/lab/activity.html#station-6-confidence-ratings",
     "href": "week11/lab/activity.html#station-6-confidence-ratings",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Station 6: Confidence Ratings",
     "text": "Station 6: Confidence Ratings\nTask: How well do you know what you know?\nProcedure: TBC\nWhat you’ll record: - Performance on task - Confidence rating"
   },
   {
     "objectID": "week11/lab/activity.html#after-the-stations",
     "href": "week11/lab/activity.html#after-the-stations",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "After the Stations",
     "text": "After the Stations\n\nForm Your Project Groups\nBy the end of the session, form groups of 3-4 students.\nYour group will: - Work together on the group research project - Conduct labs together from Week 16 - Generate data for the Research Report (Week 22)\n\n\n\n\n\n\nTipTips for Group Formation\n\n\n\n\nChoose people you can reliably meet with outside class\nConsider different strengths (organisation, analysis, writing)\nExchange contact details before leaving\n\n\n\n\n\nRegister Your Group\nOnce formed, register your group: [Link TBC]"
   },
   {
     "objectID": "week11/lab/activity.html#key-takeaways",
     "href": "week11/lab/activity.html#key-takeaways",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\n\n\n\n\n\nNoteWhat We Did Today\n\n\n\n\nGenerated data as both participants and testers\nExperienced variability in human performance\nStarted thinking about variables and measurement\nFormed project groups for the term"
   },
   {
     "objectID": "week11/lab/activity.html#next-week",
     "href": "week11/lab/activity.html#next-week",
-    "title": "Data Olympics",
+    "title": "DataLab",
     "section": "Next Week",
-    "text": "Next Week\nWeek 12: Your first lecture!\n\nWe’ll analyse the Data Olympics results together\nIntroduction to distributions and variability\nYour reaction times become our teaching example\n\nSee Week 12 for details."
+    "text": "Next Week\nWeek 12: Your first lecture!\n\nWe’ll analyse the DataLab results together\nIntroduction to distributions and variability\nYour reaction times become our teaching example\n\nSee Week 12 for details."
   },
   {
     "objectID": "week12/lecture/slides.html#how-do-we-summarise-data",
@@ -2020,7 +2020,7 @@
     "href": "week12/lecture/slides.html#whats-next",
     "title": "Distributions & Variability",
     "section": "What’s Next?",
-    "text": "What’s Next?\nThursday Lab: Computing descriptives in R using YOUR Data Olympics data\nWeek 13: Estimation & Confidence Intervals"
+    "text": "What’s Next?\nThursday Lab: Computing descriptives in R using YOUR DataLab data\nWeek 13: Estimation & Confidence Intervals"
   },
   {
     "objectID": "week12/lecture/video.html",
@@ -2041,21 +2041,21 @@
     "href": "week12/lecture/video.html#what-this-video-covers",
     "title": "Week 12 Preview Video",
     "section": "What This Video Covers",
-    "text": "What This Video Covers\n\nWhy we summarise data — from 100 numbers to meaningful statistics\nCentral tendency — mean, median, and mode\nVariability — range, variance, and standard deviation\nDistribution shapes — normal, skewed, bimodal\nConnecting to your Data Olympics data — what we’ll analyse"
+    "text": "What This Video Covers\n\nWhy we summarise data — from 100 numbers to meaningful statistics\nCentral tendency — mean, median, and mode\nVariability — range, variance, and standard deviation\nDistribution shapes — normal, skewed, bimodal\nConnecting to your DataLab data — what we’ll analyse"
   },
   {
     "objectID": "week12/lecture/video.html#key-concepts-preview",
     "href": "week12/lecture/video.html#key-concepts-preview",
     "title": "Week 12 Preview Video",
     "section": "Key Concepts Preview",
-    "text": "Key Concepts Preview\n\nThe Big Question\nHow do we go from raw data to meaningful summaries?\nWhen you collected reaction times in the Data Olympics, you generated dozens of individual measurements. This week, we learn how to compress that information into statistics that tell a clear story.\n\n\nCentral Tendency\nWhere is the “centre” of the data?\n\nMean: The arithmetic average — add everything up, divide by how many\nMedian: The middle value when sorted — resistant to outliers\nMode: The most common value — useful for categories\n\n\n\nVariability\nHow spread out is the data?\n\nRange: Maximum minus minimum — simple but limited\nStandard deviation: How far, on average, values are from the mean\n\n\n\nDistribution Shape\nWhat does the data look like?\n\nNormal: Symmetric, bell-shaped\nSkewed: Tail on one side (positive = right, negative = left)\nBimodal: Two peaks"
+    "text": "Key Concepts Preview\n\nThe Big Question\nHow do we go from raw data to meaningful summaries?\nWhen you collected reaction times in DataLab, you generated dozens of individual measurements. This week, we learn how to compress that information into statistics that tell a clear story.\n\n\nCentral Tendency\nWhere is the “centre” of the data?\n\nMean: The arithmetic average — add everything up, divide by how many\nMedian: The middle value when sorted — resistant to outliers\nMode: The most common value — useful for categories\n\n\n\nVariability\nHow spread out is the data?\n\nRange: Maximum minus minimum — simple but limited\nStandard deviation: How far, on average, values are from the mean\n\n\n\nDistribution Shape\nWhat does the data look like?\n\nNormal: Symmetric, bell-shaped\nSkewed: Tail on one side (positive = right, negative = left)\nBimodal: Two peaks"
   },
   {
     "objectID": "week12/lecture/video.html#before-the-lecture",
     "href": "week12/lecture/video.html#before-the-lecture",
     "title": "Week 12 Preview Video",
     "section": "Before the Lecture",
-    "text": "Before the Lecture\nAfter watching this video:\n\nRead the Lecture Reading for detailed explanations\nThink about your Data Olympics data — what shapes might you expect?\nCome ready to calculate examples by hand"
+    "text": "Before the Lecture\nAfter watching this video:\n\nRead the Lecture Reading for detailed explanations\nThink about your DataLab data — what shapes might you expect?\nCome ready to calculate examples by hand"
   },
   {
     "objectID": "week12/lecture/video.html#questions-to-consider",
@@ -2104,7 +2104,7 @@
     "href": "week12/lab/slides.html#todays-data",
     "title": "Descriptive Statistics in R",
     "section": "Today’s Data",
-    "text": "Today’s Data\nWe’re using YOUR Data Olympics data from Week 11.\nVariables you collected:\n\nSimple reaction time\nChoice reaction time\nMemory score\nEstimation accuracy\nConfidence ratings"
+    "text": "Today’s Data\nWe’re using YOUR DataLab data from Week 11.\nVariables you collected:\n\nSimple reaction time\nChoice reaction time\nMemory score\nEstimation accuracy\nConfidence ratings"
   },
   {
     "objectID": "week12/lab/slides.html#webr-setup",
@@ -2230,21 +2230,21 @@
     "href": "week12/lab/activity.html",
     "title": "Week 12 Lab Activity",
     "section": "",
-    "text": "In this lab, you’ll use R to analyse your Data Olympics data. You’ll calculate descriptive statistics, visualise distributions, and compare groups.\n\n\n\n\n\n\nImportantBefore You Begin\n\n\n\n\nMake sure you’ve read the Lab Reading\nWait for the WebR status indicator to turn green\nRun code chunks in order — each builds on the previous"
+    "text": "In this lab, you’ll use R to analyse your DataLab data. You’ll calculate descriptive statistics, visualise distributions, and compare groups.\n\n\n\n\n\n\nImportantBefore You Begin\n\n\n\n\nMake sure you’ve read the Lab Reading\nWait for the WebR status indicator to turn green\nRun code chunks in order — each builds on the previous"
   },
   {
     "objectID": "week12/lab/activity.html#overview",
     "href": "week12/lab/activity.html#overview",
     "title": "Week 12 Lab Activity",
     "section": "",
-    "text": "In this lab, you’ll use R to analyse your Data Olympics data. You’ll calculate descriptive statistics, visualise distributions, and compare groups.\n\n\n\n\n\n\nImportantBefore You Begin\n\n\n\n\nMake sure you’ve read the Lab Reading\nWait for the WebR status indicator to turn green\nRun code chunks in order — each builds on the previous"
+    "text": "In this lab, you’ll use R to analyse your DataLab data. You’ll calculate descriptive statistics, visualise distributions, and compare groups.\n\n\n\n\n\n\nImportantBefore You Begin\n\n\n\n\nMake sure you’ve read the Lab Reading\nWait for the WebR status indicator to turn green\nRun code chunks in order — each builds on the previous"
   },
   {
     "objectID": "week12/lab/activity.html#part-1-getting-started",
     "href": "week12/lab/activity.html#part-1-getting-started",
     "title": "Week 12 Lab Activity",
     "section": "Part 1: Getting Started",
-    "text": "Part 1: Getting Started\n\nLoading the Data\nFirst, let’s load and explore the Data Olympics dataset.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExploring the Data\nLet’s see what variables we have:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipUnderstanding the Output\n\n\n\nThe summary() function gives you: - Min/Max: The range - 1st Qu/3rd Qu: The quartiles (25th and 75th percentile) - Median: The middle value - Mean: The average"
+    "text": "Part 1: Getting Started\n\nLoading the Data\nFirst, let’s load and explore the DataLab dataset.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nExploring the Data\nLet’s see what variables we have:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipUnderstanding the Output\n\n\n\nThe summary() function gives you: - Min/Max: The range - 1st Qu/3rd Qu: The quartiles (25th and 75th percentile) - Median: The middle value - Mean: The average"
   },
   {
     "objectID": "week12/lab/activity.html#part-2-basic-descriptives",
