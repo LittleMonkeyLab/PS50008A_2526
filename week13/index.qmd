@@ -1,0 +1,66 @@
+---
+title: "Week 13: Correlational Designs"
+subtitle: "PS50008A Research Methods | 2026-01-26"
+author: "Gordon Wright"
+date: "2026-01-26"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w13-index
+  subtype: index
+  status: backlog
+  priority: 2
+  due: "2026-01-26"
+  labels: ['correlation', 'research-design']
+  blocks:
+    - rm0-w13-lecture-slides
+    - rm0-w13-lab-slides
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+---
+
+## Overview
+
+**Lecture**: Correlational Designs
+
+**Lab**: Correlational Analysis
+
+## Learning Objectives
+
+By the end of this week, you will be able to:
+
+- TBC
+- TBC
+- TBC
+
+## Schedule
+
+| Session | Topic | Materials |
+|---------|-------|-----------|
+| Lecture | Correlational Designs | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
+| Lab | Correlational Analysis | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
+| Homework | Week 13 Exercises | [Homework](lab/homework.qmd) |
+
+## Preparation
+
+Before the lecture:
+
+1. Watch the preview video
+2. Complete the pre-lecture reading
+
+## Key Concepts
+
+- TBC
+- TBC
+- TBC
+
+## Resources
+
+- [Week 13 Lecture Slides](lecture/slides.qmd)
+- [Lab Activity](lab/activity.qmd)
+- [Homework](lab/homework.qmd)

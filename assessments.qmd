@@ -1,0 +1,266 @@
+---
+title: "Assessments"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Assessment Overview
+
+| Assessment | Weight | Deadline | Week |
+|------------|--------|----------|:----:|
+| [Research Plan](#research-plan) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
+| [MCQ Exam](#mcq-exam) | 20% | Mon 9 Mar 2026, in lecture slot | 18 |
+| [EDS Assignment](#eds-assignment) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
+| [Research Report](#research-report) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+
+---
+
+## Research Plan {#research-plan}
+
+### Key Information
+
+- **Deadline**: Friday 27 February 2026, 12 noon
+- **Submission**: Via Moodle submission link
+- **Word count**: Approximately 1,000 words
+- **Weight**: 20%
+
+### Task
+
+Describe how you would investigate **ONE** of the following research topics:
+
+1. **The effect of caffeine on learning nouns.**
+
+2. **The effect of TV programme content on the recall of advertisements presented part-way through the programme.**
+
+3. **The effect of relaxation classes on stress reduction in the work place.**
+
+### What to Include
+
+**a) Experimental Hypothesis**
+
+- State your experimental hypothesis clearly
+- Note whether it is one-tailed or two-tailed
+- Explain why you chose this direction
+
+**b) Method Section**
+
+A detailed Method section with:
+
+- **Design**: What type of design? Why is it appropriate?
+- **Participants**: Who, how many, how recruited?
+- **Materials/Stimuli**: What materials would you need?
+- **Procedure**: Step by step, with controls
+
+**c) Draft Results Section**
+
+- Draw a summary data table (with appropriate headings—do NOT invent data)
+- State which statistical test should be used
+- Justify your choice of test
+
+### Important Notes
+
+- Do NOT invent any data—this is a plan, not a completed study
+- Focus on justifying your choices throughout
+- Show you understand the connection between design and analysis
+
+---
+
+## MCQ Exam {#mcq-exam}
+
+### Key Information
+
+- **Date**: Monday 9 March 2026
+- **Time**: During your normal lecture slot
+- **Duration**: 1 hour
+- **Location**: Normal lecture venue
+- **Format**: Paper-based, multiple choice
+- **Weight**: 20%
+
+### Exam Structure
+
+The paper contains multiple "Investigations"—each is a short scenario describing a research study. For each Investigation, you answer 6 questions:
+
+1. **Design**: Identify the design (between/within/matched/correlational)
+2. **IV**: Identify the independent variable (or recognise no IV)
+3. **DV**: Identify the dependent variable
+4. **Hypothesis**: Identify the appropriate hypothesis type
+5. **Test**: Select the appropriate statistical test
+6. **Interpretation**: Interpret the results
+
+### What You Need to Know
+
+**Tests you must be able to select:**
+
+| Design | Parametric | Non-parametric |
+|--------|------------|----------------|
+| Between-participants | Independent t-test | Mann-Whitney U |
+| Within-participants | Paired t-test | Wilcoxon signed-rank |
+| Correlational | Pearson's r | Spearman's rho |
+
+### How to Prepare
+
+- Complete the weekly self-assessment activities
+- Review the MCQ decision framework: Design → Variables → Hypothesis → Test → Interpret
+- Practice with past investigations
+- Focus on the logic, not memorisation
+
+---
+
+## EDS Assignment {#eds-assignment}
+
+### Key Information
+
+- **Deadline**: Friday 20 March 2026, 12 noon
+- **Submission**: Via Moodle submission link
+- **Format**: Worked statistics assignment
+- **Weight**: 20%
+- **Pass mark**: 50%
+
+### Task Structure
+
+You will receive a research scenario with actual raw data.
+
+**Section A: Statistical Mechanics**
+
+1. State the researcher's hypothesis
+2. Identify design type, IV, DV, data type
+3. Calculate means and SDs **BY HAND** (show ALL working)
+4. Run appropriate test **BY HAND** (show ALL steps)
+5. Interpret results
+
+**Section B: Methods and Theory**
+
+6. Suggest TWO methodological improvements
+7. Discuss individual differences / extensions
+8. Propose a more ecologically valid alternative (minimum half page)
+
+### Critical Requirements
+
+::: {.callout-warning}
+## You MUST Show Your Working
+
+- Full marks = right test AND all calculation steps shown
+- Software only = partial credit (10-12/20 maximum)
+- Final results only = minimal credit (5-6/20)
+- Wrong test family = zero for that section
+:::
+
+**Tests you must compute by hand:**
+
+- Mean and standard deviation
+- Paired t-test OR Wilcoxon signed-rank
+- Pearson correlation
+
+### Practice Paper
+
+::: {.callout-tip}
+## Prepare with the Practice Paper
+Download the practice paper to familiarise yourself with the format and expectations:
+
+[EDS Practice Paper (PDF)](assets/assessments/EDS_Assignment_The_PRACTICE_paper.pdf)
+:::
+
+---
+
+## Research Report {#research-report}
+
+### Key Information
+
+- **Deadline**: Friday 1 May 2026, 12 noon
+- **Submission**: Via Moodle submission link
+- **Word count**: 2,500 words (±10%)
+- **Format**: Individual lab report in APA format
+- **Weight**: 40%
+
+### Task
+
+Write an individual research report based on your group project data.
+
+### Report Structure
+
+Your report should follow standard APA format:
+
+- **Title Page**: Informative title, your name and student number
+- **Abstract**: ~150 words summarising the study
+- **Introduction**: Background, rationale, hypothesis
+- **Method**: Design, Participants, Materials, Procedure
+- **Results**: Descriptives, inferential tests, effect sizes
+- **Discussion**: Interpretation, limitations, future directions
+- **References**: APA format
+
+### Statistical Reporting
+
+Report results in APA format:
+
+- t-test: *t*(df) = X.XX, *p* = .XXX, *d* = X.XX
+- Correlation: *r*(df) = .XX, *p* = .XXX
+- Include 95% confidence intervals
+
+### Report Writing Support
+
+We build report-writing skills progressively throughout the term:
+
+| Weeks | Focus |
+|-------|-------|
+| 12-15 | Results section (descriptives, CIs, test results) |
+| 16-17 | Methods & Introduction |
+| 18-19 | Introduction continued |
+| 20 | Discussion section |
+
+::: {.callout-note}
+## Post-Term Deadline
+The Research Report deadline (1 May 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.
+:::
+
+---
+
+## Group Project
+
+The group project is **not separately assessed** but feeds into two assessments:
+
+- **Research Plan** (due Week 16): Based on your group's research question
+- **Research Report** (due 1 May, post-term): Individual write-up of group project data
+
+### Project Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 11 | Form groups (3-4 students) |
+| 12-15 | Develop research question and design |
+| — | *Reading Week* — Work on Research Plan |
+| 16 | **Research Plan due** Friday 27 Feb; Begin data collection |
+| 17-18 | Data collection and initial analysis |
+| 19-20 | Complete analysis; Develop write-up (term ends Week 20) |
+| Easter | Individual report writing |
+| Post-term | **Research Report due** Friday 1 May |
+
+::: {.callout-important}
+## Individual Responsibility
+While data comes from your group project, the Research Report is an **individual** assessment. Each group member writes their own report independently.
+:::
+
+---
+
+## Academic Integrity
+
+All assessments must be your own work:
+
+- **Research Plan**: Individual submission
+- **MCQ Exam**: Closed-book, no collaboration
+- **EDS Assignment**: Individual, no collaboration on calculations
+- **Research Report**: Individual write-up (even though data comes from group)
+
+::: {.callout-important}
+## AI Policy
+Using AI tools to generate your work is not permitted. You may use AI to help understand concepts, but submitted work must be your own.
+:::
+
+---
+
+## Support
+
+- **Lectures**: Core concepts and worked examples
+- **Labs**: Hands-on practice
+- **Office hours**: Individual questions
+- **VLE**: Assessment briefs, practice materials

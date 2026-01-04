@@ -1,0 +1,46 @@
+---
+title: "Week 16 Lecture Reading"
+subtitle: "Practice Assignment"
+author: "Gordon Wright"
+date: "2026-02-23"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w16-lecture-reading
+  subtype: reading
+  status: backlog
+  priority: 3
+  due: "2026-02-23"
+  labels: ['assessment', 'reading']
+  depends_on:
+    - rm0-w16-index
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+---
+
+## Required Reading
+
+TBC - Textbook chapter or article details
+
+## Reading Guide
+
+### Key Points to Focus On
+
+1. TBC
+2. TBC
+3. TBC
+
+### Questions to Consider
+
+- TBC
+- TBC
+- TBC
+
+## Additional Resources
+
+- TBC

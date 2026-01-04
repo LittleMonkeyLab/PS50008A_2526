@@ -1,0 +1,82 @@
+---
+title: "Plotting Data with R"
+subtitle: "PS50008A Week 14 Lab Activity"
+author: "Gordon Wright"
+date: "2026-02-04"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: false
+    theme: cosmo
+    embed-resources: true
+filters:
+  - webr
+webr:
+  packages: ['dplyr', 'ggplot2']
+  show-startup-message: false
+taskmistress:
+  id: rm0-w14-lab-activity
+  subtype: lab-activity
+  status: backlog
+  priority: 2
+  due: "2026-02-04"
+  labels: ['r-programming', 'visualisation', 'webr']
+  depends_on:
+    - rm0-w14-lab-slides
+  blocks:
+    - rm0-w14-homework
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+  properties:
+    estimated_duration: 70min
+    delivery_date: "2026-02-04"
+---
+
+## Overview
+
+TBC - Lab activity introduction
+
+::: {.callout-important}
+## Before You Begin
+Make sure you have attended the Week 14 lecture.
+:::
+
+---
+
+## Part 1: Introduction
+
+TBC - Activity content
+
+---
+
+## Part 2: Exercises
+
+TBC - Interactive exercises
+
+```{webr-r}
+# Example code
+
+
+```
+
+---
+
+## Key Takeaways
+
+::: {.callout-important}
+## Summary
+1. TBC
+2. TBC
+3. TBC
+:::
+
+---
+
+## Next Steps
+
+- Complete the [Week 14 Homework](homework.qmd)
+- Prepare for Week 15

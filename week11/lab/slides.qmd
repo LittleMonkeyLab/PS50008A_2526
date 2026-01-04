@@ -1,0 +1,194 @@
+---
+title: "Data Olympics"
+subtitle: "PS50008A Week 11 Lab"
+author: "Gordon Wright & Bence Palfi"
+date: "2026-01-16"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
+    show-slide-number: all
+    progress: true
+    transition: fade
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
+---
+
+# Welcome {background-color="#275882"}
+
+## Welcome to PS50008A! {.center}
+
+**Research Methods & Experimental Design**
+
+Your first session of the module
+
+---
+
+## Today: The Data Olympics
+
+::: {.objectives-box}
+**Today You Will:**
+
+- Rotate through 6 stations in pairs
+- Complete cognitive tasks
+- Record your data in Qualtrics
+- Form your project groups
+:::
+
+---
+
+## Why "Data Olympics"?
+
+The data you generate today becomes our teaching dataset for the term.
+
+When we learn about:
+
+- Distributions → [your reaction times]{.hl-yellow}
+- t-tests → [Room A vs Room B]{.hl-blue}
+- Correlations → [your variables]{.hl-green}
+
+...we'll use **your** data.
+
+---
+
+# The Stations {background-color="#275882"}
+
+## Six Stations
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.step-1}
+**1. Simple Reaction Time**
+
+How fast can you respond?
+:::
+
+::: {.step-2}
+**2. Choice Reaction Time**
+
+Does decision-making slow you down?
+:::
+
+::: {.step-3}
+**3. Memory Task**
+
+How many items can you recall?
+:::
+:::
+
+::: {.column width="50%"}
+::: {.step-1}
+**4. Estimation Task**
+
+How accurate are your judgments?
+:::
+
+::: {.step-2}
+**5. Group Estimation**
+
+Does discussion improve accuracy?
+:::
+
+::: {.step-3}
+**6. Confidence Ratings**
+
+How well do you know what you know?
+:::
+:::
+
+::::
+
+---
+
+# How It Works {background-color="#275882"}
+
+## The Process
+
+::: {.incremental}
+1. Find a partner
+2. Go to your assigned starting station
+3. Complete the task (one tests, one participates)
+4. Record data in Qualtrics
+5. Swap roles
+6. Move to next station when signalled
+:::
+
+---
+
+## Recording Your Data
+
+::: {.callout-important}
+## This is Real Research!
+Record data carefully—your data will be used throughout the term.
+:::
+
+- Use the Qualtrics link on your phone/laptop
+- Enter your participant ID (we'll assign these)
+- Follow the instructions at each station
+
+---
+
+## Timing
+
+| Time | Activity |
+|------|----------|
+| 10:00-10:15 | Welcome & setup |
+| 10:15-11:30 | Station rotations (~12 min each) |
+| 11:30-11:50 | Form project groups |
+| 11:50-12:00 | Wrap-up |
+
+---
+
+# Project Groups {background-color="#275882"}
+
+## Form Your Groups
+
+By the end of today, form groups of [**3-4 students**]{.inverse-box}.
+
+::: {.callout-tip}
+## Consider:
+- Can you meet outside class?
+- Will you be reliable partners?
+- You'll work together all term
+:::
+
+---
+
+## What Groups Do
+
+Your group will:
+
+- Work together on the **group research project**
+- Conduct labs together from **Week 16**
+- Generate data for the **Research Report** (Week 22)
+
+---
+
+# Let's Begin! {background-color="#275882"}
+
+## Questions? {.center}
+
+::: {.poll-box}
+**Any questions before we start?**
+:::
+
+---
+
+## Station Instructions
+
+See the [Lab Activity](activity.qmd) page for detailed instructions at each station.
+
+::: {.callout-note}
+## Qualtrics Link
+[Link TBC]
+:::
+
+::: {.notes}
+- Assign participant IDs
+- Direct students to starting stations
+- Set timer for 12 minutes per rotation
+- Signal rotation changes clearly
+:::

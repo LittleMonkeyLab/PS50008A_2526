@@ -1,0 +1,117 @@
+---
+title: "Resources"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Textbooks
+
+### Core Texts (Available via Library)
+
+Both core textbooks are available as e-books through the Goldsmiths Library:
+
+- **Coolican, H. (2017). *Research methods and statistics in psychology* (6th Ed.). Hodder and Stoughton.**
+  - [Access via VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
+  - [Direct reader link](https://r3.vlebooks.com/Reader?ean=9780203769836)
+
+- **Harris, P. (2008). *Designing and reporting experiments in psychology* (3rd Ed.). Open University Press.**
+  - [Access via VLeBooks](https://www.vlebooks.com/Product/Index/155270?page=0&startBookmarkId=-1)
+  - [Direct reader link](https://r4.vlebooks.com/Reader?ean=9780335235483)
+
+::: {.callout-tip}
+## Accessing E-Books
+You'll need to log in with your Goldsmiths credentials. If you have trouble accessing, contact the library.
+:::
+
+### Open Access Resources
+
+<!-- TODO: Add open access reading alternatives for each week -->
+
+## Software
+
+### WebR (In-Browser)
+
+All lab activities use **WebR**—R that runs directly in your browser. You don't need to install anything.
+
+### R and RStudio (Optional)
+
+If you want to install R on your own computer:
+
+- [Download R](https://cran.r-project.org/)
+- [Download RStudio](https://posit.co/download/rstudio-desktop/)
+
+## Online Statistics Resources
+
+### Visual & Interactive
+
+- [Seeing Theory](https://seeing-theory.brown.edu/) — Beautiful visual introduction to probability and statistics
+- [Statistics by Jim](https://statisticsbyjim.com/) — Clear explanations of statistical concepts
+- [Stat Trek](https://stattrek.com/) — Statistics tutorials and calculators
+
+### R Resources
+
+- [R for Data Science](https://r4ds.had.co.nz/) — Free online textbook
+- [RStudio Primers](https://posit.cloud/learn/primers) — Interactive tutorials
+- [Quick-R](https://www.statmethods.net/) — R syntax reference
+
+## Writing & APA Style
+
+### APA Format
+
+- [Purdue OWL APA Guide](https://owl.purdue.edu/owl/research_and_citation/apa_style/) — Comprehensive APA formatting guide
+- [APA Style Website](https://apastyle.apa.org/) — Official APA resources
+
+### Academic Writing
+
+- [Goldsmiths Academic Skills](https://www.gold.ac.uk/students/skills/) — Writing support
+- [Phrasebank](https://www.phrasebank.manchester.ac.uk/) — Academic phrases and structures
+
+## Goldsmiths Resources
+
+- [Library](https://www.gold.ac.uk/library/) — Books, journals, databases
+- [Academic Skills Centre](https://www.gold.ac.uk/students/skills/) — Study skills support
+- [Disability & Wellbeing](https://www.gold.ac.uk/students/wellbeing/) — Support services
+- [IT Services](https://www.gold.ac.uk/it/) — Technical support
+
+## Datasets
+
+The main dataset for this module is generated in Week 11 (Data Olympics). Additional practice datasets will be provided for specific activities.
+
+| Dataset | Week | Description |
+|---------|------|-------------|
+| Data Olympics | 11 | Class dataset used throughout term |
+| EDS Practice | 14+ | Practice data for EDS preparation |
+
+## Tools & Calculators
+
+### Statistical Tables
+
+- [t-distribution table](https://www.statisticshowto.com/tables/t-distribution-table/)
+- [Critical values calculator](https://www.socscistatistics.com/tests/)
+
+### Effect Size Calculators
+
+- [Effect size calculator](https://www.psychometrica.de/effect_size.html)
+
+## Getting Help
+
+### Module Support
+
+| Resource | Details |
+|----------|---------|
+| Office Hours | TBC |
+| Email | g.wright@gold.ac.uk |
+| VLE Discussion | For general questions (other students can help too) |
+
+### Technical Issues
+
+- IT Helpdesk: itservicedesk@gold.ac.uk
+- WebR issues: Post in VLE discussion
+
+## Hypothesis Annotation
+
+This module uses **Hypothes.is** for collaborative annotation. You can highlight and comment on course materials, and see comments from other students.
+
+- [Hypothes.is website](https://hypothes.is/)
+- Look for the Hypothes.is sidebar on course pages

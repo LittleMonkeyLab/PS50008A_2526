@@ -1,0 +1,40 @@
+---
+title: "Week 13 Lab Reading"
+subtitle: "Correlational Analysis"
+author: "Gordon Wright"
+date: "2026-01-28"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w13-lab-reading
+  subtype: reading
+  status: backlog
+  priority: 3
+  due: "2026-01-28"
+  labels: ['correlation', 'r-programming', 'reading']
+  depends_on:
+    - rm0-w13-index
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+---
+
+## Required Reading
+
+TBC - Lab-specific reading material
+
+## Reading Guide
+
+### Key Points to Focus On
+
+1. TBC
+2. TBC
+3. TBC
+
+## Additional Resources
+
+- TBC

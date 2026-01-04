@@ -1,0 +1,714 @@
+{
+  // ===========================================
+  // TEXT HIGHLIGHTS (Surround-enabled)
+  // Select text, then Cmd+Shift+P > "Insert Snippet" > choose snippet
+  // Or type prefix with text selected
+  // ===========================================
+  "Highlight Yellow": {
+    "prefix": "hly",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #FFF3CD\"}",
+    "description": "Yellow highlighted text (surround)"
+  },
+  "Highlight Yellow Bold": {
+    "prefix": "hlyb",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #FFF3CD; font-weight: bold\"}",
+    "description": "Yellow highlighted bold text (surround)"
+  },
+  "Highlight Blue": {
+    "prefix": "hlb",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #CFE2FF\"}",
+    "description": "Blue highlighted text (surround)"
+  },
+  "Highlight Green": {
+    "prefix": "hlg",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #D1E7DD\"}",
+    "description": "Green highlighted text (surround)"
+  },
+  "Highlight Red": {
+    "prefix": "hlr",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #F8D7DA\"}",
+    "description": "Red highlighted text (surround)"
+  },
+  "Highlight Gray": {
+    "prefix": "hlgr",
+    "body": "[${TM_SELECTED_TEXT:${1:text}}]{style=\"background-color: #E9ECEF\"}",
+    "description": "Gray highlighted text (surround)"
+  },
+
+  // ===========================================
+  // TEXT COLORS (Surround-enabled)
+  // ===========================================
+  "Text Danger": {
+    "prefix": "txtdanger",
+    "body": "[${TM_SELECTED_TEXT:${1:Error text}}]{style=\"color: #DC3545; font-weight: bold\"}",
+    "description": "Red danger/error text (surround)"
+  },
+  "Text Success": {
+    "prefix": "txtsuccess",
+    "body": "[${TM_SELECTED_TEXT:${1:Success text}}]{style=\"color: #198754\"}",
+    "description": "Green success text (surround)"
+  },
+  "Text Warning": {
+    "prefix": "txtwarning",
+    "body": "[${TM_SELECTED_TEXT:${1:Warning text}}]{style=\"color: #FFC107; font-weight: bold\"}",
+    "description": "Yellow warning text (surround)"
+  },
+  "Text Info": {
+    "prefix": "txtinfo",
+    "body": "[${TM_SELECTED_TEXT:${1:Info text}}]{style=\"color: #0D6EFD\"}",
+    "description": "Blue info text (surround)"
+  },
+  "Text Muted": {
+    "prefix": "txtmuted",
+    "body": "[${TM_SELECTED_TEXT:${1:Muted text}}]{style=\"color: #6C757D; font-style: italic\"}",
+    "description": "Gray muted/secondary text (surround)"
+  },
+
+  // ===========================================
+  // BOLD/ITALIC (Surround-enabled)
+  // ===========================================
+  "Bold": {
+    "prefix": "bold",
+    "body": "**${TM_SELECTED_TEXT:${1:text}}**",
+    "description": "Bold text (surround)"
+  },
+  "Italic": {
+    "prefix": "italic",
+    "body": "*${TM_SELECTED_TEXT:${1:text}}*",
+    "description": "Italic text (surround)"
+  },
+  "Bold Italic": {
+    "prefix": "bolditalic",
+    "body": "***${TM_SELECTED_TEXT:${1:text}}***",
+    "description": "Bold italic text (surround)"
+  },
+  "Strikethrough": {
+    "prefix": "strike",
+    "body": "~~${TM_SELECTED_TEXT:${1:text}}~~",
+    "description": "Strikethrough text (surround)"
+  },
+
+  // ===========================================
+  // BADGES
+  // ===========================================
+  "Badge New": {
+    "prefix": "badgenew",
+    "body": "[NEW]{style=\"background-color: #0D6EFD; color: white; font-weight: bold\"}",
+    "description": "Blue NEW badge"
+  },
+  "Badge Deprecated": {
+    "prefix": "badgedeprecated",
+    "body": "[DEPRECATED]{style=\"background-color: #DC3545; color: white; font-weight: bold\"}",
+    "description": "Red DEPRECATED badge"
+  },
+  "Badge Beta": {
+    "prefix": "badgebeta",
+    "body": "[BETA]{style=\"background-color: #FFC107; color: #000; font-weight: bold\"}",
+    "description": "Yellow BETA badge"
+  },
+  "Badge Version": {
+    "prefix": "badgeversion",
+    "body": "[${TM_SELECTED_TEXT:${1:v1.0.0}}]{style=\"background-color: #6C757D; color: white; font-weight: bold\"}",
+    "description": "Gray version badge (surround)"
+  },
+  "Badge Custom": {
+    "prefix": "badge",
+    "body": "[${TM_SELECTED_TEXT:${1:LABEL}}]{style=\"background-color: ${2:#9B59B6}; color: white; font-weight: bold\"}",
+    "description": "Custom colored badge (surround)"
+  },
+
+  // ===========================================
+  // CODE STYLING (Surround-enabled)
+  // ===========================================
+  "Code Variable": {
+    "prefix": "codevar",
+    "body": "[${TM_SELECTED_TEXT:${1:variable_name}}]{style=\"background-color: #E9ECEF\"}",
+    "description": "Inline code/variable reference (surround)"
+  },
+  "Code File Path": {
+    "prefix": "codefile",
+    "body": "[${TM_SELECTED_TEXT:${1:path/to/file}}]{style=\"background-color: #E9ECEF\"}",
+    "description": "File path reference (surround)"
+  },
+  "Keyboard Shortcut": {
+    "prefix": "kbd",
+    "body": "[${TM_SELECTED_TEXT:${1:Cmd+S}}]{style=\"background-color: #212529; color: #fff\"}",
+    "description": "Keyboard shortcut styling (surround)"
+  },
+  "Inline Code": {
+    "prefix": "code",
+    "body": "`${TM_SELECTED_TEXT:${1:code}}`",
+    "description": "Inline code (surround)"
+  },
+
+  // ===========================================
+  // STYLED CALLOUT BLOCKS (Surround-enabled)
+  // ===========================================
+  "Callout Info (Styled)": {
+    "prefix": "calloutinfo",
+    "body": [
+      "::: {style=\"background-color: #CFE2FF;\"}",
+      "**ℹ️ Information**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Content here}}",
+      ":::"
+    ],
+    "description": "Blue info callout block (surround)"
+  },
+  "Callout Warning (Styled)": {
+    "prefix": "calloutwarning",
+    "body": [
+      "::: {style=\"background-color: #FFF3CD;\"}",
+      "**⚠️ Warning**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Content here}}",
+      ":::"
+    ],
+    "description": "Yellow warning callout block (surround)"
+  },
+  "Callout Danger (Styled)": {
+    "prefix": "calloutdanger",
+    "body": [
+      "::: {style=\"background-color: #F8D7DA;\"}",
+      "**🚨 Danger**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Content here}}",
+      ":::"
+    ],
+    "description": "Red danger callout block (surround)"
+  },
+  "Callout Success (Styled)": {
+    "prefix": "calloutsuccess",
+    "body": [
+      "::: {style=\"background-color: #D1E7DD;\"}",
+      "**✅ Success**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Content here}}",
+      ":::"
+    ],
+    "description": "Green success callout block (surround)"
+  },
+  "Callout Tip (Styled)": {
+    "prefix": "callouttip",
+    "body": [
+      "::: {style=\"background-color: #E2E3E5;\"}",
+      "**💡 Tip**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Content here}}",
+      ":::"
+    ],
+    "description": "Gray tip callout block (surround)"
+  },
+
+  // ===========================================
+  // NATIVE QUARTO CALLOUTS (Surround-enabled)
+  // ===========================================
+  "Quarto Note": {
+    "prefix": "qnote",
+    "body": [
+      "::: {.callout-note}",
+      "## ${1:Note Title}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto note callout (surround)"
+  },
+  "Quarto Warning": {
+    "prefix": "qwarning",
+    "body": [
+      "::: {.callout-warning}",
+      "## ${1:Warning Title}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto warning callout (surround)"
+  },
+  "Quarto Important": {
+    "prefix": "qimportant",
+    "body": [
+      "::: {.callout-important}",
+      "## ${1:Important}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto important callout (surround)"
+  },
+  "Quarto Tip": {
+    "prefix": "qtip",
+    "body": [
+      "::: {.callout-tip}",
+      "## ${1:Tip}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto tip callout (surround)"
+  },
+  "Quarto Tip Collapsible": {
+    "prefix": "qtipcollapse",
+    "body": [
+      "::: {.callout-tip collapse=\"true\"}",
+      "## ${1:Show Answer}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto collapsible tip - great for answers (surround)"
+  },
+  "Quarto Caution Collapsible": {
+    "prefix": "qcaution",
+    "body": [
+      "::: {.callout-caution collapse=\"true\"}",
+      "## ${1:Click to expand}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Content here}}",
+      ":::"
+    ],
+    "description": "Quarto collapsible caution callout (surround)"
+  },
+
+  // ===========================================
+  // STYLED BLOCKS (Surround-enabled)
+  // ===========================================
+  "Block Large Text": {
+    "prefix": "blocklarge",
+    "body": [
+      "::: {style=\"font-size: 1.25em;\"}",
+      "${TM_SELECTED_TEXT:${1:Large text content}}",
+      ":::"
+    ],
+    "description": "Large text block for emphasis (surround)"
+  },
+  "Block Muted": {
+    "prefix": "blockmuted",
+    "body": [
+      "::: {style=\"color: #6C757D; font-style: italic;\"}",
+      "${TM_SELECTED_TEXT:${1:Secondary content}}",
+      ":::"
+    ],
+    "description": "Muted/de-emphasized block (surround)"
+  },
+  "Block Draft": {
+    "prefix": "draft",
+    "body": [
+      "::: {style=\"background-color: #FFF3CD;\"}",
+      "**📝 DRAFT**",
+      "",
+      "${TM_SELECTED_TEXT:${1:Draft content here}}",
+      ":::"
+    ],
+    "description": "Draft content marker (surround)"
+  },
+
+  // ===========================================
+  // FENCED DIV (Surround-enabled)
+  // ===========================================
+  "Fenced Div": {
+    "prefix": "div",
+    "body": [
+      "::: {${1:.class-name}}",
+      "${TM_SELECTED_TEXT:${2:Content}}",
+      ":::"
+    ],
+    "description": "Generic fenced div (surround)"
+  },
+  "Fenced Div with Style": {
+    "prefix": "divstyle",
+    "body": [
+      "::: {style=\"${1:background-color: #f0f0f0;}\"}",
+      "${TM_SELECTED_TEXT:${2:Content}}",
+      ":::"
+    ],
+    "description": "Fenced div with inline style (surround)"
+  },
+
+  // ===========================================
+  // CODE CHUNKS (Surround-enabled for code)
+  // ===========================================
+  "R Code Chunk": {
+    "prefix": "coder",
+    "body": [
+      "```{r}",
+      "#| label: ${1:chunk-name}",
+      "#| echo: true",
+      "#| eval: true",
+      "",
+      "${TM_SELECTED_TEXT:${2:# R code here}}",
+      "```"
+    ],
+    "description": "R code chunk with options (surround)"
+  },
+  "Python Code Chunk": {
+    "prefix": "codepy",
+    "body": [
+      "```{python}",
+      "#| label: ${1:chunk-name}",
+      "#| echo: true",
+      "#| eval: true",
+      "",
+      "${TM_SELECTED_TEXT:${2:# Python code here}}",
+      "```"
+    ],
+    "description": "Python code chunk with options (surround)"
+  },
+  "WebR Code Chunk": {
+    "prefix": "codewebr",
+    "body": [
+      "```{webr-r}",
+      "${TM_SELECTED_TEXT:${1:# Interactive R code here}}",
+      "```"
+    ],
+    "description": "WebR interactive code chunk (surround)"
+  },
+  "Code Block (Static)": {
+    "prefix": "codeblock",
+    "body": [
+      "```${1:r}",
+      "${TM_SELECTED_TEXT:${2:code here}}",
+      "```"
+    ],
+    "description": "Static code block (surround)"
+  },
+  "Code with Annotations": {
+    "prefix": "codeannotate",
+    "body": [
+      "```{r}",
+      "${1:code_line_1} # <1>",
+      "${2:code_line_2} # <2>",
+      "```",
+      "",
+      "1. ${3:Explanation for line 1}",
+      "2. ${4:Explanation for line 2}"
+    ],
+    "description": "Code chunk with line annotations"
+  },
+
+  // ===========================================
+  // TABLES
+  // ===========================================
+  "Table Simple": {
+    "prefix": "table",
+    "body": [
+      "| ${1:Header 1} | ${2:Header 2} | ${3:Header 3} |",
+      "|----------|----------|----------|",
+      "| ${4:Cell 1} | ${5:Cell 2} | ${6:Cell 3} |",
+      "| ${7:Cell 4} | ${8:Cell 5} | ${9:Cell 6} |"
+    ],
+    "description": "Simple markdown table"
+  },
+  "Table with Caption": {
+    "prefix": "tablecap",
+    "body": [
+      "| ${1:Header 1} | ${2:Header 2} |",
+      "|----------|----------|",
+      "| ${3:Cell 1} | ${4:Cell 2} |",
+      "",
+      ": ${5:Table caption} {#tbl-${6:label}}"
+    ],
+    "description": "Table with caption and label"
+  },
+
+  // ===========================================
+  // IMAGES
+  // ===========================================
+  "Image Basic": {
+    "prefix": "img",
+    "body": "![${1:Alt text}](${2:image.png}){width=\"${3:80%}\"}",
+    "description": "Basic image with width"
+  },
+  "Image with Caption": {
+    "prefix": "imgcap",
+    "body": "![${1:Caption text}](${2:image.png}){#fig-${3:label} width=\"${4:80%}\"}",
+    "description": "Image with caption and cross-reference label"
+  },
+
+  // ===========================================
+  // LINKS (Surround-enabled)
+  // ===========================================
+  "Link": {
+    "prefix": "link",
+    "body": "[${TM_SELECTED_TEXT:${1:link text}}](${2:url})",
+    "description": "Markdown link (surround)"
+  },
+  "Link New Tab": {
+    "prefix": "linknewtab",
+    "body": "[${TM_SELECTED_TEXT:${1:link text}}](${2:url}){target=\"_blank\"}",
+    "description": "Link opening in new tab (surround)"
+  },
+
+  // ===========================================
+  // REVEALJS SLIDES (Surround-enabled where useful)
+  // ===========================================
+  "Two Columns": {
+    "prefix": "2col",
+    "body": [
+      ":::: {.columns}",
+      "::: {.column width=\"50%\"}",
+      "${TM_SELECTED_TEXT:${1:Left column content}}",
+      ":::",
+      "",
+      "::: {.column width=\"50%\"}",
+      "${2:Right column content}",
+      ":::",
+      "::::"
+    ],
+    "description": "Two-column layout (surround for left column)"
+  },
+  "New Slide": {
+    "prefix": "slide",
+    "body": [
+      "---",
+      "",
+      "## ${1:Slide Title}",
+      "",
+      "${TM_SELECTED_TEXT:${2:Slide content}}"
+    ],
+    "description": "New RevealJS slide (surround)"
+  },
+  "Slide with Background": {
+    "prefix": "slidebg",
+    "body": [
+      "---",
+      "",
+      "## ${1:Slide Title} {background-color=\"${2:#275882}\"}",
+      "",
+      "${TM_SELECTED_TEXT:${3:Slide content}}"
+    ],
+    "description": "Slide with background color (surround)"
+  },
+  "Section Header Slide": {
+    "prefix": "slidesection",
+    "body": [
+      "---",
+      "",
+      "# ${TM_SELECTED_TEXT:${1:Section Title}} {background-color=\"#275882\"}"
+    ],
+    "description": "Section header slide (surround)"
+  },
+  "Speaker Notes": {
+    "prefix": "notes",
+    "body": [
+      "::: {.notes}",
+      "${TM_SELECTED_TEXT:${1:Speaker notes here}}",
+      ":::"
+    ],
+    "description": "Speaker notes (surround)"
+  },
+  "Fragment": {
+    "prefix": "fragment",
+    "body": [
+      "::: {.fragment}",
+      "${TM_SELECTED_TEXT:${1:Content appears on click}}",
+      ":::"
+    ],
+    "description": "Content that appears on click (surround)"
+  },
+  "Fragment Fade In": {
+    "prefix": "fragmentfade",
+    "body": [
+      "::: {.fragment .fade-in}",
+      "${TM_SELECTED_TEXT:${1:Content fades in}}",
+      ":::"
+    ],
+    "description": "Content that fades in on click (surround)"
+  },
+  "Incremental List": {
+    "prefix": "incremental",
+    "body": [
+      "::: {.incremental}",
+      "- ${1:First item}",
+      "- ${2:Second item}",
+      "- ${3:Third item}",
+      ":::"
+    ],
+    "description": "Step-by-step bullet list"
+  },
+  "Pause": {
+    "prefix": "pause",
+    "body": ". . .",
+    "description": "RevealJS pause (content after appears on click)"
+  },
+
+  // ===========================================
+  // RM0 PEDAGOGICAL BOXES (Surround-enabled)
+  // ===========================================
+  "Objectives Box": {
+    "prefix": "objbox",
+    "body": [
+      "::: {.objectives-box}",
+      "**Learning Objectives**",
+      "",
+      "${TM_SELECTED_TEXT:- ${1:Objective 1}",
+      "- ${2:Objective 2}",
+      "- ${3:Objective 3}}",
+      ":::"
+    ],
+    "description": "Learning objectives box (surround)"
+  },
+  "Definition Box": {
+    "prefix": "defbox",
+    "body": [
+      "::: {.definition-box}",
+      "**${1:Term}**: ${TM_SELECTED_TEXT:${2:Definition}}",
+      ":::"
+    ],
+    "description": "Definition box (surround for definition)"
+  },
+  "Poll Box": {
+    "prefix": "pollbox",
+    "body": [
+      "::: {.poll-box}",
+      "**${1:Poll Question}**",
+      "",
+      "${TM_SELECTED_TEXT:- ${2:Option A}",
+      "- ${3:Option B}",
+      "- ${4:Option C}}",
+      ":::"
+    ],
+    "description": "Poll/question box (surround)"
+  },
+  "Step 1": {
+    "prefix": "step1",
+    "body": [
+      "::: {.step-1}",
+      "**Step 1**: ${TM_SELECTED_TEXT:${1:Description}}",
+      ":::"
+    ],
+    "description": "Step 1 box (surround)"
+  },
+  "Step 2": {
+    "prefix": "step2",
+    "body": [
+      "::: {.step-2}",
+      "**Step 2**: ${TM_SELECTED_TEXT:${1:Description}}",
+      ":::"
+    ],
+    "description": "Step 2 box (surround)"
+  },
+  "Step 3": {
+    "prefix": "step3",
+    "body": [
+      "::: {.step-3}",
+      "**Step 3**: ${TM_SELECTED_TEXT:${1:Description}}",
+      ":::"
+    ],
+    "description": "Step 3 box (surround)"
+  },
+  "Step 4": {
+    "prefix": "step4",
+    "body": [
+      "::: {.step-4}",
+      "**Step 4**: ${TM_SELECTED_TEXT:${1:Description}}",
+      ":::"
+    ],
+    "description": "Step 4 box (surround)"
+  },
+
+  // ===========================================
+  // YAML HEADERS
+  // ===========================================
+  "YAML HTML Document": {
+    "prefix": "yamlhtml",
+    "body": [
+      "---",
+      "title: \"${1:Document Title}\"",
+      "subtitle: \"${2:Subtitle}\"",
+      "author: \"Gordon Wright\"",
+      "date: ${3:today}",
+      "format:",
+      "  html:",
+      "    toc: true",
+      "    embed-resources: true",
+      "    theme: cosmo",
+      "---",
+      "",
+      "${4:Content}"
+    ],
+    "description": "YAML header for HTML document"
+  },
+  "YAML RevealJS": {
+    "prefix": "yamlreveal",
+    "body": [
+      "---",
+      "title: \"${1:Presentation Title}\"",
+      "subtitle: \"${2:PS50008A Week XX | Lecture/Lab}\"",
+      "author: \"Gordon Wright\"",
+      "date: \"${3:2026-01-XX}\"",
+      "format:",
+      "  revealjs:",
+      "    theme: [default, ../../assets/slides.scss]",
+      "    slide-number: c/t",
+      "    progress: true",
+      "    transition: fade",
+      "    width: 1050",
+      "    height: 700",
+      "    center: false",
+      "    center-title-slide: true",
+      "---",
+      "",
+      "# ${4:First Section} {background-color=\"#275882\"}",
+      "",
+      "---",
+      "",
+      "## ${5:First Slide}"
+    ],
+    "description": "YAML header for RM0 RevealJS slides"
+  },
+  "YAML WebR Activity": {
+    "prefix": "yamlwebr",
+    "body": [
+      "---",
+      "title: \"${1:Activity Title}\"",
+      "subtitle: \"${2:Subtitle}\"",
+      "author: \"Gordon Wright\"",
+      "date: \"${3:2026-01-XX}\"",
+      "format:",
+      "  html:",
+      "    toc: true",
+      "    toc-depth: 2",
+      "    code-fold: false",
+      "filters:",
+      "  - webr",
+      "webr:",
+      "  packages: ['dplyr', 'ggplot2']",
+      "  show-startup-message: false",
+      "---",
+      "",
+      "## Overview",
+      "",
+      "${4:Activity introduction}"
+    ],
+    "description": "YAML header for WebR lab activity"
+  },
+
+  // ===========================================
+  // WORKFLOW
+  // ===========================================
+  "TODO Comment": {
+    "prefix": "todo",
+    "body": "<!-- TODO: ${TM_SELECTED_TEXT:${1:Task description}} -->",
+    "description": "HTML TODO comment (surround)"
+  },
+  "HTML Comment": {
+    "prefix": "comment",
+    "body": "<!-- ${TM_SELECTED_TEXT:${1:Comment}} -->",
+    "description": "HTML comment (surround)"
+  },
+  "AI Instruction": {
+    "prefix": "ai",
+    "body": "« ${TM_SELECTED_TEXT:${1:AI instruction}} »",
+    "description": "AI processing instruction flag (surround)"
+  },
+  "Dougal Says": {
+    "prefix": "dougalsays",
+    "body": [
+      "::: {style=\"background-color: #E8F4EA;\"}",
+      "🐕 **Dougal says:** ${TM_SELECTED_TEXT:${1:Helpful reminder}}",
+      ":::"
+    ],
+    "description": "Dougal the dog reminder callout (surround)"
+  }
+}

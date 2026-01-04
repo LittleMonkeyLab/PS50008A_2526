@@ -1,0 +1,144 @@
+---
+title: "Data Olympics"
+subtitle: "PS50008A Week 11 Lab Activity"
+author: "Gordon Wright"
+date: "2026-01-16"
+---
+
+## Overview
+
+::: {.callout-important}
+## Data Olympics Stations
+This page contains instructions for each Data Olympics station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.
+:::
+
+Today you'll rotate through 6 stations, generating the dataset we'll analyse throughout the term.
+
+## Before You Start
+
+1. Find a partner
+2. Get your participant ID from the instructors
+3. Open the Qualtrics survey: **[Link TBC]**
+
+---
+
+## Station 1: Simple Reaction Time
+
+**Task**: How fast can you respond to a simple stimulus?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Reaction time (ms)
+- Number of trials
+
+---
+
+## Station 2: Choice Reaction Time
+
+**Task**: How does having to make a decision affect your response time?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Reaction time (ms)
+- Accuracy
+- Number of trials
+
+---
+
+## Station 3: Memory Task
+
+**Task**: How many items can you recall?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Number of items recalled
+- Type of items
+
+---
+
+## Station 4: Estimation Task
+
+**Task**: How accurate are your judgments?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Your estimate
+- Actual value
+- Estimation error
+
+---
+
+## Station 5: Group Estimation
+
+**Task**: Does group discussion improve estimation accuracy?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Individual estimates
+- Group estimate
+- Actual value
+
+---
+
+## Station 6: Confidence Ratings
+
+**Task**: How well do you know what you know?
+
+**Procedure**: TBC
+
+**What you'll record**:
+- Performance on task
+- Confidence rating
+
+---
+
+## After the Stations
+
+### Form Your Project Groups
+
+By the end of the session, form groups of **3-4 students**.
+
+Your group will:
+- Work together on the group research project
+- Conduct labs together from Week 16
+- Generate data for the Research Report (Week 22)
+
+::: {.callout-tip}
+## Tips for Group Formation
+- Choose people you can reliably meet with outside class
+- Consider different strengths (organisation, analysis, writing)
+- Exchange contact details before leaving
+:::
+
+### Register Your Group
+
+Once formed, register your group: **[Link TBC]**
+
+---
+
+## Key Takeaways
+
+::: {.callout-note}
+## What We Did Today
+1. Generated data as both participants and testers
+2. Experienced variability in human performance
+3. Started thinking about variables and measurement
+4. Formed project groups for the term
+:::
+
+---
+
+## Next Week
+
+**Week 12**: Your first lecture!
+
+- We'll analyse the Data Olympics results together
+- Introduction to distributions and variability
+- Your reaction times become our teaching example
+
+See [Week 12](../../week12/index.qmd) for details.

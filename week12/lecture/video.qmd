@@ -1,0 +1,89 @@
+---
+title: "Week 12 Preview Video"
+subtitle: "Distributions & Variability"
+author: "Gordon Wright"
+date: "2026-01-19"
+---
+
+## Preview Video
+
+::: {.callout-important}
+## Watch Before the Lecture
+This video introduces the key concepts for Week 12. Please watch it before Monday's lecture.
+:::
+
+::: {.ratio .ratio-16x9}
+<!-- Video embed TBC -->
+<div style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; height: 400px;">
+<p>Video will be embedded here</p>
+</div>
+:::
+
+**Duration**: Approximately 10 minutes
+
+## What This Video Covers
+
+1. **Why we summarise data** — from 100 numbers to meaningful statistics
+2. **Central tendency** — mean, median, and mode
+3. **Variability** — range, variance, and standard deviation
+4. **Distribution shapes** — normal, skewed, bimodal
+5. **Connecting to your Data Olympics data** — what we'll analyse
+
+## Key Concepts Preview
+
+### The Big Question
+
+How do we go from raw data to meaningful summaries?
+
+When you collected reaction times in the Data Olympics, you generated dozens of individual measurements. This week, we learn how to compress that information into statistics that tell a clear story.
+
+### Central Tendency
+
+Where is the "centre" of the data?
+
+- **Mean**: The arithmetic average — add everything up, divide by how many
+- **Median**: The middle value when sorted — resistant to outliers
+- **Mode**: The most common value — useful for categories
+
+### Variability
+
+How spread out is the data?
+
+- **Range**: Maximum minus minimum — simple but limited
+- **Standard deviation**: How far, on average, values are from the mean
+
+### Distribution Shape
+
+What does the data look like?
+
+- **Normal**: Symmetric, bell-shaped
+- **Skewed**: Tail on one side (positive = right, negative = left)
+- **Bimodal**: Two peaks
+
+## Before the Lecture
+
+After watching this video:
+
+1. **Read** the [Lecture Reading](reading.qmd) for detailed explanations
+2. **Think about** your Data Olympics data — what shapes might you expect?
+3. **Come ready** to calculate examples by hand
+
+## Questions to Consider
+
+- Why might we prefer median over mean in some situations?
+- What would a histogram of your reaction times look like?
+- If mean > median, what does this suggest about the shape?
+
+## Related Materials
+
+- [Lecture Reading](reading.qmd) — Full explanations with examples
+- [Lecture Slides](slides.html){target="_blank"} — Presentation for Monday
+- [Lab Reading](../lab/reading.qmd) — Introduction to R
+
+## Questions?
+
+If you have questions after watching:
+
+- Post in the VLE discussion board
+- Bring them to Monday's lecture
+- Email g.wright@gold.ac.uk

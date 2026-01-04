@@ -1,0 +1,239 @@
+---
+title: "Week 12 Lab Reading"
+subtitle: "Introduction to R for Descriptive Statistics"
+author: "Gordon Wright"
+date: "2026-01-23"
+---
+
+## Overview
+
+This reading prepares you for the lab session where you'll use R to compute descriptive statistics. You don't need any prior programming experience — we'll use WebR, which runs directly in your browser.
+
+## What Is R?
+
+**R** is a programming language designed for statistical analysis. It's:
+
+- **Free and open-source** — anyone can use it
+- **Powerful** — handles everything from simple means to complex models
+- **Widely used** — the standard in psychology, biology, medicine, and data science
+- **Reproducible** — your analysis is documented in code
+
+### Why Learn R?
+
+Excel can calculate a mean. So why bother with R?
+
+1. **Reproducibility**: R code documents exactly what you did. "I calculated the mean" becomes `mean(data$reaction_time)` — clear and precise.
+
+2. **Efficiency**: Once written, code can be reused. Analyse one dataset, apply the same analysis to another.
+
+3. **Capabilities**: R handles analyses that Excel simply cannot — bootstrapping, mixed models, complex visualisations.
+
+4. **Transparency**: Sharing code lets others check your work. This is increasingly required in psychology journals.
+
+## WebR: R in Your Browser
+
+We use **WebR** — R that runs entirely in your browser. No installation needed.
+
+### How It Works
+
+When you see a code box like this:
+
+```r
+mean(c(5, 10, 15, 20))
+```
+
+You can:
+
+1. Click in the box
+2. Press the "Run" button
+3. See the output immediately
+
+The code runs in your browser, not on a server. Your data stays on your machine.
+
+## R Basics for Today
+
+You don't need to master R today — just understand enough to follow along. Here are the essentials:
+
+### Assigning Values
+
+Use `<-` (less-than followed by dash) to assign values:
+
+```r
+# Store a value
+my_score <- 75
+
+# Store multiple values
+reaction_times <- c(245, 312, 278, 298, 267)
+```
+
+The `c()` function combines values into a **vector** (a list of numbers).
+
+### Basic Functions
+
+Functions do things. They have a name followed by parentheses containing inputs:
+
+```r
+# Mean of values
+mean(c(10, 20, 30))
+
+# Sum of values
+sum(c(10, 20, 30))
+
+# Number of values
+length(c(10, 20, 30))
+```
+
+### Computing Descriptives
+
+For descriptive statistics, you'll use:
+
+| Function | What It Does |
+|----------|--------------|
+| `mean(x)` | Arithmetic mean |
+| `median(x)` | Median (middle value) |
+| `sd(x)` | Standard deviation |
+| `var(x)` | Variance |
+| `min(x)` | Minimum value |
+| `max(x)` | Maximum value |
+| `range(x)` | Returns both min and max |
+| `summary(x)` | Overview (min, quartiles, mean, max) |
+
+### Example: Reaction Times
+
+```r
+# Create data
+rt <- c(245, 312, 278, 298, 267)
+
+# Compute statistics
+mean(rt)     # 280
+median(rt)   # 278
+sd(rt)       # 26.2
+```
+
+## Understanding Output
+
+When R gives you output, it includes some formatting. For example:
+
+```
+[1] 280
+```
+
+The `[1]` just means "first element." For a single number, you can ignore it.
+
+For longer output:
+
+```
+[1] 245 267 278 298 312
+```
+
+The numbers 245, 267, etc. are your data. The `[1]` tells you where the first element is.
+
+## Working with Data Frames
+
+Real datasets aren't just vectors — they're **data frames** (like a spreadsheet with rows and columns).
+
+### Accessing Columns
+
+Use `$` to access a column:
+
+```r
+# If 'olympics' is your dataset
+olympics$reaction_time     # Get the reaction_time column
+mean(olympics$reaction_time)  # Mean of that column
+```
+
+### Subsetting Data
+
+Get specific parts of your data:
+
+```r
+# Filter rows where room is "A"
+room_a <- olympics[olympics$room == "A", ]
+
+# Get mean reaction time for Room A only
+mean(room_a$reaction_time)
+```
+
+## Common Errors (And How to Fix Them)
+
+### Error: object 'x' not found
+
+**Meaning**: R doesn't recognise that name.
+
+**Fixes**:
+
+- Check spelling (R is case-sensitive: `Data` ≠ `data`)
+- Make sure you created the object first
+- Run all code chunks in order
+
+### Error: could not find function "x"
+
+**Meaning**: R doesn't recognise that function.
+
+**Fixes**:
+
+- Check spelling
+- Some functions need packages (we'll load these for you)
+
+### Unexpected symbol error
+
+**Meaning**: R found something it didn't expect.
+
+**Fixes**:
+
+- Check for missing commas or parentheses
+- Make sure quotes match (both `"` or both `'`)
+
+## Preparing for the Lab
+
+### What You'll Do
+
+In the lab, you'll:
+
+1. Load the Data Olympics dataset
+2. Explore the variables (columns)
+3. Calculate means, medians, and SDs for different measures
+4. Compare Room A vs Room B
+5. Visualise distributions with histograms
+
+### Before You Arrive
+
+- Read this page (you're doing that now!)
+- Have the [Lecture Reading](../lecture/reading.qmd) fresh in mind
+- Bring a laptop or phone (WebR runs in any modern browser)
+
+### What to Focus On
+
+The goal isn't to memorise R syntax. Focus on:
+
+- **What** each statistic tells you (meaning over mechanics)
+- **How** the statistics relate to your Data Olympics experience
+- **Why** we compute these particular measures
+
+## Key Terms
+
+| Term | Definition |
+|------|------------|
+| **R** | Programming language for statistical analysis |
+| **WebR** | R running in a web browser |
+| **Vector** | A list of values of the same type |
+| **Data frame** | A table with rows and columns |
+| **Function** | Code that performs an action (like `mean()`) |
+
+## Summary
+
+| What | How in R |
+|------|----------|
+| Mean | `mean(x)` |
+| Median | `median(x)` |
+| SD | `sd(x)` |
+| Access column | `data$column` |
+| Create vector | `c(1, 2, 3)` |
+
+## Additional Resources
+
+If you want to explore R further:
+
+- [R for Data Science](https://r4ds.had.co.nz/) — Free online textbook
+- [RStudio Primers](https://posit.cloud/learn/primers) — Interactive tutorials
+- [Quick-R](https://www.statmethods.net/) — Syntax reference

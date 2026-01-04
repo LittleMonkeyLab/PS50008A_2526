@@ -1,0 +1,71 @@
+---
+title: "Plotting Data with R"
+subtitle: "PS50008A Week 14 Lab"
+author: "Gordon Wright"
+date: "2026-02-04"
+format:
+  revealjs:
+    theme: [default, ../../assets/gs-theme.scss]
+    slide-number: true
+    progress: true
+    transition: fade
+    width: 1280
+    height: 720
+    embed-resources: true
+taskmistress:
+  id: rm0-w14-lab-slides
+  subtype: lab-slides
+  status: backlog
+  priority: 2
+  due: "2026-02-04"
+  labels: ['r-programming', 'visualisation']
+  depends_on:
+    - rm0-w14-lecture-slides
+  blocks:
+    - rm0-w14-lab-activity
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+  properties:
+    estimated_duration: 20min
+    delivery_date: "2026-02-04"
+---
+
+## Today's Lab
+
+**Plotting Data with R**
+
+::: {.incremental}
+- TBC
+- TBC
+- TBC
+:::
+
+---
+
+## Learning Objectives
+
+By the end of this lab, you will be able to:
+
+- TBC
+- TBC
+- TBC
+
+---
+
+## Lab Structure
+
+| Time | Activity |
+|------|----------|
+| 0-20 min | Introduction |
+| 20-60 min | Main activity |
+| 60-80 min | Analysis |
+| 80-90 min | Wrap-up |
+
+---
+
+# Let's Begin! {.center background-color="#1a1a2e"}
+
+Move to the [Lab Activity](activity.qmd)

@@ -1,0 +1,389 @@
+---
+title: "Week 12 Lab Activity"
+subtitle: "Descriptive Statistics in R"
+author: "Gordon Wright"
+date: "2026-01-23"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: false
+filters:
+  - webr
+webr:
+  packages: ['dplyr', 'ggplot2']
+  show-startup-message: false
+---
+
+## Overview
+
+In this lab, you'll use R to analyse your Data Olympics data. You'll calculate descriptive statistics, visualise distributions, and compare groups.
+
+::: {.callout-important}
+## Before You Begin
+1. Make sure you've read the [Lab Reading](reading.qmd)
+2. Wait for the WebR status indicator to turn green
+3. Run code chunks **in order** — each builds on the previous
+:::
+
+---
+
+## Part 1: Getting Started
+
+### Loading the Data
+
+First, let's load and explore the Data Olympics dataset.
+
+```{webr-r}
+# Load the Data Olympics data
+# (In the actual lab, this will load the real class data)
+# For now, we use simulated data
+
+set.seed(2026)
+n <- 80
+
+olympics <- data.frame(
+  participant_id = 1:n,
+  room = sample(c("A", "B"), n, replace = TRUE),
+  simple_rt = rnorm(n, mean = 280, sd = 45),
+  choice_rt = rnorm(n, mean = 420, sd = 65),
+  memory_score = round(pmin(pmax(rnorm(n, mean = 6.5, sd = 1.5), 0), 10)),
+  estimation_error = rnorm(n, mean = 15, sd = 25),
+  confidence = round(pmin(pmax(rnorm(n, mean = 60, sd = 15), 0), 100))
+)
+
+# View the first few rows
+head(olympics)
+```
+
+### Exploring the Data
+
+Let's see what variables we have:
+
+```{webr-r}
+# What columns are in the dataset?
+names(olympics)
+
+# How many participants?
+nrow(olympics)
+
+# Summary of all variables
+summary(olympics)
+```
+
+::: {.callout-tip}
+## Understanding the Output
+The `summary()` function gives you:
+- **Min/Max**: The range
+- **1st Qu/3rd Qu**: The quartiles (25th and 75th percentile)
+- **Median**: The middle value
+- **Mean**: The average
+:::
+
+---
+
+## Part 2: Basic Descriptives
+
+### Simple Reaction Time
+
+Let's start with simple reaction time. Calculate the mean and SD:
+
+```{webr-r}
+# Mean reaction time
+mean(olympics$simple_rt)
+```
+
+```{webr-r}
+# Standard deviation
+sd(olympics$simple_rt)
+```
+
+```{webr-r}
+# Median
+median(olympics$simple_rt)
+```
+
+::: {.callout-note}
+## Questions to Consider
+- How close are the mean and median?
+- What does this suggest about the distribution shape?
+- What does the SD tell you about consistency?
+:::
+
+### Your Turn: Memory Scores
+
+Now calculate the same statistics for memory scores:
+
+```{webr-r}
+# Calculate mean for memory_score
+mean(olympics$memory_score)
+```
+
+```{webr-r}
+# Calculate SD for memory_score
+sd(olympics$memory_score)
+```
+
+```{webr-r}
+# Calculate median for memory_score
+median(olympics$memory_score)
+```
+
+### Variance vs Standard Deviation
+
+Compare variance and SD:
+
+```{webr-r}
+# Variance (squared units)
+var(olympics$simple_rt)
+
+# SD (original units)
+sd(olympics$simple_rt)
+
+# Check: SD = sqrt(variance)
+sqrt(var(olympics$simple_rt))
+```
+
+---
+
+## Part 3: Visualising Distributions
+
+### Creating Histograms
+
+A histogram shows the distribution shape:
+
+```{webr-r}
+# Histogram of simple reaction time
+hist(olympics$simple_rt,
+     main = "Distribution of Simple Reaction Times",
+     xlab = "Reaction Time (ms)",
+     col = "steelblue",
+     breaks = 15)
+```
+
+::: {.callout-note}
+## Reading the Histogram
+- **X-axis**: Reaction time values (grouped into bins)
+- **Y-axis**: How many participants fell into each bin
+- **Shape**: Is it symmetric? Skewed? Has multiple peaks?
+:::
+
+### Your Turn: Memory Histogram
+
+Create a histogram for memory scores:
+
+```{webr-r}
+# Create histogram for memory_score
+hist(olympics$memory_score,
+     main = "Distribution of Memory Scores",
+     xlab = "Number of Words Recalled",
+     col = "coral",
+     breaks = 10)
+```
+
+### Comparing Distributions
+
+Look at both distributions:
+
+```{webr-r}
+# Side by side comparison
+par(mfrow = c(1, 2))  # 1 row, 2 columns
+
+hist(olympics$simple_rt,
+     main = "Reaction Times",
+     xlab = "RT (ms)",
+     col = "steelblue",
+     breaks = 12)
+
+hist(olympics$memory_score,
+     main = "Memory Scores",
+     xlab = "Words Recalled",
+     col = "coral",
+     breaks = 8)
+
+par(mfrow = c(1, 1))  # Reset to single plot
+```
+
+::: {.callout-tip}
+## Compare the Shapes
+- Which distribution is more symmetric?
+- Which has more variability?
+- Are there any unusual values (outliers)?
+:::
+
+---
+
+## Part 4: Comparing Groups
+
+### Room A vs Room B
+
+Did the two rooms perform differently? Let's find out.
+
+```{webr-r}
+# How many in each room?
+table(olympics$room)
+```
+
+### Subsetting the Data
+
+```{webr-r}
+# Create separate datasets for each room
+room_a <- olympics[olympics$room == "A", ]
+room_b <- olympics[olympics$room == "B", ]
+
+# Check the sizes
+nrow(room_a)
+nrow(room_b)
+```
+
+### Comparing Means
+
+```{webr-r}
+# Mean reaction time for each room
+mean(room_a$simple_rt)
+mean(room_b$simple_rt)
+
+# The difference
+mean(room_a$simple_rt) - mean(room_b$simple_rt)
+```
+
+### Comparing Variability
+
+```{webr-r}
+# SD for each room
+sd(room_a$simple_rt)
+sd(room_b$simple_rt)
+```
+
+::: {.callout-note}
+## Questions
+- Which room was faster (lower RT)?
+- Which room was more consistent (lower SD)?
+- Is the difference "big" or "small"?
+:::
+
+### Visualising Group Differences
+
+```{webr-r}
+# Side-by-side histograms
+par(mfrow = c(1, 2))
+
+hist(room_a$simple_rt,
+     main = "Room A",
+     xlab = "Reaction Time (ms)",
+     col = "#275882",
+     xlim = c(150, 450),
+     breaks = 10)
+
+hist(room_b$simple_rt,
+     main = "Room B",
+     xlab = "Reaction Time (ms)",
+     col = "#EA8439",
+     xlim = c(150, 450),
+     breaks = 10)
+
+par(mfrow = c(1, 1))
+```
+
+### Using dplyr for Group Summaries
+
+A more elegant way using the tidyverse:
+
+```{webr-r}
+library(dplyr)
+
+olympics %>%
+  group_by(room) %>%
+  summarise(
+    n = n(),
+    mean_rt = mean(simple_rt),
+    sd_rt = sd(simple_rt),
+    median_rt = median(simple_rt)
+  )
+```
+
+---
+
+## Part 5: Practice Exercises
+
+### Exercise 1: Choice Reaction Time
+
+Calculate descriptives for choice reaction time:
+
+```{webr-r}
+# Your code here: Calculate mean, SD, median for choice_rt
+mean(olympics$choice_rt)
+sd(olympics$choice_rt)
+median(olympics$choice_rt)
+```
+
+### Exercise 2: Compare Simple vs Choice RT
+
+```{webr-r}
+# Compare the means
+cat("Simple RT mean:", mean(olympics$simple_rt), "\n")
+cat("Choice RT mean:", mean(olympics$choice_rt), "\n")
+cat("Difference:", mean(olympics$choice_rt) - mean(olympics$simple_rt), "\n")
+```
+
+This demonstrates **Hick's Law** — choice increases reaction time!
+
+### Exercise 3: Room Comparison for Memory
+
+```{webr-r}
+# Compare memory scores between rooms
+olympics %>%
+  group_by(room) %>%
+  summarise(
+    mean_memory = mean(memory_score),
+    sd_memory = sd(memory_score)
+  )
+```
+
+### Exercise 4: Full Summary Table
+
+Create a comprehensive summary:
+
+```{webr-r}
+# Summary of all numeric variables by room
+olympics %>%
+  group_by(room) %>%
+  summarise(
+    n = n(),
+    mean_simple_rt = round(mean(simple_rt), 1),
+    sd_simple_rt = round(sd(simple_rt), 1),
+    mean_choice_rt = round(mean(choice_rt), 1),
+    sd_choice_rt = round(sd(choice_rt), 1),
+    mean_memory = round(mean(memory_score), 1),
+    sd_memory = round(sd(memory_score), 1)
+  )
+```
+
+---
+
+## Summary
+
+::: {.callout-important}
+## Key Takeaways
+
+**Calculating Descriptives**
+- `mean(x)` for the average
+- `sd(x)` for standard deviation
+- `median(x)` for the middle value
+
+**Visualising**
+- `hist(x)` for distribution shape
+- Compare mean and median to assess skew
+
+**Comparing Groups**
+- Subset with `data[condition, ]`
+- Or use `group_by()` and `summarise()` from dplyr
+:::
+
+---
+
+## Next Steps
+
+1. Complete the [Week 12 Homework](homework.qmd)
+2. Review the [Lecture Reading](../lecture/reading.qmd) for the concepts
+3. Prepare for Week 13: Estimation & Confidence Intervals

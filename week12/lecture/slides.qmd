@@ -1,0 +1,523 @@
+---
+title: "Distributions & Variability"
+subtitle: "PS50008A Week 12 | Lecture"
+author: "Gordon Wright"
+date: "2026-01-19"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
+    progress: true
+    transition: fade
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
+---
+
+# Distributions & Variability {background-color="#275882"}
+
+## How do we summarise data?
+
+---
+
+## Today's Learning Objectives
+
+::: {.objectives-box}
+By the end of this lecture, you will be able to:
+
+- Distinguish between measures of central tendency
+- Calculate and interpret measures of variability
+- Recognise different distribution shapes
+- Report descriptive statistics in APA format
+:::
+
+---
+
+## The Problem: Raw Data
+
+You collected reaction times from 100 participants.
+
+You now have 100 numbers.
+
+. . .
+
+**What do you do with them?**
+
+---
+
+## We Need to Summarise
+
+Descriptive statistics help us:
+
+::: {.step-1}
+**1. Compress** — From many numbers to meaningful summaries
+:::
+
+::: {.step-2}
+**2. Compare** — Groups, conditions, studies
+:::
+
+::: {.step-3}
+**3. Communicate** — Share findings clearly
+:::
+
+::: {.step-4}
+**4. Prepare** — Set up for statistical tests
+:::
+
+---
+
+# Central Tendency {background-color="#275882"}
+
+## Where is the centre?
+
+---
+
+## Three Measures of Centre
+
+| Measure | What It Is | When to Use |
+|---------|------------|-------------|
+| **Mean** | Arithmetic average | Normal data, no outliers |
+| **Median** | Middle value | Skewed data, outliers |
+| **Mode** | Most frequent | Categorical data |
+
+---
+
+## The Mean
+
+::: {.definition-box}
+**Mean** ($\bar{x}$) = Sum of all values ÷ Number of values
+:::
+
+$$\bar{x} = \frac{\sum x_i}{n}$$
+
+---
+
+## Mean: Example
+
+Reaction times (ms): **245, 312, 278, 298, 267**
+
+. . .
+
+$$\bar{x} = \frac{245 + 312 + 278 + 298 + 267}{5}$$
+
+. . .
+
+$$\bar{x} = \frac{1400}{5} = 280\text{ms}$$
+
+---
+
+## Mean: Strengths & Weaknesses
+
+:::: {.columns}
+::: {.column width="50%"}
+**Strengths**
+
+- Uses all data
+- Mathematically useful
+- Widely understood
+:::
+
+::: {.column width="50%"}
+**Weaknesses**
+
+- Sensitive to outliers
+- Misleading with skew
+:::
+::::
+
+---
+
+## The Median
+
+::: {.definition-box}
+**Median** = The middle value when data is ordered
+:::
+
+**Steps**:
+
+1. Sort values low → high
+2. Find the middle value
+3. If even n, average the two middle values
+
+---
+
+## Median: Example
+
+Sorted: **245, 267, 278, 298, 312**
+
+. . .
+
+The median is **278ms** (the middle value)
+
+---
+
+## Median: With Even Numbers
+
+Sorted: **245, 267, 278, 298, 312, 340**
+
+. . .
+
+Two middle values: 278 and 298
+
+. . .
+
+Median = (278 + 298) / 2 = **288ms**
+
+---
+
+## The Mode
+
+::: {.definition-box}
+**Mode** = The most frequently occurring value
+:::
+
+Memory scores: 5, 6, 7, 7, 7, 8, 9
+
+. . .
+
+Mode = **7** (appears three times)
+
+---
+
+## Which Measure When?
+
+::: {.callout-tip}
+## Quick Rule
+If mean ≈ median → data is roughly symmetric
+
+If mean ≠ median → data is likely skewed
+:::
+
+---
+
+# Variability {background-color="#275882"}
+
+## How spread out is the data?
+
+---
+
+## Same Mean, Different Data
+
+- Dataset A: 48, 49, 50, 51, 52 → Mean = 50
+- Dataset B: 10, 30, 50, 70, 90 → Mean = 50
+
+. . .
+
+**These are very different!**
+
+Variability captures this difference.
+
+---
+
+## The Range
+
+::: {.definition-box}
+**Range** = Maximum − Minimum
+:::
+
+Dataset A: 52 − 48 = **4**
+
+Dataset B: 90 − 10 = **80**
+
+. . .
+
+::: {.callout-warning}
+## Limitation
+Range uses only 2 values — very sensitive to outliers
+:::
+
+---
+
+## Variance
+
+::: {.definition-box}
+**Variance** ($s^2$) = Average of squared deviations from the mean
+:::
+
+$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
+
+---
+
+## Variance: Step by Step
+
+**Data**: 245, 312, 278, 298, 267 (Mean = 280)
+
+::: {.step-1}
+**Step 1**: Find the mean ✓
+:::
+
+::: {.step-2}
+**Step 2**: Subtract mean from each value (deviation)
+:::
+
+::: {.step-3}
+**Step 3**: Square each deviation
+:::
+
+::: {.step-4}
+**Step 4**: Sum the squared deviations → Divide by (n−1)
+:::
+
+---
+
+## Variance: Calculation
+
+| Value | Deviation | Squared |
+|-------|-----------|---------|
+| 245 | −35 | 1225 |
+| 312 | +32 | 1024 |
+| 278 | −2 | 4 |
+| 298 | +18 | 324 |
+| 267 | −13 | 169 |
+| **Sum** | 0 | **2746** |
+
+Variance = 2746 / 4 = **686.5 ms²**
+
+---
+
+## Why n−1?
+
+::: {.callout-note}
+## Degrees of Freedom
+We divide by (n−1) because we're estimating population variance from a sample.
+
+This correction makes our estimate **unbiased**.
+
+More on this when we cover inference!
+:::
+
+---
+
+## Standard Deviation
+
+::: {.definition-box}
+**Standard Deviation** ($s$) = Square root of variance
+:::
+
+$$s = \sqrt{s^2}$$
+
+SD = √686.5 = **26.2ms**
+
+---
+
+## Why SD Instead of Variance?
+
+Variance is in **squared units** (ms²)
+
+. . .
+
+SD returns to **original units** (ms)
+
+. . .
+
+Much easier to interpret!
+
+---
+
+## Interpreting SD: The 68-95-99.7 Rule
+
+For normally distributed data:
+
+| Within | Percentage |
+|--------|------------|
+| 1 SD of mean | ~68% |
+| 2 SD of mean | ~95% |
+| 3 SD of mean | ~99.7% |
+
+---
+
+## Example: Reaction Times
+
+Mean = 280ms, SD = 26.2ms
+
+. . .
+
+- ~68% between 254ms and 306ms
+- ~95% between 228ms and 332ms
+
+---
+
+# Distributions {background-color="#275882"}
+
+## The shape of data
+
+---
+
+## What Is a Distribution?
+
+A **distribution** shows how values are spread across their possible range.
+
+Visualised as:
+
+- Histograms
+- Density plots
+
+---
+
+## The Normal Distribution
+
+::: {.definition-box}
+**Normal distribution** = Symmetric, bell-shaped curve
+:::
+
+Properties:
+
+- Mean = Median = Mode
+- Defined by mean (location) and SD (spread)
+- Many phenomena approximate this
+
+---
+
+## Skewed Distributions
+
+:::: {.columns}
+::: {.column width="50%"}
+**Positive Skew**
+
+- Tail to the right
+- Mean > Median
+- Example: Income
+:::
+
+::: {.column width="50%"}
+**Negative Skew**
+
+- Tail to the left
+- Mean < Median
+- Example: Age at death
+:::
+::::
+
+---
+
+## Memory Aid for Skew
+
+::: {.callout-tip}
+## The Tail Tells the Tale
+The **tail** points in the direction of the skew name.
+
+Positive skew → tail points to positive (right) side
+:::
+
+---
+
+## Bimodal Distributions
+
+Two peaks = Two subgroups
+
+. . .
+
+Example: Reaction times might be bimodal if some participants used a different strategy
+
+---
+
+## Identifying Shape: Summary
+
+| Shape | Mean vs Median | Visual |
+|-------|----------------|--------|
+| Normal | Mean ≈ Median | Symmetric bell |
+| Positive skew | Mean > Median | Tail to right |
+| Negative skew | Mean < Median | Tail to left |
+| Bimodal | Varies | Two peaks |
+
+---
+
+# Your Data Olympics Data {background-color="#275882"}
+
+## Let's explore it
+
+---
+
+## Reaction Times
+
+::: {.poll-box}
+**Prediction**: What shape do you expect?
+
+- Normal?
+- Positively skewed?
+- Bimodal?
+:::
+
+. . .
+
+Hint: Can reaction times be negative?
+
+---
+
+## Memory Scores
+
+- Limited range (0 to maximum items)
+- Might be roughly normal
+- Watch for **ceiling effects**
+
+---
+
+## Estimation Errors
+
+- Could be skewed in either direction
+- Compare individual vs group estimates
+- Which has more variability?
+
+---
+
+# Reporting Descriptives {background-color="#275882"}
+
+## APA format
+
+---
+
+## The Basic Format
+
+::: {.definition-box}
+Report: (*M* = value, *SD* = value)
+:::
+
+> Participants' simple reaction times were relatively fast (*M* = 280ms, *SD* = 26.2ms).
+
+---
+
+## Comparing Groups
+
+> Group A (*M* = 285ms, *SD* = 24.1ms) responded faster than Group B (*M* = 312ms, *SD* = 31.7ms).
+
+---
+
+## Always Report Both
+
+::: {.callout-important}
+## Critical Rule
+The mean without SD is incomplete.
+
+Always report **both** central tendency AND variability.
+:::
+
+---
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| Mean | Average — sensitive to outliers |
+| Median | Middle — robust to outliers |
+| SD | Spread — same units as data |
+| Normal | Symmetric bell shape |
+| Skew | Mean ≠ Median |
+
+---
+
+## What's Next?
+
+**Thursday Lab**: Computing descriptives in R using YOUR Data Olympics data
+
+**Week 13**: Estimation & Confidence Intervals
+
+---
+
+# Questions? {background-color="#275882"}
+
+::: {.notes}
+End of lecture content.
+Estimated delivery time: 90-100 minutes including pauses for questions and worked examples.
+:::

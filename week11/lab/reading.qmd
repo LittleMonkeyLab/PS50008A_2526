@@ -1,0 +1,133 @@
+---
+title: "Week 11 Lab Reading"
+subtitle: "The Data Olympics: Background"
+author: "Gordon Wright"
+date: "2026-01-16"
+---
+
+## Overview
+
+This reading prepares you for the Data Olympics lab session. It explains the cognitive tasks you'll complete and why we're collecting this data.
+
+## What You'll Be Measuring
+
+The Data Olympics includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
+
+### Reaction Time
+
+**Reaction time** is the interval between a stimulus and your response to it.
+
+- **Simple reaction time**: Respond as fast as possible to a single stimulus
+- **Choice reaction time**: Choose between responses based on the stimulus
+
+Research shows that adding choices increases reaction time — a finding known as **Hick's Law** (Hick, 1952).
+
+::: {.callout-note}
+## Why It Matters
+Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.
+:::
+
+### Memory
+
+The **memory task** measures how many items you can hold in working memory.
+
+Miller (1956) famously proposed that we can hold about **7 ± 2** items in short-term memory — the "magical number seven." Your data will test whether this holds for our class.
+
+### Estimation
+
+**Estimation tasks** reveal systematic biases in human judgement.
+
+People often:
+
+- Underestimate large quantities
+- Overestimate small probabilities
+- Anchor on initial information
+
+We'll explore whether group discussion improves or worsens estimation accuracy.
+
+### Confidence
+
+**Metacognition** is thinking about your own thinking.
+
+The confidence task measures how well you know what you know:
+
+- Are you **overconfident** (think you're right when you're wrong)?
+- Are you **underconfident** (doubt yourself when you're correct)?
+- Are you **well-calibrated** (confidence matches accuracy)?
+
+## Why Generate Our Own Data?
+
+### Learning with Real Data
+
+When we analyse data you've generated:
+
+- You understand what the numbers represent
+- You can connect statistics to real experiences
+- The results are genuinely unknown (not textbook examples)
+
+### Experiencing Both Roles
+
+Acting as both **participant** and **tester** teaches you:
+
+- The importance of standardised procedures
+- How instructions affect behaviour
+- Why research protocols exist
+
+## Preparing for the Lab
+
+### Before You Arrive
+
+1. **Watch the preview video** — Module introduction (5 minutes)
+2. **Read this page** — Understand what you'll be doing
+3. **Check your lab allocation** — Group A or Group B
+
+### What to Bring
+
+- Your phone or laptop (for Qualtrics data entry)
+- A pen (backup for paper recording)
+
+### What to Expect
+
+| Time | Activity |
+|------|----------|
+| 10:00-10:15 | Welcome, setup, get participant IDs |
+| 10:15-11:30 | Rotate through 6 stations (~12 min each) |
+| 11:30-11:50 | Form project groups |
+| 11:50-12:00 | Wrap-up |
+
+## Working in Pairs
+
+At each station, you'll work with a partner:
+
+1. One person is the **participant** (completes the task)
+2. One person is the **tester** (administers the task, records data)
+3. Then you **swap roles**
+
+This means everyone experiences both perspectives.
+
+## Group Formation
+
+By the end of the lab, you should have formed your **project group** (3-4 students).
+
+Consider:
+
+- Can you meet regularly outside class?
+- Do you have complementary strengths?
+- Will you be reliable partners?
+
+You'll work together all term on the group research project.
+
+## Key Terms
+
+| Term | Definition |
+|------|------------|
+| **Reaction time** | Time between stimulus and response |
+| **Working memory** | System for temporarily holding information |
+| **Estimation bias** | Systematic error in judgement |
+| **Metacognition** | Awareness of one's own cognitive processes |
+| **Calibration** | Match between confidence and accuracy |
+
+## References
+
+- Hick, W. E. (1952). On the rate of gain of information. *Quarterly Journal of Experimental Psychology*, 4(1), 11-26.
+- Miller, G. A. (1956). The magical number seven, plus or minus two. *Psychological Review*, 63(2), 81-97.

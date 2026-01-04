@@ -1,0 +1,59 @@
+# Quarto build artifacts
+_site/
+.quarto/
+*_files/
+*.html
+!*.qmd
+
+# R artifacts
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Editor/IDE files
+*.swp
+*.swo
+*~
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Freeze directory (optional - uncomment if you want to track freeze)
+# _freeze/
+
+# Environment files with secrets
+.env
+.env.local
+*.env
+
+# Large media files (optional - uncomment as needed)
+# *.mp4
+# *.mov
+# *.zip
+
+/.quarto/
+**/*.quarto_ipynb

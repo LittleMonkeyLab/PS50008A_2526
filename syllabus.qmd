@@ -1,0 +1,170 @@
+---
+title: "Syllabus"
+subtitle: "PS50008A Research Methods & Experimental Design | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Module Information
+
+| | |
+|---|---|
+| **Module Code** | PS50008A |
+| **Module Title** | Research Methods & Experimental Design |
+| **Credits** | 30 (Level 3 / Foundation) |
+| **Term** | 2 (Spring 2026) |
+| **Academic Year** | 2025-26 |
+
+## Module Description
+
+This module introduces foundation students to the principles of psychological research. You will learn how to design experiments, collect and analyse data, and report findings in accordance with professional standards.
+
+A distinctive feature of this module is the **Data Olympics**—in Week 11, you generate the dataset you'll analyse throughout the term. This means you learn statistics using your own data, not abstract examples.
+
+## Learning Outcomes
+
+On successful completion of this module, you will be able to:
+
+### Conceptual Understanding (C)
+
+- Identify experimental designs (between-participants, within-participants, matched pairs, correlational)
+- Distinguish between IVs and DVs
+- Formulate appropriate hypotheses (one-tailed, two-tailed)
+- Understand null hypothesis significance testing
+- Select appropriate statistical tests
+- Interpret p-values, confidence intervals, and effect sizes
+- Recognise the difference between correlation and causation
+- Critically evaluate research claims
+
+### Practical Skills (P)
+
+- Calculate descriptive statistics by hand
+- Run t-tests and correlations in R
+- Produce appropriate data visualisations
+- Check statistical assumptions
+- Report results in APA format
+
+### Research Skills (R)
+
+- Develop research questions
+- Operationalise variables
+- Design appropriate methodologies
+- Collect data systematically
+- Write research reports
+- Critique methodological approaches
+- Consider ecological validity
+
+## Teaching Schedule
+
+| Session | Day | Time | Location |
+|---------|-----|------|----------|
+| Lecture | Monday | TBC | TBC |
+| Lab Group A | Thursday | 10:00-12:00 | TBC |
+| Lab Group B | Thursday | 10:00-12:00 | TBC |
+
+::: {.callout-note}
+## Week 11
+There is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for the Data Olympics.
+:::
+
+## Weekly Materials
+
+Each week typically includes:
+
+| Material | Description |
+|----------|-------------|
+| Lecture Slides | Core content (RevealJS, recorded) |
+| Preview Video | Short video to watch before lecture |
+| Lecture Reading | Textbook content for the week |
+| Lab Slides | Introduction to lab session |
+| Lab Activity | Interactive WebR exercises |
+| Lab Reading | Supporting practical material |
+| Homework | Weekly consolidation exercises |
+
+## Assessment
+
+See the [Assessments](assessments.qmd) page for full details.
+
+| Assessment | Weight | Deadline |
+|------------|--------|----------|
+| Research Plan | 20% | Fri 27 Feb 2026 |
+| MCQ Exam | 20% | Mon 9 Mar 2026 |
+| EDS Assignment | 20% | Fri 20 Mar 2026 |
+| Research Report | 40% | Fri 1 May 2026 |
+
+## Required Reading
+
+### Core Textbooks
+
+Both textbooks are available as e-books via the Goldsmiths Library:
+
+- **Coolican, H. (2017). *Research methods and statistics in psychology* (6th Ed.).** Hodder and Stoughton. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
+- **Harris, P. (2008). *Designing and reporting experiments in psychology* (3rd Ed.).** Open University Press. [VLeBooks](https://www.vlebooks.com/Product/Index/155270?page=0&startBookmarkId=-1)
+
+Weekly readings are specified on each week's page. See the [Resources](resources.qmd) page for additional materials.
+
+## Software
+
+| Software | Purpose | Access |
+|----------|---------|--------|
+| R | Statistical analysis | Free download or use WebR in browser |
+| WebR | In-browser R exercises | Built into course materials |
+
+You do not need to install R to complete this module—all lab activities use WebR, which runs in your browser.
+
+## Group Project
+
+From Week 11, you will work in self-organised groups on a research project:
+
+| Week | Skills & Procedures | Communication |
+|------|---------------------|---------------|
+| 11 | Form groups | — |
+| 12-15 | Develop research question and design | Results writing |
+| — | *Reading Week* | — |
+| 16-17 | Data collection | Methods & Introduction |
+| 18-19 | Analysis | Introduction continued |
+| 20 | Final analysis | Discussion |
+
+The project feeds into two assessments:
+
+- **Research Plan** (due Week 16) — Your proposed methodology
+- **Research Report** (due Week 22) — Individual write-up of group data
+
+::: {.callout-note}
+## Labs in Project Groups
+From Week 16 onwards, labs are conducted in your project groups.
+:::
+
+## Attendance Policy
+
+Attendance at all lectures and labs is expected and required. This module builds cumulatively—missing sessions will affect your understanding of later material.
+
+- **Attendance** is recorded via SEATS in both lectures and labs
+- **Preparation** and independent study are expected each week
+- **Preview videos** should be watched before lectures
+- **Readings** should be completed as specified
+
+::: {.callout-warning}
+## The Data Olympics
+You must attend Week 11 to participate in the Data Olympics. This generates the dataset used throughout the term.
+:::
+
+## Academic Integrity
+
+All submitted work must be your own. The group project requires collaboration, but the Research Plan and Research Report are individual submissions.
+
+Using AI tools to generate your work is not permitted. You may use AI to help understand concepts, but submitted work must be your own.
+
+## Support
+
+| Resource | Details |
+|----------|---------|
+| Office Hours | TBC |
+| Email | g.wright@gold.ac.uk |
+| VLE | Discussion board for general questions |
+
+## Additional Resources
+
+- [Resources Page](resources.qmd)
+- [Goldsmiths Library](https://www.gold.ac.uk/library/)
+- [Academic Skills Centre](https://www.gold.ac.uk/students/skills/)

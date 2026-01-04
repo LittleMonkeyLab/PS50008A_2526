@@ -1,0 +1,42 @@
+---
+title: "Week 18 Preview Video"
+subtitle: "Running Experiments Ethically and Effectively"
+author: "Gordon Wright"
+date: "2026-03-09"
+format:
+  html:
+    toc: false
+taskmistress:
+  id: rm0-w18-lecture-video
+  subtype: lecture-notes
+  status: backlog
+  priority: 3
+  due: "2026-03-09"
+  labels: ['ethics', 'experimental-design', 'video']
+  depends_on:
+    - rm0-w18-index
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+---
+
+## Preview Video
+
+Watch this video before attending the lecture.
+
+::: {.callout-note}
+## Video
+Video embed or link TBC
+:::
+
+## Duration
+
+Approximately X minutes
+
+## Key Points Covered
+
+1. TBC
+2. TBC
+3. TBC

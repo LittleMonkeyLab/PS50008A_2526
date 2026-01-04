@@ -1,0 +1,97 @@
+---
+title: "Week 11: Data Olympics"
+subtitle: "PS50008A Research Methods | 12-16 January 2026"
+author: "Gordon Wright"
+date: "2026-01-12"
+---
+
+## Overview
+
+::: {.callout-important}
+## First Week of Term
+This is your first session of PS50008A. There is **no lecture** this week—your first contact is the **Thursday lab** where you'll participate in the Data Olympics.
+:::
+
+**This week**: Generate the dataset you'll analyse throughout the term by participating in the Data Olympics—a series of cognitive tasks and group activities.
+
+**Lab**: Thursday 10:00-12:00 (two parallel sessions)
+
+## What is the Data Olympics?
+
+The Data Olympics is a series of rotating stations where you'll:
+
+- Complete cognitive tasks (reaction time, memory, estimation)
+- Work in pairs and small groups
+- Generate real data about your own performance
+- Experience being both participant and tester
+
+This data becomes the teaching dataset for the entire module. When we learn about distributions, t-tests, and correlations, we'll use *your* data.
+
+## Before the Lab
+
+::: {.callout-note}
+## Required Preparation
+1. **Watch the preview video** (5 minutes) — an introduction to the module
+2. **Check your lab allocation** (Group A or Group B)
+3. **Arrive on time** — we need to start promptly
+:::
+
+- [Preview Video](lecture/video.qmd)
+
+## During the Lab
+
+You will rotate through 6 stations in pairs:
+
+1. **Simple Reaction Time** — How fast can you respond to a stimulus?
+2. **Choice Reaction Time** — How does decision-making affect speed?
+3. **Memory Task** — How many items can you recall?
+4. **Estimation Task** — How accurate are your judgments?
+5. **Group Estimation** — Does group discussion improve accuracy?
+6. **Confidence Ratings** — How well do you know what you know?
+
+At each station, you'll record your data in Qualtrics.
+
+## Form Your Groups
+
+By the end of this lab, you should have formed your **project groups** (3-4 students). These groups will:
+
+- Work together on the group project throughout the term
+- Conduct labs together from Week 16 onwards
+- Generate data for your Research Report
+
+::: {.callout-tip}
+## Choosing Group Members
+Consider people you can reliably meet with outside class. You'll be working together for the whole term.
+:::
+
+## Learning Objectives
+
+By the end of this week, you will be able to:
+
+- Describe what variables are and how they can vary
+- Experience the difference between being a participant and a tester
+- Understand that the same measurement gives different results each time
+- Work systematically to record data
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Preview Video](lecture/video.qmd) | Module introduction (watch before lab) |
+| [Preview Slides](lecture/slides.html){target="_blank"} | Slides from the preview video |
+| [Week 11 Reading](lecture/reading.qmd) | Introduction to research methods |
+| [Lab Reading](lab/reading.qmd) | Background on the Data Olympics tasks |
+| [Lab Activity](lab/activity.qmd) | Data Olympics stations and instructions |
+| [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
+
+## What's Next?
+
+- **Week 12**: Your first lecture (2 hours). We'll analyse the Data Olympics results together.
+- **By end of Week 11**: Form your project groups.
+
+## Key Concepts Introduced
+
+- Variables as things that vary
+- Observational data (no manipulation—we're just measuring)
+- Sampling variability (two rooms, same protocol, different results?)
+- Systematic data recording

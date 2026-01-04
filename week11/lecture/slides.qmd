@@ -1,0 +1,242 @@
+---
+title: "Welcome to Research Methods"
+subtitle: "PS50008A Week 11 | Preview Video"
+author: "Gordon Wright"
+date: "2026-01-12"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
+    progress: true
+    transition: fade
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
+    # footer: |
+    #   <button onclick="readCurrentSlide()">🔊 Read slide</button>
+---
+
+# Welcome to PS50008A {background-color="#275882"}
+
+## Research Methods & Experimental Design {.center}
+
+Term 2 | Spring 2026
+
+---
+
+## What is This Module About?
+
+::: {.objectives-box}
+**You will learn to:**
+
+- **Design** experiments that can answer your questions
+- **Analyse** data using R
+- **Interpret** results appropriately
+- **Report** findings in professional APA format
+:::
+
+---
+
+## Why Research Methods?
+
+Psychology is a **science**.
+
+To make claims about human behaviour, we need:
+
+- Systematic observation
+- Controlled experiments
+- Statistical analysis
+- Peer review
+
+This module teaches you the **tools** to do this.
+
+---
+
+# The Data Olympics {background-color="#275882"}
+
+## Thursday: Your First Session
+
+::: {.callout-important}
+## No Lecture This Week
+Your first contact is **Thursday's lab session** (10:00-12:00).
+
+There is no Monday lecture in Week 11.
+:::
+
+---
+
+## What Are the Data Olympics?
+
+A series of **6 cognitive task stations** where you:
+
+:::: {.columns}
+::: {.column width="50%"}
+- Test reaction times
+- Complete memory tasks
+- Make estimations
+- Rate your confidence
+:::
+::: {.column width="50%"}
+- Work in pairs
+- Record data in Qualtrics
+- Experience being a participant
+- Experience being a tester
+:::
+::::
+
+---
+
+## Why "Olympics"?
+
+The data you generate becomes our **teaching dataset**.
+
+When we learn about:
+
+| Topic | Your Data |
+|-------|-----------|
+| Distributions | Your reaction times |
+| t-tests | Room A vs Room B |
+| Correlations | Memory vs confidence |
+
+...we use [**your**]{.inverse-box} data, not abstract examples.
+
+---
+
+## The 6 Stations
+
+::: {.step-1}
+**1. Simple Reaction Time** — How fast can you respond to a stimulus?
+:::
+
+::: {.step-2}
+**2. Choice Reaction Time** — How does decision-making affect speed?
+:::
+
+::: {.step-3}
+**3. Memory Task** — How many items can you recall?
+:::
+
+---
+
+## The 6 Stations (continued)
+
+::: {.step-1}
+**4. Estimation Task** — How accurate are your judgments?
+:::
+
+::: {.step-2}
+**5. Group Estimation** — Does group discussion improve accuracy?
+:::
+
+::: {.step-3}
+**6. Confidence Ratings** — How well do you know what you know?
+:::
+
+---
+
+# What You Need to Know {background-color="#275882"}
+
+## Before Thursday
+
+::: {.callout-tip}
+## Preparation Checklist
+1. Check your lab allocation (Group A or Group B)
+2. Bring your phone or laptop (for Qualtrics)
+3. Arrive on time — we need to start promptly at 10:00
+:::
+
+---
+
+## Form Your Project Groups
+
+By the end of Thursday, form groups of [**3-4 students**]{.inverse-box}.
+
+Your group will:
+
+- Work together on the **research project**
+- Conduct labs together from **Week 16**
+- Generate data for the **Research Report**
+
+::: {.callout-note}
+## Choose Wisely
+Pick people you can reliably meet with outside class.
+:::
+
+---
+
+# The Term Ahead {background-color="#275882"}
+
+## What's Coming
+
+| Weeks | Focus |
+|-------|-------|
+| 11-15 | Building skills: distributions, t-tests, correlation |
+| 16-17 | Applying skills: regression, interpretation |
+| 18 | MCQ Exam |
+| 19-20 | Project support |
+
+---
+
+## Four Assessments
+
+| Assessment | Weight | Due |
+|------------|--------|-----|
+| Research Plan | 20% | Week 16 |
+| MCQ Exam | 20% | Week 18 |
+| EDS Assignment | 20% | Week 20 |
+| Research Report | 40% | 1 May (post-term) |
+
+All details on the [Assessments](../../assessments.qmd) page.
+
+---
+
+## Weekly Structure
+
+Each week typically includes:
+
+- **Monday**: 2-hour lecture (recorded)
+- **Thursday**: 2-hour lab session
+- **Preview video**: Watch before lecture
+- **Readings**: Textbook chapters
+- **Homework**: Practice exercises
+
+---
+
+# See You Thursday! {background-color="#275882"}
+
+## Summary {.center}
+
+::: {.poll-box}
+**Thursday 10:00-12:00**
+
+Data Olympics + Form Groups
+:::
+
+Questions? Email g.wright@gold.ac.uk
+
+---
+
+## Quick Links
+
+- [Module Homepage](../../index.qmd)
+- [Syllabus](../../syllabus.qmd)
+- [Schedule](../../schedule.qmd)
+- [Assessments](../../assessments.qmd)
+- [Week 11 Overview](../index.qmd)
+
+::: {.notes}
+End of preview video content.
+Recording time: approximately 5-7 minutes.
+:::
+
+<!-- <script>
+  function readCurrentSlide() {
+    const synth = window.speechSynthesis;
+    const slide = Reveal.getCurrentSlide();
+    const text = slide.innerText;
+    const utterance = new SpeechSynthesisUtterance(text + ". Next slide.");
+    utterance.rate = 1.0;
+    synth.speak(utterance);
+  }
+</script> -->

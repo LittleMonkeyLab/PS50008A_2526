@@ -1,0 +1,275 @@
+---
+title: "EDS Assignment – PRACTICE PAPER"
+subtitle: "PS50008A: Research Methods Experimental Design & Statistics"
+author: "Integrated Degree in Psychology – Foundation Year"
+date: "Due Friday 21st March, 2025 – 12 noon"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    incremental: true
+    transition: slide
+---
+
+## Learning Outcomes
+
+By the end of this teaching unit, and thereafter, you should:
+
+- Be familiar with the requirements of the EDS Assignment
+- Have completed the PRACTICE EDS Assignment paper
+- Have accessed the REAL EDS Assignment paper and plan a schedule for completing the work on time
+
+## EDS Assignment PRACTICE paper
+
+- Find the PRACTICE paper in this week's section on the PS50008A VLE page
+- We will go through the PRACTICE paper in class
+- Thereafter, download the REAL EDS Assignment paper – available under "Assignment 2" on the VLE
+- Do the assignment INDIVIDUALLY and submit to the link on the PS50008A VLE page in 'Submission Links' section, near the top
+
+## Practice Paper: The Study
+
+A researcher decided to investigate whether pairs of friends are similarly extravert by giving Eysenck Personality Inventories (E.P.I.) to volunteers and their best friends at a university.
+
+The E.P.I. produces a score for:
+
+- **Extraversion** (max=25, where low score = Introversion, high score = Extraversion)
+- **Neuroticism** (max=25, where low score = Emotional Stability, high score = Neuroticism)
+
+According to Eysenck's theory, the two personality dimensions are defined as entirely independent of one another.
+
+## The Extraversion Data
+
+| Participant Pair | Person 1 | Person 2 |
+|:----------------:|:--------:|:--------:|
+| 1 | 10 | 12 |
+| 2 | 7 | 13 |
+| 3 | 14 | 17 |
+| 4 | 11 | 15 |
+| 5 | 13 | 9 |
+| 6 | 12 | 14 |
+| 7 | 6 | 8 |
+| 8 | 18 | 12 |
+| 9 | 21 | 15 |
+| 10 | 9 | 11 |
+
+## The PRACTICE paper requires you to:
+
+Answer the following questions and include ALL your calculations:
+
+1. State the researcher's hypothesis
+2. Calculate the means and standard deviations for each set of scores
+3. Conduct an analysis to see if there is a significant correlation between pairs of friends' extraversion scores
+4. If there was no significant correlation, can you think of two reasons why not
+5. Would you expect there to be a significant correlation between pairs of friends' neuroticism scores – and state two reasons why
+
+## Q1. State the researcher's hypothesis
+
+**What is the hypothesis?**
+
+. . .
+
+**Answer:**
+
+- It is hypothesised that there will be a significant correlation between Extraversion scores for the pairs of friends (2-tailed)
+
+OR
+
+- It is hypothesised that there will be a significant positive correlation between Extraversion scores for the pairs of friends (1-tailed)
+
+## Q2. Calculate means and standard deviations
+
+**What is the mean for Person 1?**
+
+. . .
+
+**Answer:** The mean Extraversion score for Person 1 = 12.10
+
+**Show the workings:**
+
+$$10+7+14+11+13+12+6+18+21+9 = 121/10 = 12.10$$
+
+## Calculation of SD for Person 1: Step 1
+
+**Step 1 - Sum**
+
+Sum all observations: $\sum X = 121$
+
+| Person 1 Observations |
+|:---------------------:|
+| 10, 7, 14, 11, 13, 12, 6, 18, 21, 9 |
+| **Total = 121** |
+
+## Calculation of SD for Person 1: Step 2
+
+**Step 2 - Mean**
+
+Divide the sum by the number of observations:
+
+$$\frac{\sum X}{N} = \frac{121}{10} = 12.1$$
+
+## Calculation of SD for Person 1: Step 3
+
+**Step 3 – Uncorrected sum of squares**
+
+a) Square each observation $X^2$
+
+b) Sum all squares $\sum X^2$
+
+| Observation | Observation² |
+|:-----------:|:------------:|
+| 10 | 100 |
+| 7 | 49 |
+| 14 | 196 |
+| 11 | 121 |
+| 13 | 169 |
+| 12 | 144 |
+| 6 | 36 |
+| 18 | 324 |
+| 21 | 441 |
+| 9 | 81 |
+| **Total** | **1,661** |
+
+## Calculation of SD for Person 1: Steps 4-5
+
+**Step 4 – Correction term**
+
+a) Square total from step 1: $(\sum X)^2 = (121)^2 = 14,641$
+
+b) Divide by number of observations: $\frac{(\sum X)^2}{10} = \frac{14,641}{10} = 1,464.1$
+
+. . .
+
+**Step 5 – Corrected sum of squares**
+
+Subtract result of 4b from 3b:
+
+$$\sum X^2 - \frac{(\sum X)^2}{10} = 1,661 - 1,464.1 = 196.9$$
+
+## Calculation of SD for Person 1: Steps 6-7
+
+**Step 6 – Variance**
+
+Divide result of step 5 by number of observations – 1:
+
+$$\frac{196.9}{N-1} = \frac{196.9}{9} = 21.88$$
+
+. . .
+
+**Step 7 – Standard deviation**
+
+Take the square root of step 6:
+
+$$SD = \sqrt{21.88} = 4.68$$
+
+*Remember, report values to 2 decimal places*
+
+## Q2. Summary of Results
+
+| Condition | Mean | SD |
+|:---------:|:----:|:--:|
+| Person 1 | 12.10 | 4.68 |
+| Person 2 | 11.60 | 3.53 |
+
+*Remember to display the full workings in your answer*
+
+## Q3. Conduct an analysis for correlation
+
+**What is the appropriate statistical test?**
+
+. . .
+
+**Answer:** The appropriate test is a **Spearman's Rho** which is suitable for a correlational design
+
+The researcher is investigating whether there is a RELATIONSHIP between the pairs of Extraversion scores – i.e., whether they correlate
+
+## Q3. Spearman's Rho Result
+
+**Result:** $\rho = 0.50$ (remember $\rho$ = Greek symbol for rho)
+
+In order for the result to be significant, $\rho$ must exceed the critical value for N = 10 at the p = .05 level
+
+**Critical value = 0.56** (in Robson Table C)
+
+. . .
+
+So is our observed $\rho = 0.50$ significant?
+
+## Q3. Interpretation
+
+**Result:** $\rho = 0.50$
+
+**Critical value:** 0.56 for N = 10 at p = .05
+
+. . .
+
+**No, it's non-significant!** It does not exceed the critical value of 0.56
+
+There is no significant relationship between the pairs of scores for Extraversion
+
+. . .
+
+> Spearman's rho revealed there was no significant correlation between the pairs of friend's Extraversion scores, $\rho = .50$, p > .05. The research hypothesis has not been supported.
+
+## Q4. Reasons for no significant correlation
+
+**If there was no significant correlation, can you think of two reasons why not?**
+
+Examples of possible answers:
+
+**Methodological:**
+
+- Sample size too small
+- Critique self-report inventories - may not capture the full scope of one's personality
+- Risk of socially-desirable answers
+
+**Theoretical:**
+
+- Theories of friendship – based on proximity or similarity
+- If based on proximity then would not expect the correlation (since friends are at University together)
+- If similar, may not know each other well enough yet
+
+## Q5. Would you expect correlation for Neuroticism?
+
+**Would you expect there to be a significant correlation between pairs of friends' Neuroticism scores?**
+
+*Key thing for marks is the quality of the reasoning, rather than answer!*
+
+Examples of possible answers:
+
+- Could answer **no** – since no relationship for E, then would expect the same for N – for same reasons as Q4
+- Could answer there will be a **positive correlation** – based on similarity
+- Could answer there will be a **negative correlation** – opposites attract, anxious person attracted to calm person
+
+## EDS Assignment – REAL paper
+
+- Find the paper under week 17 on the PS50008A VLE page
+- Titled: **EDS Assignment – The REAL paper**
+
+Remember to display all the workings for your calculations:
+
+- Means
+- SDs
+- Statistical tests
+
+## Advice for Q7 and Q8 (REAL paper)
+
+**Q7:** Remember, it is the quality of the reasoning that will get you marks!
+
+- You can include supporting evidence to back up your answer if you wish (e.g., gender differences in mental rotation?)
+
+**Q8:** Remember, try to devise a task which is much more closely linked to the sort of task that may involve mental rotation that a person might undertake in the 'real world'
+
+- Try to include what your experimental hypothesis would be
+- Describe the IV and DV, and state how the DV would be measured
+- You can also provide some very brief information on participants and the procedure
+
+**Aim for at least half a page/a paragraph on each answer** (no word limit)
+
+## Reading
+
+You will find step by step instructions on calculating the SD by hand, and calculating the appropriate statistical test by hand in:
+
+- **Coolican, H. (2017).** *Research methods and statistics in psychology* (6th Edition). Routledge.
+- **Robson, C. (1994).** *Experiment, Design and Statistics in Psychology* (3rd Edition). Penguin.
+
+(Or, any research methods/stats text will be fine)

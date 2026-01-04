@@ -1,0 +1,55 @@
+---
+title: "Week 14 Homework"
+subtitle: "Probabilities & Distributions & Plotting Data with R"
+author: "Gordon Wright"
+date: "2026-02-04"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w14-homework
+  subtype: homework
+  status: backlog
+  priority: 2
+  due: "2026-02-08"
+  labels: ['statistics', 'probability', 'r-programming', 'visualisation', 'homework']
+  depends_on:
+    - rm0-w14-lab-activity
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+  properties:
+    deadline: "2026-02-08"
+---
+
+## Overview
+
+This homework consolidates your learning from Week 14.
+
+::: {.callout-important}
+## Deadline
+Complete this homework by 2026-02-08.
+:::
+
+## Part 1: Conceptual Questions
+
+TBC
+
+## Part 2: Practical Exercises
+
+TBC
+
+## Part 3: Reflection
+
+TBC
+
+## Submission
+
+TBC - Submission instructions
+
+## Marking Criteria
+
+This is a **formative** assignment.

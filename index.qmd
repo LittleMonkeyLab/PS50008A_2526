@@ -1,0 +1,99 @@
+---
+title: "PS50008A Research Methods & Experimental Design"
+subtitle: "Term 2 Spring 2026 | Goldsmiths Psychology"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Welcome
+
+Welcome to PS50008A Research Methods & Experimental Design. This module introduces the fundamental principles of psychological research, experimental design, and statistical analysis.
+
+::: {.callout-important}
+## First Week
+Your first session is **Thursday of Week 11** in the labs. Watch the [preview video](week11/lecture/video.qmd) before attending.
+:::
+
+## Module Overview
+
+| | |
+|---|---|
+| **Module Code** | PS50008A |
+| **Credits** | 30 (Level 3 / Foundation) |
+| **Term** | 2 (January - March 2026) |
+| **Module Lead** | Gordon Wright |
+| **Contact** | g.wright@gold.ac.uk |
+
+## What You'll Learn
+
+This module teaches you to think like a researcher:
+
+- **Design** experiments that can actually answer your questions
+- **Analyse** data using both conceptual understanding and practical R skills
+- **Interpret** results appropriately (including knowing what you *can't* claim)
+- **Report** findings in professional APA format
+- **Collaborate** on a real research project
+
+## The Data Olympics
+
+In Week 11, you'll participate in the **Data Olympics**—a series of cognitive tasks and group activities that generate the dataset you'll analyse throughout the term. This means you'll learn statistics using *your own data*, not abstract examples.
+
+## Assessments
+
+There are four assessments, all in Term 2:
+
+| Assessment | Weight | Due |
+|------------|--------|-----|
+| [Research Plan](assessments.qmd#research-plan) | 20% | Fri 27 Feb (Week 16) |
+| [MCQ Exam](assessments.qmd#mcq-exam) | 20% | Mon 9 Mar (Week 18) |
+| [EDS Assignment](assessments.qmd#eds-assignment) | 20% | Fri 20 Mar (Week 20) |
+| [Research Report](assessments.qmd#research-report) | 40% | Fri 1 May (Week 22) |
+
+See the [Assessments](assessments.qmd) page for full details.
+
+## Weekly Structure
+
+Each week typically includes:
+
+| Component | Description |
+|-----------|-------------|
+| **Lecture** | Core concepts and theory (recorded) |
+| **Preview Video** | Short video to watch before lecture |
+| **Lecture Reading** | Textbook content for the week |
+| **Lab** | Hands-on practical work with R |
+| **Lab Activity** | Interactive WebR exercises |
+| **Homework** | Weekly consolidation exercises |
+
+## Teaching Team
+
+| Role | Name | Contact |
+|------|------|---------|
+| Module Lead | Dr Gordon Wright | g.wright@gold.ac.uk |
+| Lab Support | Dr Bence Palfi | |
+
+## Getting Started
+
+1. Read the [Syllabus](syllabus.qmd) for full module information
+2. Check the [Schedule](schedule.qmd) for dates and topics
+3. Review the [Assessments](assessments.qmd) to understand what's expected
+4. Prepare for [Week 11](week11/index.qmd) by watching the preview video
+
+## Quick Links
+
+::: {.grid}
+
+::: {.g-col-6}
+**This Week**
+
+- [Week 11: Data Olympics](week11/index.qmd)
+:::
+
+::: {.g-col-6}
+**Key Pages**
+
+- [Schedule](schedule.qmd)
+- [Assessments](assessments.qmd)
+- [Resources](resources.qmd)
+:::
+
+:::

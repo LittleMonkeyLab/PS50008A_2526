@@ -1,0 +1,55 @@
+---
+title: "Week 13 Homework"
+subtitle: "Correlational Designs & Correlational Analysis"
+author: "Gordon Wright"
+date: "2026-01-28"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w13-homework
+  subtype: homework
+  status: backlog
+  priority: 2
+  due: "2026-02-01"
+  labels: ['correlation', 'research-design', 'correlation', 'r-programming', 'homework']
+  depends_on:
+    - rm0-w13-lab-activity
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+  properties:
+    deadline: "2026-02-01"
+---
+
+## Overview
+
+This homework consolidates your learning from Week 13.
+
+::: {.callout-important}
+## Deadline
+Complete this homework by 2026-02-01.
+:::
+
+## Part 1: Conceptual Questions
+
+TBC
+
+## Part 2: Practical Exercises
+
+TBC
+
+## Part 3: Reflection
+
+TBC
+
+## Submission
+
+TBC - Submission instructions
+
+## Marking Criteria
+
+This is a **formative** assignment.

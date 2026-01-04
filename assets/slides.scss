@@ -1,0 +1,474 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// BRAND COLORS
+// =============================================================================
+// Change these to customize your theme
+
+$base-color: #275882;        // Navy blue - headers, primary elements
+$accent-color: #EA8439;      // Orange - highlights, emphasis
+$body-color: #000000;        // Black - body text
+$background-color: #FFFFFF;  // White - slide backgrounds
+
+// Pedagogical box colors
+$objectives-bg: #E3F2FD;
+$objectives-border: $base-color;
+
+$definition-bg: #E8EAF6;
+$definition-border: #5C6BC0;
+
+$concept-bg: #F3E5F5;
+$concept-border: #9C27B0;
+
+$example-bg: #E8F5E9;
+$example-border: #4CAF50;
+
+$exercise-bg: #E3F2FD;
+$exercise-border: #2196F3;
+
+$solution-bg: #E8F5E9;
+$solution-border: #4CAF50;
+
+$poll-bg: #FFF8E1;
+$poll-border: #FFC107;
+
+$discussion-bg: #FFF8E1;
+$discussion-border: #FFC107;
+
+$theory-bg: #E8EAF6;
+$theory-border: #3F51B5;
+
+$research-bg: #E3F2FD;
+$research-border: #2196F3;
+
+$casestudy-bg: #FCE4EC;
+$casestudy-border: #E91E63;
+
+$reference-bg: #F5F5F5;
+$reference-border: #607D8B;
+
+$equation-bg: #FAFAFA;
+$equation-border: #9E9E9E;
+
+// Comparison colors
+$pro-bg: #E8F5E9;
+$pro-border: #4CAF50;
+$con-bg: #FFEBEE;
+$con-border: #F44336;
+
+// Result significance
+$significant-color: #4CAF50;
+$nonsignificant-color: #F44336;
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$font-family-sans-serif: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$presentation-font-size-root: 40px;
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.3em;
+
+/*-- scss:rules --*/
+
+// =============================================================================
+// BASE STYLES
+// =============================================================================
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  color: $body-color;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: $base-color;
+  font-family: $font-family-sans-serif;
+}
+
+.reveal a {
+  color: $base-color;
+}
+
+.reveal a:hover {
+  color: $accent-color;
+}
+
+// =============================================================================
+// PEDAGOGICAL BOX CLASSES
+// =============================================================================
+
+// Base box styling
+%box-base {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 0;
+}
+
+%box-base-rounded {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+// Learning Objectives
+.objectives-box {
+  @extend %box-base;
+  background: $objectives-bg;
+  border-left: 4px solid $objectives-border;
+}
+
+// Definition
+.definition-box {
+  @extend %box-base;
+  background: $definition-bg;
+  border-left: 4px solid $definition-border;
+}
+
+// Concept
+.concept-box {
+  @extend %box-base;
+  background: $concept-bg;
+  border-left: 4px solid $concept-border;
+}
+
+// Example
+.example-box {
+  @extend %box-base;
+  background: $example-bg;
+  border-left: 4px solid $example-border;
+}
+
+// Exercise
+.exercise-box {
+  @extend %box-base;
+  background: $exercise-bg;
+  border-left: 4px solid $exercise-border;
+}
+
+// Solution
+.solution-box {
+  @extend %box-base;
+  background: $solution-bg;
+  border-left: 4px solid $solution-border;
+}
+
+// Poll / Question
+.poll-box {
+  @extend %box-base;
+  background: $poll-bg;
+  border-left: 4px solid $poll-border;
+}
+
+// Discussion
+.discussion-box {
+  @extend %box-base;
+  background: $discussion-bg;
+  border-left: 4px solid $discussion-border;
+}
+
+// Theory
+.theory-box {
+  @extend %box-base;
+  background: $theory-bg;
+  border-left: 4px solid $theory-border;
+}
+
+// Research
+.research-box {
+  @extend %box-base;
+  background: $research-bg;
+  border-left: 4px solid $research-border;
+}
+
+// Case Study
+.casestudy-box {
+  @extend %box-base;
+  background: $casestudy-bg;
+  border-left: 4px solid $casestudy-border;
+}
+
+// Reference
+.reference-box {
+  @extend %box-base;
+  background: $reference-bg;
+  border-left: 4px solid $reference-border;
+  font-size: 0.9em;
+}
+
+// Equation
+.equation-box {
+  @extend %box-base-rounded;
+  background: $equation-bg;
+  border: 2px solid $equation-border;
+  text-align: center;
+}
+
+// Construct (psychology)
+.construct-box {
+  @extend %box-base-rounded;
+  background: #F3E5F5;
+  border: 2px solid #9C27B0;
+}
+
+// =============================================================================
+// COMPARISON BOXES
+// =============================================================================
+
+.pro-box {
+  @extend %box-base-rounded;
+  background: $pro-bg;
+  border: 2px solid $pro-border;
+}
+
+.con-box {
+  @extend %box-base-rounded;
+  background: $con-bg;
+  border: 2px solid $con-border;
+}
+
+// =============================================================================
+// RESULT SIGNIFICANCE
+// =============================================================================
+
+.result-significant {
+  @extend %box-base-rounded;
+  background: $pro-bg;
+  border: 2px solid $significant-color;
+  text-align: center;
+  padding: 20px;
+}
+
+.result-nonsignificant {
+  @extend %box-base-rounded;
+  background: $con-bg;
+  border: 2px solid $nonsignificant-color;
+  text-align: center;
+  padding: 20px;
+}
+
+.significant-text {
+  color: $significant-color;
+  font-weight: bold;
+}
+
+.nonsignificant-text {
+  color: $nonsignificant-color;
+  font-weight: bold;
+}
+
+// =============================================================================
+// STEP PROCESS
+// =============================================================================
+
+.step-1 {
+  @extend %box-base;
+  background: #E3F2FD;
+  border-left: 4px solid #1976D2;
+}
+
+.step-2 {
+  @extend %box-base;
+  background: #E8F5E9;
+  border-left: 4px solid #4CAF50;
+}
+
+.step-3 {
+  @extend %box-base;
+  background: #FFF3E0;
+  border-left: 4px solid #FF9800;
+}
+
+.step-4 {
+  @extend %box-base;
+  background: #FCE4EC;
+  border-left: 4px solid #E91E63;
+}
+
+// =============================================================================
+// INVERSE BOX (for key terms)
+// =============================================================================
+
+.inverse-box {
+  background: $base-color;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline;
+}
+
+.accent-box {
+  background: $accent-color;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline;
+}
+
+// =============================================================================
+// BADGES
+// =============================================================================
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.badge-new {
+  @extend .badge;
+  background: #0D6EFD;
+  color: white;
+}
+
+.badge-deprecated {
+  @extend .badge;
+  background: #DC3545;
+  color: white;
+}
+
+.badge-beta {
+  @extend .badge;
+  background: #FFC107;
+  color: black;
+}
+
+.badge-version {
+  @extend .badge;
+  background: #6C757D;
+  color: white;
+}
+
+// =============================================================================
+// TEXT HIGHLIGHTS
+// =============================================================================
+
+.hl-yellow {
+  background-color: #FFF3CD;
+  padding: 0 4px;
+}
+
+.hl-blue {
+  background-color: #CFE2FF;
+  padding: 0 4px;
+}
+
+.hl-green {
+  background-color: #D1E7DD;
+  padding: 0 4px;
+}
+
+.hl-red {
+  background-color: #F8D7DA;
+  padding: 0 4px;
+}
+
+.hl-gray {
+  background-color: #E9ECEF;
+  padding: 0 4px;
+}
+
+// =============================================================================
+// CODE STYLING
+// =============================================================================
+
+.code-var {
+  background-color: #E9ECEF;
+  font-family: monospace;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.kbd {
+  background: #212529;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+// =============================================================================
+// STAT DISPLAY (large centered stats)
+// =============================================================================
+
+.stat-value {
+  font-size: 3em;
+  font-weight: bold;
+  color: $base-color;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+}
+
+// =============================================================================
+// SECTION DIVIDER
+// =============================================================================
+
+.section-divider {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+// =============================================================================
+// PLACEHOLDER (for missing images)
+// =============================================================================
+
+.placeholder {
+  background: #F0F0F0;
+  border: 2px dashed #999;
+  padding: 40px;
+  text-align: center;
+  color: #666;
+}
+
+// =============================================================================
+// MIND MAP
+// =============================================================================
+
+.mind-map-center {
+  background: $base-color;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.mind-map-branch {
+  background: #E3F2FD;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+// =============================================================================
+// QUOTATION
+// =============================================================================
+
+.quote-box {
+  background: #F5F5F5;
+  border-left: 4px solid #607D8B;
+  padding: 15px;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+// =============================================================================
+// DRAFT MARKER
+// =============================================================================
+
+.draft-box {
+  background: #FFF3CD;
+  border: 2px solid #FFC107;
+  border-radius: 8px;
+  padding: 15px;
+}

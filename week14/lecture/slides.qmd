@@ -1,0 +1,70 @@
+---
+title: "Probabilities & Distributions"
+subtitle: "PS50008A Week 14 Lecture"
+author: "Gordon Wright"
+date: "2026-02-02"
+format:
+  revealjs:
+    theme: [default, ../../assets/gs-theme.scss]
+    slide-number: true
+    progress: true
+    hash: true
+    transition: fade
+    center: false
+    code-fold: true
+    width: 1280
+    height: 720
+    embed-resources: true
+taskmistress:
+  id: rm0-w14-lecture-slides
+  subtype: lecture-slides
+  status: backlog
+  priority: 2
+  due: "2026-02-02"
+  labels: ['statistics', 'probability']
+  depends_on:
+    - rm0-w14-index
+  blocks:
+    - rm0-w14-lab-slides
+    - rm0-w14-lab-activity
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+  properties:
+    estimated_duration: 50min
+    delivery_date: "2026-02-02"
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+::: {.incremental}
+- TBC
+- TBC
+- TBC
+:::
+
+---
+
+## Overview
+
+TBC - Lecture content to be developed
+
+---
+
+## Summary
+
+::: {.incremental}
+- Key point 1
+- Key point 2
+- Key point 3
+:::
+
+---
+
+## Next Week
+
+TBC - Preview of next week's content

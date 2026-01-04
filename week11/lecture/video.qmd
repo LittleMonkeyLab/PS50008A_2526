@@ -1,0 +1,73 @@
+---
+title: "Week 11 Preview Video"
+subtitle: "Welcome to PS50008A Research Methods"
+author: "Gordon Wright"
+date: "2026-01-12"
+---
+
+## Preview Video
+
+::: {.callout-important}
+## Watch Before Your Lab
+This video introduces the module and explains what will happen in your first lab session. Please watch it before Thursday.
+:::
+
+::: {.ratio .ratio-16x9}
+<!-- Video embed TBC -->
+<div style="background: #f0f0f0; display: flex; align-items: center; justify-content: center; height: 400px;">
+<p>Video will be embedded here</p>
+</div>
+:::
+
+**Duration**: Approximately 5 minutes
+
+## What This Video Covers
+
+1. **Welcome to the module** — who we are, what you'll learn
+2. **The assessments** — four assessments across the term
+3. **The Data Olympics** — what will happen in your first lab
+4. **What to bring** — just yourself and a phone/laptop
+5. **Forming groups** — you'll form project groups by the end of Week 11
+
+## Key Points
+
+### About the Module
+
+This module teaches you to think like a researcher:
+
+- How do we design studies that can answer our questions?
+- How do we analyse data to draw conclusions?
+- How do we report findings professionally?
+
+### The Data Olympics
+
+Your first lab is the **Data Olympics**—a series of cognitive tasks where you'll generate the dataset used throughout the term. You'll learn statistics using *your own data*.
+
+### Assessments
+
+| Assessment | Weight | When |
+|------------|--------|------|
+| Research Plan | 20% | Week 16 |
+| MCQ Exam | 20% | Week 18 |
+| EDS Assignment | 20% | Week 20 |
+| Research Report | 40% | 1 May (post-term) |
+
+See the [Assessments](../../assessments.qmd) page for details.
+
+### Project Groups
+
+By the end of Week 11, you should have formed your project groups (3-4 students). Choose people you can reliably work with throughout the term.
+
+## Before Your Lab
+
+1. Note your lab allocation (Group A or Group B)
+2. Arrive on time — Thursday 10:00
+3. Bring a phone or laptop to record your data
+
+## Questions?
+
+If you have questions about the module, you can:
+
+- Email g.wright@gold.ac.uk
+- Post in the VLE discussion board
+- Ask in your first lab session

@@ -1,0 +1,152 @@
+---
+title: "Schedule"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Term 2 Schedule
+
+::: {.callout-note}
+## Term Dates
+- **Term Start**: Monday 12 January 2026
+- **Reading Week**: 16-20 February 2026
+- **Term End**: Friday 27 March 2026
+:::
+
+## Weekly Overview
+
+| Week | Dates | Topic | Lecture | Lab | Assessment |
+|:----:|-------|-------|:-------:|:---:|:----------:|
+| 11 | 12-16 Jan | [Data Olympics](week11/index.qmd) | Video only | Data Olympics | Form groups |
+| 12 | 19-23 Jan | [Distributions & Variability](week12/index.qmd) | Yes | Descriptives in R | |
+| 13 | 26-30 Jan | [Estimation & CIs](week13/index.qmd) | Yes | Bootstrap CIs | |
+| 14 | 2-6 Feb | [Inference & t-tests](week14/index.qmd) | Yes | t-tests in R | |
+| 15 | 9-13 Feb | [Correlation](week15/index.qmd) | Yes | Correlation in R | |
+| — | 16-20 Feb | **Reading Week** | — | — | Work on Research Plan |
+| 16 | 23-27 Feb | [Regression](week16/index.qmd) | Yes | Project groups | **Research Plan due Fri 27 Feb** |
+| 17 | 2-6 Mar | [Interpretation & Credibility](week17/index.qmd) | Yes | Project groups | |
+| 18 | 9-13 Mar | [MCQ Exam](week18/index.qmd) | **MCQ Exam** | Project groups | **MCQ Exam Mon 9 Mar** |
+| 19 | 16-20 Mar | [Project Workshop](week19/index.qmd) | Yes | Project groups | |
+| 20 | 23-27 Mar | [EDS Prep](week20/index.qmd) | No | EDS support | **EDS due Fri 20 Mar** |
+
+## Session Times
+
+| Session | Day | Time | Location |
+|---------|-----|------|----------|
+| Lecture | Monday | TBC | TBC |
+| Lab Group A | Thursday | 10:00-12:00 | TBC |
+| Lab Group B | Thursday | 10:00-12:00 | TBC |
+
+::: {.callout-warning}
+## Week 11 Note
+There is no lecture in Week 11 due to employability events. Watch the preview video and attend your lab session on Thursday.
+:::
+
+## Assessment Deadlines
+
+| Assessment | Weight | Deadline | Week |
+|------------|--------|----------|:----:|
+| Research Plan | 20% | Friday 27 February 2026, 12 noon | 16 |
+| MCQ Exam | 20% | Monday 9 March 2026, in lecture slot | 18 |
+| EDS Assignment | 20% | Friday 20 March 2026, 12 noon | 20 |
+| Research Report | 40% | Friday 1 May 2026, 12 noon | Post-term |
+
+## Week-by-Week Detail
+
+### First Half: Building Skills (Weeks 11-15)
+
+**Week 11: Data Olympics**
+
+- Generate the dataset you'll use all term
+- Form your project groups
+- No lecture—preview video only
+
+**Week 12: Distributions & Variability**
+
+- First lecture (2 hours)
+- Mean, median, mode, standard deviation
+- Introduction to R for descriptives
+- *Report writing: Descriptive statistics*
+
+**Week 13: Estimation & Confidence Intervals**
+
+- Point estimates vs interval estimates
+- Bootstrap confidence intervals
+- Effect sizes (Cohen's d)
+- *Report writing: CIs and effect sizes*
+
+**Week 14: Inference & t-tests**
+
+- Null hypothesis logic
+- p-values and significance
+- Between vs within designs
+- t-tests and their nonparametric alternatives
+- *Report writing: t-test results*
+
+**Week 15: Correlation**
+
+- Scatterplots and relationships
+- Pearson vs Spearman
+- Correlation ≠ causation
+- Last week before Reading Week
+- *Report writing: Correlation results*
+
+### Reading Week
+
+- Work on your Research Plan (due Week 16)
+- Review material for MCQ (Week 18)
+- No taught sessions
+
+### Second Half: Application & Assessment (Weeks 16-20)
+
+**Week 16: Regression**
+
+- **Research Plan due Friday**
+- From correlation to prediction
+- Line of best fit
+- Labs now in project groups
+- *Report writing: Methods section*
+
+**Week 17: Interpretation & Credibility**
+
+- P-hacking and HARKing
+- Replication crisis
+- MCQ prep in lecture
+- *Report writing: Introduction section*
+
+**Week 18: MCQ Exam**
+
+- **MCQ Exam Monday (in lecture slot)**
+- Lab is project support
+- *Report writing: Introduction continued*
+
+**Week 19: Project Workshop**
+
+- APA results reporting
+- Project analysis support
+- EDS preview
+- *Report writing: Discussion preview*
+
+**Week 20: EDS Prep**
+
+- **EDS Assignment due Friday**
+- No lecture
+- Lab support for EDS and projects
+- *Report writing: Discussion section*
+
+## Key Dates Summary
+
+```
+Jan 12-16     Week 11: Data Olympics (first contact)
+Jan 19-23     Week 12: First lecture
+
+Feb 13        Last day before Reading Week
+Feb 16-20     Reading Week
+Feb 27        Research Plan due (noon)
+
+Mar 9         MCQ Exam (lecture slot)
+Mar 20        EDS Assignment due (noon)
+
+May 1         Research Report due (noon)
+```
