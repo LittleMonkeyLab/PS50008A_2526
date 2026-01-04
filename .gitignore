@@ -57,3 +57,20 @@ ehthumbs.db
 
 /.quarto/
 **/*.quarto_ipynb
+
+# ========================================
+# Development/internal files (not for students)
+# ========================================
+
+# Planning and development
+_planning/
+*.py
+setup_weeks.sh
+
+# Internal documentation
+.vscode/
+assets/*.md
+
+# Module info (internal)
+MODULE-INFO.md
+README.md

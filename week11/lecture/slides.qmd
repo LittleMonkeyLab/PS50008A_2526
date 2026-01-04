@@ -53,7 +53,7 @@ This module teaches you the **tools** to do this.
 
 ---
 
-# The Data Olympics {background-color="#275882"}
+# DataLab {background-color="#275882"}
 
 ## Thursday: Your First Session
 
@@ -66,7 +66,7 @@ There is no Monday lecture in Week 11.
 
 ---
 
-## What Are the Data Olympics?
+## What Is DataLab?
 
 A series of **6 cognitive task stations** where you:
 
@@ -87,7 +87,7 @@ A series of **6 cognitive task stations** where you:
 
 ---
 
-## Why "Olympics"?
+## Why DataLab?
 
 The data you generate becomes our **teaching dataset**.
 
@@ -210,7 +210,7 @@ Each week typically includes:
 ::: {.poll-box}
 **Thursday 10:00-12:00**
 
-Data Olympics + Form Groups
+DataLab + Form Groups
 :::
 
 Questions? Email g.wright@gold.ac.uk

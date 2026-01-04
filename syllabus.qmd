@@ -19,7 +19,7 @@ date: last-modified
 
 This module introduces foundation students to the principles of psychological research. You will learn how to design experiments, collect and analyse data, and report findings in accordance with professional standards.
 
-A distinctive feature of this module is the **Data Olympics**—in Week 11, you generate the dataset you'll analyse throughout the term. This means you learn statistics using your own data, not abstract examples.
+A distinctive feature of this module is **DataLab**—in Week 11, you generate the dataset you'll analyse throughout the term. This means you learn statistics using your own data, not abstract examples.
 
 ## Learning Outcomes
 
@@ -64,7 +64,7 @@ On successful completion of this module, you will be able to:
 
 ::: {.callout-note}
 ## Week 11
-There is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for the Data Olympics.
+There is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for DataLab.
 :::
 
 ## Weekly Materials
@@ -145,8 +145,8 @@ Attendance at all lectures and labs is expected and required. This module builds
 - **Readings** should be completed as specified
 
 ::: {.callout-warning}
-## The Data Olympics
-You must attend Week 11 to participate in the Data Olympics. This generates the dataset used throughout the term.
+## DataLab
+You must attend Week 11 to participate in DataLab. This generates the dataset used throughout the term.
 :::
 
 ## Academic Integrity

@@ -424,7 +424,7 @@ Example: Reaction times might be bimodal if some participants used a different s
 
 ---
 
-# Your Data Olympics Data {background-color="#275882"}
+# Your DataLab Data {background-color="#275882"}
 
 ## Let's explore it
 
@@ -509,7 +509,7 @@ Always report **both** central tendency AND variability.
 
 ## What's Next?
 
-**Thursday Lab**: Computing descriptives in R using YOUR Data Olympics data
+**Thursday Lab**: Computing descriptives in R using YOUR DataLab data
 
 **Week 13**: Estimation & Confidence Intervals
 

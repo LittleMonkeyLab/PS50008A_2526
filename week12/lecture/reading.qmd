@@ -272,9 +272,9 @@ Distribution shape affects:
 3. **How to interpret the data**: Skew suggests something interesting is happening
 4. **Outlier detection**: What counts as "unusual" depends on the distribution
 
-## Applying This to the Data Olympics
+## Applying This to DataLab
 
-Your Data Olympics data provides real examples:
+Your DataLab data provides real examples:
 
 ### Reaction Times
 

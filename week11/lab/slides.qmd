@@ -1,5 +1,5 @@
 ---
-title: "Data Olympics"
+title: "DataLab"
 subtitle: "PS50008A Week 11 Lab"
 author: "Gordon Wright & Bence Palfi"
 date: "2026-01-16"
@@ -26,7 +26,7 @@ Your first session of the module
 
 ---
 
-## Today: The Data Olympics
+## Today: DataLab
 
 ::: {.objectives-box}
 **Today You Will:**
@@ -39,7 +39,7 @@ Your first session of the module
 
 ---
 
-## Why "Data Olympics"?
+## Why DataLab?
 
 The data you generate today becomes our teaching dataset for the term.
 

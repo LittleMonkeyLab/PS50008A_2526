@@ -12,7 +12,7 @@ date: "2026-01-19"
 This is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.
 :::
 
-**This week**: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your Data Olympics dataset.
+**This week**: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.
 
 **Lecture**: Monday (2 hours)
 **Lab**: Thursday 10:00-12:00
@@ -33,7 +33,7 @@ By the end of this week, you will be able to:
 ## Required Preparation
 1. **Watch the preview video** (10 minutes)
 2. **Read the lecture reading** — covers distributions and variability concepts
-3. **Review your Data Olympics results** — we'll use this data in class
+3. **Review your DataLab results** — we'll use this data in class
 :::
 
 ## The Big Picture
@@ -46,7 +46,7 @@ Before we can test hypotheses or make inferences, we need to understand what our
 - **Describe** how spread out the data is (variability)
 - **Visualise** the shape of the distribution
 
-We'll apply these tools to YOUR Data Olympics data — the reaction times, memory scores, and estimations you generated last week.
+We'll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week.
 
 ## Materials
 
@@ -57,7 +57,7 @@ We'll apply these tools to YOUR Data Olympics data — the reaction times, memor
 | [Lecture Reading](lecture/reading.qmd) | Distributions, central tendency, variability |
 | [Lab Reading](lab/reading.qmd) | Introduction to R and descriptive statistics |
 | [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
-| [Lab Activity](lab/activity.qmd) | WebR exercises with Data Olympics data |
+| [Lab Activity](lab/activity.qmd) | WebR exercises with DataLab data |
 | [Homework](lab/homework.qmd) | Practice exercises (formative) |
 
 ## Week at a Glance

@@ -1,17 +1,17 @@
 ---
 title: "Week 11 Lab Reading"
-subtitle: "The Data Olympics: Background"
+subtitle: "DataLab: Background"
 author: "Gordon Wright"
 date: "2026-01-16"
 ---
 
 ## Overview
 
-This reading prepares you for the Data Olympics lab session. It explains the cognitive tasks you'll complete and why we're collecting this data.
+This reading prepares you for the DataLab session. It explains the cognitive tasks you'll complete and why we're collecting this data.
 
 ## What You'll Be Measuring
 
-The Data Olympics includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
+DataLab includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
 
 ### Reaction Time
 

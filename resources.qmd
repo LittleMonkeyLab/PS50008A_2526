@@ -76,11 +76,11 @@ If you want to install R on your own computer:
 
 ## Datasets
 
-The main dataset for this module is generated in Week 11 (Data Olympics). Additional practice datasets will be provided for specific activities.
+The main dataset for this module is generated in Week 11 (DataLab). Additional practice datasets will be provided for specific activities.
 
 | Dataset | Week | Description |
 |---------|------|-------------|
-| Data Olympics | 11 | Class dataset used throughout term |
+| DataLab | 11 | Class dataset used throughout term |
 | EDS Practice | 14+ | Practice data for EDS preparation |
 
 ## Tools & Calculators

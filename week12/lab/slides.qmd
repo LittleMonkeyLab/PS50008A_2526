@@ -52,7 +52,7 @@ By the end of this lab, you will be able to:
 
 ## Today's Data
 
-We're using YOUR **Data Olympics** data from Week 11.
+We're using YOUR **DataLab** data from Week 11.
 
 Variables you collected:
 

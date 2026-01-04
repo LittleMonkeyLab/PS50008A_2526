@@ -27,7 +27,7 @@ This video introduces the key concepts for Week 12. Please watch it before Monda
 2. **Central tendency** — mean, median, and mode
 3. **Variability** — range, variance, and standard deviation
 4. **Distribution shapes** — normal, skewed, bimodal
-5. **Connecting to your Data Olympics data** — what we'll analyse
+5. **Connecting to your DataLab data** — what we'll analyse
 
 ## Key Concepts Preview
 
@@ -35,7 +35,7 @@ This video introduces the key concepts for Week 12. Please watch it before Monda
 
 How do we go from raw data to meaningful summaries?
 
-When you collected reaction times in the Data Olympics, you generated dozens of individual measurements. This week, we learn how to compress that information into statistics that tell a clear story.
+When you collected reaction times in DataLab, you generated dozens of individual measurements. This week, we learn how to compress that information into statistics that tell a clear story.
 
 ### Central Tendency
 
@@ -65,7 +65,7 @@ What does the data look like?
 After watching this video:
 
 1. **Read** the [Lecture Reading](reading.qmd) for detailed explanations
-2. **Think about** your Data Olympics data — what shapes might you expect?
+2. **Think about** your DataLab data — what shapes might you expect?
 3. **Come ready** to calculate examples by hand
 
 ## Questions to Consider

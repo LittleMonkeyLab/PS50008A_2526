@@ -17,7 +17,7 @@ webr:
 
 ## Overview
 
-In this lab, you'll use R to analyse your Data Olympics data. You'll calculate descriptive statistics, visualise distributions, and compare groups.
+In this lab, you'll use R to analyse your DataLab data. You'll calculate descriptive statistics, visualise distributions, and compare groups.
 
 ::: {.callout-important}
 ## Before You Begin
@@ -32,10 +32,10 @@ In this lab, you'll use R to analyse your Data Olympics data. You'll calculate d
 
 ### Loading the Data
 
-First, let's load and explore the Data Olympics dataset.
+First, let's load and explore the DataLab dataset.
 
 ```{webr-r}
-# Load the Data Olympics data
+# Load the DataLab data
 # (In the actual lab, this will load the real class data)
 # For now, we use simulated data
 

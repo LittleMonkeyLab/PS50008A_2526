@@ -190,7 +190,7 @@ mean(room_a$reaction_time)
 
 In the lab, you'll:
 
-1. Load the Data Olympics dataset
+1. Load the DataLab dataset
 2. Explore the variables (columns)
 3. Calculate means, medians, and SDs for different measures
 4. Compare Room A vs Room B
@@ -207,7 +207,7 @@ In the lab, you'll:
 The goal isn't to memorise R syntax. Focus on:
 
 - **What** each statistic tells you (meaning over mechanics)
-- **How** the statistics relate to your Data Olympics experience
+- **How** the statistics relate to your DataLab experience
 - **Why** we compute these particular measures
 
 ## Key Terms

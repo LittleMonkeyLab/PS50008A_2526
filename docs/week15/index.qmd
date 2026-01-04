@@ -1,0 +1,66 @@
+---
+title: "Week 15: Significance Testing"
+subtitle: "PS50008A Research Methods | 2026-02-09"
+author: "Gordon Wright"
+date: "2026-02-09"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+taskmistress:
+  id: rm0-w15-index
+  subtype: index
+  status: backlog
+  priority: 2
+  due: "2026-02-09"
+  labels: ['statistics', 't-test']
+  blocks:
+    - rm0-w15-lecture-slides
+    - rm0-w15-lab-slides
+  version:
+    number: "0.1"
+    status: draft
+    changelog:
+      - "2026-01-03: Initial structure"
+---
+
+## Overview
+
+**Lecture**: Significance Testing & Research Plan Briefing
+
+**Lab**: Running T-Tests with R
+
+## Learning Objectives
+
+By the end of this week, you will be able to:
+
+- TBC
+- TBC
+- TBC
+
+## Schedule
+
+| Session | Topic | Materials |
+|---------|-------|-----------|
+| Lecture | Significance Testing & Research Plan Briefing | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
+| Lab | Running T-Tests with R | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
+| Homework | Week 15 Exercises | [Homework](lab/homework.qmd) |
+
+## Preparation
+
+Before the lecture:
+
+1. Watch the preview video
+2. Complete the pre-lecture reading
+
+## Key Concepts
+
+- TBC
+- TBC
+- TBC
+
+## Resources
+
+- [Week 15 Lecture Slides](lecture/slides.qmd)
+- [Lab Activity](lab/activity.qmd)
+- [Homework](lab/homework.qmd)

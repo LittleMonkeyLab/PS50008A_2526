@@ -34,9 +34,9 @@ This module teaches you to think like a researcher:
 - **Report** findings in professional APA format
 - **Collaborate** on a real research project
 
-## The Data Olympics
+## DataLab
 
-In Week 11, you'll participate in the **Data Olympics**—a series of cognitive tasks and group activities that generate the dataset you'll analyse throughout the term. This means you'll learn statistics using *your own data*, not abstract examples.
+In Week 11, you'll participate in **DataLab**—a series of cognitive tasks and group activities that generate the dataset you'll analyse throughout the term. This means you'll learn statistics using *your own data*, not abstract examples.
 
 ## Assessments
 
@@ -85,7 +85,7 @@ Each week typically includes:
 ::: {.g-col-6}
 **This Week**
 
-- [Week 11: Data Olympics](week11/index.qmd)
+- [Week 11: DataLab](week11/index.qmd)
 :::
 
 ::: {.g-col-6}

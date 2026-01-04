@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
   render:
     - index.qmd
     - syllabus.qmd
@@ -46,7 +46,7 @@ website:
           - resources.qmd
       - section: "Term 2"
         contents:
-          - text: "Week 11: Data Olympics"
+          - text: "Week 11: DataLab"
             href: week11/index.qmd
           - text: "Week 12: Distributions & Variability"
             href: week12/index.qmd

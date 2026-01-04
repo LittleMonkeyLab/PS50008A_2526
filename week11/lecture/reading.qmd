@@ -180,7 +180,7 @@ Research is fundamentally about understanding how variables relate to each other
 - Does **sleep quality** predict **reaction time**?
 - Is **age** related to **memory capacity**?
 
-In the Data Olympics, you'll measure several variables and see how they differ between people and across conditions.
+In DataLab, you'll measure several variables and see how they differ between people and across conditions.
 
 ### Types of Variables
 
@@ -225,7 +225,7 @@ Research has found:
 
 Without systematic data collection, we'd have no way to discover these nuances.
 
-## Connecting to the Data Olympics
+## Connecting to DataLab
 
 In Thursday's lab, you'll experience research from both perspectives:
 

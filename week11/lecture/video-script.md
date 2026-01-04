@@ -48,9 +48,9 @@ This module gives you the tools to do all of this.
 
 ---
 
-## SLIDE 4: Data Olympics Section Header
+## SLIDE 4: DataLab Section Header
 
-**[Show: "The Data Olympics" section header]**
+**[Show: "DataLab" section header]**
 
 Let's talk about what's happening this week.
 
@@ -68,11 +68,11 @@ So your first contact is Thursday, 10 o'clock, in your allocated lab room.
 
 ---
 
-## SLIDE 6: What Are the Data Olympics?
+## SLIDE 6: What Is DataLab?
 
-**[Show: Data Olympics description slide]**
+**[Show: DataLab description slide]**
 
-The Data Olympics is a series of six cognitive task stations.
+DataLab is a series of six cognitive task stations.
 
 You'll test your reaction times, complete memory tasks, make estimations, and rate your confidence.
 
@@ -80,11 +80,11 @@ You'll work in pairs — taking turns as participant and tester. And you'll reco
 
 ---
 
-## SLIDE 7: Why "Olympics"?
+## SLIDE 7: Why DataLab?
 
 **[Show: Table showing how student data maps to topics]**
 
-Why do we call it the Olympics? Because the data YOU generate becomes our teaching dataset for the entire term.
+Why do we call it DataLab? Because the data YOU generate becomes our teaching dataset for the entire term.
 
 When we learn about distributions, we'll look at YOUR reaction times.
 When we learn about t-tests, we'll compare Room A versus Room B.
@@ -222,7 +222,7 @@ That's everything you need to know for now.
 
 **[Show: Summary slide with Thursday details]**
 
-To summarise: your first session is Thursday at 10 o'clock. You'll participate in the Data Olympics and form your project groups.
+To summarise: your first session is Thursday at 10 o'clock. You'll participate in DataLab and form your project groups.
 
 Bring your phone or laptop, arrive on time, and come ready to have some fun with data.
 

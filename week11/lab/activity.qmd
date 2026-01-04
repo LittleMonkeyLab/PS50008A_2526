@@ -1,5 +1,5 @@
 ---
-title: "Data Olympics"
+title: "DataLab"
 subtitle: "PS50008A Week 11 Lab Activity"
 author: "Gordon Wright"
 date: "2026-01-16"
@@ -8,8 +8,8 @@ date: "2026-01-16"
 ## Overview
 
 ::: {.callout-important}
-## Data Olympics Stations
-This page contains instructions for each Data Olympics station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.
+## DataLab Stations
+This page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.
 :::
 
 Today you'll rotate through 6 stations, generating the dataset we'll analyse throughout the term.
@@ -137,7 +137,7 @@ Once formed, register your group: **[Link TBC]**
 
 **Week 12**: Your first lecture!
 
-- We'll analyse the Data Olympics results together
+- We'll analyse the DataLab results together
 - Introduction to distributions and variability
 - Your reaction times become our teaching example
 

@@ -18,7 +18,7 @@ date: last-modified
 
 | Week | Dates | Topic | Lecture | Lab | Assessment |
 |:----:|-------|-------|:-------:|:---:|:----------:|
-| 11 | 12-16 Jan | [Data Olympics](week11/index.qmd) | Video only | Data Olympics | Form groups |
+| 11 | 12-16 Jan | [DataLab](week11/index.qmd) | Video only | DataLab | Form groups |
 | 12 | 19-23 Jan | [Distributions & Variability](week12/index.qmd) | Yes | Descriptives in R | |
 | 13 | 26-30 Jan | [Estimation & CIs](week13/index.qmd) | Yes | Bootstrap CIs | |
 | 14 | 2-6 Feb | [Inference & t-tests](week14/index.qmd) | Yes | t-tests in R | |
@@ -56,7 +56,7 @@ There is no lecture in Week 11 due to employability events. Watch the preview vi
 
 ### First Half: Building Skills (Weeks 11-15)
 
-**Week 11: Data Olympics**
+**Week 11: DataLab**
 
 - Generate the dataset you'll use all term
 - Form your project groups
@@ -138,7 +138,7 @@ There is no lecture in Week 11 due to employability events. Watch the preview vi
 ## Key Dates Summary
 
 ```
-Jan 12-16     Week 11: Data Olympics (first contact)
+Jan 12-16     Week 11: DataLab (first contact)
 Jan 19-23     Week 12: First lecture
 
 Feb 13        Last day before Reading Week

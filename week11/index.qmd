@@ -1,5 +1,5 @@
 ---
-title: "Week 11: Data Olympics"
+title: "Week 11: DataLab"
 subtitle: "PS50008A Research Methods | 12-16 January 2026"
 author: "Gordon Wright"
 date: "2026-01-12"
@@ -9,16 +9,16 @@ date: "2026-01-12"
 
 ::: {.callout-important}
 ## First Week of Term
-This is your first session of PS50008A. There is **no lecture** this week—your first contact is the **Thursday lab** where you'll participate in the Data Olympics.
+This is your first session of PS50008A. There is **no lecture** this week—your first contact is the **Thursday lab** where you'll participate in DataLab.
 :::
 
-**This week**: Generate the dataset you'll analyse throughout the term by participating in the Data Olympics—a series of cognitive tasks and group activities.
+**This week**: Generate the dataset you'll analyse throughout the term by participating in DataLab—a series of cognitive tasks and group activities.
 
 **Lab**: Thursday 10:00-12:00 (two parallel sessions)
 
-## What is the Data Olympics?
+## What is DataLab?
 
-The Data Olympics is a series of rotating stations where you'll:
+DataLab is a series of rotating stations where you'll:
 
 - Complete cognitive tasks (reaction time, memory, estimation)
 - Work in pairs and small groups
@@ -80,13 +80,13 @@ By the end of this week, you will be able to:
 | [Preview Video](lecture/video.qmd) | Module introduction (watch before lab) |
 | [Preview Slides](lecture/slides.html){target="_blank"} | Slides from the preview video |
 | [Week 11 Reading](lecture/reading.qmd) | Introduction to research methods |
-| [Lab Reading](lab/reading.qmd) | Background on the Data Olympics tasks |
-| [Lab Activity](lab/activity.qmd) | Data Olympics stations and instructions |
+| [Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
+| [Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
 | [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
 
 ## What's Next?
 
-- **Week 12**: Your first lecture (2 hours). We'll analyse the Data Olympics results together.
+- **Week 12**: Your first lecture (2 hours). We'll analyse the DataLab results together.
 - **By end of Week 11**: Form your project groups.
 
 ## Key Concepts Introduced
