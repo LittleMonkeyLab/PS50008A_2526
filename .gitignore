@@ -75,3 +75,6 @@ assets/*.md
 # Module info (internal)
 MODULE-INFO.md
 README.md
+
+# Video scripts (internal)
+**/video-script.md
