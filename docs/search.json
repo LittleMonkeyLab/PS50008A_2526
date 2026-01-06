@@ -4,120 +4,70 @@
     "href": "week12/index.html",
     "title": "Week 12: Distributions & Variability",
     "section": "",
-    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00"
   },
   {
     "objectID": "week12/index.html#overview",
     "href": "week12/index.html#overview",
     "title": "Week 12: Distributions & Variability",
     "section": "",
-    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "NoteFirst Lecture Week\n\n\n\nThis is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.\n\n\nThis week: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.\nLecture: Monday (2 hours) Lab: Thursday 10:00-12:00"
   },
   {
     "objectID": "week12/index.html#learning-objectives",
     "href": "week12/index.html#learning-objectives",
     "title": "Week 12: Distributions & Variability",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this week, you will be able to:\n\nDistinguish between measures of central tendency (mean, median, mode)\nCalculate and interpret measures of variability (range, variance, standard deviation)\nRecognise different distribution shapes and what they tell us about data\nUse R to compute descriptive statistics\nReport descriptive statistics in APA format",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Learning Objectives\nBy the end of this week, you will be able to:\n\nDistinguish between measures of central tendency (mean, median, mode)\nCalculate and interpret measures of variability (range, variance, standard deviation)\nRecognise different distribution shapes and what they tell us about data\nUse R to compute descriptive statistics\nReport descriptive statistics in APA format"
   },
   {
     "objectID": "week12/index.html#before-the-lecture",
     "href": "week12/index.html#before-the-lecture",
     "title": "Week 12: Distributions & Variability",
     "section": "Before the Lecture",
-    "text": "Before the Lecture\n\n\n\n\n\n\nImportantRequired Preparation\n\n\n\n\nWatch the preview video (10 minutes)\nRead the lecture reading — covers distributions and variability concepts\nReview your DataLab results — we’ll use this data in class",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Before the Lecture\n\n\n\n\n\n\nImportantRequired Preparation\n\n\n\n\nWatch the preview video (10 minutes)\nRead the lecture reading — covers distributions and variability concepts\nReview your DataLab results — we’ll use this data in class"
   },
   {
     "objectID": "week12/index.html#the-big-picture",
     "href": "week12/index.html#the-big-picture",
     "title": "Week 12: Distributions & Variability",
     "section": "The Big Picture",
-    "text": "The Big Picture\nThis week answers the question: How do we summarise data?\nBefore we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:\n\nLocate where the data is centred (central tendency)\nDescribe how spread out the data is (variability)\nVisualise the shape of the distribution\n\nWe’ll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "The Big Picture\nThis week answers the question: How do we summarise data?\nBefore we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:\n\nLocate where the data is centred (central tendency)\nDescribe how spread out the data is (variability)\nVisualise the shape of the distribution\n\nWe’ll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week."
   },
   {
     "objectID": "week12/index.html#materials",
     "href": "week12/index.html#materials",
     "title": "Week 12: Distributions & Variability",
     "section": "Materials",
-    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nWhat to expect this week (watch before lecture)\n\n\nLecture Slides\nFull lecture presentation\n\n\nLecture Reading\nDistributions, central tendency, variability\n\n\nLab Reading\nIntroduction to R and descriptive statistics\n\n\nLab Slides\nOpening slides for the lab session\n\n\nLab Activity\nWebR exercises with DataLab data\n\n\nHomework\nPractice exercises (formative)",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nPreview Video\nWhat to expect this week (watch before lecture)\n\n\nLecture Slides\nFull lecture presentation\n\n\nLecture Reading\nDistributions, central tendency, variability\n\n\nLab Reading\nIntroduction to R and descriptive statistics\n\n\nLab Slides\nOpening slides for the lab session\n\n\nLab Activity\nWebR exercises with DataLab data\n\n\nHomework\nPractice exercises (formative)"
   },
   {
     "objectID": "week12/index.html#week-at-a-glance",
     "href": "week12/index.html#week-at-a-glance",
     "title": "Week 12: Distributions & Variability",
     "section": "Week at a Glance",
-    "text": "Week at a Glance\n\n\n\n\n\n\n\n\nDay\nSession\nFocus\n\n\n\n\nMonday\nLecture (2 hrs)\nDistributions, central tendency, variability\n\n\nThursday\nLab (2 hrs)\nComputing descriptives in R\n\n\nBy next Monday\nHomework\nPractice calculations and interpretation",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Week at a Glance\n\n\n\n\n\n\n\n\nDay\nSession\nFocus\n\n\n\n\nMonday\nLecture (2 hrs)\nDistributions, central tendency, variability\n\n\nThursday\nLab (2 hrs)\nComputing descriptives in R\n\n\nBy next Monday\nHomework\nPractice calculations and interpretation"
   },
   {
     "objectID": "week12/index.html#key-concepts",
     "href": "week12/index.html#key-concepts",
     "title": "Week 12: Distributions & Variability",
     "section": "Key Concepts",
-    "text": "Key Concepts\n\nCentral Tendency\n\nMean: The arithmetic average — sum of values divided by count\nMedian: The middle value when data is ordered\nMode: The most frequent value\n\n\n\nVariability\n\nRange: Difference between maximum and minimum\nVariance: Average of squared deviations from the mean\nStandard Deviation: Square root of variance — same units as the data\n\n\n\nDistribution Shape\n\nNormal: Symmetric, bell-shaped\nSkewed: Asymmetric (positive = tail to right, negative = tail to left)\nBimodal: Two peaks",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Key Concepts\n\nCentral Tendency\n\nMean: The arithmetic average — sum of values divided by count\nMedian: The middle value when data is ordered\nMode: The most frequent value\n\n\n\nVariability\n\nRange: Difference between maximum and minimum\nVariance: Average of squared deviations from the mean\nStandard Deviation: Square root of variance — same units as the data\n\n\n\nDistribution Shape\n\nNormal: Symmetric, bell-shaped\nSkewed: Asymmetric (positive = tail to right, negative = tail to left)\nBimodal: Two peaks"
   },
   {
     "objectID": "week12/index.html#connecting-to-assessments",
     "href": "week12/index.html#connecting-to-assessments",
     "title": "Week 12: Distributions & Variability",
     "section": "Connecting to Assessments",
-    "text": "Connecting to Assessments\nThis week’s content directly supports:\n\n\n\n\n\n\n\nAssessment\nConnection\n\n\n\n\nMCQ Exam\nQuestions on identifying distributions and choosing statistics\n\n\nEDS Assignment\nYou’ll calculate means and SDs by hand\n\n\nResearch Report\nResults section begins with descriptive statistics",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "Connecting to Assessments\nThis week’s content directly supports:\n\n\n\n\n\n\n\nAssessment\nConnection\n\n\n\n\nMCQ Exam\nQuestions on identifying distributions and choosing statistics\n\n\nEDS Assignment\nYou’ll calculate means and SDs by hand\n\n\nResearch Report\nResults section begins with descriptive statistics"
   },
   {
     "objectID": "week12/index.html#whats-next",
     "href": "week12/index.html#whats-next",
     "title": "Week 12: Distributions & Variability",
     "section": "What’s Next?",
-    "text": "What’s Next?\nWeek 13: Estimation & Confidence Intervals — moving from describing data to making inferences about populations.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Distributions & Variability"
-    ]
+    "text": "What’s Next?\nWeek 13: Estimation & Confidence Intervals — moving from describing data to making inferences about populations."
   },
   {
     "objectID": "week12/lab/reading.html",
@@ -1041,7 +991,7 @@
     "href": "syllabus.html#group-project",
     "title": "Syllabus",
     "section": "Group Project",
-    "text": "Group Project\nFrom Week 11, you will work in self-organised groups on a research project:\n\n\n\nWeek\nSkills & Procedures\nCommunication\n\n\n\n\n11\nForm groups\n—\n\n\n12-15\nDevelop research question and design\nResults writing\n\n\n—\nReading Week\n—\n\n\n16-17\nData collection\nMethods & Introduction\n\n\n18-19\nAnalysis\nIntroduction continued\n\n\n20\nFinal analysis\nDiscussion\n\n\n\nThe project feeds into two assessments:\n\nResearch Plan (due Week 16) — Your proposed methodology\nResearch Report (due Week 22) — Individual write-up of group data\n\n\n\n\n\n\n\nNoteLabs in Project Groups\n\n\n\nFrom Week 16 onwards, labs are conducted in your project groups.",
+    "text": "Group Project\nWorking in groups is a core part of this module. Later in the term, your group will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.\n\nForming Your Groups\nIn Week 11, you will form your project groups (3-4 students). This matters.\nPay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term.\n\n\n\n\n\n\nImportantChoose Wisely\n\n\n\nGroup formation is your first opportunity to see how groups naturally assemble and how different people work together. The decisions you make in Week 11 will shape your experience for the rest of the term.\n\n\n\n\nProject Timeline\n\n\n\nWeek\nSkills & Procedures\nCommunication\n\n\n\n\n11\nForm groups\n—\n\n\n12-15\nDevelop research question and design\nResults writing\n\n\n—\nReading Week\n—\n\n\n16-17\nData collection\nMethods & Introduction\n\n\n18-19\nAnalysis\nIntroduction continued\n\n\n20\nFinal analysis\nDiscussion\n\n\n\n\n\nAssessments from Group Work\nThe project feeds into two assessments:\n\nResearch Plan (due Week 16) — Your proposed methodology\nResearch Report (due Week 22) — Individual write-up of group data\n\nWhile the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work.\n\n\n\n\n\n\nNoteLabs in Project Groups\n\n\n\nFrom Week 16 onwards, labs are conducted in your project groups.",
     "crumbs": [
       "Home",
       "Overview",

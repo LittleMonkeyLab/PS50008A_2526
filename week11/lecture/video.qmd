@@ -27,7 +27,7 @@ This video introduces the module and explains what will happen in your first lab
 2. **The assessments** — four assessments across the term
 3. **DataLab** — what will happen in your first lab
 4. **What to bring** — just yourself and a phone/laptop
-5. **Forming groups** — you'll form project groups by the end of Week 11
+5. **Group work** — DataLab will require minimal group work, but group work will be a consistent element in lab work, so we will address that head on
 
 ## Key Points
 
@@ -56,7 +56,7 @@ See the [Assessments](../../assessments.qmd) page for details.
 
 ### Project Groups
 
-By the end of Week 11, you should have formed your project groups (3-4 students). Choose people you can reliably work with throughout the term.
+For the second half of the term, you will be working in groups of 4-5 students, so start thinking about this now. Group work is a fundamental part of the training.
 
 ## Before Your Lab
 
