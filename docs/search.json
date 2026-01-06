@@ -302,7 +302,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -314,7 +315,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -326,7 +328,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -338,7 +341,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -350,7 +354,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -362,7 +367,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -374,7 +380,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -386,7 +393,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -398,7 +406,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -410,7 +419,8 @@
     "crumbs": [
       "Home",
       "Term 2",
-      "Week 11: DataLab"
+      "Week 11: DataLab",
+      "Overview"
     ]
   },
   {
@@ -418,112 +428,208 @@
     "href": "week11/lab/reading.html",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#overview",
     "href": "week11/lab/reading.html#overview",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data."
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#what-youll-be-measuring",
     "href": "week11/lab/reading.html#what-youll-be-measuring",
     "title": "Week 11 Lab Reading",
     "section": "What You’ll Be Measuring",
-    "text": "What You’ll Be Measuring\nDataLab includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\nThe memory task measures how many items you can hold in working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement.\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)?"
+    "text": "What You’ll Be Measuring\nDataLab includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\nThe memory task measures how many items you can hold in working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement.\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#why-generate-our-own-data",
     "href": "week11/lab/reading.html#why-generate-our-own-data",
     "title": "Week 11 Lab Reading",
     "section": "Why Generate Our Own Data?",
-    "text": "Why Generate Our Own Data?\n\nLearning with Real Data\nWhen we analyse data you’ve generated:\n\nYou understand what the numbers represent\nYou can connect statistics to real experiences\nThe results are genuinely unknown (not textbook examples)\n\n\n\nExperiencing Both Roles\nActing as both participant and tester teaches you:\n\nThe importance of standardised procedures\nHow instructions affect behaviour\nWhy research protocols exist"
+    "text": "Why Generate Our Own Data?\n\nLearning with Real Data\nWhen we analyse data you’ve generated:\n\nYou understand what the numbers represent\nYou can connect statistics to real experiences\nThe results are genuinely unknown (not textbook examples)\n\n\n\nExperiencing Both Roles\nActing as both participant and tester teaches you:\n\nThe importance of standardised procedures\nHow instructions affect behaviour\nWhy research protocols exist",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#preparing-for-the-lab",
     "href": "week11/lab/reading.html#preparing-for-the-lab",
     "title": "Week 11 Lab Reading",
     "section": "Preparing for the Lab",
-    "text": "Preparing for the Lab\n\nBefore You Arrive\n\nWatch the preview video — Module introduction (5 minutes)\nRead this page — Understand what you’ll be doing\nCheck your lab allocation — Group A or Group B\n\n\n\nWhat to Bring\n\nYour phone or laptop (for Qualtrics data entry)\nA pen (backup for paper recording)\n\n\n\nWhat to Expect\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:15\nWelcome, setup, get participant IDs\n\n\n10:15-11:30\nRotate through 6 stations (~12 min each)\n\n\n11:30-11:50\nForm project groups\n\n\n11:50-12:00\nWrap-up"
+    "text": "Preparing for the Lab\n\nBefore You Arrive\n\nWatch the preview video — Module introduction (5 minutes)\nRead this page — Understand what you’ll be doing\nCheck your lab allocation — Group A or Group B\n\n\n\nWhat to Bring\n\nYour phone or laptop (for Qualtrics data entry)\nA pen (backup for paper recording)\n\n\n\nWhat to Expect\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:15\nWelcome, setup, get participant IDs\n\n\n10:15-11:30\nRotate through 6 stations (~12 min each)\n\n\n11:30-11:50\nForm project groups\n\n\n11:50-12:00\nWrap-up",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#working-in-pairs",
     "href": "week11/lab/reading.html#working-in-pairs",
     "title": "Week 11 Lab Reading",
     "section": "Working in Pairs",
-    "text": "Working in Pairs\nAt each station, you’ll work with a partner:\n\nOne person is the participant (completes the task)\nOne person is the tester (administers the task, records data)\nThen you swap roles\n\nThis means everyone experiences both perspectives."
+    "text": "Working in Pairs\nAt each station, you’ll work with a partner:\n\nOne person is the participant (completes the task)\nOne person is the tester (administers the task, records data)\nThen you swap roles\n\nThis means everyone experiences both perspectives.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#group-formation",
     "href": "week11/lab/reading.html#group-formation",
     "title": "Week 11 Lab Reading",
     "section": "Group Formation",
-    "text": "Group Formation\nBy the end of the lab, you should have formed your project group (3-4 students).\nConsider:\n\nCan you meet regularly outside class?\nDo you have complementary strengths?\nWill you be reliable partners?\n\nYou’ll work together all term on the group research project."
+    "text": "Group Formation\nBy the end of the lab, you should have formed your project group (3-4 students).\nConsider:\n\nCan you meet regularly outside class?\nDo you have complementary strengths?\nWill you be reliable partners?\n\nYou’ll work together all term on the group research project.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#key-terms",
     "href": "week11/lab/reading.html#key-terms",
     "title": "Week 11 Lab Reading",
     "section": "Key Terms",
-    "text": "Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nReaction time\nTime between stimulus and response\n\n\nWorking memory\nSystem for temporarily holding information\n\n\nEstimation bias\nSystematic error in judgement\n\n\nMetacognition\nAwareness of one’s own cognitive processes\n\n\nCalibration\nMatch between confidence and accuracy"
+    "text": "Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nReaction time\nTime between stimulus and response\n\n\nWorking memory\nSystem for temporarily holding information\n\n\nEstimation bias\nSystematic error in judgement\n\n\nMetacognition\nAwareness of one’s own cognitive processes\n\n\nCalibration\nMatch between confidence and accuracy",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/reading.html#references",
     "href": "week11/lab/reading.html#references",
     "title": "Week 11 Lab Reading",
     "section": "References",
-    "text": "References\n\nHick, W. E. (1952). On the rate of gain of information. Quarterly Journal of Experimental Psychology, 4(1), 11-26.\nMiller, G. A. (1956). The magical number seven, plus or minus two. Psychological Review, 63(2), 81-97."
+    "text": "References\n\nHick, W. E. (1952). On the rate of gain of information. Quarterly Journal of Experimental Psychology, 4(1), 11-26.\nMiller, G. A. (1956). The magical number seven, plus or minus two. Psychological Review, 63(2), 81-97.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html",
     "href": "week11/lab/homework.html",
     "title": "Week 11 Homework",
     "section": "",
-    "text": "This homework consolidates your learning from Week 11.\n\n\n\n\n\n\nImportantDeadline\n\n\n\nComplete this homework by 2026-01-18."
+    "text": "This homework consolidates your learning from Week 11.\n\n\n\n\n\n\nImportantDeadline\n\n\n\nComplete this homework by 2026-01-18.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#overview",
     "href": "week11/lab/homework.html#overview",
     "title": "Week 11 Homework",
     "section": "",
-    "text": "This homework consolidates your learning from Week 11.\n\n\n\n\n\n\nImportantDeadline\n\n\n\nComplete this homework by 2026-01-18."
+    "text": "This homework consolidates your learning from Week 11.\n\n\n\n\n\n\nImportantDeadline\n\n\n\nComplete this homework by 2026-01-18.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#part-1-conceptual-questions",
     "href": "week11/lab/homework.html#part-1-conceptual-questions",
     "title": "Week 11 Homework",
     "section": "Part 1: Conceptual Questions",
-    "text": "Part 1: Conceptual Questions\nTBC"
+    "text": "Part 1: Conceptual Questions\nTBC",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#part-2-practical-exercises",
     "href": "week11/lab/homework.html#part-2-practical-exercises",
     "title": "Week 11 Homework",
     "section": "Part 2: Practical Exercises",
-    "text": "Part 2: Practical Exercises\nTBC"
+    "text": "Part 2: Practical Exercises\nTBC",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#part-3-reflection",
     "href": "week11/lab/homework.html#part-3-reflection",
     "title": "Week 11 Homework",
     "section": "Part 3: Reflection",
-    "text": "Part 3: Reflection\nTBC"
+    "text": "Part 3: Reflection\nTBC",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#submission",
     "href": "week11/lab/homework.html#submission",
     "title": "Week 11 Homework",
     "section": "Submission",
-    "text": "Submission\nTBC - Submission instructions"
+    "text": "Submission\nTBC - Submission instructions",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lab/homework.html#marking-criteria",
     "href": "week11/lab/homework.html#marking-criteria",
     "title": "Week 11 Homework",
     "section": "Marking Criteria",
-    "text": "Marking Criteria\nThis is a formative assignment."
+    "text": "Marking Criteria\nThis is a formative assignment.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Self-Assessment"
+    ]
   },
   {
     "objectID": "week11/lecture/video-script.html",
@@ -670,112 +776,202 @@
     "href": "week11/lecture/slides.html#research-methods-experimental-design",
     "title": "Welcome to Research Methods",
     "section": "Research Methods & Experimental Design",
-    "text": "Research Methods & Experimental Design\nTerm 2 | Spring 2026"
+    "text": "Research Methods & Experimental Design\nTerm 2 | Spring 2026",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#what-is-this-module-about",
     "href": "week11/lecture/slides.html#what-is-this-module-about",
     "title": "Welcome to Research Methods",
     "section": "What is This Module About?",
-    "text": "What is This Module About?\n\nYou will learn to:\n\nDesign experiments that can answer your questions\nAnalyse data using R\nInterpret results appropriately\nReport findings in professional APA format"
+    "text": "What is This Module About?\n\nYou will learn to:\n\nDesign experiments that can answer your questions\nAnalyse data using R\nInterpret results appropriately\nReport findings in professional APA format",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#why-research-methods",
     "href": "week11/lecture/slides.html#why-research-methods",
     "title": "Welcome to Research Methods",
     "section": "Why Research Methods?",
-    "text": "Why Research Methods?\nPsychology is a science.\nTo make claims about human behaviour, we need:\n\nSystematic observation\nControlled experiments\nStatistical analysis\nPeer review\n\nThis module teaches you the tools to do this."
+    "text": "Why Research Methods?\nPsychology is a science.\nTo make claims about human behaviour, we need:\n\nSystematic observation\nControlled experiments\nStatistical analysis\nPeer review\n\nThis module teaches you the tools to do this.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#thursday-your-first-session",
     "href": "week11/lecture/slides.html#thursday-your-first-session",
     "title": "Welcome to Research Methods",
     "section": "Thursday: Your First Session",
-    "text": "Thursday: Your First Session\n\n\n\n\n\n\nNo Lecture This Week\n\n\nYour first contact is Thursday’s lab session (10:00-12:00).\nThere is no Monday lecture in Week 11."
+    "text": "Thursday: Your First Session\n\n\n\n\n\n\nNo Lecture This Week\n\n\nYour first contact is Thursday’s lab session (10:00-12:00).\nThere is no Monday lecture in Week 11.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#what-is-datalab",
     "href": "week11/lecture/slides.html#what-is-datalab",
     "title": "Welcome to Research Methods",
     "section": "What Is DataLab?",
-    "text": "What Is DataLab?\nA series of 6 cognitive task stations where you:\n\n\n\nTest reaction times\nComplete memory tasks\nMake estimations\nRate your confidence\n\n\n\nWork in pairs\nRecord data in Qualtrics\nExperience being a participant\nExperience being a tester"
+    "text": "What Is DataLab?\nA series of 6 cognitive task stations where you:\n\n\n\nTest reaction times\nComplete memory tasks\nMake estimations\nRate your confidence\n\n\n\nWork in pairs\nRecord data in Qualtrics\nExperience being a participant\nExperience being a tester",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#why-datalab",
     "href": "week11/lecture/slides.html#why-datalab",
     "title": "Welcome to Research Methods",
     "section": "Why DataLab?",
-    "text": "Why DataLab?\nThe data you generate becomes our teaching dataset.\nWhen we learn about:\n\n\n\nTopic\nYour Data\n\n\n\n\nDistributions\nYour reaction times\n\n\nt-tests\nRoom A vs Room B\n\n\nCorrelations\nMemory vs confidence\n\n\n\n…we use your data, not abstract examples."
+    "text": "Why DataLab?\nThe data you generate becomes our teaching dataset.\nWhen we learn about:\n\n\n\nTopic\nYour Data\n\n\n\n\nDistributions\nYour reaction times\n\n\nt-tests\nRoom A vs Room B\n\n\nCorrelations\nMemory vs confidence\n\n\n\n…we use your data, not abstract examples.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#the-6-stations",
     "href": "week11/lecture/slides.html#the-6-stations",
     "title": "Welcome to Research Methods",
     "section": "The 6 Stations",
-    "text": "The 6 Stations\n\n1. Simple Reaction Time — How fast can you respond to a stimulus?\n\n\n2. Choice Reaction Time — How does decision-making affect speed?\n\n\n3. Memory Task — How many items can you recall?"
+    "text": "The 6 Stations\n\n1. Simple Reaction Time — How fast can you respond to a stimulus?\n\n\n2. Choice Reaction Time — How does decision-making affect speed?\n\n\n3. Memory Task — How many items can you recall?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#the-6-stations-continued",
     "href": "week11/lecture/slides.html#the-6-stations-continued",
     "title": "Welcome to Research Methods",
     "section": "The 6 Stations (continued)",
-    "text": "The 6 Stations (continued)\n\n4. Estimation Task — How accurate are your judgments?\n\n\n5. Group Estimation — Does group discussion improve accuracy?\n\n\n6. Confidence Ratings — How well do you know what you know?"
+    "text": "The 6 Stations (continued)\n\n4. Estimation Task — How accurate are your judgments?\n\n\n5. Group Estimation — Does group discussion improve accuracy?\n\n\n6. Confidence Ratings — How well do you know what you know?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#before-thursday",
     "href": "week11/lecture/slides.html#before-thursday",
     "title": "Welcome to Research Methods",
     "section": "Before Thursday",
-    "text": "Before Thursday\n\n\n\n\n\n\nPreparation Checklist\n\n\n\nCheck your lab allocation (Group A or Group B)\nBring your phone or laptop (for Qualtrics)\nArrive on time — we need to start promptly at 10:00"
+    "text": "Before Thursday\n\n\n\n\n\n\nPreparation Checklist\n\n\n\nCheck your lab allocation (Group A or Group B)\nBring your phone or laptop (for Qualtrics)\nArrive on time — we need to start promptly at 10:00",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#form-your-project-groups",
     "href": "week11/lecture/slides.html#form-your-project-groups",
     "title": "Welcome to Research Methods",
     "section": "Form Your Project Groups",
-    "text": "Form Your Project Groups\nBy the end of Thursday, form groups of 3-4 students.\nYour group will:\n\nWork together on the research project\nConduct labs together from Week 16\nGenerate data for the Research Report\n\n\n\n\n\n\n\nChoose Wisely\n\n\nPick people you can reliably meet with outside class."
+    "text": "Form Your Project Groups\nBy the end of Thursday, form groups of 3-4 students.\nYour group will:\n\nWork together on the research project\nConduct labs together from Week 16\nGenerate data for the Research Report\n\n\n\n\n\n\n\nChoose Wisely\n\n\nPick people you can reliably meet with outside class.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#whats-coming",
     "href": "week11/lecture/slides.html#whats-coming",
     "title": "Welcome to Research Methods",
     "section": "What’s Coming",
-    "text": "What’s Coming\n\n\n\nWeeks\nFocus\n\n\n\n\n11-15\nBuilding skills: distributions, t-tests, correlation\n\n\n16-17\nApplying skills: regression, interpretation\n\n\n18\nMCQ Exam\n\n\n19-20\nProject support"
+    "text": "What’s Coming\n\n\n\nWeeks\nFocus\n\n\n\n\n11-15\nBuilding skills: distributions, t-tests, correlation\n\n\n16-17\nApplying skills: regression, interpretation\n\n\n18\nMCQ Exam\n\n\n19-20\nProject support",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#four-assessments",
     "href": "week11/lecture/slides.html#four-assessments",
     "title": "Welcome to Research Methods",
     "section": "Four Assessments",
-    "text": "Four Assessments\n\n\n\nAssessment\nWeight\nDue\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nAll details on the Assessments page."
+    "text": "Four Assessments\n\n\n\nAssessment\nWeight\nDue\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nAll details on the Assessments page.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#weekly-structure",
     "href": "week11/lecture/slides.html#weekly-structure",
     "title": "Welcome to Research Methods",
     "section": "Weekly Structure",
-    "text": "Weekly Structure\nEach week typically includes:\n\nMonday: 2-hour lecture (recorded)\nThursday: 2-hour lab session\nPreview video: Watch before lecture\nReadings: Textbook chapters\nHomework: Practice exercises"
+    "text": "Weekly Structure\nEach week typically includes:\n\nMonday: 2-hour lecture (recorded)\nThursday: 2-hour lab session\nPreview video: Watch before lecture\nReadings: Textbook chapters\nHomework: Practice exercises",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#summary",
     "href": "week11/lecture/slides.html#summary",
     "title": "Welcome to Research Methods",
     "section": "Summary",
-    "text": "Summary\n\nThursday 10:00-12:00\nDataLab + Form Groups\n\nQuestions? Email g.wright@gold.ac.uk"
+    "text": "Summary\n\nThursday 10:00-12:00\nDataLab + Form Groups\n\nQuestions? Email g.wright@gold.ac.uk",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lecture/slides.html#quick-links",
     "href": "week11/lecture/slides.html#quick-links",
     "title": "Welcome to Research Methods",
     "section": "Quick Links",
-    "text": "Quick Links\n\nModule Homepage\nSyllabus\nSchedule\nAssessments\nWeek 11 Overview\n\n\nEnd of preview video content. Recording time: approximately 5-7 minutes."
+    "text": "Quick Links\n\nModule Homepage\nSyllabus\nSchedule\nAssessments\nWeek 11 Overview\n\n\nEnd of preview video content. Recording time: approximately 5-7 minutes.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "assessments.html",
     "href": "assessments.html",
     "title": "Assessments",
     "section": "",
-    "text": "Assessment\nWeight\nDeadline\nWeek\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026, 12 noon\n16\n\n\nMCQ Exam\n20%\nMon 9 Mar 2026, in lecture slot\n18\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026, 12 noon\n20\n\n\nResearch Report\n40%\nFri 1 May 2026, 12 noon\nPost-term",
+    "text": "Assessment\nWeight\nDeadline\nWeek\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026, 12 noon\n16\n\n\nMCQ Exam\n20%\nWed 11 Mar 2026, in lecture slot\n18\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026, 12 noon\n20\n\n\nResearch Report\n40%\nFri 1 May 2026, 12 noon\nPost-term\n\n\n\n\n\n\n\n\n\n\n\n\nTipExamples of all assessments will be provided\n\n\n\nExamples of all assessments will be provided with plenty of support. We cannot give marks for these, but we will work through examples in class.",
     "crumbs": [
       "Home",
       "Overview",
@@ -787,7 +983,7 @@
     "href": "assessments.html#assessment-overview",
     "title": "Assessments",
     "section": "",
-    "text": "Assessment\nWeight\nDeadline\nWeek\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026, 12 noon\n16\n\n\nMCQ Exam\n20%\nMon 9 Mar 2026, in lecture slot\n18\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026, 12 noon\n20\n\n\nResearch Report\n40%\nFri 1 May 2026, 12 noon\nPost-term",
+    "text": "Assessment\nWeight\nDeadline\nWeek\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026, 12 noon\n16\n\n\nMCQ Exam\n20%\nWed 11 Mar 2026, in lecture slot\n18\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026, 12 noon\n20\n\n\nResearch Report\n40%\nFri 1 May 2026, 12 noon\nPost-term\n\n\n\n\n\n\n\n\n\n\n\n\nTipExamples of all assessments will be provided\n\n\n\nExamples of all assessments will be provided with plenty of support. We cannot give marks for these, but we will work through examples in class.",
     "crumbs": [
       "Home",
       "Overview",
@@ -799,7 +995,7 @@
     "href": "assessments.html#research-plan",
     "title": "Assessments",
     "section": "Research Plan",
-    "text": "Research Plan\n\nKey Information\n\nDeadline: Friday 27 February 2026, 12 noon\nSubmission: Via Moodle submission link\nWord count: Approximately 1,000 words\nWeight: 20%\n\n\n\nTask\nDescribe how you would investigate ONE of the following research topics:\n\nThe effect of caffeine on learning nouns.\nThe effect of TV programme content on the recall of advertisements presented part-way through the programme.\nThe effect of relaxation classes on stress reduction in the work place.\n\n\n\nWhat to Include\na) Experimental Hypothesis\n\nState your experimental hypothesis clearly\nNote whether it is one-tailed or two-tailed\nExplain why you chose this direction\n\nb) Method Section\nA detailed Method section with:\n\nDesign: What type of design? Why is it appropriate?\nParticipants: Who, how many, how recruited?\nMaterials/Stimuli: What materials would you need?\nProcedure: Step by step, with controls\n\nc) Draft Results Section\n\nDraw a summary data table (with appropriate headings—do NOT invent data)\nState which statistical test should be used\nJustify your choice of test\n\n\n\nImportant Notes\n\nDo NOT invent any data—this is a plan, not a completed study\nFocus on justifying your choices throughout\nShow you understand the connection between design and analysis",
+    "text": "Research Plan\n\nKey Information\n\nDeadline: Friday 27 February 2026, 12 noon\nSubmission: Via Moodle submission link\nWord count: Approximately 1,000 words\nWeight: 20%\n\n\n\nTask\nDescribe how you would investigate ONE of the following research topics: (Examples only)\n\nThe effect of caffeine on learning nouns.\nThe effect of TV programme content on the recall of advertisements presented part-way through the programme.\nThe effect of relaxation classes on stress reduction in the work place.\n\n\n\nWhat to Include\na) Experimental Hypothesis\n\nState your experimental hypothesis clearly\nNote whether it is one-tailed or two-tailed\nExplain why you chose this direction\n\nb) Method Section\nA detailed Method section with:\n\nDesign: What type of design? Why is it appropriate?\nParticipants: Who, how many, how recruited?\nMaterials/Stimuli: What materials would you need?\nProcedure: Step by step, with controls\n\nc) Draft Results Section\n\nDraw a summary data table (with appropriate headings—do NOT invent data)\nState which statistical test should be used\nJustify your choice of test\n\n\n\nImportant Notes\n\nDo NOT invent any data—this is a plan, not a completed study\nFocus on justifying your choices throughout\nShow you understand the connection between design and analysis",
     "crumbs": [
       "Home",
       "Overview",
@@ -811,7 +1007,7 @@
     "href": "assessments.html#mcq-exam",
     "title": "Assessments",
     "section": "MCQ Exam",
-    "text": "MCQ Exam\n\nKey Information\n\nDate: Monday 9 March 2026\nTime: During your normal lecture slot\nDuration: 1 hour\nLocation: Normal lecture venue\nFormat: Paper-based, multiple choice\nWeight: 20%\n\n\n\nExam Structure\nThe paper contains multiple “Investigations”—each is a short scenario describing a research study. For each Investigation, you answer 6 questions:\n\nDesign: Identify the design (between/within/matched/correlational)\nIV: Identify the independent variable (or recognise no IV)\nDV: Identify the dependent variable\nHypothesis: Identify the appropriate hypothesis type\nTest: Select the appropriate statistical test\nInterpretation: Interpret the results\n\n\n\nWhat You Need to Know\nTests you must be able to select:\n\n\n\nDesign\nParametric\nNon-parametric\n\n\n\n\nBetween-participants\nIndependent t-test\nMann-Whitney U\n\n\nWithin-participants\nPaired t-test\nWilcoxon signed-rank\n\n\nCorrelational\nPearson’s r\nSpearman’s rho\n\n\n\n\n\nHow to Prepare\n\nComplete the weekly self-assessment activities\nReview the MCQ decision framework: Design → Variables → Hypothesis → Test → Interpret\nPractice with past investigations\nFocus on the logic, not memorisation",
+    "text": "MCQ Exam\n\nKey Information\n\nDate: Wednesday 11 March 2026\nTime: During your normal lecture slot\nDuration: 1 hour\nLocation: Normal lecture venue\nFormat: Paper-based, multiple choice\nWeight: 20%\n\n\n\nExam Structure\nThe paper contains multiple “Investigations” — each is a short scenario describing a research study. For each Investigation, you answer 6 questions:\n\nDesign: Identify the design (between/within/matched/correlational)\nIV: Identify the independent variable (or recognise no IV)\nDV: Identify the dependent variable\nHypothesis: Identify the appropriate hypothesis type\nTest: Select the appropriate statistical test\nInterpretation: Interpret the results\n\nThere will be a series of other MCQs testing comprehension of other aspects of the course to date.\n\n\nWhat You Need to Know\nTests you must be able to select:\n\n\n\nDesign\nParametric\nNon-parametric\n\n\n\n\nBetween-participants\nIndependent t-test\nMann-Whitney U\n\n\nWithin-participants\nPaired t-test\nWilcoxon signed-rank\n\n\nCorrelational\nPearson’s r\nSpearman’s rho\n\n\n\n\n\nHow to Prepare\n\nComplete the weekly self-assessment activities - they are designed to be exactly like the assessments\nReview the MCQ decision framework: Design → Variables → Hypothesis → Test → Interpret\nFocus on the logic and the concepts being used, not memorisation",
     "crumbs": [
       "Home",
       "Overview",
@@ -823,7 +1019,7 @@
     "href": "assessments.html#eds-assignment",
     "title": "Assessments",
     "section": "EDS Assignment",
-    "text": "EDS Assignment\n\nKey Information\n\nDeadline: Friday 20 March 2026, 12 noon\nSubmission: Via Moodle submission link\nFormat: Worked statistics assignment\nWeight: 20%\nPass mark: 50%\n\n\n\nTask Structure\nYou will receive a research scenario with actual raw data.\nSection A: Statistical Mechanics\n\nState the researcher’s hypothesis\nIdentify design type, IV, DV, data type\nCalculate means and SDs BY HAND (show ALL working)\nRun appropriate test BY HAND (show ALL steps)\nInterpret results\n\nSection B: Methods and Theory\n\nSuggest TWO methodological improvements\nDiscuss individual differences / extensions\nPropose a more ecologically valid alternative (minimum half page)\n\n\n\nCritical Requirements\n\n\n\n\n\n\nWarningYou MUST Show Your Working\n\n\n\n\nFull marks = right test AND all calculation steps shown\nSoftware only = partial credit (10-12/20 maximum)\nFinal results only = minimal credit (5-6/20)\nWrong test family = zero for that section\n\n\n\nTests you must compute by hand:\n\nMean and standard deviation\nPaired t-test OR Wilcoxon signed-rank\nPearson correlation\n\n\n\nPractice Paper\n\n\n\n\n\n\nTipPrepare with the Practice Paper\n\n\n\nDownload the practice paper to familiarise yourself with the format and expectations:\nEDS Practice Paper (PDF)",
+    "text": "EDS Assignment\n\nKey Information\n\nDeadline: Friday 20 March 2026, 12 noon\nSubmission: Via Moodle submission link\nFormat: Worked statistics assignment\nWeight: 20%\nPass mark: 50%\n\n\n\nTask Structure\nYou will receive a research scenario with actual raw data.\nSection A: Statistical Mechanics\n\nState the researcher’s hypothesis\nIdentify design type, IV, DV, data type\nCalculate means and SDs\nRun appropriate statistical tests\nInterpret results and write up in APA format\n\nSection B: Methods and Theory\n\nSuggest TWO methodological improvements\nDiscuss individual differences / extensions\nPropose a more ecologically valid alternative (minimum half page)\n\n\n\nCritical Requirements\n\n\n\n\n\n\nWarningYou MUST demonstrate your understanding - not just get the right answer\n\n\n\n\nFull marks = right test AND proper justification\nNo punitive marking, so if you get something wrong, you just get zero\nYou are expected to use the terminology and concepts we have been discussing in class, so pay attention to the glossaries and readings provided",
     "crumbs": [
       "Home",
       "Overview",
@@ -871,7 +1067,7 @@
     "href": "assessments.html#support",
     "title": "Assessments",
     "section": "Support",
-    "text": "Support\n\nLectures: Core concepts and worked examples\nLabs: Hands-on practice\nOffice hours: Individual questions\nVLE: Assessment briefs, practice materials",
+    "text": "Support\n\nLectures: Core concepts and worked examples\nLabs: Hands-on practice\nOffice hours: Individual or small group questions\nVLE: Assessment briefs, practice materials, discussion forum",
     "crumbs": [
       "Home",
       "Overview",
@@ -931,7 +1127,7 @@
     "href": "syllabus.html#teaching-schedule",
     "title": "Syllabus",
     "section": "Teaching Schedule",
-    "text": "Teaching Schedule\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nMonday\nTBC\nTBC\n\n\nLab Group A\nThursday\n10:00-12:00\nTBC\n\n\nLab Group B\nThursday\n10:00-12:00\nTBC\n\n\n\n\n\n\n\n\n\nNoteWeek 11\n\n\n\nThere is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for DataLab.",
+    "text": "Teaching Schedule\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nWednesday\n10:00-12:00\nRHBD 143\n\n\nLab Group A\nThursday\n10:00-12:00\nWB 304a\n\n\nLab Group B\nThursday\n10:00-12:00\nWB 304b\n\n\n\n\n\n\n\n\n\nNoteWeek 11\n\n\n\nThere is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for DataLab.",
     "crumbs": [
       "Home",
       "Overview",
@@ -943,7 +1139,7 @@
     "href": "syllabus.html#weekly-materials",
     "title": "Syllabus",
     "section": "Weekly Materials",
-    "text": "Weekly Materials\nEach week typically includes:\n\n\n\nMaterial\nDescription\n\n\n\n\nLecture Slides\nCore content (RevealJS, recorded)\n\n\nPreview Video\nShort video to watch before lecture\n\n\nLecture Reading\nTextbook content for the week\n\n\nLab Slides\nIntroduction to lab session\n\n\nLab Activity\nInteractive WebR exercises\n\n\nLab Reading\nSupporting practical material\n\n\nHomework\nWeekly consolidation exercises",
+    "text": "Weekly Materials\nEach week typically includes:\n\n\n\nMaterial\nDescription\n\n\n\n\nLecture Slides\nCore content (RevealJS, recorded)\n\n\nPreview Video\nShort video to watch before lecture\n\n\nLecture Reading\nTextbook content for the week\n\n\nLab Slides\nIntroduction to lab session\n\n\nLab Activity\nInteractive WebR exercises\n\n\nLab Reading\nSupporting practical material\n\n\nSelf-Assessments\nWeekly consolidation exercises",
     "crumbs": [
       "Home",
       "Overview",
@@ -955,7 +1151,7 @@
     "href": "syllabus.html#assessment",
     "title": "Syllabus",
     "section": "Assessment",
-    "text": "Assessment\nSee the Assessments page for full details.\n\n\n\nAssessment\nWeight\nDeadline\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026\n\n\nMCQ Exam\n20%\nMon 9 Mar 2026\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026\n\n\nResearch Report\n40%\nFri 1 May 2026",
+    "text": "Assessment\nSee the Assessments page for full details.\n\n\n\nAssessment\nWeight\nDeadline\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026\n\n\nMCQ Exam\n20%\nWed 11 Mar 2026\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026\n\n\nResearch Report\n40%\nFri 1 May 2026",
     "crumbs": [
       "Home",
       "Overview",
@@ -967,7 +1163,7 @@
     "href": "syllabus.html#required-reading",
     "title": "Syllabus",
     "section": "Required Reading",
-    "text": "Required Reading\n\nCore Textbooks\nBoth textbooks are available as e-books via the Goldsmiths Library:\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton. VLeBooks\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press. VLeBooks\n\nWeekly readings are specified on each week’s page. See the Resources page for additional materials.",
+    "text": "Required Reading\n\nRecommended Textbooks\nAlthough I shall be trying to provide detailed readings here, that mean you don’t HAVE to lean on textbooks, sometimes a new voice is handy to help grapple with a new topic. Both textbooks below are greaat and are available as e-books via the Goldsmiths Library:\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton. VLeBooks\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press. VLeBooks\n\nWeekly readings are specified on each week’s page. See the Resources page for additional materials.",
     "crumbs": [
       "Home",
       "Overview",
@@ -979,7 +1175,7 @@
     "href": "syllabus.html#software",
     "title": "Syllabus",
     "section": "Software",
-    "text": "Software\n\n\n\nSoftware\nPurpose\nAccess\n\n\n\n\nR\nStatistical analysis\nFree download or use WebR in browser\n\n\nWebR\nIn-browser R exercises\nBuilt into course materials\n\n\n\nYou do not need to install R to complete this module—all lab activities use WebR, which runs in your browser.",
+    "text": "Software\nWe will talk about this in detail before any use of software is required!\n\n\n\n\n\n\n\n\nSoftware\nPurpose\nAccess\n\n\n\n\nR\nStatistical analysis\nFree download or use the Goldsmiths R Server\n\n\nWebR\nIn-browser R exercises\nBuilt into course materials\n\n\n\nYou do not need to install R to complete this module—all lab activities use WebR, which runs in your browser, and there will be extremely helpful guides and examples.",
     "crumbs": [
       "Home",
       "Overview",
@@ -991,7 +1187,7 @@
     "href": "syllabus.html#group-project",
     "title": "Syllabus",
     "section": "Group Project",
-    "text": "Group Project\nWorking in groups is a core part of this module. Later in the term, your group will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.\n\nForming Your Groups\nIn Week 11, you will form your project groups (3-4 students). This matters.\nPay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term.\n\n\n\n\n\n\nImportantChoose Wisely\n\n\n\nGroup formation is your first opportunity to see how groups naturally assemble and how different people work together. The decisions you make in Week 11 will shape your experience for the rest of the term.\n\n\n\n\nProject Timeline\n\n\n\nWeek\nSkills & Procedures\nCommunication\n\n\n\n\n11\nForm groups\n—\n\n\n12-15\nDevelop research question and design\nResults writing\n\n\n—\nReading Week\n—\n\n\n16-17\nData collection\nMethods & Introduction\n\n\n18-19\nAnalysis\nIntroduction continued\n\n\n20\nFinal analysis\nDiscussion\n\n\n\n\n\nAssessments from Group Work\nThe project feeds into two assessments:\n\nResearch Plan (due Week 16) — Your proposed methodology\nResearch Report (due Week 22) — Individual write-up of group data\n\nWhile the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work.\n\n\n\n\n\n\nNoteLabs in Project Groups\n\n\n\nFrom Week 16 onwards, labs are conducted in your project groups.",
+    "text": "Group Project\nWorking in groups is a core part of this module. Later in the term, your group (comprising 4-5 students) will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.\n\nForming Your Groups\nIn Week 11, you will work in small groups (3-4 students). This matters, so we are having a nice gentle start!\nPay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term. It doesn’t mean that you can’t start planning your group members and group working strategy now though!\n\n\n\n\n\n\nImportantChoose Wisely\n\n\n\nGroup formation is your first opportunity to see how groups naturally assemble and how different people work together. Group work is a VERY psychological phenomenon and the thing we are asked to talk about most often when writing references for jobs or further study.\n\n\n\n\nProject Timeline\n\n\n\nWeek\nSkills & Procedures\nCommunication\n\n\n\n\n11\nGrow your own data\n—\n\n\n12-15\nDevelop research question and design\nReporting Psychology\n\n\n—\nReading Week\n—\n\n\n16-17\nData collection\nMethods & Introduction\n\n\n18-19\nAnalysis\nIntroduction continued\n\n\n20\nFinal analysis\nDiscussion\n\n\n\n\n\nAssessments from Group Work\nThe project feeds into two assessments:\n\nResearch Plan (due Week 16) — A methods section on a given topic (individual)\nResearch Report (due Week 22) — Individual write-up of group data (individual)\n\nWhile the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work and your own academic integrity.\n\n\n\n\n\n\nNoteLabs in Project Groups\n\n\n\nFrom Week 16 onwards, labs are conducted in your project groups.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1027,7 +1223,7 @@
     "href": "syllabus.html#support",
     "title": "Syllabus",
     "section": "Support",
-    "text": "Support\n\n\n\nResource\nDetails\n\n\n\n\nOffice Hours\nTBC\n\n\nEmail\ng.wright@gold.ac.uk\n\n\nVLE\nDiscussion board for general questions",
+    "text": "Support\n\n\n\nResource\nDetails\n\n\n\n\nOffice Hours\nThursday 12:00 - 13:00\n\n\nEmail\ng.wright@gold.ac.uk\n\n\nVLE\nDiscussion board for general questions",
     "crumbs": [
       "Home",
       "Overview",
@@ -1051,7 +1247,7 @@
     "href": "index.html",
     "title": "PS50008A Research Methods & Experimental Design",
     "section": "",
-    "text": "Welcome to PS50008A Research Methods & Experimental Design. This module introduces the fundamental principles of psychological research, experimental design, and statistical analysis.\n\n\n\n\n\n\nImportantFirst Week\n\n\n\nYour first session is Thursday of Week 11 in the labs. Watch the preview video before attending.",
+    "text": "Welcome to PS50008A Research Methods & Experimental Design. This module introduces the fundamental principles of psychological research, experimental design, and statistical analysis.\n\n\n\n\n\n\nImportantFirst Week\n\n\n\nNO LECTURE IN WEEK 11 - Employability session with the rest of the undergrad cohort!\nYour first Research Methods session is Thursday of Week 11 in the labs. Watch the preview video before attending.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1063,7 +1259,7 @@
     "href": "index.html#welcome",
     "title": "PS50008A Research Methods & Experimental Design",
     "section": "",
-    "text": "Welcome to PS50008A Research Methods & Experimental Design. This module introduces the fundamental principles of psychological research, experimental design, and statistical analysis.\n\n\n\n\n\n\nImportantFirst Week\n\n\n\nYour first session is Thursday of Week 11 in the labs. Watch the preview video before attending.",
+    "text": "Welcome to PS50008A Research Methods & Experimental Design. This module introduces the fundamental principles of psychological research, experimental design, and statistical analysis.\n\n\n\n\n\n\nImportantFirst Week\n\n\n\nNO LECTURE IN WEEK 11 - Employability session with the rest of the undergrad cohort!\nYour first Research Methods session is Thursday of Week 11 in the labs. Watch the preview video before attending.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1123,7 +1319,7 @@
     "href": "index.html#weekly-structure",
     "title": "PS50008A Research Methods & Experimental Design",
     "section": "Weekly Structure",
-    "text": "Weekly Structure\nEach week typically includes:\n\n\n\nComponent\nDescription\n\n\n\n\nLecture\nCore concepts and theory (recorded)\n\n\nPreview Video\nShort video to watch before lecture\n\n\nLecture Reading\nTextbook content for the week\n\n\nLab\nHands-on practical work with R\n\n\nLab Activity\nInteractive WebR exercises\n\n\nHomework\nWeekly consolidation exercises",
+    "text": "Weekly Structure\nEach week typically includes:\n\n\n\nComponent\nDescription\n\n\n\n\nLecture\nCore concepts and theory (recorded)\n\n\nPreview Video\nShort video to watch before lecture\n\n\nLecture Reading\nTextbook content for the week\n\n\nLab\nHands-on practical work with R\n\n\nLab Activity\nInteractive WebR exercises\n\n\nSelf-Assessment\nWeekly consolidation exercises",
     "crumbs": [
       "Home",
       "Overview",
@@ -1135,7 +1331,7 @@
     "href": "index.html#teaching-team",
     "title": "PS50008A Research Methods & Experimental Design",
     "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\nRole\nName\nContact\n\n\n\n\nModule Lead\nDr Gordon Wright\ng.wright@gold.ac.uk\n\n\nLab Support\nDr Bence Palfi",
+    "text": "Teaching Team\n\n\n\nRole\nName\nContact\n\n\n\n\nModule Lead\nDr Gordon Wright\ng.wright@gold.ac.uk\n\n\nLab Instructor\nDr Bence Palfi",
     "crumbs": [
       "Home",
       "Overview",
@@ -1207,7 +1403,7 @@
     "href": "schedule.html#session-times",
     "title": "Schedule",
     "section": "Session Times",
-    "text": "Session Times\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nMonday\nTBC\nTBC\n\n\nLab Group A\nThursday\n10:00-12:00\nTBC\n\n\nLab Group B\nThursday\n10:00-12:00\nTBC\n\n\n\n\n\n\n\n\n\nWarningWeek 11 Note\n\n\n\nThere is no lecture in Week 11 due to employability events. Watch the preview video and attend your lab session on Thursday.",
+    "text": "Session Times\n\n\n\nSession\nDay\nTime\nLocation\n\n\n\n\nLecture\nWednesday\n10:00-12:00\nRHBD 143\n\n\nLab Group A\nThursday\n10:00-12:00\nWB 304a\n\n\nLab Group B\nThursday\n10:00-12:00\nWb 304b\n\n\n\n\n\n\n\n\n\nWarningWeek 11 Note\n\n\n\nThere is no lecture in Week 11 due to employability events. Watch the preview video and attend your lab session on Thursday.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1243,7 +1439,7 @@
     "href": "schedule.html#key-dates-summary",
     "title": "Schedule",
     "section": "Key Dates Summary",
-    "text": "Key Dates Summary\nJan 12-16     Week 11: DataLab (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 9         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nMay 1         Research Report due (noon)",
+    "text": "Key Dates Summary\nJan 12-16     Week 11: DataLab (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 11         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nMay 1         Research Report due (noon)",
     "crumbs": [
       "Home",
       "Overview",
@@ -1255,7 +1451,7 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Both core textbooks are available as e-books through the Goldsmiths Library:\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton.\n\nAccess via VLeBooks\nDirect reader link\n\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press.\n\nAccess via VLeBooks\nDirect reader link\n\n\n\n\n\n\n\n\nTipAccessing E-Books\n\n\n\nYou’ll need to log in with your Goldsmiths credentials. If you have trouble accessing, contact the library.",
+    "text": "I shall be providing sufficient reading materials to do well in class via the VLE, materials I have curated, remixed, or written myself - so that they are perfectly in line with the teaching on the course. However, if you like the smell of paper in the morning, you are welcome to consult any Psychology textbooks (most deal with the content we cover), but I highly recommend the 2 books below (free online via the Goldsmiths Library)\n\n\n\nBoth textbooks are available as e-books through the Reading List on the VLE Goldsmiths Library (login required) :\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton. Coolican Research methods and statistics in psychology\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press. Harris Designing and reporting experiments in psychology\n\n\n\n\n\n\n\nTipAccessing E-Books\n\n\n\nYou’ll need to log in with your Goldsmiths credentials. If you have trouble accessing, search via the Reading List or via the library.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1267,7 +1463,7 @@
     "href": "resources.html#textbooks",
     "title": "Resources",
     "section": "",
-    "text": "Both core textbooks are available as e-books through the Goldsmiths Library:\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton.\n\nAccess via VLeBooks\nDirect reader link\n\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press.\n\nAccess via VLeBooks\nDirect reader link\n\n\n\n\n\n\n\n\nTipAccessing E-Books\n\n\n\nYou’ll need to log in with your Goldsmiths credentials. If you have trouble accessing, contact the library.",
+    "text": "I shall be providing sufficient reading materials to do well in class via the VLE, materials I have curated, remixed, or written myself - so that they are perfectly in line with the teaching on the course. However, if you like the smell of paper in the morning, you are welcome to consult any Psychology textbooks (most deal with the content we cover), but I highly recommend the 2 books below (free online via the Goldsmiths Library)\n\n\n\nBoth textbooks are available as e-books through the Reading List on the VLE Goldsmiths Library (login required) :\n\nCoolican, H. (2017). Research methods and statistics in psychology (6th Ed.). Hodder and Stoughton. Coolican Research methods and statistics in psychology\nHarris, P. (2008). Designing and reporting experiments in psychology (3rd Ed.). Open University Press. Harris Designing and reporting experiments in psychology\n\n\n\n\n\n\n\nTipAccessing E-Books\n\n\n\nYou’ll need to log in with your Goldsmiths credentials. If you have trouble accessing, search via the Reading List or via the library.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1279,7 +1475,7 @@
     "href": "resources.html#software",
     "title": "Resources",
     "section": "Software",
-    "text": "Software\n\nWebR (In-Browser)\nAll lab activities use WebR—R that runs directly in your browser. You don’t need to install anything.\n\n\nR and RStudio (Optional)\nIf you want to install R on your own computer:\n\nDownload R\nDownload RStudio",
+    "text": "Software\nWe will discuss the need for software LONG before it arises, but some students really enjoy this part of the course. If you happen to be one of this group, or part of the group that doesn’t find it fun… We’ve got you! Don’t worry!\n\nWebR (In-Browser)\nAll lab activities use WebR—R that runs directly in your browser. You don’t need to install anything.\n\n\nR and RStudio (Optional)\nIf you want to install R on your own computer:\n\nDownload R\nDownload RStudio",
     "crumbs": [
       "Home",
       "Overview",
@@ -1291,7 +1487,19 @@
     "href": "resources.html#online-statistics-resources",
     "title": "Resources",
     "section": "Online Statistics Resources",
-    "text": "Online Statistics Resources\n\nVisual & Interactive\n\nSeeing Theory — Beautiful visual introduction to probability and statistics\nStatistics by Jim — Clear explanations of statistical concepts\nStat Trek — Statistics tutorials and calculators\n\n\n\nR Resources\n\nR for Data Science — Free online textbook\nRStudio Primers — Interactive tutorials\nQuick-R — R syntax reference",
+    "text": "Online Statistics Resources\n\nVisual & Interactive\n\nSeeing Theory — Beautiful visual introduction to probability and statistics\nStatistics by Jim — Clear explanations of statistical concepts\nStat Trek — Statistics tutorials and calculators",
+    "crumbs": [
+      "Home",
+      "Overview",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "resources.html#r-resources-for-psychology-undergraduates",
+    "href": "resources.html#r-resources-for-psychology-undergraduates",
+    "title": "Resources",
+    "section": "R resources for Psychology undergraduates",
+    "text": "R resources for Psychology undergraduates\n\nLearning Statistics with R (Danielle Navarro)\nProbably the most psych-undergrad-friendly open textbook: concepts first, then R, with the usual psych stats sequence (t-tests, ANOVA, regression, etc.).\nR for Psychological Science (Danielle Navarro)\nMore “learn R programming in a psych context” (great alongside a stats course).\nPsyTeachR: Data Skills for Reproducible Research (PsyTeachR team)\nA teachable, step-by-step route into tidyverse workflows and reproducible habits (projects, scripts, reporting), ideal for labs and dissertations.",
     "crumbs": [
       "Home",
       "Overview",
@@ -1335,35 +1543,11 @@
     ]
   },
   {
-    "objectID": "resources.html#tools-calculators",
-    "href": "resources.html#tools-calculators",
-    "title": "Resources",
-    "section": "Tools & Calculators",
-    "text": "Tools & Calculators\n\nStatistical Tables\n\nt-distribution table\nCritical values calculator\n\n\n\nEffect Size Calculators\n\nEffect size calculator",
-    "crumbs": [
-      "Home",
-      "Overview",
-      "Resources"
-    ]
-  },
-  {
     "objectID": "resources.html#getting-help",
     "href": "resources.html#getting-help",
     "title": "Resources",
     "section": "Getting Help",
-    "text": "Getting Help\n\nModule Support\n\n\n\nResource\nDetails\n\n\n\n\nOffice Hours\nTBC\n\n\nEmail\ng.wright@gold.ac.uk\n\n\nVLE Discussion\nFor general questions (other students can help too)\n\n\n\n\n\nTechnical Issues\n\nIT Helpdesk: itservicedesk@gold.ac.uk\nWebR issues: Post in VLE discussion",
-    "crumbs": [
-      "Home",
-      "Overview",
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "resources.html#hypothesis-annotation",
-    "href": "resources.html#hypothesis-annotation",
-    "title": "Resources",
-    "section": "Hypothesis Annotation",
-    "text": "Hypothesis Annotation\nThis module uses Hypothes.is for collaborative annotation. You can highlight and comment on course materials, and see comments from other students.\n\nHypothes.is website\nLook for the Hypothes.is sidebar on course pages",
+    "text": "Getting Help\n\nModule Support\n\n\n\nResource\nDetails\n\n\n\n\nOffice Hours\nThursday 12:00-13:00\n\n\nEmail\ng.wright@gold.ac.uk\n\n\nVLE Discussion\nFor general questions (other students can help too)\n\n\n\n\n\nTechnical Issues\n\nWebR issues: Post in VLE discussion",
     "crumbs": [
       "Home",
       "Overview",
@@ -1375,308 +1559,572 @@
     "href": "week11/lecture/reading.html",
     "title": "Week 11 Reading",
     "section": "",
-    "text": "You chose psychology because you want to understand people. Why do we remember some things and forget others? What drives someone to help a stranger—or to hurt them? How do our early experiences shape who we become? These questions drew you here, and they’re genuinely worth exploring.\nThen you look at your timetable and see “Research Methods and Experimental Design.”\nIf your heart sinks a little, you’re not alone - but I’m going to try to turn this around. This material has a reputation, and not a glamorous one. But there are real reasons it’s central to your degree—not because we enjoy watching you suffer, but because it changes what you’re capable of doing. It’s powerful stuff!"
+    "text": "TipBefore You Begin\n\n\n\nThis is your first reading for PS50008A. Take your time with it. The concepts introduced here form the foundation for everything else in this module.\n\n\n\n\nYou chose psychology because you want to understand people. Why do we remember some things and forget others? What drives someone to help a stranger—or to hurt them? How do our early experiences shape who we become? These questions drew you here, and they’re genuinely worth exploring.\nThen you look at your timetable and see “Research Methods and Experimental Design.”\nIf your heart sinks a little, you’re not alone - but I’m going to try to turn this around. This material has a reputation, and not a glamorous one. But there are real reasons it’s central to your degree—not because we enjoy watching you suffer, but because it changes what you’re capable of doing. It’s powerful stuff!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#overview",
     "href": "week11/lecture/reading.html#overview",
     "title": "Week 11 Reading",
     "section": "",
-    "text": "You chose psychology because you want to understand people. Why do we remember some things and forget others? What drives someone to help a stranger—or to hurt them? How do our early experiences shape who we become? These questions drew you here, and they’re genuinely worth exploring.\nThen you look at your timetable and see “Research Methods and Experimental Design.”\nIf your heart sinks a little, you’re not alone - but I’m going to try to turn this around. This material has a reputation, and not a glamorous one. But there are real reasons it’s central to your degree—not because we enjoy watching you suffer, but because it changes what you’re capable of doing. It’s powerful stuff!"
+    "text": "TipBefore You Begin\n\n\n\nThis is your first reading for PS50008A. Take your time with it. The concepts introduced here form the foundation for everything else in this module.\n\n\n\n\nYou chose psychology because you want to understand people. Why do we remember some things and forget others? What drives someone to help a stranger—or to hurt them? How do our early experiences shape who we become? These questions drew you here, and they’re genuinely worth exploring.\nThen you look at your timetable and see “Research Methods and Experimental Design.”\nIf your heart sinks a little, you’re not alone - but I’m going to try to turn this around. This material has a reputation, and not a glamorous one. But there are real reasons it’s central to your degree—not because we enjoy watching you suffer, but because it changes what you’re capable of doing. It’s powerful stuff!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#youre-learning-to-ask-questions-properly",
     "href": "week11/lecture/reading.html#youre-learning-to-ask-questions-properly",
     "title": "Week 11 Reading",
     "section": "You’re Learning to Ask Questions Properly",
-    "text": "You’re Learning to Ask Questions Properly\nRight now, if someone asked you “Does social media cause anxiety?”, you might have an opinion. Everyone has one of those. But psychology isn’t about opinions—it’s about evidence. And evidence doesn’t just land in your lap. Someone has to design a way to gather it, collect it carefully, and work out what it actually shows.\nThat’s what you’re learning to do. By the end of your degree, you won’t just think social media might cause anxiety—you’ll be able to design a study that could actually test the idea, spot the weaknesses in existing research, and understand why the answer might be more complicated than the headlines suggest. Think about that for a second… You don’t have to rely on anecdote or opinion anymore, you can ‘create’ knowledge!"
+    "text": "You’re Learning to Ask Questions Properly\nRight now, if someone asked you “Does social media cause anxiety?”, you might have an opinion. Everyone has one of those. But psychology isn’t about opinions—it’s about evidence. And evidence doesn’t just land in your lap. Someone has to design a way to gather it, collect it carefully, and work out what it actually shows.\nThat’s what you’re learning to do. By the end of your degree, you won’t just think social media might cause anxiety—you’ll be able to design a study that could actually test the idea, spot the weaknesses in existing research, and understand why the answer might be more complicated than the headlines suggest.\n\nThink about that for a second… You don’t have to rely on anecdote or opinion anymore. You can create knowledge.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#youll-see-through-the-nonsense",
     "href": "week11/lecture/reading.html#youll-see-through-the-nonsense",
     "title": "Week 11 Reading",
     "section": "You’ll See Through the Nonsense",
-    "text": "You’ll See Through the Nonsense\nWe’re surrounded by claims about human behaviour. Adverts tell us certain products will make us more confident. Influencers promote supplements that supposedly sharpen your mind. News stories announce that scientists have “proved” all sorts of things about personality, intelligence, or relationships. 9 out of 10 adverts are dubious! (not a real stat!)\nMost of these claims are, at best, oversimplified. Many are outright wrong. Understanding research methods gives you the ability to look at a study and ask: How many people did they actually test? Could something else explain these results? Is this finding likely to replicate?\nThis isn’t just academic scepticism. It’s protection against being manipulated by people who use the language of science without the rigour, without the appropriate ‘methods’."
+    "text": "You’ll See Through the Nonsense\nWe’re surrounded by claims about human behaviour. Adverts tell us certain products will make us more confident. Influencers promote supplements that supposedly sharpen your mind. News stories announce that scientists have “proved” all sorts of things about personality, intelligence, or relationships. 9 out of 10 adverts are dubious! (not a real stat!)\nMost of these claims are, at best, oversimplified. Many are outright wrong. Understanding research methods gives you the ability to look at a study and ask:\n\nHow many people did they actually test?\nCould something else explain these results?\nIs this finding likely to replicate?\n\nThis isn’t just academic scepticism. It’s protection against being manipulated by people who use the language of science without the rigour, without the appropriate ‘methods’.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#these-skills-travel",
     "href": "week11/lecture/reading.html#these-skills-travel",
     "title": "Week 11 Reading",
     "section": "These Skills Travel",
-    "text": "These Skills Travel\nPsychology graduates end up in all sorts of places: clinical training, education, marketing, human resources, policy research, user experience design, data analysis, all sorts of entrepreneurial activities I don’t understand. What connects these fields is that they all involve understanding people and making decisions based on evidence. It’s just thinking scientifically.\nThe ability to gather data systematically, analyse it honestly, and communicate what it means is valuable almost everywhere. It’s also incredibly rare. (Too) Many people can express opinions confidently; fewer can actually interrogate those opinions with evidence."
+    "text": "These Skills Travel\nPsychology graduates end up in all sorts of places: clinical training, education, marketing, human resources, policy research, user experience design, data analysis, all sorts of entrepreneurial activities I don’t understand. What connects these fields is that they all involve understanding people and making decisions based on evidence. It’s just thinking scientifically.\nThe ability to gather data systematically, analyse it honestly, and communicate what it means is valuable almost everywhere. It’s also incredibly rare. Many people can express opinions confidently; fewer can actually interrogate those opinions with evidence.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#and-one-more-thing",
     "href": "week11/lecture/reading.html#and-one-more-thing",
     "title": "Week 11 Reading",
     "section": "And One More Thing",
-    "text": "And One More Thing\nSome of you will genuinely enjoy this. Not everyone, and probably not immediately, but there’s real satisfaction in solving methodological puzzles: working out how to test something that seems untestable, spotting a flaw in an argument, seeing a pattern emerge from data you collected yourself.\nI’m not promising you’ll love every moment. But we are promising that this material is worth taking seriously—and that taking it seriously might surprise you. This reading introduces the fundamental concepts you’ll encounter throughout this module. Since Week 11 has no lecture (watch the preview video instead), use this reading to prepare for the term ahead. But above all, be curious!\n\n\n\n\n\n\nNote\n\n\n\nSophie von Stumm (formerly from Goldsmiths!) and colleagues (2011) sought to identify the best predictors of academic performance. Unsurprisingly perhaps, a person’s intelligence was the best predictor. However, they also found that this was matched by the combined predictive power of effort and intellectual curiosity. They conclude that succeeding in academic fields (such as psychology) is not just a question of being smart and trying hard, it is also about having a hungry mind!\n\nVon Stumm, S., Hell, B., & Chamorro-Premuzic, T. (2011). The hungry mind: Intellectual curiosity is the third pillar of academic performance. Perspectives on Psychological Science, 6, 574-588."
+    "text": "And One More Thing\nSome of you will genuinely enjoy this. Not everyone, and probably not immediately, but there’s real satisfaction in solving methodological puzzles: working out how to test something that seems untestable, spotting a flaw in an argument, seeing a pattern emerge from data you collected yourself.\nI’m not promising you’ll love every moment. But we are promising that this material is worth taking seriously—and that taking it seriously might surprise you.\n\n\n\n\n\n\nImportantThis Week\n\n\n\nSince Week 11 has no lecture, watch the preview video and use this reading to prepare for the term ahead. But above all, be curious!\n\n\n\n\n\n\n\n\nNote\n\n\n\nSophie von Stumm (formerly from Goldsmiths!) and colleagues (2011) sought to identify the best predictors of academic performance. Unsurprisingly perhaps, a person’s intelligence was the best predictor. However, they also found that this was matched by the combined predictive power of effort and intellectual curiosity. They conclude that succeeding in academic fields (such as psychology) is not just a question of being smart and trying hard, it is also about having a hungry mind!\n\nVon Stumm, S., Hell, B., & Chamorro-Premuzic, T. (2011). The hungry mind: Intellectual curiosity is the third pillar of academic performance. Perspectives on Psychological Science, 6, 574-588.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#why-do-psychologists-do-research",
     "href": "week11/lecture/reading.html#why-do-psychologists-do-research",
     "title": "Week 11 Reading",
     "section": "Why Do Psychologists Do Research?",
-    "text": "Why Do Psychologists Do Research?\nPsychology aims to understand human behaviour and mental processes. But how do we move from casual observation to scientific knowledge?\n\nThe Problem with Common Sense\nWe often think we understand human behaviour based on everyday experience - my mum certainly thinks so. But “common sense” has limitations (sorry, mum!):\n\nHindsight bias: Events seem obvious after they occur (“I knew it all along”)\nConfirmation bias: We notice evidence that supports our beliefs and ignore contradicting evidence\nAnecdotal evidence: Individual cases can mislead — your friend’s experience isn’t representative of everyone\n\nConsider these “common sense” claims:\n\n“Opposites attract” — But also “Birds of a feather flock together”\n“Too many cooks spoil the broth” — But also “Many hands make light work”\n“Absence makes the heart grow fonder” — But also “Out of sight, out of mind”\n\nCommon sense can justify almost any conclusion. Research methods provide systematic tools to overcome these biases and determine which claims actually hold up under scrutiny.\n\n\nWhy Intuitions About Behaviour Are Often Wrong\nOur intuitions fail us for several reasons:\n\nWe don’t see our own blind spots — We’re unaware of the biases affecting our judgement\nMemory is reconstructive — We misremember events to fit our current beliefs\nWe overgeneralise from small samples — One or two examples feel like proof\nWe confuse correlation with causation — Two things happening together doesn’t mean one caused the other\n\nFor example, studies consistently show that:\n\nPeople are poor at predicting what will make them happy\nEyewitness testimony is far less reliable than we assume\n“Venting” anger often increases rather than decreases aggression\n\nThese findings contradict common intuitions — which is precisely why we need systematic research."
+    "text": "Why Do Psychologists Do Research?\nPsychology aims to understand human behaviour and mental processes. But how do we move from casual observation to scientific knowledge?\n\nThe Problem with Common Sense\nWe often think we understand human behaviour based on everyday experience - my mum certainly thinks so. But “common sense” has limitations (sorry, mum!):\n\nHindsight bias: Events seem obvious after they occur (“I knew it all along”)\nConfirmation bias: We notice evidence that supports our beliefs and ignore contradicting evidence\nAnecdotal evidence: Individual cases can mislead — your friend’s experience isn’t representative of everyone\n\nConsider these “common sense” claims:\n\n“Opposites attract” — But also “Birds of a feather flock together”\n“Too many cooks spoil the broth” — But also “Many hands make light work”\n“Absence makes the heart grow fonder” — But also “Out of sight, out of mind”\n\nCommon sense can justify almost any conclusion. Research methods provide systematic tools to overcome these biases and determine which claims actually hold up under scrutiny.\n\n\nWhy Intuitions About Behaviour Are Often Wrong\nOur intuitions fail us for several reasons:\n\nWe don’t see our own blind spots — We’re unaware of the biases affecting our judgement\nMemory is reconstructive — We misremember events to fit our current beliefs\nWe overgeneralise from small samples — One or two examples feel like proof\nWe confuse correlation with causation — Two things happening together doesn’t mean one caused the other\n\nFor example, studies consistently show that:\n\nPeople are poor at predicting what will make them happy\nEyewitness testimony is far less reliable than we assume\n“Venting” anger often increases rather than decreases aggression\n\nThese findings contradict common intuitions — which is precisely why we need systematic research.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#what-makes-a-claim-scientific",
     "href": "week11/lecture/reading.html#what-makes-a-claim-scientific",
     "title": "Week 11 Reading",
     "section": "What Makes a Claim Scientific?",
-    "text": "What Makes a Claim Scientific?\n\nThe Difference Between Opinion and Science\nAn opinion is a personal belief that may or may not be supported by evidence: &gt; “I think social media makes people unhappy.”\nA scientific claim is testable, based on systematic evidence, and open to being proven wrong: &gt; “In a study of 1,000 adults, those who used social media for more than 3 hours daily reported lower life satisfaction scores (M = 5.2) than those who used it less than 1 hour (M = 6.8), t(998) = 4.32, p &lt; .001.”\n\n\nFour Hallmarks of Scientific Claims\n\nEmpirical basis — Based on observable, measurable evidence, not just reasoning or authority\nSystematic collection — Data gathered using consistent, documented methods\nFalsifiability — The claim could, in principle, be proven wrong by evidence\nTransparency — Methods are described clearly enough that others could repeat them\n\n\n\nWhat “Replicable” Means\nA finding is replicable if other researchers, following the same procedures, get the same results.\nWhy does this matter?\n\nA single study might have flaws we don’t notice\nRandom chance can produce misleading results\nResearcher bias might influence findings\n\nWhen multiple independent teams find the same result, we can be more confident it’s real.\n\n\n\n\n\n\nNoteThe Replication Crisis\n\n\n\nPsychology has faced a “replication crisis” — many classic findings failed to replicate when researchers tried to repeat them. This has led to better practices: larger samples, pre-registration of hypotheses, and more transparency. You’ll learn about this in Week 17."
+    "text": "What Makes a Claim Scientific?\n\nThe Difference Between Opinion and Science\nAn opinion is a personal belief that may or may not be supported by evidence: &gt; “I think social media makes people unhappy.”\nA scientific claim is testable, based on systematic evidence, and open to being proven wrong: &gt; “In a study of 1,000 adults, those who used social media for more than 3 hours daily reported lower life satisfaction scores (M = 5.2) than those who used it less than 1 hour (M = 6.8), t(998) = 4.32, p &lt; .001.”\n\n\nFour Hallmarks of Scientific Claims\n\n\nEmpirical basis — Based on observable, measurable evidence, not just reasoning or authority\nSystematic collection — Data gathered using consistent, documented methods\nFalsifiability — The claim could, in principle, be proven wrong by evidence\nTransparency — Methods are described clearly enough that others could repeat them\n\n\n\n\nWhat “Replicable” Means\nA finding is replicable if other researchers, following the same procedures, get the same results.\nWhy does this matter?\n\nA single study might have flaws we don’t notice\nRandom chance can produce misleading results\nResearcher bias might influence findings\n\nWhen multiple independent teams find the same result, we can be more confident it’s real.\n\n\n\n\n\n\nNoteThe Replication Crisis\n\n\n\nPsychology has faced a “replication crisis” — many classic findings failed to replicate when researchers tried to repeat them. This has led to better practices: larger samples, pre-registration of hypotheses, and more transparency. You’ll learn about this in Week 17.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#the-scientific-method",
     "href": "week11/lecture/reading.html#the-scientific-method",
     "title": "Week 11 Reading",
     "section": "The Scientific Method",
-    "text": "The Scientific Method\nResearchers typically follow these steps:\n\n1. Identify a Question\nStart with curiosity. What do you want to understand?\n\n“Do people remember information better if they test themselves rather than just re-reading?”\n\n\n\n2. Review Existing Knowledge\nWhat have others already discovered? Build on previous work rather than starting from scratch.\n\n\n3. Formulate a Hypothesis\nMake a specific, testable prediction.\n\n“Students who use self-testing will recall more information after one week than students who re-read the material.”\n\n\n\n4. Design a Study\nPlan exactly how you’ll test your hypothesis: - Who will you study? - What will you measure? - How will you control for other explanations?\n\n\n5. Collect Data\nGather observations systematically, following your planned procedures.\n\n\n6. Analyse Results\nUse statistics to determine whether your findings are meaningful or could have occurred by chance.\n\n\n7. Draw Conclusions\nWhat do your results mean? Do they support your hypothesis? What are the limitations?\n\n\n8. Report Findings\nShare your methods and results so others can evaluate and build on your work.\nYou’ll work through all these steps in your group project this term."
+    "text": "The Scientific Method\nResearchers typically follow these steps:\n\n1. Identify a Question\nStart with curiosity. What do you want to understand?\n\n“Do people remember information better if they test themselves rather than just re-reading?”\n\n\n\n2. Review Existing Knowledge\nWhat have others already discovered? Build on previous work rather than starting from scratch.\n\n\n3. Formulate a Hypothesis\nMake a specific, testable prediction.\n\n“Students who use self-testing will recall more information after one week than students who re-read the material.”\n\n\n\n4. Design a Study\nPlan exactly how you’ll test your hypothesis: - Who will you study? - What will you measure? - How will you control for other explanations?\n\n\n5. Collect Data\nGather observations systematically, following your planned procedures.\n\n\n6. Analyse Results\nUse statistics to determine whether your findings are meaningful or could have occurred by chance.\n\n\n7. Draw Conclusions\nWhat do your results mean? Do they support your hypothesis? What are the limitations?\n\n\n8. Report Findings\nShare your methods and results so others can evaluate and build on your work.\nYou’ll work through all these steps in your group project this term.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#variables-things-that-vary",
     "href": "week11/lecture/reading.html#variables-things-that-vary",
     "title": "Week 11 Reading",
     "section": "Variables: Things That Vary",
-    "text": "Variables: Things That Vary\nA variable is anything that can take different values.\n\nExamples of Variables\n\n\n\nVariable\nPossible Values\n\n\n\n\nHeight\n150cm, 165cm, 180cm…\n\n\nReaction time\n200ms, 350ms, 420ms…\n\n\nMood\nHappy, sad, anxious, neutral…\n\n\nNumber of words recalled\n0, 1, 2, 3… 20\n\n\nExam score\n0-100\n\n\n\n\n\nWhy Variables Matter\nResearch is fundamentally about understanding how variables relate to each other:\n\nDoes study time affect exam performance?\nDoes sleep quality predict reaction time?\nIs age related to memory capacity?\n\nIn DataLab, you’ll measure several variables and see how they differ between people and across conditions.\n\n\nTypes of Variables\nContinuous variables can take any value within a range: - Height (175.3cm) - Reaction time (287.4ms) - Temperature (36.8°C)\nCategorical variables fall into distinct categories: - Gender (male, female, non-binary) - Experimental condition (control, treatment) - Handedness (left, right, ambidextrous)\nDiscrete variables are countable whole numbers: - Number of items recalled (7) - Number of errors (3) - Number of children (2)\nUnderstanding variable types helps you choose appropriate statistical analyses — something you’ll learn throughout this module."
+    "text": "Variables: Things That Vary\nA variable is anything that can take different values.\n\nExamples of Variables\n\n\n\nVariable\nPossible Values\n\n\n\n\nHeight\n150cm, 165cm, 180cm…\n\n\nReaction time\n200ms, 350ms, 420ms…\n\n\nMood\nHappy, sad, anxious, neutral…\n\n\nNumber of words recalled\n0, 1, 2, 3… 20\n\n\nExam score\n0-100\n\n\n\n\n\nWhy Variables Matter\nResearch is fundamentally about understanding how variables relate to each other:\n\nDoes study time affect exam performance?\nDoes sleep quality predict reaction time?\nIs age related to memory capacity?\n\nIn DataLab, you’ll measure several variables and see how they differ between people and across conditions.\n\n\nTypes of Variables\nContinuous variables can take any value within a range: - Height (175.3cm) - Reaction time (287.4ms) - Temperature (36.8°C)\nCategorical variables fall into distinct categories: - Gender (male, female, non-binary) - Experimental condition (control, treatment) - Handedness (left, right, ambidextrous)\nDiscrete variables are countable whole numbers: - Number of items recalled (7) - Number of errors (3) - Number of children (2)\nUnderstanding variable types helps you choose appropriate statistical analyses — something you’ll learn throughout this module.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#how-empirical-evidence-helps-us-understand-behaviour",
     "href": "week11/lecture/reading.html#how-empirical-evidence-helps-us-understand-behaviour",
     "title": "Week 11 Reading",
     "section": "How Empirical Evidence Helps Us Understand Behaviour",
-    "text": "How Empirical Evidence Helps Us Understand Behaviour\n\nMoving Beyond Speculation\nWithout data, debates about human behaviour often go in circles. Everyone has opinions, but how do we know whose is correct?\nEmpirical evidence allows us to:\n\nTest competing theories — Instead of arguing, we can design studies to see which prediction holds\nDiscover unexpected findings — Data often reveals patterns we wouldn’t have predicted\nQuantify effects — Not just “X affects Y” but “X increases Y by approximately this much”\nIdentify boundary conditions — Under what circumstances does a finding hold or not hold?\n\n\n\nAn Example: Does Punishment Deter Crime?\nCommon sense might suggest that harsher punishments reduce crime. But what does the evidence show?\nResearch has found: - Certainty of punishment matters more than severity - Very harsh sentences may actually increase recidivism in some cases - Deterrent effects vary by crime type and offender characteristics\nWithout systematic data collection, we’d have no way to discover these nuances."
+    "text": "How Empirical Evidence Helps Us Understand Behaviour\n\nMoving Beyond Speculation\nWithout data, debates about human behaviour often go in circles. Everyone has opinions, but how do we know whose is correct?\nEmpirical evidence allows us to:\n\nTest competing theories — Instead of arguing, we can design studies to see which prediction holds\nDiscover unexpected findings — Data often reveals patterns we wouldn’t have predicted\nQuantify effects — Not just “X affects Y” but “X increases Y by approximately this much”\nIdentify boundary conditions — Under what circumstances does a finding hold or not hold?\n\n\n\nAn Example: Does Punishment Deter Crime?\nCommon sense might suggest that harsher punishments reduce crime. But what does the evidence show?\nResearch has found: - Certainty of punishment matters more than severity - Very harsh sentences may actually increase recidivism in some cases - Deterrent effects vary by crime type and offender characteristics\nWithout systematic data collection, we’d have no way to discover these nuances.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#connecting-to-datalab",
     "href": "week11/lecture/reading.html#connecting-to-datalab",
     "title": "Week 11 Reading",
     "section": "Connecting to DataLab",
-    "text": "Connecting to DataLab\nIn Thursday’s lab, you’ll experience research from both perspectives:\n\nAs a participant — completing cognitive tasks\nAs a tester — administering tasks and recording data\n\nThis dual perspective helps you understand:\n\nWhy standardised procedures matter (you’ll see what happens when instructions vary)\nHow measurement introduces variability (the same person gives different responses across trials)\nWhat it feels like to generate data that will be analysed\n\nThe data you generate will be used throughout the term. When we discuss distributions in Week 12, we’ll look at the distribution of your reaction times. When we learn about t-tests in Week 14, we’ll compare performance between Room A and Room B."
+    "text": "Connecting to DataLab\n\nYour Data, Your Learning\nIn Thursday’s lab, you’ll experience research from both perspectives:\n\nAs a participant — completing cognitive tasks\nAs a tester — administering tasks and recording data\n\nThis dual perspective helps you understand:\n\nWhy standardised procedures matter (you’ll see what happens when instructions vary)\nHow measurement introduces variability (the same person gives different responses across trials)\nWhat it feels like to generate data that will be analysed\n\nThe data you generate will be used throughout the term. When we discuss distributions in Week 12, we’ll look at the distribution of YOUR reaction times. When we learn about t-tests in Week 14, we’ll compare performance between Room A and Room B. This is your data, and you’ll learn statistics by exploring it.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#summary",
     "href": "week11/lecture/reading.html#summary",
     "title": "Week 11 Reading",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCommon sense\nUnreliable — biased by hindsight, confirmation, and anecdote\n\n\nScientific claims\nTestable, based on systematic evidence, falsifiable\n\n\nReplicability\nFindings should hold when others repeat the study\n\n\nVariables\nAnything that can take different values\n\n\nEmpirical evidence\nAllows us to test theories rather than just argue"
+    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCommon sense\nUnreliable — biased by hindsight, confirmation, and anecdote\n\n\nScientific claims\nTestable, based on systematic evidence, falsifiable\n\n\nReplicability\nFindings should hold when others repeat the study\n\n\nVariables\nAnything that can take different values\n\n\nEmpirical evidence\nAllows us to test theories rather than just argue",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#check-your-understanding",
     "href": "week11/lecture/reading.html#check-your-understanding",
     "title": "Week 11 Reading",
     "section": "Check Your Understanding",
-    "text": "Check Your Understanding\nBefore the lab, make sure you can answer these questions:\n\nWhy can’t we rely on common sense to understand human behaviour?\nWhat makes a claim “scientific” rather than just an opinion?\nWhat does it mean for a finding to be “replicable” and why does this matter?\nWhat is a variable? Give three examples.\nWhy do researchers follow systematic methods rather than just observing casually?"
+    "text": "Check Your Understanding\nBefore the lab, make sure you can answer these questions:\n\nWhy can’t we rely on common sense to understand human behaviour?\nWhat makes a claim “scientific” rather than just an opinion?\nWhat does it mean for a finding to be “replicable” and why does this matter?\nWhat is a variable? Give three examples.\nWhy do researchers follow systematic methods rather than just observing casually?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/reading.html#further-reading",
     "href": "week11/lecture/reading.html#further-reading",
     "title": "Week 11 Reading",
     "section": "Further Reading",
-    "text": "Further Reading\nIf you want to explore these ideas further:\n\nCoolican, H. (2017). Chapter 1: Psychology and research. VLeBooks\nHarris, P. (2008). Chapter 1: Introduction to psychological research. VLeBooks\nSeeing Theory: Basic Probability — Interactive introduction to randomness and variability"
+    "text": "Further Reading\nIf you want to explore these ideas further:\n\nCoolican, H. (2017). Chapter 1: Psychology and research. VLeBooks\nHarris, P. (2008). Chapter 1: Introduction to psychological research. VLeBooks\nSeeing Theory: Basic Probability — Interactive introduction to randomness and variability",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Reading"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html",
     "href": "week11/lecture/video.html",
     "title": "Week 11 Preview Video",
     "section": "",
-    "text": "ImportantWatch Before Your Lab\n\n\n\nThis video introduces the module and explains what will happen in your first lab session. Please watch it before Thursday.\n\n\n\n\n\n\nVideo will be embedded here\n\n\n\nDuration: Approximately 5 minutes"
+    "text": "ImportantWatch Before Your Lab\n\n\n\nThis video introduces the module and explains what will happen in your first lab session. Please watch it before Thursday.\n\n\n\n\n\n\nVideo will be embedded here\n\n\n\nDuration: Approximately 5 minutes",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html#preview-video",
     "href": "week11/lecture/video.html#preview-video",
     "title": "Week 11 Preview Video",
     "section": "",
-    "text": "ImportantWatch Before Your Lab\n\n\n\nThis video introduces the module and explains what will happen in your first lab session. Please watch it before Thursday.\n\n\n\n\n\n\nVideo will be embedded here\n\n\n\nDuration: Approximately 5 minutes"
+    "text": "ImportantWatch Before Your Lab\n\n\n\nThis video introduces the module and explains what will happen in your first lab session. Please watch it before Thursday.\n\n\n\n\n\n\nVideo will be embedded here\n\n\n\nDuration: Approximately 5 minutes",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html#what-this-video-covers",
     "href": "week11/lecture/video.html#what-this-video-covers",
     "title": "Week 11 Preview Video",
     "section": "What This Video Covers",
-    "text": "What This Video Covers\n\nWelcome to the module — who we are, what you’ll learn\nThe assessments — four assessments across the term\nDataLab — what will happen in your first lab\nWhat to bring — just yourself and a phone/laptop\nForming groups — you’ll form project groups by the end of Week 11"
+    "text": "What This Video Covers\n\nWelcome to the module — who we are, what you’ll learn\nThe assessments — four assessments across the term\nDataLab — what will happen in your first lab\nWhat to bring — just yourself and a phone/laptop\nGroup work — DataLab will require minimal group work, but group work will be a consistent element in lab work, so we will address that head on",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html#key-points",
     "href": "week11/lecture/video.html#key-points",
     "title": "Week 11 Preview Video",
     "section": "Key Points",
-    "text": "Key Points\n\nAbout the Module\nThis module teaches you to think like a researcher:\n\nHow do we design studies that can answer our questions?\nHow do we analyse data to draw conclusions?\nHow do we report findings professionally?\n\n\n\nDataLab\nYour first lab is DataLab—a series of cognitive tasks where you’ll generate the dataset used throughout the term. You’ll learn statistics using your own data.\n\n\nAssessments\n\n\n\nAssessment\nWeight\nWhen\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nSee the Assessments page for details.\n\n\nProject Groups\nBy the end of Week 11, you should have formed your project groups (3-4 students). Choose people you can reliably work with throughout the term."
+    "text": "Key Points\n\nAbout the Module\nThis module teaches you to think like a researcher:\n\nHow do we design studies that can answer our questions?\nHow do we analyse data to draw conclusions?\nHow do we report findings professionally?\n\n\n\nDataLab\nYour first lab is DataLab—a series of cognitive tasks where you’ll generate the dataset used throughout the term. You’ll learn statistics using your own data.\n\n\nAssessments\n\n\n\nAssessment\nWeight\nWhen\n\n\n\n\nResearch Plan\n20%\nWeek 16\n\n\nMCQ Exam\n20%\nWeek 18\n\n\nEDS Assignment\n20%\nWeek 20\n\n\nResearch Report\n40%\n1 May (post-term)\n\n\n\nSee the Assessments page for details.\n\n\nProject Groups\nFor the second half of the term, you will be working in groups of 4-5 students, so start thinking about this now. Group work is a fundamental part of the training.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html#before-your-lab",
     "href": "week11/lecture/video.html#before-your-lab",
     "title": "Week 11 Preview Video",
     "section": "Before Your Lab",
-    "text": "Before Your Lab\n\nNote your lab allocation (Group A or Group B)\nArrive on time — Thursday 10:00\nBring a phone or laptop to record your data"
+    "text": "Before Your Lab\n\nNote your lab allocation (Group A or Group B)\nArrive on time — Thursday 10:00\nBring a phone or laptop to record your data",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lecture/video.html#questions",
     "href": "week11/lecture/video.html#questions",
     "title": "Week 11 Preview Video",
     "section": "Questions?",
-    "text": "Questions?\nIf you have questions about the module, you can:\n\nEmail g.wright@gold.ac.uk\nPost in the VLE discussion board\nAsk in your first lab session"
+    "text": "Questions?\nIf you have questions about the module, you can:\n\nEmail g.wright@gold.ac.uk\nPost in the VLE discussion board\nAsk in your first lab session",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Preview Video"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#welcome-to-ps50008a",
     "href": "week11/lab/slides.html#welcome-to-ps50008a",
     "title": "DataLab",
     "section": "Welcome to PS50008A!",
-    "text": "Welcome to PS50008A!\nResearch Methods & Experimental Design\nYour first session of the module"
+    "text": "Welcome to PS50008A!\nResearch Methods & Experimental Design\nYour first session of the module",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#today-datalab",
     "href": "week11/lab/slides.html#today-datalab",
     "title": "DataLab",
     "section": "Today: DataLab",
-    "text": "Today: DataLab\n\nToday You Will:\n\nRotate through 6 stations in pairs\nComplete cognitive tasks\nRecord your data in Qualtrics\nForm your project groups"
+    "text": "Today: DataLab\n\nToday You Will:\n\nRotate through 6 stations in pairs\nComplete cognitive tasks\nRecord your data in Qualtrics\nForm your project groups",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#why-datalab",
     "href": "week11/lab/slides.html#why-datalab",
     "title": "DataLab",
     "section": "Why DataLab?",
-    "text": "Why DataLab?\nThe data you generate today becomes our teaching dataset for the term.\nWhen we learn about:\n\nDistributions → your reaction times\nt-tests → Room A vs Room B\nCorrelations → your variables\n\n…we’ll use your data."
+    "text": "Why DataLab?\nThe data you generate today becomes our teaching dataset for the term.\nWhen we learn about:\n\nDistributions → your reaction times\nt-tests → Room A vs Room B\nCorrelations → your variables\n\n…we’ll use your data.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#six-stations",
     "href": "week11/lab/slides.html#six-stations",
     "title": "DataLab",
     "section": "Six Stations",
-    "text": "Six Stations\n\n\n\n1. Simple Reaction Time\nHow fast can you respond?\n\n\n2. Choice Reaction Time\nDoes decision-making slow you down?\n\n\n3. Memory Task\nHow many items can you recall?\n\n\n\n4. Estimation Task\nHow accurate are your judgments?\n\n\n5. Group Estimation\nDoes discussion improve accuracy?\n\n\n6. Confidence Ratings\nHow well do you know what you know?"
+    "text": "Six Stations\n\n\n\n1. Simple Reaction Time\nHow fast can you respond?\n\n\n2. Choice Reaction Time\nDoes decision-making slow you down?\n\n\n3. Memory Task\nHow many items can you recall?\n\n\n\n4. Estimation Task\nHow accurate are your judgments?\n\n\n5. Group Estimation\nDoes discussion improve accuracy?\n\n\n6. Confidence Ratings\nHow well do you know what you know?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#the-process",
     "href": "week11/lab/slides.html#the-process",
     "title": "DataLab",
     "section": "The Process",
-    "text": "The Process\n\nFind a partner\nGo to your assigned starting station\nComplete the task (one tests, one participates)\nRecord data in Qualtrics\nSwap roles\nMove to next station when signalled"
+    "text": "The Process\n\nFind a partner\nGo to your assigned starting station\nComplete the task (one tests, one participates)\nRecord data in Qualtrics\nSwap roles\nMove to next station when signalled",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#recording-your-data",
     "href": "week11/lab/slides.html#recording-your-data",
     "title": "DataLab",
     "section": "Recording Your Data",
-    "text": "Recording Your Data\n\n\n\n\n\n\nThis is Real Research!\n\n\nRecord data carefully—your data will be used throughout the term.\n\n\n\n\nUse the Qualtrics link on your phone/laptop\nEnter your participant ID (we’ll assign these)\nFollow the instructions at each station"
+    "text": "Recording Your Data\n\n\n\n\n\n\nThis is Real Research!\n\n\nRecord data carefully—your data will be used throughout the term.\n\n\n\n\nUse the Qualtrics link on your phone/laptop\nEnter your participant ID (we’ll assign these)\nFollow the instructions at each station",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#timing",
     "href": "week11/lab/slides.html#timing",
     "title": "DataLab",
     "section": "Timing",
-    "text": "Timing\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:15\nWelcome & setup\n\n\n10:15-11:30\nStation rotations (~12 min each)\n\n\n11:30-11:50\nForm project groups\n\n\n11:50-12:00\nWrap-up"
+    "text": "Timing\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:15\nWelcome & setup\n\n\n10:15-11:30\nStation rotations (~12 min each)\n\n\n11:30-11:50\nForm project groups\n\n\n11:50-12:00\nWrap-up",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#form-your-groups",
     "href": "week11/lab/slides.html#form-your-groups",
     "title": "DataLab",
     "section": "Form Your Groups",
-    "text": "Form Your Groups\nBy the end of today, form groups of 3-4 students.\n\n\n\n\n\n\nConsider:\n\n\n\nCan you meet outside class?\nWill you be reliable partners?\nYou’ll work together all term"
+    "text": "Form Your Groups\nBy the end of today, form groups of 3-4 students.\n\n\n\n\n\n\nConsider:\n\n\n\nCan you meet outside class?\nWill you be reliable partners?\nYou’ll work together all term",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#what-groups-do",
     "href": "week11/lab/slides.html#what-groups-do",
     "title": "DataLab",
     "section": "What Groups Do",
-    "text": "What Groups Do\nYour group will:\n\nWork together on the group research project\nConduct labs together from Week 16\nGenerate data for the Research Report (Week 22)"
+    "text": "What Groups Do\nYour group will:\n\nWork together on the group research project\nConduct labs together from Week 16\nGenerate data for the Research Report (Week 22)",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#questions",
     "href": "week11/lab/slides.html#questions",
     "title": "DataLab",
     "section": "Questions?",
-    "text": "Questions?\n\nAny questions before we start?"
+    "text": "Questions?\n\nAny questions before we start?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/slides.html#station-instructions",
     "href": "week11/lab/slides.html#station-instructions",
     "title": "DataLab",
     "section": "Station Instructions",
-    "text": "Station Instructions\nSee the Lab Activity page for detailed instructions at each station.\n\n\n\n\n\n\nQualtrics Link\n\n\n[Link TBC]\n\n\n\n\n\nAssign participant IDs\nDirect students to starting stations\nSet timer for 12 minutes per rotation\nSignal rotation changes clearly"
+    "text": "Station Instructions\nSee the Lab Activity page for detailed instructions at each station.\n\n\n\n\n\n\nQualtrics Link\n\n\n[Link TBC]\n\n\n\n\n\nAssign participant IDs\nDirect students to starting stations\nSet timer for 12 minutes per rotation\nSignal rotation changes clearly",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Slides"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html",
     "href": "week11/lab/activity.html",
     "title": "DataLab",
     "section": "",
-    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
+    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#overview",
     "href": "week11/lab/activity.html#overview",
     "title": "DataLab",
     "section": "",
-    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term."
+    "text": "ImportantDataLab Stations\n\n\n\nThis page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.\n\n\nToday you’ll rotate through 6 stations, generating the dataset we’ll analyse throughout the term.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#before-you-start",
     "href": "week11/lab/activity.html#before-you-start",
     "title": "DataLab",
     "section": "Before You Start",
-    "text": "Before You Start\n\nFind a partner\nGet your participant ID from the instructors\nOpen the Qualtrics survey: [Link TBC]"
+    "text": "Before You Start\n\nFind a partner\nGet your participant ID from the instructors\nOpen the Qualtrics survey: [Link TBC]",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-1-simple-reaction-time",
     "href": "week11/lab/activity.html#station-1-simple-reaction-time",
     "title": "DataLab",
     "section": "Station 1: Simple Reaction Time",
-    "text": "Station 1: Simple Reaction Time\nTask: How fast can you respond to a simple stimulus?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Number of trials"
+    "text": "Station 1: Simple Reaction Time\nTask: How fast can you respond to a simple stimulus?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Number of trials",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-2-choice-reaction-time",
     "href": "week11/lab/activity.html#station-2-choice-reaction-time",
     "title": "DataLab",
     "section": "Station 2: Choice Reaction Time",
-    "text": "Station 2: Choice Reaction Time\nTask: How does having to make a decision affect your response time?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Accuracy - Number of trials"
+    "text": "Station 2: Choice Reaction Time\nTask: How does having to make a decision affect your response time?\nProcedure: TBC\nWhat you’ll record: - Reaction time (ms) - Accuracy - Number of trials",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-3-memory-task",
     "href": "week11/lab/activity.html#station-3-memory-task",
     "title": "DataLab",
     "section": "Station 3: Memory Task",
-    "text": "Station 3: Memory Task\nTask: How many items can you recall?\nProcedure: TBC\nWhat you’ll record: - Number of items recalled - Type of items"
+    "text": "Station 3: Memory Task\nTask: How many items can you recall?\nProcedure: TBC\nWhat you’ll record: - Number of items recalled - Type of items",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-4-estimation-task",
     "href": "week11/lab/activity.html#station-4-estimation-task",
     "title": "DataLab",
     "section": "Station 4: Estimation Task",
-    "text": "Station 4: Estimation Task\nTask: How accurate are your judgments?\nProcedure: TBC\nWhat you’ll record: - Your estimate - Actual value - Estimation error"
+    "text": "Station 4: Estimation Task\nTask: How accurate are your judgments?\nProcedure: TBC\nWhat you’ll record: - Your estimate - Actual value - Estimation error",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-5-group-estimation",
     "href": "week11/lab/activity.html#station-5-group-estimation",
     "title": "DataLab",
     "section": "Station 5: Group Estimation",
-    "text": "Station 5: Group Estimation\nTask: Does group discussion improve estimation accuracy?\nProcedure: TBC\nWhat you’ll record: - Individual estimates - Group estimate - Actual value"
+    "text": "Station 5: Group Estimation\nTask: Does group discussion improve estimation accuracy?\nProcedure: TBC\nWhat you’ll record: - Individual estimates - Group estimate - Actual value",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#station-6-confidence-ratings",
     "href": "week11/lab/activity.html#station-6-confidence-ratings",
     "title": "DataLab",
     "section": "Station 6: Confidence Ratings",
-    "text": "Station 6: Confidence Ratings\nTask: How well do you know what you know?\nProcedure: TBC\nWhat you’ll record: - Performance on task - Confidence rating"
+    "text": "Station 6: Confidence Ratings\nTask: How well do you know what you know?\nProcedure: TBC\nWhat you’ll record: - Performance on task - Confidence rating",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#after-the-stations",
     "href": "week11/lab/activity.html#after-the-stations",
     "title": "DataLab",
     "section": "After the Stations",
-    "text": "After the Stations\n\nForm Your Project Groups\nBy the end of the session, form groups of 3-4 students.\nYour group will: - Work together on the group research project - Conduct labs together from Week 16 - Generate data for the Research Report (Week 22)\n\n\n\n\n\n\nTipTips for Group Formation\n\n\n\n\nChoose people you can reliably meet with outside class\nConsider different strengths (organisation, analysis, writing)\nExchange contact details before leaving\n\n\n\n\n\nRegister Your Group\nOnce formed, register your group: [Link TBC]"
+    "text": "After the Stations\n\nForm Your Project Groups\nBy the end of the session, form groups of 3-4 students.\nYour group will: - Work together on the group research project - Conduct labs together from Week 16 - Generate data for the Research Report (Week 22)\n\n\n\n\n\n\nTipTips for Group Formation\n\n\n\n\nChoose people you can reliably meet with outside class\nConsider different strengths (organisation, analysis, writing)\nExchange contact details before leaving\n\n\n\n\n\nRegister Your Group\nOnce formed, register your group: [Link TBC]",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#key-takeaways",
     "href": "week11/lab/activity.html#key-takeaways",
     "title": "DataLab",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n\n\n\n\n\nNoteWhat We Did Today\n\n\n\n\nGenerated data as both participants and testers\nExperienced variability in human performance\nStarted thinking about variables and measurement\nFormed project groups for the term"
+    "text": "Key Takeaways\n\n\n\n\n\n\nNoteWhat We Did Today\n\n\n\n\nGenerated data as both participants and testers\nExperienced variability in human performance\nStarted thinking about variables and measurement\nFormed project groups for the term",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week11/lab/activity.html#next-week",
     "href": "week11/lab/activity.html#next-week",
     "title": "DataLab",
     "section": "Next Week",
-    "text": "Next Week\nWeek 12: Your first lecture!\n\nWe’ll analyse the DataLab results together\nIntroduction to distributions and variability\nYour reaction times become our teaching example\n\nSee Week 12 for details."
+    "text": "Next Week\nWeek 12: Your first lecture!\n\nWe’ll analyse the DataLab results together\nIntroduction to distributions and variability\nYour reaction times become our teaching example\n\nSee Week 12 for details.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 11: DataLab",
+      "Activity"
+    ]
   },
   {
     "objectID": "week12/lecture/slides.html#how-do-we-summarise-data",
