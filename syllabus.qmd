@@ -114,7 +114,20 @@ You do not need to install R to complete this module—all lab activities use We
 
 ## Group Project
 
-From Week 11, you will work in self-organised groups on a research project:
+Working in groups is a core part of this module. Later in the term, your group will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.
+
+### Forming Your Groups
+
+In Week 11, you will form your project groups (3-4 students). This matters.
+
+Pay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term.
+
+::: {.callout-important}
+## Choose Wisely
+Group formation is your first opportunity to see how groups naturally assemble and how different people work together. The decisions you make in Week 11 will shape your experience for the rest of the term.
+:::
+
+### Project Timeline
 
 | Week | Skills & Procedures | Communication |
 |------|---------------------|---------------|
@@ -125,10 +138,14 @@ From Week 11, you will work in self-organised groups on a research project:
 | 18-19 | Analysis | Introduction continued |
 | 20 | Final analysis | Discussion |
 
+### Assessments from Group Work
+
 The project feeds into two assessments:
 
 - **Research Plan** (due Week 16) — Your proposed methodology
 - **Research Report** (due Week 22) — Individual write-up of group data
+
+While the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work.
 
 ::: {.callout-note}
 ## Labs in Project Groups
