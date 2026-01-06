@@ -58,9 +58,9 @@ On successful completion of this module, you will be able to:
 
 | Session | Day | Time | Location |
 |---------|-----|------|----------|
-| Lecture | Monday | TBC | TBC |
-| Lab Group A | Thursday | 10:00-12:00 | TBC |
-| Lab Group B | Thursday | 10:00-12:00 | TBC |
+| Lecture | Wednesday | 10:00-12:00 | RHBD 143 |
+| Lab Group A | Thursday | 10:00-12:00 | WB 304a |
+| Lab Group B | Thursday | 10:00-12:00 | WB 304b |
 
 ::: {.callout-note}
 ## Week 11
@@ -79,7 +79,7 @@ Each week typically includes:
 | Lab Slides | Introduction to lab session |
 | Lab Activity | Interactive WebR exercises |
 | Lab Reading | Supporting practical material |
-| Homework | Weekly consolidation exercises |
+| Self-Assessments | Weekly consolidation exercises |
 
 ## Assessment
 
@@ -88,15 +88,15 @@ See the [Assessments](assessments.qmd) page for full details.
 | Assessment | Weight | Deadline |
 |------------|--------|----------|
 | Research Plan | 20% | Fri 27 Feb 2026 |
-| MCQ Exam | 20% | Mon 9 Mar 2026 |
+| MCQ Exam | 20% | Wed 11 Mar 2026 |
 | EDS Assignment | 20% | Fri 20 Mar 2026 |
 | Research Report | 40% | Fri 1 May 2026 |
 
 ## Required Reading
 
-### Core Textbooks
+### Recommended Textbooks
 
-Both textbooks are available as e-books via the Goldsmiths Library:
+Although I shall be trying to provide detailed readings here, that mean you don't HAVE to lean on textbooks, sometimes a new voice is handy to help grapple with a new topic. Both textbooks below are greaat and are available as e-books via the Goldsmiths Library:
 
 - **Coolican, H. (2017). *Research methods and statistics in psychology* (6th Ed.).** Hodder and Stoughton. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
 - **Harris, P. (2008). *Designing and reporting experiments in psychology* (3rd Ed.).** Open University Press. [VLeBooks](https://www.vlebooks.com/Product/Index/155270?page=0&startBookmarkId=-1)
@@ -105,34 +105,36 @@ Weekly readings are specified on each week's page. See the [Resources](resources
 
 ## Software
 
+We will talk about this in detail before any use of software is required!
+
 | Software | Purpose | Access |
 |----------|---------|--------|
-| R | Statistical analysis | Free download or use WebR in browser |
+| R | Statistical analysis | Free download or use the Goldsmiths R Server |
 | WebR | In-browser R exercises | Built into course materials |
 
-You do not need to install R to complete this module—all lab activities use WebR, which runs in your browser.
+You do not need to install R to complete this module—all lab activities use WebR, which runs in your browser, and there will be extremely helpful guides and examples.
 
 ## Group Project
 
-Working in groups is a core part of this module. Later in the term, your group will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.
+Working in groups is a core part of this module. Later in the term, your group (comprising 4-5 students) will design and run your own study, collect real data, and write it up as a research report. The group project is a substantial part of your assessment, and the quality of your collaboration directly affects your experience and your grade.
 
 ### Forming Your Groups
 
-In Week 11, you will form your project groups (3-4 students). This matters.
+In Week 11, you will work in small groups (3-4 students). This matters, so we are having a nice gentle start!
 
-Pay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term.
+Pay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term. It doesn't mean that you can't start planning your group members and group working strategy now though!
 
 ::: {.callout-important}
 ## Choose Wisely
-Group formation is your first opportunity to see how groups naturally assemble and how different people work together. The decisions you make in Week 11 will shape your experience for the rest of the term.
+Group formation is your first opportunity to see how groups naturally assemble and how different people work together. Group work is a VERY psychological phenomenon and the thing we are asked to talk about most often when writing references for jobs or further study.
 :::
 
 ### Project Timeline
 
 | Week | Skills & Procedures | Communication |
 |------|---------------------|---------------|
-| 11 | Form groups | — |
-| 12-15 | Develop research question and design | Results writing |
+| 11 | Grow your own data | — |
+| 12-15 | Develop research question and design | Reporting Psychology |
 | — | *Reading Week* | — |
 | 16-17 | Data collection | Methods & Introduction |
 | 18-19 | Analysis | Introduction continued |
@@ -142,10 +144,10 @@ Group formation is your first opportunity to see how groups naturally assemble a
 
 The project feeds into two assessments:
 
-- **Research Plan** (due Week 16) — Your proposed methodology
-- **Research Report** (due Week 22) — Individual write-up of group data
+- **Research Plan** (due Week 16) — A methods section on a given topic (individual)
+- **Research Report** (due Week 22) — Individual write-up of group data (individual)
 
-While the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work.
+While the data collection is collaborative, both the Research Plan and Research Report are individual submissions. You are responsible for your own work and your own academic integrity.
 
 ::: {.callout-note}
 ## Labs in Project Groups
@@ -176,7 +178,7 @@ Using AI tools to generate your work is not permitted. You may use AI to help un
 
 | Resource | Details |
 |----------|---------|
-| Office Hours | TBC |
+| Office Hours | Thursday 12:00 - 13:00 |
 | Email | g.wright@gold.ac.uk |
 | VLE | Discussion board for general questions |
 

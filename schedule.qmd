@@ -19,24 +19,24 @@ date: last-modified
 | Week | Dates | Topic | Lecture | Lab | Assessment |
 |:----:|-------|-------|:-------:|:---:|:----------:|
 | 11 | 12-16 Jan | [DataLab](week11/index.qmd) | Video only | DataLab | Form groups |
-| 12 | 19-23 Jan | [Distributions & Variability](week12/index.qmd) | Yes | Descriptives in R | |
-| 13 | 26-30 Jan | [Estimation & CIs](week13/index.qmd) | Yes | Bootstrap CIs | |
-| 14 | 2-6 Feb | [Inference & t-tests](week14/index.qmd) | Yes | t-tests in R | |
-| 15 | 9-13 Feb | [Correlation](week15/index.qmd) | Yes | Correlation in R | |
+| 12 | 19-23 Jan | Distributions & Variability | Yes | Descriptives in R | |
+| 13 | 26-30 Jan | Estimation & CIs| Yes | Bootstrap CIs | |
+| 14 | 2-6 Feb | Inference & t-tests | Yes | t-tests in R | |
+| 15 | 9-13 Feb | Correlation | Yes | Correlation in R | |
 | — | 16-20 Feb | **Reading Week** | — | — | Work on Research Plan |
-| 16 | 23-27 Feb | [Regression](week16/index.qmd) | Yes | Project groups | **Research Plan due Fri 27 Feb** |
-| 17 | 2-6 Mar | [Interpretation & Credibility](week17/index.qmd) | Yes | Project groups | |
-| 18 | 9-13 Mar | [MCQ Exam](week18/index.qmd) | **MCQ Exam** | Project groups | **MCQ Exam Mon 9 Mar** |
-| 19 | 16-20 Mar | [Project Workshop](week19/index.qmd) | Yes | Project groups | |
-| 20 | 23-27 Mar | [EDS Prep](week20/index.qmd) | No | EDS support | **EDS due Fri 20 Mar** |
+| 16 | 23-27 Feb | Regression | Yes | Project groups | **Research Plan due Fri 27 Feb** |
+| 17 | 2-6 Mar | Interpretation & Credibility | Yes | Project groups | |
+| 18 | 9-13 Mar | MCQ Exam | **MCQ Exam** | Project groups | **MCQ Exam Mon 9 Mar** |
+| 19 | 16-20 Mar | Project Workshop | Yes | Project groups | |
+| 20 | 23-27 Mar | EDS Prep | No | EDS support | **EDS due Fri 20 Mar** |
 
 ## Session Times
 
 | Session | Day | Time | Location |
 |---------|-----|------|----------|
-| Lecture | Monday | TBC | TBC |
-| Lab Group A | Thursday | 10:00-12:00 | TBC |
-| Lab Group B | Thursday | 10:00-12:00 | TBC |
+| Lecture | Wednesday | 10:00-12:00 | RHBD 143 |
+| Lab Group A | Thursday | 10:00-12:00 | WB 304a |
+| Lab Group B | Thursday | 10:00-12:00 | Wb 304b |
 
 ::: {.callout-warning}
 ## Week 11 Note
@@ -145,7 +145,7 @@ Feb 13        Last day before Reading Week
 Feb 16-20     Reading Week
 Feb 27        Research Plan due (noon)
 
-Mar 9         MCQ Exam (lecture slot)
+Mar 11         MCQ Exam (lecture slot)
 Mar 20        EDS Assignment due (noon)
 
 May 1         Research Report due (noon)

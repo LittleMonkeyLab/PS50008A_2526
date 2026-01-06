@@ -11,7 +11,9 @@ Welcome to PS50008A Research Methods & Experimental Design. This module introduc
 
 ::: {.callout-important}
 ## First Week
-Your first session is **Thursday of Week 11** in the labs. Watch the [preview video](week11/lecture/video.qmd) before attending.
+NO LECTURE IN WEEK 11 - Employability session with the rest of the undergrad cohort!
+
+Your first Research Methods session is **Thursday of Week 11** in the labs. Watch the [preview video](week11/lecture/video.qmd) before attending.
 :::
 
 ## Module Overview
@@ -62,14 +64,14 @@ Each week typically includes:
 | **Lecture Reading** | Textbook content for the week |
 | **Lab** | Hands-on practical work with R |
 | **Lab Activity** | Interactive WebR exercises |
-| **Homework** | Weekly consolidation exercises |
+| **Self-Assessment** | Weekly consolidation exercises |
 
 ## Teaching Team
 
 | Role | Name | Contact |
 |------|------|---------|
 | Module Lead | Dr Gordon Wright | g.wright@gold.ac.uk |
-| Lab Support | Dr Bence Palfi | |
+| Lab Instructor | Dr Bence Palfi | |
 
 ## Getting Started
 
