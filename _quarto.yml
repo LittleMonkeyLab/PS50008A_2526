@@ -46,10 +46,50 @@ website:
           - resources.qmd
       - section: "Term 2"
         contents:
-          - text: "Week 11: DataLab"
-            href: week11/index.qmd
-          # - text: "Week 12: Distributions & Variability"
-          #   href: week12/index.qmd
+          - section: "Week 11: DataLab"
+            contents:
+              - text: "Overview"
+                href: week11/index.qmd
+              - text: "---"
+              - text: "Lecture"
+              - text: "Preview Video"
+                href: week11/lecture/video.qmd
+              - text: "Reading"
+                href: week11/lecture/reading.qmd
+              - text: "Slides"
+                href: week11/lecture/slides.qmd
+              - text: "---"
+              - text: "Lab"
+              - text: "Activity"
+                href: week11/lab/activity.qmd
+              - text: "Reading"
+                href: week11/lab/reading.qmd
+              - text: "Slides"
+                href: week11/lab/slides.qmd
+              - text: "Self-Assessment"
+                href: week11/lab/homework.qmd
+          # - section: "Week 12: Distributions & Variability"
+          #   contents:
+          #     - text: "Overview"
+          #       href: week12/index.qmd
+          #     - text: "---"
+          #     - text: "Lecture"
+          #     - text: "Preview Video"
+          #       href: week12/lecture/video.qmd
+          #     - text: "Reading"
+          #       href: week12/lecture/reading.qmd
+          #     - text: "Slides"
+          #       href: week12/lecture/slides.qmd
+          #     - text: "---"
+          #     - text: "Lab"
+          #     - text: "Activity"
+          #       href: week12/lab/activity.qmd
+          #     - text: "Reading"
+          #       href: week12/lab/reading.qmd
+          #     - text: "Slides"
+          #       href: week12/lab/slides.qmd
+          #     - text: "Self-Assessment"
+          #       href: week12/lab/homework.qmd
           # - text: "Week 13: Estimation & CIs"
           #   href: week13/index.qmd
           # - text: "Week 14: Inference & t-tests"
