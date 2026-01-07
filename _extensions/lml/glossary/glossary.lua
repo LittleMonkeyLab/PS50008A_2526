@@ -75,6 +75,65 @@ local function load_glossary()
   quarto.log.info("Loaded " .. #(pandoc.List(glossary)) .. " glossary terms")
 end
 
+-- CSS for glossary tooltips
+local css_injected = false
+local glossary_css = [[
+<style>
+.glossary-term {
+  border-bottom: 1px dotted #275882;
+  cursor: help;
+  position: relative;
+  color: inherit;
+}
+.glossary-term:hover {
+  background-color: #CFE2FF;
+}
+.glossary-term::after {
+  content: attr(data-definition);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  width: max-content;
+  max-width: 300px;
+  white-space: normal;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  margin-bottom: 8px;
+}
+.glossary-term::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #2c3e50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1001;
+  margin-bottom: 2px;
+}
+.glossary-term:hover::after,
+.glossary-term:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
+]]
+
 -- Shortcode handler for {{< term key >}} or {{< term key "display text" >}}
 return {
   ["term"] = function(args, kwargs, meta)
@@ -97,9 +156,17 @@ return {
     -- Escape quotes in definition for HTML attribute
     definition = definition:gsub('"', '&quot;')
 
+    -- Inject CSS once
+    local css_block = ""
+    if not css_injected then
+      css_block = glossary_css
+      css_injected = true
+    end
+
     -- Create the HTML span with tooltip
     local html = string.format(
-      '<span class="glossary-term" data-definition="%s">%s</span>',
+      '%s<span class="glossary-term" data-definition="%s">%s</span>',
+      css_block,
       definition,
       term_text
     )
