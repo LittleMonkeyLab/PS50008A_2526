@@ -1,0 +1,268 @@
+# PS50008A Glossary
+# Central glossary for Research Methods module
+# Terms are organised alphabetically
+# Each term has: definition, week_introduced, related_terms (optional)
+
+# =============================================================================
+# A
+# =============================================================================
+
+alpha:
+  term: "Alpha (α)"
+  definition: "The threshold for statistical significance, typically set at .05. It represents the probability of rejecting the null hypothesis when it is actually true (Type I error rate)."
+  week: 14
+  related: ["p-value", "significance", "Type I error"]
+
+# =============================================================================
+# B
+# =============================================================================
+
+bimodal:
+  term: "Bimodal distribution"
+  definition: "A distribution with two distinct peaks, suggesting two subgroups in the data."
+  week: 12
+  related: ["distribution", "mode", "normal distribution"]
+
+# =============================================================================
+# C
+# =============================================================================
+
+calibration:
+  term: "Calibration"
+  definition: "The match between confidence and accuracy. Well-calibrated individuals are confident when correct and uncertain when wrong."
+  week: 11
+  related: ["metacognition", "confidence"]
+
+central_tendency:
+  term: "Central tendency"
+  definition: "A measure describing the typical or central value in a dataset. The three main measures are mean, median, and mode."
+  week: 12
+  related: ["mean", "median", "mode"]
+
+confidence_interval:
+  term: "Confidence interval"
+  definition: "A range of values that is likely to contain the true population parameter. A 95% CI means that if we repeated the study many times, 95% of the intervals would contain the true value."
+  week: 13
+  related: ["estimation", "standard error"]
+
+correlation:
+  term: "Correlation"
+  definition: "A statistical measure of the relationship between two variables, ranging from -1 (perfect negative) to +1 (perfect positive). Zero indicates no linear relationship."
+  week: 15
+  related: ["regression", "Pearson's r"]
+
+# =============================================================================
+# D
+# =============================================================================
+
+distribution:
+  term: "Distribution"
+  definition: "The pattern of how values are spread across their possible range. Can be visualised using histograms or density plots."
+  week: 12
+  related: ["normal distribution", "skew", "bimodal"]
+
+# =============================================================================
+# E
+# =============================================================================
+
+effect_size:
+  term: "Effect size"
+  definition: "A quantitative measure of the magnitude of a phenomenon. Unlike p-values, effect sizes indicate practical significance — how large or meaningful the effect is."
+  week: 14
+  related: ["Cohen's d", "practical significance"]
+
+estimation_bias:
+  term: "Estimation bias"
+  definition: "A systematic error in judgement that causes estimates to deviate from true values in a predictable direction."
+  week: 11
+  related: ["anchoring", "overconfidence"]
+
+# =============================================================================
+# H
+# =============================================================================
+
+hypothesis:
+  term: "Hypothesis"
+  definition: "A testable prediction about the relationship between variables. The null hypothesis predicts no effect; the alternative hypothesis predicts an effect."
+  week: 11
+  related: ["null hypothesis", "alternative hypothesis"]
+
+# =============================================================================
+# M
+# =============================================================================
+
+mean:
+  term: "Mean"
+  definition: "The arithmetic average — the sum of all values divided by the number of values. Sensitive to outliers."
+  week: 12
+  related: ["median", "mode", "central tendency"]
+
+median:
+  term: "Median"
+  definition: "The middle value when data is arranged in order. Robust to outliers and preferred for skewed distributions."
+  week: 12
+  related: ["mean", "mode", "central tendency"]
+
+metacognition:
+  term: "Metacognition"
+  definition: "Thinking about your own thinking — awareness of your cognitive processes, including how well you know what you know."
+  week: 11
+  related: ["calibration", "confidence"]
+
+mode:
+  term: "Mode"
+  definition: "The most frequently occurring value in a dataset. Useful for categorical data."
+  week: 12
+  related: ["mean", "median", "central tendency"]
+
+# =============================================================================
+# N
+# =============================================================================
+
+normal_distribution:
+  term: "Normal distribution"
+  definition: "A symmetric, bell-shaped distribution where mean = median = mode. Many natural phenomena approximate this shape."
+  week: 12
+  related: ["distribution", "skew", "standard deviation"]
+
+null_hypothesis:
+  term: "Null hypothesis"
+  definition: "The hypothesis that there is no effect or no difference. Statistical tests assess the probability of the data given this assumption."
+  week: 14
+  related: ["alternative hypothesis", "p-value", "significance"]
+
+# =============================================================================
+# O
+# =============================================================================
+
+operationalisation:
+  term: "Operationalisation"
+  definition: "The process of defining how a concept will be measured in a study. Translates abstract constructs into concrete, measurable variables."
+  week: 11
+  related: ["variable", "measurement"]
+
+# =============================================================================
+# P
+# =============================================================================
+
+p_value:
+  term: "p-value"
+  definition: "The probability of obtaining results at least as extreme as those observed, assuming the null hypothesis is true. Not the probability that the null hypothesis is true."
+  week: 14
+  related: ["alpha", "significance", "null hypothesis"]
+
+population:
+  term: "Population"
+  definition: "The entire group of individuals or observations that a researcher wants to draw conclusions about."
+  week: 13
+  related: ["sample", "inference", "generalisation"]
+
+power:
+  term: "Statistical power"
+  definition: "The probability of correctly rejecting the null hypothesis when it is false. Depends on sample size, effect size, and alpha level."
+  week: 14
+  related: ["Type II error", "sample size", "effect size"]
+
+# =============================================================================
+# R
+# =============================================================================
+
+range:
+  term: "Range"
+  definition: "The simplest measure of variability — the difference between the maximum and minimum values."
+  week: 12
+  related: ["variability", "standard deviation"]
+
+reaction_time:
+  term: "Reaction time"
+  definition: "The interval between the presentation of a stimulus and the participant's response to it."
+  week: 11
+  related: ["simple RT", "choice RT", "Hick's Law"]
+
+replication:
+  term: "Replication"
+  definition: "Repeating a study to verify that the findings are reliable. A finding is replicable if other researchers get the same results following the same procedures."
+  week: 11
+  related: ["reliability", "reproducibility"]
+
+# =============================================================================
+# S
+# =============================================================================
+
+sample:
+  term: "Sample"
+  definition: "A subset of a population selected for study. Good samples are representative of the population they come from."
+  week: 13
+  related: ["population", "sampling", "representativeness"]
+
+significance:
+  term: "Statistical significance"
+  definition: "A result is statistically significant when the p-value is below the chosen alpha level (typically .05), suggesting the result is unlikely to be due to chance alone."
+  week: 14
+  related: ["p-value", "alpha", "practical significance"]
+
+skew:
+  term: "Skew"
+  definition: "Asymmetry in a distribution. Positive skew has a tail to the right (mean > median); negative skew has a tail to the left (mean < median)."
+  week: 12
+  related: ["distribution", "normal distribution", "mean", "median"]
+
+standard_deviation:
+  term: "Standard deviation (SD)"
+  definition: "A measure of how spread out values are around the mean. The square root of variance, expressed in the same units as the original data."
+  week: 12
+  related: ["variance", "variability", "mean"]
+
+# =============================================================================
+# T
+# =============================================================================
+
+t_test:
+  term: "t-test"
+  definition: "A statistical test that compares means between two groups (independent t-test) or two conditions (paired t-test) to determine if the difference is statistically significant."
+  week: 14
+  related: ["significance", "mean", "p-value"]
+
+type_i_error:
+  term: "Type I error"
+  definition: "Rejecting the null hypothesis when it is actually true — a false positive. The probability is controlled by the alpha level."
+  week: 14
+  related: ["alpha", "Type II error", "significance"]
+
+type_ii_error:
+  term: "Type II error"
+  definition: "Failing to reject the null hypothesis when it is actually false — a false negative. Related to statistical power."
+  week: 14
+  related: ["power", "Type I error", "beta"]
+
+# =============================================================================
+# V
+# =============================================================================
+
+variable:
+  term: "Variable"
+  definition: "Anything that can take different values. Variables can be independent (manipulated), dependent (measured), or extraneous (controlled)."
+  week: 11
+  related: ["operationalisation", "measurement"]
+
+variability:
+  term: "Variability"
+  definition: "How spread out values are in a dataset. Measured by range, variance, or standard deviation."
+  week: 12
+  related: ["range", "variance", "standard deviation"]
+
+variance:
+  term: "Variance"
+  definition: "The average of squared deviations from the mean. Expressed in squared units, so standard deviation is often preferred for interpretation."
+  week: 12
+  related: ["standard deviation", "variability"]
+
+# =============================================================================
+# W
+# =============================================================================
+
+working_memory:
+  term: "Working memory"
+  definition: "The cognitive system for temporarily holding and manipulating information. Limited capacity — typically around 7 ± 2 items."
+  week: 11
+  related: ["memory", "Miller's Law"]

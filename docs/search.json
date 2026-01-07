@@ -214,21 +214,21 @@
     "href": "week12/lecture/reading.html",
     "title": "Week 12 Reading",
     "section": "",
-    "text": "This reading introduces the fundamental tools for describing data: measures of central tendency, measures of variability, and distributions. These concepts form the foundation for everything else in statistics."
+    "text": "TipBefore You Begin\n\n\n\nThis reading introduces the fundamental tools for describing data. These concepts form the foundation for everything else in statistics — take your time with them.\n\n\nThis reading covers measures of central tendency, measures of variability, and distributions."
   },
   {
     "objectID": "week12/lecture/reading.html#overview",
     "href": "week12/lecture/reading.html#overview",
     "title": "Week 12 Reading",
     "section": "",
-    "text": "This reading introduces the fundamental tools for describing data: measures of central tendency, measures of variability, and distributions. These concepts form the foundation for everything else in statistics."
+    "text": "TipBefore You Begin\n\n\n\nThis reading introduces the fundamental tools for describing data. These concepts form the foundation for everything else in statistics — take your time with them.\n\n\nThis reading covers measures of central tendency, measures of variability, and distributions."
   },
   {
     "objectID": "week12/lecture/reading.html#why-summarise-data",
     "href": "week12/lecture/reading.html#why-summarise-data",
     "title": "Week 12 Reading",
     "section": "Why Summarise Data?",
-    "text": "Why Summarise Data?\nImagine you collected reaction times from 100 participants. You now have 100 numbers. What do you do with them?\nRaw data is overwhelming. We need ways to:\n\nCompress the data into meaningful summaries\nCompare groups or conditions\nCommunicate findings to others\nPrepare for statistical tests\n\nDescriptive statistics provide these summaries without losing essential information about what the data is telling us."
+    "text": "Why Summarise Data?\nImagine you collected reaction times from 100 participants. You now have 100 numbers. What do you do with them?\nRaw data is overwhelming. We need ways to:\n\nCompress the data into meaningful summaries\nCompare groups or conditions\nCommunicate findings to others\nPrepare for statistical tests\n\nDescriptive statistics provide these summaries without losing essential information about what the data is telling us.\n\nThe goal of this week: Learn to take a pile of numbers and turn them into a meaningful story about your data."
   },
   {
     "objectID": "week12/lecture/reading.html#central-tendency-where-is-the-centre",
@@ -263,14 +263,14 @@
     "href": "week12/lecture/reading.html#applying-this-to-datalab",
     "title": "Week 12 Reading",
     "section": "Applying This to DataLab",
-    "text": "Applying This to DataLab\nYour DataLab data provides real examples:\n\nReaction Times\n\nLikely right-skewed (some slow responses, but can’t go below zero)\nShould we use mean or median?\nWhat does the SD tell us about consistency?\n\n\n\nMemory Scores\n\nMight be roughly normal (most people near average, fewer at extremes)\nIs there a ceiling effect (many people at maximum)?\nDoes variability differ between tasks?\n\n\n\nEstimation\n\nLikely skewed (errors often in one direction)\nCompare individual vs group estimates\nWhich is more variable?"
+    "text": "Applying This to DataLab\n\nYour Data, Your Statistics\nThe DataLab data you generated last week provides real examples for every concept in this reading. When we calculate means and standard deviations, we’ll use YOUR reaction times. When we look at distribution shapes, we’ll examine YOUR data.\n\n\nReaction Times\n\nLikely right-skewed (some slow responses, but can’t go below zero)\nShould we use mean or median?\nWhat does the SD tell us about consistency?\n\n\n\nMemory Scores\n\nMight be roughly normal (most people near average, fewer at extremes)\nIs there a ceiling effect (many people at maximum)?\nDoes variability differ between tasks?\n\n\n\nEstimation\n\nLikely skewed (errors often in one direction)\nCompare individual vs group estimates\nWhich is more variable?"
   },
   {
     "objectID": "week12/lecture/reading.html#reporting-descriptives-in-apa-format",
     "href": "week12/lecture/reading.html#reporting-descriptives-in-apa-format",
     "title": "Week 12 Reading",
     "section": "Reporting Descriptives in APA Format",
-    "text": "Reporting Descriptives in APA Format\nWhen writing up results, report descriptives clearly:\nFormat: (M = value, SD = value)\nExamples:\n\nParticipants’ simple reaction times were relatively fast (M = 280ms, SD = 26.2ms).\n\n\nMemory performance was moderate (M = 6.4 words, SD = 1.8).\n\nFor comparing groups:\n\nGroup A (M = 285ms, SD = 24.1ms) responded faster than Group B (M = 312ms, SD = 31.7ms).\n\n\n\n\n\n\n\nImportantAlways Report Both\n\n\n\nThe mean without SD is incomplete. Always report measures of both central tendency AND variability."
+    "text": "Reporting Descriptives in APA Format\nWhen writing up results, report descriptives clearly:\n\nFormat: (M = value, SD = value)\n\nExamples:\n\nParticipants’ simple reaction times were relatively fast (M = 280ms, SD = 26.2ms).\n\n\nMemory performance was moderate (M = 6.4 words, SD = 1.8).\n\nFor comparing groups:\n\nGroup A (M = 285ms, SD = 24.1ms) responded faster than Group B (M = 312ms, SD = 31.7ms).\n\n\n\n\n\n\n\nImportantAlways Report Both\n\n\n\nThe mean without SD is incomplete. Always report measures of both central tendency AND variability."
   },
   {
     "objectID": "week12/lecture/reading.html#summary",
@@ -428,11 +428,12 @@
     "href": "week11/lab/reading.html",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data.",
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting these data.",
     "crumbs": [
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -441,11 +442,12 @@
     "href": "week11/lab/reading.html#overview",
     "title": "Week 11 Lab Reading",
     "section": "",
-    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting this data.",
+    "text": "This reading prepares you for the DataLab session. It explains the cognitive tasks you’ll complete and why we’re collecting these data.",
     "crumbs": [
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -454,11 +456,12 @@
     "href": "week11/lab/reading.html#what-youll-be-measuring",
     "title": "Week 11 Lab Reading",
     "section": "What You’ll Be Measuring",
-    "text": "What You’ll Be Measuring\nDataLab includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\nThe memory task measures how many items you can hold in working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement.\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)?",
+    "text": "What You’ll Be Measuring\nDataLab includes six stations measuring different aspects of human cognition and behaviour. Here’s the background on each:\n\nReaction Time\nReaction time is the interval between a stimulus and your response to it.\n\nSimple reaction time: Respond as fast as possible to a single stimulus\nChoice reaction time: Choose between responses based on the stimulus\n\nResearch shows that adding choices increases reaction time — a finding known as Hick’s Law (Hick, 1952).\n\n\n\n\n\n\nNoteWhy It Matters\n\n\n\nReaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.\n\n\n\n\nMemory\n\n\nCode\n# Create a vector\nnumbers &lt;- c(1, 2, 3, 4, 5)\nprint(paste(\"Sum:\", sum(numbers)))\n\n\n[1] \"Sum: 15\"\n\n\nThe memory task measures how many items you can hold in Working memory.\nMiller (1956) famously proposed that we can hold about 7 ± 2 items in short-term memory — the “magical number seven.” Your data will test whether this holds for our class.\n\n\nEstimation\nEstimation tasks reveal systematic biases in human judgement (Estimation bias).\nPeople often:\n\nUnderestimate large quantities\nOverestimate small probabilities\nAnchor on initial information\n\nWe’ll explore whether group discussion improves or worsens estimation accuracy.\n\n\nConfidence\nMetacognition is thinking about your own thinking.\nThe confidence task measures how well you know what you know:\n\nAre you overconfident (think you’re right when you’re wrong)?\nAre you underconfident (doubt yourself when you’re correct)?\nAre you well-calibrated (confidence matches accuracy)? See Calibration.",
     "crumbs": [
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -472,6 +475,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -485,6 +489,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -498,6 +503,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -511,6 +517,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -519,11 +526,12 @@
     "href": "week11/lab/reading.html#key-terms",
     "title": "Week 11 Lab Reading",
     "section": "Key Terms",
-    "text": "Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nReaction time\nTime between stimulus and response\n\n\nWorking memory\nSystem for temporarily holding information\n\n\nEstimation bias\nSystematic error in judgement\n\n\nMetacognition\nAwareness of one’s own cognitive processes\n\n\nCalibration\nMatch between confidence and accuracy",
+    "text": "Key Terms\nHover over any term for its definition:\n\n\n\n\n\n\n\nTerm\nRelated Concepts\n\n\n\n\nReaction time\nsimple RT, choice RT, Hick’s Law\n\n\nWorking memory\nmemory, Miller’s Law\n\n\nEstimation bias\nanchoring, overconfidence\n\n\nMetacognition\ncalibration, confidence\n\n\nCalibration\nmetacognition, confidence",
     "crumbs": [
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -537,6 +545,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Reading"
     ]
   },
@@ -550,6 +559,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -563,6 +573,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -576,6 +587,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -589,6 +601,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -602,6 +615,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -615,6 +629,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -628,6 +643,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Self-Assessment"
     ]
   },
@@ -781,6 +797,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -794,6 +811,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -807,6 +825,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -820,6 +839,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -833,6 +853,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -846,6 +867,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -859,6 +881,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -872,6 +895,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -885,6 +909,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -898,6 +923,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -911,6 +937,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -924,6 +951,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -937,6 +965,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -950,6 +979,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -963,6 +993,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Slides"
     ]
   },
@@ -1564,6 +1595,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1577,6 +1609,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1590,6 +1623,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1603,6 +1637,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1616,6 +1651,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1629,6 +1665,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1642,6 +1679,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1655,6 +1693,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1668,6 +1707,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1681,6 +1721,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1694,6 +1735,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1707,6 +1749,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1720,6 +1763,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1733,6 +1777,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1746,6 +1791,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Reading"
     ]
   },
@@ -1759,6 +1805,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1772,6 +1819,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1785,6 +1833,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1798,6 +1847,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1811,6 +1861,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1824,6 +1875,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lecture",
       "Preview Video"
     ]
   },
@@ -1837,6 +1889,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1850,6 +1903,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1863,6 +1917,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1876,6 +1931,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1889,6 +1945,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1902,6 +1959,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1915,6 +1973,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1928,6 +1987,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1941,6 +2001,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1954,6 +2015,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1967,6 +2029,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Slides"
     ]
   },
@@ -1980,6 +2043,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -1993,6 +2057,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2006,6 +2071,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2019,6 +2085,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2032,6 +2099,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2045,6 +2113,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2058,6 +2127,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2071,6 +2141,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2084,6 +2155,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2097,6 +2169,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2110,6 +2183,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },
@@ -2123,6 +2197,7 @@
       "Home",
       "Term 2",
       "Week 11: DataLab",
+      "Lab",
       "Activity"
     ]
   },

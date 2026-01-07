@@ -1,6 +1,6 @@
 ---
 title: "Week 11: DataLab"
-subtitle: "PS50008A Research Methods | 12-16 January 2026"
+subtitle: "PS50008A Research Methods & Experimental Design | 12-16 January 2026"
 author: "Gordon Wright"
 date: "2026-01-12"
 ---

@@ -13,8 +13,8 @@ project:
 website:
   title: "PS50008A Research Methods & Experimental Design"
   description: "Term 2 Spring 2026"
-  site-url: https://example.com/rm0  # Update when deployed
-  repo-url: https://github.com/username/GS_RMTeaching_2526  # Update
+  site-url: https://littlemonkeylab.github.io/PS50008A_2526/  # Update when deployed
+  repo-url: https://github.com/LittleMonkeyLab/PS50008A_2526  # Update
   repo-actions: [edit, issue]
 
   navbar:
@@ -29,9 +29,10 @@ website:
         href: assessments.qmd
       - text: "Resources"
         href: resources.qmd
+
     right:
       - icon: github
-        href: https://github.com/username/GS_RMTeaching_2526
+        href: https://github.com/LittleMonkeyLab/PS50008A_2526
 
   sidebar:
     style: docked
@@ -50,46 +51,50 @@ website:
             contents:
               - text: "Overview"
                 href: week11/index.qmd
-              - text: "---"
-              - text: "Lecture"
-              - text: "Preview Video"
-                href: week11/lecture/video.qmd
-              - text: "Reading"
-                href: week11/lecture/reading.qmd
-              - text: "Slides"
-                href: week11/lecture/slides.qmd
-              - text: "---"
-              - text: "Lab"
-              - text: "Activity"
-                href: week11/lab/activity.qmd
-              - text: "Reading"
-                href: week11/lab/reading.qmd
-              - text: "Slides"
-                href: week11/lab/slides.qmd
-              - text: "Self-Assessment"
-                href: week11/lab/homework.qmd
+              - section: "Lecture"
+                contents:
+                  - text: "Preview Video"
+                    href: week11/lecture/video.qmd
+                  - text: "Reading"
+                    href: week11/lecture/reading.qmd
+                  - text: "Slides"
+                    href: week11/lecture/slides.qmd
+                    target: _blank
+              - section: "Lab"
+                contents:
+                  - text: "Slides"
+                    href: week11/lab/slides.qmd
+                    target: _blank
+                  - text: "Activity"
+                    href: week11/lab/activity.qmd
+                  - text: "Reading"
+                    href: week11/lab/reading.qmd
+                  - text: "Self-Assessment"
+                    href: week11/lab/homework.qmd
           # - section: "Week 12: Distributions & Variability"
           #   contents:
           #     - text: "Overview"
           #       href: week12/index.qmd
-          #     - text: "---"
-          #     - text: "Lecture"
-          #     - text: "Preview Video"
-          #       href: week12/lecture/video.qmd
-          #     - text: "Reading"
-          #       href: week12/lecture/reading.qmd
-          #     - text: "Slides"
-          #       href: week12/lecture/slides.qmd
-          #     - text: "---"
-          #     - text: "Lab"
-          #     - text: "Activity"
-          #       href: week12/lab/activity.qmd
-          #     - text: "Reading"
-          #       href: week12/lab/reading.qmd
-          #     - text: "Slides"
-          #       href: week12/lab/slides.qmd
-          #     - text: "Self-Assessment"
-          #       href: week12/lab/homework.qmd
+          #     - section: "Lecture"
+          #       contents:
+          #         - text: "Preview Video"
+          #           href: week12/lecture/video.qmd
+          #         - text: "Reading"
+          #           href: week12/lecture/reading.qmd
+          #         - text: "Slides"
+          #           href: week12/lecture/slides.qmd
+          #           target: _blank
+          #     - section: "Lab"
+          #       contents:
+          #         - text: "Slides"
+          #           href: week12/lab/slides.qmd
+          #           target: _blank
+          #         - text: "Activity"
+          #           href: week12/lab/activity.qmd
+          #         - text: "Reading"
+          #           href: week12/lab/reading.qmd
+          #         - text: "Self-Assessment"
+          #           href: week12/lab/homework.qmd
           # - text: "Week 13: Estimation & CIs"
           #   href: week13/index.qmd
           # - text: "Week 14: Inference & t-tests"
@@ -111,7 +116,7 @@ website:
           #   href: week20/index.qmd
 
   page-footer:
-    left: "PS50008A Research Methods | Goldsmiths, University of London"
+    left: "PS50008A Research Methods & Experimental Design | Goldsmiths, University of London"
     right: "Term 2 Spring 2026"
 
 format:
@@ -123,6 +128,11 @@ format:
     code-tools: true
     embed-resources: false
     link-external-newwindow: true
+    comments: 
+      hypothesis:
+        theme: clean
+        openSidebar: false
+
 
 execute:
   freeze: auto

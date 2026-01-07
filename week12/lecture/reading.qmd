@@ -7,7 +7,12 @@ date: "2026-01-19"
 
 ## Overview
 
-This reading introduces the fundamental tools for describing data: measures of central tendency, measures of variability, and distributions. These concepts form the foundation for everything else in statistics.
+::: {.callout-tip}
+## Before You Begin
+This reading introduces the fundamental tools for describing data. These concepts form the foundation for everything else in statistics — take your time with them.
+:::
+
+This reading covers measures of central tendency, measures of variability, and distributions.
 
 ## Why Summarise Data?
 
@@ -21,6 +26,10 @@ Raw data is overwhelming. We need ways to:
 4. **Prepare** for statistical tests
 
 Descriptive statistics provide these summaries without losing essential information about what the data is telling us.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**The goal of this week:** Learn to take a pile of numbers and turn them into a meaningful story about your data.
+:::
 
 ## Central Tendency: Where Is the Centre?
 
@@ -274,7 +283,11 @@ Distribution shape affects:
 
 ## Applying This to DataLab
 
-Your DataLab data provides real examples:
+::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
+### Your Data, Your Statistics
+
+The DataLab data you generated last week provides real examples for every concept in this reading. When we calculate means and standard deviations, we'll use YOUR reaction times. When we look at distribution shapes, we'll examine YOUR data.
+:::
 
 ### Reaction Times
 
@@ -298,7 +311,9 @@ Your DataLab data provides real examples:
 
 When writing up results, report descriptives clearly:
 
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
 **Format**: (*M* = value, *SD* = value)
+:::
 
 **Examples**:
 

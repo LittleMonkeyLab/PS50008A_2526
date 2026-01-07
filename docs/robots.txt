@@ -1,1 +1,1 @@
-Sitemap: https://example.com/rm0/sitemap.xml
+Sitemap: https://littlemonkeylab.github.io/PS50008A_2526/sitemap.xml
