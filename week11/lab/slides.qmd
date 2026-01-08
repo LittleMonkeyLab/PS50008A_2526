@@ -1,6 +1,6 @@
 ---
 title: "DataLab"
-subtitle: "PS50008A Week 11 Lab"
+subtitle: "Grow Your Own Psychology Data"
 author: "Gordon Wright & Bence Palfi"
 date: "2026-01-16"
 format:
@@ -31,9 +31,10 @@ Your first session of the module
 ::: {.objectives-box}
 **Today You Will:**
 
-- Rotate through 6 stations in pairs
-- Complete cognitive tasks
+- Complete Part 1 of the survey (mood, personality, demographics)
+- Rotate through 6 cognitive task stations
 - Record your data in Qualtrics
+- Complete Part 2 of the survey (mood again!)
 - Form your project groups
 :::
 
@@ -46,8 +47,9 @@ The data you generate today becomes our teaching dataset for the term.
 When we learn about:
 
 - Distributions → [your reaction times]{.hl-yellow}
-- t-tests → [Room A vs Room B]{.hl-blue}
-- Correlations → [your variables]{.hl-green}
+- t-tests → [Lab A vs Lab B]{.hl-blue}
+- Correlations → [personality × performance]{.hl-green}
+- Pre-post designs → [your mood change]{.hl-yellow}
 
 ...we'll use **your** data.
 
@@ -61,41 +63,41 @@ When we learn about:
 
 ::: {.column width="50%"}
 ::: {.step-1}
-**1. Simple Reaction Time**
+**1. Reflex Test**
 
-How fast can you respond?
+How fast can you catch a ruler?
 :::
 
 ::: {.step-2}
-**2. Choice Reaction Time**
+**2. Mind Palace**
 
-Does decision-making slow you down?
+How many words survive distraction?
 :::
 
 ::: {.step-3}
-**3. Memory Task**
+**3. Time Warp**
 
-How many items can you recall?
+How accurate is your internal clock?
 :::
 :::
 
 ::: {.column width="50%"}
 ::: {.step-1}
-**4. Estimation Task**
+**4. Sixth Sense**
 
-How accurate are your judgments?
+Can you detect when someone is watching?
 :::
 
 ::: {.step-2}
-**5. Group Estimation**
+**5. Lady Luck**
 
-Does discussion improve accuracy?
+How "random" can you be?
 :::
 
 ::: {.step-3}
-**6. Confidence Ratings**
+**6. Frontal Lob**
 
-How well do you know what you know?
+How well do you know your own ability?
 :::
 :::
 
@@ -108,12 +110,13 @@ How well do you know what you know?
 ## The Process
 
 ::: {.incremental}
-1. Find a partner
-2. Go to your assigned starting station
-3. Complete the task (one tests, one participates)
-4. Record data in Qualtrics
-5. Swap roles
-6. Move to next station when signalled
+1. Collect your participant card and note your group colour
+2. Complete **Part 1** of the Qualtrics survey
+3. Go to your assigned starting station
+4. Complete the task with your partner
+5. Enter your data in Qualtrics
+6. Move to next station when the bell rings
+7. Complete **Part 2** of the survey at the end
 :::
 
 ---
@@ -126,8 +129,9 @@ Record data carefully—your data will be used throughout the term.
 :::
 
 - Use the Qualtrics link on your phone/laptop
-- Enter your participant ID (we'll assign these)
+- Enter your participant ID (from your card)
 - Follow the instructions at each station
+- Complete station data entry BEFORE moving on
 
 ---
 
@@ -135,10 +139,28 @@ Record data carefully—your data will be used throughout the term.
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:15 | Welcome & setup |
-| 10:15-11:30 | Station rotations (~12 min each) |
-| 11:30-11:50 | Form project groups |
-| 11:50-12:00 | Wrap-up |
+| 0:00-0:15 | Welcome, Part 1 survey, form groups |
+| 0:15-1:45 | Station rotations (~12-15 min each) |
+| 1:45-1:55 | Part 2 survey |
+| 1:55-2:00 | Debrief & wrap-up |
+
+---
+
+# The Pre-Post Design {background-color="#275882"}
+
+## Measuring Change
+
+We're measuring your mood, energy, and stress **twice**:
+
+- **Before** the stations (Part 1)
+- **After** the stations (Part 2)
+
+This lets us analyse whether DataLab affected how you feel!
+
+::: {.callout-note}
+## Within-Subjects Design
+Each person serves as their own control — we compare your "before" to your "after."
+:::
 
 ---
 
@@ -167,6 +189,73 @@ Your group will:
 
 ---
 
+# Station Previews {background-color="#275882"}
+
+## Station 1: Reflex Test
+
+**How fast is your nervous system?**
+
+- Partner drops a ruler without warning
+- You catch it as fast as possible
+- The distance = your reaction time (physics!)
+- 5 trials each
+
+---
+
+## Station 2: Mind Palace
+
+**What survives the interference?**
+
+- Study 10 words (30 seconds)
+- Do maths problems (60 seconds)
+- Recall as many words as you can
+- Which positions did you remember?
+
+---
+
+## Station 3: Time Warp
+
+**Your brain's internal clock**
+
+- Estimate when 60 seconds have passed
+- Estimate the length of lines (visual)
+- Estimate the length of strings (touch only!)
+
+---
+
+## Station 4: Sixth Sense
+
+**Can you detect being watched?**
+
+- Sit back-to-back with partner
+- Partner randomly stares or looks away
+- Can you tell which? How confident are you?
+- 6 trials each
+
+---
+
+## Station 5: Lady Luck
+
+**How "random" can you be?**
+
+- Generate 20 random numbers (1-10)
+- Roll dice 10 times
+- Flip coins 10 times
+- Are humans good at being random?
+
+---
+
+## Station 6: Frontal Lob
+
+**Precision meets confidence**
+
+- Rate your throwing ability (1-10)
+- Throw ping pong balls at a basket
+- How well did you predict your performance?
+- This is called **calibration**
+
+---
+
 # Let's Begin! {background-color="#275882"}
 
 ## Questions? {.center}
@@ -177,18 +266,43 @@ Your group will:
 
 ---
 
-## Station Instructions
+## Step 1: Get Your Card
 
-See the [Lab Activity](activity.qmd) page for detailed instructions at each station.
+1. Collect your **participant card** from the instructors
+2. Note your **participant number**
+3. Note your **group colour** (this is your rotation group)
+
+---
+
+## Step 2: Part 1 Survey
+
+Scan the QR code and complete Part 1:
 
 ::: {.callout-note}
 ## Qualtrics Link
 [Link TBC]
 :::
 
+Part 1 includes:
+- Consent
+- Sleep & lifestyle questions
+- Current mood (before stations)
+- Brief personality questionnaire
+- Demographics
+
+---
+
+## Step 3: Go to Your Station
+
+When Part 1 is complete, go to your starting station.
+
+**Wait for the bell to begin!**
+
 ::: {.notes}
 - Assign participant IDs
 - Direct students to starting stations
-- Set timer for 12 minutes per rotation
-- Signal rotation changes clearly
+- Set timer for 12-15 minutes per rotation
+- Signal rotation changes clearly with bell
+- Lab A: Silence at Station 3
+- Lab B: Music at Station 3
 :::

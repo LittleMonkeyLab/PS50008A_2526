@@ -9,59 +9,96 @@ filters:
 
 ## Overview
 
-This reading prepares you for the DataLab session. It explains the cognitive tasks you'll complete and why we're collecting these data. 
+This reading prepares you for the DataLab session. It explains the cognitive tasks you'll complete and why we're collecting these data.
 
 ## What You'll Be Measuring
 
 DataLab includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
 
-### Reaction Time
+### Station 1: Reaction Time (Reflex Test)
 
-{{< term reaction_time "Reaction time" >}} is the interval between a stimulus and your response to it.
+{{< term reaction_time "Reaction time" >}} is the interval between a stimulus and your response to it. In the ruler-drop task, we measure **simple reaction time** — how quickly you can respond to a single, expected stimulus.
 
-- **Simple reaction time**: Respond as fast as possible to a single stimulus
-- **Choice reaction time**: Choose between responses based on the stimulus
-
-Research shows that adding choices increases reaction time — a finding known as **Hick's Law** (Hick, 1952).
+The physics is elegant: when you catch a falling ruler, the distance it fell before you caught it tells us how long your reaction took. Using the equation for free-falling objects (d = ½gt²), we can convert centimetres into milliseconds.
 
 ::: {.callout-note}
 ## Why It Matters
-Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks.
+Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks. We can also look for practice effects — do you get faster across trials?
 :::
 
-### Memory
+### Station 2: Memory (Mind Palace)
 
-```{r}
-# Create a vector
-numbers <- c(1, 2, 3, 4, 5)
-print(paste("Sum:", sum(numbers)))
-```
+The memory task measures {{< term working_memory >}} — how many items you can hold in mind while performing another task.
 
-The **memory task** measures how many items you can hold in {{< term working_memory >}}.
+Miller (1956) famously proposed that we can hold about **7 ± 2** items in short-term memory — the "magical number seven." But the distraction task (maths problems) interferes with rehearsal, so performance typically drops.
 
-Miller (1956) famously proposed that we can hold about **7 ± 2** items in short-term memory — the "magical number seven." Your data will test whether this holds for our class.
+We'll also examine the **serial position effect**: people tend to remember words from the beginning of a list (primacy) and end of a list (recency) better than the middle. Your position-by-position recall data will let us test this pattern.
 
-### Estimation
+### Station 3: Time and Magnitude Perception (Time Warp)
 
-**Estimation tasks** reveal systematic biases in human judgement ({{< term estimation_bias >}}).
+How accurately do we perceive time? Research shows that our internal clocks are surprisingly inaccurate and can be influenced by many factors.
 
-People often:
+This station measures three types of estimation:
 
-- Underestimate large quantities
-- Overestimate small probabilities
-- Anchor on initial information
+1. **Time estimation** — How accurately can you judge 60 seconds?
+2. **Visual magnitude estimation** — How accurately can you judge line lengths by looking?
+3. **Tactile magnitude estimation** — How accurately can you judge lengths by touch alone?
 
-We'll explore whether group discussion improves or worsens estimation accuracy.
+::: {.callout-tip}
+## Cross-Modal Comparison
+By comparing visual and tactile estimation, we can explore whether some senses are more accurate than others for judging physical properties.
+:::
 
-### Confidence
+### Station 4: Psychic Staring (Sixth Sense)
 
-{{< term metacognition "Metacognition" >}} is thinking about your own thinking.
+Can humans detect when they're being watched? This is a testable empirical question!
 
-The confidence task measures how well you know what you know:
+The staring detection task uses {{< term signal_detection "signal detection theory" >}}:
 
-- Are you **overconfident** (think you're right when you're wrong)?
-- Are you **underconfident** (doubt yourself when you're correct)?
-- Are you **well-calibrated** (confidence matches accuracy)? See {{< term calibration >}}.
+- **Hits**: Correctly detecting when someone IS staring
+- **False alarms**: Saying "staring" when they're NOT
+- **Misses**: Saying "not staring" when they ARE
+- **Correct rejections**: Correctly detecting when they're NOT staring
+
+If people cannot actually detect staring, we'd expect performance to be at **chance level** (about 50% correct, or 3 out of 6 trials).
+
+### Station 5: Randomness (Lady Luck)
+
+Humans are notoriously bad at generating random sequences. When asked to produce "random" numbers, people:
+
+- Avoid repeating the same number twice in a row (even though true randomness includes repetitions)
+- Avoid patterns (even though random sequences often contain streaks)
+- Favour certain numbers (often 7!)
+
+This station also includes dice rolling and coin flipping, which let us compare **true** random outcomes (from dice/coins) with **human-generated** random sequences.
+
+::: {.callout-note}
+## The Gambler's Fallacy
+Many people believe that after a streak of heads, tails is "due." This is false — each flip is independent. Your data will likely show longer runs than most people expect!
+:::
+
+### Station 6: Metacognition (Frontal Lob)
+
+{{< term metacognition "Metacognition" >}} is thinking about your own thinking — including how well you know your own abilities.
+
+The throwing task measures {{< term calibration >}}: the match between your self-assessed ability and your actual performance.
+
+- **Overconfidence**: Rating yourself higher than your performance
+- **Underconfidence**: Rating yourself lower than your performance
+- **Well-calibrated**: Your rating matches your performance
+
+Research consistently shows that people are poorly calibrated — often overconfident about easy tasks and underconfident about hard ones.
+
+## The Pre-Post Design
+
+DataLab uses a **within-subjects** design to measure mood change. You'll rate your mood, energy, and stress both **before** and **after** the stations.
+
+This design is powerful because each person serves as their own control. By comparing your "before" to your "after," we eliminate individual differences — we're measuring change within you, not differences between people.
+
+::: {.callout-important}
+## Teaching Application
+When we learn about paired t-tests, we'll analyse whether DataLab systematically affected mood, energy, or stress. Did participation make people feel better? Worse? More or less stressed?
+:::
 
 ## Why Generate Our Own Data?
 
@@ -87,7 +124,7 @@ Acting as both **participant** and **tester** teaches you:
 
 1. **Watch the preview video** — Module introduction (5 minutes)
 2. **Read this page** — Understand what you'll be doing
-3. **Check your lab allocation** — Group A or Group B
+3. **Check your lab allocation** — Lab A or Lab B
 
 ### What to Bring
 
@@ -98,10 +135,10 @@ Acting as both **participant** and **tester** teaches you:
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:15 | Welcome, setup, get participant IDs |
-| 10:15-11:30 | Rotate through 6 stations (~12 min each) |
-| 11:30-11:50 | Form project groups |
-| 11:50-12:00 | Wrap-up |
+| 0:00-0:15 | Welcome, Part 1 survey, form groups |
+| 0:15-1:45 | Rotate through 6 stations (~12-15 min each) |
+| 1:45-1:55 | Part 2 survey |
+| 1:55-2:00 | Debrief & wrap-up |
 
 ## Working in Pairs
 
@@ -131,16 +168,14 @@ Hover over any term for its definition:
 
 | Term | Related Concepts |
 |------|------------------|
-| {{< term reaction_time "Reaction time" >}} | simple RT, choice RT, Hick's Law |
-| {{< term working_memory "Working memory" >}} | memory, Miller's Law |
-| {{< term estimation_bias "Estimation bias" >}} | anchoring, overconfidence |
-| {{< term metacognition "Metacognition" >}} | calibration, confidence |
-| {{< term calibration "Calibration" >}} | metacognition, confidence |
+| {{< term reaction_time "Reaction time" >}} | simple RT, catch distance, milliseconds |
+| {{< term working_memory "Working memory" >}} | memory span, serial position, primacy/recency |
+| {{< term signal_detection "Signal detection" >}} | hits, false alarms, sensitivity |
+| {{< term metacognition "Metacognition" >}} | self-assessment, calibration |
+| {{< term calibration "Calibration" >}} | overconfidence, underconfidence |
 
 ## References
 
-- Hick, W. E. (1952). On the rate of gain of information. *Quarterly Journal of Experimental Psychology*, 4(1), 11-26.
 - Miller, G. A. (1956). The magical number seven, plus or minus two. *Psychological Review*, 63(2), 81-97.
-
-
-
+- Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. *Science*, 185(4157), 1124-1131.
+- Wagenaar, W. A. (1972). Generation of random sequences by human subjects: A critical survey of the literature. *Psychological Bulletin*, 77(1), 65-72.

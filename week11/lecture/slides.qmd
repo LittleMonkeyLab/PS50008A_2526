@@ -13,8 +13,6 @@ format:
     height: 700
     center: false
     center-title-slide: true
-    # footer: |
-    #   <button onclick="readCurrentSlide()">🔊 Read slide</button>
 ---
 
 # Welcome to PS50008A {background-color="#275882"}
@@ -72,16 +70,16 @@ A series of **6 cognitive task stations** where you:
 
 :::: {.columns}
 ::: {.column width="50%"}
-- Test reaction times
-- Complete memory tasks
-- Make estimations
-- Rate your confidence
+- Measure reaction times
+- Test your memory
+- Estimate time and distances
+- Test your "sixth sense"
 :::
 ::: {.column width="50%"}
+- Explore randomness
+- Assess your own abilities
 - Work in pairs
 - Record data in Qualtrics
-- Experience being a participant
-- Experience being a tester
 :::
 ::::
 
@@ -96,8 +94,9 @@ When we learn about:
 | Topic | Your Data |
 |-------|-----------|
 | Distributions | Your reaction times |
-| t-tests | Room A vs Room B |
-| Correlations | Memory vs confidence |
+| t-tests | Lab A vs Lab B |
+| Correlations | Personality × performance |
+| Pre-post designs | Mood before vs after |
 
 ...we use [**your**]{.inverse-box} data, not abstract examples.
 
@@ -106,15 +105,15 @@ When we learn about:
 ## The 6 Stations
 
 ::: {.step-1}
-**1. Simple Reaction Time** — How fast can you respond to a stimulus?
+**1. Reflex Test** — How fast can you catch a falling ruler?
 :::
 
 ::: {.step-2}
-**2. Choice Reaction Time** — How does decision-making affect speed?
+**2. Mind Palace** — How many words survive a distraction task?
 :::
 
 ::: {.step-3}
-**3. Memory Task** — How many items can you recall?
+**3. Time Warp** — How accurate is your internal clock?
 :::
 
 ---
@@ -122,15 +121,31 @@ When we learn about:
 ## The 6 Stations (continued)
 
 ::: {.step-1}
-**4. Estimation Task** — How accurate are your judgments?
+**4. Sixth Sense** — Can you detect when someone is watching you?
 :::
 
 ::: {.step-2}
-**5. Group Estimation** — Does group discussion improve accuracy?
+**5. Lady Luck** — How "random" can humans be?
 :::
 
 ::: {.step-3}
-**6. Confidence Ratings** — How well do you know what you know?
+**6. Frontal Lob** — How well do you know your own throwing ability?
+:::
+
+---
+
+## The Pre-Post Design
+
+We'll measure your mood, energy, and stress **twice**:
+
+- **Part 1**: Before the stations begin
+- **Part 2**: After all stations are complete
+
+This lets us analyse whether DataLab affects how you feel!
+
+::: {.callout-note}
+## Within-Subjects Design
+Each person serves as their own control — a powerful experimental approach.
 :::
 
 ---
@@ -141,7 +156,7 @@ When we learn about:
 
 ::: {.callout-tip}
 ## Preparation Checklist
-1. Check your lab allocation (Group A or Group B)
+1. Check your lab allocation (Lab A or Lab B)
 2. Bring your phone or laptop (for Qualtrics)
 3. Arrive on time — we need to start promptly at 10:00
 :::
@@ -210,7 +225,9 @@ Each week typically includes:
 ::: {.poll-box}
 **Thursday 10:00-12:00**
 
-DataLab + Form Groups
+DataLab: Grow Your Own Psychology Data
+
++ Form Groups
 :::
 
 Questions? Email g.wright@gold.ac.uk
@@ -229,14 +246,3 @@ Questions? Email g.wright@gold.ac.uk
 End of preview video content.
 Recording time: approximately 5-7 minutes.
 :::
-
-<!-- <script>
-  function readCurrentSlide() {
-    const synth = window.speechSynthesis;
-    const slide = Reveal.getCurrentSlide();
-    const text = slide.innerText;
-    const utterance = new SpeechSynthesisUtterance(text + ". Next slide.");
-    utterance.rate = 1.0;
-    synth.speak(utterance);
-  }
-</script> -->

@@ -19,15 +19,16 @@ This video introduces the module and explains what will happen in your first lab
 </div>
 :::
 
-**Duration**: Approximately 5 minutes
+**Duration**: Approximately 5-7 minutes
 
 ## What This Video Covers
 
 1. **Welcome to the module** — who we are, what you'll learn
 2. **The assessments** — four assessments across the term
 3. **DataLab** — what will happen in your first lab
-4. **What to bring** — just yourself and a phone/laptop
-5. **Group work** — DataLab will require minimal group work, but group work will be a consistent element in lab work, so we will address that head on
+4. **The 6 stations** — a preview of each cognitive task
+5. **What to bring** — just yourself and a phone/laptop
+6. **Group work** — forming your project groups
 
 ## Key Points
 
@@ -39,9 +40,24 @@ This module teaches you to think like a researcher:
 - How do we analyse data to draw conclusions?
 - How do we report findings professionally?
 
-### DataLab
+### DataLab: Grow Your Own Psychology Data
 
-Your first lab is **DataLab**—a series of cognitive tasks where you'll generate the dataset used throughout the term. You'll learn statistics using *your own data*.
+Your first lab is **DataLab**—a series of 6 cognitive tasks where you'll generate the dataset used throughout the term. You'll learn statistics using *your own data*.
+
+### The 6 Stations
+
+| Station | Name | What You'll Do |
+|---------|------|----------------|
+| 1 | **Reflex Test** | Catch a falling ruler to measure reaction time |
+| 2 | **Mind Palace** | Memorise words, do maths, then recall |
+| 3 | **Time Warp** | Estimate time and physical lengths |
+| 4 | **Sixth Sense** | Try to detect when someone is watching you |
+| 5 | **Lady Luck** | Generate random numbers, roll dice, flip coins |
+| 6 | **Frontal Lob** | Rate your ability then throw at a target |
+
+### The Pre-Post Design
+
+We'll measure your mood twice — before and after the stations — to see if DataLab affects how you feel. This is an example of a within-subjects design.
 
 ### Assessments
 
@@ -56,11 +72,11 @@ See the [Assessments](../../assessments.qmd) page for details.
 
 ### Project Groups
 
-For the second half of the term, you will be working in groups of 4-5 students, so start thinking about this now. Group work is a fundamental part of the training.
+By the end of Thursday, form groups of 3-4 students. You'll work together for the rest of the term on the group research project.
 
 ## Before Your Lab
 
-1. Note your lab allocation (Group A or Group B)
+1. Note your lab allocation (Lab A or Lab B)
 2. Arrive on time — Thursday 10:00
 3. Bring a phone or laptop to record your data
 

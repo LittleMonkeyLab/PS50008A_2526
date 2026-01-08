@@ -1,5 +1,5 @@
 ---
-title: "DataLab"
+title: "DataLab: Grow Your Own Psychology Data"
 subtitle: "PS50008A Week 11 Lab Activity"
 author: "Gordon Wright"
 date: "2026-01-16"
@@ -8,102 +8,246 @@ date: "2026-01-16"
 ## Overview
 
 ::: {.callout-important}
-## DataLab Stations
-This page contains instructions for each DataLab station. Detailed task specifications, Qualtrics questions, and equipment lists are being finalised.
+## Welcome to DataLab!
+Today you'll rotate through 6 stations, generating the dataset we'll analyse throughout the term. Your data will become our teaching examples for distributions, t-tests, correlations, and more.
 :::
 
-Today you'll rotate through 6 stations, generating the dataset we'll analyse throughout the term.
+## The Session Structure
+
+| Time | Activity |
+|------|----------|
+| 0:00-0:15 | Welcome, collect participant ID, complete Part 1 of survey |
+| 0:15-1:45 | Rotate through 6 stations (~12-15 min each) |
+| 1:45-1:55 | Complete Part 2 of survey |
+| 1:55-2:00 | Debrief and wrap-up |
 
 ## Before You Start
 
-1. Find a partner
-2. Get your participant ID from the instructors
-3. Open the Qualtrics survey: **[Link TBC]**
+1. **Collect your participant card** from the instructors
+2. **Note your group colour** - this is your rotation group
+3. **Scan the QR code** and complete Part 1 of the Qualtrics survey
+4. **Wait at your starting station** until instructed to begin
+
+::: {.callout-note}
+## Part 1 Survey (Complete First!)
+Before the stations begin, you'll complete:
+
+- Consent form
+- Basic information (sleep, lifestyle)
+- A brief personality questionnaire
+- How you're feeling right now
+:::
 
 ---
 
-## Station 1: Simple Reaction Time
+## Station 1: Reflex Test {#station-1}
 
-**Task**: How fast can you respond to a simple stimulus?
+**How fast is your nervous system?**
 
-**Procedure**: TBC
+At this station, you'll measure your **reaction time** using a simple ruler-drop task.
 
-**What you'll record**:
-- Reaction time (ms)
-- Number of trials
+### What You'll Do
 
----
+1. **Partner A** holds the ruler at the 30cm mark, letting it hang vertically
+2. **Partner B** positions thumb and finger at the 0cm mark — don't touch the ruler!
+3. Partner A drops the ruler **without warning** (within 5 seconds)
+4. Partner B catches it **as fast as possible**
+5. Read the cm mark at the **top of your thumb**
+6. Complete **5 trials**, then swap roles
 
-## Station 2: Choice Reaction Time
+### What You'll Record
 
-**Task**: How does having to make a decision affect your response time?
+- Which hand you used (dominant or non-dominant)
+- The distance caught on each trial (in cm)
+- Any trials you missed
 
-**Procedure**: TBC
-
-**What you'll record**:
-- Reaction time (ms)
-- Accuracy
-- Number of trials
-
----
-
-## Station 3: Memory Task
-
-**Task**: How many items can you recall?
-
-**Procedure**: TBC
-
-**What you'll record**:
-- Number of items recalled
-- Type of items
+::: {.callout-tip}
+## The Science
+Your catch distance can be converted to reaction time using physics! The formula involves the distance fallen and gravitational acceleration. You'll see this conversion in the data.
+:::
 
 ---
 
-## Station 4: Estimation Task
+## Station 2: Mind Palace {#station-2}
 
-**Task**: How accurate are your judgments?
+**What survives the interference?**
 
-**Procedure**: TBC
+This station tests your **working memory** and the effects of distraction.
 
-**What you'll record**:
-- Your estimate
-- Actual value
-- Estimation error
+### What You'll Do
+
+1. **STUDY (30 sec)**: Look at the word list card and try to memorise all 10 words
+2. **DISTRACT (60 sec)**: Turn the card face-down. Complete the maths problems.
+3. **RECALL (90 sec)**: Write down as many words as you remember
+4. **SCORE**: Check your answers and count correct words
+
+### What You'll Record
+
+- Total words correctly recalled (out of 10)
+- Which positions (1-10) you remembered
+- Any "intrusions" (words you wrote that weren't on the list)
+- What strategy (if any) you used
+
+::: {.callout-warning}
+## No Peeking!
+Keep the word list face-down during the distraction and recall phases. The maths problems are meant to be distracting — work quickly, don't worry about accuracy.
+:::
 
 ---
 
-## Station 5: Group Estimation
+## Station 3: Time Warp {#station-3}
 
-**Task**: Does group discussion improve estimation accuracy?
+**Your brain's internal clock**
 
-**Procedure**: TBC
+This station explores how accurately you perceive time and physical dimensions.
 
-**What you'll record**:
-- Individual estimates
-- Group estimate
-- Actual value
+### Task A: 60-Second Estimation
+
+1. Close your eyes or look down
+2. When you hear "Start", begin sensing time passing
+3. Say "Stop" when you believe exactly **60 seconds** have passed
+4. The facilitator will record your actual time
+
+::: {.callout-tip}
+## Try Not to Count!
+The most interesting data comes when you try to *feel* the time passing rather than counting "one Mississippi, two Mississippi..."
+:::
+
+### Task B: Visual Estimation (Lines)
+
+1. Look at **Line Card A**
+2. Estimate its length in centimetres (don't measure!)
+3. Repeat with **Line Card B**
+
+### Task C: Tactile Estimation (Strings)
+
+1. Feel **String 1** without looking (eyes closed)
+2. Estimate its length in centimetres
+3. Repeat with **String 2**
+
+### What You'll Record
+
+- Your 60-second time estimate
+- Your estimates for both lines (cm)
+- Your estimates for both strings (cm)
+- Whether you counted during the time estimation
 
 ---
 
-## Station 6: Confidence Ratings
+## Station 4: Sixth Sense {#station-4}
 
-**Task**: How well do you know what you know?
+**Can you tell when someone is watching you?**
 
-**Procedure**: TBC
+This station investigates whether humans can detect when they're being stared at.
 
-**What you'll record**:
-- Performance on task
-- Confidence rating
+### What You'll Do
+
+1. Sit **back-to-back** with your partner, about 1 metre apart
+2. **STARER**: Flip the coin to decide
+   - Heads = Stare at partner's head
+   - Tails = Look away
+3. Hold your position for **15 seconds**
+4. **TARGET**: Say "Staring" or "Not staring"
+5. Rate your **confidence** (1 = pure guess, 5 = certain)
+6. Complete **6 trials** as target, then swap roles
+
+### What You'll Record
+
+- For each trial: What actually happened, what you guessed, your confidence
+- Your total correct out of 6
+
+::: {.callout-note}
+## Solo Participants
+If you don't have a partner, there's a video version available — ask the facilitator.
+:::
+
+---
+
+## Station 5: Lady Luck {#station-5}
+
+**How random can you be?**
+
+This station explores human intuitions about randomness.
+
+### Task A: Random Number Generation
+
+Generate **20 "random" numbers** between 1 and 10. Say each aloud as it comes to mind — don't plan ahead!
+
+::: {.callout-tip}
+## Be Spontaneous!
+Just say the first number that pops into your head. Don't try to make it "look" random.
+:::
+
+### Task B: Dice Rolling
+
+1. **First**: Predict whether you'll roll more 6s than expected by chance
+2. Roll the die **10 times** and record each outcome
+
+### Task C: Coin Flipping
+
+1. Flip the coin **10 times** and record each outcome (H or T)
+2. Note the longest run of the same outcome in a row
+
+### What You'll Record
+
+- All 20 random numbers you generated
+- Your prediction about dice 6s
+- All 10 dice outcomes
+- All 10 coin flip outcomes
+- Longest consecutive run
+
+---
+
+## Station 6: Frontal Lob {#station-6}
+
+**Precision meets confidence**
+
+This station examines the relationship between your **self-assessment** and **actual performance**.
+
+### What You'll Do
+
+1. **Before throwing**: Rate your throwing ability on a scale of 1-10
+2. Stand at the marked line
+3. Throw ping pong balls into the basket
+4. Complete **10 throws** with your dominant hand
+5. Count your successes
+6. *Optional*: 5 throws with your non-dominant hand
+
+### What You'll Record
+
+- Your self-rating (1-10)
+- Number of successful throws (out of 10)
+- Non-dominant hand successes (if attempted)
+- Which is your dominant hand
+
+::: {.callout-note}
+## Metacognition
+How well does your self-rating match your actual performance? This is called **calibration** — and most people aren't very well calibrated!
+:::
 
 ---
 
 ## After the Stations
+
+### Complete Part 2 of the Survey
+
+Once all rotations are complete, return to the survey to answer:
+
+- How you're feeling **now** (so we can compare to before)
+- Which station was your favourite/least favourite
+- Any feedback or comments
+
+::: {.callout-important}
+## Pre-Post Design
+By measuring your mood before AND after DataLab, we can analyse whether participation affected how you feel. This is a **within-subjects** design — you'll learn more about this soon!
+:::
 
 ### Form Your Project Groups
 
 By the end of the session, form groups of **3-4 students**.
 
 Your group will:
+
 - Work together on the group research project
 - Conduct labs together from Week 16
 - Generate data for the Research Report (Week 22)
@@ -127,8 +271,11 @@ Once formed, register your group: **[Link TBC]**
 ## What We Did Today
 1. Generated data as both participants and testers
 2. Experienced variability in human performance
-3. Started thinking about variables and measurement
-4. Formed project groups for the term
+3. Measured multiple psychological constructs:
+   - Reaction time, memory, time perception
+   - Sensory detection, randomness intuition, metacognition
+4. Created a pre-post design to measure mood change
+5. Formed project groups for the term
 :::
 
 ---
@@ -137,8 +284,8 @@ Once formed, register your group: **[Link TBC]**
 
 **Week 12**: Your first lecture!
 
-- We'll analyse the DataLab results together
+- We'll begin analysing the DataLab results together
 - Introduction to distributions and variability
-- Your reaction times become our teaching example
+- Your data becomes our teaching example
 
 See [Week 12](../../week12/index.qmd) for details.

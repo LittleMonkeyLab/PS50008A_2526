@@ -1,23 +1,65 @@
+reaction_time: |
+  The interval between the presentation of a stimulus and the initiation of a response. Measured in milliseconds (ms). In the ruler-drop task, reaction time is calculated from catch distance using physics equations.
+
+working_memory: |
+  A limited-capacity cognitive system responsible for temporarily holding and manipulating information. Often tested using span tasks where participants must remember and recall items.
+
+serial_position_effect: |
+  The tendency to recall items at the beginning (primacy) and end (recency) of a list better than items in the middle. Demonstrates different memory processes for early vs. late items.
+
+signal_detection: |
+  A framework for analysing decision-making under uncertainty. Separates sensitivity (ability to detect a signal) from response bias (tendency to say "yes" or "no"). Key metrics include hit rate and false alarm rate.
+
+metacognition: |
+  Thinking about one's own thinking. Includes awareness of what you know and don't know, and the ability to monitor and regulate your own cognitive processes.
+
+calibration: |
+  The degree to which confidence matches accuracy. Well-calibrated individuals are confident when they're correct and uncertain when they might be wrong. Poor calibration often manifests as overconfidence.
+
+overconfidence: |
+  A metacognitive bias where people's subjective confidence exceeds their objective accuracy. Common in many domains, from general knowledge to motor skills.
+
+within_subjects: |
+  An experimental design where the same participants are measured under multiple conditions. Also called a repeated-measures design. Allows comparison of each person to themselves, controlling for individual differences.
+
+between_subjects: |
+  An experimental design where different participants are assigned to different conditions. Requires larger sample sizes but avoids practice and carryover effects.
+
+pre_post_design: |
+  A type of within-subjects design where the same measure is taken before and after some intervention or experience. The difference score (post - pre) indicates change.
+
 alpha: |
   The threshold chosen in Neyman-Pearson hypothesis testing to distinguish test results that lead to the decision to reject the null hypothesis, or not, based on the desired upper bound of the Type 1 error rate. An alpha level of 5% is most commonly used, but other alpha levels can be used as long as they are determined and preregistered by the researcher before the data is analyzed.
 
 p-value: |
   The probability of the observed data, or more extreme data, if the null hypothesis is true. The lower the p-value, the higher the test statistic, and less likely it is to observe the data if the null hypothesis is true.
 
-effect size: |
-  'quantitative reflection of the magnitude of some phenomenon that is used for the purpose of addressing a question of interest' (Kelley & Preacher, 2012)
+effect_size: |
+  A quantitative measure of the magnitude of a phenomenon. Effect sizes allow comparison across studies regardless of sample size and help determine practical significance.
 
 power: |
   The probability of rejecting the null hypothesis when it is false, for a specific analysis, effect size, sample size, and criteria for significance.
 
 SESOI: |
-  Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful
+  Smallest Effect Size of Interest: the smallest effect that is theoretically or practically meaningful. Used in equivalence testing and power analysis.
 
-  See [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) for a tutorial on methods for choosing an SESOI.
-html: |
-  This is a paragraph with a [link](https://url.com).
+primacy_effect: |
+  Superior recall of items presented at the beginning of a list. Thought to reflect transfer to long-term memory through rehearsal.
 
-  And another paragraph before a list:
+recency_effect: |
+  Superior recall of items presented at the end of a list. Thought to reflect items still active in short-term/working memory.
 
-  * Item 1
-  * List 2
+intrusion_error: |
+  In memory research, recalling an item that was not actually presented. Also called a false memory or extra-list intrusion.
+
+practice_effect: |
+  Improvement in performance due to repeated testing or exposure to a task, rather than the effect of an experimental manipulation.
+
+chance_level: |
+  The performance level expected if a participant is guessing randomly. For binary decisions (yes/no, staring/not staring), chance is 50%.
+
+randomness: |
+  A sequence is random if each element is equally likely and independent of previous elements. Humans typically underestimate how much repetition and streaking occur in truly random sequences.
+
+gamblers_fallacy: |
+  The mistaken belief that if an event has occurred more frequently than expected, it is less likely to occur in the future (or vice versa). Each trial is actually independent.
