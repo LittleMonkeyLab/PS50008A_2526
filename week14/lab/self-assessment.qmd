@@ -1,5 +1,5 @@
 ---
-title: "Week 14 Homework"
+title: "Week 14 Self-Assessment"
 subtitle: "Probabilities & Distributions & Plotting Data with R"
 author: "Gordon Wright"
 date: "2026-02-04"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w14-homework
-  subtype: homework
+  id: rm0-w14-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-02-08"
-  labels: ['statistics', 'probability', 'r-programming', 'visualisation', 'homework']
+  labels: ['statistics', 'probability', 'r-programming', 'visualisation', 'self-assessment']
   depends_on:
     - rm0-w14-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 14.
+This self-assessment consolidates your learning from Week 14.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-02-08.
+Complete this self-assessment by 2026-02-08.
 :::
 
 ## Part 1: Conceptual Questions

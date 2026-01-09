@@ -1,5 +1,5 @@
 ---
-title: "Week 20 Homework"
+title: "Week 20 Self-Assessment"
 subtitle: "MCQ Feedback + Lab Report Briefing & Data Analysis and Reporting"
 author: "Gordon Wright"
 date: "2026-03-25"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w20-homework
-  subtype: homework
+  id: rm0-w20-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-03-29"
-  labels: ['assessment', 'writing', 'statistics', 'apa-style', 'homework']
+  labels: ['assessment', 'writing', 'statistics', 'apa-style', 'self-assessment']
   depends_on:
     - rm0-w20-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 20.
+This self-assessment consolidates your learning from Week 20.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-03-29.
+Complete this self-assessment by 2026-03-29.
 :::
 
 ## Part 1: Conceptual Questions

@@ -193,66 +193,108 @@ Your group will:
 
 ## Station 1: Reflex Test
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station1-reflex.png)
+:::
+::: {.column width="60%"}
 **How fast is your nervous system?**
 
 - Partner drops a ruler without warning
 - You catch it as fast as possible
 - The distance = your reaction time (physics!)
 - 5 trials each
+:::
+::::
 
 ---
 
 ## Station 2: Mind Palace
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station2-mind-palace.png)
+:::
+::: {.column width="60%"}
 **What survives the interference?**
 
 - Study 10 words (30 seconds)
 - Do maths problems (60 seconds)
 - Recall as many words as you can
 - Which positions did you remember?
+:::
+::::
 
 ---
 
 ## Station 3: Time Warp
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station3-time-warp.png)
+:::
+::: {.column width="60%"}
 **Your brain's internal clock**
 
 - Estimate when 60 seconds have passed
 - Estimate the length of lines (visual)
 - Estimate the length of strings (touch only!)
+:::
+::::
 
 ---
 
 ## Station 4: Sixth Sense
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station4-sixth-sense.png)
+:::
+::: {.column width="60%"}
 **Can you detect being watched?**
 
 - Sit back-to-back with partner
 - Partner randomly stares or looks away
 - Can you tell which? How confident are you?
 - 6 trials each
+:::
+::::
 
 ---
 
 ## Station 5: Lady Luck
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station5-lady-luck.png)
+:::
+::: {.column width="60%"}
 **How "random" can you be?**
 
 - Generate 20 random numbers (1-10)
 - Roll dice 10 times
 - Flip coins 10 times
 - Are humans good at being random?
+:::
+::::
 
 ---
 
 ## Station 6: Frontal Lob
 
+:::: {.columns}
+::: {.column width="40%"}
+![](images/station6-frontal-lob.png)
+:::
+::: {.column width="60%"}
 **Precision meets confidence**
 
 - Rate your throwing ability (1-10)
 - Throw ping pong balls at a basket
 - How well did you predict your performance?
 - This is called **calibration**
+:::
+::::
 
 ---
 

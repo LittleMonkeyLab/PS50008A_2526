@@ -44,7 +44,7 @@ By the end of this week, you will be able to:
 |---------|-------|-----------|
 | Lecture | Significance Testing & Research Plan Briefing | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
 | Lab | Running T-Tests with R | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Homework | Week 15 Exercises | [Homework](lab/homework.qmd) |
+| Self-Assessment | Week 15 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
 
 ## Preparation
 
@@ -63,4 +63,4 @@ Before the lecture:
 
 - [Week 15 Lecture Slides](lecture/slides.qmd)
 - [Lab Activity](lab/activity.qmd)
-- [Homework](lab/homework.qmd)
+- [Self-Assessment](lab/self-assessment.qmd)

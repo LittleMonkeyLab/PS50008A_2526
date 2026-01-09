@@ -25,7 +25,7 @@ taskmistress:
   depends_on:
     - rm0-w16-lab-slides
   blocks:
-    - rm0-w16-homework
+    - rm0-w16-self-assessment
   version:
     number: "0.1"
     status: draft
@@ -78,5 +78,5 @@ TBC - Interactive exercises
 
 ## Next Steps
 
-- Complete the [Week 16 Homework](homework.qmd)
+- Complete the [Week 16 Self-Assessment](self-assessment.qmd)
 - Prepare for Week 17

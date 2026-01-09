@@ -1,0 +1,340 @@
+---
+title: "DataLab Data Dictionary"
+subtitle: "Variable Reference Guide"
+author: "Gordon Wright"
+date: "2026-01-16"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+```{=html}
+<style>
+:root {
+  --reflex: #FF6B6B;
+  --mind: #4ECDC4;
+  --time: #A55EEA;
+  --sixth: #FFD93D;
+  --luck: #6BCB77;
+  --lob: #4D96FF;
+}
+
+.station-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 0.85em;
+  color: white;
+}
+.station-badge.reflex { background: var(--reflex); }
+.station-badge.mind { background: var(--mind); }
+.station-badge.time { background: var(--time); }
+.station-badge.sixth { background: var(--sixth); color: #333; }
+.station-badge.luck { background: var(--luck); }
+.station-badge.lob { background: var(--lob); }
+.station-badge.pre { background: #667eea; }
+.station-badge.post { background: #764ba2; }
+.station-badge.demo { background: #6c757d; }
+.station-badge.tipi { background: #fd7e14; }
+
+.var-table {
+  font-size: 0.9em;
+}
+.var-table th {
+  background: #f8f9fa;
+}
+</style>
+```
+
+## Overview
+
+This page provides a reference guide for all variables collected in the DataLab survey. Use this when analysing your data or preparing your research reports.
+
+::: {.callout-tip}
+## Quick Reference
+The data dictionary is organised by station. Each variable includes its type, description, and expected range.
+:::
+
+---
+
+## Participant Identifiers
+
+<span class="station-badge demo">Demographics</span>
+
+| Variable | Type | Description | Values |
+|----------|------|-------------|--------|
+| `participant_id` | Integer | Unique participant number | 1-60 |
+| `lab_room` | Categorical | Lab assignment | A, B |
+| `group_colour` | Categorical | Rotation group | Red, Blue, Green, Yellow, Orange, Purple, Pink, White, Solo |
+| `session_date` | Date | Auto-captured timestamp | ISO format |
+
+---
+
+## Sleep & Lifestyle
+
+<span class="station-badge demo">Baseline</span>
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `sleep_hours` | Continuous | Hours of sleep last night | 0-14 |
+| `sleep_quality` | Ordinal | Sleep quality rating | 1 (Very poor) - 5 (Excellent) |
+| `caffeine_today` | Count | Cups of tea/coffee today | 0-10 |
+| `exercise_week` | Count | Days exercised this week | 0-7 |
+| `screen_estimate` | Continuous | Daily phone screen time (hrs) | 0-16 |
+
+---
+
+## Mood (Pre-Post Design)
+
+### Pre-Session <span class="station-badge pre">Baseline</span>
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mood_pre` | Ordinal | Baseline mood | 1-10 |
+| `energy_pre` | Ordinal | Baseline energy | 1-10 |
+| `stress_pre` | Ordinal | Baseline stress | 1-10 |
+
+### Post-Session <span class="station-badge post">After Stations</span>
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mood_post` | Ordinal | Post-session mood | 1-10 |
+| `energy_post` | Ordinal | Post-session energy | 1-10 |
+| `stress_post` | Ordinal | Post-session stress | 1-10 |
+
+### Change Scores <span class="station-badge post">Calculated</span>
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `mood_change` | mood_post - mood_pre | + = improved |
+| `energy_change` | energy_post - energy_pre | + = more energetic |
+| `stress_change` | stress_post - stress_pre | - = less stressed |
+
+---
+
+## Personality (TIPI)
+
+<span class="station-badge tipi">Big Five</span>
+
+The Ten-Item Personality Inventory measures the Big Five personality traits.
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `extraversion` | Continuous | Extraversion score | 1-7 |
+| `agreeableness` | Continuous | Agreeableness score | 1-7 |
+| `conscientiousness` | Continuous | Conscientiousness score | 1-7 |
+| `emotional_stability` | Continuous | Emotional stability score | 1-7 |
+| `openness` | Continuous | Openness to experience | 1-7 |
+
+---
+
+## Station 1: Reflex Test
+
+<span class="station-badge reflex">Reaction Time</span>
+
+![](images/station1-reflex.png){width="300" fig-align="center"}
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `rt_hand` | Categorical | Hand used | Dominant, Non-dominant |
+| `rt_trial1_cm` - `rt_trial5_cm` | Continuous | Catch distance per trial | 0-30 cm |
+| `rt_missed` | Multi-select | Which trials missed | Trial 1-5, No misses |
+
+### Calculated Variables
+
+| Variable | Formula | Description |
+|----------|---------|-------------|
+| `rt_trial1_ms` - `rt_trial5_ms` | √(2d/g) × 1000 | RT in milliseconds |
+| `rt_mean_ms` | Average of trials | Mean reaction time |
+| `rt_best_ms` | Minimum of trials | Fastest reaction |
+| `rt_improvement` | Trial 1 - Trial 5 | Practice effect |
+
+::: {.callout-note}
+## The Physics
+Reaction time (ms) = √(2 × distance_cm/100 ÷ 9.81) × 1000
+
+A catch at 15cm ≈ 175ms reaction time
+:::
+
+---
+
+## Station 2: Mind Palace
+
+<span class="station-badge mind">Memory</span>
+
+![](images/station2-mind-palace.png){width="300" fig-align="center"}
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mem_total` | Count | Words correctly recalled | 0-10 |
+| `mem_pos1` - `mem_pos10` | Categorical | Recalled each position? | Yes, No, Unsure |
+| `mem_intrusions` | Count | False memories (wrong words) | 0-10 |
+| `mem_strategy` | Text | Strategy used | Open text |
+
+::: {.callout-tip}
+## Serial Position Effect
+Positions 1-3 (primacy) and 8-10 (recency) are typically recalled better than positions 4-7 (middle).
+:::
+
+---
+
+## Station 3: Time Warp
+
+<span class="station-badge time">Estimation</span>
+
+![](images/station3-time-warp.png){width="300" fig-align="center"}
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `time_estimate_sec` | Continuous | 60-second estimation | ~30-90 sec |
+| `line_a_estimate_cm` | Continuous | Line A length estimate | 1-25 cm |
+| `line_b_estimate_cm` | Continuous | Line B length estimate | 1-25 cm |
+| `string1_estimate_cm` | Continuous | String 1 estimate (tactile) | 1-40 cm |
+| `string2_estimate_cm` | Continuous | String 2 estimate (tactile) | 1-40 cm |
+| `time_counting` | Categorical | Counted during timing? | Yes steadily, Yes sometimes, No |
+| `music_condition` | Categorical | Lab condition | silence, music |
+
+### Calculated Variables
+
+| Variable | Formula | Description |
+|----------|---------|-------------|
+| `time_error` | estimate - 60 | + = overestimate |
+| `line_a_error` | estimate - actual | Estimation accuracy |
+| `line_b_error` | estimate - actual | Estimation accuracy |
+| `string1_error` | estimate - actual | Tactile accuracy |
+| `string2_error` | estimate - actual | Tactile accuracy |
+
+---
+
+## Station 4: Sixth Sense
+
+<span class="station-badge sixth">Detection</span>
+
+![](images/station4-sixth-sense.png){width="300" fig-align="center"}
+
+| Variable | Type | Description | Values |
+|----------|------|-------------|--------|
+| `stare_t1_actual` - `stare_t6_actual` | Categorical | Was partner staring? | Staring, Not staring |
+| `stare_t1_guess` - `stare_t6_guess` | Categorical | What you guessed | Staring, Not staring |
+| `stare_t1_conf` - `stare_t6_conf` | Ordinal | Confidence | 1 (Guessing) - 5 (Certain) |
+| `stare_solo` | Categorical | Completed solo? | Yes, No |
+
+### Calculated Variables
+
+| Variable | Description | Expected |
+|----------|-------------|----------|
+| `stare_correct_total` | Correct detections (0-6) | ~3 (chance) |
+| `stare_hit_rate` | P(say staring \| actually staring) | ~0.5 |
+| `stare_fa_rate` | P(say staring \| not staring) | ~0.5 |
+
+---
+
+## Station 5: Lady Luck
+
+<span class="station-badge luck">Randomness</span>
+
+![](images/station5-lady-luck.png){width="300" fig-align="center"}
+
+### Random Number Generation
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `rand_num1` - `rand_num20` | Integer | Generated "random" numbers | 1-10 |
+
+### Dice Rolling
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `dice_predict` | Categorical | Prediction about 6s | Yes, No, Unsure |
+| `dice_roll1` - `dice_roll10` | Integer | Dice outcomes | 1-6 |
+
+### Coin Flipping
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `coin_flip1` - `coin_flip10` | Categorical | Coin outcomes | Heads, Tails |
+| `coin_longest_run` | Count | Longest same-outcome streak | 1-10 |
+
+### Calculated Variables
+
+| Variable | Description | Expected |
+|----------|-------------|----------|
+| `rand_mean` | Mean of 20 numbers | 5.5 (true random) |
+| `rand_repeats` | Adjacent repetitions | ~2 (true random) |
+| `dice_sixes` | Count of 6s rolled | ~1.67 |
+| `coin_heads` | Count of heads | ~5 |
+
+---
+
+## Station 6: Frontal Lob
+
+<span class="station-badge lob">Metacognition</span>
+
+![](images/station6-frontal-lob.png){width="300" fig-align="center"}
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `throw_self_rating` | Ordinal | Self-rated ability (before) | 1-10 |
+| `throw_dom_success` | Count | Dominant hand successes | 0-10 |
+| `throw_nondom_success` | Count | Non-dominant successes | 0-5 |
+| `throw_dom_hand` | Categorical | Dominant hand | Left, Right |
+
+### Calculated Variables
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `throw_accuracy_pct` | successes ÷ 10 × 100 | Performance % |
+| `throw_calibration` | accuracy - rating | + = underconfident, - = overconfident |
+
+::: {.callout-important}
+## Calibration Score
+- **Positive**: You performed better than you predicted (underconfident)
+- **Negative**: You predicted better than you performed (overconfident)
+- **Zero**: Perfect calibration!
+:::
+
+---
+
+## Session Feedback
+
+<span class="station-badge post">End of Session</span>
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `enjoyed_overall` | Ordinal | Overall enjoyment | 1-10 |
+| `fav_station` | Categorical | Favourite station | 1-6 |
+| `least_fav_station` | Categorical | Least favourite | 1-6 |
+| `comments` | Text | Open feedback | Free text |
+
+---
+
+## Analysis Ideas
+
+### Pre-Post Comparisons (Paired t-tests)
+- Did mood improve during DataLab?
+- Did stress decrease?
+- Did energy change?
+
+### Correlations
+- Extraversion × mood change
+- Sleep hours × energy change
+- Conscientiousness × calibration
+
+### Group Comparisons (Independent t-tests)
+- Lab A (silence) vs Lab B (music) on time estimation
+- Visual vs tactile estimation accuracy
+
+### Signal Detection
+- Calculate d' (sensitivity) for stare detection
+- Test hit rate against chance (0.5)
+
+---
+
+## Download
+
+::: {.callout-note}
+## Full Data Dictionary
+For the complete variable specification including Qualtrics setup details, see the [Qualtrics Survey Specification](../_datalab_plans/Qualtrics_Survey_Specification_v3.md).
+:::

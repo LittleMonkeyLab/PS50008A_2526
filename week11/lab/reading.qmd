@@ -7,15 +7,41 @@ filters:
   - lml/glossary
 ---
 
+```{=html}
+<style>
+.station-card {
+  float: right;
+  max-width: 200px;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+@media (max-width: 600px) {
+  .station-card {
+    float: none;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+</style>
+```
+
 ## Overview
 
 This reading prepares you for the DataLab session. It explains the cognitive tasks you'll complete and why we're collecting these data.
+
+::: {.callout-tip}
+## Data Dictionary
+For a complete reference of all variables collected, see the [Data Dictionary](data-dictionary.qmd).
+:::
 
 ## What You'll Be Measuring
 
 DataLab includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
 
 ### Station 1: Reaction Time (Reflex Test)
+
+![](images/station1-reflex.png){.station-card}
 
 {{< term reaction_time "Reaction time" >}} is the interval between a stimulus and your response to it. In the ruler-drop task, we measure **simple reaction time** — how quickly you can respond to a single, expected stimulus.
 
@@ -28,6 +54,8 @@ Reaction time is one of the most reliable measures in psychology. Your data will
 
 ### Station 2: Memory (Mind Palace)
 
+![](images/station2-mind-palace.png){.station-card}
+
 The memory task measures {{< term working_memory >}} — how many items you can hold in mind while performing another task.
 
 Miller (1956) famously proposed that we can hold about **7 ± 2** items in short-term memory — the "magical number seven." But the distraction task (maths problems) interferes with rehearsal, so performance typically drops.
@@ -35,6 +63,8 @@ Miller (1956) famously proposed that we can hold about **7 ± 2** items in short
 We'll also examine the **serial position effect**: people tend to remember words from the beginning of a list (primacy) and end of a list (recency) better than the middle. Your position-by-position recall data will let us test this pattern.
 
 ### Station 3: Time and Magnitude Perception (Time Warp)
+
+![](images/station3-time-warp.png){.station-card}
 
 How accurately do we perceive time? Research shows that our internal clocks are surprisingly inaccurate and can be influenced by many factors.
 
@@ -51,6 +81,8 @@ By comparing visual and tactile estimation, we can explore whether some senses a
 
 ### Station 4: Psychic Staring (Sixth Sense)
 
+![](images/station4-sixth-sense.png){.station-card}
+
 Can humans detect when they're being watched? This is a testable empirical question!
 
 The staring detection task uses {{< term signal_detection "signal detection theory" >}}:
@@ -63,6 +95,8 @@ The staring detection task uses {{< term signal_detection "signal detection theo
 If people cannot actually detect staring, we'd expect performance to be at **chance level** (about 50% correct, or 3 out of 6 trials).
 
 ### Station 5: Randomness (Lady Luck)
+
+![](images/station5-lady-luck.png){.station-card}
 
 Humans are notoriously bad at generating random sequences. When asked to produce "random" numbers, people:
 
@@ -78,6 +112,8 @@ Many people believe that after a streak of heads, tails is "due." This is false 
 :::
 
 ### Station 6: Metacognition (Frontal Lob)
+
+![](images/station6-frontal-lob.png){.station-card}
 
 {{< term metacognition "Metacognition" >}} is thinking about your own thinking — including how well you know your own abilities.
 

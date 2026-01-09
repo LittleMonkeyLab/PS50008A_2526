@@ -44,7 +44,7 @@ By the end of this week, you will be able to:
 |---------|-------|-----------|
 | Lecture | Practice Assignment | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
 | Lab | Project Groups: Literature Review | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Homework | Week 16 Exercises | [Homework](lab/homework.qmd) |
+| Self-Assessment | Week 16 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
 
 ## Preparation
 
@@ -63,4 +63,4 @@ Before the lecture:
 
 - [Week 16 Lecture Slides](lecture/slides.qmd)
 - [Lab Activity](lab/activity.qmd)
-- [Homework](lab/homework.qmd)
+- [Self-Assessment](lab/self-assessment.qmd)

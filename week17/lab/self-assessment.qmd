@@ -1,5 +1,5 @@
 ---
-title: "Week 17 Homework"
+title: "Week 17 Self-Assessment"
 subtitle: "Practice MCQ Test & Project Groups: Methodology"
 author: "Gordon Wright"
 date: "2026-03-04"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w17-homework
-  subtype: homework
+  id: rm0-w17-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-03-08"
-  labels: ['assessment', 'project', 'methodology', 'homework']
+  labels: ['assessment', 'project', 'methodology', 'self-assessment']
   depends_on:
     - rm0-w17-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 17.
+This self-assessment consolidates your learning from Week 17.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-03-08.
+Complete this self-assessment by 2026-03-08.
 :::
 
 ## Part 1: Conceptual Questions

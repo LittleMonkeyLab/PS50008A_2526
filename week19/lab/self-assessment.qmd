@@ -1,5 +1,5 @@
 ---
-title: "Week 19 Homework"
+title: "Week 19 Self-Assessment"
 subtitle: "In-class MCQ Test & Live Data Collection"
 author: "Gordon Wright"
 date: "2026-03-18"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w19-homework
-  subtype: homework
+  id: rm0-w19-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-03-22"
-  labels: ['assessment', 'data-collection', 'project', 'homework']
+  labels: ['assessment', 'data-collection', 'project', 'self-assessment']
   depends_on:
     - rm0-w19-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 19.
+This self-assessment consolidates your learning from Week 19.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-03-22.
+Complete this self-assessment by 2026-03-22.
 :::
 
 ## Part 1: Conceptual Questions

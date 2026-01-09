@@ -214,7 +214,7 @@ Each week typically includes:
 - **Thursday**: 2-hour lab session
 - **Preview video**: Watch before lecture
 - **Readings**: Textbook chapters
-- **Homework**: Practice exercises
+- **Self-Assessment**: Practice exercises
 
 ---
 

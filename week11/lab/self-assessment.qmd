@@ -1,5 +1,5 @@
 ---
-title: "Week 11 Homework"
+title: "Week 11 Self-Assessment"
 subtitle: "Introduction to Designing Good Experiments & Observation of Human Behaviour"
 author: "Gordon Wright"
 date: "2026-01-14"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w11-homework
-  subtype: homework
+  id: rm0-w11-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-01-18"
-  labels: ['experimental-design', 'data-collection', 'observation', 'homework']
+  labels: ['experimental-design', 'data-collection', 'observation', 'self-assessment']
   depends_on:
     - rm0-w11-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 11.
+This self-assessment consolidates your learning from Week 11.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-01-18.
+Complete this self-assessment by 2026-01-18.
 :::
 
 ## Part 1: Conceptual Questions

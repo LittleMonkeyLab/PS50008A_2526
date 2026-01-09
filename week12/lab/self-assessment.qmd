@@ -1,5 +1,5 @@
 ---
-title: "Week 12 Homework"
+title: "Week 12 Self-Assessment"
 subtitle: "Distributions & Variability Practice"
 author: "Gordon Wright"
 date: "2026-01-23"
@@ -7,11 +7,11 @@ date: "2026-01-23"
 
 ## Overview
 
-This homework consolidates your learning from Week 12. Complete these exercises before next Monday's lecture.
+This self-assessment consolidates your learning from Week 12. Complete these exercises before next Monday's lecture.
 
 ::: {.callout-note}
 ## Formative Assessment
-This homework is **not graded** but completing it will prepare you for:
+This self-assessment is **not graded** but completing it will prepare you for:
 - The MCQ Exam (identifying distributions and statistics)
 - The EDS Assignment (calculating by hand)
 - The Research Report (reporting descriptives)
@@ -239,7 +239,7 @@ Yes, this is unusual. 200ms is (300-200)/40 = 2.5 SDs below the mean. Only about
 
 ## Summary
 
-After completing this homework, you should be able to:
+After completing this self-assessment, you should be able to:
 
 - Calculate mean, median, and SD by hand
 - Predict and identify distribution shapes

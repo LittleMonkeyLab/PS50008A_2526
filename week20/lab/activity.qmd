@@ -25,7 +25,7 @@ taskmistress:
   depends_on:
     - rm0-w20-lab-slides
   blocks:
-    - rm0-w20-homework
+    - rm0-w20-self-assessment
   version:
     number: "0.1"
     status: draft
@@ -78,5 +78,5 @@ TBC - Interactive exercises
 
 ## Next Steps
 
-- Complete the [Week 20 Homework](homework.qmd)
+- Complete the [Week 20 Self-Assessment](self-assessment.qmd)
 - Prepare for Week next term

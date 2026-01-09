@@ -1,5 +1,5 @@
 ---
-title: "Week 18 Homework"
+title: "Week 18 Self-Assessment"
 subtitle: "Running Experiments Ethically and Effectively & Project Groups: Procedure"
 author: "Gordon Wright"
 date: "2026-03-11"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w18-homework
-  subtype: homework
+  id: rm0-w18-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-03-15"
-  labels: ['ethics', 'experimental-design', 'project', 'procedure', 'homework']
+  labels: ['ethics', 'experimental-design', 'project', 'procedure', 'self-assessment']
   depends_on:
     - rm0-w18-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 18.
+This self-assessment consolidates your learning from Week 18.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-03-15.
+Complete this self-assessment by 2026-03-15.
 :::
 
 ## Part 1: Conceptual Questions

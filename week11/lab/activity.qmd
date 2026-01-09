@@ -5,6 +5,36 @@ author: "Gordon Wright"
 date: "2026-01-16"
 ---
 
+```{=html}
+<style>
+.station-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.station-img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.station-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.station-grid img:hover {
+  transform: scale(1.03);
+}
+</style>
+```
+
 ## Overview
 
 ::: {.callout-important}
@@ -38,9 +68,32 @@ Before the stations begin, you'll complete:
 - How you're feeling right now
 :::
 
+## The Six Stations
+
+::: {.station-grid}
+![Station 1: Reflex Test](images/station1-reflex.png)
+
+![Station 2: Mind Palace](images/station2-mind-palace.png)
+
+![Station 3: Time Warp](images/station3-time-warp.png)
+
+![Station 4: Sixth Sense](images/station4-sixth-sense.png)
+
+![Station 5: Lady Luck](images/station5-lady-luck.png)
+
+![Station 6: Frontal Lob](images/station6-frontal-lob.png)
+:::
+
+::: {.callout-tip}
+## Data Dictionary
+See the [Data Dictionary](data-dictionary.qmd) for a complete reference of all variables you'll be collecting.
+:::
+
 ---
 
 ## Station 1: Reflex Test {#station-1}
+
+![](images/station1-reflex.png){.station-img fig-align="center"}
 
 **How fast is your nervous system?**
 
@@ -70,6 +123,8 @@ Your catch distance can be converted to reaction time using physics! The formula
 
 ## Station 2: Mind Palace {#station-2}
 
+![](images/station2-mind-palace.png){.station-img fig-align="center"}
+
 **What survives the interference?**
 
 This station tests your **working memory** and the effects of distraction.
@@ -96,6 +151,8 @@ Keep the word list face-down during the distraction and recall phases. The maths
 ---
 
 ## Station 3: Time Warp {#station-3}
+
+![](images/station3-time-warp.png){.station-img fig-align="center"}
 
 **Your brain's internal clock**
 
@@ -136,6 +193,8 @@ The most interesting data comes when you try to *feel* the time passing rather t
 
 ## Station 4: Sixth Sense {#station-4}
 
+![](images/station4-sixth-sense.png){.station-img fig-align="center"}
+
 **Can you tell when someone is watching you?**
 
 This station investigates whether humans can detect when they're being stared at.
@@ -164,6 +223,8 @@ If you don't have a partner, there's a video version available — ask the facil
 ---
 
 ## Station 5: Lady Luck {#station-5}
+
+![](images/station5-lady-luck.png){.station-img fig-align="center"}
 
 **How random can you be?**
 
@@ -199,6 +260,8 @@ Just say the first number that pops into your head. Don't try to make it "look" 
 ---
 
 ## Station 6: Frontal Lob {#station-6}
+
+![](images/station6-frontal-lob.png){.station-img fig-align="center"}
 
 **Precision meets confidence**
 

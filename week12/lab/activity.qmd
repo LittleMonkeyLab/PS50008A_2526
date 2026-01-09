@@ -384,6 +384,6 @@ olympics %>%
 
 ## Next Steps
 
-1. Complete the [Week 12 Homework](homework.qmd)
+1. Complete the [Week 12 Self-Assessment](self-assessment.qmd)
 2. Review the [Lecture Reading](../lecture/reading.qmd) for the concepts
 3. Prepare for Week 13: Estimation & Confidence Intervals

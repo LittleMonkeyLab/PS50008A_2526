@@ -42,7 +42,7 @@ By the end of this lab, you will be able to:
 | 10:15-10:45 | Part 1: Basic descriptives |
 | 10:45-11:15 | Part 2: Visualising distributions |
 | 11:15-11:45 | Part 3: Comparing groups |
-| 11:45-12:00 | Wrap-up and homework |
+| 11:45-12:00 | Wrap-up and self-assessment |
 
 ---
 
@@ -283,9 +283,9 @@ In Week 14, we'll learn t-tests to answer this question.
 
 ---
 
-## Homework
+## Self-Assessment
 
-Complete the [Week 12 Homework](homework.qmd) before next Monday.
+Complete the [Week 12 Self-Assessment](self-assessment.qmd) before next Monday.
 
 Focus on:
 

@@ -1,5 +1,5 @@
 ---
-title: "Week 13 Homework"
+title: "Week 13 Self-Assessment"
 subtitle: "Correlational Designs & Correlational Analysis"
 author: "Gordon Wright"
 date: "2026-01-28"
@@ -8,12 +8,12 @@ format:
     toc: true
     toc-depth: 2
 taskmistress:
-  id: rm0-w13-homework
-  subtype: homework
+  id: rm0-w13-self-assessment
+  subtype: self-assessment
   status: backlog
   priority: 2
   due: "2026-02-01"
-  labels: ['correlation', 'research-design', 'correlation', 'r-programming', 'homework']
+  labels: ['correlation', 'research-design', 'correlation', 'r-programming', 'self-assessment']
   depends_on:
     - rm0-w13-lab-activity
   version:
@@ -27,11 +27,11 @@ taskmistress:
 
 ## Overview
 
-This homework consolidates your learning from Week 13.
+This self-assessment consolidates your learning from Week 13.
 
 ::: {.callout-important}
 ## Deadline
-Complete this homework by 2026-02-01.
+Complete this self-assessment by 2026-02-01.
 :::
 
 ## Part 1: Conceptual Questions

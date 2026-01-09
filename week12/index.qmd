@@ -58,7 +58,7 @@ We'll apply these tools to YOUR DataLab data — the reaction times, memory scor
 | [Lab Reading](lab/reading.qmd) | Introduction to R and descriptive statistics |
 | [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
 | [Lab Activity](lab/activity.qmd) | WebR exercises with DataLab data |
-| [Homework](lab/homework.qmd) | Practice exercises (formative) |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
 
 ## Week at a Glance
 
@@ -66,7 +66,7 @@ We'll apply these tools to YOUR DataLab data — the reaction times, memory scor
 |-----|---------|-------|
 | Monday | Lecture (2 hrs) | Distributions, central tendency, variability |
 | Thursday | Lab (2 hrs) | Computing descriptives in R |
-| By next Monday | Homework | Practice calculations and interpretation |
+| By next Monday | Self-Assessment | Practice calculations and interpretation |
 
 ## Key Concepts
 
