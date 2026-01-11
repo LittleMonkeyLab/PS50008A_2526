@@ -64,7 +64,7 @@ On successful completion of this module, you will be able to:
 
 ::: {.callout-note}
 ## Week 11
-There is no lecture in Week 11. Watch the preview video and attend your lab session on Thursday for DataLab.
+There is no lecture in Week 11. Read the intro lecture reading and attend your lab session on Thursday for DataLab.
 :::
 
 ## Weekly Materials
@@ -74,7 +74,6 @@ Each week typically includes:
 | Material | Description |
 |----------|-------------|
 | Lecture Slides | Core content (RevealJS, recorded) |
-| Preview Video | Short video to watch before lecture |
 | Lecture Reading | Textbook content for the week |
 | Lab Slides | Introduction to lab session |
 | Lab Activity | Interactive WebR exercises |
@@ -120,9 +119,9 @@ Working in groups is a core part of this module. Later in the term, your group (
 
 ### Forming Your Groups
 
-In Week 11, you will work in small groups (3-4 students). This matters, so we are having a nice gentle start!
+In Week 11, you will work in small groups (2-4 students). This matters, so we are having a nice gentle start!
 
-Pay attention to who communicates clearly, who shows up prepared, who you can rely on. Choose people you can realistically meet with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project throughout the term. It doesn't mean that you can't start planning your group members and group working strategy now though!
+Pay attention to who communicates clearly, who seems enthusiastic, who you can rely on. Consider working with people you feel comfortable working with outside class hours. Your group will work together on labs from Week 16 onwards and on the research project which makes up a large part of this module. It doesn't mean that you can't start planning your group members and group working strategy now though!
 
 ::: {.callout-important}
 ## Choose Wisely
@@ -151,7 +150,7 @@ While the data collection is collaborative, both the Research Plan and Research 
 
 ::: {.callout-note}
 ## Labs in Project Groups
-From Week 16 onwards, labs are conducted in your project groups.
+From Week 16 onwards, labs require you to work in your project groups.
 :::
 
 ## Attendance Policy
@@ -165,7 +164,7 @@ Attendance at all lectures and labs is expected and required. This module builds
 
 ::: {.callout-warning}
 ## DataLab
-You must attend Week 11 to participate in DataLab. This generates the dataset used throughout the term.
+You must attend Week 11 to participate in DataLab. This generates the dataset used throughout the term. If you took the time to contribute the data, the data will play nicely with you! (Guaranteed-ish!)
 :::
 
 ## Academic Integrity

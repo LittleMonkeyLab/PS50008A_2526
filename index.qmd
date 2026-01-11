@@ -13,7 +13,7 @@ Welcome to PS50008A Research Methods & Experimental Design. This module introduc
 ## First Week
 NO LECTURE IN WEEK 11 - Employability session with the rest of the undergrad cohort!
 
-Your first Research Methods session is **Thursday of Week 11** in the labs. Watch the [preview video](week11/lecture/video.qmd) before attending.
+Your first Research Methods session is **Thursday of Week 11** in the labs. Read the [preview reading](week11/lecture/reading.qmd) before attending.
 :::
 
 ## Module Overview
@@ -60,7 +60,6 @@ Each week typically includes:
 | Component | Description |
 |-----------|-------------|
 | **Lecture** | Core concepts and theory (recorded) |
-| **Preview Video** | Short video to watch before lecture |
 | **Lecture Reading** | Textbook content for the week |
 | **Lab** | Hands-on practical work with R |
 | **Lab Activity** | Interactive WebR exercises |
@@ -78,7 +77,7 @@ Each week typically includes:
 1. Read the [Syllabus](syllabus.qmd) for full module information
 2. Check the [Schedule](schedule.qmd) for dates and topics
 3. Review the [Assessments](assessments.qmd) to understand what's expected
-4. Prepare for [Week 11](week11/index.qmd) by watching the preview video
+4. Prepare for [Week 11](week11/index.qmd) by reading the module intro
 
 ## Quick Links
 

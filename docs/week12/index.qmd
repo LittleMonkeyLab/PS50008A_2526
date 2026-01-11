@@ -1,0 +1,100 @@
+---
+title: "Week 12: Distributions & Variability"
+subtitle: "PS50008A Research Methods | 19-23 January 2026"
+author: "Gordon Wright"
+date: "2026-01-19"
+---
+
+## Overview
+
+::: {.callout-note}
+## First Lecture Week
+This is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.
+:::
+
+**This week**: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.
+
+**Lecture**: Monday (2 hours)
+**Lab**: Thursday 10:00-12:00
+
+## Learning Objectives
+
+By the end of this week, you will be able to:
+
+- Distinguish between measures of central tendency (mean, median, mode)
+- Calculate and interpret measures of variability (range, variance, standard deviation)
+- Recognise different distribution shapes and what they tell us about data
+- Use R to compute descriptive statistics
+- Report descriptive statistics in APA format
+
+## Before the Lecture
+
+::: {.callout-important}
+## Required Preparation
+1. **Watch the preview video** (10 minutes)
+2. **Read the lecture reading** — covers distributions and variability concepts
+3. **Review your DataLab results** — we'll use this data in class
+:::
+
+## The Big Picture
+
+This week answers the question: **How do we summarise data?**
+
+Before we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:
+
+- **Locate** where the data is centred (central tendency)
+- **Describe** how spread out the data is (variability)
+- **Visualise** the shape of the distribution
+
+We'll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week.
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Preview Video](lecture/video.qmd) | What to expect this week (watch before lecture) |
+| [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
+| [Lecture Reading](lecture/reading.qmd) | Distributions, central tendency, variability |
+| [Lab Reading](lab/reading.qmd) | Introduction to R and descriptive statistics |
+| [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
+| [Lab Activity](lab/activity.qmd) | WebR exercises with DataLab data |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Monday | Lecture (2 hrs) | Distributions, central tendency, variability |
+| Thursday | Lab (2 hrs) | Computing descriptives in R |
+| By next Monday | Self-Assessment | Practice calculations and interpretation |
+
+## Key Concepts
+
+### Central Tendency
+- **Mean**: The arithmetic average — sum of values divided by count
+- **Median**: The middle value when data is ordered
+- **Mode**: The most frequent value
+
+### Variability
+- **Range**: Difference between maximum and minimum
+- **Variance**: Average of squared deviations from the mean
+- **Standard Deviation**: Square root of variance — same units as the data
+
+### Distribution Shape
+- **Normal**: Symmetric, bell-shaped
+- **Skewed**: Asymmetric (positive = tail to right, negative = tail to left)
+- **Bimodal**: Two peaks
+
+## Connecting to Assessments
+
+This week's content directly supports:
+
+| Assessment | Connection |
+|------------|------------|
+| **MCQ Exam** | Questions on identifying distributions and choosing statistics |
+| **EDS Assignment** | You'll calculate means and SDs by hand |
+| **Research Report** | Results section begins with descriptive statistics |
+
+## What's Next?
+
+**Week 13**: Estimation & Confidence Intervals — moving from describing data to making inferences about populations.

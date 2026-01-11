@@ -1,0 +1,98 @@
+---
+title: "Research Report"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Key Information
+
+| | |
+|---|---|
+| **Deadline** | Friday 1 May 2026, 12 noon |
+| **Submission** | Via Moodle submission link |
+| **Word count** | 2,500 words (±10%) |
+| **Format** | Individual lab report in APA format |
+| **Weight** | 40% |
+
+---
+
+## Task
+
+Write an individual research report based on your group project data.
+
+::: {.callout-important}
+## Individual Responsibility
+While data comes from your group project, the Research Report is an **individual** assessment. Each group member writes their own report independently.
+:::
+
+---
+
+## Report Structure
+
+Your report should follow standard APA format:
+
+| Section | Content |
+|---------|---------|
+| **Title Page** | Informative title, your name and student number |
+| **Abstract** | ~150 words summarising the study |
+| **Introduction** | Background, rationale, hypothesis |
+| **Method** | Design, Participants, Materials, Procedure |
+| **Results** | Descriptives, inferential tests, effect sizes |
+| **Discussion** | Interpretation, limitations, future directions |
+| **References** | APA format |
+
+---
+
+## Statistical Reporting
+
+Report results in APA format:
+
+- **t-test**: *t*(df) = X.XX, *p* = .XXX, *d* = X.XX
+- **Correlation**: *r*(df) = .XX, *p* = .XXX
+- Include 95% confidence intervals
+
+---
+
+## Report Writing Support
+
+We build report-writing skills progressively throughout the term:
+
+| Weeks | Focus |
+|-------|-------|
+| 12-15 | Results section (descriptives, CIs, test results) |
+| 16-17 | Methods & Introduction |
+| 18-19 | Introduction continued |
+| 20 | Discussion section |
+
+---
+
+## Project Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 11 | Form groups (3-4 students) |
+| 12-15 | Develop research question and design |
+| — | *Reading Week* — Work on Research Plan |
+| 16 | Research Plan due; Begin data collection |
+| 17-18 | Data collection and initial analysis |
+| 19-20 | Complete analysis; Develop write-up (term ends Week 20) |
+| Easter | Individual report writing |
+| Post-term | **Research Report due** Friday 1 May |
+
+::: {.callout-note}
+## Post-Term Deadline
+The Research Report deadline (1 May 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.
+:::
+
+---
+
+## Assessment Criteria
+
+Your report will be assessed on:
+
+- Clarity and structure of writing
+- Appropriate use of APA format
+- Quality of statistical reporting
+- Interpretation and discussion of findings
+- Critical evaluation and suggestions for future research

@@ -18,7 +18,7 @@ date: last-modified
 
 | Week | Dates | Topic | Lecture | Lab | Assessment |
 |:----:|-------|-------|:-------:|:---:|:----------:|
-| 11 | 12-16 Jan | [DataLab](week11/index.qmd) | Video only | DataLab | Form groups |
+| 11 | 12-16 Jan | [DataLab](week11/index.qmd) | None | DataLab |  |
 | 12 | 19-23 Jan | Distributions & Variability | Yes | Descriptives in R | |
 | 13 | 26-30 Jan | Estimation & CIs| Yes | Bootstrap CIs | |
 | 14 | 2-6 Feb | Inference & t-tests | Yes | t-tests in R | |
@@ -40,7 +40,7 @@ date: last-modified
 
 ::: {.callout-warning}
 ## Week 11 Note
-There is no lecture in Week 11 due to employability events. Watch the preview video and attend your lab session on Thursday.
+There is no lecture in Week 11 due to employability events. 
 :::
 
 ## Assessment Deadlines
@@ -60,7 +60,7 @@ There is no lecture in Week 11 due to employability events. Watch the preview vi
 
 - Generate the dataset you'll use all term
 - Form your project groups
-- No lecture—preview video only
+- No lecture 
 
 **Week 12: Distributions & Variability**
 

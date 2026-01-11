@@ -1,6 +1,6 @@
 ---
 title: "Week 11 Self-Assessment"
-subtitle: "Introduction to Designing Good Experiments & Observation of Human Behaviour"
+subtitle: "DataLab Reflection"
 author: "Gordon Wright"
 date: "2026-01-14"
 format:
@@ -17,39 +17,160 @@ taskmistress:
   depends_on:
     - rm0-w11-lab-activity
   version:
-    number: "0.1"
+    number: "0.2"
     status: draft
     changelog:
       - "2026-01-03: Initial structure"
+      - "2026-01-09: Added content for all sections"
   properties:
     deadline: "2026-01-18"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 11.
+This self-assessment helps you consolidate what you learned from DataLab. It's **formative** — not graded — but completing it will help you prepare for the assessments ahead.
 
-::: {.callout-important}
+::: {.callout-note}
 ## Deadline
-Complete this self-assessment by 2026-01-18.
+Complete this self-assessment by **Saturday 18 January 2026**. This gives you time to reflect before we analyse the data in Week 12.
 :::
 
 ## Part 1: Conceptual Questions
 
-TBC
+### 1.1 Variables and Measurement
+
+Think about the data you collected at DataLab.
+
+**Question 1**: At Task 1 (Reflex Test), you recorded catch distances in centimetres.
+
+a) What type of variable is "catch distance" — categorical or continuous?
+
+b) We then converted this to reaction time in milliseconds. Why is this conversion useful?
+
+::: {.callout-tip collapse="true"}
+## Hint
+Think about what units are most meaningful for understanding human reaction time.
+:::
+
+**Question 2**: At Task 5 (Frontal Lob), you rated your throwing ability from 1–10 before throwing.
+
+a) What type of variable is this self-rating?
+
+b) Why did we measure this *before* you actually threw?
+
+### 1.2 The Pre-Post Design
+
+**Question 3**: We measured your mood, energy, and stress both **before** and **after** the activities.
+
+a) Why did we measure the same things twice?
+
+b) What kind of comparison can we make with this design?
+
+c) Why is this called a "within-subjects" design?
+
+::: {.callout-tip collapse="true"}
+## Hint
+Think about who you're comparing — different people, or the same person at different times?
+:::
+
+### 1.3 Being a Participant and a Tester
+
+**Question 4**: At each task, you took turns being the participant (doing the task) and the tester (administering it).
+
+a) Why is it valuable to experience both roles?
+
+b) What did you notice was important when you were the tester?
 
 ## Part 2: Practical Exercises
 
-TBC
+### 2.1 Your Memory Test Data
+
+Look back at your memory test results.
+
+**Exercise 1**:
+
+a) How many words did you recall correctly (out of 10)?
+
+b) Which positions (1–10) did you remember? Were the first few and last few easier to remember than the middle?
+
+c) Did you use any strategy? If so, what was it?
+
+### 2.2 Variability in Your Data
+
+**Exercise 2**: At Task 1 (Reflex Test), you did 5 trials.
+
+a) Were all your catch distances exactly the same, or did they vary?
+
+b) Why might your performance vary from trial to trial, even though you were doing the same task?
+
+c) Did you notice any pattern (e.g., getting faster with practice)?
+
+### 2.3 Calibration
+
+**Exercise 3**: At Task 5 (Frontal Lob), compare your self-rating with your actual performance.
+
+a) What did you rate yourself? (1–10)
+
+b) How many throws did you get in? (out of 10)
+
+c) Were you **overconfident** (rating > performance), **underconfident** (rating < performance), or **well-calibrated** (rating ≈ performance)?
 
 ## Part 3: Reflection
 
-TBC
+### 3.1 The Research Experience
+
+**Question 5**: What surprised you about participating in DataLab?
+
+Think about:
+- Anything unexpected about your own performance
+- What it felt like to be a research participant
+- What you noticed when you were the tester
+
+### 3.2 Thinking Ahead
+
+**Question 6**: In Week 12, we'll start analysing the DataLab data together.
+
+a) What are you curious to find out from the data?
+
+b) Can you think of any patterns or relationships we might discover?
+
+::: {.callout-note}
+## Examples of Questions We Could Ask
+- Did mood improve after DataLab?
+- Do people who slept more have faster reaction times?
+- Are most people overconfident or underconfident?
+- Can people detect when they're being watched better than chance?
+:::
+
+### 3.3 Working in Pairs
+
+**Question 7**: You worked with a partner at each task.
+
+a) What did you learn from watching your partner do the tasks?
+
+b) Was there anything you would do differently if you ran this study?
 
 ## Submission
 
-TBC - Submission instructions
+This self-assessment is for your own reflection and is **not submitted**.
 
-## Marking Criteria
+However, you should:
 
-This is a **formative** assignment.
+1. Keep your answers for reference
+2. Bring any questions to Week 12
+3. Use this to prepare for discussions about the data
+
+::: {.callout-important}
+## Formative Only
+This does not count toward your grade. It's designed to help you learn and prepare for the assessed work later in the term.
+:::
+
+## Looking Ahead
+
+In **Week 12**, we'll:
+
+- Look at the DataLab results as a class
+- Start learning about distributions and variability
+- See how YOUR data illustrates key statistical concepts
+
+Your participation in DataLab has created a rich dataset that we'll use throughout the term. The questions you've thought about here will help you engage more deeply with the analysis.

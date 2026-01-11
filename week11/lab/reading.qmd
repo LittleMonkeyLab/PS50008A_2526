@@ -37,9 +37,9 @@ For a complete reference of all variables collected, see the [Data Dictionary](d
 
 ## What You'll Be Measuring
 
-DataLab includes six stations measuring different aspects of human cognition and behaviour. Here's the background on each:
+DataLab includes a group memory test plus five tasks measuring different aspects of human cognition and behaviour. Here's the background on each:
 
-### Station 1: Reaction Time (Reflex Test)
+### Task 1: Reaction Time (Reflex Test)
 
 ![](images/station1-reflex.png){.station-card}
 
@@ -52,7 +52,7 @@ The physics is elegant: when you catch a falling ruler, the distance it fell bef
 Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks. We can also look for practice effects — do you get faster across trials?
 :::
 
-### Station 2: Memory (Mind Palace)
+### Memory Test: Mind Palace
 
 ![](images/station2-mind-palace.png){.station-card}
 
@@ -62,7 +62,7 @@ Miller (1956) famously proposed that we can hold about **7 ± 2** items in short
 
 We'll also examine the **serial position effect**: people tend to remember words from the beginning of a list (primacy) and end of a list (recency) better than the middle. Your position-by-position recall data will let us test this pattern.
 
-### Station 3: Time and Magnitude Perception (Time Warp)
+### Task 2: Time and Magnitude Perception (Time Warp)
 
 ![](images/station3-time-warp.png){.station-card}
 
@@ -79,7 +79,7 @@ This station measures three types of estimation:
 By comparing visual and tactile estimation, we can explore whether some senses are more accurate than others for judging physical properties.
 :::
 
-### Station 4: Psychic Staring (Sixth Sense)
+### Task 3: Psychic Staring (Sixth Sense)
 
 ![](images/station4-sixth-sense.png){.station-card}
 
@@ -94,7 +94,7 @@ The staring detection task uses {{< term signal_detection "signal detection theo
 
 If people cannot actually detect staring, we'd expect performance to be at **chance level** (about 50% correct, or 3 out of 6 trials).
 
-### Station 5: Randomness (Lady Luck)
+### Task 4: Randomness (Lady Luck)
 
 ![](images/station5-lady-luck.png){.station-card}
 
@@ -111,7 +111,7 @@ This station also includes dice rolling and coin flipping, which let us compare 
 Many people believe that after a streak of heads, tails is "due." This is false — each flip is independent. Your data will likely show longer runs than most people expect!
 :::
 
-### Station 6: Metacognition (Frontal Lob)
+### Task 5: Metacognition (Frontal Lob)
 
 ![](images/station6-frontal-lob.png){.station-card}
 
@@ -171,14 +171,13 @@ Acting as both **participant** and **tester** teaches you:
 
 | Time | Activity |
 |------|----------|
-| 0:00-0:15 | Welcome, Part 1 survey, form groups |
-| 0:15-1:45 | Rotate through 6 stations (~12-15 min each) |
-| 1:45-1:55 | Part 2 survey |
-| 1:55-2:00 | Debrief & wrap-up |
+| 10:00–10:25 | Welcome, Part 1 survey, **Memory Test** (together) |
+| 10:25–11:45 | Complete 5 tasks (follow your sequence card) |
+| 11:45–12:00 | Part 2 survey & wrap-up |
 
 ## Working in Pairs
 
-At each station, you'll work with a partner:
+At each task, you'll work with a partner:
 
 1. One person is the **participant** (completes the task)
 2. One person is the **tester** (administers the task, records data)
@@ -186,17 +185,7 @@ At each station, you'll work with a partner:
 
 This means everyone experiences both perspectives.
 
-## Group Formation
-
-By the end of the lab, you should have formed your **project group** (3-4 students).
-
-Consider:
-
-- Can you meet regularly outside class?
-- Do you have complementary strengths?
-- Will you be reliable partners?
-
-You'll work together all term on the group research project.
+You'll receive a **sequence card** telling you which tasks to complete in which order.
 
 ## Key Terms
 

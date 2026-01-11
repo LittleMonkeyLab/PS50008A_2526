@@ -1,0 +1,71 @@
+---
+title: "EDS Assignment"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Key Information
+
+| | |
+|---|---|
+| **Deadline** | Friday 20 March 2026, 12 noon |
+| **Submission** | Via Moodle submission link |
+| **Format** | Worked statistics assignment |
+| **Weight** | 20% |
+| **Pass mark** | 50% |
+
+---
+
+## Task Structure
+
+You will receive a research scenario with actual raw data.
+
+### Section A: Statistical Mechanics
+
+1. State the researcher's hypothesis
+2. Identify design type, IV, DV, data type
+3. Calculate means and SDs
+4. Run appropriate statistical tests
+5. Interpret results and write up in APA format
+
+### Section B: Methods and Theory
+
+6. Suggest TWO methodological improvements
+7. Discuss individual differences / extensions
+8. Propose a more ecologically valid alternative (minimum half page)
+
+---
+
+## Critical Requirements
+
+::: {.callout-warning}
+## Demonstrate Understanding
+
+You MUST demonstrate your understanding - not just get the right answer.
+
+- Full marks = right test AND proper justification
+- No punitive marking, so if you get something wrong, you just get zero for that item
+- You are expected to use the terminology and concepts we have been discussing in class
+- Pay attention to the glossaries and readings provided
+:::
+
+---
+
+## What "Demonstrate Understanding" Means
+
+| Aspect | What we're looking for |
+|--------|----------------------|
+| **Test selection** | Why this test? Link to design and data type |
+| **Hypothesis** | Clear statement with direction justified |
+| **Interpretation** | What does the result mean in context? |
+| **Improvements** | Thoughtful, specific, feasible suggestions |
+
+---
+
+## Preparation
+
+- Practice with worked examples from labs
+- Review APA reporting format for statistics
+- Understand the logic behind test selection
+- Be comfortable calculating means and SDs by hand

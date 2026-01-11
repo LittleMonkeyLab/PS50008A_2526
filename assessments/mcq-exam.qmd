@@ -1,0 +1,75 @@
+---
+title: "MCQ Exam"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Key Information
+
+| | |
+|---|---|
+| **Date** | Wednesday 11 March 2026 |
+| **Time** | During your normal lecture slot |
+| **Duration** | 1 hour |
+| **Location** | Normal lecture venue |
+| **Format** | Paper-based, multiple choice |
+| **Weight** | 20% |
+
+---
+
+## Exam Structure
+
+The paper contains multiple "Investigations" — each is a short scenario describing a research study. For each Investigation, you answer 6 questions:
+
+1. **Design**: Identify the design (between/within/matched/correlational)
+2. **IV**: Identify the independent variable (or recognise no IV)
+3. **DV**: Identify the dependent variable
+4. **Hypothesis**: Identify the appropriate hypothesis type
+5. **Test**: Select the appropriate statistical test
+6. **Interpretation**: Interpret the results
+
+There will be a series of other MCQs testing comprehension of other aspects of the course to date.
+
+---
+
+## What You Need to Know
+
+### Statistical Tests
+
+You must be able to select the appropriate test:
+
+| Design | Parametric | Non-parametric |
+|--------|------------|----------------|
+| Between-participants | Independent t-test | Mann-Whitney U |
+| Within-participants | Paired t-test | Wilcoxon signed-rank |
+| Correlational | Pearson's r | Spearman's rho |
+
+### The Decision Framework
+
+```
+Design → Variables → Hypothesis → Test → Interpret
+```
+
+---
+
+## How to Prepare
+
+::: {.callout-tip}
+## Practice Makes Perfect
+Complete the weekly self-assessment activities - they are designed to be exactly like the exam questions.
+:::
+
+- Review the MCQ decision framework
+- Focus on the logic and the concepts being used, not memorisation
+- Practice identifying IVs and DVs from scenarios
+- Understand when to use each statistical test
+
+---
+
+## Exam Conditions
+
+- **Closed-book**: No notes or materials allowed
+- **No collaboration**: Individual assessment
+- **Paper-based**: Bring a pen (not pencil)
+- **No calculators**: Not required for this exam

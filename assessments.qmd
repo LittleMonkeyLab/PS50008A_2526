@@ -9,10 +9,10 @@ date: last-modified
 
 | Assessment | Weight | Deadline | Week |
 |------------|--------|----------|:----:|
-| [Research Plan](#research-plan) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
-| [MCQ Exam](#mcq-exam) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
-| [EDS Assignment](#eds-assignment) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
-| [Research Report](#research-report) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+| [Research Plan](assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
+| [MCQ Exam](assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
+| [EDS Assignment](assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
+| [Research Report](assessments/research-report.qmd) | 40% | Fri 1 May 2026, 12 noon | Post-term |
 
 ---
 
@@ -22,192 +22,6 @@ date: last-modified
 ## Examples of all assessments will be provided
 
 Examples of all assessments will be provided with plenty of support. We cannot give marks for these, but we will work through examples in class.
-
-:::
-
-## Research Plan {#research-plan}
-
-### Key Information
-
-- **Deadline**: Friday 27 February 2026, 12 noon
-- **Submission**: Via Moodle submission link
-- **Word count**: Approximately 1,000 words
-- **Weight**: 20%
-
-### Task
-
-Describe how you would investigate **ONE** of the following research topics: (Examples only)
-
-1. **The effect of caffeine on learning nouns.**
-
-2. **The effect of TV programme content on the recall of advertisements presented part-way through the programme.**
-
-3. **The effect of relaxation classes on stress reduction in the work place.**
-
-### What to Include
-
-**a) Experimental Hypothesis**
-
-- State your experimental hypothesis clearly
-- Note whether it is one-tailed or two-tailed
-- Explain why you chose this direction
-
-**b) Method Section**
-
-A detailed Method section with:
-
-- **Design**: What type of design? Why is it appropriate?
-- **Participants**: Who, how many, how recruited?
-- **Materials/Stimuli**: What materials would you need?
-- **Procedure**: Step by step, with controls
-
-**c) Draft Results Section**
-
-- Draw a summary data table (with appropriate headings—do NOT invent data)
-- State which statistical test should be used
-- Justify your choice of test
-
-### Important Notes
-
-- Do NOT invent any data—this is a plan, not a completed study
-- Focus on justifying your choices throughout
-- Show you understand the connection between design and analysis
-
----
-
-## MCQ Exam {#mcq-exam}
-
-### Key Information
-
-- **Date**: Wednesday 11 March 2026
-- **Time**: During your normal lecture slot
-- **Duration**: 1 hour
-- **Location**: Normal lecture venue
-- **Format**: Paper-based, multiple choice
-- **Weight**: 20%
-
-### Exam Structure
-
-The paper contains multiple "Investigations" — each is a short scenario describing a research study. For each Investigation, you answer 6 questions:
-
-1. **Design**: Identify the design (between/within/matched/correlational)
-2. **IV**: Identify the independent variable (or recognise no IV)
-3. **DV**: Identify the dependent variable
-4. **Hypothesis**: Identify the appropriate hypothesis type
-5. **Test**: Select the appropriate statistical test
-6. **Interpretation**: Interpret the results
-
-There will be a series of other MCQs testing comprehension of other aspects of the course to date.
-
-### What You Need to Know
-
-**Tests you must be able to select:**
-
-| Design | Parametric | Non-parametric |
-|--------|------------|----------------|
-| Between-participants | Independent t-test | Mann-Whitney U |
-| Within-participants | Paired t-test | Wilcoxon signed-rank |
-| Correlational | Pearson's r | Spearman's rho |
-
-### How to Prepare
-
-- Complete the weekly self-assessment activities - they are designed to be exactly like the assessments
-- Review the MCQ decision framework: Design → Variables → Hypothesis → Test → Interpret
-- Focus on the logic and the concepts being used, not memorisation
-
----
-
-## EDS Assignment {#eds-assignment}
-
-### Key Information
-
-- **Deadline**: Friday 20 March 2026, 12 noon
-- **Submission**: Via Moodle submission link
-- **Format**: Worked statistics assignment
-- **Weight**: 20%
-- **Pass mark**: 50%
-
-### Task Structure
-
-You will receive a research scenario with actual raw data.
-
-**Section A: Statistical Mechanics**
-
-1. State the researcher's hypothesis
-2. Identify design type, IV, DV, data type
-3. Calculate means and SDs 
-4. Run appropriate statistical tests
-5. Interpret results and write up in APA format
-
-**Section B: Methods and Theory**
-
-6. Suggest TWO methodological improvements
-7. Discuss individual differences / extensions
-8. Propose a more ecologically valid alternative (minimum half page)
-
-### Critical Requirements
-
-::: {.callout-warning}
-## You MUST demonstrate your understanding - not just get the right answer
-
-- Full marks = right test AND proper justification
-- No punitive marking, so if you get something wrong, you just get zero
-- You are expected to use the terminology and concepts we have been discussing in class, so pay attention to the glossaries and readings provided
-:::
-
-
-
-
----
-
-## Research Report {#research-report}
-
-### Key Information
-
-- **Deadline**: Friday 1 May 2026, 12 noon
-- **Submission**: Via Moodle submission link
-- **Word count**: 2,500 words (±10%)
-- **Format**: Individual lab report in APA format
-- **Weight**: 40%
-
-### Task
-
-Write an individual research report based on your group project data.
-
-### Report Structure
-
-Your report should follow standard APA format:
-
-- **Title Page**: Informative title, your name and student number
-- **Abstract**: ~150 words summarising the study
-- **Introduction**: Background, rationale, hypothesis
-- **Method**: Design, Participants, Materials, Procedure
-- **Results**: Descriptives, inferential tests, effect sizes
-- **Discussion**: Interpretation, limitations, future directions
-- **References**: APA format
-
-### Statistical Reporting
-
-Report results in APA format:
-
-- t-test: *t*(df) = X.XX, *p* = .XXX, *d* = X.XX
-- Correlation: *r*(df) = .XX, *p* = .XXX
-- Include 95% confidence intervals
-
-### Report Writing Support
-
-We build report-writing skills progressively throughout the term:
-
-| Weeks | Focus |
-|-------|-------|
-| 12-15 | Results section (descriptives, CIs, test results) |
-| 16-17 | Methods & Introduction |
-| 18-19 | Introduction continued |
-| 20 | Discussion section |
-
-::: {.callout-note}
-## Post-Term Deadline
-The Research Report deadline (1 May 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.
 :::
 
 ---
@@ -216,8 +30,8 @@ The Research Report deadline (1 May 2026) is after teaching ends. Use the Easter
 
 The group project is **not separately assessed** but feeds into two assessments:
 
-- **Research Plan** (due Week 16): Based on your group's research question
-- **Research Report** (due 1 May, post-term): Individual write-up of group project data
+- **[Research Plan](assessments/research-plan.qmd)** (due Week 16): Based on your group's research question
+- **[Research Report](assessments/research-report.qmd)** (due 1 May, post-term): Individual write-up of group project data
 
 ### Project Timeline
 

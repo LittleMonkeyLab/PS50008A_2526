@@ -1,0 +1,88 @@
+---
+title: "Research Plan"
+subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
+author: "Gordon Wright"
+date: last-modified
+---
+
+## Key Information
+
+| | |
+|---|---|
+| **Deadline** | Friday 27 February 2026, 12 noon |
+| **Submission** | Via Moodle submission link |
+| **Word count** | Approximately 1,000 words |
+| **Weight** | 20% |
+
+---
+
+## Task
+
+Describe how you would investigate **ONE** of the following research topics: (Examples only)
+
+1. **The effect of caffeine on learning nouns.**
+
+2. **The effect of TV programme content on the recall of advertisements presented part-way through the programme.**
+
+3. **The effect of relaxation classes on stress reduction in the work place.**
+
+---
+
+## What to Include
+
+### a) Experimental Hypothesis
+
+- State your experimental hypothesis clearly
+- Note whether it is one-tailed or two-tailed
+- Explain why you chose this direction
+
+### b) Method Section
+
+A detailed Method section with:
+
+- **Design**: What type of design? Why is it appropriate?
+- **Participants**: Who, how many, how recruited?
+- **Materials/Stimuli**: What materials would you need?
+- **Procedure**: Step by step, with controls
+
+### c) Draft Results Section
+
+- Draw a summary data table (with appropriate headings—do NOT invent data)
+- State which statistical test should be used
+- Justify your choice of test
+
+---
+
+## Important Notes
+
+::: {.callout-warning}
+## Do NOT Invent Data
+This is a **plan**, not a completed study. Focus on justifying your choices throughout and show you understand the connection between design and analysis.
+:::
+
+---
+
+## Connection to Group Project
+
+The Research Plan assessment is based on your group's research question. While you develop your research question as a group, the Research Plan submission is **individual**.
+
+### Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 11 | Form groups (3-4 students) |
+| 12-15 | Develop research question and design |
+| — | *Reading Week* — Work on Research Plan |
+| 16 | **Research Plan due** Friday 27 Feb |
+
+---
+
+## Assessment Criteria
+
+Your Research Plan will be assessed on:
+
+- Clarity and appropriateness of hypothesis
+- Justification of design choices
+- Feasibility and detail of procedure
+- Appropriate selection and justification of statistical test
+- Overall coherence and scientific reasoning

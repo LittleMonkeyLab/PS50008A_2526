@@ -6,9 +6,10 @@ project:
     - syllabus.qmd
     - schedule.qmd
     - assessments.qmd
+    - assessments/
     - resources.qmd
     - week11/
-    - week12/
+    # - week12/
 
 website:
   title: "PS50008A Research Methods & Experimental Design"
@@ -26,7 +27,18 @@ website:
       - text: "Schedule"
         href: schedule.qmd
       - text: "Assessments"
-        href: assessments.qmd
+        menu:
+          - text: "Overview"
+            href: assessments.qmd
+          - text: "---"
+          - text: "Research Plan"
+            href: assessments/research-plan.qmd
+          - text: "MCQ Exam"
+            href: assessments/mcq-exam.qmd
+          - text: "EDS Assignment"
+            href: assessments/eds-assignment.qmd
+          - text: "Research Report"
+            href: assessments/research-report.qmd
       - text: "Resources"
         href: resources.qmd
 
@@ -43,7 +55,18 @@ website:
           - index.qmd
           - syllabus.qmd
           - schedule.qmd
-          - assessments.qmd
+          - section: "Assessments"
+            contents:
+              - text: "Overview"
+                href: assessments.qmd
+              - text: "Research Plan"
+                href: assessments/research-plan.qmd
+              - text: "MCQ Exam"
+                href: assessments/mcq-exam.qmd
+              - text: "EDS Assignment"
+                href: assessments/eds-assignment.qmd
+              - text: "Research Report"
+                href: assessments/research-report.qmd
           - resources.qmd
       - section: "Term 2"
         contents:
@@ -53,8 +76,8 @@ website:
                 href: week11/index.qmd
               - section: "Lecture"
                 contents:
-                  - text: "Preview Video"
-                    href: week11/lecture/video.qmd
+                  # - text: "Video (NA)"
+                  #   href: week11/lecture/video.qmd
                   - text: "Reading"
                     href: week11/lecture/reading.qmd
                   - text: "Slides"
@@ -62,17 +85,17 @@ website:
                     target: _blank
               - section: "Lab"
                 contents:
-                  - text: "Slides"
-                    href: week11/lab/slides.qmd
-                    target: _blank
-                  - text: "Activity"
-                    href: week11/lab/activity.qmd
-                  - text: "Reading"
-                    href: week11/lab/reading.qmd
-                  - text: "Data Dictionary"
-                    href: week11/lab/data-dictionary.qmd
-                  - text: "Self-Assessment"
-                    href: week11/lab/self-assessment.qmd
+                  - text: "Slides (after lab)"
+                    # href: week11/lab/slides.qmd
+                    # target: _blank
+                  - text: "Activity (after lab)"
+                    # href: week11/lab/activity.qmd
+                  - text: "Reading (after lab)"
+                    # href: week11/lab/reading.qmd
+                  - text: "Data Dictionary (after lab)"
+                    # href: week11/lab/data-dictionary.qmd
+                  - text: "Self-Assessment (after lab)"
+                    # href: week11/lab/self-assessment.qmd
           # - section: "Week 12: Distributions & Variability"
           #   contents:
           #     - text: "Overview"
@@ -128,14 +151,13 @@ format:
     toc-depth: 3
     code-fold: true
     code-tools: true
-    embed-resources: false
     link-external-newwindow: true
     comments: 
       hypothesis:
         theme: clean
         openSidebar: false
 
-
+date-format: D MMMM YYYY
 execute:
   freeze: auto
 

@@ -31,42 +31,32 @@ This data becomes the teaching dataset for the entire module. When we learn abou
 
 ::: {.callout-note}
 ## Required Preparation
-1. **Watch the preview video** (5 minutes) — an introduction to the module
+1. **Read the introductory lecture reading** (10 minutes) — an introduction to the module
 2. **Check your lab allocation** (Lab A or Lab B)
 3. **Arrive on time** — we need to start promptly
 :::
 
-- [Preview Video](lecture/video.qmd)
+[- link to Lecture Reading ](lecture/reading.qmd)
 
 ## During the Lab
 
-You will rotate through 6 stations in pairs:
+### Part 1: Together as a Group
+- Complete demographics and initial survey
+- **Enter the Mind Palace** — a group-wide starter Activity!
 
-1. **Reflex Test** — How fast can you catch a falling ruler?
-2. **Mind Palace** — How many words survive a distraction task?
-3. **Time Warp** — How accurate is your internal clock?
-4. **Sixth Sense** — Can you detect when someone is watching you?
-5. **Lady Luck** — How "random" can humans be?
-6. **Frontal Lob** — How well do you know your own throwing ability?
+### Part 2: Rotate Through 5 Data Collection Activities (10 min each)
+
+1. **Reflex** — Data at the speed of mind!
+2. **Time Warp** — Doesn't time fly, when you're making data!
+3. **Sixth Sense** — you looking at me?
+4. **Lady Luck** — Who has the magic touch?
+5. **Frontal Lob** — Does anyone have a 'hot hand'?
 
 At each station, you'll record your data in Qualtrics.
 
 ::: {.callout-tip}
 ## Pre-Post Design
 We'll measure your mood **before** and **after** the stations to see if DataLab affects how you feel!
-:::
-
-## Form Your Groups
-
-By the end of this lab, you should have formed your **project groups** (3-4 students). These groups will:
-
-- Work together on the group project throughout the term
-- Conduct labs together from Week 16 onwards
-- Generate data for your Research Report
-
-::: {.callout-tip}
-## Choosing Group Members
-Consider people you can reliably meet with outside class. You'll be working together for the whole term.
 :::
 
 ## Learning Objectives
@@ -82,18 +72,17 @@ By the end of this week, you will be able to:
 
 | Resource | Description |
 |----------|-------------|
-| [Preview Video](lecture/video.qmd) | Module introduction (watch before lab) |
-| [Preview Slides](lecture/slides.html){target="_blank"} | Slides from the preview video |
 | [Week 11 Reading](lecture/reading.qmd) | Introduction to research methods |
-| [Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
 | [Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
-| [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
-| [Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide |
+| [*Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
+| [*Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
+| [*Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide |
+
+* Made available after the lab!
 
 ## What's Next?
 
-- **Week 12**: Your first lecture (2 hours). We'll analyse the DataLab results together.
-- **By end of Week 11**: Form your project groups.
+- **Week 12**: Your first lecture (2 hours). We'll get out feet wet with the DataLab data together.
 
 ## Key Concepts Introduced
 

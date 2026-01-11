@@ -1,248 +1,374 @@
 ---
-title: "Welcome to Research Methods"
-subtitle: "PS50008A Week 11 | Preview Video"
-author: "Gordon Wright"
-date: "2026-01-12"
+title: "Introduction to Research Methods & Experimental Design"
+author: "Gordon Wright & Bence Palfi"
+date: "2026-01-16"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
     slide-number: c/t
+    show-slide-number: all
     progress: true
     transition: fade
     width: 1050
     height: 700
     center: false
     center-title-slide: true
+    smaller: true
 ---
 
-# Welcome to PS50008A {background-color="#275882"}
+# Welcome {.center}
 
-## Research Methods & Experimental Design {.center}
+## Learning Outcomes
 
-Term 2 | Spring 2026
+By the end of this lecture you will be able to:
 
----
-
-## What is This Module About?
-
-::: {.objectives-box}
-**You will learn to:**
-
-- **Design** experiments that can answer your questions
-- **Analyse** data using R
-- **Interpret** results appropriately
-- **Report** findings in professional APA format
-:::
-
----
-
-## Why Research Methods?
-
-Psychology is a **science**.
-
-To make claims about human behaviour, we need:
-
-- Systematic observation
-- Controlled experiments
-- Statistical analysis
-- Peer review
-
-This module teaches you the **tools** to do this.
-
----
-
-# DataLab {background-color="#275882"}
-
-## Thursday: Your First Session
-
-::: {.callout-important}
-## No Lecture This Week
-Your first contact is **Thursday's lab session** (10:00-12:00).
-
-There is no Monday lecture in Week 11.
-:::
-
----
-
-## What Is DataLab?
-
-A series of **6 cognitive task stations** where you:
-
-:::: {.columns}
-::: {.column width="50%"}
-- Measure reaction times
-- Test your memory
-- Estimate time and distances
-- Test your "sixth sense"
-:::
-::: {.column width="50%"}
-- Explore randomness
-- Assess your own abilities
-- Work in pairs
-- Record data in Qualtrics
-:::
-::::
-
----
-
-## Why DataLab?
-
-The data you generate becomes our **teaching dataset**.
-
-When we learn about:
-
-| Topic | Your Data |
-|-------|-----------|
-| Distributions | Your reaction times |
-| t-tests | Lab A vs Lab B |
-| Correlations | Personality × performance |
-| Pre-post designs | Mood before vs after |
-
-...we use [**your**]{.inverse-box} data, not abstract examples.
-
----
-
-## The 6 Stations
-
-::: {.step-1}
-**1. Reflex Test** — How fast can you catch a falling ruler?
-:::
-
-::: {.step-2}
-**2. Mind Palace** — How many words survive a distraction task?
-:::
-
-::: {.step-3}
-**3. Time Warp** — How accurate is your internal clock?
-:::
-
----
-
-## The 6 Stations (continued)
-
-::: {.step-1}
-**4. Sixth Sense** — Can you detect when someone is watching you?
-:::
-
-::: {.step-2}
-**5. Lady Luck** — How "random" can humans be?
-:::
-
-::: {.step-3}
-**6. Frontal Lob** — How well do you know your own throwing ability?
-:::
-
----
-
-## The Pre-Post Design
-
-We'll measure your mood, energy, and stress **twice**:
-
-- **Part 1**: Before the stations begin
-- **Part 2**: After all stations are complete
-
-This lets us analyse whether DataLab affects how you feel!
-
-::: {.callout-note}
-## Within-Subjects Design
-Each person serves as their own control — a powerful experimental approach.
-:::
-
----
-
-# What You Need to Know {background-color="#275882"}
-
-## Before Thursday
-
-::: {.callout-tip}
-## Preparation Checklist
-1. Check your lab allocation (Lab A or Lab B)
-2. Bring your phone or laptop (for Qualtrics)
-3. Arrive on time — we need to start promptly at 10:00
-:::
-
----
-
-## Form Your Project Groups
-
-By the end of Thursday, form groups of [**3-4 students**]{.inverse-box}.
-
-Your group will:
-
-- Work together on the **research project**
-- Conduct labs together from **Week 16**
-- Generate data for the **Research Report**
-
-::: {.callout-note}
-## Choose Wisely
-Pick people you can reliably meet with outside class.
-:::
-
----
-
-# The Term Ahead {background-color="#275882"}
-
-## What's Coming
-
-| Weeks | Focus |
-|-------|-------|
-| 11-15 | Building skills: distributions, t-tests, correlation |
-| 16-17 | Applying skills: regression, interpretation |
-| 18 | MCQ Exam |
-| 19-20 | Project support |
-
----
-
-## Four Assessments
-
-| Assessment | Weight | Due |
-|------------|--------|-----|
-| Research Plan | 20% | Week 16 |
-| MCQ Exam | 20% | Week 18 |
-| EDS Assignment | 20% | Week 20 |
-| Research Report | 40% | 1 May (post-term) |
-
-All details on the [Assessments](../../assessments.qmd) page.
-
----
-
-## Weekly Structure
-
-Each week typically includes:
-
-- **Monday**: 2-hour lecture (recorded)
-- **Thursday**: 2-hour lab session
-- **Preview video**: Watch before lecture
-- **Readings**: Textbook chapters
-- **Self-Assessment**: Practice exercises
-
----
-
-# See You Thursday! {background-color="#275882"}
-
-## Summary {.center}
-
-::: {.poll-box}
-**Thursday 10:00-12:00**
-
-DataLab: Grow Your Own Psychology Data
-
-+ Form Groups
-:::
-
-Questions? Email g.wright@gold.ac.uk
-
----
-
-## Quick Links
-
-- [Module Homepage](../../index.qmd)
-- [Syllabus](../../syllabus.qmd)
-- [Schedule](../../schedule.qmd)
-- [Assessments](../../assessments.qmd)
-- [Week 11 Overview](../index.qmd)
+- Explain what research methods are and why they matter
+- Distinguish between everyday reasoning and scientific thinking
+- Identify the key components of the research process
+- Describe what you'll learn in this module
 
 ::: {.notes}
-End of preview video content.
-Recording time: approximately 5-7 minutes.
+Welcome students to the module.
+This is foundational — set expectations and generate enthusiasm.
+Estimated time: 5 minutes.
 :::
+
+## Who Are We?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Dr Gordon Wright**
+
+Module Coordinator
+
+Research: Social cognition, deception, dark personalities and interpersonal perception
+
+Office hours: Thursdays 14:00-15:00
+:::
+
+::: {.column width="50%"}
+**Dr Bence Palfi**
+
+Lecturer in the department and our second Lab instructor
+
+Research: AI, Human-Computer Interactions, Meta-Science
+
+:::
+
+::::
+
+## What Is This Module?
+
+**Research Methods & Experimental Design**
+
+How psychologists:
+
+- Ask questions about the mind and behaviour
+- Design studies to answer those questions
+- Collect and analyse data
+- Draw valid conclusions
+
+::: {.notes}
+Emphasise this is a practical, skills-based module.
+Not just theory — they will DO research.
+:::
+
+# Why Research Methods? {.center}
+
+## The Problem with Common Sense
+
+::: {.incremental}
+
+- "Opposites attract"
+- "Birds of a feather flock together"
+- Both can't be true... can they?
+
+:::
+
+::: {.fragment}
+::: {.concept-box}
+Common sense often gives contradictory answers. Science provides a systematic way to find out what's actually true.
+:::
+:::
+
+## Everyday Thinking vs Scientific Thinking
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Everyday Thinking**
+
+- Based on personal experience
+- Influenced by biases
+- Accepts anecdotes as evidence
+- Confirmation bias
+- "I just know"
+:::
+
+::: {.column width="50%"}
+**Scientific Thinking**
+
+- Based on systematic observation
+- Controls for biases
+- Requires replicable evidence
+- Seeks disconfirmation
+- "Let's test it"
+:::
+
+::::
+
+## Why Should You Care?
+
+::: {.incremental}
+
+- Evaluate claims you encounter daily
+- Understand how psychological knowledge is created
+- Essential for your dissertation
+- Transferable skills for any career
+- Required for postgraduate study
+
+:::
+
+# The Research Process {.center}
+
+## From Question to Knowledge
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+    Q[Research Question] --> H[Hypothesis]
+    H --> D[Design Study]
+    D --> C[Collect Data]
+    C --> A[Analyse Data]
+    A --> I[Interpret Results]
+    I --> Q
+```
+
+## Step 1: The Research Question
+
+Where do research questions come from?
+
+- Curiosity about behaviour
+- Gaps in existing research
+- Real-world problems
+- Theory testing
+- Unexpected observations
+
+::: {.fragment}
+**Example:** Do people lie more when texting than face-to-face?
+:::
+
+## Step 2: The Hypothesis
+
+::: {.concept-box}
+A **hypothesis** is a specific, testable prediction about what you expect to find.
+:::
+
+**Good hypothesis:**
+
+> "Participants will tell more lies per conversation when communicating via text message compared to face-to-face."
+
+**Not a hypothesis:**
+
+> "I wonder if texting affects lying."
+
+## Step 3: Design the Study
+
+Key decisions:
+
+- Who will you study? (participants)
+- What will you measure? (variables)
+- How will you measure it? (methods)
+- What comparisons will you make? (design)
+
+::: {.fragment}
+We'll spend most of this module on this step.
+:::
+
+## Step 4: Collect Data
+
+- Follow your plan precisely
+- Treat participants ethically
+- Record everything carefully
+- Minimise errors and bias
+
+## Step 5: Analyse Data
+
+::: {.concept-box}
+**Statistics** are tools for finding patterns in data and determining whether those patterns are meaningful.
+:::
+
+This is where **R** comes in — and what you'll learn in the labs.
+
+## Step 6: Interpret Results
+
+- What do the findings mean?
+- Do they support the hypothesis?
+- What are the limitations?
+- What questions remain?
+
+::: {.fragment}
+Then the cycle continues...
+:::
+
+# What You'll Learn {.center}
+
+## Project Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 11 | See how much fun collecting data is! |
+| 12-15 | Develop research question and design |
+| — | *Reading Week* — Work on Research Plan |
+| 16 | **Research Plan due**; Begin data collection |
+| 17-18 | Data collection and initial analysis |
+| 19-20 | Complete analysis; Develop write-up (term ends) |
+| Easter | Individual report writing |
+| Post-term | **Research Report due** Friday 1 May |
+
+## Lectures vs Labs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Lectures (Wednesday 10-12 from week 12)**
+
+- Concepts and theory
+- Research design principles
+- How to think about data
+:::
+
+::: {.column width="50%"}
+**Labs (Thursday 10-12)**
+
+- Working with real data
+- Building practical skills
+- Applying design principles
+- Learning about statistical test with R
+:::
+
+::::
+
+::: {.fragment}
+They work together — lecture concepts, lab application.
+:::
+
+## Why R? (nothing to fear!)
+
+::: {.incremental}
+
+- Free and open source
+- Industry standard in data science
+- Powerful data analysis and visualisation
+- Reproducible research
+- Employable skill
+
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## No Experience Required
+We assume you've never programmed before. We start from zero.
+:::
+:::
+
+## Assessment Overview
+
+Find an [overview](../../assessments.qmd) here
+
+| Assessment | Weight | Deadline | Week |
+|------------|--------|----------|:----:|
+| [Research Plan](../../assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
+| [MCQ Exam](../../assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
+| [EDS Assignment](../../assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
+| [Research Report](../../assessments/research-report.qmd) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+
+# Key Concepts {.center}
+
+## Variables
+
+::: {.concept-box}
+A **variable** is anything that can vary — any characteristic that can take different values across observations.
+:::
+
+Examples:
+
+- Age
+- Reaction time
+- Mood rating
+- Experimental condition
+
+## Types of Variables
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Categorical**
+
+- Distinct categories
+- No inherent order (nominal)
+- Or ordered (ordinal)
+
+*Examples: gender, condition, education level*
+:::
+
+::: {.column width="50%"}
+**Continuous**
+
+- Numerical values
+- Can take any value in a range
+- Interval or ratio scales
+
+*Examples: age, reaction time, score*
+:::
+
+::::
+
+## Independent vs Dependent Variables
+
+::: {.concept-box}
+**Independent Variable (IV):** What the researcher manipulates or selects
+
+**Dependent Variable (DV):** What the researcher measures as the outcome
+:::
+
+::: {.fragment}
+**Example:** Testing whether caffeine affects reaction time
+
+- IV: Caffeine (yes/no)
+- DV: Reaction time (milliseconds)
+:::
+
+# Summary {.center}
+
+## Key Takeaways
+
+::: {.concept-box}
+
+1. Research methods provide systematic ways to answer questions about behaviour
+2. Scientific thinking differs from everyday reasoning
+3. The research process is cyclical: question → hypothesis → design → collect → analyse → interpret
+4. Variables are the building blocks of research
+
+:::
+
+## Before Tuesday's Lab
+
+::: {.callout-note}
+## Preparation
+
+1. Maybe read the intro [reading ](reading.qmd)
+2. Bring curiosity!
+:::
+
+No other preparation needed — we start from scratch.
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+See you in the lab on Thursday!
+Gordon & Bence

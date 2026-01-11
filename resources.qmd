@@ -98,9 +98,9 @@ The main dataset for this module is generated in Week 11 (DataLab). Additional p
 | Email | g.wright@gold.ac.uk |
 | VLE Discussion | For general questions (other students can help too) |
 
-### Technical Issues
+<!-- ### Technical Issues
 
-- WebR issues: Post in VLE discussion
+- WebR issues: Post in VLE discussion -->
 
 <!-- ## Hypothesis Annotation
 

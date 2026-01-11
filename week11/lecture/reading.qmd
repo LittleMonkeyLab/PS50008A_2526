@@ -56,7 +56,7 @@ I'm not promising you'll love every moment. But we are promising that this mater
 
 ::: {.callout-important}
 ## This Week
-Since Week 11 has no lecture, watch the preview video and use this reading to prepare for the term ahead. But above all, [be curious!]{style="font-weight: bold"}
+Since Week 11 has no lecture, use this reading to prepare for the term ahead. But above all, [be curious!]{style="font-weight: bold"}
 ::: 
 
 ::: {.callout-note}

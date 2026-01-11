@@ -1,0 +1,444 @@
+---
+title: "DATALAB"
+subtitle: "Data Dictionary"
+author: "PS50008A Research Methods"
+date: today
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    progress: true
+    hash: true
+    transition: fade
+    center: false
+    width: 1280
+    height: 720
+    embed-resources: true
+    logo: ""
+---
+
+# Pre-Session {background-color="#2E4057"}
+
+## Sleep & Lifestyle
+
+Captured at session start — baseline state before activities
+
+:::: {.columns}
+::: {.column width="60%"}
+
+| Variable | Type | Range |
+|----------|------|-------|
+| `sleep_hours` | Continuous | 0–14 hrs |
+| `sleep_quality` | Ordinal | 1–5 |
+| `caffeine_today` | Count | 0–10 cups |
+| `exercise_week` | Count | 0–7 days |
+| `screen_estimate` | Continuous | 0–16 hrs |
+
+:::
+::: {.column width="40%"}
+
+**Why collect this?**
+
+- Predictors of performance
+- Correlation with mood
+- Individual differences
+
+:::
+::::
+
+## Mood PRE ⭐
+
+Baseline measurement — enables pre-post comparison
+
+| Variable | Type | Question | Range |
+|----------|------|----------|-------|
+| `mood_pre` | Ordinal | Current mood | 1 (negative) – 10 (positive) |
+| `energy_pre` | Ordinal | Current energy | 1 (exhausted) – 10 (energetic) |
+| `stress_pre` | Ordinal | Current stress | 1 (none) – 10 (extreme) |
+
+::: {.callout-tip}
+## Teaching Point
+These match the POST measures — perfect for **paired t-tests** and **within-subjects** analysis
+:::
+
+# ⚡ Reflex Test {background-color="#2E4057"}
+
+## Reflex Test — Variables
+
+*How fast is your nervous system?*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**Raw Data (recorded)**
+
+| Variable | Type | Range |
+|----------|------|-------|
+| `rt_hand` | Categorical | Dom/Non-dom |
+| `rt_trial1_cm` | Continuous | 0–30 cm |
+| `rt_trial2_cm` | Continuous | 0–30 cm |
+| `rt_trial3_cm` | Continuous | 0–30 cm |
+| `rt_trial4_cm` | Continuous | 0–30 cm |
+| `rt_trial5_cm` | Continuous | 0–30 cm |
+
+:::
+::: {.column width="50%"}
+
+**Calculated**
+
+| Variable | Type | Range |
+|----------|------|-------|
+| `rt_trial[1-5]_ms` | Continuous | ~100–250 ms |
+| `rt_mean_ms` | Continuous | ~120–220 ms |
+| `rt_best_ms` | Continuous | ~100–180 ms |
+| `rt_improvement` | Continuous | -50 to +80 ms |
+
+:::
+::::
+
+## Reflex Test — Conversion
+
+**Formula:** RT (ms) = √(2 × distance_m ÷ 9.81) × 1000
+
+| Distance (cm) | RT (ms) | Distance (cm) | RT (ms) |
+|---------------|---------|---------------|---------|
+| 5 | 101 | 20 | 202 |
+| 10 | 143 | 25 | 226 |
+| 15 | 175 | 30 | 247 |
+
+::: {.callout-note}
+## Expected Distribution
+**Right-skewed** — may need log transformation, median more appropriate than mean
+:::
+
+## Reflex Test — Teaching Points
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**Statistical Tests**
+
+- Paired t-test: Trial 1 vs Trial 5
+- Correlation with sleep, caffeine
+- Outlier detection (misses)
+
+:::
+::: {.column width="50%"}
+
+**Concepts**
+
+- Practice effects
+- Right-skewed distributions
+- Log transformation
+- Ratio scale measurement
+
+:::
+::::
+
+# 🧠 Mind Palace {background-color="#2E4057"}
+
+## Mind Palace — Variables
+
+*What survives the interference?*
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mem_total` | Count | Words correctly recalled | 0–10 |
+| `mem_pos1`...`mem_pos10` | Binary | Each position recalled? | Yes/No |
+| `mem_intrusions` | Count | False memories | 0–10 |
+| `mem_strategy` | Text | Strategy used | Open |
+| `word_type` | Categorical | Condition (by lab) | concrete/abstract |
+
+::: {.callout-warning}
+## Between-Lab Manipulation
+**Lab A:** Concrete words (bicycle, mountain, umbrella...)
+**Lab B:** Abstract words (justice, freedom, beauty...)
+:::
+
+## Mind Palace — Teaching Points
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**Statistical Tests**
+
+- Independent t-test: concrete vs abstract
+- Serial position analysis
+- Chi-square: position × recalled
+
+:::
+::: {.column width="50%"}
+
+**Concepts**
+
+- Imageability effect
+- Primacy/recency effects
+- False memories (intrusions)
+- Ceiling effects
+
+:::
+::::
+
+# ⏰ Time Warp {background-color="#2E4057"}
+
+## Time Warp — Variables
+
+*Your brain's internal clock*
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `time_estimate_sec` | Continuous | 60-sec estimation | ~30–90 sec |
+| `time_error` | Continuous | Estimate − 60 | -30 to +30 |
+| `line1_estimate_cm` | Continuous | Line 1 estimate | 1–25 cm |
+| `line1_error` | Continuous | Estimate − 12.7 | ±10 cm |
+| `line2_estimate_cm` | Continuous | Line 2 estimate | 1–25 cm |
+| `line2_error` | Continuous | Estimate − 8.3 | ±10 cm |
+| `temp_estimate_c` | Continuous | Room temp guess | 15–30 °C |
+| `time_counting` | Categorical | Counted during? | Yes steady/Yes sometimes/No |
+| `music_condition` | Categorical | Condition (by lab) | silence/music |
+
+## Time Warp — Teaching Points
+
+::: {.callout-warning}
+## Between-Lab Manipulation
+**Lab A:** 60-second estimation in silence  
+**Lab B:** 60-second estimation with background music
+:::
+
+**Statistical Tests**
+
+- One-sample t-test: Is mean time_error ≠ 0?
+- Independent t-test: Silence vs music
+- Systematic bias analysis
+
+**Concepts**
+
+- Normally distributed errors
+- Internal clock
+- Effect of distraction
+
+# 👁️ Sixth Sense {background-color="#2E4057"}
+
+## Sixth Sense — Variables
+
+*Can you feel the gaze?*
+
+**Trial-level (×6 trials)**
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| `stare_t[1-6]_actual` | Binary | Actually staring? |
+| `stare_t[1-6]_guess` | Binary | Participant's guess |
+| `stare_t[1-6]_conf` | Ordinal | Confidence (1–5) |
+
+**Summary (calculated)**
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `stare_correct_total` | Count | Correct detections | 0–6 |
+| `stare_hit_rate` | Proportion | P(detect | staring) | 0–1 |
+| `stare_fa_rate` | Proportion | P(detect | not staring) | 0–1 |
+
+## Sixth Sense — Teaching Points
+
+::: {.callout-note}
+## The Null Hypothesis
+If staring cannot be detected, accuracy should be **50%** (about 3/6 correct)
+:::
+
+**Statistical Tests**
+
+- Binomial test: accuracy vs 50%
+- Signal detection: d' from hits & false alarms
+- Confidence calibration
+
+**Concepts**
+
+- Chance performance
+- Binomial distribution
+- Type I and Type II errors
+
+# 🎲 Lady Luck {background-color="#2E4057"}
+
+## Lady Luck — Random Numbers
+
+*Are you truly random?*
+
+**Self-generated numbers (1–10)**
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `rand_num1`...`rand_num20` | Discrete | Each "random" number | 1–10 |
+| `rand_mean` | Continuous | Mean of 20 numbers | 1–10 |
+| `rand_repeats` | Count | Adjacent repeats | 0–19 |
+| `rand_mode` | Discrete | Most frequent number | 1–10 |
+
+::: {.callout-tip}
+## Human Randomness Bias
+People avoid repeats, favour certain numbers (7!), and alternate too much.
+True random mean should be **5.5**
+:::
+
+## Lady Luck — Dice & Coins
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**Dice (10 rolls)**
+
+| Variable | Type | Range |
+|----------|------|-------|
+| `dice_roll1`...`dice_roll10` | Discrete | 1–6 |
+| `dice_sixes` | Count | 0–10 |
+| `dice_predict` | Categorical | Yes/No/Unsure |
+
+Expected 6s: **~1.67**
+
+:::
+::: {.column width="50%"}
+
+**Coins (10 flips)**
+
+| Variable | Type | Range |
+|----------|------|-------|
+| `coin_flip1`...`coin_flip10` | Binary | H/T |
+| `coin_heads` | Count | 0–10 |
+| `coin_longest_run` | Count | 1–10 |
+
+Expected heads: **5**
+
+:::
+::::
+
+## Lady Luck — Teaching Points
+
+**Statistical Tests**
+
+- Chi-square goodness of fit (dice → uniform?)
+- Binomial test (coin heads vs expected)
+- Runs test for randomness
+
+**Concepts**
+
+- Uniform distribution
+- Binomial distribution
+- Human inability to generate randomness
+- Gambler's fallacy
+
+# 🎯 Frontal Lob {background-color="#2E4057"}
+
+## Frontal Lob — Variables
+
+*Precision meets confidence*
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `throw_self_rating` | Ordinal | Pre-task ability rating | 1–10 |
+| `throw_dom_success` | Count | Successful throws (dom) | 0–10 |
+| `throw_nondom_success` | Count | Successful throws (non-dom) | 0–5 |
+| `throw_dom_hand` | Categorical | Dominant hand | Left/Right |
+| `throw_accuracy_pct` | Percentage | Success rate × 10 | 0–100% |
+| `throw_calibration` | Continuous | Performance − Rating | -10 to +10 |
+| `throw_distance` | Categorical | Condition (by lab) | 2m / 3m |
+
+::: {.callout-warning}
+## Between-Lab Manipulation
+**Lab A:** 2 metre distance  
+**Lab B:** 3 metre distance
+:::
+
+## Frontal Lob — Teaching Points
+
+**Statistical Tests**
+
+- Independent t-test: 2m vs 3m
+- One-sample t-test: Is calibration ≠ 0?
+- Correlation: self-rating vs actual
+
+**Concepts**
+
+- Metacognition
+- Overconfidence bias
+- Dunning-Kruger effect
+- Binomial success/failure
+
+# Post-Session {background-color="#2E4057"}
+
+## Mood POST ⭐
+
+Endpoint measurement — matches PRE for paired comparison
+
+| Variable | Type | Question | Range |
+|----------|------|----------|-------|
+| `mood_post` | Ordinal | Current mood | 1–10 |
+| `energy_post` | Ordinal | Current energy | 1–10 |
+| `stress_post` | Ordinal | Current stress | 1–10 |
+
+**Change Scores (calculated)**
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `mood_change` | post − pre | Positive = improved |
+| `energy_change` | post − pre | Positive = more energy |
+| `stress_change` | post − pre | Negative = less stressed |
+
+## Pre-Post Analysis
+
+::: {.callout-tip}
+## The Big Question
+Did participating in DataLab affect your mood?
+:::
+
+**Paired t-test:** Is mean `mood_change` significantly different from 0?
+
+**Further questions:**
+
+- Does extraversion predict mood improvement?
+- Does baseline stress predict stress reduction?
+- Regression to the mean?
+
+## Session Feedback
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| `enjoyed_overall` | Ordinal (1–10) | Overall enjoyment |
+| `fav_station` | Categorical (1–6) | Favourite experiment |
+| `least_fav_station` | Categorical (1–6) | Least favourite |
+
+**Analysis ideas:**
+
+- Bar chart: Which station was most popular?
+- Correlation: enjoyment vs mood_change
+- Group differences in preferences
+
+# Summary {background-color="#2E4057"}
+
+## What We Collected
+
+| Section | Variables | Key Analysis |
+|---------|-----------|--------------|
+| Pre-session | 11 | Baseline predictors |
+| ⚡ Reflex Test | 9 | Practice effects, RT distribution |
+| 🧠 Mind Palace | 14 | Concrete vs abstract (between-lab) |
+| ⏰ Time Warp | 9 | Silence vs music (between-lab) |
+| 👁️ Sixth Sense | 21 | Binomial test vs 50% |
+| 🎲 Lady Luck | 35+ | Chi-square, human randomness |
+| 🎯 Frontal Lob | 7 | 2m vs 3m (between-lab), calibration |
+| Post-session | 9 | Pre-post mood change |
+
+**Total: ~115 variables per participant**
+
+## Your Data Journey
+
+Over the coming weeks, you'll analyse this dataset to:
+
+1. Test hypotheses with **t-tests** and **chi-square**
+2. Explore relationships with **correlation** and **regression**
+3. Compare distributions (normal, skewed, binomial, uniform)
+4. Understand **within-subjects** vs **between-subjects** designs
+5. Calculate **effect sizes** and interpret **p-values**
+
+::: {.callout-note}
+## Remember
+This is *your* data — collected by you, about you. Every analysis tells a story about human psychology.
+:::
