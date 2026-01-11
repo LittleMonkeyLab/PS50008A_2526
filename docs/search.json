@@ -278,296 +278,275 @@
     "text": "References\n\nMiller, G. A. (1956). The magical number seven, plus or minus two. Psychological Review, 63(2), 81-97.\nTversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124-1131.\nWagenaar, W. A. (1972). Generation of random sequences by human subjects: A critical survey of the literature. Psychological Bulletin, 77(1), 65-72."
   },
   {
-    "objectID": "week11/lab/slides.html",
-    "href": "week11/lab/slides.html",
-    "title": "",
-    "section": "",
-    "text": "Code\ntitle: “DataLab” subtitle: “Grow Your Own Psychology Data” author: “Gordon Wright & Bence Palfi” date: “2026-01-16” format: revealjs: theme: [default, ../../assets/slides.scss] slide-number: c/t show-slide-number: all progress: true transition: fade width: 1050 height: 700 center: false center-title-slide: true smaller: true revealjs-plugins: - countdown"
-  },
-  {
     "objectID": "week11/lab/slides.html#research-methods-experimental-design",
     "href": "week11/lab/slides.html#research-methods-experimental-design",
-    "title": "",
+    "title": "DataLab",
     "section": "Research Methods & Experimental Design",
     "text": "Research Methods & Experimental Design\nYour first session of the module"
   },
   {
     "objectID": "week11/lab/slides.html#what-is-datalab",
     "href": "week11/lab/slides.html#what-is-datalab",
-    "title": "",
+    "title": "DataLab",
     "section": "What is DataLab?",
     "text": "What is DataLab?\nToday you generate the dataset we analyse all term.\n\nYou’ll be both participant and tester\nWork in pairs\nFollow your sequence card\nComplete 5 tasks + memory test"
   },
   {
     "objectID": "week11/lab/slides.html#session-overview",
     "href": "week11/lab/slides.html#session-overview",
-    "title": "",
+    "title": "DataLab",
     "section": "Session Overview",
     "text": "Session Overview\nTime | Activity |\n||-| | 10:00–10:25 | Welcome, Part 1 survey, Memory Test | | 10:25–11:25 | Complete 5 tasks (follow your sequence card) | | 11:25–11:35 | Part 2 survey & wrap-up | | 11:35-11:55 | Data Dictionary preview and discussion |"
   },
   {
     "objectID": "week11/lab/slides.html#what-youll-do",
     "href": "week11/lab/slides.html#what-youll-do",
-    "title": "",
+    "title": "DataLab",
     "section": "What You’ll Do",
-    "text": "What You’ll Do\n\n\nComplete Part 1 survey (demographics, mood, personality)\nDo the Memory Test together\nFollow your sequence card through 5 tasks\nComplete Part 2 survey"
+    "text": "What You’ll Do\n\nComplete Part 1 survey (demographics, mood, personality)\nDo the Memory Test together\nFollow your sequence card through 5 tasks\nComplete Part 2 survey"
   },
   {
     "objectID": "week11/lab/slides.html#get-your-materials",
     "href": "week11/lab/slides.html#get-your-materials",
-    "title": "",
+    "title": "DataLab",
     "section": "Get Your Materials",
     "text": "Get Your Materials\n\nCollect your lab notebook (with your number)\nForm into pairs (at least) max group size 4!\nCollect a sequence card from your lab instructor"
   },
   {
     "objectID": "week11/lab/slides.html#complete-part-1-survey",
     "href": "week11/lab/slides.html#complete-part-1-survey",
-    "title": "",
+    "title": "DataLab",
     "section": "Complete Part 1 Survey",
     "text": "Complete Part 1 Survey\nScan the QR code below or open the link on the VLE:\n[Qualtrics link displayed here]\nComplete:\n\nConsent\nSleep & lifestyle\nCurrent mood\nPersonality (TIPI)\nDemographics"
   },
   {
     "objectID": "week11/lab/slides.html#mind-palace",
     "href": "week11/lab/slides.html#mind-palace",
-    "title": "",
+    "title": "DataLab",
     "section": "Mind Palace",
     "text": "Mind Palace\nWe do this together as a group.\nTwo word lists on screen:\n\nLEFT = List A\nRIGHT = List B\n\nYour instructor tells you which side."
   },
   {
     "objectID": "week11/lab/slides.html#the-procedure",
     "href": "week11/lab/slides.html#the-procedure",
-    "title": "",
+    "title": "DataLab",
     "section": "The Procedure",
     "text": "The Procedure\n\nSTUDY (30 sec) — memorise YOUR list\nDISTRACT (60 sec) — maths problems\nRECALL (90 sec) — write on paper\nRECORD — enter in Qualtrics"
   },
   {
     "objectID": "week11/lab/slides.html#ready",
     "href": "week11/lab/slides.html#ready",
-    "title": "",
+    "title": "DataLab",
     "section": "Ready?",
     "text": "Ready?\nYour instructor will say:\n“Look LEFT” or “Look RIGHT”\nHave pen and paper ready!"
   },
   {
-    "objectID": "week11/lab/slides.html#study-lab-a-silence",
-    "href": "week11/lab/slides.html#study-lab-a-silence",
-    "title": "",
-    "section": "STUDY: Lab A (Silence)",
-    "text": "STUDY: Lab A (Silence)\n\n\n\nLEFT\nWISDOM\nCOURAGE\nJUSTICE\nFREEDOM\nPATIENCE\nLOYALTY\nBEAUTY\nSPIRIT\nHONOUR\nTRUTH\n\n\n\nRIGHT\nHOPE\nANGER\nFAITH\nPOWER\nGRACE\nVIRTUE\nDREAM\nPEACE\nKNOWLEDGE\nSOUL"
-  },
-  {
-    "objectID": "week11/lab/slides.html#study-lab-b-mozart",
-    "href": "week11/lab/slides.html#study-lab-b-mozart",
-    "title": "",
-    "section": "STUDY: Lab B (Mozart)",
-    "text": "STUDY: Lab B (Mozart)\n\n\n\nLEFT\nAPPLE\nTABLE\nCHAIR\nRIVER\nMOUNTAIN\nGUITAR\nCLOCK\nPENCIL\nFLOWER\nBOOK\n\n\n\nRIGHT\nWINDOW\nRABBIT\nJACKET\nCANDLE\nLADDER\nBASKET\nHAMMER\nPILLOW\nGARDEN\nBOTTLE"
-  },
-  {
     "objectID": "week11/lab/slides.html#distract",
     "href": "week11/lab/slides.html#distract",
-    "title": "",
+    "title": "DataLab",
     "section": "DISTRACT",
     "text": "DISTRACT\nMaths problems — no calculator!\n7 × 8 = ? 15 + 27 = ? 64 ÷ 8 = ?\n23 − 9 = ? 6 × 9 = ? 81 ÷ 9 = ?\n12 + 38 = ? 45 − 17 = ? 8 × 7 = ?"
   },
   {
     "objectID": "week11/lab/slides.html#recall",
     "href": "week11/lab/slides.html#recall",
-    "title": "",
+    "title": "DataLab",
     "section": "RECALL",
     "text": "RECALL\nWrite your words on paper!\nDon’t look at the screen."
   },
   {
     "objectID": "week11/lab/slides.html#record-results",
     "href": "week11/lab/slides.html#record-results",
-    "title": "",
+    "title": "DataLab",
     "section": "Record Results",
     "text": "Record Results\nIn Qualtrics, enter:\n\nWords recalled (0–10)\nWhich positions you remembered\nAny intrusions (wrong words)\nStrategy used"
   },
   {
     "objectID": "week11/lab/slides.html#the-5-tasks",
     "href": "week11/lab/slides.html#the-5-tasks",
-    "title": "",
+    "title": "DataLab",
     "section": "The 5 Tasks",
     "text": "The 5 Tasks\nFollow your sequence card.\nEach task: ~15 minutes\nWork in pairs — swap roles halfway."
   },
   {
     "objectID": "week11/lab/slides.html#task-1-reflex-test",
     "href": "week11/lab/slides.html#task-1-reflex-test",
-    "title": "",
+    "title": "DataLab",
     "section": "Task 1: Reflex Test",
     "text": "Task 1: Reflex Test\nHow fast is your nervous system?\n\nPartner drops ruler without warning\nCatch it as fast as you can\nRecord the distance (cm)\n5 trials each"
   },
   {
     "objectID": "week11/lab/slides.html#task-2-time-warp",
     "href": "week11/lab/slides.html#task-2-time-warp",
-    "title": "",
+    "title": "DataLab",
     "section": "Task 2: Time Warp",
     "text": "Task 2: Time Warp\nHow accurate is your internal clock?\n\nEstimate when 60 seconds pass\nEstimate line lengths (visual)\nEstimate string lengths (touch only)"
   },
   {
     "objectID": "week11/lab/slides.html#task-3-sixth-sense",
     "href": "week11/lab/slides.html#task-3-sixth-sense",
-    "title": "",
+    "title": "DataLab",
     "section": "Task 3: Sixth Sense",
     "text": "Task 3: Sixth Sense\nCan you detect being watched?\n\nSit back-to-back\nPartner flips coin: stare or look away\nGuess which, rate confidence\n6 trials each"
   },
   {
     "objectID": "week11/lab/slides.html#task-4-lady-luck",
     "href": "week11/lab/slides.html#task-4-lady-luck",
-    "title": "",
+    "title": "DataLab",
     "section": "Task 4: Lady Luck",
     "text": "Task 4: Lady Luck\nHow random can you be?\n\nSay 20 “random” numbers (1–10)\nRoll die 10 times\nFlip coin 10 times"
   },
   {
     "objectID": "week11/lab/slides.html#task-5-frontal-lob",
     "href": "week11/lab/slides.html#task-5-frontal-lob",
-    "title": "",
+    "title": "DataLab",
     "section": "Task 5: Frontal Lob",
     "text": "Task 5: Frontal Lob\nHow well do you know your ability?\n\nRate your throwing (1–10)\nThrow 10 balls at basket\nCompare prediction to reality"
   },
   {
     "objectID": "week11/lab/slides.html#how-tasks-work",
     "href": "week11/lab/slides.html#how-tasks-work",
-    "title": "",
+    "title": "DataLab",
     "section": "How Tasks Work",
     "text": "How Tasks Work\n\nCheck your sequence card for task order\nGo to that task area\nComplete with your partner\nEnter data in Qualtrics\nMove to next task on your card"
   },
   {
     "objectID": "week11/lab/slides.html#check-your-sequence-card",
     "href": "week11/lab/slides.html#check-your-sequence-card",
-    "title": "",
+    "title": "DataLab",
     "section": "Check Your Sequence Card",
     "text": "Check Your Sequence Card\nFind your first task.\nGo there now with your partner."
   },
   {
     "objectID": "week11/lab/slides.html#task-time-15-minutes",
     "href": "week11/lab/slides.html#task-time-15-minutes",
-    "title": "",
+    "title": "DataLab",
     "section": "Task Time: 15 minutes",
     "text": "Task Time: 15 minutes"
   },
   {
     "objectID": "week11/lab/slides.html#move-to-next-task",
     "href": "week11/lab/slides.html#move-to-next-task",
-    "title": "",
+    "title": "DataLab",
     "section": "Move to Next Task",
     "text": "Move to Next Task\nCheck your sequence card.\nEnter data before moving!"
   },
   {
     "objectID": "week11/lab/slides.html#task-time-15-minutes-1",
     "href": "week11/lab/slides.html#task-time-15-minutes-1",
-    "title": "",
+    "title": "DataLab",
     "section": "Task Time: 15 minutes",
     "text": "Task Time: 15 minutes"
   },
   {
     "objectID": "week11/lab/slides.html#move-to-next-task-1",
     "href": "week11/lab/slides.html#move-to-next-task-1",
-    "title": "",
+    "title": "DataLab",
     "section": "Move to Next Task",
     "text": "Move to Next Task\nCheck your sequence card.\nEnter data before moving!"
   },
   {
     "objectID": "week11/lab/slides.html#task-time-15-minutes-2",
     "href": "week11/lab/slides.html#task-time-15-minutes-2",
-    "title": "",
+    "title": "DataLab",
     "section": "Task Time: 15 minutes",
     "text": "Task Time: 15 minutes"
   },
   {
     "objectID": "week11/lab/slides.html#move-to-next-task-2",
     "href": "week11/lab/slides.html#move-to-next-task-2",
-    "title": "",
+    "title": "DataLab",
     "section": "Move to Next Task",
     "text": "Move to Next Task\nCheck your sequence card.\nEnter data before moving!"
   },
   {
     "objectID": "week11/lab/slides.html#task-time-15-minutes-3",
     "href": "week11/lab/slides.html#task-time-15-minutes-3",
-    "title": "",
+    "title": "DataLab",
     "section": "Task Time: 15 minutes",
     "text": "Task Time: 15 minutes"
   },
   {
     "objectID": "week11/lab/slides.html#move-to-next-task-3",
     "href": "week11/lab/slides.html#move-to-next-task-3",
-    "title": "",
+    "title": "DataLab",
     "section": "Move to Next Task",
     "text": "Move to Next Task\nCheck your sequence card.\nEnter data before moving!"
   },
   {
     "objectID": "week11/lab/slides.html#task-time-15-minutes-final",
     "href": "week11/lab/slides.html#task-time-15-minutes-final",
-    "title": "",
+    "title": "DataLab",
     "section": "Task Time: 15 minutes (Final)",
     "text": "Task Time: 15 minutes (Final)"
   },
   {
     "objectID": "week11/lab/slides.html#complete-part-2-survey",
     "href": "week11/lab/slides.html#complete-part-2-survey",
-    "title": "",
+    "title": "DataLab",
     "section": "Complete Part 2 Survey",
     "text": "Complete Part 2 Survey\nReturn to Qualtrics:\n\nMood NOW (compare to before)\nFavourite task\nLeast favourite task\nComments"
   },
   {
     "objectID": "week11/lab/slides.html#pre-post-design",
     "href": "week11/lab/slides.html#pre-post-design",
-    "title": "",
+    "title": "DataLab",
     "section": "Pre-Post Design",
     "text": "Pre-Post Design\nWe measured mood before and after.\nThis lets us see if DataLab affected how you feel.\nEach person is their own control."
   },
   {
     "objectID": "week11/lab/slides.html#reflex-test",
     "href": "week11/lab/slides.html#reflex-test",
-    "title": "",
+    "title": "DataLab",
     "section": "Reflex Test",
     "text": "Reflex Test\nPhysics measures your brain!\n\nDistance fallen → reaction time\nTypical: 150–250 milliseconds\nFaster than conscious thought\nDid you improve across trials?"
   },
   {
     "objectID": "week11/lab/slides.html#time-warp",
     "href": "week11/lab/slides.html#time-warp",
-    "title": "",
+    "title": "DataLab",
     "section": "Time Warp",
     "text": "Time Warp\nYour brain constructs time.\n\nMost people over- or under-estimate\nCounting helps accuracy\nTouch vs vision — which is better?"
   },
   {
     "objectID": "week11/lab/slides.html#sixth-sense",
     "href": "week11/lab/slides.html#sixth-sense",
-    "title": "",
+    "title": "DataLab",
     "section": "Sixth Sense",
     "text": "Sixth Sense\nCan you detect being watched?\n\nChance = 3 out of 6 correct\nDid you beat chance?\nConfidence vs accuracy?"
   },
   {
     "objectID": "week11/lab/slides.html#lady-luck",
     "href": "week11/lab/slides.html#lady-luck",
-    "title": "",
+    "title": "DataLab",
     "section": "Lady Luck",
     "text": "Lady Luck\nHumans are bad at random!\n\nWe avoid repeating numbers\nBut real randomness has streaks\nGambler’s fallacy: coins don’t remember"
   },
   {
     "objectID": "week11/lab/slides.html#frontal-lob",
     "href": "week11/lab/slides.html#frontal-lob",
-    "title": "",
+    "title": "DataLab",
     "section": "Frontal Lob",
     "text": "Frontal Lob\nHow well do you know yourself?\n\nCalibration = prediction vs reality\nMost people slightly overconfident\nMetacognition: thinking about thinking"
   },
   {
     "objectID": "week11/lab/slides.html#data-collected-today",
     "href": "week11/lab/slides.html#data-collected-today",
-    "title": "",
+    "title": "DataLab",
     "section": "Data Collected Today",
     "text": "Data Collected Today\nTask | Variables |\n||–| | Memory | Words recalled, positions, intrusions | | Reflex | Reaction times (5 trials) | | Time Warp | Time, visual, tactile estimates | | Sixth Sense | Detection accuracy, confidence | | Lady Luck | Number patterns, dice, coins | | Frontal Lob | Self-rating, actual performance | | Pre/Post | Mood, energy, stress |"
   },
   {
     "objectID": "week11/lab/slides.html#what-we-did-today",
     "href": "week11/lab/slides.html#what-we-did-today",
-    "title": "",
+    "title": "DataLab",
     "section": "What We Did Today",
     "text": "What We Did Today\n\nCompleted surveys (mood, personality)\nMemory test together\n5 tasks as participant and tester\nExperienced variability firsthand\nCreated pre-post design"
   },
   {
     "objectID": "week11/lab/slides.html#next-week",
     "href": "week11/lab/slides.html#next-week",
-    "title": "",
+    "title": "DataLab",
     "section": "Next Week",
     "text": "Next Week\nWeek 12: Your First Lecture\nWednesday 10:00–12:00\n\nAnalyse DataLab results together\nIntroduction to distributions\nYour data = teaching examples\n\nSee you Wednesday!\n\nFacilitator Notes: - Check all Qualtrics complete - Note any issues - Lab A: Silence + Abstract - Lab B: Mozart + Concrete"
   },

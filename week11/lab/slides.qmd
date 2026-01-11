@@ -1,4 +1,4 @@
-
+---
 title: "DataLab"
 subtitle: "Grow Your Own Psychology Data"
 author: "Gordon Wright & Bence Palfi"
@@ -17,7 +17,7 @@ format:
     smaller: true
 revealjs-plugins:
   - countdown
-
+---
 
 # Welcome to PS50008A {background-color="#275882"}
 

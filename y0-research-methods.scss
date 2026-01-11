@@ -1,0 +1,777 @@
+/*-- scss:defaults --*/
+
+// =============================================================================
+// Foundations Research Methods Theme
+// PS50008A - Research Methods & Experimental Design
+// =============================================================================
+// Light content areas with dark navy headers/footers
+// Atkinson Hyperlegible for accessibility
+
+// -----------------------------------------------------------------------------
+// Color Palette
+// -----------------------------------------------------------------------------
+
+$primary:        #1a1a2e;      // Dark navy - headers, footers, navbar
+$secondary:      #16213e;      // Slightly lighter navy
+$accent:         #4A90A4;      // Teal - links, emphasis
+$highlight:      #e8b44a;      // Gold - key concepts, warnings
+$success:        #2d6a4f;      // Green - correct answers
+$error:          #9b2226;      // Red - errors, incorrect
+
+// Light theme text colors
+$text-dark:      #1a1a1a;      // Main text on light backgrounds
+$text-muted:     #5c5c5c;      // Muted text on light
+$text-light:     #e6edf3;      // Text on dark backgrounds
+
+// Background variations
+$bg-light:       #ffffff;      // Main content background
+$bg-light-alt:   #f8f9fa;      // Alternate light background
+$bg-code:        #f6f8fa;      // Light code background
+$bg-dark:        $primary;     // Dark elements (header/footer)
+
+// -----------------------------------------------------------------------------
+// Typography - Atkinson Hyperlegible
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@400;500&display=swap');
+
+$font-family-sans-serif: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "Fira Code", "SF Mono", Monaco, "Cascadia Code", monospace;
+
+$headings-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-sans-serif;
+$code-font-family: $font-family-monospace;
+
+// Font sizes
+$font-size-base: 1rem;
+$h1-font-size: 2.25rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.375rem;
+$h4-font-size: 1.125rem;
+
+// -----------------------------------------------------------------------------
+// Bootstrap/Quarto HTML Overrides (Light Theme)
+// -----------------------------------------------------------------------------
+
+$body-bg: $bg-light;
+$body-color: $text-dark;
+$link-color: $accent;
+$code-color: #0550ae;
+$code-bg: $bg-code;
+
+// Navbar - keep dark
+$navbar-bg: $primary;
+$navbar-fg: $text-light;
+
+// Footer - keep dark
+$footer-bg: $primary;
+$footer-fg: $text-light;
+
+// -----------------------------------------------------------------------------
+// Revealjs Specific (Light theme slides)
+// -----------------------------------------------------------------------------
+
+$presentation-font-size-root: 40px;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-color: $primary;
+$presentation-slide-text-align: left;
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+
+$spacer: 1rem;
+$content-padding: 2rem;
+
+/*-- scss:rules --*/
+
+// =============================================================================
+// CRITICAL: Preserve Font Awesome Icons
+// =============================================================================
+// Font Awesome 6 requires specific font-family and font-weight settings.
+// Our theme must not override these with Atkinson Hyperlegible.
+
+// Solid icons (fa-solid, fas)
+.fa-solid,
+.fas,
+i[class*="fa-solid"],
+i.fa-play,
+i.fa-spinner,
+i.fa-arrows-rotate {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+}
+
+// Regular icons (fa-regular, far)
+.fa-regular,
+.far,
+i.fa-copy {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+// Brand icons (fa-brands, fab)
+.fa-brands,
+.fab,
+i.fa-r-project {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+// WebR specific icon containers
+.qwebr-button i,
+.qwebr-editor-toolbar i,
+.qwebr-non-interactive-loading-container i {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-style: normal !important;
+}
+
+// =============================================================================
+// Logo Support
+// =============================================================================
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+// Force navbar logo size - override Bootstrap defaults
+.navbar-brand-logo img.navbar-logo,
+.navbar .navbar-brand img.navbar-logo,
+img.navbar-logo {
+  height: 80px !important;
+  max-height: 80px !important;
+  width: auto !important;
+}
+
+.navbar-brand-container {
+  padding: 0.5rem 0;
+}
+
+// Sidebar/page logo
+.quarto-title-block .quarto-title-banner {
+  .title-logo {
+    max-height: 80px;
+    margin-bottom: 1rem;
+  }
+}
+
+// Footer logo
+.page-footer .footer-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+// =============================================================================
+// HTML Document Styles (Light Background)
+// =============================================================================
+
+body:not(.reveal) {
+  font-family: $body-font-family;
+  background-color: $bg-light;
+  color: $text-dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  h1 {
+    border-bottom: 3px solid $accent;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: $accent;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($accent, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  // Code blocks - light theme
+  pre {
+    background: $bg-code;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+
+  code {
+    font-family: $code-font-family;
+    background: $bg-code;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    color: $code-color;
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+// =============================================================================
+// Navbar (Dark)
+// =============================================================================
+
+.navbar {
+  background-color: $primary !important;
+
+  .navbar-brand,
+  .nav-link,
+  .navbar-nav .nav-link {
+    color: $text-light !important;
+  }
+
+  .nav-link:hover,
+  .navbar-nav .nav-link:hover {
+    color: $accent !important;
+  }
+
+  .dropdown-menu {
+    background-color: $secondary;
+    border: 1px solid rgba($accent, 0.2);
+
+    .dropdown-item {
+      color: $text-light;
+
+      &:hover {
+        background-color: rgba($accent, 0.2);
+        color: $text-light;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// Footer (Dark)
+// =============================================================================
+
+.page-footer {
+  background-color: $primary;
+  color: $text-light;
+
+  a {
+    color: $accent;
+
+    &:hover {
+      color: lighten($accent, 10%);
+    }
+  }
+}
+
+// =============================================================================
+// Callouts (Light theme)
+// =============================================================================
+
+body:not(.reveal) {
+  .callout {
+    border-radius: 6px;
+    border-left-width: 4px;
+    background: $bg-light-alt;
+
+    .callout-title {
+      font-weight: 700;
+    }
+  }
+
+  .callout-note {
+    border-left-color: $accent;
+    background: rgba($accent, 0.05);
+  }
+
+  .callout-tip {
+    border-left-color: $success;
+    background: rgba($success, 0.05);
+  }
+
+  .callout-warning {
+    border-left-color: $highlight;
+    background: rgba($highlight, 0.08);
+  }
+
+  .callout-important {
+    border-left-color: $error;
+    background: rgba($error, 0.05);
+  }
+}
+
+// =============================================================================
+// Custom Divs (Light Theme)
+// =============================================================================
+
+body:not(.reveal) {
+  // Key concept box
+  .key-concept {
+    background: linear-gradient(135deg, rgba($highlight, 0.12) 0%, rgba($highlight, 0.05) 100%);
+    border: 1px solid rgba($highlight, 0.3);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+
+    &::before {
+      content: "Key Concept";
+      display: block;
+      font-weight: 700;
+      color: darken($highlight, 15%);
+      margin-bottom: 0.75rem;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  // Activity box
+  .activity {
+    background: rgba($accent, 0.05);
+    border: 2px dashed rgba($accent, 0.4);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+
+    &::before {
+      content: "Activity";
+      display: block;
+      font-weight: 700;
+      color: $accent;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  // Try it yourself
+  .try-it {
+    background: rgba($success, 0.05);
+    border-left: 4px solid $success;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+
+    &::before {
+      content: "Try It";
+      display: block;
+      font-weight: 700;
+      color: $success;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // Dougal tip
+  .dougal-tip {
+    background: linear-gradient(135deg, rgba($accent, 0.08) 0%, rgba($success, 0.08) 100%);
+    border-radius: 12px;
+    padding: 1rem 1.25rem 1rem 4rem;
+    margin: 1.5rem 0;
+    position: relative;
+    border: 1px solid rgba($accent, 0.15);
+
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%234A90A4' d='M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18 8.059 0 18 0s18 8.059 18 18'/%3E%3Cpath fill='%23FFF' d='M18 8c-3 0-5.5 2-6 5-.5-1-1.5-2-3-2-2 0-3.5 1.5-3.5 3.5S7 18 9 18c-2 0-3.5 1.5-3.5 3.5S7 25 9 25c1.5 0 2.5-1 3-2 .5 3 3 5 6 5s5.5-2 6-5c.5 1 1.5 2 3 2 2 0 3.5-1.5 3.5-3.5S29 18 27 18c2 0 3.5-1.5 3.5-3.5S29 11 27 11c-1.5 0-2.5 1-3 2-.5-3-3-5-6-5z'/%3E%3Ccircle fill='%23292F33' cx='14' cy='17' r='2'/%3E%3Ccircle fill='%23292F33' cx='22' cy='17' r='2'/%3E%3Cpath fill='%23292F33' d='M18 24c-1.5 0-2.5-.5-2.5-.5s.5 1.5 2.5 1.5 2.5-1.5 2.5-1.5-.5.5-2.5.5z'/%3E%3C/svg%3E");
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &::after {
+      content: "Dougal says...";
+      position: absolute;
+      top: 0.5rem;
+      left: 4rem;
+      font-size: 0.5em;
+      color: $text-muted;
+      font-style: italic;
+    }
+  }
+}
+
+// =============================================================================
+// Tables (Light theme)
+// =============================================================================
+
+body:not(.reveal) table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+
+  th {
+    background: rgba($accent, 0.1);
+    font-weight: 700;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid $accent;
+    color: $primary;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  tr:hover td {
+    background: rgba($accent, 0.03);
+  }
+}
+
+// =============================================================================
+// WebR Styling Fixes (Light Theme)
+// =============================================================================
+
+body:not(.reveal) {
+  .qwebr-editor {
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .qwebr-editor-toolbar {
+    background-color: $bg-light-alt !important;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  .qwebr-button {
+    background-color: $bg-light-alt !important;
+    color: $text-dark !important;
+    border: 1px solid #e1e4e8 !important;
+
+    &:hover {
+      background-color: darken($bg-light-alt, 5%) !important;
+    }
+  }
+
+  .qwebr-output-code-area pre {
+    background: $bg-code;
+    border-top: 1px solid #e1e4e8;
+  }
+
+  .qwebr-icon-run-code {
+    color: $success !important;
+  }
+
+  .qwebr-icon-status-spinner {
+    color: $accent !important;
+  }
+}
+
+// =============================================================================
+// Revealjs Slides (Light Theme)
+// =============================================================================
+
+.reveal {
+  font-family: $body-font-family;
+  background: $bg-light;
+  color: $text-dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+    font-weight: 700;
+    color: $primary;
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-size: $h1-font-size * 1.5;
+    border-bottom: 3px solid $accent;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: $h2-font-size * 1.3;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $accent;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $accent;
+    }
+  }
+
+  // Lists
+  ul, ol {
+    margin-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      list-style-type: circle;
+      margin-top: 0.5rem;
+    }
+  }
+
+  // Code (light theme for slides)
+  pre {
+    background: $bg-code;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.85em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  code {
+    font-family: $code-font-family;
+    background: $bg-code;
+    color: $code-color;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+  }
+
+  // Callouts in slides
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    border-left: 4px solid;
+    background: $bg-light-alt;
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $text-dark;
+    }
+  }
+
+  .callout-note {
+    border-left-color: $accent;
+    background: rgba($accent, 0.05);
+  }
+  .callout-tip {
+    border-left-color: $success;
+    background: rgba($success, 0.05);
+  }
+  .callout-warning {
+    border-left-color: $highlight;
+    background: rgba($highlight, 0.08);
+  }
+  .callout-important {
+    border-left-color: $error;
+    background: rgba($error, 0.05);
+  }
+
+  // Key concept in slides
+  .key-concept {
+    background: linear-gradient(135deg, rgba($highlight, 0.12) 0%, rgba($highlight, 0.05) 100%);
+    border: 1px solid rgba($highlight, 0.3);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+
+    &::before {
+      content: "Key Concept";
+      display: block;
+      font-weight: 700;
+      color: darken($highlight, 15%);
+      margin-bottom: 0.75rem;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  // Activity in slides
+  .activity {
+    background: rgba($accent, 0.05);
+    border: 2px dashed rgba($accent, 0.4);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+
+    &::before {
+      content: "Activity";
+      display: block;
+      font-weight: 700;
+      color: $accent;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  // Tables in slides
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9em;
+
+    th {
+      background: rgba($accent, 0.1);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid $accent;
+      color: $primary;
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e1e4e8;
+    }
+
+    tr:hover td {
+      background: rgba($accent, 0.03);
+    }
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 3px solid $accent;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: $text-muted;
+    font-style: italic;
+    background: transparent;
+  }
+
+  // Progress bar
+  .progress {
+    background: rgba($primary, 0.1);
+
+    span {
+      background: $accent;
+    }
+  }
+
+  .slide-number {
+    background: transparent;
+    color: $text-muted;
+    font-size: 0.75em;
+  }
+
+  // Columns
+  .columns {
+    display: flex;
+    gap: 2rem;
+
+    .column {
+      flex: 1;
+    }
+  }
+
+  // Smaller text class
+  .smaller {
+    font-size: 0.85em;
+
+    pre {
+      font-size: 0.8em;
+    }
+  }
+
+  // Center slides
+  section.center h1 {
+    font-size: 3rem;
+    border: none;
+    text-align: center;
+  }
+
+  // Title slide
+  .title-slide {
+    h1.title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.5rem;
+      color: $accent;
+      margin-bottom: 2rem;
+    }
+
+    p.author {
+      color: $text-muted;
+    }
+  }
+
+  // Mermaid diagrams (ensure visibility on light background)
+  .mermaid {
+    background: transparent;
+
+    // Flowchart nodes
+    .node rect,
+    .node polygon,
+    .node circle,
+    .node ellipse {
+      fill: rgba($accent, 0.1) !important;
+      stroke: $accent !important;
+      stroke-width: 2px;
+    }
+
+    // Node text
+    .nodeLabel,
+    .node .label {
+      color: $text-dark !important;
+      fill: $text-dark !important;
+    }
+
+    // Edge/arrow styling
+    .edgePath .path,
+    .flowchart-link {
+      stroke: $primary !important;
+      stroke-width: 2px;
+    }
+
+    // Arrow markers
+    marker path {
+      fill: $primary !important;
+    }
+
+    // Edge labels
+    .edgeLabel {
+      background-color: $bg-light !important;
+      color: $text-dark !important;
+    }
+  }
+}
+
+// =============================================================================
+// Print Styles
+// =============================================================================
+
+@media print {
+  body {
+    background: white !important;
+    color: $text-dark !important;
+  }
+
+  .reveal {
+    background: white;
+    color: $text-dark;
+
+    h1, h2, h3 {
+      color: $primary;
+    }
+
+    pre {
+      border: 1px solid #ddd;
+    }
+  }
+}

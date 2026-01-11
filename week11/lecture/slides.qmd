@@ -5,6 +5,7 @@ date: "2026-01-16"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
+    logo: ../../assets/foundations-26-logo.svg
     slide-number: c/t
     show-slide-number: all
     progress: true

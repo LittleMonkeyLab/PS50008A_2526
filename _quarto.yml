@@ -19,6 +19,7 @@ website:
   repo-actions: [edit, issue]
 
   navbar:
+    logo: assets/foundations-26-logo.svg
     left:
       - text: "Home"
         href: index.qmd
@@ -147,6 +148,7 @@ website:
 format:
   html:
     theme: cosmo
+    css: assets/custom.css
     toc: true
     toc-depth: 3
     code-fold: true
