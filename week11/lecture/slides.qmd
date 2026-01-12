@@ -225,7 +225,7 @@ Then the cycle continues...
 | 16 | **Research Plan due**; Begin data collection |
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends) |
-| Easter | Individual report writing |
+| Spring Break | Individual report writing |
 | Post-term | **Research Report due** Friday 1 May |
 
 ## Lectures vs Labs
@@ -354,7 +354,7 @@ Examples:
 
 :::
 
-## Before Tuesday's Lab
+## Before Thursday's Lab
 
 ::: {.callout-note}
 ## Preparation

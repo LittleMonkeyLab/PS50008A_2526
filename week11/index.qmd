@@ -73,10 +73,14 @@ By the end of this week, you will be able to:
 | Resource | Description |
 |----------|-------------|
 | [Week 11 Reading](lecture/reading.qmd) | Introduction to research methods |
-| [Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
+| *Lab Activity | DataLab stations and instructions |
+| *Lab Reading | Background on the DataLab tasks |
+| *Lab Slides| Opening slides for the lab session |
+| *Data Dictionary| Complete variable reference guide |
+<!-- | [*Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
 | [*Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
 | [*Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
-| [*Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide |
+| [*Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide | -->
 
 * Made available after the lab!
 
