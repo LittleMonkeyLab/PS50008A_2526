@@ -10,6 +10,7 @@ format:
     progress: true
     hash: true
     transition: fade
+    scrollable: true
     center: false
     width: 1280
     height: 720
@@ -151,8 +152,8 @@ These match the POST measures — perfect for **paired t-tests** and **within-su
 
 ::: {.callout-warning}
 ## Between-Lab Manipulation
-**Lab A:** Concrete words (bicycle, mountain, umbrella...)
-**Lab B:** Abstract words (justice, freedom, beauty...)
+**Lab 304A:** Abstract words + Mozart (justice, freedom, beauty...)
+**Lab 304B:** Concrete words + Silence (bicycle, mountain, umbrella...)
 :::
 
 ## Mind Palace — Teaching Points
@@ -189,10 +190,10 @@ These match the POST measures — perfect for **paired t-tests** and **within-su
 |----------|------|-------------|-------|
 | `time_estimate_sec` | Continuous | 60-sec estimation | ~30–90 sec |
 | `time_error` | Continuous | Estimate − 60 | -30 to +30 |
-| `line1_estimate_cm` | Continuous | Line 1 estimate | 1–25 cm |
-| `line1_error` | Continuous | Estimate − 12.7 | ±10 cm |
-| `line2_estimate_cm` | Continuous | Line 2 estimate | 1–25 cm |
-| `line2_error` | Continuous | Estimate − 8.3 | ±10 cm |
+| `line1_estimate_cm` | Continuous | Line 1 estimate (visual) | 1–25 cm |
+| `line2_estimate_cm` | Continuous | Line 2 estimate (visual) | 1–25 cm |
+| `string1_estimate_cm` | Continuous | String 1 estimate (tactile) | 1–40 cm |
+| `string2_estimate_cm` | Continuous | String 2 estimate (tactile) | 1–40 cm |
 | `temp_estimate_c` | Continuous | Room temp guess | 15–30 °C |
 | `time_counting` | Categorical | Counted during? | Yes steady/Yes sometimes/No |
 | `music_condition` | Categorical | Condition (by lab) | silence/music |
@@ -201,8 +202,8 @@ These match the POST measures — perfect for **paired t-tests** and **within-su
 
 ::: {.callout-warning}
 ## Between-Lab Manipulation
-**Lab A:** 60-second estimation in silence  
-**Lab B:** 60-second estimation with background music
+**Lab 304A:** 60-second estimation with background music (Mozart)
+**Lab 304B:** 60-second estimation in silence
 :::
 
 **Statistical Tests**
@@ -343,8 +344,8 @@ Expected heads: **5**
 
 ::: {.callout-warning}
 ## Between-Lab Manipulation
-**Lab A:** 2 metre distance  
-**Lab B:** 3 metre distance
+**Lab 304A:** 2 metre distance
+**Lab 304B:** 3 metre distance
 :::
 
 ## Frontal Lob — Teaching Points

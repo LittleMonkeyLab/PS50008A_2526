@@ -43,7 +43,7 @@ Today you generate the dataset we analyse all term.
 ## Session Overview
 
 | Time | Activity |
-||-|
+|------|----------|
 | 10:00–10:25 | Welcome, Part 1 survey, Memory Test |
 | 10:25–11:25 | Complete 5 tasks (follow your sequence card) |
 | 11:25–11:35 | Part 2 survey & wrap-up |
@@ -126,7 +126,7 @@ Have pen and paper ready!
 
 
 
-## STUDY: Lab A (Silence) {background-color="#4ECDC4" visibility="hidden"}
+## STUDY: Lab 304A (Mozart) {background-color="#4ECDC4"}
 
 :::: {.columns}
 ::: {.column width="48%"}
@@ -181,7 +181,7 @@ SOUL
 
 
 
-## STUDY: Lab B (Mozart) {background-color="#4ECDC4" visibility="hidden"}
+## STUDY: Lab 304B (Silence) {background-color="#4ECDC4"}
 
 :::: {.columns}
 ::: {.column width="48%"}
@@ -450,61 +450,160 @@ Each person is their own control.
 
 
 
-## Reflex Test
+## Reflex Test {.smaller}
 
-Physics measures your brain!
+:::: {.columns}
+::: {.column width="70%"}
+**Physics measures your brain!**
 
 - Distance fallen → reaction time
 - Typical: 150–250 milliseconds
-- Faster than conscious thought
 - Did you improve across trials?
 
+**What might have affected your data?**
+
+- Ruler height consistency?
+- Anticipation of the drop?
+- Partner's technique varied?
+:::
+::: {.column width="30%"}
+![](images/station1-reflex.png)
+:::
+::::
 
 
-## Time Warp
 
-Your brain constructs time.
+## Mind Palace {.smaller}
+
+:::: {.columns}
+::: {.column width="70%"}
+**Working memory in action**
+
+- Miller's "magical number 7 ± 2"
+- Serial position effect: primacy & recency
+- Distraction task interfered with rehearsal
+
+**What might have affected your data?**
+
+- Could everyone hear clearly?
+- Did you use a strategy (chunking)?
+- Was the distraction task equally hard?
+:::
+::: {.column width="30%"}
+![](images/station2-mind-palace.png)
+:::
+::::
+
+
+
+## Time Warp {.smaller}
+
+:::: {.columns}
+::: {.column width="70%"}
+**Your brain constructs time**
 
 - Most people over- or under-estimate
-- Counting helps accuracy
 - Touch vs vision — which is better?
 
+**What might have affected your data?**
+
+- Did you count in your head?
+- When exactly did the stopwatch start?
+- Could you see any clocks?
+:::
+::: {.column width="30%"}
+![](images/station3-time-warp.png)
+:::
+::::
 
 
-## Sixth Sense
 
-Can you detect being watched?
+## Sixth Sense {.smaller}
+
+:::: {.columns}
+::: {.column width="70%"}
+**Can you detect being watched?**
 
 - Chance = 3 out of 6 correct
-- Did you beat chance?
-- Confidence vs accuracy?
+- Signal detection: hits, misses, false alarms
+
+**What might have affected your data?**
+
+- Peripheral vision leakage?
+- Sound cues from your partner?
+- Response bias (saying "yes" more)?
+:::
+::: {.column width="30%"}
+![](images/station4-sixth-sense.png)
+:::
+::::
 
 
 
-## Lady Luck
+## Lady Luck {.smaller}
 
-Humans are bad at random!
+:::: {.columns}
+::: {.column width="70%"}
+**Humans are bad at random!**
 
 - We avoid repeating numbers
-- But real randomness has streaks
+- Real randomness has streaks
 - Gambler's fallacy: coins don't remember
 
+**What might have affected your data?**
+
+- Number preferences (7 is popular!)
+- Did you try to "be random"?
+- Were dice/coins recorded accurately?
+:::
+::: {.column width="30%"}
+![](images/station5-lady-luck.png)
+:::
+::::
 
 
-## Frontal Lob
 
-How well do you know yourself?
+## Frontal Lob {.smaller}
+
+:::: {.columns}
+::: {.column width="70%"}
+**How well do you know yourself?**
 
 - Calibration = prediction vs reality
-- Most people slightly overconfident
 - Metacognition: thinking about thinking
+
+**What might have affected your data?**
+
+- How was "success" defined?
+- Self-serving bias in ratings?
+- Was throwing distance consistent?
+:::
+::: {.column width="30%"}
+![](images/station6-frontal-lob.png)
+:::
+::::
+
+
+
+## Why This Matters
+
+**Collecting data is hard.**
+
+These challenges are why researchers:
+
+1. Use **standardised procedures**
+2. Define variables **operationally**
+3. **Train testers** for consistency
+4. **Control the environment**
+
+When we analyse your data, we'll consider these factors.
 
 
 
 ## Data Collected Today
 
 | Task | Variables |
-||--|
+|------|-----------|
 | Memory | Words recalled, positions, intrusions |
 | Reflex | Reaction times (5 trials) |
 | Time Warp | Time, visual, tactile estimates |
@@ -545,6 +644,6 @@ See you Wednesday!
 **Facilitator Notes:**
 - Check all Qualtrics complete
 - Note any issues
-- Lab A: Silence + Abstract
-- Lab B: Mozart + Concrete
+- Lab 304A: Mozart + Abstract
+- Lab 304B: Silence + Concrete
 :::

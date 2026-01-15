@@ -32,7 +32,7 @@ This data becomes the teaching dataset for the entire module. When we learn abou
 ::: {.callout-note}
 ## Required Preparation
 1. **Read the introductory lecture reading** (10 minutes) — an introduction to the module
-2. **Check your lab allocation** (Lab A or Lab B)
+2. **Check your lab allocation** (Lab 304A or Lab 304B)
 3. **Arrive on time** — we need to start promptly
 :::
 

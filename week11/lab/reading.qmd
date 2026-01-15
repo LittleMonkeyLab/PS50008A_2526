@@ -1,10 +1,17 @@
 ---
 title: "Week 11 Lab Reading"
-subtitle: "DataLab: Background"
+subtitle: "DataLab: Understanding What You Measured"
 author: "Gordon Wright"
 date: "2026-01-16"
-filters:
-  - lml/glossary
+format:
+  typst:
+    mainfont: "Atkinson Hyperlegible"
+  html: default
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf
 ---
 
 ```{=html}
@@ -28,39 +35,101 @@ filters:
 
 ## Overview
 
-This reading prepares you for the DataLab session. It explains the cognitive tasks you'll complete and why we're collecting these data.
+This reading explains the cognitive tasks you completed in DataLab and why we collected these data. More importantly, it invites you to reflect on the **practicalities of data collection** — what might have affected the quality and accuracy of your measurements.
 
 ::: {.callout-tip}
 ## Data Dictionary
 For a complete reference of all variables collected, see the [Data Dictionary](data-dictionary.qmd).
 :::
 
-## What You'll Be Measuring
+## Reflecting on Data Collection
 
-DataLab includes a group memory test plus five tasks measuring different aspects of human cognition and behaviour. Here's the background on each:
+DataLab was probably your first experience collecting psychological data. You may have noticed things didn't always go smoothly:
+
+- Instructions weren't always clear
+- Timing was tricky
+- Partners did things differently
+- The environment was distracting
+- Recording data while running a task was harder than expected
+
+**This is normal.** In fact, these challenges are exactly why research methods matter. Understanding what can go wrong helps you:
+
+1. Appreciate why standardised procedures exist
+2. Interpret your own data more thoughtfully
+3. Design better studies in the future
+
+As you read about each task below, think about what happened during *your* data collection. What might have affected your measurements?
+
+## What You Measured
+
+DataLab included a group memory test plus five tasks measuring different aspects of human cognition and behaviour. For each task, we'll cover the psychological background and then consider methodological issues.
 
 ### Task 1: Reaction Time (Reflex Test)
 
 ![](images/station1-reflex.png){.station-card}
 
-{{< term reaction_time "Reaction time" >}} is the interval between a stimulus and your response to it. In the ruler-drop task, we measure **simple reaction time** — how quickly you can respond to a single, expected stimulus.
+**Reaction time** is the interval between a stimulus and your response to it. In the ruler-drop task, we measured **simple reaction time** — how quickly you could respond to a single, expected stimulus.
 
 The physics is elegant: when you catch a falling ruler, the distance it fell before you caught it tells us how long your reaction took. Using the equation for free-falling objects (d = ½gt²), we can convert centimetres into milliseconds.
 
 ::: {.callout-note}
 ## Why It Matters
-Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks. We can also look for practice effects — do you get faster across trials?
+Reaction time is one of the most reliable measures in psychology. Your data will show how consistent (or variable) human performance is, even on simple tasks. We can also look for practice effects — did you get faster across trials?
+:::
+
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- Was the ruler held at exactly the same height each time?
+- Did the participant's fingers start in exactly the same position?
+- Was it always clear where to read the catch point?
+
+**Potential biases:**
+
+- *Anticipation*: Did you start to predict when the drop would happen?
+- *Practice effects*: Did you genuinely get faster, or just better at anticipating?
+- *Hand dominance*: We only tested one hand — would results differ for the other?
+
+**Procedural issues:**
+
+- How consistent was your partner's dropping technique?
+- Were there distractions (noise, movement) that affected some trials?
+- Did everyone follow the same instructions?
 :::
 
 ### Memory Test: Mind Palace
 
 ![](images/station2-mind-palace.png){.station-card}
 
-The memory task measures {{< term working_memory >}} — how many items you can hold in mind while performing another task.
+The memory task measured **working memory** — how many items you can hold in mind while performing another task.
 
 Miller (1956) famously proposed that we can hold about **7 ± 2** items in short-term memory — the "magical number seven." But the distraction task (maths problems) interferes with rehearsal, so performance typically drops.
 
 We'll also examine the **serial position effect**: people tend to remember words from the beginning of a list (primacy) and end of a list (recency) better than the middle. Your position-by-position recall data will let us test this pattern.
+
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- Were the words presented at the same speed for everyone?
+- Could everyone hear clearly from where they were sitting?
+- Was the recall period the same length for all participants?
+
+**Potential biases:**
+
+- *Prior exposure*: Had you seen any of the words recently?
+- *Language background*: Were the words equally familiar to everyone?
+- *Strategy use*: Some people use chunking or visualisation — should we control for this?
+
+**Procedural issues:**
+
+- Was the distraction task equally difficult for everyone?
+- Did the timing between presentation and recall vary?
+- How was recall scored? (exact spelling? close enough?)
+:::
 
 ### Task 2: Time and Magnitude Perception (Time Warp)
 
@@ -68,15 +137,37 @@ We'll also examine the **serial position effect**: people tend to remember words
 
 How accurately do we perceive time? Research shows that our internal clocks are surprisingly inaccurate and can be influenced by many factors.
 
-This station measures three types of estimation:
+This station measured three types of estimation:
 
-1. **Time estimation** — How accurately can you judge 60 seconds?
-2. **Visual magnitude estimation** — How accurately can you judge line lengths by looking?
-3. **Tactile magnitude estimation** — How accurately can you judge lengths by touch alone?
+1. **Time estimation** — How accurately could you judge 60 seconds?
+2. **Visual magnitude estimation** — How accurately could you judge line lengths by looking?
+3. **Tactile magnitude estimation** — How accurately could you judge lengths by touch alone?
 
 ::: {.callout-tip}
 ## Cross-Modal Comparison
 By comparing visual and tactile estimation, we can explore whether some senses are more accurate than others for judging physical properties.
+:::
+
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- When exactly did the stopwatch start? When you said "start" or when your partner pressed it?
+- How precisely were line lengths measured?
+- Was string tension consistent across tactile trials?
+
+**Potential biases:**
+
+- *Counting*: Did you count seconds in your head? (This is a strategy, not pure time perception)
+- *Anchoring*: Did early estimates influence later ones?
+- *Expectation*: Did you adjust estimates based on feedback?
+
+**Procedural issues:**
+
+- Could you see any clocks or time displays?
+- Were there environmental cues (regular sounds, movements)?
+- Was it quiet enough to concentrate?
 :::
 
 ### Task 3: Psychic Staring (Sixth Sense)
@@ -85,7 +176,7 @@ By comparing visual and tactile estimation, we can explore whether some senses a
 
 Can humans detect when they're being watched? This is a testable empirical question!
 
-The staring detection task uses {{< term signal_detection "signal detection theory" >}}:
+The staring detection task uses **signal detection theory**:
 
 - **Hits**: Correctly detecting when someone IS staring
 - **False alarms**: Saying "staring" when they're NOT
@@ -93,6 +184,28 @@ The staring detection task uses {{< term signal_detection "signal detection theo
 - **Correct rejections**: Correctly detecting when they're NOT staring
 
 If people cannot actually detect staring, we'd expect performance to be at **chance level** (about 50% correct, or 3 out of 6 trials).
+
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- Could you detect your partner through peripheral vision?
+- Were there sounds or movements that gave it away?
+- Was "staring" defined consistently? (How long? How intense?)
+
+**Potential biases:**
+
+- *Response bias*: Did you tend to say "yes" or "no" more often?
+- *Pattern-seeking*: Did you assume alternating patterns?
+- *Confirmation bias*: Did you interpret ambiguous feelings as evidence for your guess?
+
+**Procedural issues:**
+
+- How reliably did your partner randomise staring/not-staring?
+- Was the duration of each trial consistent?
+- Could other people in the room affect the "being watched" feeling?
+:::
 
 ### Task 4: Randomness (Lady Luck)
 
@@ -104,20 +217,42 @@ Humans are notoriously bad at generating random sequences. When asked to produce
 - Avoid patterns (even though random sequences often contain streaks)
 - Favour certain numbers (often 7!)
 
-This station also includes dice rolling and coin flipping, which let us compare **true** random outcomes (from dice/coins) with **human-generated** random sequences.
+This station also included dice rolling and coin flipping, which let us compare **true** random outcomes (from dice/coins) with **human-generated** random sequences.
 
 ::: {.callout-note}
 ## The Gambler's Fallacy
 Many people believe that after a streak of heads, tails is "due." This is false — each flip is independent. Your data will likely show longer runs than most people expect!
 :::
 
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- Were all 20 numbers recorded correctly?
+- Were dice rolls and coin flips recorded accurately?
+- How were "runs" counted? Was this consistent?
+
+**Potential biases:**
+
+- *Number preferences*: Did cultural factors affect which numbers felt "random"?
+- *Avoidance of repetition*: This is a known bias — but did you try to overcome it?
+- *Anchoring*: Did your previous number influence your next choice?
+
+**Procedural issues:**
+
+- Was there time pressure that affected your choices?
+- Did you understand what "random" meant in this context?
+- Were the dice fair? Were coins flipped properly?
+:::
+
 ### Task 5: Metacognition (Frontal Lob)
 
 ![](images/station6-frontal-lob.png){.station-card}
 
-{{< term metacognition "Metacognition" >}} is thinking about your own thinking — including how well you know your own abilities.
+**Metacognition** is thinking about your own thinking — including how well you know your own abilities.
 
-The throwing task measures {{< term calibration >}}: the match between your self-assessed ability and your actual performance.
+The throwing task measured **calibration**: the match between your self-assessed ability and your actual performance.
 
 - **Overconfidence**: Rating yourself higher than your performance
 - **Underconfidence**: Rating yourself lower than your performance
@@ -125,9 +260,31 @@ The throwing task measures {{< term calibration >}}: the match between your self
 
 Research consistently shows that people are poorly calibrated — often overconfident about easy tasks and underconfident about hard ones.
 
+::: {.callout-warning}
+## Methodological Considerations
+
+**Measurement error:**
+
+- How were successful throws defined? What about balls that bounced in?
+- Who counted the successes — participant or tester?
+- Was counting accurate across 10 throws?
+
+**Potential biases:**
+
+- *Self-serving bias*: Did you rate yourself higher because you wanted to be good?
+- *Social desirability*: Did having a partner watching affect your self-rating?
+- *Anchoring*: Did the 1-10 scale influence what felt like a "reasonable" rating?
+
+**Procedural issues:**
+
+- Was the throwing distance the same for everyone?
+- Was the target positioned consistently?
+- Did throwing technique vary (overarm, underarm)?
+:::
+
 ## The Pre-Post Design
 
-DataLab uses a **within-subjects** design to measure mood change. You'll rate your mood, energy, and stress both **before** and **after** the stations.
+DataLab used a **within-subjects** design to measure mood change. You rated your mood, energy, and stress both **before** and **after** the stations.
 
 This design is powerful because each person serves as their own control. By comparing your "before" to your "after," we eliminate individual differences — we're measuring change within you, not differences between people.
 
@@ -136,7 +293,23 @@ This design is powerful because each person serves as their own control. By comp
 When we learn about paired t-tests, we'll analyse whether DataLab systematically affected mood, energy, or stress. Did participation make people feel better? Worse? More or less stressed?
 :::
 
-## Why Generate Our Own Data?
+## Why This Matters
+
+You've just experienced something important: **collecting data is hard.**
+
+The methodological issues above aren't criticisms — they're reality. Even professional researchers face these challenges. The difference is that professionals:
+
+1. **Use standardised procedures** — detailed protocols that specify exactly how to do each step
+2. **Define variables operationally** — clear definitions of what counts as a "catch" or a "success"
+3. **Train testers** — so everyone administers tasks the same way
+4. **Control the environment** — quiet rooms, consistent setups, minimal distractions
+5. **Check inter-rater reliability** — do two testers recording the same event get the same result?
+
+When we analyse your DataLab data, we'll need to keep these limitations in mind. Some variability in the data reflects genuine individual differences. Some reflects measurement error and procedural inconsistencies.
+
+**Learning to tell the difference is what research methods is all about.**
+
+## Why We Generated Our Own Data
 
 ### Learning with Real Data
 
@@ -148,56 +321,41 @@ When we analyse data you've generated:
 
 ### Experiencing Both Roles
 
-Acting as both **participant** and **tester** teaches you:
+Acting as both **participant** and **tester** taught you:
 
 - The importance of standardised procedures
 - How instructions affect behaviour
 - Why research protocols exist
 
-## Preparing for the Lab
+### Understanding Limitations
 
-### Before You Arrive
+Having collected data yourself, you now understand:
 
-1. **Watch the preview video** — Module introduction (5 minutes)
-2. **Read this page** — Understand what you'll be doing
-3. **Check your lab allocation** — Lab A or Lab B
+- Why researchers obsess over procedures
+- How small variations can affect results
+- That "messy data" is normal — interpretation requires care
 
-### What to Bring
+## How You Worked in Pairs
 
-- Your phone or laptop (for Qualtrics data entry)
-- A pen (backup for paper recording)
+At each task, you worked with a partner:
 
-### What to Expect
+1. One person was the **participant** (completed the task)
+2. One person was the **tester** (administered the task, recorded data)
+3. Then you **swapped roles**
 
-| Time | Activity |
-|------|----------|
-| 10:00–10:25 | Welcome, Part 1 survey, **Memory Test** (together) |
-| 10:25–11:45 | Complete 5 tasks (follow your sequence card) |
-| 11:45–12:00 | Part 2 survey & wrap-up |
+This meant everyone experienced both perspectives.
 
-## Working in Pairs
-
-At each task, you'll work with a partner:
-
-1. One person is the **participant** (completes the task)
-2. One person is the **tester** (administers the task, records data)
-3. Then you **swap roles**
-
-This means everyone experiences both perspectives.
-
-You'll receive a **sequence card** telling you which tasks to complete in which order.
+You received a **sequence card** telling you which tasks to complete in which order.
 
 ## Key Terms
 
-Hover over any term for its definition:
-
 | Term | Related Concepts |
 |------|------------------|
-| {{< term reaction_time "Reaction time" >}} | simple RT, catch distance, milliseconds |
-| {{< term working_memory "Working memory" >}} | memory span, serial position, primacy/recency |
-| {{< term signal_detection "Signal detection" >}} | hits, false alarms, sensitivity |
-| {{< term metacognition "Metacognition" >}} | self-assessment, calibration |
-| {{< term calibration "Calibration" >}} | overconfidence, underconfidence |
+| **Reaction time** | simple RT, catch distance, milliseconds |
+| **Working memory** | memory span, serial position, primacy/recency |
+| **Signal detection** | hits, false alarms, sensitivity |
+| **Metacognition** | self-assessment, calibration |
+| **Calibration** | overconfidence, underconfidence |
 
 ## References
 

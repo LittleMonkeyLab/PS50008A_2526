@@ -95,8 +95,7 @@ website:
                     # href: week11/lab/reading.qmd
                   - text: "Data Dictionary (after lab)"
                     # href: week11/lab/data-dictionary.qmd
-                  - text: "Self-Assessment (after lab)"
-                    # href: week11/lab/self-assessment.qmd
+
           # - section: "Week 12: Distributions & Variability"
           #   contents:
           #     - text: "Overview"

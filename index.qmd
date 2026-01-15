@@ -3,6 +3,15 @@ title: "PS50008A Research Methods & Experimental Design"
 subtitle: "Term 2 Spring 2026 | Goldsmiths Psychology"
 author: "Gordon Wright"
 date: last-modified
+format: 
+  typst: 
+    mainfont: "Atkinson Hyperlegible"
+  html: default
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf  
 ---
 
 ## Welcome

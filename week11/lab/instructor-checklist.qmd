@@ -1,0 +1,154 @@
+---
+title: "DataLab Instructor Checklist"
+subtitle: "Week 11 Lab Session"
+date: "2026-01-16"
+format:
+  typst:
+    mainfont: "Atkinson Hyperlegible"
+    margin:
+      x: 1.5cm
+      y: 1.5cm
+---
+
+```{=typst}
+#set text(size: 11pt)
+#let checkbox = box(width: 12pt, height: 12pt, stroke: 1pt + black, radius: 2pt)
+```
+
+## Before Students Arrive (9:45)
+
+```{=typst}
+#checkbox Open slides on main screen (week11/lab/slides.qmd)
+
+#checkbox Check Qualtrics survey is live and QR code works
+
+#checkbox Set out at each station:
+#h(1em) #checkbox Station 1 (Reflex): Rulers (30cm)
+#h(1em) #checkbox Station 2 (Time Warp): Stopwatch, line cards, strings
+#h(1em) #checkbox Station 3 (Sixth Sense): Coins
+#h(1em) #checkbox Station 4 (Lady Luck): Dice, coins
+#h(1em) #checkbox Station 5 (Frontal Lob): Ping pong balls, basket
+
+#checkbox Sequence cards ready to hand out
+
+#checkbox Spare pens and paper for memory test recall
+```
+
+---
+
+## Session Flow
+
+### 10:00 — Welcome & Setup (10 min)
+
+```{=typst}
+#checkbox Welcome students, explain DataLab purpose
+
+#checkbox Students collect sequence cards (hand out in order!)
+
+#checkbox Students form pairs (same colour on card)
+
+#checkbox Students scan QR and start Part 1 survey
+
+#checkbox Tell them: *"STOP when you reach the Memory Test page"*
+```
+
+### 10:10 — Memory Test (15 min)
+
+```{=typst}
+#box(fill: luma(230), inset: 8pt, radius: 4pt, width: 100%)[
+  *YOUR LAB:* #h(2em) #box(stroke: 1pt, inset: 4pt)[304A — Mozart + Abstract] #h(1em) OR #h(1em) #box(stroke: 1pt, inset: 4pt)[304B — Silence + Concrete]
+]
+
+#v(4pt)
+
+#checkbox Announce: *"Look LEFT"* or *"Look RIGHT"* (split the room)
+
+#checkbox Advance to YOUR lab's word list slide
+
+#checkbox STUDY phase: Start 30-second timer (on slide)
+#h(1em) Students memorise their word list silently
+
+#checkbox DISTRACT phase: Advance to maths slide, start 60-second timer
+#h(1em) Students do maths problems (no calculators!)
+
+#checkbox RECALL phase: Advance to recall slide, start 90-second timer
+#h(1em) Students write words on paper — NO looking at screen!
+
+#checkbox Students enter results in Qualtrics (words recalled, positions, intrusions, strategy)
+```
+
+### 10:25 — Tasks Begin (80 min)
+
+```{=typst}
+#checkbox Announce: *"Check your sequence card, go to your first station"*
+
+#checkbox Start 15-minute timer for each rotation
+
+#checkbox Circulate — help with any confusion
+
+#checkbox Remind students: *"Enter data in Qualtrics before moving!"*
+
+#box(fill: luma(240), inset: 6pt, radius: 4pt, width: 100%)[
+  *Rotation times:* 10:25 → 10:40 → 10:55 → 11:10 → 11:25 → 11:40
+]
+```
+
+### 11:45 — Wrap-up (15 min)
+
+```{=typst}
+#checkbox Announce: *"Return to your seats for Part 2 survey"*
+
+#checkbox Students complete Part 2 (mood POST, favourites, comments)
+
+#checkbox Quick debrief — preview Week 12 analysis
+
+#checkbox Check all Qualtrics submissions complete
+```
+
+---
+
+## Key Reminders
+
+```{=typst}
+#box(fill: rgb("#fff3cd"), inset: 10pt, radius: 4pt, width: 100%)[
+  *Memory Test:*
+  - 304A = Abstract words + Mozart playing
+  - 304B = Concrete words + Silence
+  - Make sure students only look at THEIR list (left or right)
+]
+
+#v(6pt)
+
+#box(fill: rgb("#d1ecf1"), inset: 10pt, radius: 4pt, width: 100%)[
+  *Common Issues:*
+  - Students forgetting to enter data before moving → remind them!
+  - Pairs getting separated → keep same-colour pairs together
+  - Qualtrics not loading → have backup paper forms ready
+]
+```
+
+---
+
+## Quick Contacts
+
+```{=typst}
+#table(
+  columns: (1fr, 1fr),
+  stroke: 0.5pt,
+  inset: 8pt,
+  [*Gordon Wright*], [g.wright\@gold.ac.uk],
+  [*Bence Palfi*], [b.palfi\@gold.ac.uk],
+)
+```
+
+---
+
+## Station Reference
+
+| Station | What They Do | Key Variables |
+|---------|--------------|---------------|
+| 1. Reflex | Catch falling ruler ×5 | Distance (cm) → RT (ms) |
+| 2. Time Warp | Estimate 60s, lines, strings, temp | Estimation errors |
+| 3. Sixth Sense | Detect staring ×6 | Hits, false alarms |
+| 4. Lady Luck | 20 random numbers, dice, coins | Patterns, runs |
+| 5. Frontal Lob | Rate ability, throw ×10 | Calibration |

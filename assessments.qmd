@@ -3,6 +3,15 @@ title: "Assessments"
 subtitle: "PS50008A Research Methods | Term 2 Spring 2026"
 author: "Gordon Wright"
 date: last-modified
+format: 
+  typst: 
+    mainfont: "Atkinson Hyperlegible"
+  html: default
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf  
 ---
 
 ## Assessment Overview

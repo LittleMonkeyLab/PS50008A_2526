@@ -3,10 +3,15 @@ title: "DataLab Data Dictionary"
 subtitle: "Variable Reference Guide"
 author: "Gordon Wright"
 date: "2026-01-16"
-format:
-  html:
-    toc: true
-    toc-depth: 3
+format: 
+  typst: 
+    mainfont: "Atkinson Hyperlegible"
+  html: default
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf  
 ---
 
 ```{=html}
@@ -66,7 +71,7 @@ The data dictionary is organised by station. Each variable includes its type, de
 | Variable | Type | Description | Values |
 |----------|------|-------------|--------|
 | `participant_id` | Integer | Unique participant number | 1-60 |
-| `lab_room` | Categorical | Lab assignment | A, B |
+| `lab_room` | Categorical | Lab assignment | 304A, 304B |
 | `group_colour` | Categorical | Rotation group | Red, Blue, Green, Yellow, Orange, Purple, Pink, White, Solo |
 | `session_date` | Date | Auto-captured timestamp | ISO format |
 
@@ -193,6 +198,7 @@ Positions 1-3 (primacy) and 8-10 (recency) are typically recalled better than po
 | `line_b_estimate_cm` | Continuous | Line B length estimate | 1-25 cm |
 | `string1_estimate_cm` | Continuous | String 1 estimate (tactile) | 1-40 cm |
 | `string2_estimate_cm` | Continuous | String 2 estimate (tactile) | 1-40 cm |
+| `temp_estimate_c` | Continuous | Room temperature guess | 15-30 °C |
 | `time_counting` | Categorical | Counted during timing? | Yes steadily, Yes sometimes, No |
 | `music_condition` | Categorical | Lab condition | silence, music |
 
@@ -205,6 +211,7 @@ Positions 1-3 (primacy) and 8-10 (recency) are typically recalled better than po
 | `line_b_error` | estimate - actual | Estimation accuracy |
 | `string1_error` | estimate - actual | Tactile accuracy |
 | `string2_error` | estimate - actual | Tactile accuracy |
+| `temp_error` | estimate - actual | Temperature accuracy |
 
 ---
 
@@ -323,7 +330,7 @@ Positions 1-3 (primacy) and 8-10 (recency) are typically recalled better than po
 - Conscientiousness × calibration
 
 ### Group Comparisons (Independent t-tests)
-- Lab A (silence) vs Lab B (music) on time estimation
+- Lab 304A (music) vs Lab 304B (silence) on time estimation
 - Visual vs tactile estimation accuracy
 
 ### Signal Detection
