@@ -45,7 +45,7 @@ theme_set(theme_minimal(base_size = 14))
 ## Today's Focus
 
 ::: {.objectives-box}
-**This is NOT a heavy R coding session.** Today is about:
+**This is NOT asking you to perform any analysis.** Today is about:
 
 - Seeing YOUR real DataLab data
 - Identifying design types, IVs, and DVs
@@ -70,7 +70,8 @@ theme_set(theme_minimal(base_size = 14))
 
 ## Open the Activity
 
-{{< placeholder 700 400 >}}
+
+![](images/Week12Activity.png)
 
 *Navigate to: Week 12 > Lab > Activity*
 
