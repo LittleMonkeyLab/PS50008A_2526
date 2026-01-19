@@ -1,207 +1,252 @@
 ---
 title: "Week 16 Self-Assessment"
-subtitle: "Research Plan Tips"
+subtitle: "Regression, R-Squared, and Prediction"
 ---
 
-```{r, echo=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(webexercises)
 ```
 
 ## Instructions
 
-Your Research Plan is due this week. This quiz helps you check that you've covered all the key components. Use it as a final checklist before submitting.
+Test your understanding of regression analysis, the meaning of R-squared, and how we use regression for prediction. Regression builds on correlation to allow us to predict one variable from another.
 
 ---
 
-## Part 1: Research Plan Components
+## Part 1: Conceptual Questions
 
-### Question 1: Essential Elements
+### Question 1: What is Regression?
 
-Which of the following MUST be included in your Research Plan?
+Simple linear regression is used to:
 
-Experimental hypothesis `r torf(TRUE)`
+`r mcq(c("Compare two groups", answer = "Predict one variable from another using a linear equation", "Test for differences before and after", "Determine if variables are categorical"))`
 
-Identified IV and DV `r torf(TRUE)`
+In regression, the predictor variable is also called:
 
-Design type (between/within/correlational) `r torf(TRUE)`
+`r mcq(c("The dependent variable", answer = "The independent variable (IV) or X variable", "The outcome", "The residual"))`
 
-Full literature review `r torf(FALSE)`
+The outcome variable is also called:
 
-Method section outline `r torf(TRUE)`
+`r mcq(c("The predictor", answer = "The dependent variable (DV) or Y variable", "The independent variable", "The slope"))`
 
-Statistical test selection `r torf(TRUE)`
+### Question 2: The Regression Equation
 
-### Question 2: Hypothesis Requirements
+The regression equation is: Y = a + bX. In this equation:
 
-Your experimental hypothesis should be:
+'a' (the intercept) represents:
 
-`r mcq(c("Vague and general", answer = "Specific, testable, and directional (for one-tailed) or non-directional (for two-tailed)", "Based only on your intuition", "Identical to the null hypothesis"))`
+`r mcq(c("The slope of the line", answer = "The predicted Y value when X = 0", "The correlation coefficient", "The sample size"))`
 
-A one-tailed hypothesis must:
+'b' (the slope) represents:
 
-`r mcq(c("Predict that variables are related", answer = "Specify the direction of the predicted effect", "Be longer than a two-tailed hypothesis", "Include statistical notation"))`
+`r mcq(c("The Y-intercept", answer = "The change in Y for each one-unit increase in X", "The total variance", "The residual"))`
 
----
+### Question 3: Regression vs Correlation
 
-## Part 2: Variable Identification
+How is regression different from correlation?
 
-### Question 3: IV Characteristics
+`r mcq(c("They are exactly the same", answer = "Regression allows prediction and has a specific direction (X predicts Y)", "Correlation is more accurate", "Regression only works with experiments"))`
 
-The IV in an experimental study is:
+If the correlation between X and Y is strong, the regression will:
 
-`r mcq(c(answer = "Manipulated by the researcher", "Measured as the outcome", "Always a continuous variable", "The same as the DV"))`
+`r mcq(c("Fail to work", answer = "Make more accurate predictions", "Always predict perfectly", "Have a slope of zero"))`
 
-In a correlational design, there is:
+### Question 4: R-Squared in Regression
 
-`r mcq(c("One IV and one DV", "Two IVs", answer = "No IV — both variables are measured", "Only a DV"))`
+R-squared (R2) tells us:
 
-### Question 4: DV Characteristics
+`r mcq(c("The significance level", answer = "The proportion of variance in Y explained by X", "The slope of the line", "The sample size needed"))`
 
-The DV should be:
+If R2 = .36, this means:
 
-`r mcq(c(answer = "Operationally defined (how exactly will you measure it?)", "Vague and flexible", "The same for all studies", "Categorical only"))`
+`r mcq(c("The correlation is .36", "36% of participants showed the effect", answer = "36% of the variance in Y is explained by X", "The prediction is 36% accurate"))`
 
-### Question 5: Practice - Identify Variables
+The remaining variance (1 - R2) is called:
 
-A researcher wants to test if caffeine improves reaction time. Participants are randomly assigned to drink coffee or water, then complete a reaction time task.
+`r mcq(c("Explained variance", answer = "Unexplained or residual variance", "Total variance", "The intercept"))`
 
-IV: `r mcq(c(answer = "Drink type (coffee vs water)", "Reaction time", "Participant assignment", "Task difficulty"))`
+### Question 5: Residuals
 
-DV: `r mcq(c("Caffeine content", answer = "Reaction time", "Drink preference", "Group membership"))`
+A residual is:
 
----
+`r mcq(c("The predicted value", "The slope", answer = "The difference between the actual Y value and the predicted Y value", "The correlation coefficient"))`
 
-## Part 3: Design Specification
+If a residual is positive, the actual score was:
 
-### Question 6: Design Selection
+`r mcq(c("Lower than predicted", answer = "Higher than predicted", "Exactly as predicted", "Cannot determine"))`
 
-```{r}
-opts_design <- c(
-  "It determines the statistical test to use",
-  "It clarifies how participants are allocated",
-  "It affects the type of conclusions you can draw",
-  answer = "All of the above"
-)
-```
+### Question 6: Assumptions of Regression
 
-Why is specifying your design type important?
+Linear regression assumes:
 
-`r longmcq(opts_design)`
+`r mcq(c(answer = "A linear relationship between X and Y", "A curvilinear relationship", "No relationship at all", "Categorical variables only"))`
 
-### Question 7: Design Justification
+If the relationship is clearly curved (nonlinear), we should:
 
-If you use a within-subjects design, you should justify it by noting:
-
-`r mcq(c(answer = "It controls for individual differences between participants", "It requires more participants", "It's always better than between-subjects", "It doesn't need justification"))`
-
-If you use a between-subjects design, a key consideration is:
-
-`r mcq(c(answer = "Random assignment to conditions to avoid confounds", "Testing participants multiple times", "Correlation between variables", "Using the same participants twice"))`
+`r mcq(c("Use linear regression anyway", answer = "Consider transforming variables or using nonlinear methods", "Ignore the pattern", "Collect more data"))`
 
 ---
 
-## Part 4: Test Selection
+## Part 2: Interpretation Questions
 
-### Question 8: Matching Design to Test
+### Question 7: Interpreting Regression Output
 
-Fill in the appropriate test:
+A regression analysis yields: Y = 25 + 3X, R2 = .42
 
-Between-subjects design (comparing two groups) → `r fitb(c("independent t-test", "independent t test", "independent samples t-test"), ignore_case = TRUE)`
+If X = 10, the predicted Y is:
 
-Within-subjects design (comparing same people twice) → `r fitb(c("paired t-test", "paired t test", "paired samples t-test", "related t-test"), ignore_case = TRUE)`
+`r mcq(c("25", "30", answer = "55", "42"))`
 
-Correlational design (measuring relationship) → `r fitb(c("Pearson's r", "Pearsons r", "correlation", "pearson"), ignore_case = TRUE)`
+For every 1-unit increase in X, Y increases by:
 
-### Question 9: Test Justification
+`r mcq(c("25", answer = "3", "42", "10"))`
 
-Your Research Plan should explain why your chosen test is appropriate. Which is the best justification for using an independent t-test?
+### Question 8: Interpreting R-Squared
 
-```{r}
-opts_justify <- c(
-  "Because it's the easiest test",
-  answer = "Because we have two separate groups (between-subjects) and continuous DV data",
-  "Because it always gives significant results",
-  "Because the lecturer said to use it"
-)
-```
+Study A reports R2 = .64. Study B reports R2 = .16.
 
-`r longmcq(opts_justify)`
+Which study's predictor explains more variance? `r mcq(c(answer = "Study A", "Study B", "They are equal", "Cannot compare"))`
 
----
+In Study A, what percentage of variance is NOT explained?
 
-## Part 5: Method Section Preview
+`r mcq(c("64%", answer = "36%", "100%", "16%"))`
 
-### Question 10: Method Components
+### Question 9: From Correlation to R-Squared
 
-The Method section of a research report typically includes:
+If r = .60, what is R2?
 
-Participants `r torf(TRUE)`
+`r mcq(c(".60", answer = ".36", "6.0", ".30"))`
 
-Design `r torf(TRUE)`
+If r = -.50, what is R2?
 
-Full statistical results `r torf(FALSE)`
+`r mcq(c("-.50", "-.25", answer = ".25", ".50"))`
 
-Materials `r torf(TRUE)`
+Note: R-squared is always positive because we square the correlation.
 
-Procedure `r torf(TRUE)`
+### Question 10: Interpreting the Slope
 
-### Question 11: Participants Section
+A regression predicting exam score from hours studied shows: Score = 50 + 5(Hours)
 
-What should the Participants section include?
+This means:
 
-`r mcq(c(answer = "Sample size, demographics, and how participants were recruited", "The statistical test used", "The results of the study", "The hypothesis"))`
+`r mcq(c("Everyone gets 50", answer = "Each additional hour of study is associated with 5 more points", "Studying 5 hours gives a score of 50", "The maximum score is 55"))`
 
-### Question 12: Procedure Section
+A student who studies 8 hours is predicted to score:
 
-The Procedure section should describe:
-
-`r mcq(c("Only what participants did wrong", answer = "Step-by-step what happened to participants during the study", "The statistical analysis", "The theory behind the study"))`
+`r mcq(c("58", "50", answer = "90", "80"))`
 
 ---
 
-## Part 6: Common Mistakes to Avoid
+## Part 3: Application Questions
 
-### Question 13: Hypothesis Errors
+### Question 11: Making Predictions
 
-Which is a correctly written **experimental hypothesis**?
+A researcher develops a regression equation to predict stress (Y) from workload (X):
+Stress = 10 + 2.5(Workload), R2 = .49
 
-`r mcq(c("Caffeine might affect memory", answer = "Participants who consume caffeine will recall more words than those who consume water", "There is no effect of caffeine on memory", "Memory and caffeine are variables"))`
+For someone with a workload score of 8, predicted stress is:
 
-### Question 14: Design-Test Mismatch
+`r mcq(c("10", "20", answer = "30", "49"))`
 
-A researcher claims to have a "between-subjects correlational design". This is:
+How much variance in stress is explained by workload?
 
-`r mcq(c("A valid combination", answer = "Incorrect — correlational designs measure relationships, not group differences", "The best type of design", "Required for the Research Plan"))`
+`r mcq(c("10%", "25%", answer = "49%", "2.5%"))`
 
-### Question 15: Data Table
+### Question 12: Evaluating Prediction Quality
 
-Your Research Plan should include a summary data table. This table should:
+A regression with R2 = .81 will make:
 
-`r mcq(c("Contain made-up data", "Show individual participant scores", answer = "Show the structure for presenting means and SDs (without actual data yet)", "Include all raw data"))`
+`r mcq(c("Poor predictions", answer = "Good predictions (81% variance explained)", "Perfect predictions", "No predictions"))`
+
+A regression with R2 = .09 will make:
+
+`r mcq(c("Excellent predictions", answer = "Poor predictions (only 9% variance explained)", "Moderate predictions", "Perfect predictions"))`
+
+### Question 13: Limitations of Prediction
+
+We should be cautious about:
+
+`r mcq(c("Making any predictions", answer = "Predicting beyond the range of observed data (extrapolation)", "Using regression at all", "Large R-squared values"))`
+
+If our data has X values ranging from 1-10, predicting Y when X = 50 is:
+
+`r mcq(c("Very reliable", answer = "Unreliable extrapolation", "More accurate than interpolation", "Impossible"))`
 
 ---
 
-## Part 7: Final Checklist
+## Part 4: MCQ Exam Practice
 
 ::: {.webex-check .webex-box}
 
-### Research Plan Self-Check
+### Investigation 1
 
-Before submitting, confirm you have:
+A researcher examines whether hours of practice predicts piano performance scores. Data from 40 students yields: Performance = 30 + 4(Practice Hours), R2 = .52, p < .001.
 
-1. **A clear experimental hypothesis?** (one-tailed or two-tailed, justified) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+1. **What type of analysis is this?** `r mcq(c("t-test", "Correlation only", answer = "Simple linear regression", "ANOVA"))`
 
-2. **Identified your IV?** (what you manipulate or compare) `r mcq(c(answer = "Yes", "No", "Not applicable"))`
+2. **Predictor (IV):** `r mcq(c(answer = "Practice hours", "Performance score", "Sample size", "R-squared"))`
 
-3. **Identified your DV?** (what you measure) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+3. **Outcome (DV):** `r mcq(c("Practice hours", answer = "Performance score", "The slope", "The intercept"))`
 
-4. **Specified your design?** (between/within/correlational) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+4. **For each additional hour of practice, performance increases by:** `r mcq(c("30 points", answer = "4 points", "52 points", "1 point"))`
 
-5. **Selected your statistical test?** (and justified it) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+5. **A student who practices 10 hours is predicted to score:** `r mcq(c("30", "40", answer = "70", "100"))`
 
-6. **Outlined your Method section?** (Participants, Design, Materials, Procedure) `r mcq(c(answer = "Yes", "No", "Partially"))`
+6. **How much variance in performance is explained?** `r mcq(c("30%", "4%", answer = "52%", "70%"))`
 
-7. **Included a data summary table template?** `r mcq(c(answer = "Yes", "No", "What's that?"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2
+
+A study finds that sleep quality (X) predicts daily mood (Y) with R2 = .25.
+
+1. **What percentage of variance in mood is explained by sleep quality?** `r mcq(c("75%", answer = "25%", "50%", "5%"))`
+
+2. **What is the correlation (r) between sleep and mood?** `r mcq(c(".25", answer = ".50 (since R2 = .25, r = sqrt(.25) = .50)", ".75", ".125"))`
+
+3. **What percentage of variance is NOT explained?** `r mcq(c("25%", answer = "75%", "50%", "100%"))`
+
+4. **This unexplained variance could be due to:** `r mcq(c(answer = "Other factors affecting mood (exercise, social contact, stress, etc.)", "Errors in R-squared", "The sample being too large", "Sleep quality being irrelevant"))`
+
+5. **Can we say sleep quality CAUSES better mood?** `r torf(FALSE)`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 3
+
+A regression equation is: Test Score = 40 + 0.5(Study Minutes), R2 = .36
+
+1. **The intercept (40) represents:** `r mcq(c(answer = "Predicted score when study time = 0", "The slope", "R-squared", "The maximum score"))`
+
+2. **Studying for 60 minutes predicts a score of:** `r mcq(c("40", "60", answer = "70", "100"))`
+
+3. **Studying for 120 minutes predicts a score of:** `r mcq(c("60", "80", answer = "100", "120"))`
+
+4. **A student actually scored 80 after studying 60 minutes. Their residual is:** `r mcq(c("-10", answer = "+10 (actual 80 minus predicted 70)", "0", "80"))`
+
+5. **The positive residual means they scored:** `r mcq(c(answer = "Higher than predicted", "Lower than predicted", "Exactly as predicted", "We cannot tell"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 4
+
+A researcher wants to predict job satisfaction from salary. R2 = .15.
+
+1. **How would you evaluate this R2?** `r mcq(c("Excellent - salary fully explains satisfaction", answer = "Modest - salary explains only 15% of variance in satisfaction", "R2 is too small to interpret", "Perfect prediction"))`
+
+2. **What does this suggest about other factors?** `r mcq(c("No other factors matter", answer = "85% of variance is due to other factors (work environment, colleagues, autonomy, etc.)", "Salary is the only factor", "We cannot speculate"))`
+
+3. **Should we conclude salary doesn't matter for satisfaction?** `r mcq(c(answer = "No - it still explains some variance; other factors also matter", "Yes - 15% is too small", "The study is invalid", "We need a larger sample"))`
+
+4. **Multiple regression could help by:** `r mcq(c("Removing the effect of salary", answer = "Including additional predictors to explain more variance", "Making R2 exactly 1.0", "Eliminating residuals"))`
 
 :::
 
@@ -209,16 +254,18 @@ Before submitting, confirm you have:
 
 ## Summary Checklist
 
-Before submitting your Research Plan, verify:
+Before moving on, make sure you can:
 
-- [ ] Experimental hypothesis is specific and testable
-- [ ] IV and DV are clearly identified and operationally defined
-- [ ] Design type is specified and appropriate for your research question
-- [ ] Statistical test matches your design
-- [ ] Method section outlines Participants, Design, Materials, Procedure
-- [ ] Data summary table shows expected structure (without fabricated data)
+- [ ] Explain the purpose of regression analysis
+- [ ] Interpret the regression equation (Y = a + bX)
+- [ ] Understand what the intercept (a) and slope (b) represent
+- [ ] Calculate predicted values using a regression equation
+- [ ] Interpret R-squared as proportion of variance explained
+- [ ] Convert between r and R-squared
+- [ ] Explain what residuals represent
+- [ ] Recognise limitations of prediction (extrapolation)
 
 ::: {.callout-important}
-## Research Plan Due This Week
-Submit your Research Plan by the deadline. This assessment is worth 20% of your module grade. Review the assessment brief on Canvas for formatting requirements.
+## Key Distinction
+Correlation tells us about the strength and direction of a relationship. Regression goes further by providing a specific equation for prediction and quantifying how much variance is explained. However, regression (like correlation) still cannot establish causation without an experimental design.
 :::

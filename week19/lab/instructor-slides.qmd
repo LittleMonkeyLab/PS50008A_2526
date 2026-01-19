@@ -1,71 +1,435 @@
 ---
-title: "Live Data Collection"
+title: "Project Groups: Data Collection"
 subtitle: "PS50008A Week 19 Lab"
 author: "Gordon Wright"
-date: "2026-03-18"
+date: "2026-03-19"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w19-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-18"
-  labels: ['data-collection', 'project']
-  depends_on:
-    - rm0-w19-lecture-slides
-  blocks:
-    - rm0-w19-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-03-18"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Live Data Collection**
+## Project Groups: Data Collection
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## EDS Assignment Reminder
+
+::: {.callout-warning}
+## EDS DUE: Tomorrow!
+
+**Friday 20th March by 4pm**
+
+Submit via Learn.gold. If you have last-minute questions, ask now!
 :::
 
 ---
 
-## Learning Objectives
+## Today's Focus
 
-By the end of this lab, you will be able to:
+::: {.objectives-box}
+**Live Data Collection Session**
 
-- TBC
-- TBC
-- TBC
+Today you will:
+
+- Conduct your study with real participants
+- Practice standardised administration
+- Record data accurately
+- Handle unexpected situations
+- Collect data towards your target sample
+:::
 
 ---
 
-## Lab Structure
+## Session Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:15 | Final preparation and setup |
+| 10:15-11:30 | Data collection (rotating participants) |
+| 11:30-11:45 | Data quality check |
+| 11:45-12:00 | Wrap-up and next steps |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+# Final Preparation {background-color="#275882"}
 
-Move to the [Lab Activity](activity.qmd)
+## Getting Ready (~15 min)
+
+---
+
+## Materials Check
+
+::: {.definition-box}
+**Confirm you have:**
+
+- [ ] Consent forms (enough copies)
+- [ ] Standardised instructions (printed)
+- [ ] All stimuli/materials ready
+- [ ] Data recording sheets
+- [ ] Debriefing sheets
+- [ ] Pens/pencils if needed
+:::
+
+---
+
+## Role Assignment
+
+:::: {.columns}
+::: {.column width="50%"}
+**For data collection, decide:**
+
+- Who will be **experimenter** for each session?
+- Who will be **assistant** (handling materials)?
+- Who will **recruit participants**?
+:::
+
+::: {.column width="50%"}
+**Rotation plan:**
+
+Everyone should run at least one session as experimenter to understand the process.
+:::
+::::
+
+---
+
+## Quick Procedure Rehearsal
+
+::: {.exercise-box}
+**In your groups (5 minutes):**
+
+1. One person reads through the procedure aloud
+2. Others check against the written version
+3. Clarify any last questions about timing or wording
+:::
+
+---
+
+## Participant Recruitment
+
+::: {.callout-tip}
+## Who Can Participate?
+
+Today you can recruit:
+
+- Other students in the lab (from different groups)
+- Rotate so everyone gets to be both experimenter AND participant
+- Ensure no one participates in the same study twice
+
+**Cross-test**: Group A tests Group B, Group B tests Group A, etc.
+:::
+
+---
+
+## Checkpoint: Ready to Go?
+
+::: {.poll-box}
+**Instructor Check:**
+
+Before data collection begins:
+
+- All materials ready?
+- Everyone knows their role?
+- Procedure rehearsed?
+- Recording sheets prepared?
+:::
+
+---
+
+# Data Collection {background-color="#275882"}
+
+## Live Testing (~75 min)
+
+---
+
+## Data Collection Ground Rules
+
+::: {.definition-box}
+**During data collection:**
+
+1. Follow your procedure EXACTLY as written
+2. Use standardised instructions (read from script)
+3. Do not improvise or add explanations
+4. Record data immediately and accurately
+5. Complete debriefing after EVERY participant
+:::
+
+---
+
+## Being a Good Experimenter
+
+:::: {.columns}
+::: {.column width="50%"}
+**Do:**
+
+- Be professional and friendly
+- Speak clearly at consistent pace
+- Allow time for questions
+- Stay neutral (no hints!)
+- Thank every participant
+:::
+
+::: {.column width="50%"}
+**Don't:**
+
+- Rush through instructions
+- React to participant responses
+- Skip the debriefing
+- Forget to record data
+- Change wording between participants
+:::
+::::
+
+---
+
+## Handling Problems
+
+| Situation | What to Do |
+|-----------|------------|
+| Participant has question about task | Repeat standardised instructions only |
+| Technical problem | Note it, try to resolve, record the issue |
+| Participant wants to withdraw | Thank them, destroy their data |
+| Data looks unusual | Record it accurately, note concerns |
+| Procedure takes too long | Complete it, adjust timing for next participant |
+
+---
+
+## Data Recording Best Practices
+
+::: {.callout-important}
+## Record Accurately
+
+- Write clearly and legibly
+- Use participant numbers (not names)
+- Record everything (even mistakes)
+- Note any unusual circumstances
+- Double-check entries before participant leaves
+:::
+
+---
+
+## Activity: Begin Data Collection
+
+::: {.exercise-box}
+**Data collection rotation (~75 minutes):**
+
+1. Groups pair up to exchange participants
+2. Run your study with multiple participants
+3. Aim for **at least 5 participants** per group today
+4. Rotate experimenter roles within your group
+5. Record ALL data and any issues that arise
+
+**Instructor will circulate to observe and support!**
+:::
+
+---
+
+## During Data Collection
+
+::: {.callout-note}
+## Instructor Observation Focus
+
+As you circulate, note:
+
+- Are procedures being followed consistently?
+- Are instructions being read verbatim?
+- Is data being recorded properly?
+- Are participants being debriefed?
+- Any ethical concerns?
+:::
+
+---
+
+# Data Quality Check {background-color="#275882"}
+
+## Reviewing Your Data (~15 min)
+
+---
+
+## Data Quality Checks
+
+::: {.definition-box}
+**After collection, verify:**
+
+1. All data sheets are complete (no missing entries)
+2. Participant numbers are consistent
+3. Condition assignments are recorded correctly
+4. Any unusual data points are noted
+5. All participants were debriefed
+:::
+
+---
+
+## Activity: Review Your Data
+
+::: {.exercise-box}
+**In your groups (10 minutes):**
+
+1. Collect all data sheets from today
+2. Count total participants tested
+3. Check for any missing data
+4. Note any participants to exclude and why
+5. Calculate remaining participants needed
+:::
+
+---
+
+## Data Collection Progress
+
+::: {.poll-box}
+**Quick tally around the room:**
+
+- How many participants did each group test today?
+- How many more do you need for your target N?
+- Any groups with data collection problems?
+:::
+
+---
+
+## Common Data Issues
+
+| Issue | Solution |
+|-------|----------|
+| Missing data | Note pattern; may need to exclude participant |
+| Impossible values | Check recording; verify with participant if possible |
+| Condition confusion | Review allocation method |
+| Too few participants | Plan additional recruitment |
+| Inconsistent administration | Retrain experimenters, check procedure |
+
+---
+
+# Wrap-Up {background-color="#275882"}
+
+## Next Steps (~15 min)
+
+---
+
+## What You Should Have Now
+
+::: {.example-box}
+**After today:**
+
+- Data from multiple participants
+- Experience running your procedure
+- Notes on any problems encountered
+- Ideas for improvements
+- Understanding of remaining data needed
+:::
+
+---
+
+## Data Collection Continues
+
+::: {.callout-note}
+## Between Now and Week 20
+
+You should continue collecting data:
+
+- Recruit friends, flatmates, classmates
+- Aim to complete your target sample
+- Keep following the same procedure exactly
+- Store data safely (use participant numbers only)
+:::
+
+---
+
+## Data Storage Reminders
+
+::: {.definition-box}
+**Keep your data safe and anonymous:**
+
+- Use participant numbers, never names
+- Store consent forms separately from data
+- Keep physical forms in a secure location
+- Digital data should be password protected
+- Bring ALL data to Week 20 lab
+:::
+
+---
+
+## Preparing for Week 20
+
+Next week is the final lab: **Report Writing Workshop**
+
+::: {.callout-tip}
+## Bring to Week 20
+
+1. All collected data (organised!)
+2. Laptop for writing
+3. Questions about your Research Report
+4. Preliminary ideas about your results
+:::
+
+---
+
+## Week 20 Preview
+
+| Activity | Description |
+|----------|-------------|
+| Data compilation | Bring together all group data |
+| Preliminary analysis | Start looking at your results |
+| Report structure | Overview of lab report sections |
+| Writing workshop | Begin drafting your report |
+
+---
+
+## EDS Final Reminder
+
+::: {.callout-warning}
+## EDS DUE: Tomorrow, 4pm
+
+- Submit via Learn.gold
+- Check file format requirements
+- Allow time for upload issues
+:::
+
+---
+
+## Research Report Timeline
+
+| Date | Milestone |
+|------|-----------|
+| This week | Complete data collection |
+| Week 20 | Compile data, begin analysis |
+| Early April | Draft Method and Results |
+| Mid April | Write Introduction and Discussion |
+| Late April | Proofread and format |
+| **1 May** | **Submit Research Report** |
+
+---
+
+## Before You Leave
+
+::: {.callout-important}
+## Checkpoint
+
+1. Count your data sheets and record total N
+2. Store data safely
+3. Note how many more participants you need
+4. Plan when/where to continue data collection
+:::
+
+---
+
+# Keep collecting data! {background-color="#275882"}
+
+## See you next week for the final lab.
+
+::: {.notes}
+**Instructor Notes:**
+
+- Record each group's participant count
+- Note any groups with procedural problems
+- Flag any ethical concerns observed
+- Ensure all groups have plan for completing data collection
+- Remind about EDS deadline tomorrow
+- Confirm everyone knows what to bring to Week 20
+:::

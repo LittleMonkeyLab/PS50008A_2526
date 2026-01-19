@@ -1,17 +1,6 @@
 ---
 title: "Week 15 Lecture Reading"
-subtitle: "Significance Testing & Research Plan Briefing"
-author: "Gordon Wright"
-date: "2026-02-09"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Correlation"
 ---
 
 {{< include ../../textbook/chapters/w15-lecture.qmd >}}

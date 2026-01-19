@@ -1,26 +1,494 @@
 ---
-title: "Chapter 15: MCQ Exam Preparation"
-subtitle: "Running Experiments Ethically and Effectively"
+title: "Chapter 14: MCQ Exam Preparation"
+subtitle: "Key Concepts, Common Misconceptions, and Exam Strategies"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+::: {.callout-tip}
+## Before You Begin
+This reading is designed to help you consolidate your learning and prepare for the MCQ examination. It is not a substitute for understanding the material — it is a tool for organising what you already know.
+:::
 
-## Reading Guide
+This reading covers:
 
-### Key Points to Focus On
+- A review of key concepts from the module
+- Common misconceptions and how to avoid them
+- Strategies for approaching MCQ questions
+- What to expect on exam day
 
-1. TBC
-2. TBC
-3. TBC
+---
 
-### Questions to Consider
+## Part 1: Core Concepts Review
 
-- TBC
-- TBC
-- TBC
+### The Scientific Method
 
-## Additional Resources
+The scientific method provides a systematic approach to understanding behaviour:
 
-- TBC
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Key Steps:**
+
+1. **Identify a question** — What do you want to understand?
+2. **Review existing literature** — What is already known?
+3. **Formulate a hypothesis** — Make a specific, testable prediction
+4. **Design a study** — Plan your method carefully
+5. **Collect data** — Gather observations systematically
+6. **Analyse results** — Use statistics to evaluate findings
+7. **Draw conclusions** — Interpret what the results mean
+8. **Report findings** — Share methods and results transparently
+:::
+
+::: {.callout-note}
+## Exam Tip
+Questions may present a research scenario and ask you to identify which step of the scientific method is being described. Focus on the key action: predicting = hypothesis, measuring = data collection, interpreting = conclusions.
+:::
+
+### Variables
+
+**Variable**: Anything that can take different values.
+
+| Type | Definition | Example |
+|------|------------|---------|
+| **Independent Variable (IV)** | What the researcher manipulates | Word type (abstract vs concrete) |
+| **Dependent Variable (DV)** | What the researcher measures | Number of words recalled |
+| **Confounding Variable** | An uncontrolled variable that could explain results | Time of day, participant fatigue |
+| **Extraneous Variable** | Any variable other than the IV that could affect the DV | Noise levels, room temperature |
+
+::: {.callout-important}
+## Key Distinction
+- **IV** = manipulated (what the researcher changes)
+- **DV** = measured (what the researcher records)
+
+The DV *depends on* the IV. Ask yourself: "Does [DV] depend on [IV]?"
+:::
+
+### Research Designs
+
+| Design | Definition | Key Feature |
+|--------|------------|-------------|
+| **Between-subjects** | Different participants in each condition | Compare between groups |
+| **Within-subjects** | Same participants in all conditions | Compare within individuals |
+| **Matched pairs** | Participants paired on key variables, then assigned to conditions | Combines features of both |
+| **Correlational** | Measures relationship between variables without manipulation | No IV, no causation |
+
+::: {.callout-warning}
+## Common Confusion
+In a within-subjects design, the same person provides data for all conditions (e.g., before AND after).
+
+In a between-subjects design, different people are in each condition (e.g., Group A OR Group B).
+:::
+
+### Hypotheses
+
+| Type | Definition | Example |
+|------|------------|---------|
+| **Experimental (H1)** | Predicts an effect or difference | "Concrete words will be recalled better than abstract words" |
+| **Null (H0)** | Predicts no effect or no difference | "There will be no difference in recall between word types" |
+| **One-tailed** | Predicts direction | "...will be *better*" |
+| **Two-tailed** | Predicts difference without direction | "...will *differ*" |
+
+### Sampling
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Population**: The entire group you want to generalise to.
+
+**Sample**: The subset you actually study.
+
+**Sampling frame**: The list from which you draw your sample.
+:::
+
+| Method | Definition | Strength | Weakness |
+|--------|------------|----------|----------|
+| **Random** | Every member has equal chance of selection | Unbiased | Often impractical |
+| **Stratified** | Divide population into subgroups, sample from each | Ensures representation | Requires population information |
+| **Convenience** | Whoever is available | Easy | May be unrepresentative |
+| **Snowball** | Participants recruit other participants | Reaches hidden populations | Not random |
+
+### Experimental Control
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
+**Why control matters**: If variables other than the IV differ between conditions, you cannot conclude the IV caused the difference.
+
+**Random assignment**: Randomly allocating participants to conditions — distributes individual differences evenly across groups.
+
+**Counterbalancing**: Varying the order of conditions across participants to control for order effects.
+
+**Standardisation**: Keeping procedures identical across conditions (same instructions, same environment).
+:::
+
+---
+
+## Part 2: Statistics Concepts
+
+### Descriptive Statistics
+
+| Statistic | What It Tells You | Formula |
+|-----------|-------------------|---------|
+| **Mean** | Average value | Sum of values / number of values |
+| **Standard Deviation** | Spread from the mean | How much scores typically differ from the mean |
+| **Variance** | Average squared deviation | SD squared |
+
+::: {.callout-note}
+## Exam Tip
+You may be asked to calculate a mean or identify what SD represents. Remember: SD tells you about variability — low SD means scores cluster together; high SD means scores are spread out.
+:::
+
+### The Normal Distribution
+
+Key properties:
+
+- Symmetrical and bell-shaped
+- Mean, median, and mode are equal
+- 68% of values within 1 SD of the mean
+- 95% within 2 SDs
+- 99.7% within 3 SDs
+
+### Inferential Statistics
+
+The goal: Determine whether observed differences are likely due to the IV or could have occurred by chance.
+
+| Concept | Definition |
+|---------|------------|
+| **p-value** | Probability of obtaining results at least this extreme if the null hypothesis were true |
+| **Alpha level** | The threshold for significance (typically .05) |
+| **Significance** | If p < alpha, we reject the null hypothesis |
+| **Type I error** | False positive — rejecting H0 when it is true |
+| **Type II error** | False negative — failing to reject H0 when it is false |
+
+::: {.callout-important}
+## Critical Understanding
+**p < .05** does NOT mean:
+
+- There is a 95% chance the hypothesis is true
+- The effect is large or important
+- The study will replicate
+
+It DOES mean: If H0 were true, results this extreme would occur less than 5% of the time by chance.
+:::
+
+### Which Test When?
+
+| Comparison | Test | Example |
+|------------|------|---------|
+| Two groups (between) | Independent t-test | Lab A vs Lab B recall |
+| Two conditions (within) | Paired t-test | Pre vs post mood |
+| Relationship between variables | Correlation | Self-rating and actual accuracy |
+
+### Effect Size
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Effect size** tells you the magnitude of an effect, independent of sample size.
+
+- **Cohen's d**: For differences between means (small = 0.2, medium = 0.5, large = 0.8)
+- **Pearson's r**: For correlations (small = 0.1, medium = 0.3, large = 0.5)
+
+A significant result with a tiny effect size may not be practically meaningful.
+:::
+
+---
+
+## Part 3: Research Credibility
+
+### Reliability and Validity
+
+| Concept | Definition | Question It Answers |
+|---------|------------|---------------------|
+| **Reliability** | Consistency of measurement | Do you get the same result each time? |
+| **Validity** | Accuracy of measurement | Are you measuring what you intend to? |
+
+**Types of reliability:**
+
+- **Test-retest**: Same results over time
+- **Inter-rater**: Same results across different observers
+- **Internal consistency**: Items within a scale measure the same construct
+
+**Types of validity:**
+
+- **Face validity**: Appears to measure what it should (weakest form)
+- **Content validity**: Covers all aspects of the construct
+- **Criterion validity**: Predicts or correlates with relevant outcomes
+- **Construct validity**: Actually measures the theoretical construct
+
+### Internal vs External Validity
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Internal validity**: Can you conclude that the IV caused changes in the DV?
+
+- Threatened by confounds, lack of control, order effects
+
+**External validity**: Can you generalise findings beyond this specific study?
+
+- Threatened by unrepresentative samples, artificial settings
+:::
+
+### Replication and Open Science
+
+Key concepts from Week 17:
+
+- **Replication crisis**: Many published findings fail to replicate
+- **P-hacking**: Exploiting flexibility to achieve significance
+- **HARKing**: Presenting post-hoc hypotheses as predictions
+- **Publication bias**: Significant results more likely to be published
+- **Pre-registration**: Documenting hypotheses before data collection
+
+---
+
+## Part 4: Common Misconceptions
+
+### Misconception 1: Correlation Equals Causation
+
+::: {.callout-warning}
+## Wrong
+"The study found a correlation between screen time and depression, so screen time causes depression."
+
+## Correct
+A correlation shows two variables are related, but does not establish that one causes the other. There could be reverse causation (depression leads to more screen time) or a third variable explaining both.
+:::
+
+### Misconception 2: Non-significance Means "No Effect"
+
+::: {.callout-warning}
+## Wrong
+"The study found p = .08, so there is no relationship between the variables."
+
+## Correct
+Non-significance means we cannot confidently reject the null hypothesis. It does not prove H0 is true. The study may have lacked power to detect a real effect.
+:::
+
+### Misconception 3: p-value Is the Probability the Hypothesis Is True
+
+::: {.callout-warning}
+## Wrong
+"p = .03 means there is a 97% chance the hypothesis is correct."
+
+## Correct
+The p-value is the probability of the data (or more extreme) given that H0 is true. It is not the probability that H1 is true.
+:::
+
+### Misconception 4: Random Assignment and Random Sampling Are the Same
+
+::: {.callout-warning}
+## Wrong
+"Participants were randomly assigned, so the sample is representative of the population."
+
+## Correct
+Random assignment (allocating to conditions) ensures groups are equivalent.
+
+Random sampling (selecting from population) ensures representativeness.
+
+They serve different purposes and are often confused.
+:::
+
+### Misconception 5: Larger Sample Size Makes a Study "Better"
+
+::: {.callout-warning}
+## Wrong
+"This study had 10,000 participants, so the findings must be important."
+
+## Correct
+Large samples can detect very small effects. A statistically significant but tiny effect may have no practical importance. Always consider effect size alongside significance.
+:::
+
+### Misconception 6: Within-subjects Designs Are Always Better
+
+::: {.callout-warning}
+## Wrong
+"Within-subjects designs control for individual differences, so they are always preferable."
+
+## Correct
+Within-subjects designs have their own problems: order effects, practice effects, fatigue, and demand characteristics. The best design depends on the research question.
+:::
+
+---
+
+## Part 5: Exam Strategies
+
+### Before the Exam
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Effective preparation:**
+
+1. **Review actively** — Do not just re-read. Test yourself, explain concepts aloud, create your own examples
+2. **Focus on understanding** — If you understand *why*, you can work out the answer even to unfamiliar questions
+3. **Know the terminology** — Many questions hinge on precise definitions
+4. **Practice with examples** — Apply concepts to the DataLab tasks you completed
+:::
+
+### Reading MCQ Questions
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
+**Step 1: Read the question stem carefully**
+
+- What exactly is being asked?
+- Are there key words like "BEST," "ALWAYS," "NEVER," "EXCEPT"?
+
+**Step 2: Try to answer before looking at options**
+
+- If you know the material, your answer should match one option
+- This prevents being misled by plausible-sounding distractors
+
+**Step 3: Evaluate all options**
+
+- Even if one looks correct, check the others
+- Sometimes two options are similar and one is more precise
+
+**Step 4: Eliminate clearly wrong answers**
+
+- If unsure, narrowing down improves your odds
+:::
+
+### Common Question Types
+
+**Definition questions:**
+> "Which of the following best defines the dependent variable?"
+
+Strategy: Know precise definitions. The DV is what is *measured*, not manipulated.
+
+**Scenario questions:**
+> "A researcher compares memory performance in quiet vs noisy conditions. What is the IV?"
+
+Strategy: Identify what was manipulated (noise level) vs measured (memory).
+
+**"Best" questions:**
+> "Which is the BEST example of random sampling?"
+
+Strategy: Look for the option that most closely matches the textbook definition. "Best" implies comparison.
+
+**"EXCEPT" questions:**
+> "All of the following are true about correlational research EXCEPT..."
+
+Strategy: Find the one false statement. Mark these questions carefully — it is easy to get confused.
+
+**Interpretation questions:**
+> "A t-test produced p = .03. Which statement is correct?"
+
+Strategy: Know what p-values do and do not mean. Eliminate options that make common misinterpretations.
+
+### Time Management
+
+::: {.callout-tip}
+## Pacing
+- Note the total number of questions and time available
+- Calculate roughly how long per question
+- Do not spend too long on any single question
+- Mark uncertain questions and return if time permits
+- Leave time to review
+:::
+
+### When You Are Unsure
+
+1. **Eliminate obviously wrong options** — Even guessing from 2 instead of 4 doubles your odds
+2. **Look for absolute language** — Options with "always," "never," "only" are often wrong
+3. **Consider what the question is testing** — What concept does this relate to?
+4. **Trust your preparation** — Your first instinct, based on study, is often correct
+5. **Do not overthink** — Sometimes the straightforward interpretation is correct
+
+---
+
+## Part 6: Quick Reference Tables
+
+### Design Identification
+
+| Scenario | Design |
+|----------|--------|
+| Group A gets treatment, Group B does not | Between-subjects |
+| Same participants tested before and after | Within-subjects |
+| Participants matched on IQ, then split into conditions | Matched pairs |
+| Measuring relationship between two variables | Correlational |
+
+### Statistical Test Selection
+
+| Situation | Test |
+|-----------|------|
+| Comparing two independent groups | Independent t-test |
+| Comparing two related conditions (same participants) | Paired t-test |
+| Examining relationship between two continuous variables | Correlation |
+| Comparing more than two groups | ANOVA (beyond this module) |
+
+### Validity Threats
+
+| Threat | Definition |
+|--------|------------|
+| **Confound** | Variable that varies with the IV and could explain results |
+| **Selection bias** | Non-random assignment leads to non-equivalent groups |
+| **Attrition** | Participants drop out differentially across conditions |
+| **Order effects** | Performance affected by sequence of conditions |
+| **Demand characteristics** | Participants guess the hypothesis and change behaviour |
+| **Experimenter effects** | Researcher unintentionally influences results |
+
+---
+
+## Part 7: What to Expect
+
+### Exam Format
+
+- Multiple-choice questions
+- Each question has one correct answer
+- Questions cover material from lectures, readings, and labs
+- Some questions test recall; others test application
+
+### Content Coverage
+
+The exam will include questions on:
+
+- The scientific method and why it matters
+- Variables: IV, DV, confounds, extraneous
+- Research designs: between, within, correlational
+- Hypotheses: experimental, null, one-tailed, two-tailed
+- Sampling methods
+- Descriptive statistics: mean, SD
+- Inferential statistics: p-values, significance, Type I/II errors
+- Reliability and validity
+- Research credibility: replication, open science
+
+### On the Day
+
+::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
+**Practical advice:**
+
+1. **Arrive early** — Rushing increases anxiety
+2. **Read instructions carefully** — Note how many questions, how much time
+3. **Pace yourself** — Do not get stuck on difficult questions
+4. **Stay calm** — If you have studied, you are prepared
+5. **Trust your preparation** — You know more than you think
+:::
+
+---
+
+## Summary
+
+| Area | Key Points to Review |
+|------|---------------------|
+| **Variables** | IV (manipulated), DV (measured), confounds |
+| **Designs** | Between, within, correlational — know the differences |
+| **Hypotheses** | Experimental vs null, directional vs non-directional |
+| **Statistics** | Mean, SD, p-values, significance |
+| **Credibility** | Reliability, validity, replication |
+
+---
+
+## Check Your Understanding
+
+Test yourself on these questions:
+
+1. What is the difference between an IV and a DV?
+2. When would you use a within-subjects design vs a between-subjects design?
+3. What does a p-value actually tell you?
+4. What is the difference between reliability and validity?
+5. Why does correlation not imply causation?
+6. What is pre-registration and why does it matter?
+7. What is the difference between Type I and Type II errors?
+
+If you can explain each of these clearly, you are well prepared.
+
+---
+
+## Final Thoughts
+
+::: {.callout-tip}
+## Remember
+The exam tests understanding, not memorisation. If you understand *why* things work the way they do — why we need control conditions, why p-values are not probabilities of hypotheses being true, why replication matters — you can reason your way through most questions.
+
+Good luck!
+:::
+

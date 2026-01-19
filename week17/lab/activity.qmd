@@ -3,65 +3,240 @@ title: "Project Groups: Methodology"
 subtitle: "PS50008A Week 17 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-04"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w17-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-03-04"
-  labels: ['project', 'methodology', 'webr']
-  depends_on:
-    - rm0-w17-lab-slides
-  blocks:
-    - rm0-w17-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-03-04"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 17 lecture.
+## Focus for Today
+This session focuses on **finalising your research methodology**. By the end, your group should have a clear, documented research design ready for implementation.
+
+- Finalise your experimental/study design
+- Specify your variables and measures
+- Define your sample and procedure
+- Draft your Methods section
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Finalizing Your Design (20 min)
 
-TBC - Activity content
+### Design Type Confirmation
+
+Before proceeding, confirm your study design is clearly defined.
+
+**Quick Check - Which design best describes your study?**
+
+`r mcq(c("Between-subjects experimental", "Within-subjects experimental", "Mixed design", "Correlational/survey", answer = "We need to discuss this as a group"))`
+
+::: {.callout-note}
+## Design Decision Checklist
+Work through these questions as a group:
+
+1. Are you **manipulating** anything (experimental) or **observing** relationships (correlational)?
+2. If experimental: Are participants in ONE condition (between) or ALL conditions (within)?
+3. How many independent variables do you have?
+4. How many levels does each IV have?
+:::
+
+### Design Documentation
+
+Complete the following template with your group:
+
+| Design Element | Your Study |
+|----------------|------------|
+| Study type | Experimental / Correlational |
+| Design | Between / Within / Mixed |
+| Number of IVs | |
+| IV1 name and levels | |
+| Number of DVs | |
+| DV1 name | |
+
+**True or False: A correlational study can establish causation.** `r torf(FALSE)`
+
+**True or False: A within-subjects design uses fewer participants than a between-subjects design with the same power.** `r torf(TRUE)`
 
 ---
 
-## Part 2: Exercises
+## Activity 2: Variables and Measures (20 min)
 
-TBC - Interactive exercises
+### Operationalising Your Variables
 
-```{webr-r}
-# Example code
+Your variables need to be **operationally defined** - stated in terms of how they will be measured.
 
+**Example:**
 
-```
+- **Conceptual variable**: Stress
+- **Operational definition**: Score on the Perceived Stress Scale (PSS-10)
+
+**Which of these is an operational definition?**
+
+`r mcq(c("How happy someone is", answer = "Score on the Subjective Happiness Scale (1-7)", "Participant's mood", "Emotional wellbeing"))`
+
+### Variable Documentation
+
+For each variable, complete:
+
+::: {.callout-tip}
+## Variable Template
+**Variable name:**
+
+**Conceptual definition:**
+
+**Operational definition:**
+
+**Scale type:** `r mcq(c("Nominal", "Ordinal", "Interval", "Ratio"))`
+
+**How measured:**
+:::
+
+### Measurement Considerations
+
+**Which scale type allows us to calculate a meaningful mean?**
+
+`r mcq(c("Nominal", "Ordinal", answer = "Interval or Ratio", "Any scale type"))`
+
+**A Likert scale (1 = Strongly Disagree to 5 = Strongly Agree) is typically treated as:**
+
+`r mcq(c("Nominal", answer = "Ordinal (or interval by convention)", "Ratio", "Categorical"))`
+
+**Reaction time in milliseconds is measured on what scale?**
+
+`r mcq(c("Nominal", "Ordinal", "Interval", answer = "Ratio"))`
+
+---
+
+## Activity 3: Sample and Procedure (20 min)
+
+### Sample Planning
+
+Define your target sample:
+
+**Sampling Method Quiz:**
+
+**If you recruit participants who happen to be available (e.g., classmates), this is called:**
+
+`r mcq(c("Random sampling", answer = "Convenience sampling", "Stratified sampling", "Snowball sampling"))`
+
+**True or False: Convenience sampling limits the generalisability of findings.** `r torf(TRUE)`
+
+### Sample Size Considerations
+
+::: {.callout-warning}
+## Sample Size Planning
+For a simple between-subjects t-test with medium effect size (d = 0.5):
+
+- Minimum recommended: ~64 per group (128 total)
+- For smaller effects, you need MORE participants
+- For larger effects, you need FEWER participants
+:::
+
+**If your study has 3 groups (conditions), you need:**
+
+`r mcq(c("The same number as a 2-group study", answer = "More participants to maintain power", "Fewer participants", "It doesn't matter"))`
+
+### Procedure Flowchart
+
+Document your procedure step-by-step:
+
+1. **Recruitment**: How will you find participants?
+2. **Consent**: How will informed consent be obtained?
+3. **Instructions**: What will participants be told?
+4. **Task/Measures**: What will participants do?
+5. **Debriefing**: How will you explain the study afterwards?
+
+**Which step should ALWAYS come before data collection begins?**
+
+`r mcq(c("Debriefing", "Data analysis", answer = "Informed consent", "Results reporting"))`
+
+---
+
+## Activity 4: Drafting Methods Section (20 min)
+
+### Methods Section Structure
+
+A standard Methods section includes:
+
+::: {.callout-note}
+## APA Methods Structure
+1. **Participants**: Who, how many, how recruited
+2. **Design**: IV(s), DV(s), design type
+3. **Materials**: Measures, stimuli, equipment
+4. **Procedure**: Step-by-step what happened
+:::
+
+### Practice Identifying Components
+
+Read this excerpt and identify the components:
+
+> *"Forty undergraduate students (28 female, 12 male; M age = 20.3 years) participated for course credit. Participants were randomly assigned to either the music condition or the silence condition."*
+
+**This excerpt describes:**
+
+`r mcq(c(answer = "Participants section", "Design section", "Materials section", "Procedure section"))`
+
+**The phrase "randomly assigned" tells us this is:**
+
+`r mcq(c("A correlational study", answer = "An experimental study", "A within-subjects design", "A case study"))`
+
+### Writing Check
+
+**True or False: The Methods section should be written in past tense.** `r torf(TRUE)`
+
+**True or False: You should include your hypotheses in the Methods section.** `r torf(FALSE)`
+
+**Where should hypotheses appear in an APA-style report?**
+
+`r mcq(c("Abstract", answer = "Introduction (end)", "Methods", "Results"))`
+
+---
+
+## Group Task: Method Template
+
+Complete this template as a group. You can use this as the skeleton for your actual Methods section.
+
+### Participants
+
+- **Sample size**: ___
+- **Demographics**: ___
+- **Recruitment method**: ___
+- **Inclusion/exclusion criteria**: ___
+
+### Design
+
+- **Study design**: ___
+- **Independent variable(s)**: ___
+- **Dependent variable(s)**: ___
+- **Control variables**: ___
+
+### Materials/Measures
+
+- **Primary measure**: ___
+- **Additional measures**: ___
+- **Equipment needed**: ___
+
+### Procedure
+
+1. ___
+2. ___
+3. ___
+4. ___
+5. ___
 
 ---
 
@@ -69,14 +244,19 @@ TBC - Interactive exercises
 
 ::: {.callout-important}
 ## Summary
-1. TBC
-2. TBC
-3. TBC
+
+1. Your **design type** (experimental vs correlational, between vs within) determines what conclusions you can draw
+2. **Operational definitions** specify exactly HOW variables are measured
+3. **Sample planning** affects statistical power and generalisability
+4. The **Methods section** follows a standard APA structure: Participants, Design, Materials, Procedure
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 17 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 18
+- Complete your group's Methods template
+- Prepare materials for Week 18 (Procedure development)
+- Review ethics requirements for your study
+- Schedule group meetings before next lab
+

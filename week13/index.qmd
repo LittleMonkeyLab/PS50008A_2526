@@ -1,66 +1,114 @@
 ---
-title: "Week 13: Correlational Designs"
-subtitle: "PS50008A Research Methods | 2026-01-26"
+title: "Week 13: Estimation & Confidence Intervals"
+subtitle: "PS50008A Research Methods | 26-30 January 2026"
 author: "Gordon Wright"
 date: "2026-01-26"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w13-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-01-26"
-  labels: ['correlation', 'research-design']
-  blocks:
-    - rm0-w13-lecture-slides
-    - rm0-w13-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Correlational Designs
+::: {.callout-note}
+## Building on Descriptives
+This week we move from describing data to estimating population values. You'll learn how to quantify uncertainty using confidence intervals.
+:::
 
-**Lab**: Correlational Analysis
+**This week**: Learn the difference between point estimates and interval estimates, understand how bootstrap confidence intervals work, and calculate effect sizes using Cohen's d.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+### Point Estimates vs Interval Estimates
+- Explain why a single number (point estimate) is often insufficient
+- Understand that sample statistics estimate population parameters
+- Describe the concept of sampling variability
 
-## Schedule
+### Bootstrap Confidence Intervals
+- Explain the logic of bootstrapping (resampling with replacement)
+- Interpret a 95% confidence interval correctly
+- Understand what confidence intervals tell us about precision
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Correlational Designs | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Correlational Analysis | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 13 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+### Effect Sizes
+- Define and calculate Cohen's d
+- Interpret effect size magnitude (small, medium, large)
+- Explain why effect sizes complement significance testing
+- Report effect sizes in APA format
 
-## Preparation
+## Before the Lecture
 
-Before the lecture:
+::: {.callout-important}
+## Required Preparation
+1. **Read the lecture reading** - covers estimation concepts and confidence intervals
+2. **Review your DataLab descriptives** - we'll use these to build confidence intervals
+:::
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+## The Big Picture
+
+This week answers the question: **How certain can we be about our estimates?**
+
+::: {.callout-warning}
+## Foundation for Inference
+Confidence intervals are essential preparation for next week's hypothesis testing. Understanding uncertainty in estimation is crucial before learning about statistical inference.
+:::
+
+We'll continue using YOUR DataLab data to illustrate:
+
+- **Sample means as estimates** - your mean confidence score estimates the population mean
+- **Bootstrap CIs** - how much could your estimates vary?
+- **Effect sizes** - how big is the difference between conditions?
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
+| [Lecture Reading](lecture/reading.qmd) | Point estimates, confidence intervals, effect sizes |
+| [Lab Reading](lab/reading.qmd) | Bootstrap methods in R |
+| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
+| [Lab Activity](lab/activity.qmd) | WebR exercises: bootstrap CIs with DataLab data |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | Point vs interval estimates, bootstrap logic, confidence intervals, Cohen's d |
+| Thursday | Lab (2 hrs) | Calculating bootstrap CIs in R, computing effect sizes |
+
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### Point Estimates
+- **Sample mean**: Our best single guess for the population mean
+- **Sample SD**: Our estimate of population variability
+- **Limitation**: A point estimate alone tells us nothing about precision
 
-## Resources
+### Confidence Intervals
+- **Bootstrap method**: Resample your data (with replacement) thousands of times
+- **95% CI**: The range that captures the middle 95% of bootstrap estimates
+- **Interpretation**: If we repeated the study many times, 95% of CIs would contain the true value
+- **Narrow CI**: More precision; **Wide CI**: Less precision
 
-- [Week 13 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### Effect Sizes
+- **Cohen's d**: Standardised difference between means
+- **Formula**: d = (M1 - M2) / pooled SD
+- **Benchmarks**: Small (0.2), Medium (0.5), Large (0.8)
+- **Why use them**: Effect sizes are comparable across studies and don't depend on sample size
+
+## Connecting to Assessments
+
+This week's content directly supports your assessments:
+
+| Assessment | Connection |
+|------------|------------|
+| **Research Plan** | Effect size justification for sample size |
+| **MCQ Exam** | CI interpretation, effect size calculations |
+| **EDS Assignment** | Reporting CIs and effect sizes with descriptives |
+| **Research Report** | Results section: CIs and effect sizes alongside tests |
+
+## What's Next?
+
+**Week 14**: Inference & t-tests - putting it all together with null hypothesis significance testing and t-tests for comparing means.

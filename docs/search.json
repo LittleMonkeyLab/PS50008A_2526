@@ -1,122 +1,5 @@
 [
   {
-    "objectID": "textbook/quizzes/w12-quiz.html",
-    "href": "textbook/quizzes/w12-quiz.html",
-    "title": "Week 12 Self-Assessment",
-    "section": "",
-    "text": "This is the most important quiz of the term. Week 12 introduces ALL the terminology you need for your Research Plan. Make sure you can answer these questions confidently.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#instructions",
-    "href": "textbook/quizzes/w12-quiz.html#instructions",
-    "title": "Week 12 Self-Assessment",
-    "section": "",
-    "text": "This is the most important quiz of the term. Week 12 introduces ALL the terminology you need for your Research Plan. Make sure you can answer these questions confidently.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-1-variables",
-    "href": "textbook/quizzes/w12-quiz.html#part-1-variables",
-    "title": "Week 12 Self-Assessment",
-    "section": "2 Part 1: Variables",
-    "text": "2 Part 1: Variables\n\n2.1 Question 1: IV and DV Definitions\nThe variable that the researcher manipulates or selects is called the:\nDependent variableIndependent variableControl variableConfounding variable\nThe variable that the researcher measures is called the:\nDependent variableIndependent variableControl variableConfounding variable\n\n\n2.2 Question 2: Identifying Variables\nA researcher compares memory scores between participants who slept 8 hours versus 4 hours.\nWhat is the IV? Sleep duration (8 hrs vs 4 hrs)Memory scoreParticipant ageTime of testing\nWhat is the DV? Sleep durationMemory scoreNumber of participantsRoom temperature\n\n\n2.3 Question 3: DataLab Variables\nIn our Room A vs Room B comparison of reaction times:\nThe IV is: Room (A vs B)Reaction timeParticipantTime of day\nThe DV is: Room assignmentReaction timeNumber of trialsCatch distance",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-2-design-types",
-    "href": "textbook/quizzes/w12-quiz.html#part-2-design-types",
-    "title": "Week 12 Self-Assessment",
-    "section": "3 Part 2: Design Types",
-    "text": "3 Part 2: Design Types\n\n3.1 Question 4: Design Definitions\nMatch each design to its definition:\nDifferent participants in each condition = Between-subjectsWithin-subjectsMatched pairsCorrelational\nSame participants tested in all conditions = Between-subjectsWithin-subjectsMatched pairsCorrelational\nParticipants paired on characteristics, one from each pair in each condition = Between-subjectsWithin-subjectsMatched pairsCorrelational\nNo manipulation, just measuring relationships = Between-subjectsWithin-subjectsMatched pairsCorrelational\n\n\n3.2 Question 5: DataLab Design Examples\nWhat type of design is Room A vs Room B (different students in each room)?\nBetween-subjectsWithin-subjectsMatched pairsCorrelational\nWhat type of design is Pre-mood vs Post-mood (same students measured twice)?\nBetween-subjectsWithin-subjectsMatched pairsCorrelational\nWhat type of design is Confidence rating vs Throwing accuracy (measuring relationship)?\nBetween-subjectsWithin-subjectsMatched pairsCorrelational\n\n\n3.3 Question 6: No IV\nIn a correlational design, there is no IV. TRUEFALSE",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-3-hypotheses",
-    "href": "textbook/quizzes/w12-quiz.html#part-3-hypotheses",
-    "title": "Week 12 Self-Assessment",
-    "section": "4 Part 3: Hypotheses",
-    "text": "4 Part 3: Hypotheses\n\n4.1 Question 7: Hypothesis Types\nA hypothesis that predicts a difference but NOT the direction (e.g., “scores will differ”) is:\nOne-tailedTwo-tailedNullAlternative\nA hypothesis that predicts the direction (e.g., “Group A will score higher than Group B”) is:\nOne-tailedTwo-tailedNullAlternative\n\n\n4.2 Question 8: Null vs Experimental\nThe null hypothesis predicts:\nA significant effectNo effect or no differenceThe direction of the effectThat the study will fail\nThe experimental hypothesis (also called the alternative hypothesis) predicts:\nAn effect or difference existsNo effect or differenceThe study is flawedRandom variation\n\n\n4.3 Question 9: Writing Hypotheses\nWhich is a correctly written one-tailed hypothesis?\n\n\nCode\nopts_hyp &lt;- c(\n  \"Reaction times will differ between Room A and Room B\",\n  answer = \"Participants in Room A will have faster reaction times than participants in Room B\",\n  \"There will be no difference in reaction times between rooms\",\n  \"Reaction times may or may not differ between rooms\"\n)\n\n\n\n Reaction times will differ between Room A and Room B Participants in Room A will have faster reaction times than participants in Room B There will be no difference in reaction times between rooms Reaction times may or may not differ between rooms",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-4-test-selection",
-    "href": "textbook/quizzes/w12-quiz.html#part-4-test-selection",
-    "title": "Week 12 Self-Assessment",
-    "section": "5 Part 4: Test Selection",
-    "text": "5 Part 4: Test Selection\n\n5.1 Question 10: Design to Test Matching\nFill in the correct test for each design:\nBetween-subjects design → \nWithin-subjects design → \nCorrelational design → \n\n\n5.2 Question 11: Test Selection MCQ\nA researcher compares anxiety levels before and after a relaxation intervention (same participants).\nWhich test should they use?\nIndependent t-testPaired t-testPearson’s rMann-Whitney U",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-5-descriptive-statistics",
-    "href": "textbook/quizzes/w12-quiz.html#part-5-descriptive-statistics",
-    "title": "Week 12 Self-Assessment",
-    "section": "6 Part 5: Descriptive Statistics",
-    "text": "6 Part 5: Descriptive Statistics\n\n6.1 Question 12: Calculation\nCalculate the mean of these scores: 10, 15, 20, 25, 30\nMean = \n\n\n6.2 Question 13: Standard Deviation\nThe standard deviation tells us:\nThe middle valueThe most common valueHow spread out values are around the meanThe difference between highest and lowest\n\n\n6.3 Question 14: APA Format\nIn APA format, how do you report a mean of 25.50 and standard deviation of 4.30?\nMean = 25.50, SD = 4.30mean: 25.50, sd: 4.30M = 25.50, SD = 4.30Average = 25.50 (4.30)",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#part-6-mcq-exam-practice",
-    "href": "textbook/quizzes/w12-quiz.html#part-6-mcq-exam-practice",
-    "title": "Week 12 Self-Assessment",
-    "section": "7 Part 6: MCQ Exam Practice",
-    "text": "7 Part 6: MCQ Exam Practice\n\n7.1 Investigation 1\nA researcher wants to know if background music affects concentration. Half the participants complete a task with music playing, half complete it in silence. Concentration is measured by number of errors.\n\nDesign: Between-subjectsWithin-subjectsMatched pairsCorrelational\nIV: Music condition (music vs silence)Number of errorsConcentration levelNo IV\nDV: Music conditionNumber of errorsBackground noise levelParticipant preference\nAppropriate test: Independent t-testPaired t-testPearson’s rChi-square\n\n\n\n7.2 Investigation 2\nA researcher measures students’ anxiety before an exam and their exam performance to see if they are related.\n\nDesign: Between-subjectsWithin-subjectsMatched pairsCorrelational\nIV: Anxiety levelExam performanceStudent yearNo IV\nDV: Anxiety levelExam performanceBoth variables are measured (no DV)Student motivation\nAppropriate test: Independent t-testPaired t-testPearson’s rOne-way ANOVA\n\n\n\n7.3 Investigation 3\nParticipants rate their mood before and after watching a comedy video.\n\nDesign: Between-subjectsWithin-subjectsMatched pairsCorrelational\nIV: Time (before vs after video)Mood ratingVideo contentNo IV\nDV: Time pointMood ratingVideo lengthParticipant age\nAppropriate test: Independent t-testPaired t-testPearson’s rMann-Whitney U",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w12-quiz.html#summary-checklist",
-    "href": "textbook/quizzes/w12-quiz.html#summary-checklist",
-    "title": "Week 12 Self-Assessment",
-    "section": "8 Summary Checklist",
-    "text": "8 Summary Checklist\nBefore moving on, make sure you can:\n\nDefine IV (independent variable) and DV (dependent variable)\nIdentify IV and DV in any research scenario\nDefine all four design types (between, within, matched, correlational)\nRecognise when there is no IV (correlational design)\nWrite one-tailed and two-tailed hypotheses\nDistinguish experimental from null hypotheses\nSelect the correct test for each design type\nCalculate mean and interpret SD\nReport statistics in APA format\n\n\n\n\n\n\n\nImportantResearch Plan Connection\n\n\n\nYou need ALL of these skills for your Research Plan (due Week 16). If you’re unsure about any concept, review the Week 12 lecture materials before continuing.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 12 Quiz"
-    ]
-  },
-  {
     "objectID": "textbook/chapters/w12-lab.html",
     "href": "textbook/chapters/w12-lab.html",
     "title": "Chapter 4: Introduction to R",
@@ -126,7 +9,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -139,7 +22,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -152,7 +35,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -160,12 +43,12 @@
     "href": "textbook/chapters/w12-lab.html#webr-r-in-your-browser",
     "title": "Chapter 4: Introduction to R",
     "section": "3 WebR: R in Your Browser",
-    "text": "3 WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\n3.1 How It Works\nWhen you see a code box like this:\nmean(c(5, 10, 15, 20))\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
+    "text": "3 WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\n3.1 How It Works\nWhen you see a code box like this:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
     "crumbs": [
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -173,12 +56,12 @@
     "href": "textbook/chapters/w12-lab.html#r-basics-for-today",
     "title": "Chapter 4: Introduction to R",
     "section": "4 R Basics for Today",
-    "text": "4 R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\n4.1 Assigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n# Store a value\nmy_score &lt;- 75\n\n# Store multiple values\nreaction_times &lt;- c(245, 312, 278, 298, 267)\nThe c() function combines values into a vector (a list of numbers).\n\n\n4.2 Basic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n# Mean of values\nmean(c(10, 20, 30))\n\n# Sum of values\nsum(c(10, 20, 30))\n\n# Number of values\nlength(c(10, 20, 30))\n\n\n4.3 Computing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\n4.4 Example: Reaction Times\n# Create data\nrt &lt;- c(245, 312, 278, 298, 267)\n\n# Compute statistics\nmean(rt)     # 280\nmedian(rt)   # 278\nsd(rt)       # 26.2",
+    "text": "4 R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\n4.1 Assigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe c() function combines values into a vector (a list of numbers).\n\n\n4.2 Basic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n4.3 Computing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\n4.4 Example: Reaction Times\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -191,7 +74,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -199,12 +82,12 @@
     "href": "textbook/chapters/w12-lab.html#working-with-data-frames",
     "title": "Chapter 4: Introduction to R",
     "section": "6 Working with Data Frames",
-    "text": "6 Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\n6.1 Accessing Columns\nUse $ to access a column:\n# If 'olympics' is your dataset\nolympics$reaction_time     # Get the reaction_time column\nmean(olympics$reaction_time)  # Mean of that column\n\n\n6.2 Subsetting Data\nGet specific parts of your data:\n# Filter rows where room is \"A\"\nroom_a &lt;- olympics[olympics$room == \"A\", ]\n\n# Get mean reaction time for Room A only\nmean(room_a$reaction_time)",
+    "text": "6 Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\n6.1 Accessing Columns\nUse $ to access a column:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n6.2 Subsetting Data\nGet specific parts of your data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -217,7 +100,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -230,7 +113,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -243,7 +126,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -256,7 +139,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -269,7 +152,7 @@
       "Home",
       "Textbook",
       "Week 12",
-      "Lab: Introduction to R"
+      "Lab: Design Detectives"
     ]
   },
   {
@@ -443,7 +326,7 @@
     "href": "textbook/index.html#weekly-readings",
     "title": "PS50008A Textbook",
     "section": "3 Weekly Readings",
-    "text": "3 Weekly Readings\n\n\n\nWeek\nLecture Reading\nLab Reading\nQuiz\n\n\n\n\n11\nWeek 11 Lecture: Introduction to Research\nWeek 11 Lab: DataLab Foundations\nWeek 11 Quiz\n\n\n12\nWeek 12 Lecture: Research Design Framework\nWeek 12 Lab: Descriptive Statistics in R\nWeek 12 Quiz\n\n\n13\nWeek 13 Lecture: Correlation & Relationships\nWeek 13 Lab: Correlation in R\nWeek 13 Quiz\n\n\n14\nWeek 14 Lecture: Probability & Distributions\nWeek 14 Lab: Visualising Distributions in R\nWeek 14 Quiz\n\n\n15\nWeek 15 Lecture: Significance Testing\nWeek 15 Lab: Running t-tests in R\nWeek 15 Quiz\n\n\n—\nReading Week\n—\n—\n\n\n16\nWeek 16 Lecture: Research Plan Tips\nWeek 16 Lab: Literature Review Skills\nWeek 16 Quiz\n\n\n17\nWeek 17 Lecture: MCQ Practice & Credibility\nWeek 17 Lab: Methodology Workshop\nWeek 17 Quiz\n\n\n18\nWeek 18 Lecture: MCQ Exam Preparation\nWeek 18 Lab: Ethics & Procedures\nWeek 18 Quiz\n\n\n19\nWeek 19 Lecture: Results & Lab Report Writing\nWeek 19 Lab: Data Collection Support\nWeek 19 Quiz\n\n\n20\nWeek 20 Lecture: Discussion & EDS Preparation\nWeek 20 Lab: Data Analysis Workshop\nWeek 20 Quiz\n\n\n\n\n\n\n\n\n\nImportantWeek 12 is Critical\n\n\n\nWeek 12 introduces ALL the terminology you need for your Research Plan: IV, DV, design types, hypothesis types, test selection, and descriptive statistics.",
+    "text": "3 Weekly Readings\n\n\n\nWeek\nLecture Reading\nLab Reading\nQuiz\n\n\n\n\n11\nIntroduction to Research\nDataLab Foundations\nWeek 11 Quiz\n\n\n12\nResearch Design Framework\nIntroduction to R\nWeek 12 Quiz\n\n\n13\nEstimation & Confidence Intervals\nBootstrap CIs in R\nWeek 13 Quiz\n\n\n14\nInference & t-tests\nt-tests in R\nWeek 14 Quiz\n\n\n15\nCorrelation\nCorrelation in R\nWeek 15 Quiz\n\n\n—\nReading Week\nResearch Plan work\n—\n\n\n16\nRegression\nProject Groups\nWeek 16 Quiz\n\n\n17\nInterpretation & Credibility\nProject Groups\nWeek 17 Quiz\n\n\n18\nMCQ Exam Prep\nProject Groups\nWeek 18 Quiz\n\n\n19\nProject Workshop\nData Collection\nWeek 19 Quiz\n\n\n20\nWrapping Up\nReport Writing\nWeek 20 Quiz\n\n\n\n\n\n\n\n\n\nImportantWeek 12 is Critical\n\n\n\nWeek 12 introduces ALL the terminology you need for your Research Plan: IV, DV, design types, hypothesis types, test selection, and descriptive statistics.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -455,7 +338,7 @@
     "href": "textbook/index.html#assessment-deadlines",
     "title": "PS50008A Textbook",
     "section": "4 Assessment Deadlines",
-    "text": "4 Assessment Deadlines\n\n\n\nWeek\nAssessment\n\n\n\n\n16\nResearch Plan due Friday (20%)\n\n\n18\nMCQ Exam Wednesday (20%)\n\n\n20\nEDS Assignment due Friday (20%)\n\n\nPost-term\nResearch Report due 1 May (40%)",
+    "text": "4 Assessment Deadlines\n\n\n\nWeek\nAssessment\n\n\n\n\n16\nResearch Plan due Fri 27 Feb (20%)\n\n\n18\nMCQ Exam Mon 9 Mar (20%)\n\n\n19\nEDS Assignment due Fri 20 Mar (20%)\n\n\nPost-term\nResearch Report due Fri 1 May (40%)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -4020,7 +3903,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4034,7 +3917,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4048,7 +3931,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4062,7 +3945,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4076,7 +3959,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4090,7 +3973,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4104,7 +3987,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4118,7 +4001,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4132,7 +4015,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4146,7 +4029,7 @@
       "Term 2",
       "Week 11: DataLab",
       "Lab",
-      "Reading "
+      "Reading"
     ]
   },
   {
@@ -4803,7 +4686,7 @@
     "href": "week12/lab/reading.html#webr-r-in-your-browser",
     "title": "Chapter 4: Introduction to R",
     "section": "WebR: R in Your Browser",
-    "text": "WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\nHow It Works\nWhen you see a code box like this:\nmean(c(5, 10, 15, 20))\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
+    "text": "WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\nHow It Works\nWhen you see a code box like this:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -4817,7 +4700,7 @@
     "href": "week12/lab/reading.html#r-basics-for-today",
     "title": "Chapter 4: Introduction to R",
     "section": "R Basics for Today",
-    "text": "R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\nAssigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n# Store a value\nmy_score &lt;- 75\n\n# Store multiple values\nreaction_times &lt;- c(245, 312, 278, 298, 267)\nThe c() function combines values into a vector (a list of numbers).\n\n\nBasic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n# Mean of values\nmean(c(10, 20, 30))\n\n# Sum of values\nsum(c(10, 20, 30))\n\n# Number of values\nlength(c(10, 20, 30))\n\n\nComputing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\nExample: Reaction Times\n# Create data\nrt &lt;- c(245, 312, 278, 298, 267)\n\n# Compute statistics\nmean(rt)     # 280\nmedian(rt)   # 278\nsd(rt)       # 26.2",
+    "text": "R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\nAssigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe c() function combines values into a vector (a list of numbers).\n\n\nBasic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nComputing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\nExample: Reaction Times\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -4845,7 +4728,7 @@
     "href": "week12/lab/reading.html#working-with-data-frames",
     "title": "Chapter 4: Introduction to R",
     "section": "Working with Data Frames",
-    "text": "Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\nAccessing Columns\nUse $ to access a column:\n# If 'olympics' is your dataset\nolympics$reaction_time     # Get the reaction_time column\nmean(olympics$reaction_time)  # Mean of that column\n\n\nSubsetting Data\nGet specific parts of your data:\n# Filter rows where room is \"A\"\nroom_a &lt;- olympics[olympics$room == \"A\", ]\n\n# Get mean reaction time for Room A only\nmean(room_a$reaction_time)",
+    "text": "Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\nAccessing Columns\nUse $ to access a column:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nSubsetting Data\nGet specific parts of your data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -5416,84 +5299,6 @@
       "Textbook",
       "Week 12",
       "Lecture: Research Design Framework"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html",
-    "href": "textbook/quizzes/w11-quiz.html",
-    "title": "Week 11 Self-Assessment",
-    "section": "",
-    "text": "Test your understanding of this week’s material. Answer each question to check your learning.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html#instructions",
-    "href": "textbook/quizzes/w11-quiz.html#instructions",
-    "title": "Week 11 Self-Assessment",
-    "section": "",
-    "text": "Test your understanding of this week’s material. Answer each question to check your learning.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html#conceptual-questions",
-    "href": "textbook/quizzes/w11-quiz.html#conceptual-questions",
-    "title": "Week 11 Self-Assessment",
-    "section": "2 Conceptual Questions",
-    "text": "2 Conceptual Questions\n\n2.1 Question 1: Why Research Methods?\nWhy is “common sense” unreliable for understanding human behaviour?\nIt’s always wrongIt suffers from biases like hindsight and confirmation biasScientists don’t like common senseIt only works for simple behaviours\n\n\nShow explanation\n\nCommon sense is unreliable because of:\n\nHindsight bias — events seem obvious after they occur\nConfirmation bias — we notice supporting evidence and ignore contradicting evidence\nAnecdotal evidence — individual cases can mislead\nCommon sense can justify contradictory conclusions (e.g., “opposites attract” vs “birds of a feather flock together”)\n\n\n\n\n2.2 Question 2: Hallmarks of Science\n\n\nCode\nopts_hallmarks &lt;- c(\n  \"Popular, funded, published, and cited\",\n  answer = \"Empirical, systematic, falsifiable, and transparent\",\n  \"Theoretical, mathematical, complex, and reviewed\",\n  \"Objective, simple, fast, and certain\"\n)\n\n\nWhat are the four hallmarks of scientific claims?\n\n Popular, funded, published, and cited Empirical, systematic, falsifiable, and transparent Theoretical, mathematical, complex, and reviewed Objective, simple, fast, and certain\n\n\n\n2.3 Question 3: Variable Types\nA continuous variable can take any value within a range. TRUEFALSE\nA participant’s experimental condition (A or B) is an example of a categorical variable. TRUEFALSE\nReaction time in milliseconds is an example of a categorical variable. TRUEFALSE\n\n\n2.4 Question 4: Replication\nWhat does it mean for a finding to be “replicable”?\nThe finding was published in a journalThe researcher repeated the study themselvesOther researchers get the same results following the same proceduresThe finding agrees with common sense",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html#practical-questions",
-    "href": "textbook/quizzes/w11-quiz.html#practical-questions",
-    "title": "Week 11 Self-Assessment",
-    "section": "3 Practical Questions",
-    "text": "3 Practical Questions\n\n3.1 Question 5: Measurement Error\nIn the reaction time task (ruler drop), which of the following could cause measurement error?\nInconsistent ruler height TRUEFALSE\nParticipant knowing when the drop will happen TRUEFALSE\nUsing a standardised ruler TRUEFALSE\n\n\n3.2 Question 6: Being a Participant and Tester\nWhy did you act as both participant AND tester in DataLab?\nTo save timeBecause we didn’t have enough researchersTo understand both perspectives and the importance of standardised proceduresTo collect more data\n\n\n3.3 Question 7: Signal Detection\nIn the staring task, what is a “hit”?\nSaying ‘not staring’ when they were staringCorrectly detecting when someone IS staringSaying ‘staring’ when they were NOT staringMissing all trials\nWhat is a “false alarm”?\nCorrectly detecting when someone is staringSaying ‘not staring’ when they were staringSaying ‘staring’ when they were NOT staringMissing all trials",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html#fill-in-the-blank",
-    "href": "textbook/quizzes/w11-quiz.html#fill-in-the-blank",
-    "title": "Week 11 Self-Assessment",
-    "section": "4 Fill in the Blank",
-    "text": "4 Fill in the Blank\nComplete these statements:\nThe four steps of the scientific method are: observe, , test, and conclude.\nA variable that can only take whole number values (like “number of words recalled”) is called a  variable.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
-    ]
-  },
-  {
-    "objectID": "textbook/quizzes/w11-quiz.html#summary-checklist",
-    "href": "textbook/quizzes/w11-quiz.html#summary-checklist",
-    "title": "Week 11 Self-Assessment",
-    "section": "5 Summary Checklist",
-    "text": "5 Summary Checklist\nBefore moving on, check you understand:\n\nWhy psychology uses research methods rather than relying on common sense\nThe four hallmarks of scientific claims\nThe difference between continuous, categorical, and discrete variables\nThe steps of the scientific method\nWhat “replicable” means and why it matters",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Self-Assessment Quizzes",
-      "Week 11 Quiz"
     ]
   }
 ]

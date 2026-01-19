@@ -1,17 +1,6 @@
 ---
 title: "Week 15 Lab Reading"
-subtitle: "Running T-Tests with R"
-author: "Gordon Wright"
-date: "2026-02-11"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Correlation in R"
 ---
 
 {{< include ../../textbook/chapters/w15-lab.qmd >}}

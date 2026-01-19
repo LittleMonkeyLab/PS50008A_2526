@@ -1,17 +1,6 @@
 ---
 title: "Week 14 Lecture Reading"
-subtitle: "Probabilities & Distributions"
-author: "Gordon Wright"
-date: "2026-02-02"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Inference & t-tests"
 ---
 
 {{< include ../../textbook/chapters/w14-lecture.qmd >}}

@@ -1,17 +1,6 @@
 ---
 title: "Week 17 Lecture Reading"
-subtitle: "Practice MCQ Test"
-author: "Gordon Wright"
-date: "2026-03-02"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Interpretation & Credibility"
 ---
 
 {{< include ../../textbook/chapters/w17-lecture.qmd >}}

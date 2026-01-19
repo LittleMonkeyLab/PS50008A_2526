@@ -1,168 +1,189 @@
 ---
 title: "Week 13 Self-Assessment"
-subtitle: "Correlation & Relationships"
+subtitle: "Confidence Intervals, Bootstrap, and Effect Sizes"
 ---
 
-```{r, echo=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(webexercises)
 ```
 
 ## Instructions
 
-This quiz deepens your understanding of correlational relationships. Week 12 introduced correlation as a design type — this week you'll explore how to interpret correlations more thoroughly.
+Test your understanding of confidence intervals, bootstrap methods, and effect sizes. These concepts are fundamental to understanding uncertainty in our estimates and the practical significance of research findings.
 
 ---
 
-## Part 1: Correlation Basics
+## Part 1: Conceptual Questions
 
-### Question 1: Direction and Strength
+### Question 1: What is a Confidence Interval?
 
-A correlation coefficient of **r = -.75** indicates:
+A 95% confidence interval tells us:
 
-Direction: `r mcq(c("Positive", answer = "Negative", "No relationship", "Cannot tell"))`
+`r mcq(c("There is a 95% chance the true population value is within this range", answer = "If we repeated this study many times, 95% of the CIs would contain the true population value", "95% of our sample data falls within this range", "We are 95% sure our hypothesis is correct"))`
 
-Strength: `r mcq(c("Weak", "Moderate", answer = "Strong", "Perfect"))`
+### Question 2: Interpreting CI Width
 
-### Question 2: Interpreting r Values
+A wider confidence interval indicates:
 
-Match each correlation coefficient to its interpretation:
+`r mcq(c("Greater precision in our estimate", answer = "Greater uncertainty in our estimate", "A larger effect size", "A significant result"))`
 
-**r = .15** → `r mcq(c(answer = "Weak positive", "Moderate positive", "Strong positive", "No relationship"))`
+What factors can lead to a narrower (more precise) confidence interval?
 
-**r = -.62** → `r mcq(c("Weak negative", answer = "Moderate to strong negative", "Strong positive", "Perfect negative"))`
+`r mcq(c(answer = "Larger sample size and smaller variability", "Smaller sample size and larger variability", "Higher confidence level (e.g., 99% instead of 95%)", "More extreme scores in the data"))`
 
-**r = .03** → `r mcq(c("Weak positive", "Moderate positive", answer = "Essentially no relationship", "Strong negative"))`
+### Question 3: CI and Statistical Significance
 
-**r = .89** → `r mcq(c("Weak positive", "Moderate positive", answer = "Strong positive", "Perfect positive"))`
+If a 95% CI for the difference between two group means does NOT include zero, this suggests:
 
-### Question 3: Range of r
+`r mcq(c("The result is not significant", answer = "The result is statistically significant at p < .05", "The effect size is large", "We need a larger sample"))`
 
-The correlation coefficient (r) can range from:
+If a 95% CI for a correlation coefficient includes zero, this suggests:
 
-`r mcq(c("0 to 1", "0 to 100", answer = "-1 to +1", "-100 to +100"))`
+`r mcq(c(answer = "The correlation is not statistically significant at p < .05", "The correlation is significant", "We should use a different test", "The sample is too large"))`
+
+### Question 4: Bootstrap Methods
+
+The bootstrap method involves:
+
+`r mcq(c("Collecting new participants", "Using a larger sample", answer = "Resampling with replacement from the original data to estimate sampling variability", "Removing outliers from the data"))`
+
+Why might we use bootstrap methods instead of traditional formulas?
+
+`r mcq(c("Bootstrap is always more accurate", answer = "Bootstrap makes fewer assumptions about the data distribution", "Bootstrap is required for all modern statistics", "Bootstrap gives smaller p-values"))`
+
+### Question 5: Bootstrap Confidence Intervals
+
+A bootstrap 95% CI is constructed by:
+
+`r mcq(c("Adding and subtracting 2 standard errors from the mean", answer = "Finding the 2.5th and 97.5th percentiles of the bootstrap distribution", "Using the normal distribution tables", "Calculating the exact probability"))`
+
+How many bootstrap samples are typically used?
+
+`r mcq(c("10", "100", answer = "1000 or more", "Exactly 95"))`
+
+### Question 6: Effect Sizes
+
+An effect size tells us:
+
+`r mcq(c("Whether the result is statistically significant", answer = "The magnitude or practical importance of an effect", "The probability of replication", "The sample size needed"))`
+
+Why report effect sizes alongside p-values?
+
+`r mcq(c("Because journals require it", answer = "Because statistical significance doesn't tell us about practical importance", "Because effect sizes are always larger than p-values", "Because p-values are unreliable"))`
 
 ---
 
-## Part 2: Correlation ≠ Causation
+## Part 2: Interpretation Questions
 
-### Question 4: The Third Variable Problem
+### Question 7: Interpreting a CI
 
-A researcher finds that ice cream sales and drowning rates are positively correlated. The most likely explanation is:
+A study reports: "Mean reaction time = 450ms, 95% CI [420, 480]"
 
-`r mcq(c("Ice cream causes drowning", "Drowning causes people to buy ice cream", answer = "A third variable (warm weather) affects both", "This is a coincidence with no explanation"))`
+The point estimate is: `r mcq(c("420ms", answer = "450ms", "480ms", "60ms"))`
 
-### Question 5: Identifying Third Variables
+The margin of error is approximately: `r mcq(c("420ms", "450ms", answer = "30ms", "480ms"))`
 
-For each correlation, identify the most likely third variable:
+We can be reasonably confident the true population mean is between: `r mcq(c(answer = "420ms and 480ms", "0ms and 450ms", "450ms and 900ms", "We cannot say"))`
 
-**Shoe size and reading ability are positively correlated in children.**
+### Question 8: Comparing Groups with CIs
 
-`r mcq(c("Reading makes feet grow", "Big feet help with reading", answer = "Age (older children have bigger feet AND read better)", "This is coincidence"))`
+Study A finds: Group 1 mean = 50, 95% CI [45, 55]; Group 2 mean = 60, 95% CI [55, 65]
 
-**Number of firefighters at a scene and damage caused are positively correlated.**
+The CIs do NOT overlap. This suggests the difference is:
 
-`r mcq(c("Firefighters cause damage", "Damage attracts firefighters", answer = "Fire severity (bigger fires need more firefighters AND cause more damage)", "This is coincidence"))`
+`r mcq(c("Not significant", answer = "Likely statistically significant", "Due to chance", "Meaningless"))`
 
-### Question 6: Why Correlation Cannot Establish Causation
+Study B finds: Group 1 mean = 50, 95% CI [40, 60]; Group 2 mean = 55, 95% CI [45, 65]
+
+The CIs DO overlap substantially. This suggests:
+
+`r mcq(c("The groups are definitely different", answer = "The difference may not be statistically significant", "We should increase the confidence level", "The study failed"))`
+
+### Question 9: Cohen's d Interpretation
+
+Cohen's d = 0.20 is considered: `r mcq(c(answer = "Small", "Medium", "Large", "Negligible"))`
+
+Cohen's d = 0.50 is considered: `r mcq(c("Small", answer = "Medium", "Large", "Very large"))`
+
+Cohen's d = 0.80 is considered: `r mcq(c("Small", "Medium", answer = "Large", "Massive"))`
+
+Cohen's d = 1.20 would be considered: `r mcq(c("Small", "Medium", answer = "Large (or very large)", "Impossible"))`
+
+### Question 10: Interpreting Effect Size in Context
+
+A medication reduces anxiety scores with d = 0.25 (small effect). A therapy reduces anxiety with d = 0.75 (medium-large effect).
+
+Which treatment shows a larger practical effect? `r mcq(c("Medication", answer = "Therapy", "They are the same", "Cannot compare"))`
+
+If the medication is much cheaper and has no side effects, should we ignore it because the effect is "small"?
+
+`r mcq(c("Yes, small effects are worthless", answer = "No, small effects can still be meaningful in context", "Yes, only large effects matter", "We should only consider statistical significance"))`
+
+---
+
+## Part 3: Application Questions
+
+### Question 11: Scenario - Understanding Uncertainty
+
+A researcher measures spelling test scores in 30 children and reports: M = 75, 95% CI [70, 80].
+
+Which statement is the best interpretation?
 
 ```{r}
-opts_cause <- c(
-  "Correlations are always weak",
-  answer = "Correlations show association but cannot rule out third variables or determine direction of effect",
-  "Correlations only work with small samples",
-  "Correlations are only for categorical variables"
+opts_ci <- c(
+  "95% of children scored between 70 and 80",
+  "There is a 95% probability the true mean is between 70 and 80",
+  answer = "We are 95% confident that the interval from 70 to 80 captures the true population mean",
+  "The mean could be any value from 0 to 100"
 )
 ```
 
-Why can't we conclude causation from a correlational study?
+`r longmcq(opts_ci)`
 
-`r longmcq(opts_cause)`
+### Question 12: Scenario - Choosing Methods
 
----
+A researcher has data that is heavily skewed (not normally distributed). They want to estimate the confidence interval for the median.
 
-## Part 3: Scatterplot Interpretation
+Which approach is most appropriate?
 
-### Question 7: Reading Scatterplots
+`r mcq(c("Use the standard formula assuming normality", answer = "Use bootstrap methods", "Ignore the skewness", "Only report the mean"))`
 
-A scatterplot shows points forming a pattern from lower-left to upper-right. This indicates:
+### Question 13: Scenario - Practical Significance
 
-`r mcq(c(answer = "Positive correlation", "Negative correlation", "No correlation", "Curvilinear relationship"))`
+A pharmaceutical company tests a new drug for depression. They find a statistically significant improvement (p = .02) with d = 0.15.
 
-A scatterplot shows points forming a pattern from upper-left to lower-right. This indicates:
+How should they interpret this?
 
-`r mcq(c("Positive correlation", answer = "Negative correlation", "No correlation", "Curvilinear relationship"))`
+```{r}
+opts_drug <- c(
+  "The drug is highly effective and should be approved immediately",
+  "The result is not significant, so the drug doesn't work",
+  answer = "The effect is statistically significant but very small - clinical utility is questionable",
+  "Effect sizes don't matter for drug trials"
+)
+```
 
-A scatterplot shows points scattered randomly with no clear pattern. This indicates:
-
-`r mcq(c("Positive correlation", "Negative correlation", answer = "No correlation (or very weak)", "Perfect correlation"))`
-
-### Question 8: Outliers
-
-What effect do outliers typically have on Pearson's r?
-
-`r mcq(c("No effect", "Always increase r", "Always decrease r", answer = "Can substantially change r in either direction"))`
-
----
-
-## Part 4: Correlation Tests
-
-### Question 9: Pearson vs Spearman
-
-Pearson's r is appropriate when:
-
-`r mcq(c(answer = "Both variables are continuous and normally distributed", "One variable is categorical", "Data are ranks or ordinal", "Sample size is very small"))`
-
-Spearman's rho (ρ) is appropriate when:
-
-`r mcq(c("Both variables must be normally distributed", "One variable is categorical", answer = "Data are ordinal/ranked OR continuous data violates normality", "Sample size is very large"))`
-
-### Question 10: DataLab Example
-
-In our DataLab, we might correlate **confidence ratings** with **throwing accuracy**.
-
-What type of relationship might we expect?
-
-`r mcq(c(answer = "Positive (higher confidence = better accuracy)", "Negative (higher confidence = worse accuracy)", "No relationship expected", "Cannot predict"))`
-
-What test would we use if both variables are roughly normally distributed?
-
-`r mcq(c(answer = "Pearson's r", "Spearman's rho", "Independent t-test", "Paired t-test"))`
+`r longmcq(opts_drug)`
 
 ---
 
-## Part 5: APA Reporting
-
-### Question 11: Reporting Correlations
-
-The correct APA format for reporting a significant positive correlation is:
-
-`r mcq(c("r = .45, significant", "r(48) = .45, p = .001", answer = "r(48) = .45, p = .001 (or r = .45, p = .001)", "correlation = 0.45, sig = 0.001"))`
-
-### Question 12: Fill in the Blank
-
-When r = .49, the coefficient of determination (r²) = `r fitb(c(".24", "0.24", ".2401", "24%"), ignore_case = TRUE)`
-
-This means that `r fitb(c("24", "24%"), ignore_case = TRUE)` percent of the variance in one variable is explained by the other.
-
----
-
-## Part 6: MCQ Exam Practice
+## Part 4: MCQ Exam Practice
 
 ::: {.webex-check .webex-box}
 
 ### Investigation 1
 
-A researcher measures hours of sleep and exam performance in 50 students to see if they are related.
+A researcher measures memory scores in a sample of 40 participants and calculates: M = 65, SD = 12, 95% CI [61.17, 68.83].
 
-1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+1. **What does the CI tell us about precision?** `r mcq(c("Very precise (narrow interval)", answer = "Moderately precise", "Very imprecise (wide interval)", "Cannot determine"))`
 
-2. **IV**: `r mcq(c("Hours of sleep", "Exam performance", "Number of students", answer = "No IV (correlational design)"))`
+2. **If they had tested 100 participants instead, the CI would likely be:** `r mcq(c("Wider", answer = "Narrower", "The same", "Impossible to predict"))`
 
-3. **Variables measured**: `r mcq(c("Just sleep hours", "Just exam scores", answer = "Both sleep hours and exam scores", "Neither"))`
+3. **If the population mean is actually 64, would this CI capture it?** `r torf(TRUE)`
 
-4. **Appropriate test**: `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r (or Spearman's rho)", "Chi-square"))`
-
-5. **If r = .35, this is**: `r mcq(c("A strong relationship", answer = "A moderate relationship", "No relationship", "A perfect relationship"))`
+4. **The margin of error is approximately:** `r mcq(c("65", "12", answer = "About 4", "61"))`
 
 :::
 
@@ -170,13 +191,17 @@ A researcher measures hours of sleep and exam performance in 50 students to see 
 
 ### Investigation 2
 
-A researcher finds that self-esteem scores correlate positively with academic grades (r = .42) in university students.
+A study compares two teaching methods. Results show: Method A (M = 78, SD = 10) vs Method B (M = 72, SD = 11), with Cohen's d = 0.57 and p = .03.
 
-1. **Can we conclude high self-esteem CAUSES better grades?** `r torf(FALSE)`
+1. **The effect size is:** `r mcq(c("Small", answer = "Medium", "Large", "Not significant"))`
 
-2. **Name a possible third variable**: `r fitb(c("motivation", "intelligence", "effort", "socioeconomic status", "family support", "IQ"), ignore_case = TRUE)`
+2. **Is the result statistically significant at alpha = .05?** `r torf(TRUE)`
 
-3. **What percentage of variance is shared?** `r fitb(c("17.64", "18", "17.6", "about 18"), ignore_case = TRUE)`%
+3. **Method A shows scores that are on average how much higher?** `r mcq(c("0.57 points higher", answer = "6 points higher", "57% higher", "Cannot calculate"))`
+
+4. **The d = 0.57 means the difference is about:** `r mcq(c("0.57 points", answer = "About half a standard deviation", "57 standard deviations", "Not meaningful"))`
+
+5. **Should we conclude Method A is practically better?** `r mcq(c("No, the effect is too small", answer = "Possibly - a medium effect in education can be meaningful", "Yes, definitely superior", "Cannot say without more data"))`
 
 :::
 
@@ -186,15 +211,15 @@ A researcher finds that self-esteem scores correlate positively with academic gr
 
 Before moving on, make sure you can:
 
-- [ ] Interpret correlation coefficients (direction and strength)
-- [ ] Explain why correlation does not imply causation
-- [ ] Identify potential third variables in correlational findings
-- [ ] Read and interpret scatterplots
-- [ ] Choose between Pearson's r and Spearman's rho
-- [ ] Calculate and interpret r² (coefficient of determination)
-- [ ] Report correlations in APA format
+- [ ] Explain what a confidence interval represents
+- [ ] Interpret the width of a confidence interval
+- [ ] Understand how sample size affects CI width
+- [ ] Explain the basic logic of bootstrap methods
+- [ ] Interpret Cohen's d values (small, medium, large)
+- [ ] Distinguish statistical significance from practical significance
+- [ ] Explain why effect sizes are important to report
 
 ::: {.callout-important}
-## Research Plan Connection
-If your Research Plan uses a correlational design, you need to clearly state that you CANNOT make causal claims. This is assessed in the MCQ exam.
+## Key Takeaway
+Statistical significance (p-value) tells us whether an effect is likely real, while effect size tells us whether it matters practically. Always consider both when interpreting research findings.
 :::

@@ -1,82 +1,371 @@
 ---
-title: "Plotting Data with R"
+title: "t-tests in R"
 subtitle: "PS50008A Week 14 Lab Activity"
 author: "Gordon Wright"
 date: "2026-02-04"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w14-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-02-04"
-  labels: ['r-programming', 'visualisation', 'webr']
-  depends_on:
-    - rm0-w14-lab-slides
-  blocks:
-    - rm0-w14-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-02-04"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+
+# Load DataLab data
+memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+
+navy <- "#275882"
+orange <- "#EA8439"
+theme_set(theme_minimal(base_size = 14))
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 14 lecture.
+## Focus for Today
+This lab introduces the **t-test** - the workhorse of psychological research for comparing means:
+
+- Running independent samples t-tests (between-subjects)
+- Running paired samples t-tests (within-subjects)
+- Interpreting R output from t.test()
+- Choosing the right test for your design
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Independent t-test (Lab A vs Lab B Memory) (20 min)
 
-TBC - Activity content
+### When to Use an Independent t-test
 
----
+An **independent samples t-test** compares means from **two different groups** of participants.
 
-## Part 2: Exercises
+```{r}
+#| label: lab-data-prep
+memory_labs <- memory |>
+  filter(!is.na(Q11) & !is.na(mem_total_1)) |>
+  mutate(Lab = factor(Q11, levels = c(1, 2), labels = c("Lab A (Abstract)", "Lab B (Concrete)")))
 
-TBC - Interactive exercises
-
-```{webr-r}
-# Example code
-
-
+lab_stats <- memory_labs |>
+  group_by(Lab) |>
+  summarise(
+    n = n(),
+    Mean = mean(mem_total_1, na.rm = TRUE),
+    SD = sd(mem_total_1, na.rm = TRUE)
+  )
 ```
 
+```{r}
+#| label: lab-comparison-plot
+#| fig-height: 4
+#| fig-align: center
+ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
+  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
+  geom_jitter(aes(colour = Lab), width = 0.15, size = 3, alpha = 0.7) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
+  scale_fill_manual(values = c(navy, orange)) +
+  scale_colour_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory Performance: Lab A vs Lab B",
+       subtitle = "Black diamonds = group means") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+### Conceptual Questions
+
+**1. This comparison (Lab A vs Lab B) uses an independent t-test because:**
+
+`r mcq(c("The same participants are in both groups", answer = "Different participants are in each group", "We are comparing more than two groups", "There is no control group"))`
+
+**2. What are the two groups being compared?**
+
+`r mcq(c(answer = "Lab A (abstract words) vs Lab B (concrete words)", "Before vs After", "High vs Low performers", "Morning vs Afternoon sessions"))`
+
+**3. What is the dependent variable in this analysis?**
+
+`r mcq(c("Word type (abstract/concrete)", "Lab group", answer = "Number of words recalled", "Participant ID"))`
+
+### Understanding the R Output
+
+Here's what R output from `t.test()` looks like:
+
+```
+	Welch Two Sample t-test
+
+data:  mem_total_1 by Lab
+t = -2.45, df = 38.2, p-value = 0.019
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.15  -0.21
+sample estimates:
+mean in group Lab A  mean in group Lab B
+               5.40                6.58
+```
+
+**4. Looking at the output above, what is the t-statistic?**
+
+`r mcq(c("38.2", "0.019", answer = "-2.45", "-2.15"))`
+
+**5. What is the p-value?**
+
+`r mcq(c("-2.45", "38.2", answer = "0.019", "6.58"))`
+
+**6. At alpha = 0.05, would we reject the null hypothesis?**
+
+`r mcq(c(answer = "Yes, because p < 0.05", "No, because p > 0.05", "Can't tell from this output", "Yes, because t is negative"))`
+
+**7. The 95% CI for the difference is [-2.15, -0.21]. What does this tell us?**
+
+`r mcq(c(answer = "The CI doesn't include 0, supporting a real difference", "The CI includes 0, so there's no difference", "Lab B scored lower than Lab A", "The difference is not significant"))`
+
+True or False: A negative t-value means the first group has a lower mean than the second. `r torf(TRUE)`
+
 ---
 
-## Key Takeaways
+## Activity 2: Paired t-test (Pre vs Post Mood) (20 min)
+
+### When to Use a Paired t-test
+
+A **paired samples t-test** compares means from the **same participants** measured twice.
+
+```{r}
+#| label: mood-data-prep
+mood_data <- merged |>
+  select(participant_id, mood_pre_1, post_mood_post_1) |>
+  filter(!is.na(mood_pre_1) & !is.na(post_mood_post_1)) |>
+  mutate(change = post_mood_post_1 - mood_pre_1)
+
+mood_long <- mood_data |>
+  pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
+               names_to = "Time", values_to = "Mood") |>
+  mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
+                       labels = c("Before", "After")))
+```
+
+```{r}
+#| label: mood-comparison-plot
+#| fig-height: 4
+#| fig-align: center
+ggplot(mood_long, aes(x = Time, y = Mood, fill = Time)) +
+  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
+  geom_line(data = mood_data |>
+              pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
+                          names_to = "Time", values_to = "Mood") |>
+              mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
+                                  labels = c("Before", "After"))),
+            aes(group = participant_id), alpha = 0.3, colour = "gray40") +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
+  scale_fill_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Mood Rating (1-10)",
+       title = "Mood Before vs After DataLab",
+       subtitle = "Lines connect the same person") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+### Conceptual Questions
+
+**1. This comparison uses a paired t-test because:**
+
+`r mcq(c(answer = "The same participants are measured at both time points", "Different participants are in each group", "We are comparing more than two groups", "The data is paired with another dataset"))`
+
+**2. What is the advantage of a paired design over an independent design?**
+
+`r mcq(c("Easier to recruit participants", "Faster to run", answer = "Each person is their own control, reducing individual differences", "No assumptions required"))`
+
+**3. In R, how do we specify a paired t-test?**
+
+`r mcq(c("t.test(x, y, type = 'paired')", answer = "t.test(x, y, paired = TRUE)", "paired.t.test(x, y)", "t.test.paired(x, y)"))`
+
+### Understanding Paired Output
+
+```
+	Paired t-test
+
+data:  mood_pre and mood_post
+t = -3.12, df = 42, p-value = 0.003
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -1.52  -0.32
+sample estimates:
+mean difference
+          -0.92
+```
+
+**4. The mean difference of -0.92 means:**
+
+`r mcq(c("Pre scores were 0.92 higher than post", answer = "Post scores were 0.92 higher than pre", "The groups are 0.92 apart on average", "92% of people improved"))`
+
+**5. Is this difference statistically significant at alpha = 0.05?**
+
+`r mcq(c(answer = "Yes, p = 0.003 < 0.05", "No, p = 0.003 > 0.05", "Can't tell", "Only marginally significant"))`
+
+**6. The degrees of freedom (df) for a paired t-test equals:**
+
+`r mcq(c("n", answer = "n - 1 (number of pairs minus 1)", "n - 2", "n1 + n2 - 2"))`
+
+True or False: In a paired t-test, we analyse the difference scores, not the raw scores. `r torf(TRUE)`
+
+---
+
+## Activity 3: Interpreting Output (20 min)
+
+### Reading and Reporting t-test Results
+
+Psychologists report t-test results in a specific format. Let's practice!
+
+**Standard format:** t(df) = value, p = value
+
+### Practice Examples
+
+**Example 1:**
+```
+t = 2.34, df = 28, p-value = 0.027
+```
+
+**1. How would you report this result?**
+
+`r mcq(c("t = 2.34, p = 0.027", answer = "t(28) = 2.34, p = .027", "t(2.34) = 28, p = 0.027", "df = 28, t = 2.34"))`
+
+**2. Is this result significant at alpha = 0.05?**
+
+`r mcq(c(answer = "Yes", "No", "Can't tell", "Marginally significant"))`
+
+**Example 2:**
+```
+t = 1.52, df = 45, p-value = 0.136
+```
+
+**3. Is this result significant at alpha = 0.05?**
+
+`r mcq(c("Yes", answer = "No", "Can't tell", "Marginally significant"))`
+
+**4. What should you conclude?**
+
+`r mcq(c("The groups are definitely the same", answer = "We cannot reject the null hypothesis - insufficient evidence of a difference", "The experiment failed", "We need to use a different test"))`
+
+### Assumptions of the t-test
+
+**5. Which assumption is about the shape of the data distribution?**
+
+`r mcq(c(answer = "Normality assumption", "Independence assumption", "Homogeneity of variance", "Randomness assumption"))`
+
+**6. Welch's t-test is preferred when:**
+
+`r mcq(c("Sample sizes are equal", "Data is normally distributed", answer = "Variances may be unequal between groups", "We want a paired test"))`
+
+**7. Independence means:**
+
+`r mcq(c(answer = "One person's score doesn't influence another's", "The groups are completely separate", "Variables are uncorrelated", "The test is unbiased"))`
+
+True or False: t-tests are robust to mild violations of normality, especially with larger samples. `r torf(TRUE)`
+
+True or False: If p = 0.06, the result is "almost significant" and we should report it as meaningful. `r torf(FALSE)`
+
+---
+
+## Activity 4: Choosing the Right Test (20 min)
+
+### Decision Tree Practice
+
+For each scenario, identify whether to use an **independent** or **paired** t-test.
+
+::: {.webex-check .webex-box}
+
+### Scenario 1
+A researcher measures anxiety levels in 30 participants before and after a relaxation intervention.
+
+**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+
+**Why?** `r mcq(c("Different people in each condition", answer = "Same people measured twice"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 2
+Comparing exam scores between students who used Method A vs Method B to study.
+
+**Which t-test?** `r mcq(c(answer = "Independent t-test", "Paired t-test"))`
+
+**Why?** `r mcq(c(answer = "Different people in each condition", "Same people measured twice"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 3
+Testing whether people rate faces as more attractive when the same faces are presented smiling vs neutral.
+
+**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+
+**Why?** `r mcq(c("Different people rate different faces", answer = "Same people rate both versions of faces"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 4
+Comparing reaction times between left-handed and right-handed participants.
+
+**Which t-test?** `r mcq(c(answer = "Independent t-test", "Paired t-test"))`
+
+**Why?** `r mcq(c(answer = "Handedness is a between-subjects variable", "People switch hands during the experiment"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 5
+Each participant completes a task under quiet conditions and under noisy conditions.
+
+**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+
+**Why?** `r mcq(c("Different people in each condition", answer = "Same people tested in both conditions"))`
+:::
+
+### The Key Question
+
+**To decide which t-test to use, ask yourself:**
+
+`r mcq(c("How many variables are there?", "Is the data normally distributed?", answer = "Are the SAME or DIFFERENT people in each condition?", "What is the sample size?"))`
+
+---
+
+## Summary
 
 ::: {.callout-important}
-## Summary
-1. TBC
-2. TBC
-3. TBC
+## Key Takeaways
+
+**Independent t-test:**
+- Compares means from TWO DIFFERENT groups
+- Use for between-subjects designs
+- df = n1 + n2 - 2
+
+**Paired t-test:**
+- Compares means from the SAME people measured twice
+- Use for within-subjects designs
+- df = n - 1 (number of pairs minus 1)
+- More powerful (controls for individual differences)
+
+**Reporting:**
+- Format: t(df) = value, p = value
+- Include effect size (Cohen's d) when possible
+- Report 95% CI for the difference
+
+**Choosing:**
+- Ask: "Same people or different people?"
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 14 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 15
+1. Complete the [Week 14 Self-Assessment](self-assessment.qmd)
+2. Review the [Lecture Reading](reading.qmd)
+3. Prepare for Week 15: Correlation in R

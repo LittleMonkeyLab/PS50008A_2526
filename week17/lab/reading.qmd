@@ -1,17 +1,6 @@
 ---
 title: "Week 17 Lab Reading"
-subtitle: "Project Groups: Methodology"
-author: "Gordon Wright"
-date: "2026-03-04"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Project Groups - Methodology"
 ---
 
 {{< include ../../textbook/chapters/w17-lab.qmd >}}

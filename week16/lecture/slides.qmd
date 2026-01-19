@@ -1,70 +1,431 @@
 ---
-title: "Practice Assignment"
-subtitle: "PS50008A Week 16 Lecture"
+title: "Regression"
+subtitle: "PS50008A Week 16 | Lecture"
 author: "Gordon Wright"
-date: "2026-02-23"
+date: "2026-02-25"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w16-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-23"
-  labels: ['assessment']
-  depends_on:
-    - rm0-w16-index
-  blocks:
-    - rm0-w16-lab-slides
-    - rm0-w16-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-02-23"
+    center-title-slide: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Learning Objectives
+## Learning Outcomes
 
-By the end of this lecture, you will be able to:
+By the end of this lecture you will be able to:
+
+- Explain how regression extends correlation to prediction
+- Interpret the line of best fit and its equation
+- Understand R^2 and explained variance
+- Use a regression equation to make predictions
+
+# From Correlation to Prediction {background-color="#275882"}
+
+## Beyond Describing Relationships
+
+<!-- TODO: Introduce prediction concept -->
 
 ::: {.incremental}
-- TBC
-- TBC
-- TBC
+- **Correlation** tells us variables are related
+- **Regression** allows us to predict one from the other
+- Moving from description to prediction
 :::
 
----
+::: {.fragment}
+::: {.example-box}
+**Correlation:** Study hours and exam scores are positively related (r = .72)
 
-## Overview
+**Regression:** If a student studies for X hours, we predict their exam score will be Y.
+:::
+:::
 
-TBC - Lecture content to be developed
+## What is Regression?
 
----
+<!-- TODO: Define regression -->
 
-## Summary
+::: {.definition-box}
+**Simple Linear Regression**: A statistical method that models the relationship between a predictor variable (X) and an outcome variable (Y) using a straight line.
+:::
+
+## Terminology
+
+<!-- TODO: Define key terms -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Predictor Variable (X)**
+
+- Also called: independent variable, explanatory variable
+- Used to predict Y
+- Goes on X-axis
+:::
+
+::: {.column width="50%"}
+**Outcome Variable (Y)**
+
+- Also called: dependent variable, response variable
+- What we're predicting
+- Goes on Y-axis
+:::
+
+::::
+
+## The Regression Question
+
+<!-- TODO: Frame the core question -->
+
+::: {.fragment}
+Given a value of X, what is our best prediction of Y?
+:::
+
+::: {.fragment}
+::: {.example-box}
+"If a student studies for 10 hours, what exam score do we predict?"
+:::
+:::
+
+## Why Linear?
+
+<!-- TODO: Explain linearity assumption -->
 
 ::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- We assume a straight-line relationship
+- Simplest model
+- Often a good approximation
+- Can extend to non-linear later
 :::
 
----
+# Line of Best Fit {background-color="#275882"}
 
-## Next Week
+## The Regression Line
 
-TBC - Preview of next week's content
+<!-- TODO: Introduce regression line concept -->
+
+::: {.definition-box}
+**Line of Best Fit**: The straight line that minimises the total distance between the line and all data points.
+:::
+
+::: {.fragment}
+<!-- TODO: Add scatterplot with regression line -->
+:::
+
+## The Regression Equation
+
+<!-- TODO: Present the equation -->
+
+$$\hat{Y} = b_0 + b_1X$$
+
+::: {.fragment}
+Where:
+
+- $\hat{Y}$ (Y-hat) = predicted value of Y
+- $b_0$ = intercept (Y when X = 0)
+- $b_1$ = slope (change in Y per unit X)
+- $X$ = value of predictor variable
+:::
+
+## Understanding the Intercept (b0)
+
+<!-- TODO: Explain intercept -->
+
+::: {.definition-box}
+**Intercept (b0)**: The predicted value of Y when X equals zero. Where the line crosses the Y-axis.
+:::
+
+::: {.fragment}
+::: {.callout-note}
+The intercept may not always be meaningful (e.g., "exam score when study hours = 0").
+:::
+:::
+
+## Understanding the Slope (b1)
+
+<!-- TODO: Explain slope -->
+
+::: {.definition-box}
+**Slope (b1)**: The change in Y for each one-unit increase in X. The steepness and direction of the line.
+:::
+
+::: {.fragment}
+::: {.example-box}
+If b1 = 5.2:
+
+"For each additional hour of study, exam scores increase by 5.2 points on average."
+:::
+:::
+
+## How the Line is Fitted
+
+<!-- TODO: Introduce least squares -->
+
+::: {.definition-box}
+**Ordinary Least Squares (OLS)**: Finds the line that minimises the sum of squared residuals (vertical distances between points and line).
+:::
+
+::: {.fragment}
+<!-- TODO: Add visual showing residuals -->
+:::
+
+## Residuals
+
+<!-- TODO: Define residuals -->
+
+::: {.definition-box}
+**Residual**: The difference between an observed Y value and the predicted Y value. The "leftover" variation.
+:::
+
+$$Residual = Y - \hat{Y}$$
+
+::: {.fragment}
+- Positive residual: actual > predicted
+- Negative residual: actual < predicted
+:::
+
+## Visualising Residuals
+
+<!-- TODO: Add residual plot -->
+
+```{r}
+#| eval: false
+# TODO: Add R code showing scatterplot with
+# vertical lines to regression line (residuals)
+```
+
+# R^2 and Explained Variance {background-color="#275882"}
+
+## How Good is Our Model?
+
+<!-- TODO: Introduce model fit concept -->
+
+::: {.incremental}
+- We have a line, but how well does it fit?
+- How much of Y's variation does X explain?
+- We need a measure of model quality
+:::
+
+## Total Variance in Y
+
+<!-- TODO: Explain variance decomposition -->
+
+::: {.fragment}
+The total variance in Y can be split into:
+
+1. **Explained variance**: Variation predicted by X
+2. **Unexplained variance**: Leftover (residual) variation
+:::
+
+$$Total = Explained + Unexplained$$
+
+## Coefficient of Determination (R^2)
+
+<!-- TODO: Define R-squared -->
+
+::: {.definition-box}
+**R^2 (R-squared)**: The proportion of variance in Y that is explained by X. Ranges from 0 to 1.
+:::
+
+$$R^2 = \frac{Explained\ Variance}{Total\ Variance}$$
+
+## Interpreting R^2
+
+<!-- TODO: Add interpretation examples -->
+
+| R^2 value | Interpretation |
+|-----------|----------------|
+| 0.00 | X explains none of Y's variance |
+| 0.25 | X explains 25% of Y's variance |
+| 0.50 | X explains half of Y's variance |
+| 1.00 | X explains all of Y's variance (perfect) |
+
+## R^2 in Simple Regression
+
+<!-- TODO: Connect to correlation -->
+
+::: {.callout-tip}
+## Key insight
+In simple linear regression (one predictor), R^2 equals the square of the correlation coefficient.
+
+If r = 0.72, then R^2 = 0.52
+:::
+
+## What R^2 Doesn't Tell You
+
+<!-- TODO: Limitations of R^2 -->
+
+::: {.incremental}
+- Whether the relationship is causal
+- Whether the model is "correct"
+- Whether predictions will be accurate for new data
+- The importance of the predictor
+:::
+
+## Residual Analysis
+
+<!-- TODO: Checking assumptions -->
+
+::: {.example-box}
+**Checking model assumptions via residuals:**
+
+- Should be randomly scattered (no patterns)
+- Should be roughly normally distributed
+- Should have constant variance (homoscedasticity)
+:::
+
+# Making Predictions {background-color="#275882"}
+
+## Using the Regression Equation
+
+<!-- TODO: Prediction walkthrough -->
+
+::: {.example-box}
+**Given:** $\hat{Y} = 30 + 5X$
+
+**Question:** Predict exam score for someone who studied 8 hours.
+
+**Solution:** $\hat{Y} = 30 + 5(8) = 30 + 40 = 70$
+
+**Prediction:** 70 points
+:::
+
+## Worked Example
+
+<!-- TODO: Add complete worked example -->
+
+```{r}
+#| eval: false
+# TODO: Add R code showing:
+# 1. Scatterplot of data
+# 2. Regression line
+# 3. Equation extraction
+# 4. Making a prediction
+```
+
+## Interpolation vs Extrapolation
+
+<!-- TODO: Discuss prediction limits -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Interpolation**
+
+- Predicting within data range
+- More reliable
+- Model tested here
+:::
+
+::: {.column width="50%"}
+**Extrapolation**
+
+- Predicting beyond data range
+- Risky!
+- Relationship may change
+:::
+
+::::
+
+## The Dangers of Extrapolation
+
+<!-- TODO: Add cautionary examples -->
+
+::: {.callout-warning}
+## Warning
+Never extrapolate far beyond your data. The linear relationship may not hold.
+:::
+
+::: {.fragment}
+::: {.example-box}
+If study hours in your data range from 2-15 hours, don't predict scores for someone who studied 100 hours!
+:::
+:::
+
+## Prediction Intervals
+
+<!-- TODO: Introduce uncertainty in predictions -->
+
+::: {.definition-box}
+**Prediction Interval**: A range of values within which a new observation is likely to fall, accounting for uncertainty in the prediction.
+:::
+
+::: {.fragment}
+Wider than confidence intervals for the mean.
+:::
+
+## Reporting Regression Results
+
+<!-- TODO: APA format guidance -->
+
+::: {.example-box}
+**APA format:**
+
+"A simple linear regression was conducted to predict exam scores from study hours. Study hours significantly predicted exam scores, b = 5.2, t(48) = 7.89, p < .001. Study hours explained 52% of the variance in exam scores, R^2 = .52, F(1, 48) = 62.25, p < .001."
+:::
+
+## What to Report
+
+<!-- TODO: Reporting checklist -->
+
+::: {.incremental}
+- The regression equation (with coefficients)
+- Statistical significance of predictors
+- R^2 and its interpretation
+- F-test for overall model
+- Assumptions checked
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.incremental}
+- **Regression** extends correlation to prediction
+- **Line of best fit** minimises squared residuals
+- **Equation:** $\hat{Y} = b_0 + b_1X$ (intercept + slope * X)
+- **R^2** tells us proportion of variance explained
+- **Predictions** should stay within the data range
+:::
+
+## Looking Ahead
+
+<!-- TODO: Module wrap-up preview -->
+
+::: {.fragment}
+You now have the core statistical toolkit:
+
+- Describing data (Week 12)
+- Estimation & effect sizes (Week 13)
+- Hypothesis testing & t-tests (Week 14)
+- Correlation (Week 15)
+- Regression (Week 16)
+:::
+
+## Applying Your Knowledge
+
+<!-- TODO: Connection to assessments -->
+
+::: {.callout-tip}
+## Research Plan Reminder
+Your research plan is due soon! These statistical concepts will help you:
+
+- Choose appropriate analyses
+- Justify your analytical approach
+- Interpret your future results
+:::
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+See you in the lab!

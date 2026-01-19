@@ -1,40 +1,18 @@
 ---
-title: "Practice MCQ Test"
-subtitle: "PS50008A Week 17 Lecture"
+title: "Interpretation & Credibility"
+subtitle: "PS50008A Week 17 | Lecture"
 author: "Gordon Wright"
-date: "2026-03-02"
+date: "2026-03-04"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w17-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-02"
-  labels: ['assessment']
-  depends_on:
-    - rm0-w17-index
-  blocks:
-    - rm0-w17-lab-slides
-    - rm0-w17-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-03-02"
+    center-title-slide: true
 ---
 
 ## Learning Objectives
@@ -42,29 +20,246 @@ taskmistress:
 By the end of this lecture, you will be able to:
 
 ::: {.incremental}
-- TBC
-- TBC
-- TBC
+- Explain why statistical significance alone is insufficient for drawing conclusions
+- Define p-hacking and identify researcher degrees of freedom
+- Recognise HARKing and understand its implications for research credibility
+- Describe the replication crisis and its causes
+- Prepare effectively for the MCQ exam
 :::
 
----
+# Beyond p < .05 {background-color="#275882"}
 
-## Overview
+## What Does p < .05 Actually Mean?
 
-TBC - Lecture content to be developed
+::: {.definition-box}
+**p-value**: The probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true.
+:::
 
----
+::: {.fragment}
+What it does NOT mean:
 
-## Summary
+- The probability that the null hypothesis is true
+- The probability that your results are due to chance
+- That your effect is important or meaningful
+:::
+
+## Statistical vs Practical Significance
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Statistical Significance**
+
+- p < .05 threshold
+- Depends on sample size
+- Can be achieved with tiny effects
+:::
+
+::: {.column width="50%"}
+**Practical Significance**
+
+- Effect size matters
+- Real-world importance
+- Clinical or applied relevance
+:::
+
+::::
+
+## Effect Sizes Matter
+
+::: {.concept-box}
+A statistically significant result with a tiny effect size may not be meaningful in practice.
+:::
+
+- Cohen's d for group differences
+- r for correlations
+- Confidence intervals for precision
+
+# P-hacking and Researcher Degrees of Freedom {background-color="#275882"}
+
+## What is P-hacking?
+
+::: {.definition-box}
+**P-hacking**: The practice of collecting or selecting data or statistical analyses until non-significant results become significant.
+:::
+
+::: {.fragment}
+Also known as:
+
+- Data dredging
+- Fishing expeditions
+- Significance chasing
+:::
+
+## Researcher Degrees of Freedom
+
+Decisions researchers make that can inflate false positive rates:
 
 ::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- When to stop collecting data
+- Which variables to include/exclude
+- How to handle outliers
+- Which statistical test to use
+- Which comparisons to report
 :::
 
----
+## The Garden of Forking Paths
+
+::: {.example-box}
+**Example**: If you make 5 arbitrary decisions, each with 2 options, you have 32 possible analysis paths.
+:::
+
+::: {.fragment}
+Many of these paths may produce p < .05 by chance alone.
+:::
+
+# HARKing {background-color="#275882"}
+
+## What is HARKing?
+
+::: {.definition-box}
+**HARKing**: Hypothesizing After Results are Known - presenting post-hoc hypotheses as if they were a priori predictions.
+:::
+
+## Why is HARKing Problematic?
+
+::: {.incremental}
+- Confirmation bias masquerading as prediction
+- Inflates apparent success of theories
+- Makes research seem more compelling than it is
+- Undermines the scientific method
+:::
+
+## Exploratory vs Confirmatory Research
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Exploratory**
+
+- Generating hypotheses
+- Data-driven discovery
+- Should be clearly labelled
+:::
+
+::: {.column width="50%"}
+**Confirmatory**
+
+- Testing pre-specified predictions
+- Theory-driven
+- Requires pre-registration
+:::
+
+::::
+
+# The Replication Crisis {background-color="#275882"}
+
+## What is the Replication Crisis?
+
+::: {.concept-box}
+Many published psychological findings fail to replicate when other researchers attempt to reproduce them.
+:::
+
+## Key Evidence
+
+::: {.incremental}
+- Open Science Collaboration (2015): Only 36% of psychology studies replicated
+- Many textbook findings questioned
+- High-profile retractions and fraud cases
+:::
+
+## Causes of the Crisis
+
+- Publication bias (positive results only)
+- P-hacking and flexible analyses
+- HARKing
+- Small sample sizes
+- Underpowered studies
+- Lack of pre-registration
+
+## Solutions and Open Science
+
+::: {.incremental}
+- Pre-registration of studies
+- Registered reports
+- Open data and materials
+- Replication studies valued
+- Effect size reporting
+- Larger sample sizes
+:::
+
+# MCQ Exam Preparation {background-color="#275882"}
+
+## Exam Format
+
+::: {.callout-important}
+## MCQ Exam Details
+- Date: Week 18 (Wednesday 11 March 2026)
+- Duration: TBC
+- Format: Multiple choice questions
+- Covers: Weeks 11-17 content
+:::
+
+## What to Revise
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Key Topics**
+
+- Research design concepts
+- Variables and measurement
+- Hypothesis testing
+- Statistical concepts
+- Ethical considerations
+:::
+
+::: {.column width="50%"}
+**Skills to Practice**
+
+- Identifying IV and DV
+- Recognising study designs
+- Interpreting statistics
+- Spotting methodological issues
+:::
+
+::::
+
+## Exam Strategies
+
+::: {.incremental}
+- Read each question carefully
+- Eliminate obviously wrong answers
+- Watch for absolute terms (always, never)
+- Manage your time
+- Review flagged questions
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.concept-box}
+1. Statistical significance (p < .05) is necessary but not sufficient
+2. P-hacking and researcher degrees of freedom inflate false positives
+3. HARKing undermines scientific credibility
+4. The replication crisis calls for better practices
+5. Open science practices help address these issues
+:::
 
 ## Next Week
 
-TBC - Preview of next week's content
+::: {.callout-note}
+## Week 18: MCQ Exam
+The in-class MCQ exam will take place during the lecture slot.
+
+Make sure to review all materials from Weeks 11-17.
+:::
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+Good luck with your exam preparation!

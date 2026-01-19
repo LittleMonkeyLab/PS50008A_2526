@@ -3,80 +3,303 @@ title: "Project Groups: Literature Review"
 subtitle: "PS50008A Week 16 Lab Activity"
 author: "Gordon Wright"
 date: "2026-02-25"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w16-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-02-25"
-  labels: ['project', 'literature-review', 'webr']
-  depends_on:
-    - rm0-w16-lab-slides
-  blocks:
-    - rm0-w16-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-02-25"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+
+# Load DataLab data
+memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+
+navy <- "#275882"
+orange <- "#EA8439"
+theme_set(theme_minimal(base_size = 14))
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 16 lecture.
+## Focus for Today
+This lab focuses on developing your **literature review skills** for your group project:
+
+- Defining a clear, testable research question
+- Finding relevant peer-reviewed papers
+- Summarizing key findings effectively
+- Building a coherent argument from multiple sources
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Defining Your Research Question (20 min)
 
-TBC - Activity content
+### What Makes a Good Research Question?
+
+A good research question for your project should be:
+
+- **Specific** - not too broad
+- **Testable** - can be answered with data
+- **Relevant** - connected to existing research
+- **Feasible** - achievable with available resources
+
+### Evaluating Research Questions
+
+**1. "Does personality affect behaviour?" is a POOR research question because:**
+
+`r mcq(c(answer = "It is too broad and vague", "Personality can't be measured", "It's not relevant to psychology", "It's already been answered"))`
+
+**2. Which is a BETTER research question?**
+
+`r mcq(c("Why do people differ?", answer = "Is extraversion associated with social media use frequency?", "What makes someone happy?", "Are introverts better than extraverts?"))`
+
+**3. A testable research question must:**
+
+`r mcq(c("Be about a controversial topic", answer = "Have variables that can be measured or observed", "Already have a known answer", "Be very broad in scope"))`
+
+### Your Project
+
+::: {.webex-check .webex-box}
+
+**Consider your group's research question. Is it:**
+
+**Specific enough?**
+`r mcq(c(answer = "Yes - it focuses on specific variables", "No - it needs to be narrowed down", "I'm not sure yet"))`
+
+**Testable?**
+`r mcq(c(answer = "Yes - the variables can be measured", "No - it's too abstract", "I'm not sure yet"))`
+
+**Relevant to existing literature?**
+`r mcq(c(answer = "Yes - related studies exist", "No - it's completely novel", "I'm not sure yet"))`
+:::
+
+True or False: A good research question should be answerable with a simple yes or no. `r torf(FALSE)`
+
+True or False: Your research question should be related to the DataLab data you collected. `r torf(TRUE)`
 
 ---
 
-## Part 2: Exercises
+## Activity 2: Finding Relevant Papers (20 min)
 
-TBC - Interactive exercises
+### Search Strategies
 
-```{webr-r}
-# Example code
+Finding good sources is a skill that improves with practice.
 
+**1. The best databases for finding psychology research are:**
 
-```
+`r mcq(c("Google", answer = "PsycINFO, Web of Science, or Google Scholar", "Wikipedia", "Social media"))`
+
+**2. What makes a source "peer-reviewed"?**
+
+`r mcq(c("It's available online", "It has many citations", answer = "Experts evaluated it before publication", "It's written by a professor"))`
+
+**3. Using specific search terms helps you find:**
+
+`r mcq(c("More results", answer = "More relevant results", "Newer articles", "Longer articles"))`
+
+### Search Term Strategies
+
+**4. If you're researching "memory and word type", which Boolean search would be MOST effective?**
+
+`r mcq(c("memory", "word type", answer = "memory AND (concrete OR abstract) AND words", "memory NOT word type"))`
+
+**5. Adding quotation marks around "working memory" will:**
+
+`r mcq(c("Exclude those words", answer = "Search for that exact phrase", "Find more results", "Search titles only"))`
+
+**6. When your search returns too many results, you should:**
+
+`r mcq(c("Give up", answer = "Add more specific search terms", "Remove all search terms", "Only read the first page"))`
+
+### Evaluating Sources
+
+**7. A paper from 2005 on your topic is:**
+
+`r mcq(c("Too old to be useful", answer = "Potentially useful - depends on whether newer evidence exists", "The best source to cite", "Only useful if highly cited"))`
+
+**8. The introduction section of a paper is useful for:**
+
+`r mcq(c("Finding statistical results", answer = "Understanding background and context", "Learning the methods used", "Finding sample sizes"))`
+
+True or False: Primary sources (original research articles) are preferred over secondary sources (textbooks). `r torf(TRUE)`
+
+True or False: The number of citations a paper has tells you if its findings are correct. `r torf(FALSE)`
 
 ---
 
-## Key Takeaways
+## Activity 3: Summarizing Key Findings (20 min)
+
+### Reading Strategically
+
+You don't need to read every word of every paper!
+
+**1. When first evaluating a paper, you should read:**
+
+`r mcq(c("The entire paper word-by-word", answer = "The abstract, introduction, and discussion first", "Only the results section", "Only the title"))`
+
+**2. The abstract tells you:**
+
+`r mcq(c("The detailed methodology", answer = "The main research question, methods, and key findings", "The theoretical framework in depth", "References to other papers"))`
+
+**3. For your literature review, the MOST important sections are usually:**
+
+`r mcq(c("Methods and Materials", answer = "Introduction and Discussion", "References and Acknowledgments", "Figures and Tables only"))`
+
+### Writing Effective Summaries
+
+**4. A good summary of a research finding should include:**
+
+`r mcq(c(answer = "Who did what, with whom, and what they found", "Every statistical value reported", "The researcher's personal opinions", "Direct quotes from the paper"))`
+
+**5. When summarizing, you should:**
+
+`r mcq(c("Copy sentences directly", answer = "Paraphrase in your own words", "Use as many direct quotes as possible", "Only mention positive findings"))`
+
+### Practice Summary
+
+Here's an example finding:
+
+> "Smith et al. (2022) conducted an experiment with 120 university students, finding that participants who memorised concrete words (M = 7.2, SD = 1.5) recalled significantly more words than those who memorised abstract words (M = 5.8, SD = 1.8), t(118) = 4.89, p < .001, d = 0.85."
+
+**6. This summary effectively includes:**
+
+`r mcq(c(answer = "The sample, comparison, and key statistics", "Only the p-value", "Just the research question", "Only qualitative information"))`
+
+**7. The effect size (d = 0.85) tells us:**
+
+`r mcq(c("The result is statistically significant", answer = "The effect is large by Cohen's guidelines", "The sample size is adequate", "The experiment was well designed"))`
+
+True or False: You should include every study you find in your literature review. `r torf(FALSE)`
+
+True or False: Summarizing means putting findings in your own words while maintaining accuracy. `r torf(TRUE)`
+
+---
+
+## Activity 4: Building Your Argument (20 min)
+
+### Structuring a Literature Review
+
+A literature review isn't just a list of summaries - it builds an argument!
+
+**1. A good literature review should:**
+
+`r mcq(c("List studies in alphabetical order", answer = "Organise studies thematically to support your research question", "Include only studies that agree with each other", "Focus on the oldest research first"))`
+
+**2. "Synthesising" literature means:**
+
+`r mcq(c("Summarizing each study separately", answer = "Connecting findings across studies to identify patterns", "Copying from multiple sources", "Only using recent papers"))`
+
+**3. When studies have conflicting findings, you should:**
+
+`r mcq(c("Ignore the conflicting studies", "Only cite studies that agree", answer = "Acknowledge the disagreement and discuss possible reasons", "Give up on the topic"))`
+
+### Creating a Coherent Narrative
+
+**4. A good opening sentence for a literature review paragraph is:**
+
+`r mcq(c("Smith (2020) found that...", answer = "Research has consistently shown that concrete words are easier to remember than abstract words (Smith, 2020; Jones, 2021).", "This paragraph will discuss memory research.", "Memory is interesting."))`
+
+**5. Transition words like "however", "similarly", and "in contrast" help to:**
+
+`r mcq(c("Make the writing longer", answer = "Show relationships between different findings", "Avoid plagiarism", "Sound more academic"))`
+
+**6. Your literature review should end by:**
+
+`r mcq(c("Summarizing every study mentioned", answer = "Identifying the gap your research will address", "Stating your results", "Listing your references"))`
+
+### Your Project
+
+::: {.webex-check .webex-box}
+
+**How does your research question connect to existing literature?**
+
+`r mcq(c(answer = "It fills a gap in current knowledge", "It repeats exactly what's been done before", "It has no connection to previous research", "I haven't thought about this yet"))`
+
+**How many sources do you plan to cite?**
+
+`r mcq(c("1-2", "3-4", answer = "5 or more", "As many as possible"))`
+
+**What is the main theme of your literature review?**
+
+`r mcq(c(answer = "It focuses on my research question and key variables", "It covers everything related to psychology", "It only mentions studies that support my hypothesis", "I don't have a main theme yet"))`
+:::
+
+True or False: A literature review should only include sources that support your hypothesis. `r torf(FALSE)`
+
+True or False: Your literature review should lead logically to your research question. `r torf(TRUE)`
+
+---
+
+## Group Discussion Points
+
+Work with your project group to discuss these questions:
+
+::: {.callout-note}
+## Discussion 1: Research Question
+Take turns stating your research question. Is it:
+- Specific enough?
+- Testable with the DataLab data?
+- Connected to existing literature?
+:::
+
+::: {.callout-note}
+## Discussion 2: Literature Search
+- What search terms have you tried?
+- Which databases are you using?
+- Have you found the most relevant papers?
+:::
+
+::: {.callout-note}
+## Discussion 3: Building Your Argument
+- What are the main themes in your literature?
+- Are there conflicting findings?
+- What gap does your research address?
+:::
+
+---
+
+## Summary
 
 ::: {.callout-important}
-## Summary
-1. TBC
-2. TBC
-3. TBC
+## Key Takeaways
+
+**Research Questions:**
+- Should be specific, testable, and relevant
+- Connected to existing literature
+- Answerable with your data
+
+**Finding Papers:**
+- Use academic databases (PsycINFO, Google Scholar)
+- Use Boolean operators and specific terms
+- Evaluate sources for quality and relevance
+
+**Summarizing:**
+- Read strategically (abstract, introduction, discussion)
+- Paraphrase in your own words
+- Include key details: who, what, with whom, findings
+
+**Building Arguments:**
+- Organise thematically, not chronologically
+- Synthesise across studies
+- Acknowledge conflicting findings
+- End with the gap your research fills
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 16 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 17
+1. Complete the [Week 16 Self-Assessment](self-assessment.qmd)
+2. Continue developing your literature review
+3. Meet with your group to finalise your research question
+4. Prepare for Week 17: Research Plan submissions

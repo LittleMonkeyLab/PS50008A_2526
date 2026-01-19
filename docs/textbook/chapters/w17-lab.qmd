@@ -1,20 +1,245 @@
 ---
-title: "Chapter 14: Scientific Credibility"
-subtitle: "Project Groups: Methodology"
+title: "Chapter 14: Project Groups - Research Methodology"
+subtitle: "Designing Your Study and Writing Methods"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Lab-specific reading material
+This reading prepares you for the second project group session, where you'll finalise your **research design** and begin writing your **methods section**. A well-designed study is the foundation of good research --- it determines what conclusions you can draw from your data.
 
-## Reading Guide
+::: {.callout-note}
+## What You'll Learn
+By the end of this lab, you'll be able to:
 
-### Key Points to Focus On
+- Articulate your study design (experimental vs correlational, between vs within)
+- Define your variables operationally
+- Describe your sample and sampling method
+- Begin drafting a clear, replicable methods section
+:::
 
-1. TBC
-2. TBC
-3. TBC
+## The Purpose of the Methods Section
+
+The methods section answers: **How did you do the study?**
+
+A good methods section is:
+
+- **Clear**: Anyone could understand what you did
+- **Complete**: All necessary details are included
+- **Replicable**: Someone else could repeat your study exactly
+
+::: {.callout-important}
+## Golden Rule
+Write your methods so that a researcher who knows nothing about your study could replicate it exactly. If they'd have to guess anything, add more detail.
+:::
+
+## Identifying Your Design
+
+### Experimental vs Correlational
+
+| Design | You... | Can claim... |
+|--------|--------|--------------|
+| **Experimental** | Manipulate an IV | Causation (if controlled) |
+| **Correlational** | Measure existing differences | Association only |
+
+**Question to ask**: Are you assigning participants to conditions, or measuring them as they naturally are?
+
+### Between-Subjects vs Within-Subjects
+
+| Design | Each participant... | Advantage | Disadvantage |
+|--------|---------------------|-----------|--------------|
+| **Between-subjects** | Experiences one condition | No carryover effects | Needs more participants |
+| **Within-subjects** | Experiences all conditions | More statistical power | Order effects possible |
+
+**Question to ask**: Will each person be in one group or multiple groups?
+
+## Defining Your Variables
+
+### Independent Variable (IV)
+
+The variable you manipulate or use to categorise participants.
+
+**Operational definition needed**: How exactly are groups distinguished?
+
+Example:
+> **Conceptual**: Social media use
+> **Operational**: Self-reported daily social media use, categorised as "low" (< 1 hour), "moderate" (1-3 hours), or "high" (> 3 hours)
+
+### Dependent Variable (DV)
+
+The outcome you measure.
+
+**Operational definition needed**: How exactly is it measured?
+
+Example:
+> **Conceptual**: Sleep quality
+> **Operational**: Score on the Pittsburgh Sleep Quality Index (PSQI), where higher scores indicate poorer sleep quality (range 0-21)
+
+::: {.callout-tip}
+## Why Operational Definitions Matter
+"Social media use" could mean many things --- time spent, number of posts, types of platforms. Without an operational definition, your study isn't replicable, and readers can't evaluate whether your measure is valid.
+:::
+
+## Writing the Methods Section
+
+The methods section typically has four subsections:
+
+### 1. Participants
+
+Describe who took part:
+
+- **Sample size**: How many participants? (Include how you determined this)
+- **Demographics**: Age, gender, other relevant characteristics
+- **Recruitment**: How were they recruited? (convenience sample, random sample, etc.)
+- **Inclusion/exclusion criteria**: Who was eligible? Who was excluded and why?
+
+Example:
+> Participants were 60 undergraduate psychology students (45 female, 14 male, 1 non-binary; M_age = 19.2, SD = 1.3) recruited through the department participant pool. Participants received course credit for participation. Inclusion criteria required participants to be aged 18-25 and to own a smartphone.
+
+### 2. Design
+
+State your design clearly:
+
+- Type of design (experimental/correlational, between/within)
+- Independent variable(s) and levels
+- Dependent variable(s)
+
+Example:
+> This study used a between-subjects experimental design with one independent variable (social media condition: restricted vs. unrestricted) and one dependent variable (sleep quality as measured by PSQI score).
+
+### 3. Materials
+
+Describe all materials and measures:
+
+- **Questionnaires**: Name, what they measure, number of items, example items, reliability
+- **Stimuli**: What participants saw/heard, how created
+- **Equipment**: Any technology used
+
+Example:
+> Sleep quality was measured using the Pittsburgh Sleep Quality Index (PSQI; Buysse et al., 1989), a 19-item self-report questionnaire. The PSQI assesses sleep quality over the past month across seven domains (e.g., "During the past month, how would you rate your sleep quality overall?"). Scores range from 0-21, with higher scores indicating poorer sleep quality. The PSQI has good internal consistency (Cronbach's alpha = .83).
+
+### 4. Procedure
+
+Describe what happened step-by-step:
+
+- What did participants do, in what order?
+- How long did each part take?
+- What instructions were given?
+- Any standardisation procedures?
+
+Example:
+> Participants attended a single 30-minute session. After providing informed consent, participants completed a demographics questionnaire and the baseline PSQI. Participants in the restricted condition were then asked to limit their social media use to 30 minutes per day for one week, tracked using the Screen Time app. Participants in the unrestricted condition received no instructions about their social media use. After one week, all participants returned to complete the PSQI again and were debriefed.
+
+## Common Methodological Issues
+
+### Confounding Variables
+
+A **confound** is an uncontrolled variable that varies systematically with your IV.
+
+Example: If your "high social media" group happens to also be younger, you can't tell if effects are due to social media or age.
+
+**Solutions**:
+
+- Random assignment (in experiments)
+- Measuring and controlling for confounds statistically
+- Matching groups on key variables
+
+### Demand Characteristics
+
+Participants might guess your hypothesis and change their behaviour.
+
+**Solutions**:
+
+- Don't reveal the hypothesis until debriefing
+- Use cover stories when appropriate
+- Include attention checks
+
+### Order Effects
+
+In within-subjects designs, doing one condition first might affect performance in the next.
+
+**Solutions**:
+
+- Counterbalancing (half do A-then-B, half do B-then-A)
+- Randomising order for each participant
+
+## Common Errors and How to Avoid Them
+
+### Being too vague
+
+**Problem**: "Participants completed a questionnaire about their feelings."
+
+**Solution**: "Participants completed the Positive and Negative Affect Schedule (PANAS; Watson et al., 1988), a 20-item questionnaire measuring positive affect (10 items, e.g., 'enthusiastic') and negative affect (10 items, e.g., 'distressed') on a 5-point scale."
+
+### Missing procedural details
+
+**Problem**: Leaving out timing, order, or instructions.
+
+**Solution**: Walk through your procedure mentally. What would someone need to know to do exactly what you did?
+
+### Confusing the reader
+
+**Problem**: Jumping between design elements without structure.
+
+**Solution**: Use the standard subheadings (Participants, Design, Materials, Procedure). Be systematic.
+
+### Not justifying sample size
+
+**Problem**: "We recruited 40 participants."
+
+**Solution**: "We recruited 40 participants (20 per condition). A power analysis (G*Power; Faul et al., 2007) indicated that this sample size would provide 80% power to detect a medium effect (d = 0.5) with alpha = .05."
+
+## Preparation Checklist
+
+Before arriving at the lab:
+
+::: {.callout-warning}
+## Before You Arrive
+
+- [ ] Have your research question and hypothesis finalised
+- [ ] Know your design (experimental/correlational, between/within)
+- [ ] Have operational definitions for your IV and DV
+- [ ] Research any standardised measures you plan to use
+- [ ] Think through your procedure step-by-step
+:::
+
+### Questions to Discuss with Your Group
+
+- What is our exact design?
+- How will we operationalise our variables?
+- What materials/measures do we need?
+- What's our procedure from start to finish?
+- What could go wrong and how do we prevent it?
+
+### What to Bring
+
+- Your literature review notes (methods of similar studies)
+- Draft operational definitions
+- Any questionnaires or measures you're considering
+- Questions about design choices
+
+## Summary
+
+| Section | What to Include |
+|---------|-----------------|
+| **Participants** | N, demographics, recruitment, inclusion/exclusion criteria |
+| **Design** | Type, IV(s) and levels, DV(s) |
+| **Materials** | All measures described in detail with reliability |
+| **Procedure** | Step-by-step what happened, in order |
+
+## Methods Section Checklist
+
+Use this to review your draft:
+
+- [ ] Could someone replicate my study from this description?
+- [ ] Is my design clearly stated (type, variables)?
+- [ ] Are all variables operationally defined?
+- [ ] Are all measures described with citations?
+- [ ] Is the procedure in chronological order?
+- [ ] Have I addressed potential confounds?
+- [ ] Is my sample size justified?
 
 ## Additional Resources
 
-- TBC
+- [APA Style: Method Section](https://apastyle.apa.org/instructional-aids/method-section-guide.pdf) --- Official guidance
+- [Writing the Methods Section](https://www.scribbr.com/research-paper/methods-section/) --- Practical tips
+- [G*Power Software](https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower) --- For power analysis

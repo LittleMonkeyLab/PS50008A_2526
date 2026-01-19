@@ -1,17 +1,6 @@
 ---
 title: "Week 14 Lab Reading"
-subtitle: "Plotting Data with R"
-author: "Gordon Wright"
-date: "2026-02-04"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "t-tests in R"
 ---
 
 {{< include ../../textbook/chapters/w14-lab.qmd >}}

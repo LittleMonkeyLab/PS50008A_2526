@@ -1,70 +1,383 @@
 ---
-title: "Probabilities & Distributions"
-subtitle: "PS50008A Week 14 Lecture"
+title: "Inference & t-tests"
+subtitle: "PS50008A Week 14 | Lecture"
 author: "Gordon Wright"
-date: "2026-02-02"
+date: "2026-02-04"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w14-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-02"
-  labels: ['statistics', 'probability']
-  depends_on:
-    - rm0-w14-index
-  blocks:
-    - rm0-w14-lab-slides
-    - rm0-w14-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-02-02"
+    center-title-slide: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Learning Objectives
+## Learning Outcomes
 
-By the end of this lecture, you will be able to:
+By the end of this lecture you will be able to:
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+- Explain the logic of null hypothesis significance testing
+- Interpret p-values correctly
+- Distinguish between independent and paired t-tests
+- Choose the appropriate t-test for different research designs
+
+# The Logic of Hypothesis Testing {background-color="#275882"}
+
+## The Fundamental Question
+
+<!-- TODO: Introduce the core problem -->
+
+::: {.fragment}
+When we observe a difference in our data...
+
+**Is it a real effect, or just random chance?**
 :::
 
----
+## Null Hypothesis Significance Testing (NHST)
 
-## Overview
+<!-- TODO: Define NHST framework -->
 
-TBC - Lecture content to be developed
-
----
-
-## Summary
-
-::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+::: {.definition-box}
+**NHST**: A statistical framework that tests whether observed data are consistent with a null hypothesis of "no effect" or "no difference".
 :::
 
----
+## The Two Hypotheses
+
+<!-- TODO: Explain H0 and H1 -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Null Hypothesis (H0)**
+
+- Assumes no effect/difference
+- The "skeptic's position"
+- What we try to reject
+
+*Example: "There is no difference in memory scores between groups."*
+:::
+
+::: {.column width="50%"}
+**Alternative Hypothesis (H1)**
+
+- Assumes there IS an effect
+- The researcher's prediction
+- What we hope to support
+
+*Example: "Memory scores differ between groups."*
+:::
+
+::::
+
+## The Logic: Proof by Contradiction
+
+<!-- TODO: Explain the reasoning -->
+
+::: {.incremental}
+1. Assume the null hypothesis is true
+2. Calculate how likely our data would be under H0
+3. If our data would be very unlikely under H0...
+4. We reject H0 and accept H1
+:::
+
+::: {.fragment}
+::: {.example-box}
+Like a court trial: We assume innocence (H0) until evidence (data) proves guilt beyond reasonable doubt.
+:::
+:::
+
+## The Sampling Distribution
+
+<!-- TODO: Introduce sampling distributions -->
+
+::: {.definition-box}
+**Sampling Distribution**: The distribution of a statistic (e.g., the mean) across all possible samples of a given size from a population.
+:::
+
+::: {.fragment}
+<!-- TODO: Add visualisation -->
+:::
+
+# p-values and Significance {background-color="#275882"}
+
+## What is a p-value?
+
+<!-- TODO: Define p-value properly -->
+
+::: {.definition-box}
+**p-value**: The probability of obtaining results at least as extreme as those observed, assuming the null hypothesis is true.
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+## NOT what a p-value means
+- The probability that H0 is true
+- The probability the results occurred by chance
+- The probability of replication
+:::
+:::
+
+## Interpreting p-values
+
+<!-- TODO: Add interpretation guide -->
+
+::: {.example-box}
+**p = 0.03 means:**
+
+"If there truly were no effect, we would observe results this extreme or more extreme only 3% of the time."
+:::
+
+## The Significance Threshold (alpha)
+
+<!-- TODO: Discuss alpha level -->
+
+::: {.definition-box}
+**Alpha (alpha)**: The predetermined threshold for rejecting H0. Conventionally set at 0.05.
+:::
+
+::: {.fragment}
+| p-value | Decision |
+|---------|----------|
+| p < .05 | Reject H0 ("significant") |
+| p >= .05 | Fail to reject H0 ("not significant") |
+:::
+
+## Problems with p-values
+
+<!-- TODO: Discuss limitations -->
+
+::: {.incremental}
+- Arbitrary threshold (why .05?)
+- Dichotomous thinking (significant vs not)
+- Affected by sample size
+- Often misinterpreted
+- Does not indicate effect size
+:::
+
+## Types of Errors
+
+<!-- TODO: Add Type I and Type II errors -->
+
+|  | H0 True | H0 False |
+|--|---------|----------|
+| **Reject H0** | Type I Error (false positive) | Correct! |
+| **Fail to reject H0** | Correct! | Type II Error (false negative) |
+
+::: {.fragment}
+- **Type I error rate** = alpha (usually .05)
+- **Type II error rate** = beta (related to power)
+:::
+
+# Independent t-tests (Between-Subjects) {background-color="#275882"}
+
+## When to Use Independent t-tests
+
+<!-- TODO: Define use cases -->
+
+::: {.definition-box}
+**Independent samples t-test**: Compares means from two separate, unrelated groups.
+:::
+
+::: {.fragment}
+**Use when:**
+
+- Two different groups of participants
+- Each participant is in only one condition
+- Comparing a continuous outcome variable
+:::
+
+## The Between-Subjects Design
+
+<!-- TODO: Add design illustration -->
+
+::: {.example-box}
+**Example:** Does caffeine affect reaction time?
+
+- Group 1: 30 participants receive caffeine
+- Group 2: 30 different participants receive placebo
+- DV: Reaction time (ms)
+:::
+
+## The t-statistic Formula
+
+<!-- TODO: Add formula explanation -->
+
+$$t = \frac{\bar{X}_1 - \bar{X}_2}{SE_{difference}}$$
+
+::: {.fragment}
+Where $SE_{difference}$ accounts for variability in both groups.
+:::
+
+## Assumptions of Independent t-test
+
+<!-- TODO: List assumptions -->
+
+::: {.incremental}
+- Independence of observations
+- Continuous dependent variable
+- Normal distribution (or large n)
+- Homogeneity of variance (Levene's test)
+:::
+
+## Example: Independent t-test
+
+<!-- TODO: Add worked example -->
+
+```{r}
+#| eval: false
+# TODO: Add R code for independent t-test
+```
+
+::: {.exercise-box}
+**Research question:** Do students who study with music perform differently on exams than those who study in silence?
+:::
+
+# Paired t-tests (Within-Subjects) {background-color="#275882"}
+
+## When to Use Paired t-tests
+
+<!-- TODO: Define paired t-tests -->
+
+::: {.definition-box}
+**Paired samples t-test**: Compares means from two related measurements (same participants measured twice, or matched pairs).
+:::
+
+::: {.fragment}
+**Use when:**
+
+- Same participants in both conditions
+- Pre-test/post-test designs
+- Matched pairs of participants
+:::
+
+## The Within-Subjects Design
+
+<!-- TODO: Add design illustration -->
+
+::: {.example-box}
+**Example:** Does a relaxation technique reduce anxiety?
+
+- Same 30 participants
+- Measure 1: Anxiety before technique
+- Measure 2: Anxiety after technique
+- Compare within each person
+:::
+
+## Why Paired Tests are More Powerful
+
+<!-- TODO: Explain power advantage -->
+
+::: {.incremental}
+- Controls for individual differences
+- Each person serves as their own control
+- Reduces error variance
+- Often needs fewer participants
+:::
+
+## The Paired t-test Formula
+
+<!-- TODO: Add formula -->
+
+$$t = \frac{\bar{D}}{SE_{\bar{D}}}$$
+
+::: {.fragment}
+Where $\bar{D}$ is the mean of the difference scores, and $SE_{\bar{D}}$ is the standard error of those differences.
+:::
+
+## Assumptions of Paired t-test
+
+<!-- TODO: List assumptions -->
+
+::: {.incremental}
+- Pairs are independent of each other
+- Differences are continuous
+- Differences are normally distributed (or large n)
+:::
+
+## Example: Paired t-test
+
+<!-- TODO: Add worked example -->
+
+```{r}
+#| eval: false
+# TODO: Add R code for paired t-test
+```
+
+::: {.exercise-box}
+**Research question:** Do participants' mood ratings improve after watching a comedy video?
+:::
+
+# Choosing the Right Test {background-color="#275882"}
+
+## Decision Flowchart
+
+<!-- TODO: Add decision guide -->
+
+::: {.incremental}
+1. **How many groups/conditions?** (2 for t-tests)
+2. **Same or different participants?**
+   - Different groups -> Independent t-test
+   - Same participants -> Paired t-test
+3. **Check assumptions**
+4. **Report results properly**
+:::
+
+## Reporting t-test Results
+
+<!-- TODO: Add APA format guidance -->
+
+::: {.example-box}
+**APA format:**
+
+"An independent samples t-test revealed a significant difference in reaction times between the caffeine group (M = 245, SD = 32) and placebo group (M = 278, SD = 41), t(58) = 3.52, p = .001, d = 0.91."
+:::
+
+## What to Report
+
+<!-- TODO: List components -->
+
+::: {.incremental}
+- Descriptive statistics (M, SD) for each group
+- t-value and degrees of freedom: t(df)
+- p-value (exact, unless p < .001)
+- Effect size (Cohen's d)
+- Confidence interval (optional but recommended)
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.incremental}
+- **NHST** tests whether data are consistent with "no effect"
+- **p-values** indicate probability of data given H0 is true
+- **Independent t-tests** compare two separate groups
+- **Paired t-tests** compare two measurements from the same participants
+- Always report **effect sizes** alongside p-values
+:::
 
 ## Next Week
 
-TBC - Preview of next week's content
+<!-- TODO: Update with next week's topic -->
+
+**Week 15: Correlation**
+
+- Relationships between variables
+- Visualising with scatterplots
+- Pearson's r and Spearman's rho
+- Why correlation does not imply causation
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+See you in the lab!

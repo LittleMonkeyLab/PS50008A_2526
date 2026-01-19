@@ -1,17 +1,6 @@
 ---
 title: "Week 16 Lab Reading"
-subtitle: "Project Groups: Literature Review"
-author: "Gordon Wright"
-date: "2026-02-25"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Project Groups - Literature Review"
 ---
 
 {{< include ../../textbook/chapters/w16-lab.qmd >}}

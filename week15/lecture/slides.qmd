@@ -1,70 +1,406 @@
 ---
-title: "Significance Testing & Research Plan Briefing"
-subtitle: "PS50008A Week 15 Lecture"
+title: "Correlation"
+subtitle: "PS50008A Week 15 | Lecture"
 author: "Gordon Wright"
-date: "2026-02-09"
+date: "2026-02-11"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w15-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-09"
-  labels: ['statistics', 't-test']
-  depends_on:
-    - rm0-w15-index
-  blocks:
-    - rm0-w15-lab-slides
-    - rm0-w15-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-02-09"
+    center-title-slide: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Learning Objectives
+## Learning Outcomes
 
-By the end of this lecture, you will be able to:
+By the end of this lecture you will be able to:
+
+- Describe relationships between continuous variables
+- Create and interpret scatterplots
+- Calculate and interpret Pearson's r and Spearman's rho
+- Explain why correlation does not imply causation
+
+# Relationships Between Variables {background-color="#275882"}
+
+## Beyond Group Differences
+
+<!-- TODO: Introduce correlational thinking -->
 
 ::: {.incremental}
-- TBC
-- TBC
-- TBC
+- So far: comparing groups (t-tests)
+- Now: examining relationships between variables
+- Both variables are measured, not manipulated
 :::
 
----
+::: {.fragment}
+::: {.example-box}
+**Question:** Is there a relationship between study hours and exam scores?
+:::
+:::
 
-## Overview
+## What is Correlation?
 
-TBC - Lecture content to be developed
+<!-- TODO: Define correlation -->
 
----
+::: {.definition-box}
+**Correlation**: A statistical measure that quantifies the strength and direction of the linear relationship between two continuous variables.
+:::
 
-## Summary
+## Direction of Relationships
+
+<!-- TODO: Explain positive vs negative -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Positive Correlation**
+
+- As X increases, Y increases
+- Variables move together
+- Upward slope
+
+*Example: Height and weight*
+:::
+
+::: {.column width="50%"}
+**Negative Correlation**
+
+- As X increases, Y decreases
+- Variables move opposite
+- Downward slope
+
+*Example: Stress and sleep quality*
+:::
+
+::::
+
+## Strength of Relationships
+
+<!-- TODO: Explain strength -->
 
 ::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- **Perfect**: All points on a line (r = +/- 1.0)
+- **Strong**: Points cluster tightly around line
+- **Weak**: Points scattered loosely
+- **Zero**: No linear pattern (r = 0)
 :::
 
----
+## Types of Relationships
+
+<!-- TODO: Add visual examples -->
+
+::: {.example-box}
+**Linear vs Non-linear:**
+
+Correlation measures LINEAR relationships only. A strong curved relationship might show r near 0!
+:::
+
+::: {.fragment}
+<!-- TODO: Add plot showing linear, curvilinear, and no relationship -->
+:::
+
+# Scatterplots {background-color="#275882"}
+
+## Visualising Relationships
+
+<!-- TODO: Introduce scatterplots -->
+
+::: {.definition-box}
+**Scatterplot**: A graph displaying the relationship between two continuous variables, with each observation represented as a point.
+:::
+
+::: {.fragment}
+- X-axis: One variable (often predictor)
+- Y-axis: Other variable (often outcome)
+- Each point: One observation
+:::
+
+## Creating Good Scatterplots
+
+<!-- TODO: Best practices -->
+
+::: {.incremental}
+- Label axes clearly (with units)
+- Use appropriate scales
+- Include a trend line (with caution)
+- Look for patterns, outliers, clusters
+:::
+
+## Example Scatterplots
+
+<!-- TODO: Add example plots -->
+
+```{r}
+#| eval: false
+# TODO: Add R code creating scatterplots showing
+# positive, negative, strong, weak correlations
+```
+
+## What to Look For
+
+<!-- TODO: Pattern recognition guide -->
+
+::: {.example-box}
+**When examining a scatterplot, ask:**
+
+1. Is there a relationship? (or random scatter?)
+2. What direction? (positive/negative)
+3. How strong? (tight/loose clustering)
+4. Is it linear? (or curved?)
+5. Any outliers? (unusual points)
+:::
+
+## The Impact of Outliers
+
+<!-- TODO: Discuss outlier effects -->
+
+::: {.callout-warning}
+## Warning
+A single outlier can dramatically change a correlation coefficient. Always visualise your data first!
+:::
+
+::: {.fragment}
+<!-- TODO: Add plot showing outlier impact -->
+:::
+
+# Pearson's r and Spearman's rho {background-color="#275882"}
+
+## Pearson's Correlation Coefficient
+
+<!-- TODO: Define Pearson's r -->
+
+::: {.definition-box}
+**Pearson's r**: A measure of the linear relationship between two continuous variables. Ranges from -1 to +1.
+:::
+
+$$r = \frac{\sum(X - \bar{X})(Y - \bar{Y})}{(n-1)s_X s_Y}$$
+
+## Interpreting Pearson's r
+
+<!-- TODO: Add interpretation guide -->
+
+| r value | Interpretation |
+|---------|----------------|
+| +/- 1.0 | Perfect correlation |
+| +/- 0.7 to 0.9 | Strong |
+| +/- 0.4 to 0.6 | Moderate |
+| +/- 0.1 to 0.3 | Weak |
+| 0 | No linear relationship |
+
+::: {.fragment}
+::: {.callout-note}
+These are rough guidelines. Context and field norms matter!
+:::
+:::
+
+## Coefficient of Determination (r^2)
+
+<!-- TODO: Explain r-squared -->
+
+::: {.definition-box}
+**r^2 (r-squared)**: The proportion of variance in Y that is explained by X. Found by squaring r.
+:::
+
+::: {.fragment}
+::: {.example-box}
+If r = 0.6, then r^2 = 0.36
+
+"36% of the variance in exam scores is explained by study hours."
+:::
+:::
+
+## Assumptions of Pearson's r
+
+<!-- TODO: List assumptions -->
+
+::: {.incremental}
+- Both variables are continuous
+- Linear relationship (check scatterplot!)
+- Bivariate normality (roughly)
+- No extreme outliers
+- Independence of observations
+:::
+
+## When Pearson's r Fails
+
+<!-- TODO: Introduce need for alternatives -->
+
+::: {.callout-warning}
+Pearson's r is inappropriate when:
+
+- Data are ordinal (ranked)
+- Relationship is non-linear
+- There are extreme outliers
+- Data are severely non-normal
+:::
+
+## Spearman's Rho (rho)
+
+<!-- TODO: Define Spearman's rho -->
+
+::: {.definition-box}
+**Spearman's rho**: A non-parametric correlation based on ranks rather than raw values. More robust to outliers and non-linearity.
+:::
+
+::: {.fragment}
+- Converts data to ranks
+- Then calculates Pearson's r on ranks
+- Ranges from -1 to +1 (same interpretation)
+:::
+
+## Pearson vs Spearman
+
+<!-- TODO: Comparison table -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Use Pearson's r when:**
+
+- Both variables continuous
+- Linear relationship
+- Roughly normal data
+- No major outliers
+:::
+
+::: {.column width="50%"}
+**Use Spearman's rho when:**
+
+- Ordinal data
+- Non-linear but monotonic
+- Non-normal data
+- Outliers present
+:::
+
+::::
+
+## Testing Significance
+
+<!-- TODO: Add significance testing -->
+
+::: {.example-box}
+**Null hypothesis:** r = 0 (no correlation in population)
+
+**Test:** Is our observed r significantly different from 0?
+
+**Report:** r(df) = value, p = value
+:::
+
+# Correlation Does Not Equal Causation {background-color="#275882"}
+
+## The Third Variable Problem
+
+<!-- TODO: Explain confounds -->
+
+::: {.definition-box}
+**Third Variable (Confound)**: An unmeasured variable that causes both X and Y, creating a spurious correlation between them.
+:::
+
+::: {.fragment}
+::: {.example-box}
+**Ice cream sales and drowning deaths are correlated.**
+
+Third variable: Hot weather causes both!
+:::
+:::
+
+## Directionality Problem
+
+<!-- TODO: Explain directionality -->
+
+::: {.incremental}
+- Correlation shows X and Y are related
+- But which causes which?
+- X -> Y?
+- Y -> X?
+- Or both directions?
+:::
+
+::: {.fragment}
+::: {.example-box}
+**Depression and social isolation are correlated.**
+
+Does depression cause isolation, or isolation cause depression, or both?
+:::
+:::
+
+## Famous Spurious Correlations
+
+<!-- TODO: Add entertaining examples -->
+
+::: {.example-box}
+**Real correlations that aren't causal:**
+
+- Number of pirates and global temperature (r = -0.9)
+- Nicolas Cage films and pool drownings (r = 0.87)
+- Cheese consumption and death by bedsheet (r = 0.95)
+:::
+
+::: {.fragment}
+[tylervigen.com/spurious-correlations](https://tylervigen.com/spurious-correlations)
+:::
+
+## When CAN We Infer Causation?
+
+<!-- TODO: Discuss causal inference criteria -->
+
+::: {.incremental}
+- **Temporal precedence**: Cause before effect
+- **Covariation**: They vary together
+- **Elimination of alternatives**: No confounds
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+Experimental designs (with random assignment) can establish causation. Correlational designs cannot.
+:::
+:::
+
+## Reporting Correlations
+
+<!-- TODO: APA format guide -->
+
+::: {.example-box}
+**APA format:**
+
+"There was a strong positive correlation between study hours and exam scores, r(48) = .72, p < .001. Study time explained 52% of the variance in exam performance."
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.incremental}
+- **Correlation** measures strength and direction of linear relationships
+- **Scatterplots** visualise relationships - always look first!
+- **Pearson's r** for continuous, linear, normal data
+- **Spearman's rho** for ordinal, non-linear, or non-normal data
+- **Correlation NEVER proves causation** (third variables, directionality)
+:::
 
 ## Next Week
 
-TBC - Preview of next week's content
+<!-- TODO: Update with next week's topic -->
+
+**Week 16: Regression**
+
+- From correlation to prediction
+- Line of best fit
+- R^2 and explained variance
+- Making predictions from data
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+See you in the lab!

@@ -1,17 +1,6 @@
 ---
 title: "Week 20 Lecture Reading"
-subtitle: "MCQ Feedback + Lab Report Briefing"
-author: "Gordon Wright"
-date: "2026-03-23"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Wrapping Up"
 ---
 
 {{< include ../../textbook/chapters/w20-lecture.qmd >}}

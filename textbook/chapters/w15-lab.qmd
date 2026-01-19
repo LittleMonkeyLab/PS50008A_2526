@@ -1,20 +1,384 @@
 ---
 title: "Chapter 10: Correlation in R"
-subtitle: "Running T-Tests with R"
+subtitle: "Measuring Relationships Between Variables"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Lab-specific reading material
+This reading prepares you for the lab session where you'll analyse **correlations** in R. Correlation is fundamental to psychology research --- it tells us whether two variables are related and how strongly. You'll learn to compute correlation coefficients, test their significance, and create informative scatterplots.
 
-## Reading Guide
+::: {.callout-note}
+## What You'll Learn
+By the end of this lab, you'll be able to:
 
-### Key Points to Focus On
+- Calculate correlation coefficients using `cor()` and `cor.test()`
+- Interpret correlation strength, direction, and significance
+- Create scatterplots with ggplot2 to visualise relationships
+- Understand the difference between correlation and causation
+:::
 
-1. TBC
-2. TBC
-3. TBC
+## What Is Correlation?
+
+**Correlation** measures the strength and direction of the linear relationship between two continuous variables.
+
+- **Strength**: How tightly the data points cluster around a line (from weak to strong)
+- **Direction**: Whether variables increase together (positive) or one increases as the other decreases (negative)
+
+### Correlation Coefficient (r)
+
+The correlation coefficient **r** ranges from -1 to +1:
+
+| Value | Interpretation |
+|-------|----------------|
+| r = +1 | Perfect positive relationship |
+| r = +0.7 | Strong positive relationship |
+| r = +0.3 | Weak positive relationship |
+| r = 0 | No linear relationship |
+| r = -0.3 | Weak negative relationship |
+| r = -0.7 | Strong negative relationship |
+| r = -1 | Perfect negative relationship |
+
+::: {.callout-important}
+## Direction vs Strength
+The **sign** tells you direction; the **absolute value** tells you strength. r = -0.8 is a stronger relationship than r = +0.3.
+:::
+
+## Computing Correlations in R
+
+### The `cor()` Function
+
+For a quick correlation coefficient:
+
+```r
+# Correlation between two variables
+cor(datalab$reaction_time, datalab$time_estimate)
+```
+
+This returns just the correlation coefficient (e.g., 0.42).
+
+### The `cor.test()` Function
+
+For a complete analysis including significance testing:
+
+```r
+# Full correlation test
+cor.test(datalab$reaction_time, datalab$time_estimate)
+```
+
+### Understanding `cor.test()` Output
+
+```
+	Pearson's product-moment correlation
+
+data:  datalab$reaction_time and datalab$time_estimate
+t = 3.12, df = 48, p-value = 0.003
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.15  0.63
+sample estimates:
+      cor
+0.42
+```
+
+| Output | Meaning |
+|--------|---------|
+| `t = 3.12` | The t-statistic for testing if r differs from 0 |
+| `df = 48` | Degrees of freedom (n - 2) |
+| `p-value = 0.003` | Probability of this r (or stronger) if true r = 0 |
+| `95 percent confidence interval` | Plausible range for the true correlation |
+| `cor = 0.42` | The sample correlation coefficient |
+
+::: {.callout-tip}
+## Interpreting the CI
+A 95% CI of [0.15, 0.63] means we're fairly confident the true population correlation is somewhere in this range. Since it doesn't include 0, the correlation is statistically significant.
+:::
+
+## Correlation Matrix
+
+When you have multiple variables, you can compute all pairwise correlations at once:
+
+```r
+# Select numeric columns
+numeric_vars <- datalab[, c("reaction_time", "time_estimate", "mood_pre", "mood_post")]
+
+# Correlation matrix
+cor(numeric_vars)
+```
+
+This produces a matrix showing all correlations:
+
+```
+               reaction_time time_estimate mood_pre mood_post
+reaction_time           1.00          0.42     0.15     0.18
+time_estimate           0.42          1.00     0.08     0.12
+mood_pre                0.15          0.08     1.00     0.65
+mood_post               0.18          0.12     0.65     1.00
+```
+
+### Handling Missing Values
+
+If your data has missing values, add `use = "complete.obs"`:
+
+```r
+cor(numeric_vars, use = "complete.obs")
+```
+
+## Visualising Correlations with ggplot2
+
+### Basic Scatterplot
+
+```r
+library(ggplot2)
+
+ggplot(datalab, aes(x = reaction_time, y = time_estimate)) +
+  geom_point()
+```
+
+### Adding a Trend Line
+
+```r
+ggplot(datalab, aes(x = reaction_time, y = time_estimate)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE)
+```
+
+- `method = "lm"` adds a linear regression line
+- `se = TRUE` shows the confidence band around the line
+
+### Improved Scatterplot
+
+```r
+ggplot(datalab, aes(x = reaction_time, y = time_estimate)) +
+  geom_point(alpha = 0.6, size = 3) +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  labs(
+    x = "Reaction Time (ms)",
+    y = "Time Estimate (seconds)",
+    title = "Relationship Between Reaction Time and Time Perception"
+  ) +
+  theme_minimal()
+```
+
+### Scatterplot with Groups
+
+To show different groups with different colours:
+
+```r
+ggplot(datalab, aes(x = reaction_time, y = time_estimate, color = room)) +
+  geom_point(alpha = 0.6, size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    x = "Reaction Time (ms)",
+    y = "Time Estimate (seconds)",
+    color = "Room"
+  ) +
+  theme_minimal()
+```
+
+## Types of Correlation
+
+### Pearson's r (default)
+
+Assumes:
+
+- Both variables are continuous
+- Relationship is linear
+- Data are approximately normally distributed
+
+```r
+cor.test(x, y, method = "pearson")  # default
+```
+
+### Spearman's rho
+
+Use when:
+
+- Data are ordinal (ranked)
+- Relationship is monotonic but not linear
+- Data have outliers or are skewed
+
+```r
+cor.test(x, y, method = "spearman")
+```
+
+### Kendall's tau
+
+More robust alternative to Spearman's, good for small samples:
+
+```r
+cor.test(x, y, method = "kendall")
+```
+
+## Key Functions Reference
+
+| Function | Purpose | Example |
+|----------|---------|---------|
+| `cor()` | Quick correlation coefficient | `cor(x, y)` |
+| `cor.test()` | Full test with p-value and CI | `cor.test(x, y)` |
+| `cor(matrix)` | Correlation matrix | `cor(data[, vars])` |
+| `geom_point()` | Add points to ggplot | `+ geom_point()` |
+| `geom_smooth()` | Add trend line | `+ geom_smooth(method = "lm")` |
+
+### Useful ggplot2 Arguments
+
+| Argument | Purpose | Example |
+|----------|---------|---------|
+| `alpha` | Point transparency | `geom_point(alpha = 0.5)` |
+| `size` | Point size | `geom_point(size = 3)` |
+| `color` | Point/line colour | `geom_point(color = "blue")` |
+| `se` | Show confidence band | `geom_smooth(se = TRUE)` |
+| `method` | Smoothing method | `geom_smooth(method = "lm")` |
+
+## Common Errors and How to Fix Them
+
+### Error: 'x' and 'y' must have the same length
+
+```r
+# Wrong: different lengths
+cor(datalab$reaction_time[1:40], datalab$time_estimate)
+```
+
+**Fix**: Ensure both variables have the same number of observations. This usually happens with missing values:
+
+```r
+# Create complete cases
+complete_data <- datalab[complete.cases(datalab$reaction_time, datalab$time_estimate), ]
+cor(complete_data$reaction_time, complete_data$time_estimate)
+```
+
+### Error: 'x' must be numeric
+
+**Fix**: Convert to numeric if needed:
+
+```r
+# Check variable type
+class(datalab$reaction_time)
+
+# Convert if needed
+datalab$reaction_time <- as.numeric(datalab$reaction_time)
+```
+
+### Warning: Cannot compute exact p-value with ties
+
+This happens with Spearman's correlation when there are tied ranks.
+
+**Fix**: This is usually fine --- R provides an approximation. For small samples, consider Kendall's tau instead.
+
+### The scatterplot looks empty
+
+**Fix**: Check for issues with your data:
+
+```r
+# Check for NAs
+sum(is.na(datalab$reaction_time))
+
+# Check for extreme values
+summary(datalab$reaction_time)
+```
+
+### Points are overplotting (too many on top of each other)
+
+**Fix**: Use transparency or jitter:
+
+```r
+# Transparency
+geom_point(alpha = 0.3)
+
+# Or jitter (adds small random noise)
+geom_jitter(width = 0.5, height = 0.5)
+```
+
+## Correlation is NOT Causation
+
+::: {.callout-warning}
+## Critical Point
+A correlation between X and Y does NOT mean X causes Y (or Y causes X). There are several possibilities:
+
+1. X causes Y
+2. Y causes X
+3. A third variable (Z) causes both
+4. The relationship is coincidental
+
+Only controlled experiments can establish causation.
+:::
+
+### Classic Example
+
+There's a strong correlation between ice cream sales and drowning deaths. Does ice cream cause drowning? No --- a third variable (hot weather) increases both ice cream consumption and swimming.
+
+## Reporting Correlations (APA Style)
+
+> Reaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].
+
+Elements to include:
+
+- The variables being correlated
+- Direction (positive/negative)
+- Degrees of freedom in parentheses
+- The r value
+- The p-value
+- The 95% CI
+
+## Preparation Checklist
+
+Before arriving at the lab:
+
+::: {.callout-warning}
+## Before You Arrive
+
+- [ ] Read this chapter carefully
+- [ ] Review the lecture material on correlation
+- [ ] Understand what r values mean (strength and direction)
+- [ ] Familiarise yourself with ggplot2 basics
+- [ ] Have a device with a web browser ready (for WebR)
+:::
+
+### Questions to Consider
+
+- Which DataLab variables might be correlated?
+- What would a positive correlation between reaction time and time estimate mean?
+- How would you check if a correlation is "real" versus due to chance?
+
+### What to Bring
+
+- Laptop, tablet, or phone with a modern browser
+- Ideas about relationships to test in the data
+- Questions about interpreting correlations
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| **Correlation (r)** | Measures strength and direction of linear relationship |
+| **Range** | -1 (perfect negative) to +1 (perfect positive) |
+| **`cor()`** | Quick coefficient only |
+| **`cor.test()`** | Full test with p-value and CI |
+| **Scatterplot** | Essential for visualising relationships |
+| **Causation** | Correlation does NOT imply causation |
+
+## Quick Reference
+
+```r
+# Basic correlation
+cor(x, y)
+
+# With significance test
+cor.test(x, y)
+
+# Spearman (for non-normal data)
+cor.test(x, y, method = "spearman")
+
+# Correlation matrix
+cor(data[, c("var1", "var2", "var3")])
+
+# Scatterplot with trend line
+ggplot(data, aes(x = var1, y = var2)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
 
 ## Additional Resources
 
-- TBC
+- [R Documentation for cor.test](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.test.html) --- Official documentation
+- [ggplot2 Reference: geom_point](https://ggplot2.tidyverse.org/reference/geom_point.html) --- Scatterplot options
+- [Correlation in R: Comprehensive Guide](https://www.datanovia.com/en/lessons/correlation-test-between-two-variables-in-r/) --- Detailed tutorial

@@ -1,17 +1,6 @@
 ---
 title: "Week 13 Lab Reading"
-subtitle: "Correlational Analysis"
-author: "Gordon Wright"
-date: "2026-01-28"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Bootstrap CIs in R"
 ---
 
 {{< include ../../textbook/chapters/w13-lab.qmd >}}

@@ -1,66 +1,159 @@
 ---
-title: "Week 16: Practice Assignment"
-subtitle: "PS50008A Research Methods | 2026-02-23"
+title: "Week 16: Regression"
+subtitle: "PS50008A Research Methods | 23-27 February 2026"
 author: "Gordon Wright"
 date: "2026-02-23"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w16-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-02-23"
-  labels: ['assessment']
-  blocks:
-    - rm0-w16-lecture-slides
-    - rm0-w16-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Practice Assignment
+::: {.callout-important}
+## Research Plan Due This Week
+Your **Research Plan** is due **Friday 27 February 2026**. Submit via Learn by 4pm. This is your first major assessment for the module.
+:::
 
-**Lab**: Project Groups: Literature Review
+**This week**: Move from describing relationships (correlation) to predicting outcomes (regression). Learn how to fit a line to data, interpret R-squared, and make predictions.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+### Line of Best Fit
+- Understand the concept of least squares regression
+- Interpret the regression equation (y = a + bx)
+- Explain slope (b) and intercept (a) in context
+- Visualise the regression line on a scatterplot
 
-## Schedule
+### R-Squared (Coefficient of Determination)
+- Calculate and interpret R-squared
+- Explain variance explained by the model
+- Distinguish between r and R-squared
+- Understand limitations of R-squared
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Practice Assignment | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Project Groups: Literature Review | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 16 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+### Making Predictions
+- Use a regression equation to predict values
+- Understand interpolation vs extrapolation
+- Recognise the dangers of predicting beyond your data
+- Calculate predicted values and residuals
 
-## Preparation
+### Reporting Regression
+- Report simple regression results in APA format
+- Create regression tables
+- Describe findings in written text
 
-Before the lecture:
+## Before the Lecture
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+::: {.callout-important}
+## Required Preparation
+1. **Read the lecture reading** - covers regression theory, R-squared, and prediction
+2. **Review Week 15 correlation content** - regression builds directly on correlation
+3. **Finalise your Research Plan** - due Friday this week!
+:::
+
+## The Big Picture
+
+This week answers the question: **How can we use one variable to predict another?**
+
+::: {.callout-tip}
+## From Correlation to Prediction
+Last week we measured the strength of relationships. This week we go further - using those relationships to make predictions. If confidence and accuracy are correlated, can we predict someone's accuracy from their confidence score?
+:::
+
+We'll continue using YOUR DataLab data to explore:
+
+- **Predicting accuracy from confidence** - Using the regression equation
+- **How much variance is explained?** - Interpreting R-squared
+- **Making and evaluating predictions** - Calculating predicted values
+
+By the end of this week, you'll understand how to build and interpret simple regression models.
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | Line of best fit, R-squared, prediction |
+| [Lecture Reading](lecture/reading.qmd) | Regression theory and interpretation |
+| [Lab Reading](lab/reading.qmd) | Introduction to project literature review |
+| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
+| [Lab Activity](lab/activity.qmd) | Project Groups - Literature Review |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | Line of best fit, R-squared, prediction, regression assumptions |
+| Thursday | Lab (2 hrs) | Project Groups - Literature Review for Research Report |
+| **Friday** | **Deadline** | **Research Plan due 4pm via Learn** |
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### The Regression Equation
+- **y = a + bx**: The equation of the line of best fit
+- **a (intercept)**: The predicted value of y when x = 0
+- **b (slope)**: How much y changes for each unit increase in x
+- **Least squares**: Method that minimises the sum of squared residuals
 
-## Resources
+### R-Squared
+- **R-squared (R2)**: The proportion of variance in y explained by x
+- **Range**: 0 to 1 (often expressed as percentage)
+- **Interpretation**: R2 = .25 means 25% of variance in y is explained by x
+- **Relationship to r**: R2 = r2 (correlation coefficient squared)
 
-- [Week 16 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### Interpreting R-Squared
+| R-squared | Interpretation |
+|-----------|----------------|
+| .01 - .09 | Small effect |
+| .09 - .25 | Medium effect |
+| > .25 | Large effect |
+
+*Note: Cohen's conventions; context matters for interpretation.*
+
+### Prediction
+- **Predicted value (y-hat)**: The value of y predicted by the regression equation
+- **Residual**: The difference between observed and predicted values (y - y-hat)
+- **Interpolation**: Predicting within the range of your data (safer)
+- **Extrapolation**: Predicting beyond your data (dangerous!)
+
+### APA Reporting
+- Report the regression equation, R-squared, and significance
+- Example: "A simple linear regression showed that confidence significantly predicted accuracy, R2 = .18, F(1, 48) = 10.54, p = .002. Higher confidence was associated with better accuracy (b = 0.45)."
+
+## Connecting to Assessments
+
+::: {.callout-warning}
+## Research Plan Due Friday 27 February
+This is your first major assessment. Make sure to:
+
+- Submit via Learn by 4pm
+- Include all required sections (research question, hypotheses, method)
+- Use the terminology from Weeks 12-15
+:::
+
+This week's content directly supports your assessments:
+
+| Assessment | Connection |
+|------------|------------|
+| **Research Plan** | Due this week! Uses all concepts from Weeks 12-15 |
+| **MCQ Exam** | Interpreting regression output, R-squared |
+| **EDS Assignment** | Understanding prediction and model fit |
+| **Research Report** | Results section, regression analyses |
+
+## Lab Focus: Literature Review
+
+::: {.callout-note}
+## Project Groups Session
+This week's lab focuses on your Research Report project. You'll work in your project groups to:
+
+- Identify relevant literature for your research question
+- Learn to search PsycINFO and Google Scholar effectively
+- Begin building your reference list
+- Discuss how to synthesise sources for your introduction
+:::
+
+## What's Next?
+
+**Week 17**: T-Tests - Moving from relationships to differences. Learn to compare two groups using independent and paired t-tests.

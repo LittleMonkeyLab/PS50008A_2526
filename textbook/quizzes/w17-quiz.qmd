@@ -1,237 +1,244 @@
 ---
 title: "Week 17 Self-Assessment"
-subtitle: "MCQ Practice & Credibility"
+subtitle: "Research Credibility, p-Hacking, and Replication"
 ---
 
-```{r, echo=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(webexercises)
 ```
 
 ## Instructions
 
-This quiz serves two purposes: (1) practice for the MCQ exam next week, and (2) understanding research credibility. Work through all the investigations to prepare for the exam format.
+Test your understanding of research credibility, questionable research practices, and the replication crisis. Understanding these issues is essential for becoming a critical consumer of psychological research.
 
 ---
 
-## Part 1: Research Credibility
+## Part 1: Conceptual Questions
 
 ### Question 1: The Replication Crisis
 
 The "replication crisis" refers to:
 
-`r mcq(c("Too many studies being published", answer = "Many published findings failing to replicate in subsequent studies", "Researchers copying each other's work", "Students replicating experiments in labs"))`
+`r mcq(c("Too many studies being published", answer = "Many published findings failing to replicate in subsequent studies", "Researchers copying each other's work", "Difficulty recruiting participants"))`
 
-### Question 2: Questionable Research Practices
+A famous replication project in psychology found that approximately what percentage of original findings replicated?
 
-Which of the following is a questionable research practice (QRP)?
+`r mcq(c("Over 90%", "About 75%", answer = "About 36-40%", "Less than 10%"))`
 
-```{r}
-opts_qrp <- c(
-  "Pre-registering your hypothesis before data collection",
-  answer = "Running multiple analyses and only reporting the significant ones",
-  "Using a large sample size",
-  "Reporting effect sizes alongside p-values"
-)
-```
+### Question 2: Why Does Replication Matter?
 
-`r longmcq(opts_qrp)`
+Replication is important because:
 
-### Question 3: P-Hacking
+`r mcq(c("It shows researchers can copy each other", answer = "It helps us distinguish genuine effects from statistical flukes or methodological artifacts", "It increases the number of publications", "It is required by ethics committees"))`
 
-P-hacking involves:
+If a finding does NOT replicate, this suggests:
 
-`r mcq(c("Using probability incorrectly", answer = "Manipulating analyses to achieve p < .05", "Hacking into statistical software", "Using very small p-values"))`
+`r mcq(c("The original researchers cheated", answer = "The original finding may have been a false positive, or there may be important moderating factors", "Science is broken", "We should never trust any research"))`
+
+### Question 3: p-Hacking
+
+p-Hacking refers to:
+
+`r mcq(c("Breaking into statistical software", answer = "Manipulating data or analyses to achieve p < .05", "Using very small p-values", "Reporting exact p-values"))`
 
 Which of the following is an example of p-hacking?
 
-`r mcq(c(answer = "Removing outliers until the result becomes significant", "Pre-registering exclusion criteria", "Reporting non-significant results", "Calculating effect sizes"))`
+`r mcq(c("Pre-registering your analysis plan", answer = "Running multiple analyses and only reporting the significant ones", "Using a large sample size", "Reporting effect sizes"))`
 
-### Question 4: HARKing
+### Question 4: More p-Hacking Examples
+
+Which is a questionable research practice?
+
+`r mcq(c("Deciding your sample size before collecting data", answer = "Stopping data collection as soon as you get p < .05", "Reporting all your analyses, significant or not", "Using pre-registered hypotheses"))`
+
+Selectively removing outliers until your result becomes significant is:
+
+`r mcq(c("Good data cleaning", "Standard practice", answer = "A form of p-hacking", "Always necessary"))`
+
+### Question 5: HARKing
 
 HARKing stands for:
 
-`r mcq(c("Having Another Research Knowledge", answer = "Hypothesising After Results are Known", "Honest And Reliable Knowledge", "High Achievement Research Kudos"))`
+`r mcq(c("High Achievement Research Knowledge", answer = "Hypothesising After Results are Known", "Honest And Reliable Knowledge", "Helpful Analyses for Research Knowledge"))`
 
-Why is HARKing problematic?
+HARKing is problematic because:
 
-`r mcq(c("It takes too long", answer = "It presents exploratory findings as if they were predicted, inflating false positive rates", "It makes research too easy", "It uses too many participants"))`
+`r mcq(c("It takes too long", answer = "It presents exploratory findings as if they were predicted, inflating false positive rates", "It requires too many participants", "Hypotheses are unnecessary"))`
 
----
+### Question 6: Publication Bias
 
-## Part 2: Improving Research Quality
+Publication bias means:
 
-### Question 5: Pre-Registration
+`r mcq(c("All studies get published equally", answer = "Studies with significant results are more likely to be published than non-significant ones", "Journals are biased against psychology", "Too many studies are published"))`
 
-Pre-registration means:
+Publication bias contributes to the replication crisis because:
 
-`r mcq(c("Registering participants before the study", answer = "Publicly documenting your hypotheses and analysis plan before collecting data", "Registering your publication before peer review", "Recording participant details"))`
-
-Pre-registration helps prevent:
-
-`r mcq(c("Data collection errors", answer = "HARKing and p-hacking", "Participant dropout", "Ethical violations"))`
-
-### Question 6: Open Science Practices
-
-Which practice improves research transparency?
-
-`r mcq(c(answer = "Sharing data and analysis code publicly", "Only publishing significant results", "Using proprietary software", "Keeping methods secret"))`
-
-### Question 7: Sample Size and Power
-
-A larger sample size generally:
-
-`r mcq(c("Guarantees significant results", answer = "Increases statistical power to detect real effects", "Makes studies less credible", "Is always unnecessary"))`
-
-Statistical power is the probability of:
-
-`r mcq(c("Getting p < .05 when there is no effect", answer = "Detecting a real effect when it exists", "Making a Type I error", "Rejecting a true alternative hypothesis"))`
+`r mcq(c("It encourages more research", answer = "The published literature over-represents findings that may be false positives", "It makes journals too selective", "Non-significant results are always wrong"))`
 
 ---
 
-## Part 3: Full MCQ Exam Practice
+## Part 2: Interpretation Questions
 
-Work through these investigations as if they were exam questions. Each investigation has 5-6 questions.
+### Question 7: Identifying Questionable Practices
 
-::: {.webex-check .webex-box}
+A researcher reports: "After extensive data analysis, we discovered an unexpected but significant relationship between X and Y."
 
-### Investigation 1
+What concern does this raise?
 
-A researcher investigates whether listening to classical music while studying improves memory. 40 participants are randomly assigned to study with classical music or in silence, then take a memory test.
+`r mcq(c("The finding is definitely wrong", answer = "Possible HARKing - the finding may be exploratory but presented as if predicted", "The analysis was too extensive", "The relationship is too strong"))`
 
-1. **Design**: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
-
-2. **IV**: `r mcq(c(answer = "Study condition (music vs silence)", "Memory test score", "Type of music", "No IV"))`
-
-3. **DV**: `r mcq(c("Music condition", answer = "Memory test score", "Study duration", "Participant preference"))`
-
-4. **Appropriate test**: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
-
-5. **One-tailed hypothesis**: `r mcq(c("Memory will differ between conditions", answer = "Participants studying with music will have higher memory scores than those in silence", "There will be no difference in memory", "Music and memory are correlated"))`
-
-6. **Results: t(38) = 1.85, p = .072. The result is**: `r mcq(c("Significant at α = .05", answer = "Not significant at α = .05", "Highly significant", "Cannot determine"))`
-
-:::
-
-::: {.webex-check .webex-box}
-
-### Investigation 2
-
-A researcher tests whether exercise affects mood. 25 participants rate their mood before and after a 30-minute exercise session.
-
-1. **Design**: `r mcq(c("Between-subjects", answer = "Within-subjects", "Matched pairs", "Correlational"))`
-
-2. **IV**: `r mcq(c(answer = "Time (before vs after exercise)", "Mood rating", "Exercise duration", "No IV"))`
-
-3. **DV**: `r mcq(c("Time point", answer = "Mood rating", "Type of exercise", "Participant fitness"))`
-
-4. **Appropriate test**: `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Mann-Whitney U"))`
-
-5. **Results: t(24) = 4.23, p < .001, d = 0.85. This is**:
-   - Significant? `r torf(TRUE)`
-   - Effect size: `r mcq(c("Small", "Medium", answer = "Large", "Very small"))`
-
-6. **Conclusion**: `r mcq(c("Exercise has no effect on mood", answer = "Mood significantly improved after exercise", "Mood significantly decreased after exercise", "The study is flawed"))`
-
-:::
-
-::: {.webex-check .webex-box}
-
-### Investigation 3
-
-A researcher examines whether there is a relationship between screen time (hours per day) and sleep quality (score out of 100) in 80 university students.
-
-1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
-
-2. **IV**: `r mcq(c("Screen time", "Sleep quality", "Age", answer = "No IV"))`
-
-3. **Variables measured**: `r mcq(c("Only screen time", "Only sleep quality", answer = "Both screen time and sleep quality", "Neither"))`
-
-4. **Appropriate test**: `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "Wilcoxon test"))`
-
-5. **Results: r(78) = -.38, p < .001. This indicates**: `r mcq(c("No relationship", "Strong positive relationship", answer = "Moderate negative relationship", "Perfect correlation"))`
-
-6. **Can we conclude screen time CAUSES poor sleep?** `r torf(FALSE)`
-
-:::
-
-::: {.webex-check .webex-box}
-
-### Investigation 4
-
-A researcher investigates whether room temperature affects test performance. One classroom is set to 18°C, another to 24°C. Different students in each room take the same test.
-
-1. **Design**: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
-
-2. **IV**: `r mcq(c(answer = "Room temperature (18°C vs 24°C)", "Test score", "Classroom", "No IV"))`
-
-3. **DV**: `r mcq(c("Temperature", answer = "Test score", "Room assignment", "Student comfort"))`
-
-4. **Appropriate test**: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
-
-5. **Results: t(58) = 2.67, p = .010, d = 0.69**:
-   - The p-value indicates: `r mcq(c(answer = "Significant difference at α = .05", "No significant difference", "The effect is large", "The test failed"))`
-   - The effect size is: `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
-
-:::
-
-::: {.webex-check .webex-box}
-
-### Investigation 5
-
-A researcher pairs participants based on IQ scores, then randomly assigns one member of each pair to a cognitive training program while the other receives no training. Cognitive performance is measured after 6 weeks.
-
-1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", answer = "Matched pairs", "Correlational"))`
-
-2. **Why matched pairs?**: `r mcq(c("To save time", answer = "To control for individual differences in IQ", "To increase sample size", "It's required for all studies"))`
-
-3. **IV**: `r mcq(c(answer = "Training condition (training vs no training)", "IQ score", "Cognitive performance", "No IV"))`
-
-4. **DV**: `r mcq(c("Training received", answer = "Cognitive performance", "IQ match", "Pair membership"))`
-
-5. **The appropriate test would be similar to**: `r mcq(c("Independent t-test", answer = "Paired t-test (because pairs are not independent)", "Pearson's r", "Chi-square"))`
-
-:::
-
----
-
-## Part 4: Credibility Scenarios
-
-### Question 8: Evaluating Research
-
-A researcher reports: "After extensive analysis of our data, we discovered an unexpected finding that participants who ate breakfast performed better."
-
-What credibility concern does this raise?
-
-`r mcq(c("The finding is definitely wrong", answer = "Possible HARKing — the finding may be presented as predicted when it was exploratory", "The sample was too large", "The researcher used the wrong test"))`
-
-### Question 9: Red Flags
-
-Which of these is a red flag for research credibility?
-
-`r mcq(c("Large sample size", "Pre-registered hypotheses", answer = "Only significant results reported from a study with many variables", "Effect sizes reported"))`
-
-### Question 10: Good Practice
+### Question 8: Evaluating Research Practices
 
 Which researcher is following best practices?
 
-`r mcq(c("Researcher A who removes outliers until getting p < .05", "Researcher B who only reports their significant findings", answer = "Researcher C who pre-registered their hypothesis and reports all results", "Researcher D who changes their hypothesis after seeing the data"))`
+`r mcq(c("Researcher A: Removes outliers until getting p < .05", "Researcher B: Only reports significant findings from many analyses", answer = "Researcher C: Pre-registered hypothesis and reports all results regardless of significance", "Researcher D: Changes hypothesis after seeing preliminary data"))`
+
+### Question 9: The "File Drawer Problem"
+
+The "file drawer problem" refers to:
+
+`r mcq(c("Researchers losing their data", answer = "Non-significant studies remaining unpublished (in file drawers) while significant ones get published", "Too much data storage needed", "Poor file organisation"))`
+
+This contributes to:
+
+`r mcq(c("Better science", answer = "A biased view of what effects actually exist", "Faster publication", "More efficient research"))`
+
+### Question 10: Statistical Power
+
+Low statistical power increases the risk of:
+
+`r mcq(c("Finding an effect when none exists", answer = "Missing a real effect (false negative) AND inflated effect sizes when effects are found", "Too many significant results", "Ethical violations"))`
+
+Studies with low power that do find significant effects often:
+
+`r mcq(c("Are more reliable", answer = "Report inflated effect sizes (winner's curse)", "Have smaller p-values", "Are more likely to replicate"))`
+
+---
+
+## Part 3: Application Questions
+
+### Question 11: Improving Research Credibility
+
+Pre-registration helps prevent:
+
+`r mcq(c("Data collection errors", answer = "HARKing and p-hacking by committing to analyses before seeing data", "Participant dropout", "Plagiarism"))`
+
+Open data and open materials help by:
+
+`r mcq(c("Making research faster", answer = "Allowing others to verify findings and detect errors", "Reducing costs", "Guaranteeing replication"))`
+
+### Question 12: Evaluating Claims
+
+A study claims to have found a significant effect (p = .049) after testing 20 different hypotheses.
+
+Your main concern should be:
+
+`r mcq(c("The effect is very strong", "The sample was too large", answer = "Multiple comparisons increase the chance of a false positive - one in 20 tests would be 'significant' by chance", "The p-value is too small"))`
+
+### Question 13: What Makes Research More Credible?
+
+Which features increase your confidence in a finding?
+
+Pre-registered hypothesis and analysis plan: `r torf(TRUE)`
+
+Large sample size with adequate power: `r torf(TRUE)`
+
+Only significant results reported from many analyses: `r torf(FALSE)`
+
+Successful independent replication: `r torf(TRUE)`
+
+Hypothesis changed after seeing the data: `r torf(FALSE)`
+
+Effect size reported alongside p-value: `r torf(TRUE)`
+
+---
+
+## Part 4: MCQ Exam Practice
+
+::: {.webex-check .webex-box}
+
+### Scenario 1: Evaluating a Study
+
+A researcher tests whether a new teaching method improves exam scores. They collect data from 20 students but find p = .08. They then collect 10 more students, re-analyse, and now find p = .04. They report only the final analysis.
+
+1. **What questionable practice is this?** `r mcq(c("HARKing", answer = "Optional stopping / peeking at data", "Pre-registration", "Replication"))`
+
+2. **Why is this problematic?** `r mcq(c("30 students is too few", answer = "Adding participants until reaching significance inflates false positive rate", "The effect is too small", "They should have used more students initially"))`
+
+3. **A better approach would be:** `r mcq(c("Never collect more data", answer = "Pre-register the sample size and stick to it", "Stop at 20 students", "Use a one-tailed test"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 2: Interpreting Replication Failure
+
+Study A (original, n=30) finds: d = 0.85, p = .02
+Study B (replication, n=200) finds: d = 0.12, p = .31
+
+1. **The replication found:** `r mcq(c("A stronger effect", "The same effect", answer = "A much smaller, non-significant effect", "A negative effect"))`
+
+2. **Which study's effect size is likely more accurate?** `r mcq(c("Study A (original)", answer = "Study B (larger sample, more precise)", "They are equally accurate", "Neither"))`
+
+3. **The original study's large effect size may have been due to:** `r mcq(c("Better methodology", answer = "Winner's curse (inflated effects in underpowered significant findings)", "More careful data collection", "Superior participants"))`
+
+4. **What should we conclude?** `r mcq(c("The original study was fraudulent", answer = "The effect may be smaller than originally reported, or not reliable", "Replications are always wrong", "Never trust psychology research"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 3: Identifying Best Practices
+
+A researcher plans to test whether exercise improves mood. Before collecting any data, they:
+- Register their hypothesis on OSF
+- Specify they will collect exactly 100 participants
+- State they will use a paired t-test
+- Commit to reporting all results regardless of significance
+
+1. **This is an example of:** `r mcq(c("HARKing", "p-hacking", answer = "Pre-registration", "Publication bias"))`
+
+2. **This practice helps prevent:** `r mcq(c("Participant dropout", answer = "Changing the analysis plan based on the data", "Recruitment difficulties", "Ethical violations"))`
+
+3. **If the final p-value is .07, the researcher should:** `r mcq(c("Collect more data until p < .05", "Change to a one-tailed test", answer = "Report the non-significant result as planned", "Not publish the study"))`
+
+4. **This researcher is demonstrating:** `r mcq(c("Poor planning", answer = "Commitment to transparency and reducing bias", "Unnecessary rigidity", "Overcaution"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 4: Red Flags in Research
+
+A published paper reports finding significant effects for 18 out of 20 tested relationships (all p < .05).
+
+1. **Is this pattern suspicious?** `r torf(TRUE)`
+
+2. **Why?** `r mcq(c("18 significant results is impossible", answer = "This pattern is unlikely without selective reporting or p-hacking", "Too many relationships were tested", "The effects must be very large"))`
+
+3. **What would increase your confidence in these findings?**
+`r mcq(c("If they reported even more significant results", answer = "If the study was pre-registered and the analysis plan showed these specific tests were planned", "If the sample size was smaller", "If only significant results were discussed"))`
+
+:::
 
 ---
 
 ## Summary Checklist
 
-Before the MCQ exam, make sure you can:
+Before moving on, make sure you can:
 
-- [ ] Identify design type from a research description
-- [ ] Identify IV and DV (or recognise when there's no IV)
-- [ ] Select the appropriate statistical test
-- [ ] Interpret p-values and effect sizes
-- [ ] Distinguish significant from non-significant results
-- [ ] Explain what the replication crisis is
-- [ ] Identify questionable research practices (p-hacking, HARKing)
-- [ ] Describe practices that improve research credibility
+- [ ] Explain what the replication crisis is and why it matters
+- [ ] Define p-hacking and give examples
+- [ ] Define HARKing and explain why it's problematic
+- [ ] Explain publication bias and the file drawer problem
+- [ ] Describe how pre-registration improves research credibility
+- [ ] Identify red flags in research reporting
+- [ ] Explain the relationship between statistical power and replication
+- [ ] Describe what makes research findings more credible
 
 ::: {.callout-important}
-## MCQ Exam Next Week
-The MCQ exam is during Wednesday's lecture slot (Week 18). Review all quizzes from Weeks 11-17. The exam follows the investigation format practiced above.
+## Becoming a Critical Consumer
+Understanding these issues helps you evaluate research critically. When reading a study, ask: Was it pre-registered? Are all analyses reported? Is the sample size adequate? Has it been replicated? These questions help distinguish robust findings from potential false positives.
 :::

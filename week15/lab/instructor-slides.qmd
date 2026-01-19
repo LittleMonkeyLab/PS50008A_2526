@@ -1,71 +1,291 @@
 ---
-title: "Running T-Tests with R"
-subtitle: "PS50008A Week 15 Lab"
+title: "Correlation in R"
+subtitle: "PS50008A Week 15 | Lab Walkthrough"
 author: "Gordon Wright"
-date: "2026-02-11"
+date: "2026-02-12"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w15-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-11"
-  labels: ['t-test', 'r-programming']
-  depends_on:
-    - rm0-w15-lecture-slides
-  blocks:
-    - rm0-w15-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-02-11"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Running T-Tests with R**
+## Correlation in R
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Today's Focus
+
+::: {.objectives-box}
+**Analysing relationships between variables.** Today you will:
+
+- Create scatterplots to visualise relationships
+- Calculate Pearson's r and Spearman's rho
+- Test correlations for significance
+- Report correlations in APA format
 :::
 
 ---
 
-## Learning Objectives
-
-By the end of this lab, you will be able to:
-
-- TBC
-- TBC
-- TBC
-
----
-
-## Lab Structure
+## Lab Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:10 | These slides + setup |
+| 10:10-10:35 | Part 1: Scatterplots |
+| 10:35-11:05 | Part 2: Calculating correlations |
+| 11:05-11:30 | Part 3: Correlation matrices |
+| 11:30-11:50 | Part 4: APA reporting |
+| 11:50-12:00 | Wrap-up + self-assessment |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+## Open the Activity
 
-Move to the [Lab Activity](activity.qmd)
+Navigate to: **Week 15 > Lab > Activity**
+
+Make sure WebR loads before proceeding.
+
+---
+
+## Last Week Before Reading Week
+
+::: {.callout-note}
+No labs next week (Reading Week: 16-20 February). Use the time to consolidate correlation and prepare for Week 16.
+:::
+
+---
+
+# Part 1: Scatterplots {background-color="#275882"}
+
+## Visualising Relationships (~25 min)
+
+---
+
+## Why Start with Scatterplots?
+
+::: {.definition-box}
+**Always visualise before calculating!**
+
+Scatterplots reveal:
+
+- Direction (positive or negative)
+- Strength (tight cluster or spread out)
+- Linearity (straight line or curved)
+- Outliers (unusual points)
+:::
+
+---
+
+## Creating Scatterplots in R
+
+```r
+ggplot(data, aes(x = var1, y = var2)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+The `geom_smooth(method = "lm")` adds the line of best fit.
+
+---
+
+## What to Look For
+
+Ask students to describe:
+
+1. **Direction**: Does it go up or down?
+2. **Strength**: How tightly clustered?
+3. **Outliers**: Any unusual points?
+4. **Linearity**: Is a straight line appropriate?
+
+---
+
+# Part 2: Calculating Correlations {background-color="#275882"}
+
+## Pearson's r and Spearman's rho (~30 min)
+
+---
+
+## Pearson's r
+
+::: {.definition-box}
+**Use Pearson's r when:**
+
+- Both variables are continuous
+- Relationship is approximately linear
+- No extreme outliers
+
+```r
+cor.test(x, y, method = "pearson")
+```
+:::
+
+---
+
+## Spearman's rho
+
+::: {.definition-box}
+**Use Spearman's rho when:**
+
+- Data are ordinal (ranks)
+- Relationship is monotonic but not linear
+- Outliers are a concern
+
+```r
+cor.test(x, y, method = "spearman")
+```
+:::
+
+---
+
+## Reading the Output
+
+| Output | Meaning |
+|--------|---------|
+| cor | The correlation coefficient |
+| t | Test statistic |
+| df | Degrees of freedom (n - 2) |
+| p-value | Is it significant? |
+
+---
+
+## Interpreting Strength
+
+| r value | Interpretation |
+|---------|----------------|
+| .10 - .29 | Weak |
+| .30 - .49 | Moderate |
+| .50+ | Strong |
+
+Remind students: these are guidelines, not strict rules.
+
+---
+
+# Part 3: Correlation Matrices {background-color="#275882"}
+
+## Multiple Variables (~25 min)
+
+---
+
+## When You Have Many Variables
+
+::: {.definition-box}
+**Correlation matrix** shows correlations between ALL pairs of variables at once.
+
+Useful for exploring DataLab data with multiple measures.
+:::
+
+---
+
+## The R Code
+
+```r
+# Select numeric variables
+cor_data <- select(data, var1, var2, var3)
+
+# Calculate correlation matrix
+cor(cor_data, use = "complete.obs")
+```
+
+---
+
+## Reading a Correlation Matrix
+
+Key points:
+
+- Diagonal is always 1.00 (variable with itself)
+- Matrix is symmetric (top-right = bottom-left)
+- Look for strong correlations (> .50 or < -.50)
+
+---
+
+# Part 4: APA Reporting {background-color="#275882"}
+
+## Writing Up Correlations (~20 min)
+
+---
+
+## APA Format
+
+::: {.definition-box}
+**Template:**
+r(df) = .XX, p = .XXX
+
+**Example:**
+r(48) = .42, p = .003
+:::
+
+Note: df = n - 2 for correlations.
+
+---
+
+## Example Write-Up
+
+> "There was a significant positive correlation between confidence and accuracy, r(48) = .42, p = .003. Participants who reported higher confidence tended to perform better on the memory task."
+
+---
+
+## Correlation vs Causation
+
+::: {.callout-warning}
+## Key Point
+**Correlation does NOT imply causation!**
+
+Students must avoid causal language:
+
+- NO: "Confidence causes better performance"
+- YES: "Confidence was associated with better performance"
+:::
+
+---
+
+# Wrap-Up {background-color="#275882"}
+
+---
+
+## Key Takeaways
+
+::: {.callout-important}
+## Today We Learned
+
+1. **Always visualise first** with scatterplots
+2. **Pearson's r** for linear relationships between continuous variables
+3. **Spearman's rho** for ordinal data or non-linear relationships
+4. **Correlation does not equal causation**
+:::
+
+---
+
+## Next Steps
+
+Direct students to:
+
+1. Complete the **Week 15 Self-Assessment Quiz**
+2. **Reading Week**: Review correlation, prepare for regression
+3. **Week 16**: Project Groups - Literature Review session
+
+---
+
+## Assessment Reminder
+
+::: {.callout-warning}
+## Research Plan Due Week 16
+Due **Friday 27 February** at 4pm via Learn. Use Reading Week to finalise your submission.
+:::
+
+---
+
+# Questions? {background-color="#275882"}
+
+## Then let's begin the activity!
+
+::: {.notes}
+Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
+:::

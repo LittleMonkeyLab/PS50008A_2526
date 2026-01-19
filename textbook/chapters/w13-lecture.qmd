@@ -1,26 +1,430 @@
 ---
 title: "Chapter 5: Estimation & Confidence Intervals"
-subtitle: "Correlational Designs"
+subtitle: "From Samples to Populations"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+::: {.callout-tip}
+## Before You Begin
+This chapter bridges the gap between describing data and making inferences about populations. You will learn how to move from what you observed in your sample to what you can say about the broader population.
+:::
 
-## Reading Guide
+This chapter covers:
 
-### Key Points to Focus On
+- Point estimates and population parameters
+- Sampling variability and why samples differ
+- Confidence intervals (what the 95% CI really means)
+- The bootstrap method for estimation
+- Effect sizes using Cohen's d
 
-1. TBC
-2. TBC
-3. TBC
+All concepts are illustrated using DataLab examples from your class.
 
-### Questions to Consider
+---
 
-- TBC
-- TBC
-- TBC
+## Part 1: The Big Picture — Samples and Populations
 
-## Additional Resources
+### What Are We Actually Trying to Do?
 
-- TBC
+When you collected data in DataLab, you tested a specific group of students. But you're probably not interested in *just* those students — you want to know something about people in general.
+
+This is the fundamental challenge of research:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**The Problem**: We can only measure a **sample** (a subset of people), but we want to learn about the **population** (everyone we're interested in).
+:::
+
+For example:
+
+- You measured memory scores from ~60 students
+- But you want to know: How do people *in general* remember abstract vs concrete words?
+
+The sample is what we have. The population is what we care about.
+
+### Populations and Parameters
+
+A **population** is the entire group you want to draw conclusions about. This could be:
+
+- All psychology students in the UK
+- All humans
+- All people with a specific condition
+- All possible outcomes of an experiment
+
+A **parameter** is a numerical characteristic of a population:
+
+| Parameter | Symbol | Meaning |
+|-----------|--------|---------|
+| Population mean | μ (mu) | The true average in the population |
+| Population SD | σ (sigma) | The true spread in the population |
+| Population correlation | ρ (rho) | The true relationship in the population |
+
+::: {.callout-note}
+## Greek vs Latin
+Population parameters use Greek letters (μ, σ, ρ). Sample statistics use Latin letters (*M* or x̄, *SD* or *s*, *r*). This convention helps distinguish what we calculated from what we're trying to estimate.
+:::
+
+### Samples and Statistics
+
+A **sample** is a subset of the population that we actually measure.
+
+A **statistic** is a numerical summary calculated from sample data:
+
+| Statistic | Symbol | What It Estimates |
+|-----------|--------|-------------------|
+| Sample mean | *M* or x̄ | Population mean (μ) |
+| Sample SD | *SD* or *s* | Population SD (σ) |
+| Sample correlation | *r* | Population correlation (ρ) |
+
+### Point Estimates
+
+When we use a sample statistic to estimate a population parameter, we call it a **point estimate** — a single "best guess" about the population value.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Point estimate**: A single value from sample data used to estimate a population parameter.
+:::
+
+**DataLab Example**:
+
+Suppose your class's memory data showed:
+
+- Lab A (abstract words): *M* = 5.4 words
+- Lab B (concrete words): *M* = 6.8 words
+
+These means are point estimates of the true population means. Our best guess is that people in general remember about 5.4 abstract words and 6.8 concrete words.
+
+But here's the question: [How confident should we be in these estimates?]{style="background-color: #FFF3CD; font-weight: bold"}
+
+---
+
+## Part 2: Sampling Variability — Why Samples Differ
+
+### The Core Problem
+
+Imagine you ran DataLab again with a different group of 60 students. Would you get exactly the same means?
+
+Almost certainly not.
+
+This is **sampling variability**: different samples from the same population give different results, just by chance.
+
+### A Thought Experiment
+
+Suppose the true population mean for concrete word recall is μ = 7.0 words.
+
+If you took 100 different samples of 30 people each and calculated the mean for each sample, you might get:
+
+| Sample | Mean |
+|--------|------|
+| 1 | 6.8 |
+| 2 | 7.3 |
+| 3 | 6.5 |
+| 4 | 7.1 |
+| ... | ... |
+
+Every sample gives a slightly different answer — even though they're all estimating the same thing.
+
+### The Sampling Distribution
+
+If you plotted all possible sample means you could get, you'd create the **sampling distribution of the mean**.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Sampling distribution**: The distribution of a statistic (like the mean) across all possible samples of a given size.
+:::
+
+Key properties:
+
+1. **Centre**: The sampling distribution is centred on the true population parameter
+2. **Spread**: Larger samples give less variable estimates (the distribution is narrower)
+3. **Shape**: With large enough samples, it's approximately normal (thanks to the Central Limit Theorem)
+
+### The Standard Error
+
+The spread of the sampling distribution is called the **standard error** (SE).
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Standard Error (SE)**: The standard deviation of the sampling distribution — it measures how much sample statistics vary from sample to sample.
+
+$$SE = \frac{SD}{\sqrt{n}}$$
+:::
+
+**Key insight**: The standard error depends on two things:
+
+1. **SD** — More variable populations have more variable samples
+2. **n** — Larger samples have smaller standard errors
+
+This is why sample size matters! With more data, our estimates become more precise.
+
+### DataLab Example: Standard Error
+
+Suppose Lab B (concrete words) had:
+
+- *M* = 6.8 words
+- *SD* = 2.0 words
+- *n* = 30 participants
+
+The standard error would be:
+
+$$SE = \frac{2.0}{\sqrt{30}} = \frac{2.0}{5.48} = 0.37$$
+
+This tells us: if we ran this study many times, sample means would typically vary by about 0.37 words around the true population mean.
+
+---
+
+## Part 3: Confidence Intervals
+
+### Beyond Point Estimates
+
+A point estimate tells us our best guess, but it doesn't tell us how uncertain we should be. We need to communicate the *range* of plausible values.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Confidence Interval (CI)**: A range of values that is likely to contain the true population parameter.
+:::
+
+### The 95% Confidence Interval
+
+The most common confidence interval is the **95% CI**.
+
+**The formula**:
+
+$$95\% \text{ CI} = \bar{x} \pm (t \times SE)$$
+
+For large samples, *t* ≈ 1.96, so:
+
+$$95\% \text{ CI} = \bar{x} \pm (1.96 \times SE)$$
+
+### DataLab Example: Calculating a 95% CI
+
+Using Lab B data:
+
+- *M* = 6.8 words
+- *SE* = 0.37 words
+
+$$95\% \text{ CI} = 6.8 \pm (1.96 \times 0.37)$$
+$$= 6.8 \pm 0.73$$
+$$= [6.07, 7.53]$$
+
+We can report: "The mean number of concrete words recalled was 6.8 (95% CI [6.07, 7.53])."
+
+### What the 95% CI Actually Means
+
+::: {.callout-important}
+## Common Misconception
+A 95% CI does **NOT** mean "there's a 95% probability that the true value is in this interval."
+
+The true value either is or isn't in the interval — we just don't know which.
+:::
+
+The correct interpretation:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Correct interpretation**: If we repeated this study many times and calculated a 95% CI each time, about 95% of those intervals would contain the true population parameter.
+
+In other words, our *procedure* works 95% of the time — but any particular interval either captured the truth or it didn't.
+:::
+
+### Visualising Confidence Intervals
+
+Confidence intervals are often shown as error bars on graphs:
+
+```
+        |-----●-----|
+        6.07  6.8  7.53
+```
+
+The point shows the estimate; the line shows the range of plausible values.
+
+### Why CIs Are Useful
+
+1. **They show uncertainty**: Wide CIs mean we're less sure; narrow CIs mean more precision
+2. **They allow comparison**: If CIs don't overlap much, groups are probably different
+3. **They connect to significance**: If a 95% CI for a difference doesn't include zero, the difference is significant at p < .05
+
+---
+
+## Part 4: The Bootstrap Method
+
+### When Formulas Aren't Enough
+
+The formula-based CI we calculated assumes data are normally distributed. But what if they're not? What about medians, or more complex statistics?
+
+The **bootstrap** is a flexible, computer-intensive method that works for almost any statistic.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Bootstrap**: A resampling method that estimates the sampling distribution by repeatedly sampling *with replacement* from your data.
+:::
+
+### How Bootstrapping Works
+
+1. **Start with your sample** (e.g., 30 memory scores)
+2. **Resample**: Randomly draw 30 scores *with replacement* (some scores may be picked multiple times, others not at all)
+3. **Calculate the statistic** (e.g., the mean of this resample)
+4. **Repeat** many times (e.g., 10,000 times)
+5. **Examine the distribution** of all those calculated statistics
+
+### Example: Bootstrap Procedure
+
+Original sample: [5, 7, 6, 8, 9, 6, 7, 8]
+
+**Resample 1**: [7, 7, 5, 9, 6, 6, 8, 7] → Mean = 6.88
+
+**Resample 2**: [6, 8, 8, 5, 7, 9, 9, 6] → Mean = 7.25
+
+**Resample 3**: [5, 5, 7, 8, 6, 7, 6, 9] → Mean = 6.63
+
+...repeat 10,000 times...
+
+### Bootstrap Confidence Interval
+
+After 10,000 resamples, you have 10,000 means. To get a 95% CI:
+
+1. Sort all 10,000 means from smallest to largest
+2. Find the 2.5th percentile (250th smallest)
+3. Find the 97.5th percentile (9,750th smallest)
+4. These two values are your 95% CI
+
+::: {.callout-tip}
+## Why "Bootstrap"?
+The name comes from the phrase "pulling yourself up by your bootstraps" — an impossible task. Similarly, it seems impossible to learn about population variability when you only have one sample. But the bootstrap makes it work!
+:::
+
+### Advantages of Bootstrapping
+
+- Works for any statistic (means, medians, correlations, etc.)
+- Makes no assumptions about the distribution shape
+- Conceptually straightforward
+- Easy to implement with modern computers
+
+---
+
+## Part 5: Effect Sizes — How Big Is the Effect?
+
+### Beyond "Is There a Difference?"
+
+Statistical tests tell you whether an effect exists. But they don't tell you how *big* it is. A tiny effect can be statistically significant with a large enough sample.
+
+::: {style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Key principle**: Always report effect sizes alongside significance tests. They answer different questions:
+
+- Significance: "Is there an effect?"
+- Effect size: "How big is the effect?"
+:::
+
+### Cohen's d
+
+The most common effect size for comparing two means is **Cohen's d**.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Cohen's d**: The difference between two means, divided by the pooled standard deviation.
+
+$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
+:::
+
+Cohen's d expresses the difference in standard deviation units:
+
+- d = 0.5 means the means differ by half a standard deviation
+- d = 1.0 means the means differ by one full standard deviation
+
+### Calculating Cohen's d
+
+**DataLab Example**:
+
+- Lab A (abstract): *M* = 5.4, *SD* = 1.8, *n* = 30
+- Lab B (concrete): *M* = 6.8, *SD* = 2.0, *n* = 30
+
+**Step 1**: Calculate the pooled standard deviation:
+
+$$s_{pooled} = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}}$$
+
+$$s_{pooled} = \sqrt{\frac{(29)(1.8)^2 + (29)(2.0)^2}{58}} = \sqrt{\frac{93.96 + 116}{58}} = \sqrt{3.62} = 1.90$$
+
+**Step 2**: Calculate d:
+
+$$d = \frac{6.8 - 5.4}{1.90} = \frac{1.4}{1.90} = 0.74$$
+
+### Interpreting Cohen's d
+
+Cohen (1988) suggested these benchmarks:
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.2 | Small effect |
+| 0.5 | Medium effect |
+| 0.8 | Large effect |
+
+Our d = 0.74 suggests a **medium-to-large effect** of word type on memory.
+
+::: {.callout-warning}
+## Use Benchmarks Cautiously
+These are rough guidelines, not strict rules. What counts as "large" depends on the research context. In some fields, d = 0.3 might be impressive; in others, d = 0.8 might be typical.
+:::
+
+### Why Effect Sizes Matter
+
+1. **Practical significance**: A statistically significant result might be too small to matter in practice
+2. **Comparison across studies**: Effect sizes let you compare findings from different studies
+3. **Meta-analysis**: Combining results across studies requires effect sizes
+4. **Power analysis**: Planning sample sizes requires knowing expected effect sizes
+
+---
+
+## Part 6: Connecting Estimation to DataLab
+
+### Your Memory Data
+
+When you analyse the class memory data, you'll:
+
+1. **Calculate point estimates**: What are the means for Lab A and Lab B?
+2. **Calculate standard errors**: How precise are those estimates?
+3. **Construct confidence intervals**: What's the plausible range for the true means?
+4. **Calculate Cohen's d**: How large is the effect of word type?
+
+### Sample Output
+
+A complete analysis might look like this:
+
+> Participants in the concrete words condition (*M* = 6.8, *SD* = 2.0, 95% CI [6.07, 7.53]) recalled more words than those in the abstract words condition (*M* = 5.4, *SD* = 1.8, 95% CI [4.73, 6.07]). This represents a medium-to-large effect (*d* = 0.74).
+
+Notice how this tells you:
+
+- The direction of the effect (concrete > abstract)
+- The size of each mean with precision (CIs)
+- The magnitude of the difference (Cohen's d)
+
+---
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| **Population** | The entire group we want to learn about |
+| **Sample** | The subset we actually measure |
+| **Parameter** | A characteristic of the population (μ, σ) |
+| **Statistic** | A characteristic of the sample (*M*, *SD*) |
+| **Point estimate** | Using a sample statistic to estimate a parameter |
+| **Sampling variability** | Different samples give different results |
+| **Standard error** | How much statistics vary across samples |
+| **Confidence interval** | A range likely to contain the true parameter |
+| **Bootstrap** | Resampling method for estimating uncertainty |
+| **Cohen's d** | Standardised measure of effect size |
+
+---
+
+## Check Your Understanding
+
+Before the lecture, make sure you can answer these questions:
+
+1. What's the difference between a population parameter and a sample statistic?
+2. Why do different samples give different means, even from the same population?
+3. If the standard error is large, what does that tell you about your estimate?
+4. What does a 95% confidence interval actually mean?
+5. Explain the bootstrap method in your own words.
+6. What does a Cohen's d of 0.5 tell you?
+7. Why should we report effect sizes alongside p-values?
+
+---
+
+## Further Reading
+
+For additional depth:
+
+- Cumming, G. (2014). The new statistics: Why and how. *Psychological Science, 25*, 7-29.
+- Coolican, H. (2017). Chapter 14: Estimation. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)

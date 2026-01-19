@@ -1,40 +1,18 @@
 ---
-title: "MCQ Feedback + Lab Report Briefing"
-subtitle: "PS50008A Week 20 Lecture"
+title: "Wrapping Up"
+subtitle: "PS50008A Week 20 | Lecture"
 author: "Gordon Wright"
-date: "2026-03-23"
+date: "2026-03-25"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w20-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-23"
-  labels: ['assessment', 'writing']
-  depends_on:
-    - rm0-w20-index
-  blocks:
-    - rm0-w20-lab-slides
-    - rm0-w20-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-03-23"
+    center-title-slide: true
 ---
 
 ## Learning Objectives
@@ -42,29 +20,323 @@ taskmistress:
 By the end of this lecture, you will be able to:
 
 ::: {.incremental}
-- TBC
-- TBC
-- TBC
+- Share and celebrate your project findings
+- Structure a psychology lab report effectively
+- Write a compelling discussion section
+- Understand next steps in your research journey
 :::
 
----
+# Project Data Showcase {background-color="#275882"}
 
-## Overview
+## Celebrating Your Work
 
-TBC - Lecture content to be developed
+::: {.concept-box}
+You've designed, conducted, and analysed a real psychology experiment. That's an achievement worth celebrating!
+:::
 
----
+## Showcase Format
 
-## Summary
+::: {.callout-note}
+## Sharing Your Findings
+Time to share highlights from your project analyses with the class.
+
+- Brief summaries of findings
+- Interesting patterns discovered
+- Challenges overcome
+:::
+
+## What Did We Learn?
 
 ::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- Diversity of research questions
+- Creative methodological solutions
+- Real-world data challenges
+- The research process in action
 :::
 
----
+## Common Themes
 
-## Next Week
+:::: {.columns}
 
-TBC - Preview of next week's content
+::: {.column width="50%"}
+**Successes**
+
+- TBC based on class projects
+- Strong designs
+- Clear findings
+:::
+
+::: {.column width="50%"}
+**Challenges**
+
+- TBC based on class projects
+- Lessons learned
+- Areas for future research
+:::
+
+::::
+
+# Lab Report Structure {background-color="#275882"}
+
+## The Standard Format
+
+::: {.definition-box}
+Psychology lab reports follow the **IMRaD** structure: Introduction, Method, Results, and Discussion.
+:::
+
+## Report Sections Overview
+
+| Section | Purpose | Approx. Length |
+|---------|---------|----------------|
+| Title & Abstract | Summary | Title + ~150 words |
+| Introduction | Context & hypotheses | ~500-750 words |
+| Method | What you did | ~400-600 words |
+| Results | What you found | ~300-500 words |
+| Discussion | What it means | ~500-750 words |
+
+## Title and Abstract
+
+::: {.example-box}
+**Title**: Should be informative, include key variables
+
+**Abstract**: Brief summary of entire study (~150 words)
+
+- Background and aim
+- Method summary
+- Key findings
+- Main conclusion
+:::
+
+## Introduction Structure
+
+::: {.incremental}
+1. Open with broad context (funnel structure)
+2. Review relevant literature
+3. Identify gap or question
+4. State rationale for current study
+5. Present hypotheses
+:::
+
+## Method Subsections
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Participants**
+
+- Number and demographics
+- Recruitment method
+- Exclusion criteria
+:::
+
+::: {.column width="50%"}
+**Materials/Measures**
+
+- Stimuli used
+- Questionnaires
+- Equipment
+:::
+
+::::
+
+::: {.fragment}
+**Procedure**: Step-by-step description of what happened
+:::
+
+## Results Section
+
+::: {.callout-tip}
+## Key Points
+- Report descriptive statistics first
+- Then inferential statistics
+- Use APA format consistently
+- Include effect sizes
+- Tables and figures where helpful
+:::
+
+# Writing Your Discussion {background-color="#275882"}
+
+## Discussion Purpose
+
+::: {.concept-box}
+The discussion interprets your findings, connects them to the literature, acknowledges limitations, and suggests future directions.
+:::
+
+## Discussion Structure
+
+::: {.incremental}
+1. **Summary**: Restate main findings (briefly)
+2. **Interpretation**: What do results mean?
+3. **Integration**: How do they fit with previous research?
+4. **Limitations**: What might affect conclusions?
+5. **Future directions**: What next?
+6. **Conclusion**: Take-home message
+:::
+
+## Opening Your Discussion
+
+::: {.example-box}
+**Do**: Start with your main finding and whether hypotheses were supported
+
+**Don't**: Start with "The purpose of this study was..." (that's the introduction)
+:::
+
+## Interpreting Results
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Supported Hypotheses**
+
+- Explain why results make sense
+- Connect to theory
+- Compare to similar studies
+:::
+
+::: {.column width="50%"}
+**Unsupported Hypotheses**
+
+- Consider alternative explanations
+- Methodological factors?
+- Theoretical implications
+:::
+
+::::
+
+## Writing About Limitations
+
+::: {.callout-warning}
+## Common Mistake
+Don't just list limitations - explain how they might affect your conclusions.
+:::
+
+::: {.fragment}
+**Good example**: "The sample was predominantly psychology students, which may limit generalisability to other populations. Students may have been more aware of experimental demand characteristics."
+:::
+
+## Future Directions
+
+::: {.incremental}
+- Should flow from your limitations
+- Propose specific, feasible studies
+- Explain what they would add
+- Show you understand the bigger picture
+:::
+
+## Conclusion Paragraph
+
+::: {.concept-box}
+Your conclusion should:
+
+- Be brief (2-3 sentences)
+- Highlight the main contribution
+- End on a strong, memorable note
+:::
+
+# What's Next {background-color="#275882"}
+
+## Immediate Next Steps
+
+::: {.callout-important}
+## Key Deadline
+**Research Report Due**: Friday 1 May 2026, 12 noon
+
+This is your major assessment (40% of module grade).
+:::
+
+## Writing Timeline
+
+| Week | Focus |
+|------|-------|
+| End of term | Complete analysis, draft Results |
+| Week 1 Easter | Draft Method and Introduction |
+| Week 2 Easter | Draft Discussion |
+| Week 3 Easter | Full draft review and revision |
+| Before deadline | Final proofread and submission |
+
+## Getting Support
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Resources Available**
+
+- Course website materials
+- Writing guides
+- Statistical support
+- Library resources
+:::
+
+::: {.column width="50%"}
+**People Who Can Help**
+
+- Module team (office hours)
+- Academic skills tutors
+- Peer support
+- Library staff
+:::
+
+::::
+
+## Beyond This Module
+
+::: {.incremental}
+- These skills transfer to your dissertation
+- Research methods are foundational for psychology careers
+- Statistical literacy is increasingly valued
+- Open science practices are the future
+:::
+
+## Your Research Journey
+
+::: {.concept-box}
+You've learned to:
+
+- Design experiments
+- Collect and analyse data
+- Think critically about research
+- Communicate findings professionally
+
+These are skills for life.
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.concept-box}
+1. Celebrate what you've achieved this term
+2. Lab reports follow IMRaD structure
+3. Discussion interprets, integrates, and looks forward
+4. Plan your writing time carefully
+5. Help is available - use it!
+:::
+
+## Final Thoughts
+
+::: {.incremental}
+- You've come a long way since Week 11
+- Research is challenging but rewarding
+- Keep asking questions
+- Stay curious
+:::
+
+## Thank You!
+
+::: {.r-fit-text}
+Thank you!
+:::
+
+::: {.fragment}
+Good luck with your research reports.
+
+Gordon & the Teaching Team
+:::
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+Best of luck with your reports!

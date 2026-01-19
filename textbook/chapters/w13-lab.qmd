@@ -1,20 +1,281 @@
 ---
-title: "Chapter 6: CIs in Practice"
-subtitle: "Correlational Analysis"
+title: "Chapter 6: Bootstrap CIs in R"
+subtitle: "Building Confidence with Resampling"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Lab-specific reading material
+This reading prepares you for the lab session where you'll use R to calculate **bootstrap confidence intervals**. Bootstrapping is a powerful, intuitive approach to understanding uncertainty in your data --- and it requires minimal statistical assumptions.
 
-## Reading Guide
+::: {.callout-note}
+## What You'll Learn
+By the end of this lab, you'll be able to:
 
-### Key Points to Focus On
+- Explain what bootstrapping does and why it works
+- Use the `infer` package to generate bootstrap distributions
+- Calculate and interpret bootstrap confidence intervals
+- Visualise the sampling distribution of a statistic
+:::
 
-1. TBC
-2. TBC
-3. TBC
+## Why Bootstrap?
+
+Traditional confidence intervals rely on mathematical formulas that assume your data follow specific distributions (often the normal distribution). But what if your data are skewed, have outliers, or come from an unknown distribution?
+
+**Bootstrapping** offers an alternative: instead of assuming a distribution, we use the data itself to estimate uncertainty.
+
+### The Core Idea
+
+Imagine you could repeat your study thousands of times, each time with a new random sample from the population. You'd get a distribution of sample means (or medians, or any statistic). The spread of this distribution tells you how much uncertainty there is.
+
+**The problem**: We can't actually repeat our study thousands of times.
+
+**The solution**: We treat our sample as if it were the population, and resample from it --- with replacement --- many times.
+
+### Resampling with Replacement
+
+"With replacement" means that after drawing an observation, we put it back before drawing the next one. This means:
+
+- The same observation can appear multiple times in a bootstrap sample
+- Some observations might not appear at all
+- Each bootstrap sample has the same size as the original
+
+## The `infer` Package
+
+We'll use the **infer** package, which provides a clean, readable workflow for statistical inference. The package uses a consistent "pipe" approach:
+
+```r
+data |>
+  specify(response = variable) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+Let's break down each step.
+
+### Step 1: `specify()`
+
+Tell R which variable you're interested in:
+
+```r
+# For a single variable (e.g., reaction time)
+datalab |>
+  specify(response = reaction_time)
+```
+
+### Step 2: `generate()`
+
+Create many bootstrap resamples:
+
+```r
+# Generate 1000 bootstrap samples
+datalab |>
+  specify(response = reaction_time) |>
+  generate(reps = 1000, type = "bootstrap")
+```
+
+### Step 3: `calculate()`
+
+Compute the statistic for each bootstrap sample:
+
+```r
+# Calculate the mean of each bootstrap sample
+boot_dist <- datalab |>
+  specify(response = reaction_time) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+### Step 4: `get_confidence_interval()`
+
+Extract the confidence interval from the bootstrap distribution:
+
+```r
+# Get 95% CI using percentile method
+boot_dist |>
+  get_confidence_interval(level = 0.95, type = "percentile")
+```
+
+## Complete Example
+
+Here's a full workflow for calculating a bootstrap CI for the mean reaction time:
+
+```r
+library(infer)
+
+# Generate bootstrap distribution
+boot_dist <- datalab |>
+  specify(response = reaction_time) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+
+# Get the confidence interval
+boot_ci <- boot_dist |>
+  get_confidence_interval(level = 0.95, type = "percentile")
+
+# View the interval
+boot_ci
+```
+
+## Visualising the Bootstrap Distribution
+
+The `infer` package makes it easy to visualise your results:
+
+```r
+# Visualise the bootstrap distribution with CI shaded
+boot_dist |>
+  visualize() +
+  shade_confidence_interval(endpoints = boot_ci)
+```
+
+This shows:
+
+- The distribution of bootstrap sample means
+- The 95% CI as shaded regions
+- Where most plausible population values lie
+
+## Interpreting Bootstrap CIs
+
+A 95% bootstrap confidence interval means: if we repeated this resampling procedure many times, 95% of the intervals we construct would contain the true population parameter.
+
+::: {.callout-important}
+## Key Interpretation
+The interval gives a range of **plausible values** for the population parameter. Values inside the interval are consistent with your data; values outside are less plausible.
+:::
+
+### What the CI Does NOT Mean
+
+- It does NOT mean there's a 95% probability the true value is in this specific interval
+- It does NOT mean 95% of your data falls in this range
+- It does NOT mean the population parameter is definitely in the interval
+
+## Key Functions Reference
+
+| Function | Purpose | Example |
+|----------|---------|---------|
+| `specify()` | Declare the variable(s) | `specify(response = rt)` |
+| `generate()` | Create bootstrap samples | `generate(reps = 1000, type = "bootstrap")` |
+| `calculate()` | Compute statistic | `calculate(stat = "mean")` |
+| `get_confidence_interval()` | Extract CI | `get_confidence_interval(level = 0.95)` |
+| `visualize()` | Plot distribution | `boot_dist |> visualize()` |
+| `shade_confidence_interval()` | Add CI to plot | `shade_confidence_interval(endpoints = ci)` |
+
+### Available Statistics
+
+The `calculate()` function can compute various statistics:
+
+| `stat =` | What It Calculates |
+|----------|-------------------|
+| `"mean"` | Arithmetic mean |
+| `"median"` | Median |
+| `"sd"` | Standard deviation |
+| `"prop"` | Proportion (for categorical data) |
+| `"diff in means"` | Difference between group means |
+
+## Common Errors and How to Fix Them
+
+### Error: Column 'x' is not found
+
+```r
+# Wrong
+data |> specify(response = Reaction_Time)
+
+# Right (check exact spelling and case)
+data |> specify(response = reaction_time)
+```
+
+**Fix**: R is case-sensitive. Check the exact column name using `names(data)` or `glimpse(data)`.
+
+### Error: object 'boot_dist' not found
+
+**Fix**: Make sure you've assigned the result to a variable:
+
+```r
+# Wrong (not saved)
+datalab |>
+  specify(response = reaction_time) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+
+# Right (saved to boot_dist)
+boot_dist <- datalab |>
+  specify(response = reaction_time) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+### Error: could not find function "specify"
+
+**Fix**: Load the `infer` package first:
+
+```r
+library(infer)
+```
+
+### Warning: Removed rows containing missing values
+
+**Fix**: This happens when your data has `NA` values. Either:
+
+1. Filter them out first: `data |> filter(!is.na(reaction_time))`
+2. Or use `na.rm = TRUE` where available
+
+### The visualisation looks strange
+
+**Fix**: If your histogram looks odd, try:
+
+- Increasing the number of bootstrap resamples (e.g., `reps = 5000`)
+- Checking for outliers in your original data
+- Making sure you're using numeric data
+
+## Why 1000 Resamples?
+
+You'll often see `reps = 1000` in bootstrap code. This is a common default because:
+
+- It provides reasonable precision for 95% CIs
+- It runs quickly on modern computers
+- More resamples (e.g., 10,000) give more precise intervals but take longer
+
+::: {.callout-tip}
+## Rule of Thumb
+For 95% CIs, 1000 resamples is usually sufficient. For 99% CIs or when publishing, consider 5000-10,000 resamples.
+:::
+
+## Preparation Checklist
+
+Before arriving at the lab:
+
+::: {.callout-warning}
+## Before You Arrive
+
+- [ ] Read this chapter carefully
+- [ ] Review the lecture material on confidence intervals
+- [ ] Ensure you understand what "resampling with replacement" means
+- [ ] Have a device with a web browser ready (for WebR)
+- [ ] Review the `|>` pipe operator from previous labs
+:::
+
+### Concepts to Review
+
+- What is a sampling distribution?
+- What does a confidence interval represent?
+- Why do we care about uncertainty in estimates?
+
+### What to Bring
+
+- Laptop, tablet, or phone with a modern browser
+- Your questions about bootstrapping
+- Curiosity about your DataLab data!
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| **Bootstrap** | Resampling with replacement to estimate uncertainty |
+| **Why use it** | Makes minimal assumptions about data distribution |
+| **`infer` workflow** | specify > generate > calculate > get_ci |
+| **Interpretation** | CI gives range of plausible population values |
 
 ## Additional Resources
 
-- TBC
+- [ModernDive Chapter 8: Bootstrapping](https://moderndive.com/8-confidence-intervals.html) --- Excellent visual explanations
+- [infer package documentation](https://infer.netlify.app/) --- Full function reference
+- [Seeing Theory: Bootstrapping](https://seeing-theory.brown.edu/) --- Interactive visualisations

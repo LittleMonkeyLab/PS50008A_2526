@@ -1,26 +1,404 @@
 ---
 title: "Chapter 13: Interpretation & Credibility"
-subtitle: "Practice MCQ Test"
+subtitle: "P-Hacking, Publication Bias, and the Replication Crisis"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+::: {.callout-tip}
+## Before You Begin
+This reading might challenge some of your assumptions about how science works. That's intentional. Understanding these issues makes you a more critical consumer of research and a more ethical producer of it.
+:::
 
-## Reading Guide
+This reading covers:
 
-### Key Points to Focus On
+- P-hacking and researcher degrees of freedom
+- HARKing (Hypothesizing After Results Known)
+- Publication bias
+- The replication crisis
+- Open science solutions
 
-1. TBC
-2. TBC
-3. TBC
+These topics matter because they explain why some published findings turn out to be false and what the scientific community is doing about it.
 
-### Questions to Consider
+---
 
-- TBC
-- TBC
-- TBC
+## Part 1: The Problem with Flexibility
 
-## Additional Resources
+### What Is P-Hacking?
 
-- TBC
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**P-hacking**: Exploiting flexibility in data collection, analysis, or reporting to obtain statistically significant results (p < .05).
+:::
+
+Imagine you collect data and your main hypothesis does not reach significance (p = .08). What might you be tempted to do?
+
+- Remove "outliers" until the result becomes significant
+- Try different statistical tests until one works
+- Add more participants until p drops below .05
+- Analyse subgroups until you find a significant effect somewhere
+
+Each of these exploits **researcher degrees of freedom** — the many small decisions researchers make during a study that can influence results.
+
+### Researcher Degrees of Freedom
+
+Every study involves countless decisions:
+
+| Stage | Decisions |
+|-------|-----------|
+| **Design** | Sample size, exclusion criteria, which conditions to include |
+| **Data collection** | When to stop collecting, how to handle missing data |
+| **Analysis** | Which statistical test, how to handle outliers, which covariates |
+| **Reporting** | Which analyses to highlight, which to omit |
+
+When these decisions are made **after** seeing the data, researchers can (often unconsciously) make choices that favour their preferred outcome.
+
+### A Demonstration: False Positive Psychology
+
+In a famous paper, Simmons, Nelson, and Simonsohn (2011) demonstrated how flexible analysis can produce absurd results. Using standard practices, they "proved" that listening to the Beatles song "When I'm Sixty-Four" literally made people younger.
+
+Their point was not that this result was real, but that [the combination of flexibility and selective reporting can make almost anything appear significant]{style="background-color: #FFF3CD"}.
+
+::: {.callout-warning}
+## The Garden of Forking Paths
+Statistician Andrew Gelman calls this "the garden of forking paths" — at each decision point, researchers take one path, but could have taken others. If you try enough paths, you will find something significant by chance alone.
+:::
+
+### Why P-Hacking Is a Problem
+
+P-hacking inflates the false positive rate far beyond 5%:
+
+- With one test at alpha = .05, you have a 5% chance of a false positive
+- With 20 tests, you have about a 64% chance of at least one false positive
+- With selective reporting, only the "successful" tests get published
+
+The result: journals become filled with findings that capitalise on chance rather than revealing true effects.
+
+---
+
+## Part 2: HARKing
+
+### What Is HARKing?
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**HARKing** (Hypothesizing After Results are Known): Presenting post-hoc findings as if they were predicted from the start.
+:::
+
+Here is how it works:
+
+1. Researcher predicts effect A, but it does not materialise
+2. Unexpected effect B emerges in the data
+3. Researcher writes paper presenting B as the original prediction
+4. Reader has no way to know the hypothesis was developed after seeing results
+
+### Why HARKing Is Problematic
+
+Science relies on **prediction**. The reason a confirmed prediction is impressive is that the researcher could have been wrong. If you formulate your "prediction" after seeing the data, you cannot be wrong.
+
+Consider this analogy:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Prediction**: "I bet the next card will be the seven of hearts." (50/52 chance of being wrong)
+
+**Postdiction**: "I knew it would be the seven of hearts all along." (Cannot be wrong — you already saw it)
+:::
+
+HARKing turns postdiction into prediction, making ordinary chance findings appear impressive.
+
+### The Exploratory/Confirmatory Distinction
+
+::: {.callout-important}
+## A Critical Distinction
+**Exploratory research**: Looking for patterns in data without specific predictions — useful for generating hypotheses.
+
+**Confirmatory research**: Testing specific predictions made before seeing the data — provides stronger evidence.
+
+Both are valuable, but they must not be confused. HARKing disguises exploration as confirmation.
+:::
+
+---
+
+## Part 3: Publication Bias
+
+### The File Drawer Problem
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Publication bias**: The tendency for studies with positive/significant results to be published more often than those with null results.
+:::
+
+Imagine 20 research groups independently test whether a particular vitamin improves memory. By chance (at alpha = .05), about one study will find a significant effect even if the vitamin does nothing.
+
+- The 19 null results go into file drawers, unpublished
+- The one "positive" result gets published
+- The published literature now suggests the vitamin works
+
+This is sometimes called the **file drawer problem** — we only see the studies that "worked."
+
+### Evidence for Publication Bias
+
+Studies examining published research consistently find:
+
+1. **Journals prefer significant results**: Papers with p < .05 are far more likely to be accepted
+2. **Authors self-censor**: Researchers often do not bother submitting null results
+3. **Suspiciously clustered p-values**: Published studies show too many p-values just below .05
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
+**The "Too Good to Be True" Pattern**
+
+If you plot p-values from published studies, you would expect a relatively smooth distribution. Instead, there is typically a suspicious spike just below .05 — suggesting results that just missed significance were "massaged" to cross the threshold, or that just-significant results were selectively published.
+:::
+
+### Why Publication Bias Matters
+
+When published evidence systematically overestimates effects:
+
+- Textbooks and courses teach findings that may not replicate
+- Practitioners implement interventions that may not work
+- Subsequent researchers waste resources building on shaky foundations
+- Public trust in science erodes when "facts" keep changing
+
+---
+
+## Part 4: The Replication Crisis
+
+### What Is Replication?
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Replication**: Repeating a study to see if the same results emerge. If a finding is real, it should replicate.
+:::
+
+Replication is science's self-correction mechanism. A single study might be flawed or capitalise on chance, but if independent researchers consistently find the same result, we can be more confident it is real.
+
+### The Reproducibility Project
+
+In 2015, the Open Science Collaboration published a landmark paper attempting to replicate 100 psychology studies from top journals.
+
+**The results were sobering:**
+
+| Original Studies | Replication |
+|-----------------|-------------|
+| 97% reported significant results | Only 36% replicated |
+| Average effect size: r = .40 | Average in replications: r = .20 |
+
+[More than half of the findings that psychologists thought were established facts failed to replicate.]{style="background-color: #FFF3CD; font-weight: bold;"}
+
+### Why Did So Many Studies Fail to Replicate?
+
+Several factors contributed:
+
+1. **Small samples**: Original studies often had insufficient power to detect true effects reliably
+2. **P-hacking**: Flexible analysis inflated the original results
+3. **Publication bias**: Only the most impressive-looking results were published
+4. **HARKing**: Post-hoc hypotheses presented as predictions
+5. **True variation**: Some effects genuinely differ across populations or contexts
+
+### The Crisis Is Not Limited to Psychology
+
+Similar problems have emerged in:
+
+- Cancer biology (only 11% of landmark findings replicated)
+- Economics (40% replication rate)
+- Medicine (many drug trials fail to replicate)
+
+This is not "psychology's problem" — it is a problem with how science has been practiced across many fields.
+
+---
+
+## Part 5: Why Did This Happen?
+
+### Incentive Structures
+
+The academic system inadvertently rewards questionable practices:
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #EA8439;"}
+**The Pressure to Publish**
+
+- Jobs, promotions, and grants depend on publishing in prestigious journals
+- Prestigious journals want novel, significant findings
+- Null results and replications are harder to publish
+- Researchers face intense competition for limited positions
+
+This creates pressure to produce impressive results, sometimes at the cost of rigour.
+:::
+
+### Good Intentions, Bad Outcomes
+
+Most researchers do not deliberately fake data or lie. The problems are more subtle:
+
+- **Motivated reasoning**: We tend to find what we expect (or hope) to find
+- **Confirmation bias**: We scrutinise unexpected results more than expected ones
+- **Normalisation**: "Everyone does it" — practices like HARKing became standard
+
+The replication crisis revealed that standard practices, followed with good intentions, could produce unreliable science.
+
+---
+
+## Part 6: Open Science Solutions
+
+The research community has responded with reforms designed to increase transparency and reliability.
+
+### Pre-registration
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Pre-registration**: Publicly documenting your hypotheses, methods, and analysis plan *before* collecting data.
+:::
+
+Pre-registration prevents:
+
+- **P-hacking**: You commit to specific analyses in advance
+- **HARKing**: Your predictions are time-stamped before you see results
+- **Selective reporting**: The record shows what you planned to analyse
+
+**Where to pre-register:**
+
+- [OSF (Open Science Framework)](https://osf.io) — Free, widely used
+- [AsPredicted](https://aspredicted.org) — Simple, streamlined
+- [ClinicalTrials.gov](https://clinicaltrials.gov) — For medical research
+
+### Registered Reports
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Registered reports**: A publication format where journals accept papers *before* data collection, based on the importance of the question and quality of the method.
+:::
+
+This is powerful because:
+
+- Acceptance does not depend on results
+- Null results get published
+- Eliminates publication bias at the source
+- Researchers can pursue risky but important questions
+
+### Open Data and Materials
+
+Sharing your:
+
+- **Data**: Allows others to verify your analyses and conduct new ones
+- **Materials**: Enables exact replication
+- **Code**: Makes analysis transparent and reproducible
+
+Many journals now require or encourage data sharing.
+
+### Larger Samples and Multi-Site Studies
+
+The replication crisis revealed that many classic studies were underpowered:
+
+- Small samples produce noisy estimates
+- Noisy estimates that reach significance tend to overestimate effects
+- Larger samples provide more stable, accurate estimates
+
+**Multi-site replications** — where many labs run the same study simultaneously — help distinguish genuine effects from local flukes.
+
+### Statistical Reforms
+
+Researchers are reconsidering how they use statistics:
+
+| Old Practice | Reform |
+|-------------|--------|
+| Dichotomous p < .05 decisions | Focus on effect sizes and confidence intervals |
+| Claiming "no effect" from non-significance | Bayesian methods that can support null hypothesis |
+| Ignoring power | Conducting power analyses before data collection |
+| Selective reporting | Reporting all planned analyses |
+
+---
+
+## Part 7: What This Means for You
+
+### As a Consumer of Research
+
+When reading published research, ask:
+
+1. **Was the study pre-registered?** Look for pre-registration statements
+2. **Is the data available?** Transparency enables verification
+3. **Has it replicated?** Single studies are weak evidence
+4. **How large was the sample?** Small samples produce unreliable results
+5. **Does the analysis match the hypothesis?** Watch for signs of HARKing
+
+::: {.callout-tip}
+## Reading Critically
+A healthy dose of scepticism is appropriate. Even published findings may not replicate. Look for converging evidence across multiple studies and methods.
+:::
+
+### As a Producer of Research
+
+When conducting your own research (including your project):
+
+1. **Pre-register** your hypotheses and analysis plan
+2. **Distinguish exploration from confirmation** — it is fine to explore data, but label it as such
+3. **Report everything** you planned to analyse, including null results
+4. **Use adequate sample sizes** — discuss power with your supervisor
+5. **Share your data and materials** when possible
+
+### The Silver Lining
+
+::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
+**Psychology is leading the reform**
+
+While the replication crisis was uncomfortable, psychology has responded more vigorously than most fields. Open science practices are becoming standard. The research you read now is, on average, more reliable than research from a decade ago.
+
+You are entering the field at an exciting time — when doing research *right* is increasingly valued over doing research *fast*.
+:::
+
+---
+
+## Case Study: The Many Labs Project
+
+The Many Labs project illustrates both the problem and the solution:
+
+**Many Labs 1 (2014):**
+- 36 labs across 12 countries
+- Replicated 13 classic effects
+- 10 replicated reliably; 3 did not
+- Effect sizes were typically smaller than originally reported
+
+**Many Labs 2 (2018):**
+- 186 labs
+- Tested 28 effects
+- Only 14 (50%) replicated
+- Variation across contexts was substantial
+
+**What we learned:**
+
+1. Some classic effects are robust and replicable
+2. Others were likely false positives or highly context-dependent
+3. Large-scale collaboration can provide definitive answers
+4. Science can self-correct, even if slowly
+
+---
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| **P-hacking** | Exploiting analytical flexibility to achieve significance |
+| **Researcher degrees of freedom** | Many decisions that can influence results |
+| **HARKing** | Presenting post-hoc findings as predictions |
+| **Publication bias** | Significant results are more likely to be published |
+| **Replication crisis** | Many published findings fail to replicate |
+| **Pre-registration** | Documenting hypotheses before data collection |
+| **Registered reports** | Acceptance before results are known |
+| **Open data** | Sharing data for verification and reuse |
+
+---
+
+## Check Your Understanding
+
+Before the lecture, make sure you can answer:
+
+1. What is p-hacking and why does it inflate the false positive rate?
+2. What is HARKing and why is it problematic for science?
+3. What is publication bias and how does it distort the literature?
+4. What did the Reproducibility Project find?
+5. How does pre-registration help prevent questionable research practices?
+6. What is a registered report and why does it address publication bias?
+7. As a reader of research, what questions should you ask to evaluate credibility?
+
+---
+
+## Further Reading
+
+For additional depth:
+
+- Simmons, J. P., Nelson, L. D., & Simonsohn, U. (2011). False-positive psychology. *Psychological Science*, 22(11), 1359-1366. [The classic "listening to Beatles makes you younger" paper]
+- Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science*, 349(6251). [The landmark replication study]
+- Nosek, B. A., et al. (2015). Promoting an open research culture. *Science*, 348(6242), 1422-1425. [Guidelines for transparency]
+- [OSF Pre-registration Tutorial](https://help.osf.io/hc/en-us/articles/360019738834-Create-a-Preregistration)
+

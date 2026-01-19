@@ -1,70 +1,313 @@
 ---
-title: "Correlational Designs"
-subtitle: "PS50008A Week 13 Lecture"
+title: "Estimation & Confidence Intervals"
+subtitle: "PS50008A Week 13 | Lecture"
 author: "Gordon Wright"
-date: "2026-01-26"
+date: "2026-01-28"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w13-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-01-26"
-  labels: ['correlation', 'research-design']
-  depends_on:
-    - rm0-w13-index
-  blocks:
-    - rm0-w13-lab-slides
-    - rm0-w13-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-01-26"
+    center-title-slide: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Learning Objectives
+## Learning Outcomes
 
-By the end of this lecture, you will be able to:
+By the end of this lecture you will be able to:
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+- Explain the difference between point estimates and interval estimates
+- Interpret confidence intervals correctly
+- Understand the bootstrap method for estimation
+- Calculate and interpret effect sizes using Cohen's d
+
+# Point Estimates {background-color="#275882"}
+
+## What is a Point Estimate?
+
+<!-- TODO: Define point estimates -->
+
+::: {.definition-box}
+**Point Estimate**: A single value calculated from sample data that serves as a "best guess" for an unknown population parameter.
 :::
 
----
+::: {.fragment}
+**Examples of point estimates:**
 
-## Overview
-
-TBC - Lecture content to be developed
-
----
-
-## Summary
-
-::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- Sample mean as estimate of population mean
+- Sample proportion as estimate of population proportion
+- Sample standard deviation as estimate of population SD
 :::
 
----
+## Sample Statistics as Estimators
+
+<!-- TODO: Add content about sample statistics -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Population Parameters**
+
+- Fixed but unknown
+- Greek letters (mu, sigma)
+- What we want to know
+:::
+
+::: {.column width="50%"}
+**Sample Statistics**
+
+- Calculated from data
+- Roman letters (x-bar, s)
+- Our best estimates
+:::
+
+::::
+
+::: {.fragment}
+<!-- TODO: Add example with real data -->
+:::
+
+## The Problem with Point Estimates
+
+<!-- TODO: Discuss limitations -->
+
+::: {.incremental}
+- A single number gives no indication of uncertainty
+- Different samples give different estimates
+- How confident can we be in our estimate?
+:::
+
+::: {.fragment}
+::: {.example-box}
+**Example:** If our sample mean is 75, is the population mean likely to be 74? 70? 50?
+:::
+:::
+
+# Interval Estimates & Confidence Intervals {background-color="#275882"}
+
+## From Points to Intervals
+
+<!-- TODO: Introduce interval estimation -->
+
+::: {.definition-box}
+**Interval Estimate**: A range of values that is likely to contain the population parameter.
+:::
+
+::: {.fragment}
+Instead of saying "the mean is 75", we say "the mean is between 72 and 78".
+:::
+
+## What is a Confidence Interval?
+
+<!-- TODO: Define CIs properly -->
+
+::: {.definition-box}
+**Confidence Interval (CI)**: An interval estimate combined with a probability statement about how often such intervals capture the true parameter.
+:::
+
+::: {.fragment}
+**Common confidence levels:**
+
+- 95% CI (most common)
+- 99% CI (more conservative)
+- 90% CI (less common)
+:::
+
+## Interpreting Confidence Intervals
+
+<!-- TODO: Add correct vs incorrect interpretations -->
+
+::: {.callout-warning}
+## Common Misconception
+A 95% CI does NOT mean there is a 95% probability that the true parameter lies within this specific interval.
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+## Correct Interpretation
+If we repeated our study many times, 95% of the confidence intervals we calculate would contain the true population parameter.
+:::
+:::
+
+## Visualising Confidence Intervals
+
+<!-- TODO: Add visual demonstration -->
+
+```{r}
+#| eval: false
+# TODO: Add R code to visualise multiple CIs
+# Show how most but not all capture the true parameter
+```
+
+## Width of Confidence Intervals
+
+<!-- TODO: Explain factors affecting CI width -->
+
+**Factors affecting CI width:**
+
+::: {.incremental}
+- **Sample size**: Larger n = narrower CI
+- **Variability**: More variation = wider CI
+- **Confidence level**: Higher confidence = wider CI
+:::
+
+# Bootstrap Method {background-color="#275882"}
+
+## Why Bootstrap?
+
+<!-- TODO: Introduce bootstrap rationale -->
+
+::: {.incremental}
+- Traditional CIs assume normal distribution
+- What if our data isn't normal?
+- What if we have small samples?
+- Bootstrap provides a flexible alternative
+:::
+
+## The Bootstrap Idea
+
+<!-- TODO: Explain resampling concept -->
+
+::: {.definition-box}
+**Bootstrap**: A resampling method that treats your sample as if it were the population, drawing many new samples (with replacement) to estimate sampling variability.
+:::
+
+::: {.fragment}
+<!-- TODO: Add step-by-step explanation -->
+:::
+
+## Bootstrap Steps
+
+<!-- TODO: Outline the procedure -->
+
+::: {.incremental}
+1. Take your original sample (n observations)
+2. Resample n observations WITH replacement
+3. Calculate the statistic of interest
+4. Repeat steps 2-3 many times (e.g., 10,000)
+5. Use the distribution of statistics to build CI
+:::
+
+## Bootstrap in Action
+
+<!-- TODO: Add worked example -->
+
+```{r}
+#| eval: false
+# TODO: Add R code demonstrating bootstrap
+```
+
+::: {.example-box}
+**Example:** Bootstrapping the mean of reaction times
+:::
+
+## Percentile Bootstrap CI
+
+<!-- TODO: Show how to construct CI -->
+
+::: {.fragment}
+For a 95% CI:
+
+- Find the 2.5th percentile of bootstrap statistics
+- Find the 97.5th percentile of bootstrap statistics
+- These form your interval
+:::
+
+# Effect Sizes (Cohen's d) {background-color="#275882"}
+
+## Why Effect Sizes Matter
+
+<!-- TODO: Introduce effect sizes -->
+
+::: {.incremental}
+- Statistical significance tells us IF there's an effect
+- Effect size tells us HOW BIG the effect is
+- Essential for practical importance
+- Allows comparison across studies
+:::
+
+## What is Cohen's d?
+
+<!-- TODO: Define Cohen's d -->
+
+::: {.definition-box}
+**Cohen's d**: A standardised measure of the difference between two means, expressed in standard deviation units.
+:::
+
+$$d = \frac{\bar{X}_1 - \bar{X}_2}{s_{pooled}}$$
+
+## Interpreting Cohen's d
+
+<!-- TODO: Add Cohen's conventions -->
+
+**Cohen's (1988) conventions:**
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.2     | Small effect   |
+| 0.5     | Medium effect  |
+| 0.8     | Large effect   |
+
+::: {.fragment}
+::: {.callout-note}
+These are rough guidelines, not strict rules. Context matters!
+:::
+:::
+
+## Visualising Effect Sizes
+
+<!-- TODO: Add visual comparison of effect sizes -->
+
+```{r}
+#| eval: false
+# TODO: Add R code showing overlapping distributions
+# for small, medium, and large effects
+```
+
+## Effect Size and Sample Size
+
+<!-- TODO: Discuss relationship -->
+
+::: {.example-box}
+**Key insight:** A small effect can be statistically significant with a large enough sample. A large effect might not reach significance with a small sample.
+:::
+
+::: {.fragment}
+This is why reporting both p-values AND effect sizes is crucial.
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.incremental}
+- **Point estimates** are single-value guesses about population parameters
+- **Confidence intervals** provide a range plus uncertainty information
+- **Bootstrap** offers a flexible, distribution-free approach to CIs
+- **Cohen's d** quantifies effect magnitude in standardised units
+:::
 
 ## Next Week
 
-TBC - Preview of next week's content
+<!-- TODO: Update with next week's topic -->
+
+**Week 14: Inference & t-tests**
+
+- The logic of hypothesis testing
+- Understanding p-values
+- Comparing means between groups
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+See you in the lab!

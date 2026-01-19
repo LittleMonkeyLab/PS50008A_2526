@@ -1,6 +1,6 @@
 ---
 title: "Week 15 Self-Assessment"
-subtitle: "Significance Testing"
+subtitle: "Correlation"
 ---
 
 ```{r, echo=FALSE}

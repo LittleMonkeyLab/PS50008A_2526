@@ -1,17 +1,6 @@
 ---
 title: "Week 13 Lecture Reading"
-subtitle: "Correlational Designs"
-author: "Gordon Wright"
-date: "2026-01-26"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Estimation & Confidence Intervals"
 ---
 
 {{< include ../../textbook/chapters/w13-lecture.qmd >}}

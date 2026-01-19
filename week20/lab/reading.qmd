@@ -1,17 +1,6 @@
 ---
 title: "Week 20 Lab Reading"
-subtitle: "Data Analysis and Reporting"
-author: "Gordon Wright"
-date: "2026-03-25"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Report Writing"
 ---
 
 {{< include ../../textbook/chapters/w20-lab.qmd >}}

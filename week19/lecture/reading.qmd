@@ -1,17 +1,6 @@
 ---
 title: "Week 19 Lecture Reading"
-subtitle: "In-class MCQ Test"
-author: "Gordon Wright"
-date: "2026-03-16"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Project Workshop"
 ---
 
 {{< include ../../textbook/chapters/w19-lecture.qmd >}}

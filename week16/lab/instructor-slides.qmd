@@ -1,71 +1,248 @@
 ---
 title: "Project Groups: Literature Review"
-subtitle: "PS50008A Week 16 Lab"
+subtitle: "PS50008A Week 16 | Lab Walkthrough"
 author: "Gordon Wright"
-date: "2026-02-25"
+date: "2026-02-26"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w16-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-25"
-  labels: ['project', 'literature-review']
-  depends_on:
-    - rm0-w16-lecture-slides
-  blocks:
-    - rm0-w16-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-02-25"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Project Groups: Literature Review**
+## Project Groups: Literature Review
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Today's Focus
+
+::: {.objectives-box}
+**A different kind of lab today.** You will:
+
+- Work in your Research Report project groups
+- Search for relevant literature using PsycINFO and Google Scholar
+- Evaluate sources for quality and relevance
+- Begin building your reference list
 :::
 
 ---
 
-## Learning Objectives
-
-By the end of this lab, you will be able to:
-
-- TBC
-- TBC
-- TBC
-
----
-
-## Lab Structure
+## Lab Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:15 | These slides + group formation |
+| 10:15-10:45 | Part 1: Database searching |
+| 10:45-11:15 | Part 2: Evaluating sources |
+| 11:15-11:45 | Part 3: Group work time |
+| 11:45-12:00 | Wrap-up + next steps |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+## Important Reminders
 
-Move to the [Lab Activity](activity.qmd)
+::: {.callout-warning}
+## Research Plan Due Tomorrow!
+**Friday 27 February at 4pm** via Learn.
+
+This lab focuses on your Research Report, which uses the same research question.
+:::
+
+---
+
+# Part 1: Database Searching {background-color="#275882"}
+
+## Finding Relevant Literature (~30 min)
+
+---
+
+## Key Databases
+
+::: {.definition-box}
+**Primary sources:**
+
+- **PsycINFO** - Psychology-specific, peer-reviewed
+- **Google Scholar** - Broader coverage, citation tracking
+
+**Access via Goldsmiths Library**
+:::
+
+---
+
+## Search Strategy Tips
+
+1. **Start broad**, then narrow down
+2. **Use key terms** from your research question
+3. **Boolean operators**: AND, OR, NOT
+4. **Filters**: Date range, peer-reviewed, full text
+
+---
+
+## Example Search
+
+If your topic is memory and word type:
+
+```
+"memory" AND "concrete words" AND "abstract words"
+
+"recall" AND "word type" OR "imageability"
+```
+
+---
+
+## What to Look For
+
+Prioritise:
+
+- **Peer-reviewed journal articles**
+- **Recent publications** (last 10-15 years)
+- **Highly cited papers** (foundational work)
+- **Review articles** (for broad overview)
+
+---
+
+# Part 2: Evaluating Sources {background-color="#275882"}
+
+## Quality and Relevance (~30 min)
+
+---
+
+## The CRAAP Test
+
+::: {.definition-box}
+- **C**urrency - When was it published?
+- **R**elevance - Does it address your question?
+- **A**uthority - Who are the authors?
+- **A**ccuracy - Is it peer-reviewed?
+- **P**urpose - Why was it written?
+:::
+
+---
+
+## Reading Strategically
+
+You don't need to read everything in detail:
+
+1. **Abstract** - Is it relevant?
+2. **Introduction** - Background and rationale
+3. **Method** - Similar to your study?
+4. **Results** - Key findings
+5. **Discussion** - Implications
+
+---
+
+## How Many Sources?
+
+For your Research Report introduction:
+
+- **Minimum 5-8 sources** for a solid literature review
+- **Mix of classic and recent** studies
+- **Focus on quality** over quantity
+
+---
+
+# Part 3: Group Work Time {background-color="#275882"}
+
+## Collaborative Searching (~30 min)
+
+---
+
+## Group Tasks
+
+Work together to:
+
+1. **Identify 3-5 relevant papers** each
+2. **Share and discuss** with your group
+3. **Create a shared reference list** (e.g., Google Doc)
+4. **Note key findings** from each paper
+
+---
+
+## Division of Labour
+
+Consider splitting by:
+
+- Different search terms
+- Different databases
+- Different aspects of your research question
+
+Then come together to compile.
+
+---
+
+## Reference Management
+
+::: {.callout-tip}
+## Recommended Tools
+- **Zotero** (free, integrates with Word)
+- **Mendeley** (free, PDF organiser)
+- **EndNote** (via Goldsmiths)
+
+Start organising your references NOW.
+:::
+
+---
+
+# Wrap-Up {background-color="#275882"}
+
+---
+
+## Key Takeaways
+
+::: {.callout-important}
+## Today We Learned
+
+1. **PsycINFO and Google Scholar** are your primary search tools
+2. **Evaluate sources** using the CRAAP criteria
+3. **Read strategically** - abstracts, methods, key findings
+4. **Organise references** from the start
+:::
+
+---
+
+## Next Steps
+
+Before next week:
+
+1. **Submit Research Plan** by Friday 4pm
+2. **Continue literature searching** independently
+3. **Start drafting** introduction paragraph outlines
+4. **Prepare for Week 17**: APA Format and Academic Writing
+
+---
+
+## Research Report Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 16 (this week) | Literature search begins |
+| 17-19 | Writing and analysis |
+| 20 | Peer review |
+| 21 | Final submission |
+
+---
+
+## Questions About Literature Review?
+
+Common concerns:
+
+- "How do I know if a source is good enough?" - Use CRAAP test
+- "What if I can't find relevant papers?" - Broaden search terms
+- "How do I cite correctly?" - Use APA 7th edition
+
+---
+
+# Questions? {background-color="#275882"}
+
+## Then let's form groups and begin!
+
+::: {.notes}
+Instructor slides complete. This is a collaborative lab session. Circulate among groups to help with search strategies and source evaluation. Remind students about the Research Plan deadline.
+:::

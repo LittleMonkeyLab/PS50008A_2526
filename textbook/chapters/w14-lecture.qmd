@@ -1,26 +1,420 @@
 ---
 title: "Chapter 7: Inference & t-tests"
-subtitle: "Probabilities & Distributions"
+subtitle: "Testing Hypotheses About Means"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+::: {.callout-tip}
+## Before You Begin
+This chapter introduces formal hypothesis testing. You will learn how to use data to make decisions about whether effects are "real" or could have happened by chance. This is one of the most important (and most misunderstood) topics in research methods.
+:::
 
-## Reading Guide
+This chapter covers:
 
-### Key Points to Focus On
+- Null hypothesis significance testing (NHST)
+- What p-values mean (and don't mean)
+- Type I and Type II errors
+- Independent samples t-test (between-subjects)
+- Paired samples t-test (within-subjects)
 
-1. TBC
-2. TBC
-3. TBC
+All concepts are illustrated using DataLab examples from your class.
 
-### Questions to Consider
+---
 
-- TBC
-- TBC
-- TBC
+## Part 1: The Logic of Hypothesis Testing
 
-## Additional Resources
+### The Fundamental Question
 
-- TBC
+In research, we often want to know whether an effect is "real" — whether our observed difference reflects something true about the world, or whether it could have occurred by chance.
+
+Consider your DataLab memory data:
+
+- Lab A (abstract words): *M* = 5.4
+- Lab B (concrete words): *M* = 6.8
+
+There's clearly a difference of 1.4 words. But is this difference meaningful, or could it have happened by chance? Maybe if you tested different students, the results would be reversed.
+
+### The Null Hypothesis
+
+To test whether our effect is real, we start with an assumption:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Null Hypothesis (H₀)**: The assumption that there is **no effect** or **no difference** in the population.
+:::
+
+For the memory experiment:
+
+- **H₀**: Word type has no effect on memory. Any observed difference is due to chance.
+- In formal terms: μ_abstract = μ_concrete (the population means are equal)
+
+### The Alternative Hypothesis
+
+The alternative (or research) hypothesis represents what we're actually interested in:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Alternative Hypothesis (H₁ or Ha)**: The prediction that there **is** an effect or difference.
+:::
+
+For the memory experiment:
+
+- **H₁** (two-tailed): Word type affects memory (μ_abstract ≠ μ_concrete)
+- **H₁** (one-tailed): Concrete words are remembered better than abstract words (μ_concrete > μ_abstract)
+
+### The Logic of NHST
+
+Null Hypothesis Significance Testing (NHST) follows this logic:
+
+1. **Assume H₀ is true** (assume there's no real effect)
+2. **Ask**: How likely is our observed data if H₀ were true?
+3. **If the data is very unlikely under H₀**, reject H₀ and conclude there probably is an effect
+
+::: {.callout-important}
+## Key Insight
+We never "prove" anything. We either reject H₀ (suggesting there's an effect) or fail to reject H₀ (the data doesn't provide enough evidence for an effect).
+:::
+
+---
+
+## Part 2: Understanding p-values
+
+### What Is a p-value?
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**p-value**: The probability of obtaining results at least as extreme as the observed results, **assuming the null hypothesis is true**.
+:::
+
+Let's unpack this:
+
+- We calculate how extreme our data is
+- We ask: "If there were truly no effect, how often would we see data this extreme just by chance?"
+- The p-value answers this question
+
+### A Concrete Example
+
+Imagine the memory experiment has a p-value of 0.03.
+
+This means: **If** word type truly had no effect on memory, we would observe a difference as large as (or larger than) 1.4 words in only 3% of experiments, just by chance.
+
+Because 3% is quite rare, we conclude that the null hypothesis is probably wrong — word type probably does affect memory.
+
+### The Significance Threshold (α)
+
+We need a cutoff for deciding when p is "small enough" to reject H₀. This is called **alpha (α)**.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Alpha (α)**: The significance level — the threshold below which we reject the null hypothesis. Conventionally set at 0.05 (5%).
+:::
+
+- If **p < α** (typically p < .05): Reject H₀ — result is "statistically significant"
+- If **p ≥ α** (typically p ≥ .05): Fail to reject H₀ — result is "not statistically significant"
+
+### What p-values Do NOT Mean
+
+::: {.callout-warning}
+## Critical Misconceptions
+
+The p-value is **NOT**:
+
+1. The probability that H₀ is true
+2. The probability that H₁ is false
+3. The probability that the results occurred by chance
+4. A measure of effect size or importance
+
+A p-value only tells you how surprising your data would be IF H₀ were true. It says nothing about how likely H₀ actually is.
+:::
+
+### The Correct Interpretation
+
+> **Wrong**: "There's a 3% chance this finding is due to chance."
+>
+> **Correct**: "If the null hypothesis were true, we'd see results this extreme only 3% of the time."
+
+This distinction matters! The p-value is calculated *under the assumption* that H₀ is true. It doesn't tell you whether H₀ is actually true.
+
+---
+
+## Part 3: Errors in Hypothesis Testing
+
+### Two Ways to Be Wrong
+
+When we make decisions based on p-values, we can make two types of errors:
+
+| | H₀ is actually TRUE (no effect) | H₀ is actually FALSE (real effect) |
+|---|---|---|
+| **Reject H₀** | [Type I Error (False Positive)]{style="color: #DC3545; font-weight: bold"} | Correct Decision |
+| **Fail to reject H₀** | Correct Decision | [Type II Error (False Negative)]{style="color: #DC3545; font-weight: bold"} |
+
+### Type I Error (False Positive)
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Type I Error**: Rejecting H₀ when it's actually true — claiming an effect exists when it doesn't.
+:::
+
+- The probability of a Type I error equals α (typically 5%)
+- If you use α = .05, you'll falsely detect "effects" 5% of the time when there's actually nothing there
+
+**DataLab Example**: You conclude that concrete words are better remembered than abstract words, but actually the difference you observed was just due to random variation in who happened to be in each lab.
+
+### Type II Error (False Negative)
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Type II Error**: Failing to reject H₀ when it's actually false — missing a real effect.
+:::
+
+- The probability of a Type II error is denoted β (beta)
+- **Power** = 1 - β = the probability of correctly detecting a real effect
+
+**DataLab Example**: Concrete words really are easier to remember, but your study had too few participants to detect this reliably. You conclude "no significant difference" and miss the real effect.
+
+### The Trade-off
+
+You can't minimise both errors simultaneously:
+
+- Setting a stricter α (e.g., .01 instead of .05) reduces Type I errors but increases Type II errors
+- Using larger samples reduces Type II errors without increasing Type I errors (this is why sample size matters!)
+
+::: {.callout-tip}
+## Practical Advice
+In most psychology research, we set α = .05 by convention. We increase power by using larger samples and more reliable measures, not by relaxing α.
+:::
+
+---
+
+## Part 4: The Independent Samples t-test
+
+### When to Use It
+
+The **independent samples t-test** compares means from two **different** groups of participants.
+
+Use it when:
+
+- You have two separate groups
+- Each participant is in only one group (between-subjects design)
+- You want to compare the groups on a continuous outcome
+
+**DataLab Example**: Comparing memory scores between Lab A (abstract words) and Lab B (concrete words) — different students in each lab.
+
+### The t-statistic
+
+The t-test produces a **t-statistic** that captures the ratio of signal to noise:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+$$t = \frac{\text{Difference between means}}{\text{Standard error of the difference}}$$
+
+In words: **signal ÷ noise**
+:::
+
+- **Larger t** = bigger difference relative to variability = more evidence against H₀
+- **Smaller t** = difference is small relative to variability = weaker evidence
+
+### Worked Example: Independent t-test
+
+**DataLab Data**:
+
+- Lab A (abstract): *M* = 5.4, *SD* = 1.8, *n* = 30
+- Lab B (concrete): *M* = 6.8, *SD* = 2.0, *n* = 30
+
+**Step 1**: Calculate the pooled standard error
+
+$$SE_{diff} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{1.8^2}{30} + \frac{2.0^2}{30}} = \sqrt{0.108 + 0.133} = \sqrt{0.241} = 0.49$$
+
+**Step 2**: Calculate t
+
+$$t = \frac{\bar{x}_2 - \bar{x}_1}{SE_{diff}} = \frac{6.8 - 5.4}{0.49} = \frac{1.4}{0.49} = 2.86$$
+
+**Step 3**: Look up p-value
+
+With df = 58 (approximately n₁ + n₂ - 2), t = 2.86 gives p = .006
+
+**Step 4**: Make a decision
+
+Since p = .006 < .05, we reject H₀. The difference is statistically significant.
+
+### Reporting an Independent t-test (APA Format)
+
+> An independent samples t-test revealed that participants who saw concrete words (*M* = 6.8, *SD* = 2.0) recalled significantly more words than those who saw abstract words (*M* = 5.4, *SD* = 1.8), *t*(58) = 2.86, *p* = .006, *d* = 0.74.
+
+Notice this includes:
+
+- Descriptive statistics for both groups
+- The t-statistic with degrees of freedom
+- The exact p-value
+- The effect size (Cohen's d)
+
+---
+
+## Part 5: The Paired Samples t-test
+
+### When to Use It
+
+The **paired samples t-test** compares two measurements from the **same** participants.
+
+Use it when:
+
+- The same people provide both scores (within-subjects design)
+- You want to compare before vs after, or condition 1 vs condition 2 within the same person
+
+**DataLab Examples**:
+
+- Pre-session mood vs post-session mood
+- Dominant hand accuracy vs non-dominant hand accuracy
+
+### Why "Paired"?
+
+Each person has a pair of scores. We're interested in **within-person change** — did individuals improve, decline, or stay the same?
+
+### The Key Difference from Independent t-test
+
+Instead of comparing two separate groups, we:
+
+1. Calculate the **difference score** for each person
+2. Test whether the **mean difference** is significantly different from zero
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Paired t-test logic**: If there's no effect, the average difference should be zero. We test whether our observed mean difference is far enough from zero to be statistically significant.
+:::
+
+### Worked Example: Paired t-test
+
+**DataLab Data (Mood pre-post)**:
+
+| Participant | Pre-mood | Post-mood | Difference |
+|-------------|----------|-----------|------------|
+| 1 | 5 | 7 | +2 |
+| 2 | 6 | 6 | 0 |
+| 3 | 4 | 6 | +2 |
+| 4 | 7 | 8 | +1 |
+| 5 | 5 | 7 | +2 |
+| 6 | 6 | 5 | -1 |
+| ... | ... | ... | ... |
+
+Suppose for 30 participants:
+
+- Mean difference: *M*_diff = 1.2
+- SD of differences: *SD*_diff = 1.8
+
+**Step 1**: Calculate standard error of the mean difference
+
+$$SE_{diff} = \frac{SD_{diff}}{\sqrt{n}} = \frac{1.8}{\sqrt{30}} = \frac{1.8}{5.48} = 0.33$$
+
+**Step 2**: Calculate t
+
+$$t = \frac{\bar{d}}{SE_{diff}} = \frac{1.2}{0.33} = 3.64$$
+
+**Step 3**: Look up p-value
+
+With df = n - 1 = 29, t = 3.64 gives p = .001
+
+**Step 4**: Make a decision
+
+Since p = .001 < .05, we reject H₀. Mood significantly changed after the session.
+
+### Reporting a Paired t-test (APA Format)
+
+> A paired samples t-test showed that participants' mood ratings were significantly higher after the DataLab session (*M* = 6.5, *SD* = 1.4) compared to before (*M* = 5.3, *SD* = 1.6), *t*(29) = 3.64, *p* = .001, *d* = 0.67.
+
+### Why Paired Tests Are More Powerful
+
+Paired tests control for individual differences. Some people are naturally happier; some have better memories. By comparing each person to themselves, we remove this "noise," making it easier to detect true effects.
+
+::: {.callout-note}
+## The Trade-off
+Paired designs are more powerful but require measuring the same people twice, which isn't always practical (and introduces potential order effects).
+:::
+
+---
+
+## Part 6: Choosing the Right t-test
+
+### Decision Guide
+
+```
+Are the two groups of scores from the same people?
+                    |
+         ┌─────────┴─────────┐
+         Yes                 No
+          ↓                   ↓
+     PAIRED t-test      INDEPENDENT t-test
+```
+
+### DataLab Applications
+
+| Comparison | Design | Test |
+|------------|--------|------|
+| Lab A vs Lab B memory | Between-subjects | Independent t-test |
+| Pre vs Post mood | Within-subjects | Paired t-test |
+| Dominant vs Non-dominant hand | Within-subjects | Paired t-test |
+| Males vs Females on any task | Between-subjects | Independent t-test |
+
+---
+
+## Part 7: Common Misinterpretations
+
+### "Not Significant" Doesn't Mean "No Effect"
+
+::: {.callout-warning}
+## Critical Point
+A non-significant result (p > .05) does **NOT** prove there's no effect. It only means we don't have enough evidence to conclude there is one.
+:::
+
+Possible reasons for non-significance:
+
+1. There really is no effect
+2. There is an effect, but your sample was too small to detect it
+3. There is an effect, but your measure was too noisy
+4. There is an effect, but it's very small
+
+### "Significant" Doesn't Mean "Important"
+
+A statistically significant result can be trivially small. With a large enough sample, even a 0.1-point difference in mood ratings could be significant — but is that meaningful?
+
+[Always report effect sizes!]{style="background-color: #FFF3CD; font-weight: bold"} Statistical significance tells you an effect probably exists; effect size tells you whether it matters.
+
+### p = .049 vs p = .051
+
+There's no meaningful difference between these values. The .05 cutoff is arbitrary — a convention, not a law of nature.
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good practice**: Report exact p-values and focus on effect sizes and confidence intervals, not just whether p crossed .05.
+:::
+
+---
+
+## Summary
+
+| Concept | Key Point |
+|---------|-----------|
+| **Null hypothesis (H₀)** | Assumes no effect — what we test against |
+| **Alternative hypothesis (H₁)** | Predicts an effect exists |
+| **p-value** | Probability of data this extreme if H₀ were true |
+| **α (alpha)** | Significance threshold (typically .05) |
+| **Type I error** | False positive — claiming an effect that doesn't exist |
+| **Type II error** | False negative — missing a real effect |
+| **Independent t-test** | Compares means from different groups |
+| **Paired t-test** | Compares means from the same people |
+| **t-statistic** | Signal ÷ noise ratio |
+
+---
+
+## Check Your Understanding
+
+Before the lecture, make sure you can answer these questions:
+
+1. What is the null hypothesis and why do we test against it?
+2. In your own words, what does a p-value of 0.02 mean?
+3. What's the difference between a Type I and Type II error?
+4. When would you use an independent t-test vs a paired t-test?
+5. Why is it important to report effect sizes alongside p-values?
+6. What does it mean if a result is "not statistically significant"?
+7. For the mood pre-post data, what are H₀ and H₁?
+
+---
+
+## Further Reading
+
+For additional depth:
+
+- Cumming, G. (2012). *Understanding the New Statistics*. Chapters on NHST and effect sizes.
+- Coolican, H. (2017). Chapters 17-18: Significance testing and t-tests. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
+- Lakens, D. (2013). Calculating and reporting effect sizes. *Frontiers in Psychology, 4*, 863.

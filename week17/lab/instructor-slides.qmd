@@ -2,70 +2,442 @@
 title: "Project Groups: Methodology"
 subtitle: "PS50008A Week 17 Lab"
 author: "Gordon Wright"
-date: "2026-03-04"
+date: "2026-03-05"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w17-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-04"
-  labels: ['project', 'methodology']
-  depends_on:
-    - rm0-w17-lecture-slides
-  blocks:
-    - rm0-w17-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-03-04"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Project Groups: Methodology**
+## Project Groups: Methodology
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Today's Focus
+
+::: {.objectives-box}
+**Methodology Development Session**
+
+By the end of this lab, your group will have:
+
+- A clear, testable research question
+- A defined research design (between, within, or correlational)
+- Operationally defined IV and DV
+- A sampling plan
+- Initial ethical considerations documented
 :::
 
 ---
 
-## Learning Objectives
-
-By the end of this lab, you will be able to:
-
-- TBC
-- TBC
-- TBC
-
----
-
-## Lab Structure
+## Session Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:15 | Group check-in and overview |
+| 10:15-10:45 | Research question refinement |
+| 10:45-11:15 | Design and variables workshop |
+| 11:15-11:40 | Sampling and ethics planning |
+| 11:40-12:00 | Group presentations and feedback |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+## MCQ Exam Reminder
 
-Move to the [Lab Activity](activity.qmd)
+::: {.callout-important}
+## MCQ EXAM: Monday 9th March
+
+This is your final week before the exam! Use any spare moments today to:
+
+- Review lecture content from Weeks 11-17
+- Complete self-assessment quizzes
+- Ask questions about anything unclear
+:::
+
+---
+
+# Group Check-In {background-color="#275882"}
+
+## Where Are You Now? (~15 min)
+
+---
+
+## Group Status Check
+
+Each group should briefly share:
+
+1. **Your research area** (1 sentence)
+2. **Current progress** on your research question
+3. **Any blockers** or questions you have
+
+::: {.callout-tip}
+## Quick Around the Room
+Each group: 2 minutes maximum
+:::
+
+---
+
+## Today's Deliverables
+
+::: {.definition-box}
+**By the end of today, you must have:**
+
+1. Written research question
+2. Design type identified
+3. IV and DV operationally defined
+4. Sampling plan outlined
+5. Ethical considerations listed
+:::
+
+These form the methodology section of your Research Plan.
+
+---
+
+# Research Question Refinement {background-color="#275882"}
+
+## Making It Testable (~30 min)
+
+---
+
+## Good Research Questions
+
+::: {.example-box}
+**Poor**: "Does music affect mood?"
+
+**Better**: "Does listening to upbeat music improve self-reported mood compared to silence?"
+
+**Best**: "Does 10 minutes of listening to major-key pop music (120+ BPM) increase positive affect scores (measured by PANAS) compared to a silent control condition?"
+:::
+
+---
+
+## The FINER Criteria
+
+| Criterion | Question to Ask |
+|-----------|-----------------|
+| **F**easible | Can we actually do this in 2 weeks with available resources? |
+| **I**nteresting | Does this matter? Will people care about the answer? |
+| **N**ovel | Does it add something to existing knowledge? |
+| **E**thical | Can we do this without harming participants? |
+| **R**elevant | Does it connect to psychological theory or real-world issues? |
+
+---
+
+## Activity: Question Refinement
+
+::: {.exercise-box}
+**In your groups (15 minutes):**
+
+1. Write your current research question on the worksheet
+2. Evaluate it against FINER criteria
+3. Revise to address any weaknesses
+4. Have ALL group members agree on the final version
+:::
+
+---
+
+## Checkpoint 1
+
+::: {.poll-box}
+**Instructor Check:**
+
+Ask each group to read their refined research question aloud.
+
+Provide brief feedback on:
+
+- Is it specific enough?
+- Is it actually testable?
+- Can they realistically conduct this study?
+:::
+
+---
+
+# Design & Variables Workshop {background-color="#275882"}
+
+## Defining Your Study (~30 min)
+
+---
+
+## Which Design?
+
+:::: {.columns}
+::: {.column width="33%"}
+### Between-Subjects
+
+Different people in each condition
+
+**Example**: Group A hears music, Group B has silence
+
+**Pro**: No order effects
+
+**Con**: Need more participants
+:::
+
+::: {.column width="33%"}
+### Within-Subjects
+
+Same people in all conditions
+
+**Example**: Everyone does music AND silence
+
+**Pro**: Fewer participants needed
+
+**Con**: Order effects, fatigue
+:::
+
+::: {.column width="34%"}
+### Correlational
+
+Measuring relationships, no manipulation
+
+**Example**: Hours of music vs mood scores
+
+**Pro**: Natural behaviours
+
+**Con**: Cannot infer causation
+:::
+::::
+
+---
+
+## Operationalising Variables
+
+::: {.definition-box}
+**Operational Definition**: Defining a variable by how you measure it
+
+**Abstract concept**: Anxiety
+
+**Operational definition**: Score on the State-Trait Anxiety Inventory (STAI)
+:::
+
+---
+
+## IV and DV Checklist
+
+::: {.example-box}
+**Independent Variable (IV)**:
+
+- What are you manipulating or grouping by?
+- How many levels/conditions?
+- How will you implement it?
+
+**Dependent Variable (DV)**:
+
+- What are you measuring?
+- What scale/units?
+- How will you measure it?
+:::
+
+---
+
+## Activity: Design Your Study
+
+::: {.exercise-box}
+**In your groups (15 minutes):**
+
+1. Identify your design type
+2. Write operational definitions for your IV and DV
+3. If experimental: describe your conditions clearly
+4. If correlational: identify both variables you will measure
+
+**Document this on your methodology worksheet!**
+:::
+
+---
+
+## Checkpoint 2
+
+::: {.poll-box}
+**Instructor Check:**
+
+Circulate and verify each group has:
+
+- Clear design type chosen
+- IV with operational definition (or both variables for correlational)
+- DV with operational definition
+- Measurement method specified
+:::
+
+---
+
+# Sampling & Ethics {background-color="#275882"}
+
+## Planning the Practical Details (~25 min)
+
+---
+
+## Sampling Considerations
+
+| Question | Your Answer |
+|----------|-------------|
+| Who is your target population? | |
+| Who will you actually sample? | |
+| How many participants do you need? | |
+| How will you recruit them? | |
+| Are there any inclusion/exclusion criteria? | |
+
+---
+
+## Sample Size Guidance
+
+::: {.callout-tip}
+## Rule of Thumb
+
+For between-subjects: Aim for **20+ per group**
+
+For within-subjects: Aim for **30+ total**
+
+For correlations: Aim for **30+ pairs of observations**
+
+Larger is better, but work within your constraints!
+:::
+
+---
+
+## Ethics Checklist
+
+::: {.definition-box}
+**Every study needs:**
+
+- Informed consent (what will you tell participants?)
+- Right to withdraw (how will they know they can stop?)
+- Debriefing (what will you explain afterwards?)
+- Data protection (how will you keep data anonymous?)
+- Risk assessment (could anyone be harmed?)
+:::
+
+---
+
+## Activity: Sampling & Ethics
+
+::: {.exercise-box}
+**In your groups (15 minutes):**
+
+1. Complete the sampling section of your worksheet
+2. Write a brief informed consent statement (2-3 sentences)
+3. List any ethical considerations specific to your study
+4. Identify any potential risks and how you will mitigate them
+:::
+
+---
+
+## Checkpoint 3
+
+::: {.poll-box}
+**Instructor Check:**
+
+Verify each group has:
+
+- Target sample size stated
+- Recruitment strategy planned
+- Consent process outlined
+- Ethical considerations documented
+:::
+
+---
+
+# Group Presentations {background-color="#275882"}
+
+## Share Your Methodology (~20 min)
+
+---
+
+## Presentation Format
+
+Each group presents (3 minutes):
+
+1. **Research question** (30 seconds)
+2. **Design type and justification** (30 seconds)
+3. **IV and DV definitions** (1 minute)
+4. **Sampling plan** (30 seconds)
+5. **Key ethical consideration** (30 seconds)
+
+::: {.callout-note}
+Other groups should note questions and feedback
+:::
+
+---
+
+## Feedback Focus
+
+When listening to other groups, consider:
+
+- Is their research question clear and testable?
+- Does the design match the question?
+- Are the variables well-defined?
+- Is the sample size realistic?
+- Have they missed any ethical issues?
+
+---
+
+# Summary {background-color="#275882"}
+
+---
+
+## What You Should Have Now
+
+::: {.example-box}
+**Completed methodology worksheet with:**
+
+1. Refined, testable research question
+2. Research design type with justification
+3. Operational definitions for all variables
+4. Sampling plan with target N
+5. Ethical considerations and consent outline
+:::
+
+---
+
+## Before You Leave
+
+::: {.callout-important}
+## Checkpoint Before Leaving
+
+1. Show your methodology worksheet to an instructor
+2. Get sign-off that you are ready for next week
+3. Ensure ALL group members have a copy
+:::
+
+---
+
+## Next Week: Procedure
+
+::: {.callout-warning}
+## Remember
+
+**MCQ EXAM: Monday 9th March**
+
+Then on Thursday:
+
+- Develop your step-by-step procedure
+- Create materials and instructions
+- Conduct a pilot run within your group
+:::
+
+---
+
+## Homework Before Week 18 Lab
+
+1. **Study for MCQ** (exam Monday!)
+2. **Draft materials** for your study
+3. **Think through** the exact steps participants will follow
+
+---
+
+# Good luck with the MCQ! {background-color="#275882"}
+
+::: {.notes}
+**Instructor Notes:**
+
+- Ensure all groups complete methodology worksheets before leaving
+- Document any groups that need additional support
+- Remind students about MCQ exam location and time
+- Collect worksheets or have students photograph them
+:::

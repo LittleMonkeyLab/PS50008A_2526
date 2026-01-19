@@ -2,70 +2,479 @@
 title: "Project Groups: Procedure"
 subtitle: "PS50008A Week 18 Lab"
 author: "Gordon Wright"
-date: "2026-03-11"
+date: "2026-03-12"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w18-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-11"
-  labels: ['project', 'procedure']
-  depends_on:
-    - rm0-w18-lecture-slides
-  blocks:
-    - rm0-w18-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-03-11"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Project Groups: Procedure**
+## Project Groups: Procedure
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## How Was the MCQ?
+
+::: {.callout-note}
+## MCQ Complete!
+
+Well done on completing your MCQ exam on Monday!
+
+Results will be available within 2 weeks. Today, let's focus forward on your project.
 :::
 
 ---
 
-## Learning Objectives
+## Today's Focus
 
-By the end of this lab, you will be able to:
+::: {.objectives-box}
+**Procedure Development Session**
 
-- TBC
-- TBC
-- TBC
+By the end of this lab, your group will have:
+
+- A complete step-by-step procedure
+- Standardised instructions for participants
+- Materials ready (or a plan to create them)
+- A debriefing script
+- Completed a pilot run within your group
+:::
 
 ---
 
-## Lab Structure
+## Session Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:10 | Review methodology from Week 17 |
+| 10:10-10:40 | Procedure development workshop |
+| 10:40-11:10 | Materials and instructions creation |
+| 11:10-11:40 | Pilot run within groups |
+| 11:40-12:00 | Debrief and troubleshooting |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+# Methodology Review {background-color="#275882"}
 
-Move to the [Lab Activity](activity.qmd)
+## Where We Left Off (~10 min)
+
+---
+
+## Quick Review
+
+::: {.poll-box}
+**Each group: confirm you have these from Week 17**
+
+- Research question
+- Design type (between/within/correlational)
+- Operationally defined IV and DV
+- Sampling plan
+- Ethical considerations
+:::
+
+---
+
+## From Methodology to Procedure
+
+::: {.definition-box}
+**Methodology** answers: What will you study and why?
+
+**Procedure** answers: How exactly will you do it?
+
+Today we turn your plan into actionable steps.
+:::
+
+---
+
+# Procedure Development {background-color="#275882"}
+
+## Step by Step (~30 min)
+
+---
+
+## What is a Procedure?
+
+A procedure is a detailed, **replicable** description of what happens from the moment a participant arrives until they leave.
+
+::: {.callout-tip}
+## The Test
+
+Could someone who has never seen your study run it identically from your procedure alone?
+:::
+
+---
+
+## Procedure Template
+
+| Phase | What Happens | Time |
+|-------|--------------|------|
+| 1. Arrival | Greet participant, explain study | 2 min |
+| 2. Consent | Participant reads and signs consent | 2 min |
+| 3. Instructions | Explain task, check understanding | 2 min |
+| 4. Condition 1 | [Describe what happens] | ? min |
+| 5. Condition 2* | [If within-subjects] | ? min |
+| 6. Measures | Complete questionnaire/test | ? min |
+| 7. Debriefing | Explain purpose, answer questions | 3 min |
+
+---
+
+## Key Questions to Answer
+
+::: {.exercise-box}
+**Your procedure must specify:**
+
+1. What does the participant do first?
+2. What are the exact instructions given?
+3. How long does each part take?
+4. What does the experimenter do/say?
+5. How is data recorded?
+6. What happens if something goes wrong?
+:::
+
+---
+
+## Activity: Draft Your Procedure
+
+::: {.exercise-box}
+**In your groups (20 minutes):**
+
+1. List every step from arrival to departure
+2. Estimate timing for each step
+3. Note who does what (participant vs experimenter)
+4. Identify any decision points or contingencies
+
+**Write this on your procedure worksheet!**
+:::
+
+---
+
+## Checkpoint 1
+
+::: {.poll-box}
+**Instructor Check:**
+
+Circulate and verify:
+
+- Every step is documented
+- Timings are realistic (total under 30 min ideally)
+- Both participant and experimenter actions are clear
+- Nothing is ambiguous or left to interpretation
+:::
+
+---
+
+# Materials & Instructions {background-color="#275882"}
+
+## Creating Your Resources (~30 min)
+
+---
+
+## Types of Materials
+
+Depending on your study, you may need:
+
+| Material | Example |
+|----------|---------|
+| Stimuli | Images, sounds, videos, word lists |
+| Questionnaires | Self-report measures, demographics |
+| Data sheets | Recording forms for experimenter |
+| Consent form | Information sheet and signature |
+| Debriefing sheet | Explanation of true purpose |
+
+---
+
+## Standardised Instructions
+
+::: {.definition-box}
+**Standardised Instructions**: The exact words you say to every participant
+
+Why standardise?
+
+- Reduces experimenter effects
+- Ensures consistency across testers
+- Makes your study replicable
+:::
+
+---
+
+## Writing Good Instructions
+
+::: {.example-box}
+**Poor**: "Do the memory task."
+
+**Better**: "You will see a list of words. Try to remember them."
+
+**Best**: "In a moment, you will see 10 words appear on the screen, one at a time. Each word will be shown for 3 seconds. Your task is to try to remember as many words as you can. After all 10 words have been shown, you will have 60 seconds to write down as many as you can remember. Please do not write anything until I tell you to begin. Do you have any questions?"
+:::
+
+---
+
+## Activity: Create Instructions
+
+::: {.exercise-box}
+**In your groups (15 minutes):**
+
+1. Write the exact instructions you will read to participants
+2. Include instructions for EACH phase of your procedure
+3. Write a comprehension check question
+
+**Remember**: Write as if you are reading a script!
+:::
+
+---
+
+## Materials Checklist
+
+::: {.definition-box}
+**Before your pilot, confirm you have:**
+
+- [ ] Consent form (even a draft version)
+- [ ] Standardised instructions (written out)
+- [ ] All stimuli/materials ready (or clear plan to create)
+- [ ] Data recording sheet
+- [ ] Debriefing explanation
+:::
+
+---
+
+## Checkpoint 2
+
+::: {.poll-box}
+**Instructor Check:**
+
+Verify each group has:
+
+- Written standardised instructions
+- Materials identified (even if not all created yet)
+- Consent and debriefing planned
+:::
+
+---
+
+# Pilot Run {background-color="#275882"}
+
+## Test Your Procedure (~30 min)
+
+---
+
+## Why Pilot?
+
+::: {.callout-important}
+## Every Study Needs Piloting
+
+Piloting reveals:
+
+- Confusing instructions
+- Technical problems
+- Timing issues
+- Unexpected participant questions
+- Missing materials
+:::
+
+---
+
+## How to Pilot Today
+
+:::: {.columns}
+::: {.column width="50%"}
+**Roles:**
+
+- One person acts as **experimenter**
+- One person acts as **participant**
+- Others **observe and take notes**
+
+Rotate so everyone experiences both roles!
+:::
+
+::: {.column width="50%"}
+**Focus on:**
+
+- Are instructions clear?
+- Is the timing right?
+- Does anything feel awkward?
+- What questions might real participants ask?
+:::
+::::
+
+---
+
+## Pilot Feedback Form
+
+| Issue | What Happened | How to Fix |
+|-------|---------------|------------|
+| Instructions unclear | Participant asked what "stimulus" meant | Change to "the picture" |
+| Timing | Task took 8 min not 5 min | Reduce trials or extend procedure |
+| Materials | Screen too small to read | Use larger font or different device |
+| Flow | Awkward pause between sections | Add transition script |
+
+---
+
+## Activity: Run Your Pilot
+
+::: {.exercise-box}
+**In your groups (25 minutes):**
+
+1. Assign roles (experimenter, participant, observers)
+2. Run through your ENTIRE procedure
+3. Observers note any issues on the feedback form
+4. Rotate roles if time permits
+5. Discuss improvements as a group
+:::
+
+---
+
+## Checkpoint 3
+
+::: {.poll-box}
+**Instructor Check:**
+
+After pilot runs:
+
+- What worked well?
+- What needs revision?
+- Are there any fundamental problems?
+:::
+
+---
+
+# Debrief & Troubleshooting {background-color="#275882"}
+
+## Finalising Your Procedure (~20 min)
+
+---
+
+## Common Pilot Issues
+
+| Issue | Solution |
+|-------|----------|
+| Instructions confusing | Simplify language, add examples |
+| Takes too long | Cut non-essential elements |
+| Participant got bored | Add variety, shorter tasks |
+| Data not recording properly | Test technology in advance |
+| Ethical concerns emerged | Revise consent/debriefing |
+
+---
+
+## Revise Your Procedure
+
+::: {.exercise-box}
+**Based on your pilot (10 minutes):**
+
+1. List all issues identified
+2. Decide on solutions for each
+3. Update your procedure document
+4. Note any materials that need revision
+:::
+
+---
+
+## Debriefing Script
+
+::: {.definition-box}
+**Your debriefing should include:**
+
+1. Thank participant for taking part
+2. Explain the true purpose of the study
+3. Explain any deception (if applicable)
+4. Provide your contact details for questions
+5. Remind them of right to withdraw data
+:::
+
+---
+
+## Example Debriefing
+
+::: {.example-box}
+"Thank you for participating. This study was investigating whether background music affects memory performance. Half of participants completed the task with music, and half in silence. We predicted that music would impair memory due to cognitive load.
+
+If you have any questions, please contact [name] at [email]. You may withdraw your data at any time before [date]. Thank you again for your contribution to this research."
+:::
+
+---
+
+# Summary {background-color="#275882"}
+
+---
+
+## What You Should Have Now
+
+::: {.example-box}
+**Completed procedure package:**
+
+1. Step-by-step procedure with timings
+2. Standardised instructions (scripted)
+3. Materials list (with status: ready/to create)
+4. Consent form (draft)
+5. Debriefing script
+6. Pilot feedback and revisions
+:::
+
+---
+
+## Before You Leave
+
+::: {.callout-important}
+## Checkpoint Before Leaving
+
+1. Show your procedure to an instructor
+2. Confirm your pilot run is complete
+3. List any materials still needed before Week 19
+4. Ensure ALL group members have the updated procedure
+:::
+
+---
+
+## Next Week: Data Collection
+
+::: {.callout-note}
+## Week 19 Focus
+
+- Finalise any remaining materials
+- Begin actual data collection
+- Conduct your study with real participants
+- Practice being consistent experimenters
+
+**Come prepared with ALL materials ready!**
+:::
+
+---
+
+## Homework Before Week 19
+
+1. **Create any missing materials** (stimuli, questionnaires, etc.)
+2. **Print consent and data sheets** (if using paper)
+3. **Rehearse the procedure** with group members
+4. **Identify participants** you will test next week
+
+---
+
+## EDS Assignment Reminder
+
+::: {.callout-warning}
+## EDS DUE: Friday 20th March
+
+Your Experimental Design Skills assignment is due next Friday!
+
+Use your time wisely between project work and EDS preparation.
+:::
+
+---
+
+# See you next week! {background-color="#275882"}
+
+::: {.notes}
+**Instructor Notes:**
+
+- Ensure all groups complete procedure worksheets
+- Document groups that still need significant materials
+- Check that pilot runs actually happened
+- Flag any groups with ethical concerns for follow-up
+- Remind about EDS deadline next Friday
+:::

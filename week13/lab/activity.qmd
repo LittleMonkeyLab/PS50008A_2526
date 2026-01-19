@@ -1,82 +1,269 @@
 ---
-title: "Correlational Analysis"
+title: "Bootstrap Confidence Intervals in R"
 subtitle: "PS50008A Week 13 Lab Activity"
 author: "Gordon Wright"
 date: "2026-01-28"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w13-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-01-28"
-  labels: ['correlation', 'r-programming', 'webr']
-  depends_on:
-    - rm0-w13-lab-slides
-  blocks:
-    - rm0-w13-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-01-28"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+
+# Load DataLab data
+memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+
+navy <- "#275882"
+orange <- "#EA8439"
+theme_set(theme_minimal(base_size = 14))
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 13 lecture.
+## Focus for Today
+This lab introduces **bootstrap confidence intervals** - a powerful resampling technique for estimating uncertainty:
+
+- Understanding point estimates vs interval estimates
+- Building confidence intervals through bootstrapping
+- Interpreting what CIs tell us (and don't tell us)
+- Connecting CIs to effect sizes
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Understanding Point Estimates (15 min)
 
-TBC - Activity content
+### The Problem with Single Numbers
 
----
+When we calculate a mean from our sample, we get a **point estimate** - a single number. But how confident can we be in this number?
 
-## Part 2: Exercises
+```{r}
+#| label: sample-means-demo
+#| fig-height: 4
+#| fig-align: center
+memory_clean <- memory |> filter(!is.na(mem_total_1))
+sample_mean <- mean(memory_clean$mem_total_1, na.rm = TRUE)
+sample_sd <- sd(memory_clean$mem_total_1, na.rm = TRUE)
+sample_n <- nrow(memory_clean)
 
-TBC - Interactive exercises
-
-```{webr-r}
-# Example code
-
-
+ggplot(memory_clean, aes(x = mem_total_1)) +
+  geom_histogram(binwidth = 1, fill = navy, colour = "white", alpha = 0.8) +
+  geom_vline(xintercept = sample_mean, colour = orange, linewidth = 2) +
+  annotate("text", x = sample_mean + 0.3, y = Inf, vjust = 2,
+           label = paste0("Mean = ", round(sample_mean, 2)),
+           colour = orange, size = 5, hjust = 0) +
+  labs(x = "Words Recalled", y = "Count",
+       title = "Memory Scores from DataLab",
+       subtitle = paste0("n = ", sample_n, " | SD = ", round(sample_sd, 2))) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
 ```
 
+### Conceptual Questions
+
+**1. A point estimate is:**
+
+`r mcq(c(answer = "A single value calculated from sample data", "A range of plausible values", "The true population parameter", "A measure of variability"))`
+
+**2. Why might a point estimate be misleading?**
+
+`r mcq(c("It's always wrong", "It's too complicated", answer = "It doesn't show how uncertain we are about the true value", "Point estimates can't be calculated"))`
+
+**3. If we took a new sample of students and calculated the mean memory score, we would likely get:**
+
+`r mcq(c("Exactly the same mean", answer = "A different mean due to sampling variability", "A smaller standard deviation", "The population mean"))`
+
+True or False: The sample mean is always equal to the population mean. `r torf(FALSE)`
+
+True or False: Larger samples generally give more precise estimates. `r torf(TRUE)`
+
 ---
 
-## Key Takeaways
+## Activity 2: Building Bootstrap CIs (25 min)
+
+### What is Bootstrapping?
+
+Bootstrapping is a resampling technique where we:
+1. Take our sample data
+2. Resample WITH REPLACEMENT many times
+3. Calculate the statistic of interest for each resample
+4. Use the distribution of resampled statistics to estimate uncertainty
+
+### The Bootstrap Process
+
+**1. When we resample "with replacement", this means:**
+
+`r mcq(c("We only use each data point once", answer = "The same data point can be selected multiple times", "We add new data points", "We remove outliers"))`
+
+**2. If our original sample has 30 observations, each bootstrap sample will have:**
+
+`r mcq(c("More than 30 observations", "Fewer than 30 observations", answer = "Exactly 30 observations", "A random number of observations"))`
+
+**3. A typical bootstrap analysis might create how many resampled datasets?**
+
+`r mcq(c("5", "50", answer = "1000 or more", "It doesn't matter"))`
+
+### Building a 95% CI
+
+After creating many bootstrap samples and calculating the mean of each, we order these means and find the middle 95%.
+
+**4. A 95% confidence interval uses which percentiles of the bootstrap distribution?**
+
+`r mcq(c("0th and 100th", "1st and 99th", answer = "2.5th and 97.5th", "5th and 95th"))`
+
+**5. If our bootstrap means range from 5.2 to 7.8, and our 95% CI is [5.5, 7.3], this means:**
+
+`r mcq(c("All bootstrap means fell in this range", answer = "95% of bootstrap means fell in this range", "The true mean is definitely in this range", "Only 5% of bootstrap means fell in this range"))`
+
+::: {.callout-tip collapse="true"}
+## Understanding the Bootstrap
+The bootstrap works because our sample is our best estimate of the population. By resampling from our sample, we simulate what would happen if we took many samples from the population.
+:::
+
+---
+
+## Activity 3: Interpreting CIs (20 min)
+
+### What Does a 95% CI Mean?
+
+This is one of the most commonly misunderstood concepts in statistics!
+
+**1. The correct interpretation of a 95% CI is:**
+
+`r mcq(c("There is a 95% chance the true mean is in this interval", answer = "If we repeated this procedure many times, 95% of the intervals would contain the true mean", "95% of the sample data falls in this interval", "We are 95% certain of our results"))`
+
+**2. True or False: A 95% CI tells us the probability that the true mean is in the interval.**
+
+`r torf(FALSE)`
+
+**3. A narrower confidence interval indicates:**
+
+`r mcq(c(answer = "More precision in our estimate", "Less precision in our estimate", "A larger sample size only", "The true mean is closer to zero"))`
+
+### Comparing Groups with CIs
+
+When comparing two groups (like Lab A vs Lab B), we can look at whether their CIs overlap.
+
+```{r}
+#| label: ci-comparison-demo
+#| echo: false
+# Simulate CI comparison
+group_data <- tibble(
+  Group = c("Lab A", "Lab B"),
+  Mean = c(5.2, 6.8),
+  Lower = c(4.5, 6.0),
+  Upper = c(5.9, 7.6)
+)
+
+ggplot(group_data, aes(x = Group, y = Mean, colour = Group)) +
+  geom_point(size = 4) +
+  geom_errorbar(aes(ymin = Lower, ymax = Upper), width = 0.2, linewidth = 1.2) +
+  scale_colour_manual(values = c(navy, orange)) +
+  labs(y = "Mean Memory Score", title = "95% CIs for Memory by Lab",
+       subtitle = "Error bars show 95% confidence intervals") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+**4. Looking at the plot above, do the CIs overlap?**
+
+`r mcq(c("Yes, they overlap completely", "Yes, they overlap slightly", answer = "No, they do not overlap", "Can't tell from the plot"))`
+
+**5. Non-overlapping 95% CIs suggest:**
+
+`r mcq(c("No difference between groups", answer = "A likely significant difference between groups", "The data is wrong", "We need more participants"))`
+
+**6. If two 95% CIs overlap slightly, the difference between groups is:**
+
+`r mcq(c("Definitely significant", "Definitely not significant", answer = "Uncertain - we need a formal test", "Impossible to determine"))`
+
+---
+
+## Activity 4: Effect Sizes (20 min)
+
+### Beyond Statistical Significance
+
+Confidence intervals tell us about precision, but **effect sizes** tell us about the magnitude of differences.
+
+### Cohen's d
+
+Cohen's d expresses a difference in standard deviation units:
+
+$$d = \frac{\bar{X}_1 - \bar{X}_2}{SD_{pooled}}$$
+
+**1. Cohen's d tells us:**
+
+`r mcq(c("Whether a result is statistically significant", answer = "How large the difference is in standardised units", "The probability of the null hypothesis", "The sample size needed"))`
+
+**2. According to Cohen's conventions, a d = 0.2 is considered:**
+
+`r mcq(c(answer = "Small", "Medium", "Large", "Negligible"))`
+
+**3. A d = 0.8 would be considered:**
+
+`r mcq(c("Small", "Medium", answer = "Large", "Very small"))`
+
+**4. If two groups differ by d = 0.5, this means the difference equals:**
+
+`r mcq(c("0.5 points", "0.5 percent", answer = "Half a standard deviation", "50% of the mean"))`
+
+### Confidence Intervals for Effect Sizes
+
+Just like means, effect sizes have uncertainty. We can calculate CIs for Cohen's d.
+
+**5. If Cohen's d = 0.6 with 95% CI [0.2, 1.0], what can we conclude?**
+
+`r mcq(c("The effect is definitely large", "The effect is definitely medium", answer = "The effect is likely real (CI doesn't include 0) but size uncertain", "The effect is not significant"))`
+
+**6. If Cohen's d = 0.3 with 95% CI [-0.1, 0.7], what can we conclude?**
+
+`r mcq(c("The effect is definitely small", answer = "We cannot rule out zero effect - more data needed", "The effect is large", "The experiment failed"))`
+
+True or False: Effect sizes help us understand practical significance, not just statistical significance. `r torf(TRUE)`
+
+True or False: A statistically significant result always means a large effect size. `r torf(FALSE)`
+
+---
+
+## Summary
 
 ::: {.callout-important}
-## Summary
-1. TBC
-2. TBC
-3. TBC
+## Key Takeaways
+
+**Point Estimates vs Interval Estimates:**
+- Point estimates give a single value (e.g., sample mean)
+- Interval estimates (CIs) show a range of plausible values
+
+**Bootstrap Confidence Intervals:**
+- Resample with replacement many times
+- Calculate statistic for each resample
+- Use the distribution to estimate uncertainty
+
+**Interpreting 95% CIs:**
+- If we repeated the procedure, 95% of intervals would contain the true value
+- Non-overlapping CIs suggest significant differences
+- Narrower CIs = more precision
+
+**Effect Sizes:**
+- Express differences in standardised units
+- Cohen's d: small (0.2), medium (0.5), large (0.8)
+- CIs for effect sizes show uncertainty about magnitude
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 13 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 14
+1. Complete the [Week 13 Self-Assessment](self-assessment.qmd)
+2. Review the [Lecture Reading](reading.qmd)
+3. Prepare for Week 14: t-tests in R

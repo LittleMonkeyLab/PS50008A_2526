@@ -1,66 +1,121 @@
 ---
-title: "Week 14: Probabilities"
-subtitle: "PS50008A Research Methods | 2026-02-02"
+title: "Week 14: Inference & t-tests"
+subtitle: "PS50008A Research Methods | 2-6 February 2026"
 author: "Gordon Wright"
 date: "2026-02-02"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w14-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-02-02"
-  labels: ['statistics', 'probability']
-  blocks:
-    - rm0-w14-lecture-slides
-    - rm0-w14-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Probabilities & Distributions
+::: {.callout-note}
+## The Heart of Statistics
+This week introduces null hypothesis significance testing - the framework you'll use to determine whether your results are statistically meaningful.
+:::
 
-**Lab**: Plotting Data with R
+**This week**: Learn about null hypotheses, p-values, significance thresholds, and how to conduct and interpret t-tests for comparing means.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+### Null Hypothesis Significance Testing
+- State the null and alternative hypotheses for a study
+- Explain what a p-value represents (probability of data given H0)
+- Interpret p-values correctly (and avoid common misconceptions)
+- Apply the significance threshold (alpha = .05)
 
-## Schedule
+### Statistical Significance
+- Distinguish between statistical significance and practical importance
+- Understand Type I and Type II errors
+- Explain why we combine p-values with effect sizes and CIs
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Probabilities & Distributions | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Plotting Data with R | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 14 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+### t-tests
+- Identify when to use an independent samples t-test vs paired samples t-test
+- Conduct both types of t-test in R
+- Report t-test results in APA format
+- Interpret t-test output (t-value, df, p-value)
 
-## Preparation
+## Before the Lecture
 
-Before the lecture:
+::: {.callout-important}
+## Required Preparation
+1. **Read the lecture reading** - covers NHST logic and t-test procedures
+2. **Review Week 13 content** - confidence intervals provide context for p-values
+:::
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+## The Big Picture
+
+This week answers the question: **Is our effect real or just chance?**
+
+::: {.callout-warning}
+## Critical for Assessments
+The t-test is the statistical test you'll use for your Research Report. Understanding NHST logic is essential for interpreting and reporting your results correctly.
+:::
+
+We'll use YOUR DataLab data to run actual hypothesis tests:
+
+- **Room A vs Room B** - Independent samples t-test (between-subjects)
+- **Pre vs Post mood** - Paired samples t-test (within-subjects)
+- **Combining everything** - p-values, CIs, and effect sizes together
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
+| [Lecture Reading](lecture/reading.qmd) | NHST logic, p-values, t-test procedures |
+| [Lab Reading](lab/reading.qmd) | Running t-tests in R |
+| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
+| [Lab Activity](lab/activity.qmd) | WebR exercises: t-tests with DataLab data |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | Null hypothesis, p-values, significance, t-test logic |
+| Thursday | Lab (2 hrs) | Running and interpreting t-tests in R |
+
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### Null Hypothesis Significance Testing (NHST)
+- **Null hypothesis (H0)**: There is no effect or no difference
+- **Alternative hypothesis (H1)**: There is an effect or difference
+- **p-value**: Probability of obtaining results this extreme if H0 were true
+- **Alpha level**: Threshold for significance (typically .05)
 
-## Resources
+### Making Decisions
+- **p < .05**: Reject H0, result is statistically significant
+- **p >= .05**: Fail to reject H0, result is not statistically significant
+- **Type I error**: Rejecting H0 when it's true (false positive)
+- **Type II error**: Failing to reject H0 when it's false (false negative)
 
-- [Week 14 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### t-tests
+| Design | t-test Type | R Function |
+|--------|-------------|------------|
+| Between-subjects | Independent samples | `t.test(x, y)` |
+| Within-subjects | Paired samples | `t.test(x, y, paired = TRUE)` |
+
+### APA Reporting
+- **Format**: t(df) = x.xx, p = .xxx, d = x.xx, 95% CI [x.xx, x.xx]
+- **Example**: t(48) = 2.34, p = .023, d = 0.67, 95% CI [0.12, 1.22]
+- **Include**: Test statistic, degrees of freedom, p-value, effect size, CI
+
+## Connecting to Assessments
+
+This week's content directly supports your assessments:
+
+| Assessment | Connection |
+|------------|------------|
+| **Research Plan** | Choosing the correct test, stating hypotheses |
+| **MCQ Exam** | NHST logic, p-value interpretation, test selection |
+| **EDS Assignment** | Running t-tests, interpreting output |
+| **Research Report** | Complete inferential statistics section |
+
+## What's Next?
+
+**Week 15**: Correlation & Regression - analysing relationships between continuous variables using Pearson's r and simple linear regression.

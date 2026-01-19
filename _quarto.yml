@@ -11,15 +11,6 @@ project:
   - resources.qmd
   - week11/
   - week12/
-  # - week12_v2/
-  - textbook/index.qmd
-  - textbook/chapters/w11-lecture.qmd
-  - textbook/chapters/w11-lab.qmd
-  - textbook/chapters/w12-lecture.qmd
-  - textbook/chapters/w12-lab.qmd
-  - textbook/quizzes/w11-quiz.qmd
-  - textbook/quizzes/w12-quiz.qmd
-  # --- Weeks 13-20: Uncomment as content is ready ---
   # - week13/
   # - week14/
   # - week15/
@@ -28,6 +19,11 @@ project:
   # - week18/
   # - week19/
   # - week20/
+  - textbook/index.qmd
+  - textbook/chapters/w11-lecture.qmd
+  - textbook/chapters/w11-lab.qmd
+  - textbook/chapters/w12-lecture.qmd
+  - textbook/chapters/w12-lab.qmd
   # - textbook/chapters/w13-lecture.qmd
   # - textbook/chapters/w13-lab.qmd
   # - textbook/chapters/w14-lecture.qmd
@@ -44,6 +40,8 @@ project:
   # - textbook/chapters/w19-lab.qmd
   # - textbook/chapters/w20-lecture.qmd
   # - textbook/chapters/w20-lab.qmd
+  # - textbook/quizzes/w11-quiz.qmd
+  # - textbook/quizzes/w12-quiz.qmd
   # - textbook/quizzes/w13-quiz.qmd
   # - textbook/quizzes/w14-quiz.qmd
   # - textbook/quizzes/w15-quiz.qmd
@@ -131,7 +129,7 @@ website:
             target: _blank
           - text: Activity
             href: week11/lab/activity.qmd
-          - text: 'Reading '
+          - text: Reading
             href: week11/lab/reading.qmd
           - text: Data Dictionary
             href: week11/lab/data-dictionary.qmd
@@ -157,8 +155,7 @@ website:
             href: week12/lab/reading.qmd
           - text: Self-Assessment
             href: week12/lab/self-assessment.qmd
-      # --- Weeks 13-20: Uncomment as content is ready ---
-      # - section: 'Week 13: Correlation & Relationships'
+      # - section: 'Week 13: Estimation & CIs'
       #   contents:
       #   - text: Overview
       #     href: week13/index.qmd
@@ -178,34 +175,143 @@ website:
       #       href: week13/lab/activity.qmd
       #     - text: Reading
       #       href: week13/lab/reading.qmd
-      # - section: 'Week 14: Probability & Distributions'
+      # - section: 'Week 14: Inference & t-tests'
       #   contents:
       #   - text: Overview
       #     href: week14/index.qmd
-      # - section: 'Week 15: Significance Testing'
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week14/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week14/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week14/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week14/lab/activity.qmd
+      #     - text: Reading
+      #       href: week14/lab/reading.qmd
+      # - section: 'Week 15: Correlation'
       #   contents:
       #   - text: Overview
       #     href: week15/index.qmd
-      # - section: 'Week 16: Research Plan Tips'
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week15/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week15/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week15/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week15/lab/activity.qmd
+      #     - text: Reading
+      #       href: week15/lab/reading.qmd
+      # - section: 'Week 16: Regression'
       #   contents:
       #   - text: Overview
       #     href: week16/index.qmd
-      # - section: 'Week 17: MCQ Practice & Credibility'
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week16/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week16/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week16/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week16/lab/activity.qmd
+      #     - text: Reading
+      #       href: week16/lab/reading.qmd
+      # - section: 'Week 17: Interpretation & Credibility'
       #   contents:
       #   - text: Overview
       #     href: week17/index.qmd
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week17/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week17/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week17/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week17/lab/activity.qmd
+      #     - text: Reading
+      #       href: week17/lab/reading.qmd
       # - section: 'Week 18: MCQ Exam'
       #   contents:
       #   - text: Overview
       #     href: week18/index.qmd
-      # - section: 'Week 19: Results & Lab Report Writing'
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week18/lecture/reading.qmd
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week18/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week18/lab/activity.qmd
+      #     - text: Reading
+      #       href: week18/lab/reading.qmd
+      # - section: 'Week 19: Project Workshop'
       #   contents:
       #   - text: Overview
       #     href: week19/index.qmd
-      # - section: 'Week 20: Discussion & EDS Preparation'
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week19/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week19/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week19/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week19/lab/activity.qmd
+      #     - text: Reading
+      #       href: week19/lab/reading.qmd
+      # - section: 'Week 20: Wrapping Up'
       #   contents:
       #   - text: Overview
       #     href: week20/index.qmd
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week20/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week20/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week20/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week20/lab/activity.qmd
+      #     - text: Reading
+      #       href: week20/lab/reading.qmd
     - section: Textbook
       contents:
       - text: Overview
@@ -220,56 +326,55 @@ website:
         contents:
         - text: 'Lecture: Research Design Framework'
           href: textbook/chapters/w12-lecture.qmd
-        - text: 'Lab: Introduction to R'
+        - text: 'Lab: Design Detectives'
           href: textbook/chapters/w12-lab.qmd
-      # --- Weeks 13-20 Textbook Chapters: Uncomment as content is ready ---
       # - section: Week 13
       #   contents:
-      #   - text: 'Lecture: Correlation & Relationships'
+      #   - text: 'Lecture: Estimation & CIs'
       #     href: textbook/chapters/w13-lecture.qmd
-      #   - text: 'Lab: Correlation in R'
+      #   - text: 'Lab: Bootstrap CIs in R'
       #     href: textbook/chapters/w13-lab.qmd
       # - section: Week 14
       #   contents:
-      #   - text: 'Lecture: Probability & Distributions'
+      #   - text: 'Lecture: Inference & t-tests'
       #     href: textbook/chapters/w14-lecture.qmd
-      #   - text: 'Lab: Visualising Distributions in R'
+      #   - text: 'Lab: t-tests in R'
       #     href: textbook/chapters/w14-lab.qmd
       # - section: Week 15
       #   contents:
-      #   - text: 'Lecture: Significance Testing'
+      #   - text: 'Lecture: Correlation'
       #     href: textbook/chapters/w15-lecture.qmd
-      #   - text: 'Lab: Running t-tests in R'
+      #   - text: 'Lab: Correlation in R'
       #     href: textbook/chapters/w15-lab.qmd
       # - section: Week 16
       #   contents:
-      #   - text: 'Lecture: Research Plan Tips'
+      #   - text: 'Lecture: Regression'
       #     href: textbook/chapters/w16-lecture.qmd
-      #   - text: 'Lab: Literature Review Skills'
+      #   - text: 'Lab: Project Groups'
       #     href: textbook/chapters/w16-lab.qmd
       # - section: Week 17
       #   contents:
-      #   - text: 'Lecture: MCQ Practice & Credibility'
+      #   - text: 'Lecture: Interpretation & Credibility'
       #     href: textbook/chapters/w17-lecture.qmd
-      #   - text: 'Lab: Methodology Workshop'
+      #   - text: 'Lab: Project Groups'
       #     href: textbook/chapters/w17-lab.qmd
       # - section: Week 18
       #   contents:
-      #   - text: 'Lecture: MCQ Exam Preparation'
+      #   - text: 'Lecture: MCQ Exam Prep'
       #     href: textbook/chapters/w18-lecture.qmd
-      #   - text: 'Lab: Ethics & Procedures'
+      #   - text: 'Lab: Project Groups'
       #     href: textbook/chapters/w18-lab.qmd
       # - section: Week 19
       #   contents:
-      #   - text: 'Lecture: Results & Lab Report Writing'
+      #   - text: 'Lecture: Project Workshop'
       #     href: textbook/chapters/w19-lecture.qmd
-      #   - text: 'Lab: Data Collection Support'
+      #   - text: 'Lab: Data Collection'
       #     href: textbook/chapters/w19-lab.qmd
       # - section: Week 20
       #   contents:
-      #   - text: 'Lecture: Discussion & EDS Preparation'
+      #   - text: 'Lecture: Wrapping Up'
       #     href: textbook/chapters/w20-lecture.qmd
-      #   - text: 'Lab: Data Analysis Workshop'
+      #   - text: 'Lab: Report Writing'
       #     href: textbook/chapters/w20-lab.qmd
       - section: Self-Assessment Quizzes
         contents:
@@ -277,7 +382,6 @@ website:
           href: textbook/quizzes/w11-quiz.qmd
         - text: Week 12 Quiz
           href: textbook/quizzes/w12-quiz.qmd
-        # --- Weeks 13-20 Quizzes: Uncomment as content is ready ---
         # - text: Week 13 Quiz
         #   href: textbook/quizzes/w13-quiz.qmd
         # - text: Week 14 Quiz

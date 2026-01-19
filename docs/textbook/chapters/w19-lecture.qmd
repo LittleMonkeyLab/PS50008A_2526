@@ -1,26 +1,533 @@
 ---
-title: "Chapter 17: Project Workshop"
-subtitle: "In-class MCQ Test"
+title: "Chapter 15: Project Workshop"
+subtitle: "APA Results Reporting and Common Mistakes"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+::: {.callout-tip}
+## Before You Begin
+This reading provides the practical guidance you need to write the Results section of your research report. Keep it open while drafting. The examples here follow APA 7th edition format, which is the standard for psychology.
+:::
 
-## Reading Guide
+This reading covers:
 
-### Key Points to Focus On
+- The structure and purpose of a Results section
+- How to report t-tests in APA format
+- How to report correlations in APA format
+- Creating effective tables and figures
+- Common mistakes and how to avoid them
 
-1. TBC
-2. TBC
-3. TBC
+---
 
-### Questions to Consider
+## Part 1: The Purpose of a Results Section
 
-- TBC
-- TBC
-- TBC
+### What Goes in Results?
 
-## Additional Resources
+The Results section answers one question: **What did you find?**
 
-- TBC
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Include:**
+
+- Descriptive statistics (means, standard deviations)
+- Inferential statistics (test results, p-values)
+- Effect sizes
+- Tables and figures summarising key findings
+
+**Do NOT include:**
+
+- Interpretation of what the results mean (save for Discussion)
+- Methodological details (those belong in Method)
+- Raw data or individual scores
+- Lengthy prose when a table would be clearer
+:::
+
+### The Logic of Results Reporting
+
+Think of your Results section as telling a story with numbers:
+
+1. **Describe** the data (what do the numbers look like?)
+2. **Test** the hypothesis (is the difference/relationship significant?)
+3. **Quantify** the effect (how big is it?)
+
+Each analysis follows this pattern: descriptives, then inferential test, then effect size.
+
+---
+
+## Part 2: Reporting Descriptive Statistics
+
+### Basic Format
+
+Always report both the mean AND standard deviation:
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
+**Format:** (*M* = value, *SD* = value)
+
+**Example:** Memory scores were moderate (*M* = 6.80, *SD* = 1.58).
+:::
+
+### APA Conventions for Numbers
+
+| Rule | Example |
+|------|---------|
+| Use numerals for statistics | *M* = 6.80 (not "six point eight") |
+| Two decimal places typically | *SD* = 1.58 |
+| No leading zero when value cannot exceed 1 | *p* = .023 (not *p* = 0.023) |
+| Use leading zero when value can exceed 1 | *d* = 0.45 |
+| Italicise statistical symbols | *M*, *SD*, *t*, *p*, *r*, *d*, *F*, *N*, *n* |
+
+### Reporting for Two Groups
+
+When comparing conditions, report descriptives for both:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Example:**
+
+Participants who studied concrete words (*M* = 7.40, *SD* = 1.35) recalled more words than those who studied abstract words (*M* = 5.80, *SD* = 1.62).
+:::
+
+### Reporting for Two Conditions (Within-Subjects)
+
+For pre-post or repeated measures:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Example:**
+
+Mood ratings increased from pre-session (*M* = 5.20, *SD* = 1.85) to post-session (*M* = 6.10, *SD* = 1.72).
+:::
+
+---
+
+## Part 3: Reporting t-Tests
+
+### The Independent Samples t-Test
+
+Use when comparing two **different groups** (between-subjects design).
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA Format:**
+
+*t*(df) = value, *p* = value, *d* = value
+
+**Components:**
+
+- *t* = the t-statistic
+- df = degrees of freedom (total N - 2 for independent t-test)
+- *p* = p-value
+- *d* = Cohen's d effect size
+:::
+
+### Independent t-Test: Full Example
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Scenario:** Comparing memory scores between Lab A (abstract words) and Lab B (concrete words).
+
+**Full write-up:**
+
+Participants who studied concrete words (*M* = 7.40, *SD* = 1.35) recalled significantly more words than those who studied abstract words (*M* = 5.80, *SD* = 1.62), *t*(38) = 3.40, *p* = .002, *d* = 1.07. This represents a large effect.
+:::
+
+### The Paired Samples t-Test
+
+Use when comparing two **conditions from the same participants** (within-subjects design).
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA Format:**
+
+*t*(df) = value, *p* = value, *d* = value
+
+**Note:** df = N - 1 for paired t-test (number of pairs minus 1)
+:::
+
+### Paired t-Test: Full Example
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Scenario:** Comparing mood before and after the lab session.
+
+**Full write-up:**
+
+Mood ratings increased significantly from pre-session (*M* = 5.20, *SD* = 1.85) to post-session (*M* = 6.10, *SD* = 1.72), *t*(29) = 2.84, *p* = .008, *d* = 0.52. This represents a medium effect.
+:::
+
+### Reporting Non-Significant Results
+
+Non-significant results are still results and should be reported:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Example:**
+
+There was no significant difference in stress ratings between pre-session (*M* = 4.30, *SD* = 2.10) and post-session (*M* = 4.50, *SD* = 1.95), *t*(29) = 0.58, *p* = .567, *d* = 0.10.
+:::
+
+::: {.callout-important}
+## Key Point
+Do NOT say "there was no effect" or "the IV had no effect." Say "there was no *significant* difference." The null result could reflect a true absence of effect, or insufficient power to detect a real effect.
+:::
+
+---
+
+## Part 4: Reporting Correlations
+
+### The Pearson Correlation
+
+Use when examining the **relationship between two continuous variables**.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA Format:**
+
+*r*(df) = value, *p* = value
+
+**Components:**
+
+- *r* = correlation coefficient (-1 to +1)
+- df = N - 2
+- *p* = p-value
+:::
+
+### Interpreting Correlation Strength
+
+| *r* value | Interpretation |
+|-----------|----------------|
+| .10 - .29 | Small/weak |
+| .30 - .49 | Medium/moderate |
+| .50 + | Large/strong |
+
+Note: These are guidelines, not rigid cutoffs.
+
+### Correlation: Full Example
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Scenario:** Examining relationship between self-rated throwing ability and actual accuracy.
+
+**Full write-up:**
+
+There was a significant positive correlation between self-rated throwing ability and actual throwing accuracy, *r*(38) = .42, *p* = .007. Participants who rated themselves as better throwers tended to perform better on the task. This represents a medium effect.
+:::
+
+### Non-Significant Correlation
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Example:**
+
+There was no significant correlation between extraversion scores and memory performance, *r*(38) = .15, *p* = .356.
+:::
+
+::: {.callout-warning}
+## Remember
+Correlation does NOT imply causation. Even when reporting a significant correlation, do not use causal language. Say "X was associated with Y" or "X correlated with Y," not "X caused Y."
+:::
+
+---
+
+## Part 5: Effect Sizes
+
+### Why Report Effect Sizes?
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
+**P-values tell you:** Is the effect statistically significant?
+
+**Effect sizes tell you:** How big is the effect?
+
+A significant p-value with a tiny effect size may be trivial.
+
+A non-significant p-value with a large effect size may be important (and suggest the study was underpowered).
+
+**APA 7th edition requires effect sizes for all statistical tests.**
+:::
+
+### Cohen's d (for t-tests)
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.20 | Small |
+| 0.50 | Medium |
+| 0.80 | Large |
+
+**Interpretation:** A *d* of 0.50 means the groups differ by half a standard deviation.
+
+### Pearson's r (for correlations)
+
+| r value | Interpretation |
+|---------|----------------|
+| 0.10 | Small |
+| 0.30 | Medium |
+| 0.50 | Large |
+
+Note: *r* itself is the effect size for correlations.
+
+---
+
+## Part 6: Tables and Figures
+
+### When to Use a Table
+
+Use tables when:
+
+- You have multiple statistics to report
+- Presenting data for several groups or conditions
+- The information would be unwieldy in text
+
+### Table Format (APA Style)
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Table 1**
+
+*Descriptive Statistics for Memory Task by Word Type*
+
+| Condition | *n* | *M* | *SD* |
+|-----------|-----|-----|------|
+| Abstract words | 20 | 5.80 | 1.62 |
+| Concrete words | 20 | 7.40 | 1.35 |
+
+*Note.* Memory scores ranged from 0 to 10.
+:::
+
+**APA Table Rules:**
+
+- Number tables sequentially (Table 1, Table 2...)
+- Provide a descriptive title in italics
+- Use horizontal lines only at top, below headers, and at bottom
+- No vertical lines
+- Include a note if needed for clarification
+
+### When to Use a Figure
+
+Use figures when:
+
+- You want to show a pattern or trend visually
+- Comparing groups is easier to grasp visually
+- Showing a correlation (scatterplot)
+
+### Figure Format (APA Style)
+
+::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Figure 1**
+
+*Mean Memory Scores by Word Type*
+
+[Bar chart would appear here]
+
+*Note.* Error bars represent standard error of the mean. ** *p* < .01.
+:::
+
+**APA Figure Rules:**
+
+- Number figures sequentially (Figure 1, Figure 2...)
+- Provide a descriptive title in italics
+- Label axes clearly
+- Include error bars for means (standard error or confidence interval)
+- Include a note explaining error bars and significance markers
+
+### Referring to Tables and Figures in Text
+
+Always refer to tables and figures in your text:
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good:** As shown in Table 1, participants in the concrete word condition recalled more words than those in the abstract word condition.
+
+**Good:** Figure 1 displays the mean memory scores by condition.
+:::
+
+---
+
+## Part 7: Structuring Your Results Section
+
+### Recommended Structure
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**1. Opening statement** (optional)
+
+Briefly orient the reader to what analyses you conducted.
+
+**2. Descriptive statistics**
+
+Report means and SDs for each condition/variable.
+
+**3. Inferential test**
+
+Report the statistical test, p-value, and effect size.
+
+**4. Brief statement of finding**
+
+One sentence stating whether the result supports or does not support your hypothesis.
+
+**5. Repeat for each analysis**
+
+If you have multiple hypotheses, address each in turn.
+:::
+
+### Full Results Section Example
+
+::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
+**Results**
+
+**Memory Task**
+
+An independent samples t-test was conducted to compare memory scores between conditions. Participants who studied concrete words (*M* = 7.40, *SD* = 1.35) recalled significantly more words than those who studied abstract words (*M* = 5.80, *SD* = 1.62), *t*(38) = 3.40, *p* = .002, *d* = 1.07. This large effect supports the hypothesis that concrete words are easier to remember than abstract words.
+
+**Pre-Post Mood**
+
+A paired samples t-test compared mood ratings before and after the lab session. Mood ratings increased significantly from pre-session (*M* = 5.20, *SD* = 1.85) to post-session (*M* = 6.10, *SD* = 1.72), *t*(29) = 2.84, *p* = .008, *d* = 0.52. This medium effect supports the hypothesis that mood would improve following the session.
+
+**Self-Rating and Performance**
+
+A Pearson correlation examined the relationship between self-rated throwing ability and actual performance. There was a significant positive correlation, *r*(38) = .42, *p* = .007, indicating that participants who rated themselves as better throwers tended to achieve higher accuracy scores.
+:::
+
+---
+
+## Part 8: Common Mistakes to Avoid
+
+### Mistake 1: Missing Descriptive Statistics
+
+::: {.callout-warning}
+## Wrong
+"There was a significant difference between groups, *t*(38) = 3.40, *p* = .002."
+
+## Correct
+Include the means and SDs so readers know *what* the difference was and *in which direction*.
+:::
+
+### Mistake 2: Incorrect p-value Formatting
+
+::: {.callout-warning}
+## Wrong
+- *p* = 0.023 (leading zero)
+- *p* = 0.00 (cannot equal zero)
+- p = .023 (not italicised)
+
+## Correct
+- *p* = .023
+- *p* < .001 (for very small p-values)
+:::
+
+### Mistake 3: Interpreting in Results
+
+::: {.callout-warning}
+## Wrong (in Results)
+"This significant difference shows that concrete words are processed more deeply, engaging semantic memory systems..."
+
+## Correct (in Results)
+"Concrete words were recalled significantly more often than abstract words."
+
+Save the interpretation for the Discussion.
+:::
+
+### Mistake 4: Forgetting Effect Sizes
+
+::: {.callout-warning}
+## Wrong
+"The difference was significant, *t*(38) = 3.40, *p* = .002."
+
+## Correct
+Include Cohen's *d* or another effect size measure.
+:::
+
+### Mistake 5: Overclaiming from Non-Significant Results
+
+::: {.callout-warning}
+## Wrong
+"There was no relationship between X and Y, *r*(38) = .15, *p* = .356."
+
+## Correct
+"There was no *significant* relationship..." or "The relationship was not statistically significant..."
+:::
+
+### Mistake 6: Causal Language for Correlations
+
+::: {.callout-warning}
+## Wrong
+"Higher extraversion *caused* better memory performance."
+
+## Correct
+"Higher extraversion was *associated with* better memory performance."
+:::
+
+### Mistake 7: Not Referring to Tables/Figures
+
+::: {.callout-warning}
+## Wrong
+Including a table that is never mentioned in the text.
+
+## Correct
+"As shown in Table 1..." or "Figure 1 displays..."
+:::
+
+### Mistake 8: Rounding Errors
+
+::: {.callout-warning}
+## Wrong
+Reporting *M* = 6.8 when you mean *M* = 6.80 (use consistent decimal places).
+
+## Correct
+Use two decimal places consistently for means, SDs, and test statistics.
+:::
+
+---
+
+## Part 9: Checklist for Your Results Section
+
+::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
+Before submitting, check that you have:
+
+**For each analysis:**
+
+- [ ] Reported means and SDs for all conditions
+- [ ] Reported the appropriate statistical test
+- [ ] Reported degrees of freedom
+- [ ] Reported the test statistic value
+- [ ] Reported the exact p-value (or *p* < .001)
+- [ ] Reported the effect size
+- [ ] Stated whether the result was significant
+- [ ] Connected findings to hypotheses
+
+**Formatting:**
+
+- [ ] Used italics for statistical symbols
+- [ ] Used two decimal places
+- [ ] Omitted leading zeros for p-values
+- [ ] Numbered and titled all tables and figures
+- [ ] Referenced all tables and figures in text
+
+**Content:**
+
+- [ ] Avoided interpretation (saved for Discussion)
+- [ ] Reported non-significant results too
+- [ ] Used appropriate language for correlations (not causal)
+:::
+
+---
+
+## Summary
+
+| Element | What to Include |
+|---------|-----------------|
+| **Descriptive statistics** | *M*, *SD* for each condition |
+| **Independent t-test** | *t*(df) = value, *p* = value, *d* = value |
+| **Paired t-test** | *t*(df) = value, *p* = value, *d* = value |
+| **Correlation** | *r*(df) = value, *p* = value |
+| **Tables** | Numbered, titled, clean format |
+| **Figures** | Numbered, titled, with error bars |
+
+---
+
+## Check Your Understanding
+
+Before writing your Results:
+
+1. What information should you include for a t-test?
+2. How do you report a correlation in APA format?
+3. Why are effect sizes important alongside p-values?
+4. What is the difference between Results and Discussion content?
+5. How do you refer to a table in your text?
+
+---
+
+## Further Reading
+
+For additional guidance:
+
+- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). [The definitive reference]
+- Purdue OWL APA Guide: [https://owl.purdue.edu/owl/research_and_citation/apa_style/](https://owl.purdue.edu/owl/research_and_citation/apa_style/)
+- Your course handbook for specific requirements
+

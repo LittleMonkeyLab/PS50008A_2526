@@ -1,67 +1,299 @@
 ---
-title: "Data Analysis and Reporting"
+title: "Report Writing Workshop"
 subtitle: "PS50008A Week 20 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-25"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w20-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-03-25"
-  labels: ['statistics', 'apa-style', 'webr']
-  depends_on:
-    - rm0-w20-lab-slides
-  blocks:
-    - rm0-w20-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-03-25"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 20 lecture.
+## Focus for Today
+This workshop focuses on **writing up your research**. By the end, you should understand:
+
+- How to structure a Results section
+- How to create effective figures
+- How to write a Discussion section
+- How to integrate all sections into a coherent report
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Results Section Structure (25 min)
 
-TBC - Activity content
+### Results Section Components
+
+A Results section typically includes:
+
+1. **Preliminary analyses** (data cleaning, assumption checks)
+2. **Descriptive statistics** (means, SDs, sample characteristics)
+3. **Main analyses** (tests of your hypotheses)
+4. **Additional analyses** (if relevant)
+
+**Which should come FIRST in a Results section?**
+
+`r mcq(c("The most exciting finding", answer = "Descriptive statistics and preliminary analyses", "The discussion of results", "References"))`
+
+### Reporting Statistics
+
+APA format requires specific statistical reporting:
+
+**Which is correctly formatted (APA style)?**
+
+`r mcq(c("T=2.34, p=.02", "t = 2.34, p = 0.02", answer = "t(45) = 2.34, p = .021", "the t-test was significant"))`
+
+**For a correlation, the correct format is:**
+
+`r mcq(c("r = .45", answer = "r(48) = .45, p = .002", "R = 0.45, p < .05", "correlation was significant"))`
+
+::: {.callout-note}
+## Key APA Statistical Reporting Rules
+- Report exact p-values (e.g., p = .034), not just p < .05
+- Use italics for statistical symbols (t, F, r, p)
+- Include degrees of freedom: t(df), F(df1, df2), r(N-2)
+- Report effect sizes (Cohen's d, eta-squared, etc.)
+- Round to 2-3 decimal places (but p-values to 3)
+:::
+
+### Describing Results
+
+**True or False: The Results section should interpret what the findings mean.** `r torf(FALSE)`
+
+**The Results section should:**
+
+`r mcq(c("Explain why findings occurred", "Compare to other studies", answer = "Report what was found without interpretation", "Include limitations"))`
+
+### Practice: Identify the Error
+
+> "The t-test showed a significant difference (p < .05), proving that music improves memory."
+
+**What's wrong with this statement?**
+
+`r mcq(c("Nothing - it's correct", "The p-value format is wrong", answer = "It interprets/proves causation - should just report the finding", "T-tests can't be significant"))`
 
 ---
 
-## Part 2: Exercises
+## Activity 2: Creating Figures (25 min)
 
-TBC - Interactive exercises
+### When to Use Figures
 
-```{webr-r}
-# Example code
+::: {.callout-tip}
+## Figure vs Table Decision
+Use a **figure** when:
 
+- Showing patterns, trends, or relationships
+- Comparing groups visually
+- Demonstrating distributions
 
-```
+Use a **table** when:
+
+- Presenting precise numerical values
+- Showing many statistics efficiently
+- Readers need to look up specific numbers
+:::
+
+**For showing the difference between two group means, you should use:**
+
+`r mcq(c(answer = "A bar chart or box plot", "A pie chart", "A table only", "A flow diagram"))`
+
+**For showing the relationship between two continuous variables, use:**
+
+`r mcq(c("A bar chart", "A pie chart", answer = "A scatter plot", "A table"))`
+
+### Figure Requirements (APA)
+
+**Every figure must have:**
+
+`r mcq(c("Just a title", "Just a number", answer = "A number, title, and explanatory note/caption", "Nothing - figures speak for themselves"))`
+
+**True or False: Figures should be interpretable without reading the main text.** `r torf(TRUE)`
+
+### Common Figure Mistakes
+
+**Which is a problem in data visualisation?**
+
+`r mcq(c("Starting the y-axis at zero", "Including error bars", answer = "Using 3D effects that distort proportions", "Labelling axes clearly"))`
+
+**Error bars on a graph typically represent:**
+
+`r mcq(c("The mean", answer = "Standard deviation, standard error, or confidence intervals", "The sample size", "The p-value"))`
+
+**True or False: You must specify what your error bars represent.** `r torf(TRUE)`
+
+### Figure Checklist
+
+For each figure, check:
+
+- [ ] Clear, informative title
+- [ ] Axes labelled with units
+- [ ] Legend (if needed)
+- [ ] Error bars with specification
+- [ ] No unnecessary decoration
+- [ ] Referenced in text ("As shown in Figure 1...")
+
+---
+
+## Activity 3: Discussion Section (25 min)
+
+### Discussion Structure
+
+A Discussion section typically includes:
+
+1. **Summary of findings** (1-2 sentences)
+2. **Interpretation** (what do findings mean?)
+3. **Relation to literature** (how do findings fit with previous research?)
+4. **Limitations**
+5. **Future directions**
+6. **Conclusion**
+
+**Which should come FIRST in a Discussion?**
+
+`r mcq(c("Limitations", "Future research ideas", answer = "Brief summary of main findings", "Detailed methodology critique"))`
+
+### Interpreting Results
+
+**If your hypothesis was supported, you should:**
+
+`r mcq(c("Claim you proved your hypothesis", answer = "State that results are consistent with your hypothesis and discuss possible explanations", "Ignore other possible explanations", "Criticise other researchers"))`
+
+**If your hypothesis was NOT supported, you should:**
+
+`r mcq(c("Hide the findings", "Claim the study was flawed", answer = "Report honestly and consider possible explanations for null results", "Change your hypothesis to match the data"))`
+
+**True or False: Null results are still valuable and publishable.** `r torf(TRUE)`
+
+### Discussing Limitations
+
+**Which is a constructive way to present limitations?**
+
+`r mcq(c("This study was terrible because of sampling problems", answer = "The convenience sample limits generalisability; future research should use more diverse populations", "There were no limitations", "Blame the participants for bad data"))`
+
+### Limitations Checklist
+
+Common limitations to consider:
+
+- [ ] Sample characteristics (size, diversity, representativeness)
+- [ ] Design limitations (correlational vs experimental)
+- [ ] Measurement issues (reliability, validity)
+- [ ] Procedural issues (confounds, demand characteristics)
+- [ ] Generalisability
+
+**True or False: You should discuss how limitations might have affected your results.** `r torf(TRUE)`
+
+### Connecting to Literature
+
+**In the Discussion, when comparing your findings to previous research:**
+
+`r mcq(c("Only cite studies that agree with you", answer = "Discuss both consistent and inconsistent findings and explain possible reasons for differences", "Ignore previous research", "Criticise all other studies"))`
+
+---
+
+## Activity 4: Putting It Together (25 min)
+
+### Report Structure Review
+
+**APA report order:**
+
+`r mcq(c("Introduction, Discussion, Method, Results", "Method, Results, Introduction, Discussion", answer = "Introduction, Method, Results, Discussion", "Results, Discussion, Method, Introduction"))`
+
+### Coherence Check
+
+Your report should tell a coherent story:
+
+1. **Introduction**: Sets up the question and hypothesis
+2. **Method**: Explains how you tested it
+3. **Results**: Reports what you found
+4. **Discussion**: Interprets what it means
+
+**True or False: A reader should be able to predict your Results from your Introduction.** `r torf(TRUE)`
+
+**True or False: Your Discussion should only address hypotheses mentioned in your Introduction.** `r torf(TRUE)`
+
+### Abstract Writing
+
+The Abstract is written LAST but appears FIRST:
+
+**An Abstract should include:**
+
+`r mcq(c("Only the research question", "Only the results", answer = "Background, method, results, and conclusions - a complete summary", "Just your opinion about the findings"))`
+
+**Typical Abstract length:**
+
+`r mcq(c("50 words", answer = "150-250 words", "500 words", "No limit"))`
+
+### Final Checklist
+
+Before submitting, verify:
+
+- [ ] Title page complete
+- [ ] Abstract present (150-250 words)
+- [ ] Introduction ends with clear hypotheses
+- [ ] Method is detailed enough to replicate
+- [ ] Results reports all analyses
+- [ ] Discussion interprets findings
+- [ ] References in APA format
+- [ ] Tables and Figures properly formatted
+- [ ] Proofread for errors
+
+---
+
+## Writing Tips
+
+::: {.callout-tip}
+## Effective Academic Writing
+
+1. **Be concise** - say what you need to, no more
+2. **Use past tense** for Method and Results
+3. **Use present tense** for established facts and your conclusions
+4. **Avoid informal language** - no contractions, no "I think"
+5. **Define terms** before using abbreviations
+6. **One idea per paragraph**
+7. **Topic sentences** - first sentence should preview the paragraph
+:::
+
+### Common Writing Errors
+
+**Which is written in appropriate academic style?**
+
+`r mcq(c("The results were really cool and super significant", "I think memory is affected by music", answer = "Results indicated a significant effect of music on memory performance", "Basically, music helps you remember stuff better"))`
+
+**True or False: "Participants were ran through the procedure" is grammatically correct.** `r torf(FALSE)`
+
+*Correct form: "Participants were run through the procedure"*
+
+---
+
+## Group Writing Exercise
+
+Take 10 minutes to draft ONE paragraph of your Discussion:
+
+1. Choose: Summary / Interpretation / Limitations
+2. Write the paragraph
+3. Exchange with another group member
+4. Provide feedback using the checklist
+
+### Peer Feedback Checklist
+
+- [ ] Clear topic sentence
+- [ ] Appropriate academic tone
+- [ ] No unsupported claims
+- [ ] Logical flow
+- [ ] Correctly formatted citations
 
 ---
 
@@ -69,14 +301,25 @@ TBC - Interactive exercises
 
 ::: {.callout-important}
 ## Summary
-1. TBC
-2. TBC
-3. TBC
+
+1. **Results sections** report findings without interpretation - save that for Discussion
+2. **Figures** should be clear, properly labelled, and referenced in text
+3. **Discussion** interprets findings, addresses limitations, and connects to literature
+4. **Coherence** - your report should tell a logical story from Introduction to Discussion
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 20 Self-Assessment](self-assessment.qmd)
-- Prepare for Week next term
+- Complete your data analysis
+- Draft each section of your report
+- Use peer feedback to improve
+- Check formatting against APA guidelines
+- Submit by the deadline!
+
+::: {.callout-warning}
+## Report Deadline
+Your final report is due [DATE]. Allow time for proofreading and formatting.
+:::
+

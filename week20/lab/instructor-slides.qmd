@@ -1,71 +1,506 @@
 ---
-title: "Data Analysis and Reporting"
+title: "Report Writing Workshop"
 subtitle: "PS50008A Week 20 Lab"
 author: "Gordon Wright"
-date: "2026-03-25"
+date: "2026-03-26"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w20-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-25"
-  labels: ['statistics', 'apa-style']
-  depends_on:
-    - rm0-w20-lecture-slides
-  blocks:
-    - rm0-w20-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-03-25"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Data Analysis and Reporting**
+## Report Writing Workshop
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Final Lab of the Module!
+
+::: {.callout-important}
+## Last Teaching Session
+
+This is your final PS50008A lab session. Use it well!
+
+After today, support continues via:
+
+- Office hours (until submission deadline)
+- Discussion board on Learn.gold
+- Writing Centre appointments
 :::
 
 ---
 
-## Learning Objectives
+## Today's Focus
 
-By the end of this lab, you will be able to:
+::: {.objectives-box}
+**Report Writing Workshop**
 
-- TBC
-- TBC
-- TBC
+Today you will:
+
+- Compile and review your group data
+- Begin preliminary analysis
+- Understand the lab report structure
+- Start drafting sections of your Research Report
+- Identify remaining questions and get answers
+:::
 
 ---
 
-## Lab Structure
+## Session Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:20 | Data compilation and review |
+| 10:20-10:40 | Lab report structure overview |
+| 10:40-11:20 | Guided writing workshop |
+| 11:20-11:45 | Individual writing time with support |
+| 11:45-12:00 | Final Q&A and next steps |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+# Data Compilation {background-color="#275882"}
 
-Move to the [Lab Activity](activity.qmd)
+## Bringing It Together (~20 min)
+
+---
+
+## Data Status Check
+
+::: {.poll-box}
+**Quick check around the room:**
+
+- How many participants did each group collect in total?
+- Did everyone reach their target N?
+- Any groups with data collection issues?
+:::
+
+---
+
+## Compiling Your Data
+
+::: {.definition-box}
+**If you used paper data sheets:**
+
+1. Gather all sheets together
+2. Check for completeness
+3. Enter into a spreadsheet (Excel/Google Sheets)
+4. Double-check entries against original
+
+**If you used digital collection:**
+
+1. Export your data
+2. Check for missing values
+3. Verify all participants are included
+:::
+
+---
+
+## Data Organisation
+
+::: {.example-box}
+**Good spreadsheet structure:**
+
+| participant_id | condition | dv_score | age | gender |
+|----------------|-----------|----------|-----|--------|
+| 1 | music | 7 | 19 | F |
+| 2 | silence | 9 | 20 | M |
+| 3 | music | 6 | 19 | F |
+
+- One row per participant
+- One column per variable
+- Clear variable names
+- No merged cells
+:::
+
+---
+
+## Activity: Compile Data
+
+::: {.exercise-box}
+**In your groups (15 minutes):**
+
+1. Pool all data from group members
+2. Enter into a single spreadsheet (if not already)
+3. Calculate your total N
+4. Check for any obvious errors or outliers
+5. Note any excluded participants and why
+:::
+
+---
+
+## Checkpoint 1
+
+::: {.poll-box}
+**Instructor Check:**
+
+- Is everyone's data compiled?
+- Any groups with N below target?
+- Any data quality concerns?
+:::
+
+---
+
+# Lab Report Structure {background-color="#275882"}
+
+## Overview (~20 min)
+
+---
+
+## The Complete Report
+
+| Section | Purpose | Length (approx) |
+|---------|---------|-----------------|
+| Title | Describes study concisely | 10-15 words |
+| Abstract | Summary of entire study | 150-250 words |
+| Introduction | Background, rationale, hypotheses | 500-700 words |
+| Method | How you did it | 400-600 words |
+| Results | What you found | 300-500 words |
+| Discussion | What it means | 500-700 words |
+| References | Sources cited | N/A |
+
+---
+
+## Where to Start?
+
+::: {.callout-tip}
+## Writing Strategy
+
+**Don't write in order!**
+
+Best sequence for writing:
+
+1. **Method** (easiest - you know what you did)
+2. **Results** (once you have data)
+3. **Introduction** (sets up the story)
+4. **Discussion** (interprets findings)
+5. **Abstract** (last - summarises everything)
+:::
+
+---
+
+## Method Section Structure
+
+::: {.definition-box}
+**Participants**
+
+- How many? (N = ?)
+- Demographics (age, gender breakdown)
+- How recruited?
+- Any exclusions?
+
+**Design**
+
+- Type (between/within/correlational)
+- IV and DV (operationally defined)
+:::
+
+---
+
+## Method Section Structure
+
+::: {.definition-box}
+**Materials**
+
+- What did you use?
+- Describe stimuli, measures, equipment
+- Include reliability if using questionnaires
+
+**Procedure**
+
+- Step-by-step what happened
+- Written in past tense
+- Enough detail to replicate
+:::
+
+---
+
+## Results Section Structure
+
+::: {.definition-box}
+**Descriptive Statistics**
+
+- Means, SDs for each condition/group
+- Can include a table or figure
+
+**Inferential Statistics**
+
+- The test you ran
+- Test statistic, df, p-value
+- Effect size
+
+**Written in APA format!**
+:::
+
+---
+
+## APA Results Example
+
+::: {.example-box}
+**For an independent-samples t-test:**
+
+"Participants in the music condition (*M* = 6.2, *SD* = 1.5) recalled fewer words than those in the silence condition (*M* = 8.1, *SD* = 1.3). This difference was statistically significant, *t*(38) = 4.31, *p* < .001, *d* = 1.37, suggesting a large effect of background music on memory performance."
+:::
+
+---
+
+## Discussion Section Structure
+
+::: {.definition-box}
+1. **Restate main finding** (no statistics, plain English)
+2. **Interpret the result** (what does it mean?)
+3. **Compare to literature** (how does it fit with previous research?)
+4. **Acknowledge limitations** (what could be improved?)
+5. **Future directions** (what next?)
+6. **Conclusion** (take-home message)
+:::
+
+---
+
+# Guided Writing Workshop {background-color="#275882"}
+
+## Start Drafting (~40 min)
+
+---
+
+## Activity: Draft Your Method
+
+::: {.exercise-box}
+**Individual writing (20 minutes):**
+
+Using your group's procedure and data:
+
+1. Write the **Participants** subsection
+2. Write the **Design** subsection
+3. Begin the **Procedure** subsection
+
+**Use past tense! You have already run the study.**
+:::
+
+---
+
+## Method Writing Tips
+
+::: {.callout-tip}
+## Common Mistakes to Avoid
+
+- Writing in future tense ("participants will complete...")
+- Including unnecessary detail ("the pen was blue")
+- Missing critical detail ("participants did a memory task")
+- Using first person excessively ("I gave them...")
+- Not defining your variables operationally
+:::
+
+---
+
+## Checkpoint 2
+
+::: {.poll-box}
+**Quick check:**
+
+- Has everyone started their Method section?
+- Any questions about what to include?
+- Anyone stuck?
+:::
+
+---
+
+## Activity: Plan Your Results
+
+::: {.exercise-box}
+**In your groups (10 minutes):**
+
+1. What descriptive statistics will you report?
+2. What inferential test will you use?
+3. Sketch out a results table or figure
+4. Write one sentence describing your main finding
+
+**You don't need to have run the analysis yet - just plan it!**
+:::
+
+---
+
+## Results Planning Help
+
+:::: {.columns}
+::: {.column width="50%"}
+**If between-subjects:**
+
+- Report M and SD per group
+- Use independent t-test
+- Report *t*, *df*, *p*, *d*
+:::
+
+::: {.column width="50%"}
+**If within-subjects:**
+
+- Report M and SD per condition
+- Use paired t-test
+- Report *t*, *df*, *p*, *d*
+:::
+::::
+
+::: {.callout-note}
+**If correlational:** Report *r*, *p*, and interpret direction
+:::
+
+---
+
+## Activity: Outline Your Discussion
+
+::: {.exercise-box}
+**Individual (10 minutes):**
+
+Write bullet points for each discussion section:
+
+1. Main finding (one sentence, no numbers)
+2. What it means (your interpretation)
+3. How it relates to theory (which concepts/studies?)
+4. Main limitations (2-3 points)
+5. Future direction (one idea)
+:::
+
+---
+
+# Individual Writing Time {background-color="#275882"}
+
+## With Instructor Support (~25 min)
+
+---
+
+## Open Writing Session
+
+::: {.callout-note}
+## Next 25 Minutes
+
+Use this time to:
+
+- Continue drafting any section
+- Ask instructors specific questions
+- Clarify requirements
+- Get feedback on your plan
+
+**This is dedicated writing time - use it!**
+:::
+
+---
+
+## Common Questions
+
+| Question | Quick Answer |
+|----------|--------------|
+| How long should it be? | ~2500-3000 words total (check assignment brief) |
+| Can I use "I"? | Sparingly - APA allows limited first person |
+| What if my hypothesis wasn't supported? | Still interesting! Discuss why |
+| Do I need to cite everything? | Key claims need citations |
+| What if I don't have enough participants? | Discuss as limitation, report what you have |
+
+---
+
+# Final Q&A {background-color="#275882"}
+
+## Last Questions (~15 min)
+
+---
+
+## Open Questions
+
+::: {.poll-box}
+**What questions do you still have about:**
+
+- The Research Report assignment?
+- APA formatting?
+- Analysis procedures?
+- Interpreting your results?
+- Any other concerns?
+:::
+
+---
+
+## Support After Today
+
+::: {.definition-box}
+**Office Hours**
+
+- Continue until submission deadline
+- Book via [system/method]
+
+**Discussion Board**
+
+- Post questions on Learn.gold
+- Check for answers to common questions
+
+**Writing Centre**
+
+- Academic writing support
+- Book appointments early!
+:::
+
+---
+
+## Research Report Timeline
+
+| Date | What to Do |
+|------|------------|
+| This week | Complete Method draft, run analysis |
+| Early April | Write Results with figures/tables |
+| Mid April | Draft Introduction and Discussion |
+| Late April | Revise, proofread, format |
+| **1 May, 4pm** | **SUBMIT via Learn.gold** |
+
+---
+
+## Before You Leave
+
+::: {.callout-important}
+## Final Checklist
+
+1. Data compiled and checked
+2. Method section started
+3. Results plan outlined
+4. Discussion points identified
+5. Questions answered
+6. Know where to get help
+:::
+
+---
+
+## Thank You!
+
+::: {.callout-tip}
+## Congratulations!
+
+You have completed all PS50008A labs!
+
+You now know how to:
+
+- Design a research study
+- Collect data ethically
+- Analyse and interpret results
+- Write up research professionally
+
+Good luck with your Research Report!
+:::
+
+---
+
+# Good luck! {background-color="#275882"}
+
+## Research Report due: 1 May 2026
+
+::: {.notes}
+**Instructor Notes:**
+
+- Ensure everyone has their data compiled
+- Note students who need extra support
+- Remind about office hours and support channels
+- Check that everyone understands the deadline
+- Collect any group materials that need to be stored
+- Thank students for their participation this term
+:::

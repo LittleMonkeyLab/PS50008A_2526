@@ -1,67 +1,91 @@
 ---
 title: "Week 18 Self-Assessment"
-subtitle: "MCQ Exam Preparation"
+subtitle: "MCQ Practice - Mixed Review"
 ---
 
-```{r, echo=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(webexercises)
 ```
 
 ## Instructions
 
-The MCQ exam is this week. This quiz provides final practice in the exact exam format. Work through each investigation carefully, applying everything you've learned.
+This quiz provides comprehensive practice across all topics covered this term. Work through each investigation carefully, as this mirrors the exam format. Test your ability to identify designs, select appropriate tests, and interpret results.
 
 ---
 
-## Final Practice: Full Exam Format
+## Part 1: Conceptual Review
+
+### Question 1: Design Types
+
+Match each scenario to its design type:
+
+Different participants in each condition: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Case study"))`
+
+Same participants tested in all conditions: `r mcq(c("Between-subjects", answer = "Within-subjects", "Correlational", "Matched pairs"))`
+
+Measuring the relationship between two variables without manipulation: `r mcq(c("Between-subjects", "Within-subjects", answer = "Correlational", "Experimental"))`
+
+### Question 2: Test Selection
+
+Two independent groups: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+Same participants, two time points: `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "ANOVA"))`
+
+Relationship between two continuous variables: `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "Chi-square"))`
+
+### Question 3: Statistical Significance
+
+p < .05 means the result is: `r mcq(c("Definitely true", answer = "Statistically significant at alpha = .05", "Practically important", "100% reliable"))`
+
+p = .08 means: `r mcq(c("Significant at .05", answer = "Not significant at .05", "Definitely no effect", "Large effect"))`
+
+### Question 4: Effect Sizes
+
+Cohen's d = 0.2 is: `r mcq(c(answer = "Small", "Medium", "Large", "Negligible"))`
+
+Cohen's d = 0.5 is: `r mcq(c("Small", answer = "Medium", "Large", "Very large"))`
+
+Cohen's d = 0.8 is: `r mcq(c("Small", "Medium", answer = "Large", "Massive"))`
+
+### Question 5: Correlation Interpretation
+
+r = .65 indicates: `r mcq(c("Weak positive", answer = "Moderate-strong positive", "Weak negative", "Strong negative"))`
+
+r = -.40 indicates: `r mcq(c("Weak positive", "Strong positive", answer = "Moderate negative", "No relationship"))`
+
+### Question 6: Key Concepts
+
+Correlation implies causation: `r torf(FALSE)`
+
+Effect size tells us practical importance: `r torf(TRUE)`
+
+A 95% CI that excludes zero suggests significance at p < .05: `r torf(TRUE)`
+
+---
+
+## Part 2: Full Investigation Practice
 
 ::: {.webex-check .webex-box}
 
 ### Investigation 1
 
-A researcher examines whether caffeine affects alertness. 50 participants are randomly assigned to drink either caffeinated or decaffeinated coffee. Alertness is measured 30 minutes later using a standardised scale.
+A researcher tests whether background music affects concentration. 60 participants are randomly assigned to work in silence or with classical music playing. Concentration is measured using an error-counting task.
 
-1. **What type of design is this?**
+1. **Design type:** `r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Matched pairs"))`
 
-   `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+2. **IV:** `r mcq(c(answer = "Background condition (silence vs music)", "Concentration score", "Number of errors", "No IV"))`
 
-2. **What is the IV?**
+3. **DV:** `r mcq(c("Music condition", answer = "Concentration (error count)", "Participant preference", "Room assignment"))`
 
-   `r mcq(c(answer = "Coffee type (caffeinated vs decaffeinated)", "Alertness score", "Time (30 minutes)", "No IV"))`
+4. **Appropriate test:** `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
 
-3. **What is the DV?**
+5. **One-tailed hypothesis:** `r mcq(c("Music will affect concentration", answer = "Participants working in silence will make fewer errors than those with music", "There is no effect of music", "Errors and music are correlated"))`
 
-   `r mcq(c("Coffee type", answer = "Alertness score", "Caffeine content", "Participant age"))`
+6. **Results: t(58) = 2.34, p = .023, d = 0.61. Significant at alpha = .05?** `r torf(TRUE)`
 
-4. **Which hypothesis is one-tailed?**
-
-   ```{r}
-   opts_h1 <- c(
-     "Caffeine will affect alertness",
-     answer = "Participants who drink caffeinated coffee will have higher alertness than those who drink decaffeinated coffee",
-     "There will be no difference in alertness between groups",
-     "Alertness and caffeine are related"
-   )
-   ```
-
-   `r longmcq(opts_h1)`
-
-5. **Which statistical test is appropriate?**
-
-   `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
-
-6. **Results: t(48) = 3.21, p = .002, d = 0.91. Which conclusion is correct?**
-
-   ```{r}
-   opts_c1 <- c(
-     "There is no significant difference in alertness",
-     answer = "Participants who drank caffeinated coffee were significantly more alert, with a large effect size",
-     "The decaffeinated group was more alert",
-     "We cannot draw any conclusions from these results"
-   )
-   ```
-
-   `r longmcq(opts_c1)`
+7. **Effect size:** `r mcq(c("Small", answer = "Medium", "Large", "Not meaningful"))`
 
 :::
 
@@ -69,31 +93,21 @@ A researcher examines whether caffeine affects alertness. 50 participants are ra
 
 ### Investigation 2
 
-A researcher investigates whether therapy reduces anxiety. 30 participants complete an anxiety questionnaire before and after 8 weeks of cognitive behavioural therapy.
+A researcher measures stress levels before and after a relaxation intervention in 25 participants.
 
-1. **What type of design is this?**
+1. **Design type:** `r mcq(c("Between-subjects", answer = "Within-subjects", "Correlational", "Case study"))`
 
-   `r mcq(c("Between-subjects", answer = "Within-subjects", "Matched pairs", "Correlational"))`
+2. **IV:** `r mcq(c(answer = "Time (before vs after relaxation)", "Stress level", "Relaxation technique", "No IV"))`
 
-2. **What is the IV?**
+3. **DV:** `r mcq(c("Time point", answer = "Stress level", "Intervention type", "Participant anxiety"))`
 
-   `r mcq(c(answer = "Time (before vs after therapy)", "Anxiety score", "Type of therapy", "No IV"))`
+4. **Appropriate test:** `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "ANOVA"))`
 
-3. **What is the DV?**
+5. **Results: t(24) = -3.89, p < .001, d = 0.78. The negative t-value indicates:** `r mcq(c("Error in analysis", answer = "Stress decreased (before was higher than after)", "Not significant", "Positive effect"))`
 
-   `r mcq(c("Time point", answer = "Anxiety score", "Therapy sessions completed", "Participant motivation"))`
+6. **Effect size:** `r mcq(c("Small", answer = "Medium-large", "Very small", "Cannot determine"))`
 
-4. **Which statistical test is appropriate?**
-
-   `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Mann-Whitney U"))`
-
-5. **Results: t(29) = -4.56, p < .001, d = 0.83. The negative t-value indicates:**
-
-   `r mcq(c("The result is not significant", answer = "Anxiety decreased after therapy (before > after)", "An error in calculation", "The effect is negative and meaningless"))`
-
-6. **The effect size (d = 0.83) is:**
-
-   `r mcq(c("Small", "Medium", answer = "Large", "Too small to matter"))`
+7. **Conclusion:** `r mcq(c(answer = "Stress significantly decreased after relaxation, medium-large effect", "No change in stress", "Stress increased", "Inconclusive"))`
 
 :::
 
@@ -101,31 +115,21 @@ A researcher investigates whether therapy reduces anxiety. 30 participants compl
 
 ### Investigation 3
 
-A researcher measures hours of social media use and self-esteem scores in 100 university students to examine their relationship.
+A researcher examines whether screen time is related to sleep quality in 80 teenagers.
 
-1. **What type of design is this?**
+1. **Design type:** `r mcq(c("Between-subjects", "Within-subjects", answer = "Correlational", "Quasi-experimental"))`
 
-   `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+2. **Is there an IV?** `r mcq(c("Yes, screen time", "Yes, sleep quality", answer = "No IV - both variables are measured", "Yes, age"))`
 
-2. **What is the IV?**
+3. **Appropriate test:** `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "Chi-square"))`
 
-   `r mcq(c("Social media use", "Self-esteem score", "Student year", answer = "No IV — both variables are measured"))`
+4. **Results: r(78) = -.42, p < .001. Direction:** `r mcq(c("Positive", answer = "Negative (more screen time, worse sleep)", "No relationship", "Cannot tell"))`
 
-3. **In a correlational design, the DV is:**
+5. **Strength:** `r mcq(c("Weak", answer = "Moderate", "Strong", "Perfect"))`
 
-   `r mcq(c("Social media use", "Self-esteem score", answer = "Neither — both variables are measured with no DV", "Student age"))`
+6. **Can we conclude screen time CAUSES poor sleep?** `r torf(FALSE)`
 
-4. **Which statistical test is appropriate?**
-
-   `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "ANOVA"))`
-
-5. **Results: r(98) = -.32, p = .001. This indicates:**
-
-   `r mcq(c("No relationship", "A strong positive relationship", answer = "A moderate negative relationship", "A perfect negative relationship"))`
-
-6. **Can we conclude that social media use CAUSES lower self-esteem?**
-
-   `r mcq(c("Yes, the correlation proves causation", answer = "No, correlations cannot establish causation", "Yes, because p < .05", "It depends on the effect size"))`
+7. **Name a possible third variable:** `r mcq(c(answer = "Stress, depression, or poor time management", "The correlation itself", "Sample size", "p-value"))`
 
 :::
 
@@ -133,31 +137,19 @@ A researcher measures hours of social media use and self-esteem scores in 100 un
 
 ### Investigation 4
 
-A researcher compares problem-solving performance between people who slept 8 hours versus 4 hours the previous night. 60 participants are recruited, with 30 in each group.
+A researcher compares reaction times between morning people (n=35) and evening people (n=35), tested at 9am.
 
-1. **What type of design is this?**
+1. **Design type:** `r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Repeated measures"))`
 
-   `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+2. **IV:** `r mcq(c(answer = "Chronotype (morning vs evening person)", "Reaction time", "Test time", "No IV"))`
 
-2. **What is the IV?**
+3. **DV:** `r mcq(c("Chronotype", answer = "Reaction time", "Time of testing", "Participant preference"))`
 
-   `r mcq(c(answer = "Sleep duration (8 hours vs 4 hours)", "Problem-solving score", "Recruitment method", "No IV"))`
+4. **Appropriate test:** `r mcq(c(answer = "Independent t-test", "Paired t-test", "Correlation", "Regression"))`
 
-3. **What is the DV?**
+5. **Results: t(68) = 3.12, p = .003, d = 0.75. Effect size:** `r mcq(c("Small", answer = "Medium-large", "Negligible", "Cannot interpret"))`
 
-   `r mcq(c("Sleep hours", answer = "Problem-solving performance", "Group size", "Participant tiredness"))`
-
-4. **Which statistical test is appropriate?**
-
-   `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Wilcoxon signed-rank"))`
-
-5. **Results: t(58) = 2.14, p = .037, d = 0.55. Is this result significant at α = .05?**
-
-   `r torf(TRUE)`
-
-6. **The effect size (d = 0.55) is:**
-
-   `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+6. **Morning people had faster reaction times. Is this causal?** `r mcq(c(answer = "We can suggest it, but this is quasi-experimental (chronotype not randomly assigned)", "Yes, definitively causal", "No relationship exists", "Cannot interpret without more data"))`
 
 :::
 
@@ -165,31 +157,20 @@ A researcher compares problem-solving performance between people who slept 8 hou
 
 ### Investigation 5
 
-A researcher pairs participants based on their baseline memory scores, then randomly assigns one member of each pair to receive memory training while the other receives no training. Memory is tested after 4 weeks.
+A regression analysis predicts exam performance from hours of revision:
+Performance = 45 + 3.5(Hours), R2 = .38
 
-1. **What type of design is this?**
+1. **This analysis allows us to:** `r mcq(c("Compare groups", answer = "Predict performance from revision hours", "Determine causation", "Test for differences"))`
 
-   `r mcq(c("Between-subjects", "Within-subjects", answer = "Matched pairs", "Correlational"))`
+2. **The intercept (45) means:** `r mcq(c(answer = "Predicted performance when revision hours = 0", "The slope", "R-squared", "Maximum performance"))`
 
-2. **Why use matched pairs?**
+3. **Each additional hour of revision is associated with:** `r mcq(c("45 more points", answer = "3.5 more points", "38% increase", "No change"))`
 
-   `r mcq(c("It's easier to recruit participants", answer = "To control for individual differences in baseline memory ability", "To reduce the number of participants needed", "To make the study correlational"))`
+4. **If someone revises for 10 hours, predicted performance is:** `r mcq(c("45", "35", "100", answer = "80"))`
 
-3. **What is the IV?**
+5. **R2 = .38 means:** `r mcq(c(answer = "38% of variance in performance is explained by revision", "The correlation is .38", "38% of students improved", "Prediction is 38% accurate"))`
 
-   `r mcq(c(answer = "Training condition (training vs no training)", "Baseline memory score", "Final memory score", "No IV"))`
-
-4. **What is the DV?**
-
-   `r mcq(c("Training condition", answer = "Memory score after 4 weeks", "Baseline memory", "Pair membership"))`
-
-5. **The analysis for matched pairs is similar to:**
-
-   `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Chi-square"))`
-
-6. **Results: t(19) = 3.87, p = .001, d = 0.86. This indicates:**
-
-   `r mcq(c("No significant difference", answer = "The training group performed significantly better, large effect", "The control group performed better", "The matching was unsuccessful"))`
+6. **The remaining 62% of variance is:** `r mcq(c(answer = "Due to other factors (ability, sleep, test anxiety, etc.)", "Measurement error only", "Proof the model is wrong", "Impossible to explain"))`
 
 :::
 
@@ -197,59 +178,49 @@ A researcher pairs participants based on their baseline memory scores, then rand
 
 ### Investigation 6
 
-A researcher examines whether handwriting quality is related to fine motor skills in 75 primary school children.
+A study reports a 95% CI for the mean difference between two groups: [2.5, 8.3].
 
-1. **What type of design is this?**
+1. **Does this CI include zero?** `r torf(FALSE)`
 
-   `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+2. **This suggests the difference is:** `r mcq(c("Not significant", answer = "Statistically significant at p < .05", "Very large", "Zero"))`
 
-2. **What is the IV?**
+3. **The point estimate for the difference is approximately:** `r mcq(c("2.5", "8.3", answer = "5.4 (midpoint of the interval)", "0"))`
 
-   `r mcq(c("Handwriting quality", "Fine motor skills", "Age", answer = "No IV"))`
+4. **A narrower CI would indicate:** `r mcq(c("Larger effect", answer = "Greater precision in the estimate", "Non-significance", "Smaller sample"))`
 
-3. **Which statistical test is appropriate?**
-
-   `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r (or Spearman's rho)", "Chi-square"))`
-
-4. **Results: r(73) = .58, p < .001. What does this tell us?**
-
-   `r mcq(c("No relationship exists", answer = "There is a moderate-to-strong positive correlation", "Handwriting causes better motor skills", "Fine motor skills cause better handwriting"))`
-
-5. **What percentage of variance is shared between the variables?**
-
-   `r fitb(c("33.64", "34", "33.6", "about 34"), ignore_case = TRUE)`%
-
-6. **A possible third variable could be:**
-
-   `r fitb(c("age", "practice", "development", "maturation"), ignore_case = TRUE)`
+5. **If another study found CI [-1.2, 4.8] for the same comparison:** `r mcq(c(answer = "That result would not be significant (CI includes zero)", "Both studies agree", "The effect is larger", "We should average them"))`
 
 :::
 
 ---
 
-## Key Reminders for the Exam
+## Part 3: Quick-Fire Review
 
-### Design Types
+### Research Credibility
 
-| Design | Key Feature | Test |
-|--------|-------------|------|
-| Between-subjects | Different participants in each condition | Independent t-test |
-| Within-subjects | Same participants in all conditions | Paired t-test |
-| Matched pairs | Participants paired, one per condition | Paired t-test |
-| Correlational | Measuring relationship, no manipulation | Pearson's r |
+Pre-registration helps prevent: `r mcq(c("Participant dropout", answer = "p-hacking and HARKing", "Data collection errors", "Small samples"))`
 
-### Effect Size Guidelines (Cohen's d)
+HARKing means: `r mcq(c("Honest research", answer = "Hypothesising After Results are Known", "High-quality analysis", "Helpful research knowledge"))`
 
-- **0.2** = Small
-- **0.5** = Medium
-- **0.8** = Large
+Publication bias refers to: `r mcq(c("Journals being unfair", answer = "Significant results being more likely to be published", "Poor peer review", "Too many publications"))`
 
-### Important Distinctions
+### Effect Size vs Significance
 
-- p < .05 = significant at α = .05
-- p > .05 = not significant at α = .05
-- Correlation ≠ causation
-- No IV in correlational designs
+A result can be significant but have a small effect size: `r torf(TRUE)`
+
+A large effect size guarantees statistical significance: `r torf(FALSE)`
+
+Effect size is independent of sample size: `r torf(TRUE)`
+
+p-value depends partly on sample size: `r torf(TRUE)`
+
+### Degrees of Freedom
+
+Independent t-test, n1=20, n2=20: df = `r mcq(c("40", answer = "38", "20", "19"))`
+
+Paired t-test, n=30: df = `r mcq(c("30", answer = "29", "28", "60"))`
+
+Correlation, n=50: df = `r mcq(c("50", "49", answer = "48", "100"))`
 
 ---
 
@@ -257,16 +228,18 @@ A researcher examines whether handwriting quality is related to fine motor skill
 
 Before the exam, verify you can:
 
-- [ ] Quickly identify design types from descriptions
+- [ ] Identify design type from any research description
 - [ ] Identify IV and DV (or recognise no IV in correlational designs)
-- [ ] Match designs to appropriate tests
+- [ ] Select the appropriate statistical test
 - [ ] Write one-tailed and two-tailed hypotheses
-- [ ] Interpret p-values (significant vs not significant)
-- [ ] Interpret effect sizes (small, medium, large)
-- [ ] Explain why correlation ≠ causation
-- [ ] Recognise matched pairs designs
+- [ ] Interpret p-values correctly
+- [ ] Interpret effect sizes (small/medium/large)
+- [ ] Interpret confidence intervals
+- [ ] Interpret regression output (slope, intercept, R2)
+- [ ] Explain why correlation does not imply causation
+- [ ] Identify questionable research practices
 
 ::: {.callout-important}
-## MCQ Exam This Week
-The exam is during Wednesday's lecture time. Bring a pen. You will have the full 2-hour slot. Good luck!
+## Exam Preparation
+Review your previous quiz attempts. Focus on areas where you made errors. Practice identifying designs and tests quickly - this is the foundation for all other questions.
 :::

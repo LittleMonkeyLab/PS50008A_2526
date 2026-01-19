@@ -1,71 +1,222 @@
 ---
-title: "Correlational Analysis"
-subtitle: "PS50008A Week 13 Lab"
+title: "Bootstrap Confidence Intervals in R"
+subtitle: "PS50008A Week 13 | Lab Walkthrough"
 author: "Gordon Wright"
-date: "2026-01-28"
+date: "2026-01-30"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w13-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-01-28"
-  labels: ['correlation', 'r-programming']
-  depends_on:
-    - rm0-w13-lecture-slides
-  blocks:
-    - rm0-w13-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-01-28"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Correlational Analysis**
+## Bootstrap Confidence Intervals in R
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Today's Focus
+
+::: {.objectives-box}
+**Building on Wednesday's lecture.** Today you will:
+
+- Calculate bootstrap confidence intervals using R
+- Visualise sampling distributions
+- Interpret CIs for means and mean differences
+- Compute and interpret Cohen's d
 :::
 
 ---
 
-## Learning Objectives
-
-By the end of this lab, you will be able to:
-
-- TBC
-- TBC
-- TBC
-
----
-
-## Lab Structure
+## Lab Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:10 | These slides + setup |
+| 10:10-10:30 | Part 1: Bootstrap basics |
+| 10:30-11:00 | Part 2: CIs for single means |
+| 11:00-11:30 | Part 3: CIs for mean differences |
+| 11:30-11:50 | Part 4: Effect sizes (Cohen's d) |
+| 11:50-12:00 | Wrap-up + self-assessment |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+## Open the Activity
 
-Move to the [Lab Activity](activity.qmd)
+Navigate to: **Week 13 > Lab > Activity**
+
+Make sure WebR loads before proceeding.
+
+---
+
+# Part 1: Bootstrap Basics {background-color="#275882"}
+
+## Understanding Resampling (~20 min)
+
+---
+
+## Key Points to Emphasise
+
+::: {.definition-box}
+**Bootstrap = Resampling with Replacement**
+
+- Take your original sample
+- Randomly sample from it (WITH replacement)
+- Calculate the statistic (e.g., mean)
+- Repeat thousands of times
+- The distribution of statistics = bootstrap distribution
+:::
+
+---
+
+## Why Bootstrap?
+
+Students should understand:
+
+1. We only have ONE sample
+2. We want to know how much our estimate could vary
+3. Bootstrap simulates what would happen if we repeated the study
+4. The spread of bootstrap estimates shows our uncertainty
+
+---
+
+# Part 2: CIs for Single Means {background-color="#275882"}
+
+## Confidence Intervals in Practice (~30 min)
+
+---
+
+## The 95% CI
+
+::: {.definition-box}
+**95% CI**: The middle 95% of bootstrap estimates
+
+- Find the 2.5th and 97.5th percentiles
+- This range captures our uncertainty
+- Narrower CI = more precision
+:::
+
+---
+
+## Common Misconception
+
+::: {.callout-warning}
+## Wrong Interpretation
+"There is a 95% probability that the true mean is in this interval"
+
+## Correct Interpretation
+"If we repeated this study many times, 95% of the resulting CIs would contain the true population mean"
+:::
+
+---
+
+## Check Understanding
+
+Ask students:
+
+- What makes a CI wider? (smaller n, more variability)
+- What makes a CI narrower? (larger n, less variability)
+- Does the CI tell us about individual scores? (No - it's about the mean)
+
+---
+
+# Part 3: CIs for Mean Differences {background-color="#275882"}
+
+## Comparing Groups (~30 min)
+
+---
+
+## The Critical Question
+
+::: {.definition-box}
+**Does the CI for the difference include zero?**
+
+- CI includes 0: Difference is NOT statistically significant
+- CI excludes 0: Difference IS statistically significant
+:::
+
+This links directly to next week's t-tests.
+
+---
+
+## DataLab Example
+
+Students will calculate CIs for:
+
+- Lab A vs Lab B memory scores (between-subjects)
+- Pre vs Post mood (within-subjects)
+
+Watch for students confusing the two designs.
+
+---
+
+# Part 4: Effect Sizes {background-color="#275882"}
+
+## Cohen's d (~20 min)
+
+---
+
+## Effect Size Formula
+
+::: {.definition-box}
+**Cohen's d** = (M1 - M2) / pooled SD
+
+**Benchmarks:**
+
+- Small: d = 0.2
+- Medium: d = 0.5
+- Large: d = 0.8
+:::
+
+---
+
+## Why Report Effect Sizes?
+
+Key points:
+
+1. **p-values depend on sample size** - large n = small p
+2. **Effect sizes are standardised** - comparable across studies
+3. **Practical importance** - a significant p doesn't mean a big effect
+
+---
+
+# Wrap-Up {background-color="#275882"}
+
+---
+
+## Key Takeaways
+
+::: {.callout-important}
+## Today We Learned
+
+1. **Bootstrap CIs** quantify uncertainty in our estimates
+2. **95% CI** = middle 95% of bootstrap distribution
+3. **CI excludes zero** = statistically significant difference
+4. **Cohen's d** measures effect size independently of sample size
+:::
+
+---
+
+## Next Steps
+
+Direct students to:
+
+1. Complete the **Week 13 Self-Assessment Quiz**
+2. Review the **Lab Reading** on bootstrap methods
+3. Prepare for **Week 14: t-tests** - we'll test significance formally
+
+---
+
+# Questions? {background-color="#275882"}
+
+## Then let's begin the activity!
+
+::: {.notes}
+Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
+:::

@@ -1,82 +1,332 @@
 ---
-title: "Running T-Tests with R"
+title: "Correlation in R"
 subtitle: "PS50008A Week 15 Lab Activity"
 author: "Gordon Wright"
 date: "2026-02-11"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w15-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-02-11"
-  labels: ['t-test', 'r-programming', 'webr']
-  depends_on:
-    - rm0-w15-lab-slides
-  blocks:
-    - rm0-w15-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-02-11"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+
+# Load DataLab data
+memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+
+navy <- "#275882"
+orange <- "#EA8439"
+theme_set(theme_minimal(base_size = 14))
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 15 lecture.
+## Focus for Today
+This lab explores **correlation** - measuring the relationship between two continuous variables:
+
+- Creating effective scatterplots
+- Calculating Pearson's r in R
+- Interpreting correlation coefficients
+- Applying correlation to your own data
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Creating Scatterplots (20 min)
 
-TBC - Activity content
+### Visualising Relationships
 
----
+Before calculating correlations, we should always visualise the relationship with a scatterplot.
 
-## Part 2: Exercises
+```{r}
+#| label: frontallob-data
+frontallob <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/task5_frontallob_clean.csv", show_col_types = FALSE)
 
-TBC - Interactive exercises
-
-```{webr-r}
-# Example code
-
-
+frontallob_clean <- frontallob |>
+  filter(!is.na(fl_rating_1) & !is.na(fl_hits_1))
 ```
 
+```{r}
+#| label: scatterplot-example
+#| fig-height: 5
+#| fig-align: center
+ggplot(frontallob_clean, aes(x = fl_rating_1, y = fl_hits_1)) +
+  geom_point(size = 3, colour = navy, alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, colour = orange, fill = orange, alpha = 0.2) +
+  labs(x = "Self-Rating (1-10)",
+       y = "Successful Throws (out of 10)",
+       title = "Self-Confidence vs Throwing Accuracy",
+       subtitle = "Each point = one participant") +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+### Understanding Scatterplots
+
+**1. In a scatterplot, each point represents:**
+
+`r mcq(c("A variable", "A group", answer = "One participant", "An average"))`
+
+**2. The x-axis typically shows:**
+
+`r mcq(c(answer = "The predictor or first variable", "The outcome variable", "The sample size", "The correlation coefficient"))`
+
+**3. What does the line of best fit show?**
+
+`r mcq(c("The average of all points", answer = "The predicted relationship between the variables", "Where most points should fall", "The maximum possible score"))`
+
+### Reading Scatterplot Patterns
+
+**4. If points cluster tightly around an upward-sloping line, this suggests:**
+
+`r mcq(c(answer = "A strong positive correlation", "A strong negative correlation", "No correlation", "A weak relationship"))`
+
+**5. If points are scattered randomly with no clear pattern, this suggests:**
+
+`r mcq(c("A strong positive correlation", "A strong negative correlation", answer = "No correlation (r close to 0)", "A curvilinear relationship"))`
+
+**6. If points cluster around a downward-sloping line, this suggests:**
+
+`r mcq(c("A strong positive correlation", answer = "A strong negative correlation", "No correlation", "The data is wrong"))`
+
+True or False: We should always create a scatterplot before calculating a correlation. `r torf(TRUE)`
+
+True or False: Scatterplots can reveal non-linear relationships that correlation coefficients might miss. `r torf(TRUE)`
+
 ---
 
-## Key Takeaways
+## Activity 2: Calculating Correlations (20 min)
+
+### Pearson's r
+
+The Pearson correlation coefficient (r) measures the strength and direction of a **linear** relationship between two continuous variables.
+
+### Properties of r
+
+**1. Pearson's r ranges from:**
+
+`r mcq(c("0 to 1", "-1 to 0", answer = "-1 to +1", "0 to 100"))`
+
+**2. An r value of 0 means:**
+
+`r mcq(c("A perfect positive relationship", "A perfect negative relationship", answer = "No linear relationship", "The calculation failed"))`
+
+**3. An r value of -0.8 indicates:**
+
+`r mcq(c("A weak positive relationship", answer = "A strong negative relationship", "A weak negative relationship", "No relationship"))`
+
+### R Syntax
+
+In R, we calculate correlation using `cor()` or `cor.test()`:
+
+```r
+# Simple correlation
+cor(variable1, variable2)
+
+# Correlation with p-value and CI
+cor.test(variable1, variable2)
+```
+
+**4. What is the key difference between `cor()` and `cor.test()`?**
+
+`r mcq(c("cor() is faster", answer = "cor.test() provides a p-value and confidence interval", "cor() gives more decimal places", "They calculate different types of correlation"))`
+
+### Reading R Output
+
+Here's example output from `cor.test()`:
+
+```
+	Pearson's product-moment correlation
+
+data:  self_rating and accuracy
+t = 3.45, df = 28, p-value = 0.002
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.24  0.75
+sample estimates:
+      cor
+0.55
+```
+
+**5. What is the correlation coefficient (r)?**
+
+`r mcq(c("3.45", "0.002", "28", answer = "0.55"))`
+
+**6. Is this correlation statistically significant at alpha = 0.05?**
+
+`r mcq(c(answer = "Yes, because p = 0.002 < 0.05", "No, because the correlation is positive", "Can't tell", "No, because df = 28"))`
+
+**7. The 95% CI is [0.24, 0.75]. What does this tell us?**
+
+`r mcq(c("The correlation is exactly 0.55", answer = "We're 95% confident the true r is between 0.24 and 0.75", "The p-value is between 0.24 and 0.75", "The sample size should be 24 to 75"))`
+
+---
+
+## Activity 3: Interpreting r Values (20 min)
+
+### Cohen's Guidelines
+
+Jacob Cohen provided rough guidelines for interpreting correlation strength:
+
+| |r| value | Interpretation |
+|-----------|----------------|
+| 0.10 - 0.29 | Small/weak |
+| 0.30 - 0.49 | Medium/moderate |
+| 0.50 - 1.00 | Large/strong |
+
+### Practice Interpretation
+
+**1. r = 0.25 would be considered:**
+
+`r mcq(c(answer = "Small/weak", "Medium/moderate", "Large/strong", "Negligible"))`
+
+**2. r = -0.65 would be considered:**
+
+`r mcq(c("Small/weak", "Medium/moderate", answer = "Large/strong", "Not applicable - it's negative"))`
+
+**3. r = 0.42 would be considered:**
+
+`r mcq(c("Small/weak", answer = "Medium/moderate", "Large/strong", "Negligible"))`
+
+### Coefficient of Determination (r-squared)
+
+Squaring r tells us the proportion of variance explained.
+
+**4. If r = 0.50, then r-squared (r^2) equals:**
+
+`r mcq(c("0.50", answer = "0.25", "0.75", "2.5"))`
+
+**5. r^2 = 0.25 means:**
+
+`r mcq(c(answer = "25% of the variance in Y is explained by X", "The correlation is 25%", "75% of participants show the relationship", "The effect is 25% larger than expected"))`
+
+**6. If r = 0.70, what percentage of variance is explained?**
+
+`r mcq(c("70%", answer = "49%", "30%", "100%"))`
+
+### Critical Thinking
+
+**7. A statistically significant correlation of r = 0.15 suggests:**
+
+`r mcq(c("A strong, important relationship", answer = "A real but very weak relationship - likely not practically meaningful", "The data is unreliable", "We need to use a different test"))`
+
+True or False: A significant p-value tells us the correlation is strong. `r torf(FALSE)`
+
+True or False: Correlation does not imply causation. `r torf(TRUE)`
+
+True or False: A negative correlation is weaker than a positive correlation of the same magnitude. `r torf(FALSE)`
+
+---
+
+## Activity 4: Correlation in YOUR Data (20 min)
+
+### Applying to DataLab
+
+Let's think about correlational questions we could ask with the DataLab data.
+
+::: {.webex-check .webex-box}
+
+### Question 1: Self-Rating and Performance
+
+In the Frontal Lob task, participants rated their throwing ability before throwing.
+
+**If high self-ratings are associated with better performance, what type of correlation would we expect?**
+
+`r mcq(c(answer = "Positive correlation", "Negative correlation", "No correlation", "Cannot determine"))`
+
+**Is there an IV and DV in this analysis?**
+
+`r mcq(c("Yes - self-rating is IV, performance is DV", "Yes - performance is IV, self-rating is DV", answer = "No - correlational designs have no IV/DV, just two variables", "Depends on the hypothesis"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Question 2: Sleep and Memory
+
+Imagine we correlate hours of sleep the night before with memory test performance.
+
+**What would a negative correlation (r = -0.30) mean?**
+
+`r mcq(c("More sleep = better memory", answer = "More sleep = worse memory", "No relationship", "Sleep causes memory problems"))`
+
+**Could we conclude that lack of sleep causes poor memory?**
+
+`r mcq(c("Yes, the correlation proves it", answer = "No, correlation doesn't establish causation", "Only if p < 0.05", "Yes, if r is negative"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Question 3: Third Variables
+
+Sleep quality might be related to both coffee consumption AND memory performance.
+
+**This illustrates:**
+
+`r mcq(c("A direct causal relationship", answer = "A potential third variable (confound)", "That coffee improves memory", "That the correlation is invalid"))`
+
+**If coffee consumption is related to both variables, it could:**
+
+`r mcq(c(answer = "Create a spurious correlation between sleep and memory", "Prove that coffee causes poor sleep", "Have no effect on the correlation", "Make the correlation negative"))`
+:::
+
+### Thinking About Your Project
+
+**Think about your group project research question:**
+
+**1. Is your research question correlational or experimental?**
+
+`r mcq(c(answer = "Correlational - looking at relationships between variables", "Experimental - manipulating an IV to see effects on a DV", "Descriptive - just describing one variable", "I'm not sure yet"))`
+
+**2. If correlational, what two variables would you correlate?**
+
+(Think about this for your own project - no MCQ here!)
+
+**3. What would a positive correlation mean for your research question?**
+
+`r mcq(c(answer = "Higher scores on variable 1 are associated with higher scores on variable 2", "The variables cause each other", "The relationship is strong", "The p-value is significant"))`
+
+---
+
+## Summary
 
 ::: {.callout-important}
-## Summary
-1. TBC
-2. TBC
-3. TBC
+## Key Takeaways
+
+**Scatterplots:**
+- Always visualise before calculating
+- Each point = one participant
+- Look for patterns, linearity, and outliers
+
+**Pearson's r:**
+- Ranges from -1 to +1
+- Sign indicates direction (positive/negative)
+- Magnitude indicates strength
+
+**Interpretation:**
+- Small: |r| = 0.10 - 0.29
+- Medium: |r| = 0.30 - 0.49
+- Large: |r| = 0.50+
+- r^2 = proportion of variance explained
+
+**Cautions:**
+- Correlation does NOT equal causation
+- Watch for third variables
+- Statistical significance does not equal practical importance
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 15 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 16
+1. Complete the [Week 15 Self-Assessment](self-assessment.qmd)
+2. Review the [Lecture Reading](reading.qmd)
+3. Prepare for Week 16: Project Groups - Literature Review

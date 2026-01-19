@@ -27,17 +27,17 @@ Each chapter and quiz can be downloaded as a PDF for offline reading. Look for t
 
 | Week | Lecture Reading | Lab Reading | Quiz |
 |------|-----------------|-------------|------|
-| **11** | [Week 11 Lecture: Introduction to Research](chapters/w11-lecture.qmd) | [Week 11 Lab: DataLab Foundations](chapters/w11-lab.qmd) | [Week 11 Quiz](quizzes/w11-quiz.qmd) |
-| **12** | [Week 12 Lecture: Research Design Framework](chapters/w12-lecture.qmd) | [Week 12 Lab: Descriptive Statistics in R](chapters/w12-lab.qmd) | [Week 12 Quiz](quizzes/w12-quiz.qmd) |
-| **13** | [Week 13 Lecture: Correlation & Relationships](chapters/w13-lecture.qmd) | [Week 13 Lab: Correlation in R](chapters/w13-lab.qmd) | [Week 13 Quiz](quizzes/w13-quiz.qmd) |
-| **14** | [Week 14 Lecture: Probability & Distributions](chapters/w14-lecture.qmd) | [Week 14 Lab: Visualising Distributions in R](chapters/w14-lab.qmd) | [Week 14 Quiz](quizzes/w14-quiz.qmd) |
-| **15** | [Week 15 Lecture: Significance Testing](chapters/w15-lecture.qmd) | [Week 15 Lab: Running t-tests in R](chapters/w15-lab.qmd) | [Week 15 Quiz](quizzes/w15-quiz.qmd) |
-| — | *Reading Week* | — | — |
-| **16** | [Week 16 Lecture: Research Plan Tips](chapters/w16-lecture.qmd) | [Week 16 Lab: Literature Review Skills](chapters/w16-lab.qmd) | [Week 16 Quiz](quizzes/w16-quiz.qmd) |
-| **17** | [Week 17 Lecture: MCQ Practice & Credibility](chapters/w17-lecture.qmd) | [Week 17 Lab: Methodology Workshop](chapters/w17-lab.qmd) | [Week 17 Quiz](quizzes/w17-quiz.qmd) |
-| **18** | [Week 18 Lecture: MCQ Exam Preparation](chapters/w18-lecture.qmd) | [Week 18 Lab: Ethics & Procedures](chapters/w18-lab.qmd) | [Week 18 Quiz](quizzes/w18-quiz.qmd) |
-| **19** | [Week 19 Lecture: Results & Lab Report Writing](chapters/w19-lecture.qmd) | [Week 19 Lab: Data Collection Support](chapters/w19-lab.qmd) | [Week 19 Quiz](quizzes/w19-quiz.qmd) |
-| **20** | [Week 20 Lecture: Discussion & EDS Preparation](chapters/w20-lecture.qmd) | [Week 20 Lab: Data Analysis Workshop](chapters/w20-lab.qmd) | [Week 20 Quiz](quizzes/w20-quiz.qmd) |
+| **11** | [Introduction to Research](chapters/w11-lecture.qmd) | [DataLab Foundations](chapters/w11-lab.qmd) | [Week 11 Quiz](quizzes/w11-quiz.qmd) |
+| **12** | [Research Design Framework](chapters/w12-lecture.qmd) | [Introduction to R](chapters/w12-lab.qmd) | [Week 12 Quiz](quizzes/w12-quiz.qmd) |
+| **13** | [Estimation & Confidence Intervals](chapters/w13-lecture.qmd) | [Bootstrap CIs in R](chapters/w13-lab.qmd) | [Week 13 Quiz](quizzes/w13-quiz.qmd) |
+| **14** | [Inference & t-tests](chapters/w14-lecture.qmd) | [t-tests in R](chapters/w14-lab.qmd) | [Week 14 Quiz](quizzes/w14-quiz.qmd) |
+| **15** | [Correlation](chapters/w15-lecture.qmd) | [Correlation in R](chapters/w15-lab.qmd) | [Week 15 Quiz](quizzes/w15-quiz.qmd) |
+| — | *Reading Week* | *Research Plan work* | — |
+| **16** | [Regression](chapters/w16-lecture.qmd) | [Project Groups](chapters/w16-lab.qmd) | [Week 16 Quiz](quizzes/w16-quiz.qmd) |
+| **17** | [Interpretation & Credibility](chapters/w17-lecture.qmd) | [Project Groups](chapters/w17-lab.qmd) | [Week 17 Quiz](quizzes/w17-quiz.qmd) |
+| **18** | [MCQ Exam Prep](chapters/w18-lecture.qmd) | [Project Groups](chapters/w18-lab.qmd) | [Week 18 Quiz](quizzes/w18-quiz.qmd) |
+| **19** | [Project Workshop](chapters/w19-lecture.qmd) | [Data Collection](chapters/w19-lab.qmd) | [Week 19 Quiz](quizzes/w19-quiz.qmd) |
+| **20** | [Wrapping Up](chapters/w20-lecture.qmd) | [Report Writing](chapters/w20-lab.qmd) | [Week 20 Quiz](quizzes/w20-quiz.qmd) |
 
 ::: {.callout-important}
 ## Week 12 is Critical
@@ -50,10 +50,10 @@ Week 12 introduces ALL the terminology you need for your Research Plan: IV, DV, 
 
 | Week | Assessment |
 |------|------------|
-| 16 | Research Plan due Friday (20%) |
-| 18 | MCQ Exam Wednesday (20%) |
-| 20 | EDS Assignment due Friday (20%) |
-| Post-term | Research Report due 1 May (40%) |
+| 16 | Research Plan due Fri 27 Feb (20%) |
+| 18 | MCQ Exam Mon 9 Mar (20%) |
+| 19 | EDS Assignment due Fri 20 Mar (20%) |
+| Post-term | Research Report due Fri 1 May (40%) |
 
 ---
 

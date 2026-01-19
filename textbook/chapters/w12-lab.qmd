@@ -1,6 +1,10 @@
 ---
 title: "Chapter 4: Introduction to R"
 subtitle: "R for Descriptive Statistics"
+format: html
+engine: knitr
+filters:
+  - webr
 ---
 
 ## Overview
@@ -36,7 +40,7 @@ We use **WebR** — R that runs entirely in your browser. No installation needed
 
 When you see a code box like this:
 
-```r
+```{webr-r}
 mean(c(5, 10, 15, 20))
 ```
 
@@ -56,7 +60,7 @@ You don't need to master R today — just understand enough to follow along. Her
 
 Use `<-` (less-than followed by dash) to assign values:
 
-```r
+```{webr-r}
 # Store a value
 my_score <- 75
 
@@ -70,7 +74,7 @@ The `c()` function combines values into a **vector** (a list of numbers).
 
 Functions do things. They have a name followed by parentheses containing inputs:
 
-```r
+```{webr-r}
 # Mean of values
 mean(c(10, 20, 30))
 
@@ -98,7 +102,7 @@ For descriptive statistics, you'll use:
 
 ### Example: Reaction Times
 
-```r
+```{webr-r}
 # Create data
 rt <- c(245, 312, 278, 298, 267)
 
@@ -134,17 +138,26 @@ Real datasets aren't just vectors — they're **data frames** (like a spreadshee
 
 Use `$` to access a column:
 
-```r
-# If 'olympics' is your dataset
-olympics$reaction_time     # Get the reaction_time column
-mean(olympics$reaction_time)  # Mean of that column
+```{webr-r}
+# Create example dataset
+olympics <- data.frame(
+  reaction_time = c(245, 312, 278, 298, 267),
+  room = c("A", "A", "B", "B", "A")
+)
+
+# Get the reaction_time column
+olympics$reaction_time
+
+# Mean of that column
+mean(olympics$reaction_time)
 ```
 
 ### Subsetting Data
 
 Get specific parts of your data:
 
-```r
+```{webr-r}
+# Using the olympics data from above
 # Filter rows where room is "A"
 room_a <- olympics[olympics$room == "A", ]
 

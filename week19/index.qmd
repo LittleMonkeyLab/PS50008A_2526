@@ -1,66 +1,96 @@
 ---
-title: "Week 19: In-class MCQ Test"
-subtitle: "PS50008A Research Methods | 2026-03-16"
+title: "Week 19: Project Workshop"
+subtitle: "PS50008A Research Methods | 16-20 March 2026"
 author: "Gordon Wright"
 date: "2026-03-16"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w19-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-03-16"
-  labels: ['assessment']
-  blocks:
-    - rm0-w19-lecture-slides
-    - rm0-w19-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: In-class MCQ Test
+::: {.callout-warning}
+## Assessment Deadline
+**EDS Assignment DUE: Friday 20 March 2026**
 
-**Lab**: Live Data Collection
+Submit your Experimental Design Skills assignment via the module page on Learn.gold before 4pm.
+:::
+
+**This week**: Support for your EDS submission, MCQ feedback, and APA-style results reporting. Labs focus on group data collection.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+- Report statistical results using APA format
+- Interpret MCQ test feedback and identify areas for improvement
+- Troubleshoot common analysis issues in your EDS assignment
+- Conduct data collection for your group project
 
-## Schedule
+## Before the Lecture
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | In-class MCQ Test | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Live Data Collection | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 19 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
-
+::: {.callout-note}
 ## Preparation
+1. **Bring your EDS analysis questions** — final support session before submission
+2. **Review the MCQ test feedback** — we'll discuss common misconceptions
+3. **Review APA results reporting guidelines** — in the lecture reading
+:::
 
-Before the lecture:
+## The Big Picture
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+This is your final week before the EDS deadline. The lecture provides:
+
+- **APA Results Reporting**: How to write up statistical findings professionally
+- **MCQ Feedback Session**: Understanding what the test revealed about your knowledge
+- **Analysis Support**: Last chance to ask questions about your EDS assignment
+
+The lab continues group project work with a focus on **data collection** — putting your methodology into practice.
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | APA reporting, MCQ feedback, analysis support |
+| [Lecture Reading](lecture/reading.qmd) | APA results section guidelines |
+| [Lab Slides](lab/slides.html){target="_blank"} | Data collection workshop |
+| [Lab Activity](lab/activity.qmd) | Project group data collection guide |
+| [Lab Reading](lab/reading.qmd) | Data collection best practices |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | APA results reporting, MCQ feedback, EDS analysis support |
+| Thursday | Lab (2 hrs) | Project groups: Data collection |
+| **Friday** | **EDS DUE** | **Submit by 4pm via Learn.gold** |
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### APA Results Reporting
+- **Statistical notation**: Italicise test statistics (e.g., *t*, *r*, *F*)
+- **Exact p-values**: Report to three decimal places (e.g., *p* = .023)
+- **Effect sizes**: Always report alongside test statistics
+- **Confidence intervals**: Include 95% CIs where appropriate
 
-## Resources
+### MCQ Feedback Focus Areas
+- Common misconceptions from the in-class test
+- Areas requiring further revision
+- Strategies for the research report
 
-- [Week 19 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### Data Collection
+- Standardised procedures across group members
+- Data quality checks during collection
+- Ethical conduct with participants
+
+## Connecting to Assessments
+
+| Assessment | Connection |
+|------------|------------|
+| **EDS Assignment** | Final submission this Friday — use lecture support time |
+| **Research Report** | APA reporting skills apply directly to your results section |
+| **Project** | Data collection in lab feeds into your final report |
+
+## What's Next?
+
+**Week 20**: Wrapping Up — Project data showcase, lab report structure, discussion sections, and report writing workshop. Final week of teaching before you complete your Research Report.

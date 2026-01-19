@@ -1,66 +1,134 @@
 ---
-title: "Week 18: Running Experiments Ethically and E"
-subtitle: "PS50008A Research Methods | 2026-03-09"
+title: "Week 18: MCQ Exam"
+subtitle: "PS50008A Research Methods | 9-13 March 2026"
 author: "Gordon Wright"
 date: "2026-03-09"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w18-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-03-09"
-  labels: ['ethics', 'experimental-design']
-  blocks:
-    - rm0-w18-lecture-slides
-    - rm0-w18-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Running Experiments Ethically and Effectively
+::: {.callout-important appearance="simple"}
+## MCQ EXAM: MONDAY 9TH MARCH
 
-**Lab**: Project Groups: Procedure
+**Date**: Monday 9th March 2026
 
-## Learning Objectives
+**Time**: Check your timetable
 
-By the end of this week, you will be able to:
+**Location**: Check your exam allocation
 
-- TBC
-- TBC
-- TBC
+**Duration**: 1 hour
 
-## Schedule
+This is a summative assessment worth **20%** of your module grade.
+:::
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Running Experiments Ethically and Effectively | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Project Groups: Procedure | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 18 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+**This week**: Complete your MCQ Exam on Monday. Thursday's lab continues project group work focusing on your experimental procedure.
 
-## Preparation
+**Monday**: MCQ EXAM (not a lecture)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
-Before the lecture:
+## Exam Information
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+### What to Expect
 
-## Key Concepts
+::: {.callout-note}
+## Exam Format
+- **Number of questions**: 40 multiple-choice questions
+- **Time allowed**: 60 minutes
+- **Topics covered**: All content from Weeks 11-17
+- **Format**: Paper-based exam
+:::
 
-- TBC
-- TBC
-- TBC
+### Topics Covered
 
-## Resources
+The MCQ exam covers all material from Term 2:
 
-- [Week 18 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+| Week | Topic |
+|------|-------|
+| 11 | DataLab introduction |
+| 12 | Research design framework: variables, designs, hypotheses |
+| 13 | Correlation and relationships |
+| 14 | Distributions and descriptive statistics |
+| 15 | Significance testing and t-tests |
+| 16 | Practice assignment review |
+| 17 | P-hacking, HARKing, and the replication crisis |
+
+### Exam Tips
+
+::: {.callout-tip}
+## Last-Minute Advice
+1. **Read each question carefully** — look for key words like "NOT", "EXCEPT", "ALWAYS"
+2. **Eliminate obviously wrong answers** — narrow down your choices
+3. **Don't change answers** unless you're certain — first instinct is often correct
+4. **Manage your time** — don't spend too long on any single question
+5. **Answer every question** — no penalty for guessing
+:::
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lab Slides](lab/slides.html){target="_blank"} | Project procedure guidance |
+| [Lab Activity](lab/activity.qmd) | Procedure development for your project |
+| [Lab Reading](lab/reading.qmd) | Procedure planning resources |
+| [Self-Assessment](lab/self-assessment.qmd) | Additional practice (post-exam) |
+
+::: {.callout-note}
+## No Lecture Materials This Week
+Monday's session is the MCQ Exam — there are no lecture slides or readings this week.
+:::
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| **Monday** | **MCQ EXAM** | **Summative assessment (20% of module)** |
+| Thursday | Lab (2 hrs) | Project Groups: Procedure development |
+
+## Project Groups: Procedure
+
+After the exam, Thursday's lab focuses on developing your experimental procedure.
+
+Your project group will:
+
+1. **Draft your procedure** — step-by-step what happens to each participant
+2. **Create your materials** — stimuli, questionnaires, instructions
+3. **Write standardised instructions** — what will you say to participants?
+4. **Plan your debriefing** — how will you explain the study afterwards?
+5. **Conduct a pilot run** — test the procedure within your group
+
+::: {.callout-tip}
+## Procedure Checklist
+A good procedure section answers:
+
+- What happens first, second, third?
+- What do participants see/hear/do?
+- How long does each part take?
+- What are the exact instructions given?
+- How is data recorded?
+:::
+
+## After the Exam
+
+::: {.callout-note}
+## Results and Feedback
+MCQ results will be available within 2 weeks. Check Learn for your score and item-level feedback.
+:::
+
+Take time to reflect on:
+
+- Which topics felt comfortable?
+- Which areas need more work for the Research Report?
+- How can you apply what you've learned to your project?
+
+## Connecting to Assessments
+
+| Assessment | Connection |
+|------------|------------|
+| **MCQ Exam** | **COMPLETED THIS WEEK** |
+| **Research Plan** | Procedure section development in lab |
+| **Research Report** | Method section: procedure writing practice |
+
+## What's Next?
+
+- **Week 19**: Focus shifts to data collection and analysis preparation
+- Your project group should have a complete procedure ready for ethics review

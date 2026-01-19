@@ -1,236 +1,291 @@
 ---
 title: "Week 20 Self-Assessment"
-subtitle: "Discussion & EDS Preparation"
+subtitle: "Discussion Sections and Interpretation"
 ---
 
-```{r, echo=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(webexercises)
 ```
 
 ## Instructions
 
-This quiz covers Discussion section writing and prepares you for the EDS (Empirical Data Skills) assignment. The EDS requires by-hand calculations and APA reporting.
+Test your understanding of how to write Discussion sections and interpret research findings. The Discussion is where you make sense of your results and connect them to the broader literature.
 
 ---
 
-## Part 1: Discussion Section Structure
+## Part 1: Conceptual Questions
 
-### Question 1: Discussion Components
+### Question 1: Purpose of the Discussion
 
-A Discussion section typically includes (in order):
+The main purpose of a Discussion section is to:
 
-First: `r mcq(c(answer = "Summary of findings (did results support hypothesis?)", "Literature review", "Methodology critique", "Future research"))`
+`r mcq(c("Report all statistical values", "Describe the methodology", answer = "Interpret results and explain their meaning in the context of theory and previous research", "List all limitations"))`
 
-Then: `r mcq(c("Raw data", answer = "Interpretation and relation to previous research", "Participant demographics", "Statistical formulas"))`
+### Question 2: Discussion Structure
 
-Then: `r mcq(c("More statistics", answer = "Limitations of the study", "Introduction material", "Another hypothesis"))`
+A Discussion section typically follows this order:
 
-Finally: `r mcq(c("A new study design", answer = "Implications and future directions", "The abstract", "References"))`
+`r mcq(c("Limitations, then results summary, then implications", answer = "Results summary, interpretation/connection to literature, limitations, implications/future directions", "Future research, then limitations, then summary", "Any order is acceptable"))`
 
-### Question 2: Discussion vs Results
+### Question 3: Results vs Discussion
 
-Which statement belongs in the Discussion, NOT the Results?
+Statistical values (like *t*, *p*, *r*) belong primarily in:
 
-`r mcq(c("M = 45.30, SD = 8.25", "t(48) = 2.45, p = .018", answer = "This finding supports Smith's (2020) theory that...", "The experimental group scored higher than the control group"))`
+`r mcq(c(answer = "The Results section", "The Discussion section", "Both equally", "The Method section"))`
 
-### Question 3: Starting the Discussion
+Interpretation and theoretical implications belong primarily in:
 
-A good opening sentence for the Discussion might be:
+`r mcq(c("The Results section", answer = "The Discussion section", "The Introduction", "The Abstract"))`
 
-`r mcq(c("We did a study on memory", answer = "The present study examined whether X affects Y. Results supported/did not support the hypothesis that...", "Statistics showed significance", "There were limitations"))`
+### Question 4: Opening the Discussion
 
----
+A good opening sentence for the Discussion should:
 
-## Part 2: Interpreting and Discussing Results
+`r mcq(c("Start with limitations", answer = "Summarise the main finding and whether it supported the hypothesis", "Repeat the method", "Introduce new analyses"))`
 
-### Question 4: Connecting to Literature
+### Question 5: Connecting to Literature
 
-When discussing your findings, you should:
+When discussing findings, you should:
 
-`r mcq(c("Ignore previous research", "Only cite studies that agree with your findings", answer = "Relate findings to previous research, explaining consistency or inconsistency", "Copy the Introduction"))`
+`r mcq(c("Only cite studies that agree with your results", answer = "Relate findings to previous research, explaining both consistencies and inconsistencies", "Avoid citing any previous research", "Only mention the studies from your Introduction"))`
 
-### Question 5: Discussing Non-Significant Results
+### Question 6: Discussing Non-Significant Results
 
-If your results are NOT significant, you should:
+If results are NOT significant, you should:
 
-`r mcq(c("Hide the study and start again", "Claim significance anyway", answer = "Discuss possible reasons (e.g., low power, measurement issues, genuine null effect)", "Only write a short Discussion"))`
-
-### Question 6: Causation Claims
-
-In your Discussion, you can claim causation if:
-
-`r mcq(c("Your p-value is very small", answer = "You used an experimental design with random assignment", "You have a large correlation", "Your effect size is large"))`
-
-Correlational findings should be discussed as:
-
-`r mcq(c("Causal relationships", answer = "Associations/relationships (not causes)", "Unimportant", "Definitive proof"))`
+`r mcq(c("Claim they are significant anyway", "Hide the study", answer = "Discuss possible reasons such as low power, measurement issues, or a genuine null effect", "Only write a brief Discussion"))`
 
 ---
 
-## Part 3: Limitations
+## Part 2: Interpretation Questions
 
-### Question 7: Common Limitations
+### Question 7: Interpreting Significant Results
 
-Which is a valid limitation to discuss?
+A study finds that caffeine improves reaction time (p < .05, d = 0.65). In the Discussion, you should:
 
-`r mcq(c("The study was difficult to conduct", answer = "The sample was limited to university students, which may affect generalisability", "I didn't like the results", "Statistics are confusing"))`
+`r mcq(c("Just state 'the hypothesis was supported'", answer = "Explain what this means, compare to previous findings, and discuss practical implications", "Report the statistics again", "Move directly to limitations"))`
 
-### Question 8: Constructive Limitations
+### Question 8: Interpreting Effect Sizes
 
-Good limitations are:
+Your study found a significant effect with d = 0.25 (small). In the Discussion, you should:
 
-`r mcq(c("Vague complaints about the study", answer = "Specific issues that could have affected results, with suggestions for improvement", "Excuses for non-significant results", "Comments about how hard you worked"))`
+`r mcq(c("Claim the effect is large because it's significant", answer = "Acknowledge the effect is statistically significant but small, and discuss what this means practically", "Ignore the effect size", "Say the results are not meaningful"))`
 
-### Question 9: Limitation Examples
+### Question 9: Interpreting Correlational Findings
 
-Match the limitation to its category:
+A correlational study finds r = .45 between X and Y. In the Discussion, you should:
 
-"Only students were sampled" → `r mcq(c(answer = "Sample/generalisability", "Measurement", "Design", "Statistical"))`
+`r mcq(c("Conclude that X causes Y", "Conclude that Y causes X", answer = "Discuss the association without claiming causation, and mention possible third variables", "Say the correlation proves the theory"))`
 
-"Self-report measures may not reflect actual behaviour" → `r mcq(c("Sample", answer = "Measurement", "Design", "Statistical"))`
+### Question 10: Unexpected Results
 
-"Between-subjects design may have allowed individual differences to affect results" → `r mcq(c("Sample", "Measurement", answer = "Design", "Statistical"))`
+Your results contradict your hypothesis. In the Discussion, you should:
 
----
-
-## Part 4: EDS Preparation - By-Hand Calculations
-
-### Question 10: Calculating the Mean
-
-Calculate the mean of: 8, 12, 15, 9, 11
-
-Sum = `r fitb(c("55"), ignore_case = TRUE)`
-
-N = `r fitb(c("5"), ignore_case = TRUE)`
-
-Mean = `r fitb(c("11"), ignore_case = TRUE)`
-
-### Question 11: Calculating Standard Deviation
-
-For the data: 10, 12, 14 (Mean = 12)
-
-Step 1: Deviations from mean are: -2, 0, +2
-
-Step 2: Squared deviations: 4, 0, 4
-
-Step 3: Sum of squared deviations = `r fitb(c("8"), ignore_case = TRUE)`
-
-Step 4: Divide by (N-1) = 8/2 = `r fitb(c("4"), ignore_case = TRUE)` ← This is the variance
-
-Step 5: SD = √4 = `r fitb(c("2"), ignore_case = TRUE)`
-
-### Question 12: By-Hand t-Test Concept
-
-The t-statistic formula is:
-
-`r mcq(c(answer = "Difference between means divided by standard error", "Mean divided by standard deviation", "Sum of scores divided by N", "Variance times sample size"))`
-
-A larger t-value (further from 0) indicates:
-
-`r mcq(c("A smaller effect", answer = "A larger difference relative to variability", "An error", "Non-significance"))`
+`r mcq(c("Claim the results actually support your hypothesis", "Hide the contradictory findings", answer = "Acknowledge the unexpected result and explore possible explanations", "Blame participants or methodology without analysis"))`
 
 ---
 
-## Part 5: EDS-Style Questions
+## Part 3: Application - Limitations
+
+### Question 11: What Makes a Good Limitation?
+
+A good limitation is:
+
+`r mcq(c("A vague complaint about the study", answer = "A specific issue that could have affected results, with explanation of potential impact", "An excuse for non-significant findings", "A comment about how hard the research was"))`
+
+### Question 12: Types of Limitations
+
+Match each limitation to its category:
+
+"Only university students were sampled" - `r mcq(c(answer = "Sample/generalisability", "Measurement", "Design", "Statistical"))`
+
+"Self-report measures may not reflect actual behaviour" - `r mcq(c("Sample", answer = "Measurement", "Design", "Analysis"))`
+
+"The between-subjects design may have been affected by individual differences" - `r mcq(c("Sample", "Measurement", answer = "Design", "Statistical"))`
+
+"The small sample size may have limited power to detect effects" - `r mcq(c("Sample", "Measurement", "Design", answer = "Statistical power"))`
+
+### Question 13: Constructive Limitations
+
+After stating a limitation, you should:
+
+`r mcq(c("Move to the next limitation", answer = "Explain how it might have affected results and suggest how future research could address it", "Apologise for the flaw", "Argue why it doesn't matter"))`
+
+### Question 14: Limitations to Avoid
+
+Which is NOT a good limitation to mention?
+
+`r mcq(c("Small sample size affecting power", answer = "I found the statistics confusing", "Convenience sampling limiting generalisability", "Self-report measures being subject to bias"))`
+
+---
+
+## Part 4: Application - Future Directions
+
+### Question 15: Suggesting Future Research
+
+Good future directions should:
+
+`r mcq(c("Be completely unrelated to your study", answer = "Build logically on your findings and address limitations", "Promise to solve all problems", "Repeat your study exactly"))`
+
+### Question 16: Examples of Future Directions
+
+Which is the best future direction suggestion?
+
+```{r}
+opts_future <- c(
+  "Future research should do a better study",
+  answer = "Future research could examine whether this effect generalises to clinical populations, as our sample was limited to healthy adults",
+  "More research is needed",
+  "Future studies should use more participants"
+)
+```
+
+`r longmcq(opts_future)`
+
+---
+
+## Part 5: MCQ Exam Practice
 
 ::: {.webex-check .webex-box}
 
-### EDS Practice 1
+### Scenario 1: Writing a Discussion Opening
 
-A researcher compares reaction times between participants who had coffee (n=10, M=250ms, SD=30) versus no coffee (n=10, M=280ms, SD=35).
+A study tested whether exercise improves mood. Results: participants reported significantly better mood after exercise (p = .003, d = 0.72).
 
-1. **What is the IV?** `r fitb(c("coffee", "caffeine", "drink", "coffee condition"), ignore_case = TRUE)`
+1. **The best opening sentence would be:**
 
-2. **What is the DV?** `r fitb(c("reaction time", "RT"), ignore_case = TRUE)`
+```{r}
+opts_open <- c(
+  "We did a study on exercise and mood",
+  answer = "The present study examined whether exercise improves mood. Results supported the hypothesis, with participants reporting significantly improved mood following exercise",
+  "The statistics were significant",
+  "There were several limitations"
+)
+```
 
-3. **What type of design is this?** `r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Matched pairs"))`
+`r longmcq(opts_open)`
 
-4. **What test would you use?** `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+2. **What should come next?** `r mcq(c("Limitations", answer = "Interpretation and connection to previous research", "More statistics", "Conclusion"))`
 
-5. **Is the DV continuous, discrete, or categorical?** `r mcq(c(answer = "Continuous", "Discrete", "Categorical", "Ordinal"))`
+3. **When connecting to literature, you might write:**
+
+`r mcq(c(answer = "These findings are consistent with previous research (Smith, 2020) showing...", "We got good results", "The p-value was significant", "The Method was appropriate"))`
 
 :::
 
 ::: {.webex-check .webex-box}
 
-### EDS Practice 2: Reporting Results
+### Scenario 2: Discussing Correlational Findings
 
-Given these results: t(18) = 2.45, p = .025, d = 0.73
+A study finds a moderate positive correlation (r = .48) between smartphone use and anxiety.
 
-Write the APA-formatted report by filling in the blanks:
+1. **Can we conclude smartphones CAUSE anxiety?** `r torf(FALSE)`
 
-"An independent samples t-test revealed a significant difference in reaction times between the coffee group (*M* = 250.00, *SD* = 30.00) and no-coffee group (*M* = 280.00, *SD* = 35.00), *t*(`r fitb(c("18"), ignore_case = TRUE)`) = `r fitb(c("2.45"), ignore_case = TRUE)`, *p* = `r fitb(c(".025", "0.025"), ignore_case = TRUE)`, *d* = `r fitb(c("0.73", ".73"), ignore_case = TRUE)`."
+2. **In the Discussion, we should:**
 
-Effect size interpretation: `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+`r mcq(c("Claim causation because the correlation is moderate", answer = "Discuss the association and acknowledge we cannot determine causation", "Ignore the correlation strength", "Only discuss if it was significant"))`
+
+3. **What third variable should we mention?**
+
+`r mcq(c(answer = "Possible confounds like stress, personality, or life circumstances", "The sample size", "The correlation coefficient", "The degrees of freedom"))`
+
+4. **A limitation related to this design would be:**
+
+`r mcq(c("The correlation was too strong", answer = "Correlational design prevents causal conclusions", "Smartphones are hard to measure", "Anxiety is not important"))`
 
 :::
 
 ::: {.webex-check .webex-box}
 
-### EDS Practice 3: Correlation Reporting
+### Scenario 3: Handling Non-Significant Results
 
-A correlation between anxiety and test performance yields: r(38) = -.42, p = .008
+A study predicted that sleep deprivation would impair memory. Results: t(38) = 1.45, p = .154, d = 0.46.
 
-1. **Is this significant at α = .05?** `r torf(TRUE)`
+1. **Is this significant at alpha = .05?** `r torf(FALSE)`
 
-2. **Direction of relationship:** `r mcq(c("Positive", answer = "Negative", "No relationship", "Perfect"))`
+2. **Does p = .154 PROVE the null hypothesis is true?** `r torf(FALSE)`
 
-3. **Strength:** `r mcq(c("Weak", answer = "Moderate", "Strong", "Very weak"))`
+3. **In the Discussion, appropriate responses include:**
 
-4. **Can we say anxiety CAUSES poor performance?** `r torf(FALSE)`
+The sample may have been too small (low power): `r torf(TRUE)`
 
-5. **Calculate r²:** `r fitb(c(".1764", "0.1764", "17.64%", "18%", ".18"), ignore_case = TRUE)`
+The measurement may not have been sensitive enough: `r torf(TRUE)`
+
+The hypothesis was definitely wrong: `r torf(FALSE)`
+
+The effect size (d = 0.46) suggests a medium effect worth investigating: `r torf(TRUE)`
+
+4. **A constructive approach would be:**
+
+`r mcq(c("Claim the results are actually significant", "Abandon this research area", answer = "Acknowledge the non-significant finding, note the medium effect size, and suggest a larger sample in future research", "Blame participants"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 4: Complete Discussion Elements
+
+Order these elements as they would typically appear in a Discussion:
+
+**First:** `r mcq(c(answer = "Summary of findings and whether hypothesis was supported", "Detailed limitations", "Future research", "Reference list"))`
+
+**Second:** `r mcq(c("Limitations", answer = "Interpretation and relation to previous research", "Conclusion", "Abstract"))`
+
+**Third:** `r mcq(c("More results", "Introduction material", answer = "Limitations of the study", "Method details"))`
+
+**Fourth:** `r mcq(c("Statistics", "Procedure", answer = "Implications and future directions", "Hypothesis"))`
+
+**Final:** `r mcq(c("More limitations", answer = "Concluding statement", "New analyses", "Additional hypotheses"))`
 
 :::
 
 ---
 
-## Part 6: Final Preparation
+## Part 6: Writing Practice
 
-### Question 13: EDS Section A Requirements
+### Question 17: Discussion Sentence Types
 
-Section A of the EDS requires you to:
+Identify which type of sentence each is:
 
-Write a hypothesis `r torf(TRUE)`
+"The present study found that participants who received feedback performed significantly better than controls." - `r mcq(c(answer = "Summary of findings", "Interpretation", "Limitation", "Future direction"))`
 
-Identify design, IV, DV, and data type `r torf(TRUE)`
+"This finding is consistent with Self-Determination Theory (Deci & Ryan, 2000), which suggests..." - `r mcq(c("Summary", answer = "Interpretation/theory connection", "Limitation", "Future direction"))`
 
-Calculate mean and SD by hand `r torf(TRUE)`
+"A limitation of this study is the reliance on self-report measures, which may be subject to social desirability bias." - `r mcq(c("Summary", "Interpretation", answer = "Limitation", "Future direction"))`
 
-Conduct a by-hand statistical test `r torf(TRUE)`
+"Future research could examine whether these effects persist over longer time periods." - `r mcq(c("Summary", "Interpretation", "Limitation", answer = "Future direction"))`
 
-Write a full lab report `r torf(FALSE)`
+### Question 18: Avoiding Common Errors
 
-Report results in APA format `r torf(TRUE)`
+Which sentence is PROBLEMATIC for a Discussion?
 
-### Question 14: EDS Section B
+`r mcq(c("The hypothesis was supported", answer = "The results prove that X causes Y (when using correlational design)", "The effect size was medium", "Results were consistent with previous findings"))`
 
-Section B asks about:
+### Question 19: Practical vs Statistical Significance
 
-`r mcq(c("More statistics", answer = "Methodological improvements, individual differences, and ecological validity", "Rewriting Section A", "Planning a new study"))`
+A study finds p = .01, d = 0.15. The Discussion should:
 
-### Question 15: Ecological Validity
-
-Ecological validity refers to:
-
-`r mcq(c("Whether the study is environmentally friendly", answer = "Whether findings generalise to real-world settings", "Whether the design is ecological", "The number of participants"))`
+`r mcq(c("Focus only on the significant p-value", "Ignore the effect size", answer = "Note that while statistically significant, the effect is small and may have limited practical importance", "Claim the effect is large because it's significant"))`
 
 ---
 
 ## Summary Checklist
 
-Before the EDS assignment, verify you can:
+Before writing your Discussion section, verify you can:
 
-- [ ] Write a complete Discussion section (summary, interpretation, limitations, future directions)
-- [ ] Calculate mean by hand (sum / n)
-- [ ] Calculate SD by hand (deviations → squared → sum → divide by n-1 → square root)
-- [ ] Understand t-test logic (difference relative to variability)
-- [ ] Report all statistics in APA format
-- [ ] Identify IV, DV, design type, and data type
-- [ ] Explain correlation ≠ causation
-- [ ] Discuss ecological validity and individual differences
+- [ ] Summarise main findings and whether hypothesis was supported
+- [ ] Interpret results in context of theory and previous research
+- [ ] Discuss both consistencies and inconsistencies with literature
+- [ ] Identify specific, meaningful limitations
+- [ ] Explain how limitations might have affected results
+- [ ] Suggest concrete future research directions
+- [ ] Avoid claiming causation from correlational data
+- [ ] Appropriately discuss non-significant findings
+- [ ] Balance statistical and practical significance
 
 ::: {.callout-important}
-## EDS Assignment Due This Week
-Submit your EDS assignment by the deadline. This assessment is worth 20% of your module grade. Show all working for by-hand calculations.
+## Key Points for Your Lab Report
+Your Discussion should tell a story: What did you find? What does it mean? What are the limitations? Where do we go from here? Avoid simply repeating statistics - instead, explain and interpret them.
 :::

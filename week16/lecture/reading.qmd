@@ -1,17 +1,6 @@
 ---
 title: "Week 16 Lecture Reading"
-subtitle: "Practice Assignment"
-author: "Gordon Wright"
-date: "2026-02-23"
-format:
-  typst:
-    mainfont: "Atkinson Hyperlegible"
-  html: default
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf
+subtitle: "Regression"
 ---
 
 {{< include ../../textbook/chapters/w16-lecture.qmd >}}

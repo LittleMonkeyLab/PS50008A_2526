@@ -1,66 +1,126 @@
 ---
-title: "Week 17: Practice MCQ Test"
-subtitle: "PS50008A Research Methods | 2026-03-02"
+title: "Week 17: Interpretation & Credibility"
+subtitle: "PS50008A Research Methods | 2-6 March 2026"
 author: "Gordon Wright"
 date: "2026-03-02"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w17-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-03-02"
-  labels: ['assessment']
-  blocks:
-    - rm0-w17-lecture-slides
-    - rm0-w17-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Practice MCQ Test
+::: {.callout-warning}
+## MCQ Exam Next Week
+This is your final preparation week before the MCQ Exam on Monday 9th March. Use this week to consolidate your knowledge and identify any gaps.
+:::
 
-**Lab**: Project Groups: Methodology
+**This week**: Explore critical issues in research credibility including p-hacking, HARKing, and the replication crisis. Plus, focused MCQ exam preparation.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+### Research Credibility
+- Define p-hacking and explain how it inflates false positive rates
+- Explain what HARKing is and why it's problematic for science
+- Describe the replication crisis and its implications for psychology
+- Identify questionable research practices (QRPs) in published work
 
-## Schedule
+### MCQ Preparation
+- Apply research methods concepts to multiple-choice questions
+- Identify common misconceptions and traps in MCQ items
+- Demonstrate knowledge across all topics covered this term
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Practice MCQ Test | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Project Groups: Methodology | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 17 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+## The Big Picture
 
-## Preparation
+This week answers the question: **How do we know if research findings are credible?**
 
-Before the lecture:
+The replication crisis has fundamentally changed how psychologists conduct and evaluate research. Understanding these issues isn't just academic — it's essential for being a critical consumer of psychological research.
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+::: {.callout-tip}
+## Connecting Theory and Practice
+The questionable research practices we discuss (p-hacking, HARKing) are exactly why preregistration and transparent reporting are now considered best practice. Your Research Plan assignment embodies these principles.
+:::
+
+## Before the Lecture
+
+::: {.callout-note}
+## Required Preparation
+1. **Review all lecture readings from Weeks 12-16** — the MCQ will test across all topics
+2. **Complete any outstanding self-assessments** — use these to identify weak areas
+3. **Read the lecture reading** — introduces the credibility crisis
+:::
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | P-hacking, HARKing, and the replication crisis |
+| [Lecture Reading](lecture/reading.qmd) | Background on research credibility |
+| [Lab Slides](lab/slides.html){target="_blank"} | Project methodology guidance |
+| [Lab Activity](lab/activity.qmd) | Methodology development for your project |
+| [Lab Reading](lab/reading.qmd) | Methodology planning resources |
+| [Self-Assessment](lab/self-assessment.qmd) | MCQ practice questions |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | Interpretation & Credibility: p-hacking, HARKing, replication crisis, MCQ prep |
+| Thursday | Lab (2 hrs) | Project Groups: Methodology development |
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### P-Hacking
+- **Definition**: Manipulating data analysis until you get p < .05
+- **Examples**: Selective reporting, optional stopping, excluding outliers post-hoc
+- **Consequence**: Dramatically inflates false positive rates
 
-## Resources
+### HARKing
+- **Definition**: Hypothesizing After Results are Known
+- **Problem**: Presents exploratory findings as if they were predicted
+- **Solution**: Preregistration of hypotheses and analysis plans
 
-- [Week 17 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### The Replication Crisis
+- **What happened**: Many classic psychology findings failed to replicate
+- **Why it matters**: Questions the reliability of psychological knowledge
+- **Moving forward**: Open science practices, preregistration, larger samples
+
+### Questionable Research Practices (QRPs)
+- Selective reporting of results
+- Excluding data points after seeing results
+- Adding covariates to achieve significance
+- Not reporting failed replications
+
+## Project Groups: Methodology
+
+In the lab this week, your project group will:
+
+1. **Finalise your research question** from last week
+2. **Choose your design** — between-subjects, within-subjects, or correlational
+3. **Define your variables** precisely — operationalise your IV and DV
+4. **Plan your sampling** — who will you test and how many participants?
+5. **Consider ethical issues** — consent, debriefing, data protection
+
+::: {.callout-important}
+## Methodology Due
+Your methodology section should be complete by the end of this lab. Next week (after the MCQ), you'll focus on procedure.
+:::
+
+## Connecting to Assessments
+
+| Assessment | Connection |
+|------------|------------|
+| **MCQ Exam** | FINAL PREPARATION — exam is next Monday! |
+| **Research Plan** | Methodology section development |
+| **Research Report** | Understanding credibility issues for your discussion |
+
+## What's Next?
+
+::: {.callout-important}
+## MCQ Exam: Monday 9th March
+**Week 18** begins with the MCQ Exam. The lecture slot will be the exam itself. Make sure you know the time and location.
+:::
+
+- **Week 18**: MCQ Exam (Monday) + Project Groups: Procedure (Thursday)

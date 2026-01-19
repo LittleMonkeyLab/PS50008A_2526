@@ -1,66 +1,139 @@
 ---
-title: "Week 15: Significance Testing"
-subtitle: "PS50008A Research Methods | 2026-02-09"
+title: "Week 15: Correlation"
+subtitle: "PS50008A Research Methods | 9-13 February 2026"
 author: "Gordon Wright"
 date: "2026-02-09"
-format:
-  html:
-    toc: true
-    toc-depth: 2
-taskmistress:
-  id: rm0-w15-index
-  subtype: index
-  status: backlog
-  priority: 2
-  due: "2026-02-09"
-  labels: ['statistics', 't-test']
-  blocks:
-    - rm0-w15-lecture-slides
-    - rm0-w15-lab-slides
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
 ---
 
 ## Overview
 
-**Lecture**: Significance Testing & Research Plan Briefing
+::: {.callout-warning}
+## Last Week Before Reading Week
+This is the final teaching week before Reading Week (16-20 February). Use Reading Week to consolidate your understanding of correlation and prepare for Regression in Week 16.
+:::
 
-**Lab**: Running T-Tests with R
+**This week**: Explore the relationship between variables using correlation. Learn to visualise relationships with scatterplots, calculate correlation coefficients (Pearson and Spearman), and understand why correlation does not imply causation.
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- TBC
-- TBC
-- TBC
+### Scatterplots
+- Create and interpret scatterplots to visualise relationships
+- Identify direction (positive/negative) and strength of relationships
+- Recognise linear vs non-linear patterns in data
 
-## Schedule
+### Correlation Coefficients
+- Calculate and interpret Pearson's r for continuous data
+- Calculate and interpret Spearman's rho for ranked/ordinal data
+- Understand when to use each type of correlation
+- Interpret correlation coefficient magnitude (weak, moderate, strong)
 
-| Session | Topic | Materials |
-|---------|-------|-----------|
-| Lecture | Significance Testing & Research Plan Briefing | [Slides](lecture/slides.qmd) \| [Reading](lecture/reading.qmd) \| [Video](lecture/video.qmd) |
-| Lab | Running T-Tests with R | [Slides](lab/slides.qmd) \| [Activity](lab/activity.qmd) \| [Reading](lab/reading.qmd) |
-| Self-Assessment | Week 15 Exercises | [Self-Assessment](lab/self-assessment.qmd) |
+### Correlation vs Causation
+- Explain why correlation does not imply causation
+- Identify potential confounding variables (third variables)
+- Recognise the directionality problem in correlational research
+- Evaluate causal claims in research and media
 
-## Preparation
+### Reporting Correlations
+- Report correlation results in APA format
+- Create correlation matrices for multiple variables
+- Describe relationships accurately in written text
 
-Before the lecture:
+## Before the Lecture
 
-1. Watch the preview video
-2. Complete the pre-lecture reading
+::: {.callout-important}
+## Required Preparation
+1. **Read the lecture reading** - covers scatterplots, correlation coefficients, and interpretation
+2. **Review your DataLab data** - we'll examine relationships between confidence and accuracy
+:::
+
+## The Big Picture
+
+This week answers the question: **How do we measure and describe relationships between variables?**
+
+::: {.callout-tip}
+## Building on Previous Weeks
+You already know about correlational designs from Week 12. Now we learn HOW to analyse those designs - measuring the strength and direction of relationships between variables.
+:::
+
+We'll use YOUR DataLab data to explore:
+
+- **Confidence vs Accuracy** - Do more confident participants perform better?
+- **Pre-test mood vs Post-test mood** - How strongly related are mood measurements?
+- **Multiple relationships** - Creating correlation matrices
+
+By the end of this week, you'll be able to analyse and interpret correlations in your own research.
+
+## Materials
+
+| Resource | Description |
+|----------|-------------|
+| [Lecture Slides](lecture/slides.html){target="_blank"} | Scatterplots, Pearson/Spearman, correlation vs causation |
+| [Lecture Reading](lecture/reading.qmd) | Correlation theory and interpretation |
+| [Lab Reading](lab/reading.qmd) | Correlation analysis in R |
+| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
+| [Lab Activity](lab/activity.qmd) | WebR exercises with correlation |
+| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+
+## Week at a Glance
+
+| Day | Session | Focus |
+|-----|---------|-------|
+| Wednesday | Lecture (2 hrs) | Scatterplots, Pearson's r, Spearman's rho, correlation vs causation |
+| Thursday | Lab (2 hrs) | Correlation in R: calculating, visualising, and interpreting |
 
 ## Key Concepts
 
-- TBC
-- TBC
-- TBC
+### Scatterplots
+- **Scatterplot**: A graph showing the relationship between two continuous variables
+- **Direction**: Positive (upward trend) or negative (downward trend)
+- **Strength**: How closely points cluster around the line of best fit
+- **Linearity**: Whether the relationship follows a straight line
 
-## Resources
+### Correlation Coefficients
+- **Pearson's r**: Measures linear relationship between two continuous variables
+- **Spearman's rho**: Measures monotonic relationship; uses ranked data
+- **Range**: Both range from -1 (perfect negative) to +1 (perfect positive)
+- **Zero**: No linear relationship (but could still be non-linear!)
 
-- [Week 15 Lecture Slides](lecture/slides.qmd)
-- [Lab Activity](lab/activity.qmd)
-- [Self-Assessment](lab/self-assessment.qmd)
+### Interpreting Correlation Strength
+| r value | Interpretation |
+|---------|----------------|
+| .10 - .29 | Weak |
+| .30 - .49 | Moderate |
+| .50 - 1.0 | Strong |
+
+*Note: These are guidelines; context matters for interpretation.*
+
+### Correlation vs Causation
+- **Third variable problem**: An unmeasured variable may cause both
+- **Directionality problem**: A correlates with B, but does A cause B or B cause A?
+- **Temporal precedence**: Cause must precede effect in time
+
+### APA Reporting
+- Report as: r(df) = .xx, p = .xxx or rho(df) = .xx, p = .xxx
+- Example: "There was a significant positive correlation between confidence and accuracy, r(48) = .42, p = .003."
+
+## Connecting to Assessments
+
+This week's content directly supports your assessments:
+
+| Assessment | Connection |
+|------------|------------|
+| **Research Plan** | Correlational hypotheses, understanding relationships |
+| **MCQ Exam** | Interpreting scatterplots, choosing Pearson vs Spearman |
+| **EDS Assignment** | Calculating and reporting correlations |
+| **Research Report** | Results section, correlation tables |
+
+## What's Next?
+
+::: {.callout-note}
+## Reading Week: 16-20 February
+No lectures or labs. Use this time to review correlation and prepare for Week 16: Regression.
+:::
+
+**Week 16**: Regression - Building on correlation to make predictions. Learn about the line of best fit, R-squared, and predicting one variable from another.

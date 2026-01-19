@@ -1,70 +1,41 @@
 ---
-title: "Running Experiments Ethically and Effectively"
-subtitle: "PS50008A Week 18 Lecture"
+title: "MCQ Exam"
+subtitle: "PS50008A Week 18 | Lecture"
 author: "Gordon Wright"
-date: "2026-03-09"
+date: "2026-03-11"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w18-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-09"
-  labels: ['ethics', 'experimental-design']
-  depends_on:
-    - rm0-w18-index
-  blocks:
-    - rm0-w18-lab-slides
-    - rm0-w18-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-03-09"
+    center-title-slide: true
 ---
 
-## Learning Objectives
+## MCQ Exam - No Lecture This Week
 
-By the end of this lecture, you will be able to:
+::: {.callout-important}
+## In-Class Assessment
+This week's lecture slot is dedicated to the **MCQ Exam**.
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+There are no lecture slides for this week.
 :::
 
----
+## Exam Information
 
-## Overview
+- **Date**: Wednesday 11 March 2026
+- **Time**: During lecture slot (10:00-12:00)
+- **Location**: Regular lecture room
+- **Format**: Multiple choice questions
+- **Content**: Weeks 11-17
 
-TBC - Lecture content to be developed
+## Good Luck!
 
----
-
-## Summary
-
-::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+::: {.r-fit-text}
+Good luck!
 :::
 
----
-
-## Next Week
-
-TBC - Preview of next week's content
+See you next week for feedback and project workshop.

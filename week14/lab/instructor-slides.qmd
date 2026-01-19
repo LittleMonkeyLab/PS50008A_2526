@@ -1,71 +1,265 @@
 ---
-title: "Plotting Data with R"
-subtitle: "PS50008A Week 14 Lab"
+title: "t-Tests in R"
+subtitle: "PS50008A Week 14 | Lab Walkthrough"
 author: "Gordon Wright"
-date: "2026-02-04"
+date: "2026-02-05"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
     transition: fade
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w14-lab-slides
-  subtype: lab-slides
-  status: backlog
-  priority: 2
-  due: "2026-02-04"
-  labels: ['r-programming', 'visualisation']
-  depends_on:
-    - rm0-w14-lecture-slides
-  blocks:
-    - rm0-w14-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 20min
-    delivery_date: "2026-02-04"
+    width: 1050
+    height: 700
+    center: false
+    center-title-slide: true
 ---
 
-## Today's Lab
+# Welcome to Lab {background-color="#275882"}
 
-**Plotting Data with R**
+## t-Tests in R
 
-::: {.incremental}
-- TBC
-- TBC
-- TBC
+---
+
+## Today's Focus
+
+::: {.objectives-box}
+**Putting NHST into practice.** Today you will:
+
+- Run independent samples t-tests in R
+- Run paired samples t-tests in R
+- Interpret t-test output correctly
+- Report results in APA format
 :::
 
 ---
 
-## Learning Objectives
-
-By the end of this lab, you will be able to:
-
-- TBC
-- TBC
-- TBC
-
----
-
-## Lab Structure
+## Lab Structure (~90 min)
 
 | Time | Activity |
 |------|----------|
-| 0-20 min | Introduction |
-| 20-60 min | Main activity |
-| 60-80 min | Analysis |
-| 80-90 min | Wrap-up |
+| 10:00-10:10 | These slides + setup |
+| 10:10-10:35 | Part 1: Independent samples t-test |
+| 10:35-11:00 | Part 2: Paired samples t-test |
+| 11:00-11:30 | Part 3: APA reporting |
+| 11:30-11:50 | Part 4: Putting it all together |
+| 11:50-12:00 | Wrap-up + self-assessment |
 
 ---
 
-# Let's Begin! {.center background-color="#1a1a2e"}
+## Open the Activity
 
-Move to the [Lab Activity](activity.qmd)
+Navigate to: **Week 14 > Lab > Activity**
+
+Make sure WebR loads before proceeding.
+
+---
+
+# Part 1: Independent Samples t-Test {background-color="#275882"}
+
+## Between-Subjects Comparison (~25 min)
+
+---
+
+## When to Use
+
+::: {.definition-box}
+**Independent samples t-test** when:
+
+- Comparing TWO groups
+- Different people in each group
+- Between-subjects design
+
+**Example**: Lab A vs Lab B memory scores
+:::
+
+---
+
+## The R Code
+
+```r
+t.test(group1, group2)
+# OR
+t.test(DV ~ IV, data = mydata)
+```
+
+Students will use both approaches.
+
+---
+
+## Reading the Output
+
+Key elements to identify:
+
+| Output | Meaning |
+|--------|---------|
+| t | Test statistic |
+| df | Degrees of freedom |
+| p-value | Probability under H0 |
+| mean of x, mean of y | Group means |
+| 95% CI | For the mean DIFFERENCE |
+
+---
+
+## Common Errors
+
+Watch for:
+
+- Forgetting to remove NAs
+- Confusing which group is which
+- Misinterpreting the CI (it's for the difference, not individual means)
+
+---
+
+# Part 2: Paired Samples t-Test {background-color="#275882"}
+
+## Within-Subjects Comparison (~25 min)
+
+---
+
+## When to Use
+
+::: {.definition-box}
+**Paired samples t-test** when:
+
+- Comparing TWO conditions
+- SAME people in both conditions
+- Within-subjects design
+
+**Example**: Pre vs Post mood scores
+:::
+
+---
+
+## The R Code
+
+```r
+t.test(time1, time2, paired = TRUE)
+```
+
+::: {.callout-warning}
+## Critical Parameter
+`paired = TRUE` is essential! Without it, R treats the data as independent samples.
+:::
+
+---
+
+## Why Paired is More Powerful
+
+Emphasise:
+
+1. Each person serves as their own control
+2. Individual differences are removed
+3. Smaller error term = more power to detect effects
+4. Requires matched data (same n in both conditions)
+
+---
+
+# Part 3: APA Reporting {background-color="#275882"}
+
+## Writing Up Results (~30 min)
+
+---
+
+## APA Format Template
+
+::: {.definition-box}
+**Template:**
+t(df) = X.XX, p = .XXX, d = X.XX, 95% CI [X.XX, X.XX]
+
+**Example:**
+t(48) = 2.34, p = .023, d = 0.67, 95% CI [0.12, 1.22]
+:::
+
+---
+
+## What to Include
+
+Students should report:
+
+1. **Test statistic** (t-value)
+2. **Degrees of freedom** (in parentheses)
+3. **p-value** (exact, to 3 decimal places)
+4. **Effect size** (Cohen's d from Week 13)
+5. **Confidence interval** (for the difference)
+
+---
+
+## Example Write-Up
+
+> "An independent samples t-test revealed that participants in Lab B (M = 7.2, SD = 1.8) recalled significantly more words than participants in Lab A (M = 5.9, SD = 2.1), t(78) = 3.12, p = .002, d = 0.70, 95% CI [0.47, 2.13]."
+
+---
+
+# Part 4: Putting It Together {background-color="#275882"}
+
+## Complete Analysis (~20 min)
+
+---
+
+## The Full Picture
+
+Students will run a complete analysis:
+
+1. Check assumptions
+2. Run the appropriate t-test
+3. Calculate effect size
+4. Write APA results paragraph
+
+This mirrors what they'll do in their Research Report.
+
+---
+
+## Decision Flowchart
+
+| Question | Answer |
+|----------|--------|
+| Same or different people? | Same = paired; Different = independent |
+| p < .05? | Yes = significant; No = not significant |
+| CI includes 0? | Yes = not significant; No = significant |
+
+---
+
+# Wrap-Up {background-color="#275882"}
+
+---
+
+## Key Takeaways
+
+::: {.callout-important}
+## Today We Learned
+
+1. **Independent t-test**: Different people, `t.test(x, y)`
+2. **Paired t-test**: Same people, `t.test(x, y, paired = TRUE)`
+3. **p < .05**: Reject null hypothesis
+4. **Always report**: t, df, p, d, and 95% CI
+:::
+
+---
+
+## Next Steps
+
+Direct students to:
+
+1. Complete the **Week 14 Self-Assessment Quiz**
+2. Review **APA reporting format** for assessments
+3. Prepare for **Week 15: Correlation** - relationships between variables
+
+---
+
+## Assessment Reminder
+
+::: {.callout-warning}
+## Research Plan Due Week 16
+Start thinking about your hypotheses and planned analyses. t-tests are likely relevant for your project.
+:::
+
+---
+
+# Questions? {background-color="#275882"}
+
+## Then let's begin the activity!
+
+::: {.notes}
+Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
+:::

@@ -1,67 +1,254 @@
 ---
-title: "Live Data Collection"
+title: "Project Groups: Data Collection"
 subtitle: "PS50008A Week 19 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-18"
-format: 
+format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-    theme: cosmo
-    embed-resources: true
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
-taskmistress:
-  id: rm0-w19-lab-activity
-  subtype: lab-activity
-  status: backlog
-  priority: 2
-  due: "2026-03-18"
-  labels: ['data-collection', 'project', 'webr']
-  depends_on:
-    - rm0-w19-lab-slides
-  blocks:
-    - rm0-w19-self-assessment
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 70min
-    delivery_date: "2026-03-18"
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+```
 
 ## Overview
 
-TBC - Lab activity introduction
-
 ::: {.callout-important}
-## Before You Begin
-Make sure you have attended the Week 19 lecture.
+## Focus for Today
+This session focuses on **running your study and managing data collection**. By the end, you should:
+
+- Begin or continue data collection
+- Conduct quality checks on incoming data
+- Troubleshoot common problems
+- Complete initial data review
 :::
 
 ---
 
-## Part 1: Introduction
+## Activity 1: Running Your Study (20 min)
 
-TBC - Activity content
+### Pre-Session Checklist
+
+Before each data collection session, verify:
+
+- [ ] All materials ready
+- [ ] Technology tested (if applicable)
+- [ ] Quiet space secured
+- [ ] Consent forms available
+- [ ] Data recording system working
+
+**True or False: You should test your equipment EVERY time before collecting data.** `r torf(TRUE)`
+
+### Experimenter Behaviour
+
+::: {.callout-warning}
+## Avoiding Experimenter Bias
+Your behaviour can influence participant responses. Stay neutral and consistent.
+:::
+
+**Which experimenter behaviour could bias results?**
+
+`r mcq(c("Reading standardised instructions", "Maintaining a neutral expression", answer = "Nodding encouragingly when participants give certain answers", "Following the same procedure with everyone"))`
+
+**The term for participants behaving differently because they know they're being studied is:**
+
+`r mcq(c("Confirmation bias", answer = "Hawthorne effect", "Selection bias", "Observer effect"))`
+
+### Handling Questions
+
+During data collection, participants may ask questions. How should you respond?
+
+**A participant asks: "What answer are you looking for?"**
+
+`r mcq(c("Tell them the hypothesis", "Hint at the 'correct' answer", answer = "Explain there are no right or wrong answers and to respond honestly", "End the session"))`
+
+**A participant seems distressed during the study. You should:**
+
+`r mcq(c("Ignore it and continue", "Force them to complete the study", answer = "Check in, remind them they can stop, and offer support resources", "Pretend not to notice"))`
+
+**True or False: Participants can skip questions they don't want to answer.** `r torf(TRUE)`
 
 ---
 
-## Part 2: Exercises
+## Activity 2: Quality Checks (20 min)
 
-TBC - Interactive exercises
+### Real-Time Data Monitoring
 
-```{webr-r}
-# Example code
+Check your data as it comes in:
 
+::: {.callout-note}
+## Quality Check Indicators
+- Response rates (how many completing vs starting)
+- Completion times (too fast = not reading; too slow = distracted?)
+- Missing data patterns
+- Response distributions (all same answer = problematic)
+:::
 
-```
+**If a participant completes a 15-minute survey in 2 minutes, you should:**
+
+`r mcq(c("Include their data - they're just fast", answer = "Flag for review - they likely didn't read questions properly", "Immediately delete their data", "Ask them to redo it"))`
+
+### Attention Checks
+
+Many studies include attention check questions:
+
+> "For this question, please select 'Strongly Agree'"
+
+**The purpose of attention checks is to:**
+
+`r mcq(c("Trick participants", answer = "Identify participants who aren't reading questions", "Make the survey longer", "Test intelligence"))`
+
+**If a participant fails an attention check, you should:**
+
+`r mcq(c("Always include their data", "Always exclude their data", answer = "Follow your pre-registered exclusion criteria", "Ask them to explain themselves"))`
+
+### Missing Data
+
+**True or False: Some missing data is normal and expected.** `r torf(TRUE)`
+
+**What pattern of missing data is MOST concerning?**
+
+`r mcq(c("Random items missing across participants", answer = "All participants skipping the same question", "One participant missing one item", "Different participants missing different items"))`
+
+**If all participants skip question 7, this suggests:**
+
+`r mcq(c("Question 7 is fine", answer = "Question 7 may be confusing, sensitive, or have a technical problem", "Your sample is too small", "You need more attention checks"))`
+
+---
+
+## Activity 3: Troubleshooting (20 min)
+
+### Common Problems and Solutions
+
+Work through these scenarios:
+
+**Problem: Recruitment is slower than expected**
+
+`r mcq(c("Give up and use whatever data you have", answer = "Expand recruitment methods, extend timeline, or adjust sample size expectations", "Make up additional data", "Reduce your standards for who can participate"))`
+
+**Problem: A participant tells others about the study (including the manipulation)**
+
+`r mcq(c("It doesn't matter", answer = "Note this, recruit from different pools if possible, assess potential contamination", "Confront the participant", "Cancel the entire study"))`
+
+**Problem: Technology fails mid-session**
+
+`r mcq(c("Pretend it didn't happen", "Force the participant to wait indefinitely", answer = "Apologise, note the incident, restart if possible or reschedule", "Blame the participant"))`
+
+### Ethical Issues During Collection
+
+**A participant reveals something concerning (e.g., self-harm) during the study:**
+
+`r mcq(c("Ignore it - you're not a therapist", "Include it in your data write-up", answer = "Pause, express concern, provide support resources, consider whether to continue", "End the study immediately without explanation"))`
+
+**True or False: You should have a plan for handling distressed participants BEFORE data collection begins.** `r torf(TRUE)`
+
+### Documentation
+
+Keep a log of any issues:
+
+| Date | Participant | Issue | Resolution |
+|------|-------------|-------|------------|
+| | | | |
+| | | | |
+| | | | |
+
+**Why is documentation important?**
+
+`r mcq(c("It's not really important", answer = "It helps explain anomalies and improves future studies", "Only for ethics audits", "To blame others for problems"))`
+
+---
+
+## Activity 4: Initial Data Review (20 min)
+
+### First Look at Your Data
+
+Before formal analysis, do a quick review:
+
+::: {.callout-note}
+## Initial Review Checklist
+1. How many responses so far?
+2. Any obvious data entry errors?
+3. Are all conditions represented?
+4. Are responses in expected ranges?
+5. Any patterns in missing data?
+:::
+
+### Checking Distributions
+
+**If you asked for age and someone entered "999", this is:**
+
+`r mcq(c("A valid response", answer = "Likely an error requiring correction or exclusion", "Evidence of immortality", "Fine to include in your mean"))`
+
+**Before calculating means, you should:**
+
+`r mcq(c("Just calculate them immediately", answer = "Check for outliers and impossible values", "Delete any values you don't like", "Assume everything is correct"))`
+
+### Sample Characteristics
+
+Check your sample composition:
+
+**If your study is about "adults in general" but your sample is 95% female psychology students aged 18-22:**
+
+`r mcq(c("This is perfectly representative", answer = "This limits generalisability and should be noted as a limitation", "This means the study is invalid", "Gender and age don't matter"))`
+
+**True or False: You should report your sample demographics in your Methods section.** `r torf(TRUE)`
+
+### Pre-Analysis Plan Review
+
+Before analysing, confirm:
+
+1. **Primary hypothesis**: ___
+2. **Planned analysis**: ___
+3. **Exclusion criteria**: ___
+4. **Minimum sample size**: ___
+
+**When should exclusion criteria be decided?**
+
+`r mcq(c("After seeing the data", answer = "Before data collection (ideally pre-registered)", "During analysis", "When writing up results"))`
+
+---
+
+## Data Collection Log
+
+Track your progress:
+
+| Date | Participants Tested | Running Total | Notes |
+|------|---------------------|---------------|-------|
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
+### Progress Check
+
+**Current sample size**: ___
+
+**Target sample size**: ___
+
+**Days remaining**: ___
+
+**On track?** `r mcq(c("Yes - ahead of schedule", "Yes - on track", answer = "Need to assess as a group", "No - behind schedule"))`
+
+---
+
+## Group Discussion: Status Update
+
+Discuss as a group:
+
+1. **Recruitment progress**: Are you on track?
+2. **Procedure issues**: Any problems running the study?
+3. **Data quality**: Any concerns with responses?
+4. **Team coordination**: Is everyone contributing?
+5. **Timeline**: Realistic for completion?
 
 ---
 
@@ -69,14 +256,25 @@ TBC - Interactive exercises
 
 ::: {.callout-important}
 ## Summary
-1. TBC
-2. TBC
-3. TBC
+
+1. **Consistent procedure** is essential - follow your protocol exactly
+2. **Quality checks** should happen throughout data collection, not just at the end
+3. **Document problems** to help explain your data and improve future studies
+4. **Initial data review** helps catch issues before formal analysis
 :::
 
 ---
 
 ## Next Steps
 
-- Complete the [Week 19 Self-Assessment](self-assessment.qmd)
-- Prepare for Week 20
+- Continue data collection through Week 20
+- Conduct daily/session quality checks
+- Document any issues in your log
+- Begin thinking about analysis once collection is complete
+- Prepare for the Report Writing Workshop (Week 20)
+
+::: {.callout-warning}
+## Data Collection Deadline
+All data collection must be complete by [DATE]. After this, you will move to analysis and writing.
+:::
+

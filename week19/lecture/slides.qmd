@@ -1,40 +1,18 @@
 ---
-title: "In-class MCQ Test"
-subtitle: "PS50008A Week 19 Lecture"
+title: "Project Workshop"
+subtitle: "PS50008A Week 19 | Lecture"
 author: "Gordon Wright"
-date: "2026-03-16"
+date: "2026-03-18"
 format:
   revealjs:
-    theme: [default, ../../assets/gs-theme.scss]
-    slide-number: true
+    theme: [default, ../../assets/slides.scss]
+    slide-number: c/t
     progress: true
-    hash: true
     transition: fade
+    width: 1050
+    height: 700
     center: false
-    code-fold: true
-    width: 1280
-    height: 720
-    embed-resources: true
-taskmistress:
-  id: rm0-w19-lecture-slides
-  subtype: lecture-slides
-  status: backlog
-  priority: 2
-  due: "2026-03-16"
-  labels: ['assessment']
-  depends_on:
-    - rm0-w19-index
-  blocks:
-    - rm0-w19-lab-slides
-    - rm0-w19-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    estimated_duration: 50min
-    delivery_date: "2026-03-16"
+    center-title-slide: true
 ---
 
 ## Learning Objectives
@@ -42,29 +20,253 @@ taskmistress:
 By the end of this lecture, you will be able to:
 
 ::: {.incremental}
-- TBC
-- TBC
-- TBC
+- Understand common MCQ exam mistakes and how to improve
+- Report statistical results in APA format
+- Apply analysis techniques to your project data
+- Preview the EDS assignment requirements
 :::
 
----
+# MCQ Feedback {background-color="#275882"}
 
-## Overview
+## Exam Overview
 
-TBC - Lecture content to be developed
+::: {.callout-note}
+## Performance Summary
+Overall class performance and key statistics will be shared here.
+:::
 
----
-
-## Summary
+## Common Mistakes
 
 ::: {.incremental}
-- Key point 1
-- Key point 2
-- Key point 3
+- TBC - Analysis of common errors
+- TBC - Conceptual misunderstandings
+- TBC - Areas for improvement
 :::
 
----
+## Questions Most Found Difficult
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Topic Area 1**
+
+- Key concept review
+- Clarification of misunderstandings
+:::
+
+::: {.column width="50%"}
+**Topic Area 2**
+
+- Key concept review
+- Clarification of misunderstandings
+:::
+
+::::
+
+## Learning from Feedback
+
+::: {.concept-box}
+Use this feedback to strengthen your understanding for the research report and future studies.
+:::
+
+# APA Results Reporting {background-color="#275882"}
+
+## Why APA Format Matters
+
+::: {.definition-box}
+**APA Style**: The official style guide of the American Psychological Association, providing standards for scientific writing and reporting.
+:::
+
+## Reporting Statistical Tests
+
+::: {.example-box}
+**t-test example**:
+
+> There was a significant difference in scores between the caffeine group (*M* = 85.2, *SD* = 12.4) and the control group (*M* = 72.8, *SD* = 14.1), *t*(58) = 3.45, *p* = .001, *d* = 0.89.
+:::
+
+## Key Elements to Include
+
+::: {.incremental}
+- Descriptive statistics (M, SD)
+- Test statistic and degrees of freedom
+- p-value (exact or inequality)
+- Effect size
+- Confidence intervals where appropriate
+:::
+
+## Common Reporting Formats
+
+::: {.panel-tabset}
+
+### t-test
+
+*t*(df) = X.XX, *p* = .XXX, *d* = X.XX
+
+### Correlation
+
+*r*(df) = .XX, *p* = .XXX
+
+### ANOVA
+
+*F*(df1, df2) = X.XX, *p* = .XXX, partial eta-squared = .XX
+
+:::
+
+## Formatting Tips
+
+::: {.callout-tip}
+## Remember
+- Italicise statistical symbols (*M*, *SD*, *t*, *p*, *r*, *F*)
+- Use leading zero for statistics that can exceed 1 (e.g., *M* = 0.75)
+- No leading zero for statistics bounded by 1 (e.g., *p* = .023, *r* = .45)
+:::
+
+# Project Analysis Support {background-color="#275882"}
+
+## Where Should You Be Now?
+
+::: {.incremental}
+- Data collection complete (or nearly complete)
+- Data cleaned and ready for analysis
+- Clear research question and hypotheses
+- Analysis plan identified
+:::
+
+## Common Analysis Challenges
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Data Issues**
+
+- Missing data
+- Outliers
+- Assumption violations
+:::
+
+::: {.column width="50%"}
+**Statistical Issues**
+
+- Choosing the right test
+- Interpreting output
+- Reporting results
+:::
+
+::::
+
+## Getting Help
+
+::: {.callout-note}
+## Support Available
+- Lab sessions for hands-on help
+- Office hours
+- Online resources on course website
+- Study groups
+:::
+
+## Analysis Checklist
+
+::: {.exercise-box}
+**Before your analysis:**
+
+- [ ] Data cleaned and formatted correctly
+- [ ] Variables correctly coded
+- [ ] Assumptions checked
+- [ ] Analysis plan documented
+:::
+
+# EDS Preview {background-color="#275882"}
+
+## What is the EDS Assignment?
+
+::: {.definition-box}
+**Experimental Design Scenario (EDS)**: An assessment where you evaluate and improve a research design scenario.
+:::
+
+## Assignment Overview
+
+::: {.callout-important}
+## EDS Details
+- **Due**: Friday 20 March 2026, 12 noon
+- **Weight**: 20% of module grade
+- **Format**: Written critique and improvement
+:::
+
+## What You'll Need to Do
+
+::: {.incremental}
+- Read a research scenario carefully
+- Identify methodological issues
+- Suggest improvements
+- Justify your recommendations
+- Apply concepts from the module
+:::
+
+## Key Skills Assessed
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Critical Analysis**
+
+- Identifying flaws
+- Evaluating design choices
+- Recognising threats to validity
+:::
+
+::: {.column width="50%"}
+**Application**
+
+- Proposing solutions
+- Justifying decisions
+- Demonstrating understanding
+:::
+
+::::
+
+## Preparation Tips
+
+::: {.incremental}
+- Review experimental design principles
+- Practice identifying confounds
+- Understand internal vs external validity
+- Review ethical considerations
+- Look at past examples (if available)
+:::
+
+# Summary {background-color="#275882"}
+
+## Key Takeaways
+
+::: {.concept-box}
+1. Learn from MCQ feedback to strengthen understanding
+2. APA format is essential for professional reporting
+3. Seek support for project analysis challenges
+4. Start preparing for the EDS assignment
+:::
+
+## Upcoming Deadlines
+
+| Assessment | Due Date |
+|------------|----------|
+| EDS Assignment | Fri 20 March 2026, 12 noon |
+| Research Report | Fri 1 May 2026, 12 noon |
 
 ## Next Week
 
-TBC - Preview of next week's content
+::: {.callout-note}
+## Week 20: Wrapping Up
+- Project data showcase
+- Lab report structure
+- Writing your discussion
+- What's next in your journey
+:::
+
+## Questions?
+
+::: {.r-fit-text}
+Questions?
+:::
+
+Keep working on your projects!
