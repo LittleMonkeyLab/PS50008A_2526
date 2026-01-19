@@ -113,7 +113,7 @@ sidebar: false
 
   <div class="patience-box">
     <p><strong>Why can't I see it yet?</strong></p>
-    <p>Course materials are released weekly to keep everyone on the same page. Trying to peek at Week 15 during Week 12? That's like reading the results before running the study!</p>
+    <p>At the start of term, course materials are released weekly to keep everyone on the same page. Trying to peek at Week 15 during Week 12? That's like reading the results before running the study!</p>
     <p style="margin-top: 12px;"><strong>Check the schedule</strong> to see what's available now.</p>
   </div>
 
