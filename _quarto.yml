@@ -40,8 +40,8 @@ project:
   # - textbook/chapters/w19-lab.qmd
   # - textbook/chapters/w20-lecture.qmd
   # - textbook/chapters/w20-lab.qmd
-  # - textbook/quizzes/w11-quiz.qmd
-  # - textbook/quizzes/w12-quiz.qmd
+  - textbook/quizzes/w11-quiz.qmd
+  - textbook/quizzes/w12-quiz.qmd
   # - textbook/quizzes/w13-quiz.qmd
   # - textbook/quizzes/w14-quiz.qmd
   # - textbook/quizzes/w15-quiz.qmd
