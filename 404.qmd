@@ -1,5 +1,5 @@
 ---
-title: "404: Page Not Found"
+title: "404: Not Ready Yet!"
 pagetitle: "404 | PS50008A"
 toc: false
 sidebar: false
@@ -40,8 +40,8 @@ sidebar: false
   margin-bottom: 20px;
 }
 
-.hypothesis-box {
-  background: linear-gradient(135deg, #f8fdff 0%, #e8f4fc 100%);
+.patience-box {
+  background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
   border-left: 4px solid #EA8439;
   padding: 20px;
   margin: 30px 0;
@@ -49,14 +49,9 @@ sidebar: false
   border-radius: 0 8px 8px 0;
 }
 
-.hypothesis-box p {
+.patience-box p {
   margin: 8px 0;
   font-family: 'Atkinson Hyperlegible', sans-serif;
-}
-
-.hypothesis-box .label {
-  font-weight: bold;
-  color: #275882;
 }
 
 .btn-home {
@@ -102,39 +97,32 @@ sidebar: false
   font-style: italic;
   color: #666;
 }
-
-.correlation-note {
-  font-size: 0.85rem;
-  color: #888;
-  margin-top: 10px;
-}
 </style>
 
 <div class="error-container">
 
-  <div class="error-icon">🔍</div>
+  <div class="error-icon">🚧</div>
 
   <p class="error-code">404</p>
 
-  <h1 class="error-title">This page has gone missing!</h1>
+  <h1 class="error-title">Whoa there, eager learner!</h1>
 
   <p class="error-message">
-    Like a participant who didn't show up for the study, the page you're looking for cannot be found.
+    This content isn't ready yet. Like a good experiment, we're releasing materials <strong>one week at a time</strong> so you don't get overwhelmed (or skip ahead!).
   </p>
 
-  <div class="hypothesis-box">
-    <p><span class="label">H₀:</span> The page you want exists at this URL.</p>
-    <p><span class="label">H₁:</span> The page does not exist (or has moved).</p>
-    <p><span class="label">Result:</span> <em>p</em> < .001 — We reject H₀. The page is definitely not here.</p>
+  <div class="patience-box">
+    <p><strong>Why can't I see it yet?</strong></p>
+    <p>Course materials are released weekly to keep everyone on the same page. Trying to peek at Week 15 during Week 12? That's like reading the results before running the study!</p>
+    <p style="margin-top: 12px;"><strong>Check the schedule</strong> to see what's available now.</p>
   </div>
 
-  <a href="index.html" class="btn-home">Return to Home</a>
+  <a href="index.html" class="btn-home">Back to Home</a>
   <a href="schedule.html" class="btn-secondary-link">View Schedule</a>
 
   <div class="stats-joke">
-    "I tried to find this page 100 times.<br>
-    95 of those times, I was confident it wasn't here."
-    <p class="correlation-note">Note: Confidence in page location ≠ actual page existence (r = .00)</p>
+    "Patience is a variable that correlates strongly with academic success."<br>
+    <span style="font-size: 0.9em;">— Someone who definitely didn't just make that up</span>
   </div>
 
 </div>
