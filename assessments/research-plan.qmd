@@ -27,13 +27,11 @@ format-links:
 
 ## Task
 
-Describe how you would investigate **ONE** of the following research topics: (Examples only)
+Describe how you would investigate **ONE** of the following research topics:
 
-1. **The effect of caffeine on learning nouns.**
-
-2. **The effect of TV programme content on the recall of advertisements presented part-way through the programme.**
-
-3. **The effect of relaxation classes on stress reduction in the work place.**
+1. The effect of font difficulty on memory for information
+2. The effect of hydration on cognitive performance
+3. The effect of eye contact on perceived trustworthiness
 
 ---
 
@@ -73,15 +71,14 @@ This is a **plan**, not a completed study. Focus on justifying your choices thro
 
 ## Connection to Group Project
 
-The Research Plan assessment is based on your group's research question. While you develop your research question as a group, the Research Plan submission is **individual**.
+The Research Plan assessment is designed to mimic the steps you will take to design your group project in the second half of the term. This Research Plan submission is **individual**.
 
 ### Timeline
 
 | Week | Milestone |
 |------|-----------|
-| 11 | Form groups (3-4 students) |
-| 12-15 | Develop research question and design |
-| — | *Reading Week* — Work on Research Plan |
+| 12 | 3 topics (above) available to choose from |
+| — | *Reading Week* — Finalise Research Plan |
 | 16 | **Research Plan due** Friday 27 Feb |
 
 ---
