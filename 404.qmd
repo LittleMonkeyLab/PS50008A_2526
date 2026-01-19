@@ -1,0 +1,141 @@
+---
+title: "404: Page Not Found"
+pagetitle: "404 | PS50008A"
+toc: false
+sidebar: false
+---
+
+```{=html}
+<style>
+.error-container {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #275882;
+  line-height: 1;
+  margin-bottom: 0;
+  text-shadow: 4px 4px 0 #EA8439;
+}
+
+.error-title {
+  font-size: 1.8rem;
+  color: #275882;
+  margin: 20px 0;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hypothesis-box {
+  background: linear-gradient(135deg, #f8fdff 0%, #e8f4fc 100%);
+  border-left: 4px solid #EA8439;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: left;
+  border-radius: 0 8px 8px 0;
+}
+
+.hypothesis-box p {
+  margin: 8px 0;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.hypothesis-box .label {
+  font-weight: bold;
+  color: #275882;
+}
+
+.btn-home {
+  display: inline-block;
+  background-color: #275882;
+  color: white !important;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color: #EA8439;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-secondary-link {
+  display: inline-block;
+  color: #275882 !important;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  border: 2px solid #275882;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-link:hover {
+  background-color: #275882;
+  color: white !important;
+}
+
+.stats-joke {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-style: italic;
+  color: #666;
+}
+
+.correlation-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 10px;
+}
+</style>
+
+<div class="error-container">
+
+  <div class="error-icon">🔍</div>
+
+  <p class="error-code">404</p>
+
+  <h1 class="error-title">This page has gone missing!</h1>
+
+  <p class="error-message">
+    Like a participant who didn't show up for the study, the page you're looking for cannot be found.
+  </p>
+
+  <div class="hypothesis-box">
+    <p><span class="label">H₀:</span> The page you want exists at this URL.</p>
+    <p><span class="label">H₁:</span> The page does not exist (or has moved).</p>
+    <p><span class="label">Result:</span> <em>p</em> < .001 — We reject H₀. The page is definitely not here.</p>
+  </div>
+
+  <a href="index.html" class="btn-home">Return to Home</a>
+  <a href="schedule.html" class="btn-secondary-link">View Schedule</a>
+
+  <div class="stats-joke">
+    "I tried to find this page 100 times.<br>
+    95 of those times, I was confident it wasn't here."
+    <p class="correlation-note">Note: Confidence in page location ≠ actual page existence (r = .00)</p>
+  </div>
+
+</div>
+```

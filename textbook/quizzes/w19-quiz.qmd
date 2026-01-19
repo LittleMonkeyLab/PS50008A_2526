@@ -1,0 +1,223 @@
+---
+title: "Week 19 Self-Assessment"
+subtitle: "Results & Lab Report Writing"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+This quiz focuses on writing the Results section of your lab report and understanding how to present statistical findings in APA format.
+
+---
+
+## Part 1: Results Section Structure
+
+### Question 1: What Belongs in Results?
+
+Which of the following belongs in the Results section?
+
+Descriptive statistics (M, SD) `r torf(TRUE)`
+
+Statistical test results `r torf(TRUE)`
+
+Interpretation of what the results mean for theory `r torf(FALSE)`
+
+Effect sizes `r torf(TRUE)`
+
+Literature review `r torf(FALSE)`
+
+### Question 2: Results vs Discussion
+
+The Results section should:
+
+`r mcq(c("Explain why you found what you found", answer = "Report what you found without extensive interpretation", "Include your hypothesis from the Introduction", "Describe your participants"))`
+
+The Discussion section should:
+
+`r mcq(c("Report statistical values", answer = "Interpret results and relate them to theory and previous research", "Describe the procedure", "List materials used"))`
+
+---
+
+## Part 2: Reporting Descriptive Statistics
+
+### Question 3: APA Format for Descriptives
+
+The correct APA format for reporting a mean of 45.30 and standard deviation of 8.25 is:
+
+`r mcq(c("mean=45.30, std=8.25", "Average: 45.30 (8.25)", answer = "M = 45.30, SD = 8.25", "45.30 +/- 8.25"))`
+
+### Question 4: Decimal Places
+
+In APA format, how many decimal places are typically reported for means and standard deviations?
+
+`r mcq(c("0", "1", answer = "2", "As many as possible"))`
+
+### Question 5: Descriptives Table
+
+A well-formatted descriptive statistics table should include:
+
+`r mcq(c("Only means", "Only standard deviations", answer = "Group names, n, M, and SD for each condition", "Raw data for all participants"))`
+
+---
+
+## Part 3: Reporting t-Tests
+
+### Question 6: Independent t-Test Reporting
+
+The correct APA format for an independent t-test is:
+
+`r mcq(c("t = 2.45, significant", answer = "t(48) = 2.45, p = .018, d = 0.71", "t-test showed significant results", "Independent samples showed difference"))`
+
+What does the number in parentheses represent?
+
+`r mcq(c("Sample size", answer = "Degrees of freedom", "Effect size", "p-value"))`
+
+### Question 7: Paired t-Test Reporting
+
+A paired t-test with 25 participants would have degrees of freedom of:
+
+`r fitb(c("24"), ignore_case = TRUE)`
+
+The correct reporting format is:
+
+`r mcq(c("t(25) = ...", answer = "t(24) = ...", "t(50) = ...", "t = ... (n=25)"))`
+
+### Question 8: Reporting Direction
+
+When t(28) = -2.89, p = .007, the negative t-value indicates:
+
+`r mcq(c("An error in analysis", "The result is not significant", answer = "The second mean was higher than the first (or first lower than second)", "Effect size is negative"))`
+
+---
+
+## Part 4: Reporting Correlations
+
+### Question 9: Correlation Format
+
+The correct APA format for reporting a correlation is:
+
+`r mcq(c("r = .45, significant", answer = "r(48) = .45, p = .001", "Correlation was found (r = .45)", "Pearson's correlation = 0.45, p-value = 0.001"))`
+
+### Question 10: Degrees of Freedom for Correlation
+
+For a correlation with 50 participants, df =
+
+`r fitb(c("48"), ignore_case = TRUE)`
+
+(Hint: df = N - 2 for correlations)
+
+### Question 11: Direction and Strength
+
+How would you describe r = -.62 in words?
+
+`r mcq(c("A weak negative correlation", answer = "A moderate-to-strong negative correlation", "A strong positive correlation", "No correlation"))`
+
+---
+
+## Part 5: Putting It All Together
+
+### Question 12: Complete Results Paragraph
+
+Which is the best written Results paragraph?
+
+```{r}
+opts_results <- c(
+  "The results were significant and showed what we expected.",
+  answer = "An independent samples t-test revealed that participants in the music condition (M = 72.40, SD = 8.50) recalled significantly more words than those in the silence condition (M = 65.20, SD = 9.10), t(48) = 2.89, p = .006, d = 0.82.",
+  "We ran a t-test and it worked. The music group was better.",
+  "The hypothesis was supported because p < .05."
+)
+```
+
+`r longmcq(opts_results)`
+
+### Question 13: Results Writing Practice
+
+Fill in the blanks for this Results paragraph:
+
+"A `r fitb(c("paired", "paired samples"), ignore_case = TRUE)` t-test revealed that anxiety scores were significantly `r fitb(c("lower", "reduced", "decreased"), ignore_case = TRUE)` after the intervention (M = 32.50, SD = 7.20) compared to before (M = 45.80, SD = 8.40), t(29) = -4.56, p < .001, d = `r fitb(c("0.83", ".83", "0.8"), ignore_case = TRUE)`."
+
+---
+
+## Part 6: Common Mistakes
+
+### Question 14: Avoid These Errors
+
+Which of these is INCORRECT for a Results section?
+
+`r mcq(c("Reporting exact p-values (e.g., p = .023)", answer = "Writing 'The results prove our hypothesis'", "Including effect sizes", "Presenting descriptive statistics before inferential statistics"))`
+
+### Question 15: p-Value Reporting
+
+Which is the correct way to report a very small p-value?
+
+`r mcq(c("p = .000", answer = "p < .001", "p = 0", "p is significant"))`
+
+### Question 16: Leading Zeros
+
+In APA format, which is correct?
+
+`r mcq(c("p = 0.032", answer = "p = .032", "p = .03", "P = 0.032"))`
+
+Why no leading zero?
+
+`r mcq(c("It saves space", answer = "Values that cannot exceed 1 (like p and r) don't need a leading zero", "It's arbitrary convention", "Both are acceptable"))`
+
+---
+
+## Part 7: Practice Scenarios
+
+::: {.webex-check .webex-box}
+
+### Scenario 1
+
+You conducted an independent t-test comparing test scores between a morning class (n=25, M=78.4, SD=10.2) and afternoon class (n=25, M=72.1, SD=11.5). Results: t(48) = 2.05, p = .046, d = 0.58.
+
+1. **Is this significant at α = .05?** `r torf(TRUE)`
+
+2. **Effect size is:** `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+
+3. **Degrees of freedom are:** `r fitb(c("48"), ignore_case = TRUE)`
+
+4. **The morning class scored:** `r mcq(c(answer = "Higher", "Lower", "The same", "Cannot tell"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Scenario 2
+
+You conducted a correlation between study hours and exam grades (n=60). Results: r(58) = .42, p < .001.
+
+1. **Degrees of freedom are:** `r fitb(c("58"), ignore_case = TRUE)`
+
+2. **The correlation is:** `r mcq(c("Negative", answer = "Positive", "Zero", "Perfect"))`
+
+3. **Strength is:** `r mcq(c("Weak", answer = "Moderate", "Strong", "Very weak"))`
+
+4. **Shared variance (r²) is approximately:** `r fitb(c("17.64", "18", "17.6"), ignore_case = TRUE)`%
+
+:::
+
+---
+
+## Summary Checklist
+
+Before writing your Results section, verify:
+
+- [ ] Descriptive statistics reported first (M, SD for each condition)
+- [ ] Correct APA format used for all statistics
+- [ ] Degrees of freedom reported in parentheses
+- [ ] Exact p-values reported (or p < .001 for very small values)
+- [ ] Effect sizes included
+- [ ] No leading zeros for values that can't exceed 1
+- [ ] Results described without extensive interpretation
+- [ ] Statistical notation italicised (t, p, r, d, M, SD)
+
+::: {.callout-important}
+## Lab Report Connection
+Your Results section should follow these guidelines exactly. Review the assessment brief for specific requirements and word limits.
+:::

@@ -1,6 +1,6 @@
 ---
-title: "Distributions & Variability"
-subtitle: "PS50008A Week 12 | Lecture"
+title: "Your Data, Your Discoveries"
+subtitle: "PS50008A Week 12 | Research Design Framework"
 author: "Gordon Wright"
 date: "2026-01-19"
 format:
@@ -13,11 +13,36 @@ format:
     height: 700
     center: false
     center-title-slide: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-# Distributions & Variability {background-color="#275882"}
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(knitr)
 
-## How do we summarise data?
+# Load DataLab data
+memory <- read_csv("data/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("data/foundations_merged.csv", show_col_types = FALSE)
+sixthsense <- read_csv("data/task3_sixthsense_clean.csv", show_col_types = FALSE)
+frontallob <- read_csv("data/task5_frontallob_clean.csv", show_col_types = FALSE)
+ladyluck <- read_csv("data/task4_ladyluck_clean.csv", show_col_types = FALSE)
+
+# Set theme
+theme_set(theme_minimal(base_size = 18))
+
+# Brand colours
+navy <- "#275882"
+orange <- "#EA8439"
+```
+
+# Welcome to Week 12 {background-color="#275882"}
+
+## Your data tells a story — let's learn how to read it
 
 ---
 
@@ -26,498 +51,796 @@ format:
 ::: {.objectives-box}
 By the end of this lecture, you will be able to:
 
-- Distinguish between measures of central tendency
-- Calculate and interpret measures of variability
-- Recognise different distribution shapes
-- Report descriptive statistics in APA format
+- Identify **Independent Variables (IV)** and **Dependent Variables (DV)** in any study
+- Distinguish between **between-subjects**, **within-subjects**, and **correlational** designs
+- Write **one-tailed** and **two-tailed** hypotheses
+- Calculate and interpret **mean** and **standard deviation**
 :::
 
 ---
 
-## The Problem: Raw Data
+## The Big Idea
 
-You collected reaction times from 100 participants.
+::: {.callout-important}
+## Critical Week
+Today introduces **ALL** the terminology you need for your Research Plan.
 
-You now have 100 numbers.
+Everything connects: Research Question → Variables → Design → Hypothesis
+:::
+
+---
+
+# Act 1: What Is Data? {background-color="#275882"}
+
+## You generated this data (15 min)
+
+---
+
+## What Did You Actually Do Last Week?
+
+You completed **6 tasks** plus pre/post surveys:
+
+1. **Memory Test** (Mind Palace)
+2. **Reflex Test** (Ruler catch)
+3. **Time Warp** (60 second estimation)
+4. **Sixth Sense** (Staring detection)
+5. **Lady Luck** (Random numbers)
+6. **Frontal Lob** (Throwing accuracy)
 
 . . .
 
-**What do you do with them?**
+**Each task generated NUMBERS** — and numbers are what we analyse!
 
 ---
 
-## We Need to Summarise
+## You Are a Data Point
 
-Descriptive statistics help us:
+```{r}
+#| label: you-are-here
+#| fig-height: 5
+#| fig-align: center
+memory_plot <- memory |>
+  filter(!is.na(mem_total_1))
 
-::: {.step-1}
-**1. Compress** — From many numbers to meaningful summaries
-:::
+ggplot(memory_plot, aes(x = "", y = mem_total_1)) +
+  geom_jitter(width = 0.25, size = 5, alpha = 0.7, color = navy) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory Scores — Each Dot Is One Person") +
+  theme(axis.text.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, size = 22))
+```
 
-::: {.step-2}
-**2. Compare** — Groups, conditions, studies
-:::
-
-::: {.step-3}
-**3. Communicate** — Share findings clearly
-:::
-
-::: {.step-4}
-**4. Prepare** — Set up for statistical tests
+::: {.fragment}
+**Can you spot yourself?**
 :::
 
 ---
 
-# Central Tendency {background-color="#275882"}
+# Act 2: What's Typical? {background-color="#275882"}
 
-## Where is the centre?
-
----
-
-## Three Measures of Centre
-
-| Measure | What It Is | When to Use |
-|---------|------------|-------------|
-| **Mean** | Arithmetic average | Normal data, no outliers |
-| **Median** | Middle value | Skewed data, outliers |
-| **Mode** | Most frequent | Categorical data |
+## The simplest question (20 min)
 
 ---
 
-## The Mean
+## When You Have Numbers, You Want to Know: What's Normal?
+
+```{r}
+#| label: memory-histogram
+#| fig-height: 4.5
+#| fig-align: center
+ggplot(memory_plot, aes(x = mem_total_1)) +
+  geom_histogram(binwidth = 1, fill = navy, color = "white", alpha = 0.8) +
+  labs(x = "Words Recalled (out of 10)", y = "Number of People",
+       title = "Distribution of Memory Scores") +
+  scale_x_continuous(breaks = 0:10) +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+. . .
+
+The **histogram** shows how many people got each score.
+
+---
+
+## The Mean: What's Average?
 
 ::: {.definition-box}
 **Mean** ($\bar{x}$) = Sum of all values ÷ Number of values
-:::
 
 $$\bar{x} = \frac{\sum x_i}{n}$$
+:::
 
----
-
-## Mean: Example
-
-Reaction times (ms): **245, 312, 278, 298, 267**
+```{r}
+#| label: mean-calc
+mean_mem <- round(mean(memory_plot$mem_total_1, na.rm = TRUE), 1)
+```
 
 . . .
 
-$$\bar{x} = \frac{245 + 312 + 278 + 298 + 267}{5}$$
+For your memory scores: **Mean = `r mean_mem` words**
+
+---
+
+## But Wait... Same Mean, Different Stories
+
+```{r}
+#| label: spread-demo
+#| fig-height: 4.5
+#| fig-align: center
+set.seed(42)
+spread_data <- tibble(
+  Group = rep(c("Group A: Clustered", "Group B: Spread Out"), each = 15),
+  Score = c(rnorm(15, 6, 0.8), rnorm(15, 6, 2.5))
+)
+
+ggplot(spread_data, aes(x = Group, y = Score, color = Group)) +
+  geom_jitter(width = 0.15, size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 6, linetype = "dashed", color = "gray40", linewidth = 1) +
+  scale_color_manual(values = c(navy, orange)) +
+  labs(y = "Score", title = "Same Mean (~6), Different Spread") +
+  annotate("text", x = 2.5, y = 6.3, label = "Mean ≈ 6", color = "gray40", size = 5) +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5))
+```
 
 . . .
 
-$$\bar{x} = \frac{1400}{5} = 280\text{ms}$$
+**Same mean, but Group B is much more variable!**
 
 ---
 
-## Mean: Strengths & Weaknesses
-
-:::: {.columns}
-::: {.column width="50%"}
-**Strengths**
-
-- Uses all data
-- Mathematically useful
-- Widely understood
-:::
-
-::: {.column width="50%"}
-**Weaknesses**
-
-- Sensitive to outliers
-- Misleading with skew
-:::
-::::
-
----
-
-## The Median
+## We Need to Measure Spread
 
 ::: {.definition-box}
-**Median** = The middle value when data is ordered
+**Standard Deviation (SD)** = How spread out the data is from the mean
 :::
 
-**Steps**:
+```{r}
+#| label: sd-calc
+sd_mem <- round(sd(memory_plot$mem_total_1, na.rm = TRUE), 2)
+```
 
-1. Sort values low → high
-2. Find the middle value
-3. If even n, average the two middle values
-
----
-
-## Median: Example
-
-Sorted: **245, 267, 278, 298, 312**
+- **Low SD** = Scores clustered together (consistent)
+- **High SD** = Scores spread out (variable)
 
 . . .
 
-The median is **278ms** (the middle value)
+For your memory scores: **SD = `r sd_mem` words**
 
 ---
 
-## Median: With Even Numbers
+## The Key Insight
 
-Sorted: **245, 267, 278, 298, 312, 340**
+::: {.callout-important}
+## Remember This
+A **difference between means** only matters if it's **big relative to the spread**.
 
-. . .
-
-Two middle values: 278 and 298
-
-. . .
-
-Median = (278 + 298) / 2 = **288ms**
-
----
-
-## The Mode
-
-::: {.definition-box}
-**Mode** = The most frequently occurring value
-:::
-
-Memory scores: 5, 6, 7, 7, 7, 8, 9
-
-. . .
-
-Mode = **7** (appears three times)
-
----
-
-## Which Measure When?
-
-::: {.callout-tip}
-## Quick Rule
-If mean ≈ median → data is roughly symmetric
-
-If mean ≠ median → data is likely skewed
+- **Signal** = difference between means
+- **Noise** = variability within groups
+- The question: Is the signal **bigger** than the noise?
 :::
 
 ---
 
-# Variability {background-color="#275882"}
+# Act 3: The Big Reveal {background-color="#275882"}
 
-## How spread out is the data?
+## Lab A vs Lab B (25 min)
 
 ---
 
-## Same Mean, Different Data
+## There Was a Hidden Manipulation
 
-- Dataset A: 48, 49, 50, 51, 52 → Mean = 50
-- Dataset B: 10, 30, 50, 70, 90 → Mean = 50
+Last week you did the **Memory Test** (Mind Palace).
 
 . . .
 
-**These are very different!**
-
-Variability captures this difference.
-
----
-
-## The Range
-
-::: {.definition-box}
-**Range** = Maximum − Minimum
-:::
-
-Dataset A: 52 − 48 = **4**
-
-Dataset B: 90 − 10 = **80**
+But here's what you didn't know...
 
 . . .
 
 ::: {.callout-warning}
-## Limitation
-Range uses only 2 values — very sensitive to outliers
+## The Secret
+**Lab A** and **Lab B** saw **different words**!
 :::
 
 ---
 
-## Variance
-
-::: {.definition-box}
-**Variance** ($s^2$) = Average of squared deviations from the mean
-:::
-
-$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
-
----
-
-## Variance: Step by Step
-
-**Data**: 245, 312, 278, 298, 267 (Mean = 280)
-
-::: {.step-1}
-**Step 1**: Find the mean ✓
-:::
-
-::: {.step-2}
-**Step 2**: Subtract mean from each value (deviation)
-:::
-
-::: {.step-3}
-**Step 3**: Square each deviation
-:::
-
-::: {.step-4}
-**Step 4**: Sum the squared deviations → Divide by (n−1)
-:::
-
----
-
-## Variance: Calculation
-
-| Value | Deviation | Squared |
-|-------|-----------|---------|
-| 245 | −35 | 1225 |
-| 312 | +32 | 1024 |
-| 278 | −2 | 4 |
-| 298 | +18 | 324 |
-| 267 | −13 | 169 |
-| **Sum** | 0 | **2746** |
-
-Variance = 2746 / 4 = **686.5 ms²**
-
----
-
-## Why n−1?
-
-::: {.callout-note}
-## Degrees of Freedom
-We divide by (n−1) because we're estimating population variance from a sample.
-
-This correction makes our estimate **unbiased**.
-
-More on this when we cover inference!
-:::
-
----
-
-## Standard Deviation
-
-::: {.definition-box}
-**Standard Deviation** ($s$) = Square root of variance
-:::
-
-$$s = \sqrt{s^2}$$
-
-SD = √686.5 = **26.2ms**
-
----
-
-## Why SD Instead of Variance?
-
-Variance is in **squared units** (ms²)
-
-. . .
-
-SD returns to **original units** (ms)
-
-. . .
-
-Much easier to interpret!
-
----
-
-## Interpreting SD: The 68-95-99.7 Rule
-
-For normally distributed data:
-
-| Within | Percentage |
-|--------|------------|
-| 1 SD of mean | ~68% |
-| 2 SD of mean | ~95% |
-| 3 SD of mean | ~99.7% |
-
----
-
-## Example: Reaction Times
-
-Mean = 280ms, SD = 26.2ms
-
-. . .
-
-- ~68% between 254ms and 306ms
-- ~95% between 228ms and 332ms
-
----
-
-# Distributions {background-color="#275882"}
-
-## The shape of data
-
----
-
-## What Is a Distribution?
-
-A **distribution** shows how values are spread across their possible range.
-
-Visualised as:
-
-- Histograms
-- Density plots
-
----
-
-## The Normal Distribution
-
-::: {.definition-box}
-**Normal distribution** = Symmetric, bell-shaped curve
-:::
-
-Properties:
-
-- Mean = Median = Mode
-- Defined by mean (location) and SD (spread)
-- Many phenomena approximate this
-
----
-
-## Skewed Distributions
+## The Manipulation
 
 :::: {.columns}
 ::: {.column width="50%"}
-**Positive Skew**
+**Lab A (Gordon)**
 
-- Tail to the right
-- Mean > Median
-- Example: Income
+Memorised **abstract** words:
+
+- Justice
+- Freedom
+- Wisdom
+- Courage
+- Truth
 :::
 
 ::: {.column width="50%"}
-**Negative Skew**
+**Lab B (Bence)**
 
-- Tail to the left
-- Mean < Median
-- Example: Age at death
+Memorised **concrete** words:
+
+- Chair
+- River
+- Mountain
+- Apple
+- Hammer
 :::
 ::::
 
 ---
 
-## Memory Aid for Skew
+## Let's See the Results!
 
-::: {.callout-tip}
-## The Tail Tells the Tale
-The **tail** points in the direction of the skew name.
+```{r}
+#| label: memory-by-lab
+#| fig-height: 5
+#| fig-align: center
+# Q11: 1 = Lab A (abstract), 2 = Lab B (concrete)
+memory_labs <- memory |>
+  filter(!is.na(Q11) & !is.na(mem_total_1)) |>
+  mutate(Lab = factor(Q11, levels = c(1, 2),
+                      labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)")))
 
-Positive skew → tail points to positive (right) side
-:::
+ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
+  geom_boxplot(alpha = 0.6, outlier.shape = NA, width = 0.5) +
+  geom_jitter(width = 0.15, size = 4, alpha = 0.7) +
+  scale_fill_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory Performance by Lab") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 22))
+```
 
 ---
 
-## Bimodal Distributions
+## The Numbers
 
-Two peaks = Two subgroups
+```{r}
+#| label: lab-stats
+lab_stats <- memory_labs |>
+  group_by(Lab) |>
+  summarise(
+    n = n(),
+    Mean = round(mean(mem_total_1, na.rm = TRUE), 1),
+    SD = round(sd(mem_total_1, na.rm = TRUE), 2)
+  )
+```
+
+| Lab | Word Type | n | Mean | SD |
+|-----|-----------|---|------|-----|
+| Lab A | Abstract | `r lab_stats$n[1]` | `r lab_stats$Mean[1]` | `r lab_stats$SD[1]` |
+| Lab B | Concrete | `r lab_stats$n[2]` | `r lab_stats$Mean[2]` | `r lab_stats$SD[2]` |
 
 . . .
 
-Example: Reaction times might be bimodal if some participants used a different strategy
-
----
-
-## Identifying Shape: Summary
-
-| Shape | Mean vs Median | Visual |
-|-------|----------------|--------|
-| Normal | Mean ≈ Median | Symmetric bell |
-| Positive skew | Mean > Median | Tail to right |
-| Negative skew | Mean < Median | Tail to left |
-| Bimodal | Varies | Two peaks |
-
----
-
-# Your DataLab Data {background-color="#275882"}
-
-## Let's explore it
-
----
-
-## Reaction Times
-
-::: {.poll-box}
-**Prediction**: What shape do you expect?
-
-- Normal?
-- Positively skewed?
-- Bimodal?
-:::
+**Difference**: `r round(lab_stats$Mean[2] - lab_stats$Mean[1], 1)` words
 
 . . .
 
-Hint: Can reaction times be negative?
+Is this difference **real** or just **chance**?
 
 ---
 
-## Memory Scores
-
-- Limited range (0 to maximum items)
-- Might be roughly normal
-- Watch for **ceiling effects**
-
----
-
-## Estimation Errors
-
-- Could be skewed in either direction
-- Compare individual vs group estimates
-- Which has more variability?
-
----
-
-# Reporting Descriptives {background-color="#275882"}
-
-## APA format
-
----
-
-## The Basic Format
+## Now Let's Introduce the Terminology
 
 ::: {.definition-box}
-Report: (*M* = value, *SD* = value)
+**Independent Variable (IV)**: What the researcher **manipulates** or controls
+
+**Dependent Variable (DV)**: What the researcher **measures** — the outcome
 :::
 
-> Participants' simple reaction times were relatively fast (*M* = 280ms, *SD* = 26.2ms).
+. . .
+
+In the memory experiment:
+
+- **IV** = Word type (abstract vs concrete)
+- **DV** = Number of words recalled (0-10)
 
 ---
 
-## Comparing Groups
+## Design Type: Between-Subjects
 
-> Group A (*M* = 285ms, *SD* = 24.1ms) responded faster than Group B (*M* = 312ms, *SD* = 31.7ms).
+::: {.definition-box}
+**Between-subjects design**: Different participants in each condition
+:::
+
+. . .
+
+- Lab A people **only** saw abstract words
+- Lab B people **only** saw concrete words
+- You couldn't be in **both** labs!
+
+. . .
+
+Why? **Between** = different people in each group
 
 ---
 
-## Always Report Both
+## Writing a Hypothesis
 
-::: {.callout-important}
-## Critical Rule
-The mean without SD is incomplete.
+::: {.definition-box}
+**Experimental hypothesis (H₁)**: Predicts an effect or difference
 
-Always report **both** central tendency AND variability.
+**Null hypothesis (H₀)**: Predicts no effect or no difference
+:::
+
+. . .
+
+For the memory experiment:
+
+- **H₁**: Concrete words will be easier to remember than abstract words
+- **H₀**: There will be no difference in recall between word types
+
+---
+
+## One-Tailed vs Two-Tailed
+
+::: {.definition-box}
+**One-tailed**: Predicts the **direction** of the effect
+
+**Two-tailed**: Predicts a difference but **not** which direction
+:::
+
+. . .
+
+- **One-tailed**: "Concrete words will be **better** than abstract" (predicts direction)
+- **Two-tailed**: "Word type will **affect** memory" (no direction)
+
+---
+
+# Act 4: Same Person, Different Conditions {background-color="#275882"}
+
+## Within-subjects design (20 min)
+
+---
+
+## The Pre-Post Mood Survey
+
+Remember you rated your **mood** at the start AND end of the session?
+
+```{r}
+#| label: mood-data
+#| fig-height: 4.5
+#| fig-align: center
+mood_data <- merged |>
+  select(participant_id, mood_pre_1, post_mood_post_1) |>
+  filter(!is.na(mood_pre_1) & !is.na(post_mood_post_1)) |>
+  pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
+               names_to = "Time", values_to = "Mood") |>
+  mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
+                       labels = c("Before", "After")))
+
+ggplot(mood_data, aes(x = Time, y = Mood, fill = Time)) +
+  geom_boxplot(alpha = 0.6, width = 0.5) +
+  geom_jitter(width = 0.1, size = 3, alpha = 0.5) +
+  scale_fill_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Mood Rating (1-10)",
+       title = "Mood Before vs After the Session") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5))
+```
+
+---
+
+## This Is Within-Subjects Design
+
+::: {.definition-box}
+**Within-subjects design**: The **same participants** measured in **all conditions**
+:::
+
+. . .
+
+- Pre-mood and post-mood came from **the same person**
+- You're being compared **to yourself**
+
+---
+
+## Why Is This Powerful?
+
+::: {.callout-tip}
+## The Power of Within-Subjects
+Each person is their own **control**!
+:::
+
+. . .
+
+Individual differences are **controlled**:
+
+- If your pre-mood was 5 and post-mood was 7...
+- **You** improved by 2 points
+- We don't need to worry about other people's baseline moods
+
+---
+
+# Act 5: Relationships, Not Differences {background-color="#275882"}
+
+## Correlational design (15 min)
+
+---
+
+## Self-Rating vs Actual Performance
+
+Before the throwing task, you **rated** how good you thought you'd be.
+
+**Question**: Do people know themselves?
+
+```{r}
+#| label: self-rating
+#| fig-height: 4.5
+#| fig-align: center
+throw_data <- frontallob |>
+  filter(!is.na(throw_self_rating_1) & !is.na(throw_dom_success)) |>
+  mutate(accuracy = throw_dom_success / 10 * 100)
+
+if(nrow(throw_data) > 3) {
+  ggplot(throw_data, aes(x = throw_self_rating_1, y = accuracy)) +
+    geom_point(size = 5, color = navy, alpha = 0.7) +
+    geom_smooth(method = "lm", se = FALSE, color = orange, linewidth = 2) +
+    labs(x = "Self-Rating (1-10)", y = "Actual Accuracy (%)",
+         title = "Do People Know Themselves?") +
+    scale_x_continuous(breaks = 1:10) +
+    theme(plot.title = element_text(hjust = 0.5))
+} else {
+  # Simulated data if real data insufficient
+  set.seed(123)
+  sim_throw <- tibble(
+    rating = sample(3:9, 25, replace = TRUE),
+    accuracy = rating * 8 + rnorm(25, 0, 15)
+  )
+  ggplot(sim_throw, aes(x = rating, y = accuracy)) +
+    geom_point(size = 5, color = navy, alpha = 0.7) +
+    geom_smooth(method = "lm", se = FALSE, color = orange, linewidth = 2) +
+    labs(x = "Self-Rating (1-10)", y = "Actual Accuracy (%)",
+         title = "Do People Know Themselves?") +
+    theme(plot.title = element_text(hjust = 0.5))
+}
+```
+
+---
+
+## This Is Correlational Design
+
+::: {.definition-box}
+**Correlational design**: Measuring the **relationship** between two variables — **no manipulation**
+:::
+
+. . .
+
+- **Variable 1**: Self-rating (1-10)
+- **Variable 2**: Actual accuracy (%)
+
+. . .
+
+::: {.callout-warning}
+## Key Point
+There is **no IV** in a correlational design!
 :::
 
 ---
 
-## Summary
+## The Critical Warning
 
-| Concept | Key Point |
-|---------|-----------|
-| Mean | Average — sensitive to outliers |
-| Median | Middle — robust to outliers |
-| SD | Spread — same units as data |
-| Normal | Symmetric bell shape |
-| Skew | Mean ≠ Median |
+::: {.callout-warning}
+## Say It With Me
+**Correlation ≠ Causation**
+
+Finding a relationship does NOT mean one variable **causes** the other.
+:::
+
+. . .
+
+Even if self-ratings predict performance, we can't say self-ratings **cause** good performance.
+
+---
+
+# Act 6: Was It Just Luck? {background-color="#275882"}
+
+## The null hypothesis (20 min)
+
+---
+
+## The Sixth Sense Task
+
+You tried to detect if someone was staring at you.
+
+- 6 trials
+- Guessed "staring" or "not staring"
+
+. . .
+
+**If you're just guessing**: You'd expect **3 out of 6** right (50%)
+
+---
+
+## Your Results
+
+```{r}
+#| label: sixth-sense
+#| fig-height: 4.5
+#| fig-align: center
+# Calculate accuracy for each participant
+stare_cols <- c("stare_t1_actual", "stare_t1_guess",
+                "stare_t2_actual", "stare_t2_guess",
+                "stare_t3_actual", "stare_t3_guess",
+                "stare_t4_actual", "stare_t4_guess",
+                "stare_t5_actual", "stare_t5_guess",
+                "stare_t6_actual", "stare_t6_guess")
+
+if(all(stare_cols %in% names(sixthsense))) {
+  accuracy_data <- sixthsense |>
+    mutate(
+      correct1 = (stare_t1_actual == stare_t1_guess),
+      correct2 = (stare_t2_actual == stare_t2_guess),
+      correct3 = (stare_t3_actual == stare_t3_guess),
+      correct4 = (stare_t4_actual == stare_t4_guess),
+      correct5 = (stare_t5_actual == stare_t5_guess),
+      correct6 = (stare_t6_actual == stare_t6_guess),
+      n_correct = correct1 + correct2 + correct3 + correct4 + correct5 + correct6
+    ) |>
+    filter(!is.na(n_correct))
+
+  ggplot(accuracy_data, aes(x = factor(n_correct))) +
+    geom_bar(fill = navy, alpha = 0.8) +
+    geom_vline(xintercept = 3.5, linetype = "dashed", color = orange, linewidth = 2) +
+    labs(x = "Number Correct (out of 6)", y = "Number of People",
+         title = "Sixth Sense Accuracy") +
+    annotate("text", x = 5, y = max(table(accuracy_data$n_correct)) * 0.8,
+             label = "Chance = 3", color = orange, size = 6) +
+    theme(plot.title = element_text(hjust = 0.5))
+} else {
+  # Simulated data
+  set.seed(456)
+  sim_sixth <- tibble(n_correct = rbinom(30, 6, 0.5))
+  ggplot(sim_sixth, aes(x = factor(n_correct))) +
+    geom_bar(fill = navy, alpha = 0.8) +
+    geom_vline(xintercept = 3.5, linetype = "dashed", color = orange, linewidth = 2) +
+    labs(x = "Number Correct (out of 6)", y = "Number of People",
+         title = "Sixth Sense Accuracy") +
+    annotate("text", x = 5, y = 8, label = "Chance = 3", color = orange, size = 6) +
+    theme(plot.title = element_text(hjust = 0.5))
+}
+```
+
+---
+
+## Some People Got 5/6 or 6/6!
+
+::: {.callout-note}
+## The Question
+Does getting 5 or 6 right mean you have a **sixth sense**?
+:::
+
+. . .
+
+**Not necessarily!**
+
+. . .
+
+If you flip a coin 6 times, sometimes you get 5 or 6 heads **just by luck**.
+
+---
+
+## The Null Hypothesis
+
+::: {.definition-box}
+**Null hypothesis (H₀)**: The result is due to **chance**, not a real effect.
+:::
+
+. . .
+
+For the sixth sense:
+
+- **H₀**: People are just guessing (performance = 50%)
+- **H₁**: People can detect staring (performance ≠ 50%)
+
+---
+
+## Your Dice Rolls
+
+```{r}
+#| label: dice-rolls
+#| fig-height: 4.5
+#| fig-align: center
+# Get dice roll data
+dice_cols <- paste0("dice_rolls_", 1:10)
+if(all(dice_cols %in% names(ladyluck))) {
+  dice_data <- ladyluck |>
+    select(all_of(dice_cols)) |>
+    pivot_longer(everything(), values_to = "roll") |>
+    filter(!is.na(roll))
+
+  expected <- nrow(dice_data) / 6
+
+  ggplot(dice_data, aes(x = factor(roll))) +
+    geom_bar(fill = navy, alpha = 0.8) +
+    geom_hline(yintercept = expected, linetype = "dashed", color = orange, linewidth = 1.5) +
+    labs(x = "Dice Roll", y = "Count",
+         title = "Your Dice Rolls — Are They Fair?") +
+    annotate("text", x = 5.5, y = expected + 2, label = "Expected if fair",
+             color = orange, size = 5) +
+    theme(plot.title = element_text(hjust = 0.5))
+} else {
+  set.seed(789)
+  sim_dice <- tibble(roll = sample(1:6, 60, replace = TRUE))
+  ggplot(sim_dice, aes(x = factor(roll))) +
+    geom_bar(fill = navy, alpha = 0.8) +
+    geom_hline(yintercept = 10, linetype = "dashed", color = orange, linewidth = 1.5) +
+    labs(x = "Dice Roll", y = "Count", title = "Dice Rolls") +
+    theme(plot.title = element_text(hjust = 0.5))
+}
+```
+
+---
+
+## Your Coin Flips
+
+```{r}
+#| label: coin-flips
+#| fig-height: 4.5
+#| fig-align: center
+coin_cols <- paste0("coin_flips_", 1:10)
+if(all(coin_cols %in% names(ladyluck))) {
+  coin_data <- ladyluck |>
+    select(all_of(coin_cols)) |>
+    pivot_longer(everything(), values_to = "flip") |>
+    filter(!is.na(flip)) |>
+    mutate(flip = factor(flip, levels = c(1, 2), labels = c("Heads", "Tails")))
+
+  ggplot(coin_data, aes(x = flip, fill = flip)) +
+    geom_bar(alpha = 0.8) +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(x = NULL, y = "Count",
+         title = "Coin Flips — 50/50?") +
+    geom_hline(yintercept = nrow(coin_data)/2, linetype = "dashed",
+               color = "gray40", linewidth = 1.5) +
+    annotate("text", x = 2.3, y = nrow(coin_data)/2, label = "Expected",
+             color = "gray40", size = 5, hjust = 0) +
+    theme(legend.position = "none",
+          plot.title = element_text(hjust = 0.5))
+} else {
+  set.seed(321)
+  sim_coin <- tibble(flip = factor(sample(c("Heads", "Tails"), 60, replace = TRUE)))
+  ggplot(sim_coin, aes(x = flip, fill = flip)) +
+    geom_bar(alpha = 0.8) +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(x = NULL, y = "Count", title = "Coin Flips") +
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+}
+```
+
+---
+
+## Why Statistics?
+
+With `r nrow(memory_plot)` people, **some will get lucky**:
+
+- A few might get 5/6 or 6/6 just by chance
+- Dice won't land perfectly evenly
+- Coins won't be exactly 50/50
+
+. . .
+
+**Statistics helps us ask**: How surprising is this result?
+
+---
+
+# The Framework {background-color="#275882"}
+
+## Putting it all together (5 min)
+
+---
+
+## The Research Design Decision Tree
+
+:::: {.columns}
+::: {.column width="50%"}
+**Step 1: Is there manipulation?**
+
+- **Yes** → Experimental design
+- **No** → Correlational design
+:::
+
+::: {.column width="50%"}
+**Step 2: If experimental, same or different people?**
+
+- **Same people** → Within-subjects
+- **Different people** → Between-subjects
+:::
+::::
+
+. . .
+
+::: {.callout-tip}
+## The Quick Check
+**No IV?** → Correlational
+
+**IV + same people?** → Within-subjects
+
+**IV + different people?** → Between-subjects
+:::
+
+---
+
+## DataLab Summary {.smaller}
+
+| Task | Design | IV | DV |
+|:-----|:-------|:---|:---|
+| Memory | Between | Word type | Recall (0-10) |
+| Pre/Post Mood | Within | Time | Rating (1-10) |
+| Frontal Lob | Within | Hand | Accuracy (%) |
+| Sixth Sense | vs Chance | — | Hits (0-6) |
+| Self vs Actual | Correlational | — | — |
+
+---
+
+## The Vocabulary You Now Have
+
+::: {.callout-tip}
+## Check These Off
+- [x] Independent Variable (IV)
+- [x] Dependent Variable (DV)
+- [x] Between-subjects design
+- [x] Within-subjects design
+- [x] Correlational design
+- [x] One-tailed hypothesis
+- [x] Two-tailed hypothesis
+- [x] Null hypothesis (H₀)
+- [x] Mean and Standard Deviation
+:::
+
+---
+
+## Connecting to Assessments
+
+| Assessment | What You Learned Today |
+|------------|------------------------|
+| **Research Plan** | ALL terminology — you can start planning! |
+| **MCQ Exam** | Design identification, IV/DV, hypothesis types |
+| **EDS Assignment** | Calculating means and SDs, identifying designs |
+| **Research Report** | Method section structure |
 
 ---
 
 ## What's Next?
 
-**Thursday Lab**: Computing descriptives in R using YOUR DataLab data
+**Thursday Lab**: Apply this framework to YOUR DataLab data
 
-**Week 13**: Estimation & Confidence Intervals
+- Identify designs, IVs, DVs
+- Calculate means and SDs
+- Practice writing hypotheses
+
+. . .
+
+**Focus on conceptual understanding!**
 
 ---
 
 # Questions? {background-color="#275882"}
 
+::: {.callout-tip}
+## Remember
+- You generated this data
+- Every number came from something **you** did
+- The framework helps you tell the story
+:::
+
+---
+
+# See You Thursday! {background-color="#275882"}
+
 ::: {.notes}
-End of lecture content.
-Estimated delivery time: 90-100 minutes including pauses for questions and worked examples.
+Lecture time: ~2 hours with pauses for discussion
+
+Key takeaways:
+1. IV = what's manipulated; DV = what's measured
+2. Between = different people; Within = same people
+3. Correlational = no manipulation, no IV
+4. The framework: Question → Variables → Design → Hypothesis
+5. All terminology needed for Research Plan introduced today
 :::

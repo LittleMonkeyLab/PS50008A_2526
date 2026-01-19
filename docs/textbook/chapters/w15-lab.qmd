@@ -1,0 +1,20 @@
+---
+title: "Chapter 10: Correlation in R"
+subtitle: "Running T-Tests with R"
+---
+
+## Required Reading
+
+TBC - Lab-specific reading material
+
+## Reading Guide
+
+### Key Points to Focus On
+
+1. TBC
+2. TBC
+3. TBC
+
+## Additional Resources
+
+- TBC

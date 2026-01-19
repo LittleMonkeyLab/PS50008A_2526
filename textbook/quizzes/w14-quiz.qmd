@@ -1,0 +1,217 @@
+---
+title: "Week 14 Self-Assessment"
+subtitle: "Probability & Distributions"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+This quiz covers probability concepts and the normal distribution. Understanding these concepts is essential for interpreting statistical tests.
+
+---
+
+## Part 1: The Normal Distribution
+
+### Question 1: Properties of the Normal Distribution
+
+The normal distribution is:
+
+`r mcq(c("Skewed to the right", "Skewed to the left", answer = "Symmetrical and bell-shaped", "Flat and uniform"))`
+
+In a normal distribution, the mean, median, and mode are:
+
+`r mcq(c("All different values", answer = "All the same value", "Mean is highest", "Mode is lowest"))`
+
+### Question 2: The 68-95-99.7 Rule
+
+In a normal distribution:
+
+Approximately **68%** of scores fall within `r mcq(c(answer = "1 standard deviation of the mean", "2 standard deviations of the mean", "3 standard deviations of the mean", "The interquartile range"))`
+
+Approximately **95%** of scores fall within `r mcq(c("1 standard deviation of the mean", answer = "2 standard deviations of the mean", "3 standard deviations of the mean", "The interquartile range"))`
+
+Approximately **99.7%** of scores fall within `r mcq(c("1 standard deviation of the mean", "2 standard deviations of the mean", answer = "3 standard deviations of the mean", "The interquartile range"))`
+
+### Question 3: Understanding Standard Deviation
+
+If a test has M = 100 and SD = 15, a score of 115 is:
+
+`r mcq(c(answer = "1 SD above the mean", "2 SDs above the mean", "1 SD below the mean", "At the mean"))`
+
+A score of 70 would be:
+
+`r mcq(c("1 SD below the mean", answer = "2 SDs below the mean", "At the mean", "Above average"))`
+
+---
+
+## Part 2: Z-Scores
+
+### Question 4: Z-Score Interpretation
+
+A z-score tells you:
+
+`r mcq(c("The raw score value", "The percentile rank", answer = "How many standard deviations a score is from the mean", "Whether the score is significant"))`
+
+A z-score of **+2.0** means the score is:
+
+`r mcq(c("2 points above average", answer = "2 standard deviations above the mean", "In the top 2%", "Twice the mean"))`
+
+A z-score of **-1.5** means the score is:
+
+`r mcq(c("1.5 points below average", answer = "1.5 standard deviations below the mean", "In the bottom 1.5%", "Negative"))`
+
+### Question 5: Z-Score Calculation
+
+If M = 50 and SD = 10, what is the z-score for a raw score of 70?
+
+z = `r fitb(c("2", "2.0", "+2", "+2.0"), ignore_case = TRUE)`
+
+If M = 100 and SD = 15, what is the z-score for a raw score of 85?
+
+z = `r fitb(c("-1", "-1.0"), ignore_case = TRUE)`
+
+---
+
+## Part 3: Probability Basics
+
+### Question 6: Probability Values
+
+Probability values range from:
+
+`r mcq(c("-1 to +1", answer = "0 to 1", "0 to 100", "-100 to +100"))`
+
+A probability of 0 means:
+
+`r mcq(c(answer = "The event is impossible", "The event is certain", "The event is likely", "We don't know"))`
+
+A probability of 1 means:
+
+`r mcq(c("The event is impossible", answer = "The event is certain", "The event is unlikely", "We need more data"))`
+
+### Question 7: Rare Events
+
+In statistics, we typically consider an event "rare" or "unlikely" if its probability is less than:
+
+`r mcq(c("0.50 (50%)", "0.10 (10%)", answer = "0.05 (5%)", "0.01 (1%)"))`
+
+This threshold is called:
+
+`r mcq(c("The confidence level", answer = "The alpha level (α)", "The effect size", "The power"))`
+
+---
+
+## Part 4: Why Distributions Matter
+
+### Question 8: Parametric vs Non-Parametric
+
+Parametric tests (like the t-test) assume:
+
+`r mcq(c(answer = "Data are approximately normally distributed", "Data are skewed", "Sample size is very small", "Variables are categorical"))`
+
+When data are NOT normally distributed, we should consider using:
+
+`r mcq(c("A larger sample", "A different research design", answer = "Non-parametric tests", "No statistical test"))`
+
+### Question 9: Assessing Normality
+
+Which of the following helps assess whether data are normally distributed?
+
+`r mcq(c(answer = "Histogram and Q-Q plot", "Bar chart", "Pie chart", "Correlation coefficient"))`
+
+### Question 10: DataLab Example
+
+If reaction times in DataLab are positively skewed (most fast, some very slow), this means:
+
+`r mcq(c("The distribution is normal", answer = "The distribution has a long tail to the right", "The distribution has a long tail to the left", "We cannot analyse the data"))`
+
+For skewed reaction time data, we might:
+
+`r mcq(c("Ignore the problem", answer = "Use a non-parametric test or transform the data", "Collect new data", "Report the median instead of mean"))`
+
+---
+
+## Part 5: Standard Deviation Deepened
+
+### Question 11: What SD Tells Us
+
+A larger standard deviation indicates:
+
+`r mcq(c("Higher average scores", "Lower average scores", answer = "More variability/spread in the data", "Less variability in the data"))`
+
+Two groups have the same mean (M = 50). Group A has SD = 5, Group B has SD = 15.
+
+Which group has more consistent scores? `r mcq(c(answer = "Group A", "Group B", "They're the same", "Cannot tell"))`
+
+### Question 12: Interpreting Spread
+
+```{r}
+opts_sd <- c(
+  "The data points are all exactly at the mean",
+  answer = "There is moderate variability — most scores are within about 10 points of the mean",
+  "The data are highly variable with scores spread far from the mean",
+  "The standard deviation is too large to interpret"
+)
+```
+
+If M = 75 and SD = 10, what does this tell us about the data?
+
+`r longmcq(opts_sd)`
+
+---
+
+## Part 6: MCQ Exam Practice
+
+::: {.webex-check .webex-box}
+
+### Investigation 1
+
+A researcher measures anxiety scores in a sample of 100 students. The distribution is approximately normal with M = 50 and SD = 10.
+
+1. **What percentage of students score between 40 and 60?** `r mcq(c("50%", answer = "About 68%", "About 95%", "100%"))`
+
+2. **A student scores 70. Their z-score is:** `r mcq(c("0", "1", answer = "2", "7"))`
+
+3. **This student's score is:** `r mcq(c("Average", "Slightly above average", answer = "Well above average (top ~2.5%)", "Below average"))`
+
+4. **The data being normally distributed means we can use:** `r mcq(c(answer = "Parametric tests like the t-test", "Only non-parametric tests", "Only descriptive statistics", "No statistical tests"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2
+
+A researcher finds that exam scores are negatively skewed (most high, few low).
+
+1. **The distribution has a long tail to the:** `r mcq(c("Right", answer = "Left", "Both sides equally", "Neither side"))`
+
+2. **In this distribution, the mean is likely:** `r mcq(c("Equal to the median", "Higher than the median", answer = "Lower than the median", "Cannot tell"))`
+
+3. **A parametric test may not be appropriate because:** `r mcq(c("The sample is too large", answer = "The normality assumption is violated", "The scores are too high", "We need more variables"))`
+
+4. **An alternative approach would be to use:** `r mcq(c("A larger sample", answer = "A non-parametric test (e.g., Mann-Whitney U)", "A correlation", "No test at all"))`
+
+:::
+
+---
+
+## Summary Checklist
+
+Before moving on, make sure you can:
+
+- [ ] Describe the properties of the normal distribution
+- [ ] Apply the 68-95-99.7 rule
+- [ ] Calculate and interpret z-scores
+- [ ] Explain probability values (0 to 1)
+- [ ] Understand why α = .05 is used as a threshold
+- [ ] Distinguish parametric from non-parametric tests
+- [ ] Assess normality using histograms and Q-Q plots
+- [ ] Recognise positive and negative skew
+
+::: {.callout-important}
+## Research Plan Connection
+Your Research Plan should specify whether your data are likely to be normally distributed and justify your choice of parametric or non-parametric test accordingly.
+:::

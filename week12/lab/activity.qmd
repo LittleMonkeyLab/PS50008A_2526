@@ -1,363 +1,542 @@
 ---
 title: "Week 12 Lab Activity"
-subtitle: "Descriptive Statistics in R"
+subtitle: "Design Detectives"
 author: "Gordon Wright"
 date: "2026-01-23"
 format:
   html:
     toc: true
     toc-depth: 2
-    code-fold: false
-filters:
-  - webr
-webr:
-  packages: ['dplyr', 'ggplot2']
-  show-startup-message: false
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(tidyverse)
+library(knitr)
+
+# Load DataLab data
+memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+frontallob <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/task5_frontallob_clean.csv", show_col_types = FALSE)
+sixthsense <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/task3_sixthsense_clean.csv", show_col_types = FALSE)
+
+# Brand colours
+navy <- "#275882"
+orange <- "#EA8439"
+
+# Set theme
+theme_set(theme_minimal(base_size = 14))
+```
 
 ## Overview
 
-In this lab, you'll use R to analyse your DataLab data. You'll calculate descriptive statistics, visualise distributions, and compare groups.
-
 ::: {.callout-important}
-## Before You Begin
-1. Make sure you've read the [Lab Reading](reading.qmd)
-2. Wait for the WebR status indicator to turn green
-3. Run code chunks **in order** — each builds on the previous
+## Focus for Today
+This is NOT a heavy R coding session. Today focuses on **conceptual understanding**:
+
+- Seeing your REAL data
+- Identifying design types, IVs, and DVs
+- Understanding what means and SDs tell us
+- Writing hypotheses
 :::
 
 ---
 
-## Part 1: Getting Started
+## Your Data Is Real
 
-### Loading the Data
+Last week you generated this data. Let's look at it!
 
-First, let's load and explore the DataLab dataset.
+### Memory Scores — Every Dot Is One Person
 
-```{webr-r}
-# Load the DataLab data
-# (In the actual lab, this will load the real class data)
-# For now, we use simulated data
+```{r}
+#| label: memory-jitter
+#| fig-height: 5
+#| fig-align: center
+memory_clean <- memory |> filter(!is.na(mem_total_1))
 
-set.seed(2026)
-n <- 80
+mean_score <- mean(memory_clean$mem_total_1, na.rm = TRUE)
+sd_score <- sd(memory_clean$mem_total_1, na.rm = TRUE)
 
-olympics <- data.frame(
-  participant_id = 1:n,
-  room = sample(c("A", "B"), n, replace = TRUE),
-  simple_rt = rnorm(n, mean = 280, sd = 45),
-  choice_rt = rnorm(n, mean = 420, sd = 65),
-  memory_score = round(pmin(pmax(rnorm(n, mean = 6.5, sd = 1.5), 0), 10)),
-  estimation_error = rnorm(n, mean = 15, sd = 25),
-  confidence = round(pmin(pmax(rnorm(n, mean = 60, sd = 15), 0), 100))
+ggplot(memory_clean, aes(x = "", y = mem_total_1)) +
+  geom_jitter(width = 0.3, size = 4, alpha = 0.7, colour = navy) +
+  geom_hline(yintercept = mean_score, colour = orange, linewidth = 2, linetype = "solid") +
+  geom_hline(yintercept = mean_score + sd_score, colour = orange, linewidth = 1, linetype = "dashed") +
+  geom_hline(yintercept = mean_score - sd_score, colour = orange, linewidth = 1, linetype = "dashed") +
+  annotate("text", x = 1.4, y = mean_score, label = paste0("Mean = ", round(mean_score, 1)),
+           colour = orange, size = 5, hjust = 0) +
+  annotate("text", x = 1.4, y = mean_score + sd_score, label = paste0("+1 SD"),
+           colour = orange, size = 4, hjust = 0) +
+  annotate("text", x = 1.4, y = mean_score - sd_score, label = paste0("-1 SD"),
+           colour = orange, size = 4, hjust = 0) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory Scores",
+       subtitle = paste0("n = ", nrow(memory_clean), " participants | SD = ", round(sd_score, 2))) +
+  scale_y_continuous(breaks = 0:10, limits = c(0, 10)) +
+  theme(axis.text.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+```
+
+**Can you spot yourself?** The solid orange line is the mean. The dashed lines show ±1 SD — about 68% of people fall between them.
+
+---
+
+### The Distribution — How Scores Spread Out
+
+```{r}
+#| label: memory-histogram
+#| fig-height: 4
+#| fig-align: center
+ggplot(memory_clean, aes(x = mem_total_1)) +
+  geom_histogram(binwidth = 1, fill = navy, colour = "white", alpha = 0.8) +
+  geom_vline(xintercept = mean_score, colour = orange, linewidth = 2) +
+  labs(x = "Words Recalled (out of 10)", y = "Number of People",
+       title = "Distribution of Memory Scores",
+       subtitle = paste0("Mean = ", round(mean_score, 1), " | SD = ", round(sd_score, 2),
+                        " | Range = ", min(memory_clean$mem_total_1), "-", max(memory_clean$mem_total_1))) +
+  scale_x_continuous(breaks = 0:10) +
+  theme(plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+```
+
+::: {.callout-note}
+## Quick Check
+Looking at the histogram:
+
+Is the distribution roughly symmetric or skewed? `r mcq(c(answer = "Roughly symmetric", "Skewed left", "Skewed right", "Uniform"))`
+
+Are most scores clustered near the mean or spread across the range? `r mcq(c(answer = "Clustered near the mean", "Spread evenly", "All at one end", "Bimodal"))`
+:::
+
+---
+
+## Activity 1: The Big Reveal — Lab A vs Lab B (20 min)
+
+### What You Didn't Know
+
+There was a **hidden manipulation** in the memory task:
+
+- **Lab A** memorised **abstract** words: justice, freedom, wisdom...
+- **Lab B** memorised **concrete** words: chair, river, mountain...
+
+Let's see if it made a difference!
+
+```{r}
+#| label: lab-comparison
+#| fig-height: 5
+#| fig-align: center
+memory_labs <- memory |>
+  filter(!is.na(Q11) & !is.na(mem_total_1)) |>
+  mutate(Lab = factor(Q11, levels = c(1, 2), labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)")))
+
+lab_stats <- memory_labs |>
+  group_by(Lab) |>
+  summarise(
+    n = n(),
+    Mean = mean(mem_total_1, na.rm = TRUE),
+    SD = sd(mem_total_1, na.rm = TRUE),
+    Min = min(mem_total_1, na.rm = TRUE),
+    Max = max(mem_total_1, na.rm = TRUE)
+  )
+
+ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
+  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
+  geom_jitter(aes(colour = Lab), width = 0.15, size = 3, alpha = 0.7) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
+  scale_fill_manual(values = c(navy, orange)) +
+  scale_colour_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory Performance by Lab",
+       subtitle = "Black diamonds = group means") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+```
+
+### The Numbers
+
+```{r}
+#| label: lab-table
+kable(lab_stats, digits = 2, col.names = c("Lab", "n", "Mean", "SD", "Min", "Max"),
+      caption = "Descriptive Statistics by Lab")
+```
+
+```{r}
+diff_means <- abs(lab_stats$Mean[2] - lab_stats$Mean[1])
+```
+
+**The difference in means is `r round(diff_means, 2)` words.**
+
+---
+
+### Design Detective Questions
+
+Now identify the design elements:
+
+**1. What did the researcher MANIPULATE?**
+
+`r mcq(c(answer = "Word type (abstract vs concrete)", "Number of words", "Time allowed", "Nothing was manipulated"))`
+
+**2. What variable is this called?**
+
+`r mcq(c(answer = "Independent Variable (IV)", "Dependent Variable (DV)", "Control Variable", "Confounding Variable"))`
+
+**3. What did the researcher MEASURE?**
+
+`r mcq(c("Word type", answer = "Number of words recalled", "Time to recall", "Participant happiness"))`
+
+**4. What variable is this called?**
+
+`r mcq(c("Independent Variable (IV)", answer = "Dependent Variable (DV)", "Control Variable", "Confounding Variable"))`
+
+**5. Were the SAME people in both labs, or DIFFERENT people?**
+
+`r mcq(c("Same people in both labs", answer = "Different people in each lab"))`
+
+**6. What type of design is this?**
+
+`r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Matched pairs"))`
+
+::: {.callout-tip collapse="true"}
+## Check Your Understanding
+
+- **IV** = Word type (abstract vs concrete) — this was manipulated
+- **DV** = Words recalled — this was measured
+- **Design** = Between-subjects — different people in Lab A vs Lab B
+- You were in ONE lab only, not both!
+:::
+
+---
+
+## Activity 2: Same Person, Different Conditions (20 min)
+
+### Pre-Post Mood
+
+You rated your mood BEFORE and AFTER the session. Let's see the change!
+
+```{r}
+#| label: mood-change
+#| fig-height: 5
+#| fig-align: center
+mood_data <- merged |>
+  select(participant_id, mood_pre_1, post_mood_post_1) |>
+  filter(!is.na(mood_pre_1) & !is.na(post_mood_post_1)) |>
+  mutate(change = post_mood_post_1 - mood_pre_1)
+
+mood_long <- mood_data |>
+  pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
+               names_to = "Time", values_to = "Mood") |>
+  mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
+                       labels = c("Before", "After")))
+
+mood_stats <- mood_long |>
+  group_by(Time) |>
+  summarise(Mean = mean(Mood), SD = sd(Mood), n = n())
+
+ggplot(mood_long, aes(x = Time, y = Mood, fill = Time)) +
+  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
+  geom_jitter(aes(colour = Time), width = 0.1, size = 2, alpha = 0.6) +
+  geom_line(data = mood_data |>
+              pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
+                          names_to = "Time", values_to = "Mood") |>
+              mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
+                                  labels = c("Before", "After"))),
+            aes(group = participant_id), alpha = 0.2, colour = "gray40") +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
+  scale_fill_manual(values = c(navy, orange)) +
+  scale_colour_manual(values = c(navy, orange)) +
+  labs(x = NULL, y = "Mood Rating (1-10)",
+       title = "Mood Before vs After the DataLab Session",
+       subtitle = "Lines connect the same person | Black diamonds = means") +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+```
+
+**The faint lines connect the SAME PERSON.** This is what makes it a within-subjects design!
+
+```{r}
+#| label: mood-table
+kable(mood_stats, digits = 2, col.names = c("Time", "Mean", "SD", "n"),
+      caption = "Mood Ratings Before and After")
+```
+
+### Design Detective Questions
+
+**1. Were SAME people measured at both time points, or DIFFERENT people?**
+
+`r mcq(c(answer = "Same people at both time points", "Different people at each time point"))`
+
+**2. What type of design is this?**
+
+`r mcq(c("Between-subjects", answer = "Within-subjects", "Correlational", "Matched pairs"))`
+
+**3. What is the IV?**
+
+`r mcq(c(answer = "Time (before vs after)", "Mood rating", "Participant ID", "No IV"))`
+
+**4. What is the DV?**
+
+`r mcq(c("Time", answer = "Mood rating", "Participant ID", "Change score"))`
+
+**5. Why is within-subjects design considered "powerful"?**
+
+`r mcq(c("More participants", answer = "Each person is their own control", "Easier to run", "No IV needed"))`
+
+::: {.callout-note}
+## The Key Insight
+In the graph above, the lines connect the same person before and after. By comparing each person to THEMSELVES, we control for all individual differences (age, personality, baseline mood, etc.).
+:::
+
+---
+
+## Activity 3: Descriptive Statistics Practice (30 min)
+
+### Understanding Mean and SD
+
+Look at these two groups with the SAME MEAN but different spreads:
+
+```{r}
+#| label: spread-demo
+#| fig-height: 4
+#| fig-align: center
+set.seed(42)
+spread_data <- tibble(
+  Group = rep(c("Group A\n(Clustered)", "Group B\n(Spread Out)"), each = 20),
+  Score = c(rnorm(20, 6, 0.8), rnorm(20, 6, 2.5))
 )
 
-# View the first few rows
-head(olympics)
+spread_stats <- spread_data |>
+  group_by(Group) |>
+  summarise(Mean = round(mean(Score), 2), SD = round(sd(Score), 2))
+
+ggplot(spread_data, aes(x = Group, y = Score, colour = Group)) +
+  geom_jitter(width = 0.15, size = 4, alpha = 0.8) +
+  geom_hline(yintercept = 6, linetype = "dashed", colour = "gray40", linewidth = 1) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 6, colour = "black") +
+  scale_colour_manual(values = c(navy, orange)) +
+  annotate("text", x = 2.5, y = 6.2, label = "Same Mean ≈ 6", colour = "gray40", size = 5) +
+  labs(y = "Score", x = NULL,
+       title = "Same Mean, Different Spread",
+       subtitle = paste0("Group A: SD = ", spread_stats$SD[1], " | Group B: SD = ", spread_stats$SD[2])) +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
 ```
 
-### Exploring the Data
+**The mean alone doesn't tell the whole story!**
 
-Let's see what variables we have:
+**Which group shows more VARIABILITY?**
 
-```{webr-r}
-# What columns are in the dataset?
-names(olympics)
+`r mcq(c("Group A (Clustered)", answer = "Group B (Spread Out)", "They're the same", "Can't tell"))`
 
-# How many participants?
-nrow(olympics)
+**Which group has the LARGER standard deviation?**
 
-# Summary of all variables
-summary(olympics)
+`r mcq(c("Group A (Clustered)", answer = "Group B (Spread Out)", "They're the same", "Can't tell"))`
+
+---
+
+### Reading R Output
+
+Here's what R produces when we ask for descriptive statistics:
+
+```{r}
+#| label: r-output-demo
+#| echo: true
+#| code-fold: false
+
+# A sample of memory scores
+scores <- c(6, 8, 5, 7, 9, 6, 7, 8)
+
+# Get descriptive statistics
+mean(scores)
+sd(scores)
+summary(scores)
 ```
+
+**Reading the output above:**
+
+**1. What is the mean of these scores?**
+
+`r mcq(c("6", "6.5", answer = "7", "7.5"))`
+
+**2. What is the standard deviation (rounded to 1 decimal)?**
+
+`r mcq(c("0.5", "1.0", answer = "1.2", "2.0"))`
+
+**3. In the `summary()` output, what does "Min." tell you?**
+
+`r mcq(c(answer = "The lowest score in the data", "The average score", "The most common score", "The middle score"))`
+
+**4. What does "Median" tell you?**
+
+`r mcq(c("The lowest score", "The highest score", answer = "The middle value when data is ordered", "The most common score"))`
 
 ::: {.callout-tip}
-## Understanding the Output
-The `summary()` function gives you:
-- **Min/Max**: The range
-- **1st Qu/3rd Qu**: The quartiles (25th and 75th percentile)
-- **Median**: The middle value
-- **Mean**: The average
+## Reading R Output
+The key functions for descriptive statistics:
+
+- `mean()` gives you the average
+- `sd()` gives you the standard deviation
+- `summary()` gives you Min, Quartiles, Median, Mean, Max — a complete picture!
+:::
+
+True or False: A larger SD means scores are MORE spread out. `r torf(TRUE)`
+
+True or False: A SD of 0 would mean everyone got the exact same score. `r torf(TRUE)`
+
+---
+
+### Real Data: Comparing Labs
+
+```{r}
+#| label: lab-stats-display
+kable(lab_stats, digits = 2, col.names = c("Lab", "n", "Mean", "SD", "Min", "Max"),
+      caption = "Memory Scores by Lab")
+```
+
+Looking at the table above:
+
+**Which lab had the higher mean recall?**
+
+`r mcq(c("Lab A (Abstract)", answer = "Lab B (Concrete)", "They were the same"))`
+```{r}
+higher_lab <- if(lab_stats$Mean[2] > lab_stats$Mean[1]) "Lab B" else "Lab A"
+```
+
+**Is the difference between means (about `r round(diff_means, 1)` words) large or small compared to the SD (about `r round(mean(lab_stats$SD), 1)`)?**
+
+`r mcq(c(answer = "About the same size as the SD", "Much larger than the SD", "Much smaller than the SD"))`
+
+::: {.callout-important}
+## The Key Insight
+A difference between means only matters if it's **big relative to the spread (SD)**.
+
+- **Signal** = difference between means
+- **Noise** = variability within groups (SD)
+
+Is the signal bigger than the noise?
 :::
 
 ---
 
-## Part 2: Basic Descriptives
+## Activity 4: Hypothesis Writing Practice (20 min)
 
-### Simple Reaction Time
+### Writing Hypotheses for the Memory Experiment
 
-Let's start with simple reaction time. Calculate the mean and SD:
+**The experimental hypothesis (H₁)** predicts there WILL be an effect.
 
-```{webr-r}
-# Mean reaction time
-mean(olympics$simple_rt)
-```
+**The null hypothesis (H₀)** predicts there will be NO effect.
 
-```{webr-r}
-# Standard deviation
-sd(olympics$simple_rt)
-```
+For the Lab A vs Lab B memory comparison:
 
-```{webr-r}
-# Median
-median(olympics$simple_rt)
-```
+**Which is a correct EXPERIMENTAL hypothesis?**
 
-::: {.callout-note}
-## Questions to Consider
-- How close are the mean and median?
-- What does this suggest about the distribution shape?
-- What does the SD tell you about consistency?
-:::
+`r mcq(c(answer = "Concrete words will be recalled better than abstract words", "There will be no difference between word types", "Word type cannot affect memory", "All participants will recall 5 words"))`
 
-### Your Turn: Memory Scores
+**Which is a correct NULL hypothesis?**
 
-Now calculate the same statistics for memory scores:
-
-```{webr-r}
-# Calculate mean for memory_score
-mean(olympics$memory_score)
-```
-
-```{webr-r}
-# Calculate SD for memory_score
-sd(olympics$memory_score)
-```
-
-```{webr-r}
-# Calculate median for memory_score
-median(olympics$memory_score)
-```
-
-### Variance vs Standard Deviation
-
-Compare variance and SD:
-
-```{webr-r}
-# Variance (squared units)
-var(olympics$simple_rt)
-
-# SD (original units)
-sd(olympics$simple_rt)
-
-# Check: SD = sqrt(variance)
-sqrt(var(olympics$simple_rt))
-```
+`r mcq(c("Concrete words will be recalled better", "Abstract words will be recalled better", answer = "There will be no difference in recall between word types", "Memory doesn't exist"))`
 
 ---
 
-## Part 3: Visualising Distributions
+### One-tailed vs Two-tailed
 
-### Creating Histograms
+**One-tailed**: Predicts the DIRECTION ("Group A will be HIGHER than Group B")
 
-A histogram shows the distribution shape:
+**Two-tailed**: Predicts a difference but NOT the direction ("Groups will DIFFER")
 
-```{webr-r}
-# Histogram of simple reaction time
-hist(olympics$simple_rt,
-     main = "Distribution of Simple Reaction Times",
-     xlab = "Reaction Time (ms)",
-     col = "steelblue",
-     breaks = 15)
-```
+**"Concrete words will be easier to remember than abstract words" is:**
 
-::: {.callout-note}
-## Reading the Histogram
-- **X-axis**: Reaction time values (grouped into bins)
-- **Y-axis**: How many participants fell into each bin
-- **Shape**: Is it symmetric? Skewed? Has multiple peaks?
-:::
+`r mcq(c(answer = "One-tailed (predicts direction)", "Two-tailed (no direction)", "Null hypothesis", "Not a hypothesis"))`
 
-### Your Turn: Memory Histogram
+**"Word type will affect memory" is:**
 
-Create a histogram for memory scores:
-
-```{webr-r}
-# Create histogram for memory_score
-hist(olympics$memory_score,
-     main = "Distribution of Memory Scores",
-     xlab = "Number of Words Recalled",
-     col = "coral",
-     breaks = 10)
-```
-
-### Comparing Distributions
-
-Look at both distributions:
-
-```{webr-r}
-# Side by side comparison
-par(mfrow = c(1, 2))  # 1 row, 2 columns
-
-hist(olympics$simple_rt,
-     main = "Reaction Times",
-     xlab = "RT (ms)",
-     col = "steelblue",
-     breaks = 12)
-
-hist(olympics$memory_score,
-     main = "Memory Scores",
-     xlab = "Words Recalled",
-     col = "coral",
-     breaks = 8)
-
-par(mfrow = c(1, 1))  # Reset to single plot
-```
-
-::: {.callout-tip}
-## Compare the Shapes
-- Which distribution is more symmetric?
-- Which has more variability?
-- Are there any unusual values (outliers)?
-:::
+`r mcq(c("One-tailed (predicts direction)", answer = "Two-tailed (no direction)", "Null hypothesis", "Not a hypothesis"))`
 
 ---
 
-## Part 4: Comparing Groups
+### Write Your Own
 
-### Room A vs Room B
+For the pre-post mood comparison, which hypothesis is correctly written?
 
-Did the two rooms perform differently? Let's find out.
+**One-tailed hypothesis:**
 
-```{webr-r}
-# How many in each room?
-table(olympics$room)
-```
+`r mcq(c(answer = "Mood ratings will be higher after the session than before", "Mood ratings will change after the session", "There will be no change in mood", "Mood cannot be measured"))`
 
-### Subsetting the Data
+**Two-tailed hypothesis:**
 
-```{webr-r}
-# Create separate datasets for each room
-room_a <- olympics[olympics$room == "A", ]
-room_b <- olympics[olympics$room == "B", ]
-
-# Check the sizes
-nrow(room_a)
-nrow(room_b)
-```
-
-### Comparing Means
-
-```{webr-r}
-# Mean reaction time for each room
-mean(room_a$simple_rt)
-mean(room_b$simple_rt)
-
-# The difference
-mean(room_a$simple_rt) - mean(room_b$simple_rt)
-```
-
-### Comparing Variability
-
-```{webr-r}
-# SD for each room
-sd(room_a$simple_rt)
-sd(room_b$simple_rt)
-```
-
-::: {.callout-note}
-## Questions
-- Which room was faster (lower RT)?
-- Which room was more consistent (lower SD)?
-- Is the difference "big" or "small"?
-:::
-
-### Visualising Group Differences
-
-```{webr-r}
-# Side-by-side histograms
-par(mfrow = c(1, 2))
-
-hist(room_a$simple_rt,
-     main = "Room A",
-     xlab = "Reaction Time (ms)",
-     col = "#275882",
-     xlim = c(150, 450),
-     breaks = 10)
-
-hist(room_b$simple_rt,
-     main = "Room B",
-     xlab = "Reaction Time (ms)",
-     col = "#EA8439",
-     xlim = c(150, 450),
-     breaks = 10)
-
-par(mfrow = c(1, 1))
-```
-
-### Using dplyr for Group Summaries
-
-A more elegant way using the tidyverse:
-
-```{webr-r}
-library(dplyr)
-
-olympics %>%
-  group_by(room) %>%
-  summarise(
-    n = n(),
-    mean_rt = mean(simple_rt),
-    sd_rt = sd(simple_rt),
-    median_rt = median(simple_rt)
-  )
-```
+`r mcq(c("Mood will improve after the session", answer = "Mood ratings will differ between before and after the session", "There will be no change in mood", "Mood will decrease"))`
 
 ---
 
-## Part 5: Practice Exercises
+## Activity 5: MCQ Practice (20 min)
 
-### Exercise 1: Choice Reaction Time
+::: {.webex-check .webex-box}
 
-Calculate descriptives for choice reaction time:
+### Investigation 1: Throwing Accuracy
 
-```{webr-r}
-# Your code here: Calculate mean, SD, median for choice_rt
-mean(olympics$choice_rt)
-sd(olympics$choice_rt)
-median(olympics$choice_rt)
-```
+Students threw balls with their dominant hand (10 throws) and their non-dominant hand (5 throws). We measured accuracy (% successful throws).
 
-### Exercise 2: Compare Simple vs Choice RT
+**1. Design type:**
 
-```{webr-r}
-# Compare the means
-cat("Simple RT mean:", mean(olympics$simple_rt), "\n")
-cat("Choice RT mean:", mean(olympics$choice_rt), "\n")
-cat("Difference:", mean(olympics$choice_rt) - mean(olympics$simple_rt), "\n")
-```
+`r mcq(c("Between-subjects", answer = "Within-subjects", "Correlational"))`
 
-This demonstrates **Hick's Law** — choice increases reaction time!
+**2. Why is this within-subjects?**
 
-### Exercise 3: Room Comparison for Memory
+`r mcq(c("Different people used different hands", answer = "The same person threw with BOTH hands", "Hands were randomly assigned"))`
 
-```{webr-r}
-# Compare memory scores between rooms
-olympics %>%
-  group_by(room) %>%
-  summarise(
-    mean_memory = mean(memory_score),
-    sd_memory = sd(memory_score)
-  )
-```
+**3. What is the IV?**
 
-### Exercise 4: Full Summary Table
+`r mcq(c(answer = "Hand used (dominant vs non-dominant)", "Throwing accuracy", "Number of throws", "No IV"))`
 
-Create a comprehensive summary:
+**4. What is the DV?**
 
-```{webr-r}
-# Summary of all numeric variables by room
-olympics %>%
-  group_by(room) %>%
-  summarise(
-    n = n(),
-    mean_simple_rt = round(mean(simple_rt), 1),
-    sd_simple_rt = round(sd(simple_rt), 1),
-    mean_choice_rt = round(mean(choice_rt), 1),
-    sd_choice_rt = round(sd(choice_rt), 1),
-    mean_memory = round(mean(memory_score), 1),
-    sd_memory = round(sd(memory_score), 1)
-  )
-```
+`r mcq(c("Hand used", answer = "Throwing accuracy (%)", "Number of throws", "Participant age"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2: Self-Rating vs Performance
+
+Before throwing, students rated how good they thought they'd be (1-10). We then measured their actual accuracy.
+
+**1. Design type:**
+
+`r mcq(c("Between-subjects", "Within-subjects", answer = "Correlational"))`
+
+**2. Is there an IV?**
+
+`r mcq(c("Yes - self-rating", "Yes - actual accuracy", answer = "No - neither variable was manipulated"))`
+
+**3. Why can't we say self-rating CAUSES good performance?**
+
+`r mcq(c("Sample too small", "Wrong test", answer = "No manipulation means no causal claim"))`
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 3: Sixth Sense
+
+Students tried to detect if someone was staring at them (6 trials). If just guessing, you'd expect 3/6 (50%) correct.
+
+**1. If someone got 5/6 correct, does that PROVE they have a sixth sense?**
+
+`r torf(FALSE)`
+
+**2. Why not?**
+
+`r mcq(c("5/6 is impossible", answer = "Some people will get 5/6 just by luck", "The experiment was flawed", "Sixth sense doesn't exist"))`
+
+**3. What would 50% accuracy suggest?**
+
+`r mcq(c("They definitely have a sixth sense", "They definitely don't have a sixth sense", answer = "Performance at chance level - just guessing"))`
+:::
 
 ---
 
@@ -366,24 +545,29 @@ olympics %>%
 ::: {.callout-important}
 ## Key Takeaways
 
-**Calculating Descriptives**
-- `mean(x)` for the average
-- `sd(x)` for standard deviation
-- `median(x)` for the middle value
+**Design Types:**
 
-**Visualising**
-- `hist(x)` for distribution shape
-- Compare mean and median to assess skew
+- **Between-subjects** = Different people in each condition (Lab A vs Lab B)
+- **Within-subjects** = Same people in all conditions (Pre vs Post mood)
+- **Correlational** = No manipulation, measuring relationships (Self-rating vs accuracy)
 
-**Comparing Groups**
-- Subset with `data[condition, ]`
-- Or use `group_by()` and `summarise()` from dplyr
+**Variables:**
+
+- **IV** = What the researcher manipulates (word type, time)
+- **DV** = What the researcher measures (recall, mood rating)
+- Correlational designs have **NO IV**
+
+**Descriptive Statistics:**
+
+- **Mean** = Average value
+- **SD** = How spread out values are
+- A difference between means matters if it's **big relative to the SD**
 :::
 
 ---
 
 ## Next Steps
 
-1. Complete the [Week 12 Self-Assessment](self-assessment.qmd)
-2. Review the [Lecture Reading](../lecture/reading.qmd) for the concepts
-3. Prepare for Week 13: Estimation & Confidence Intervals
+1. Complete the [Week 12 Self-Assessment Quiz](/textbook/quizzes/w12-quiz.qmd)
+2. Review the [Lecture Reading](/textbook/chapters/w12-lecture.qmd)
+3. Start thinking about your **Research Plan** (due Week 16)!

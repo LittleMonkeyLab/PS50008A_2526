@@ -1,0 +1,272 @@
+---
+title: "Week 18 Self-Assessment"
+subtitle: "MCQ Exam Preparation"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+The MCQ exam is this week. This quiz provides final practice in the exact exam format. Work through each investigation carefully, applying everything you've learned.
+
+---
+
+## Final Practice: Full Exam Format
+
+::: {.webex-check .webex-box}
+
+### Investigation 1
+
+A researcher examines whether caffeine affects alertness. 50 participants are randomly assigned to drink either caffeinated or decaffeinated coffee. Alertness is measured 30 minutes later using a standardised scale.
+
+1. **What type of design is this?**
+
+   `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **What is the IV?**
+
+   `r mcq(c(answer = "Coffee type (caffeinated vs decaffeinated)", "Alertness score", "Time (30 minutes)", "No IV"))`
+
+3. **What is the DV?**
+
+   `r mcq(c("Coffee type", answer = "Alertness score", "Caffeine content", "Participant age"))`
+
+4. **Which hypothesis is one-tailed?**
+
+   ```{r}
+   opts_h1 <- c(
+     "Caffeine will affect alertness",
+     answer = "Participants who drink caffeinated coffee will have higher alertness than those who drink decaffeinated coffee",
+     "There will be no difference in alertness between groups",
+     "Alertness and caffeine are related"
+   )
+   ```
+
+   `r longmcq(opts_h1)`
+
+5. **Which statistical test is appropriate?**
+
+   `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+6. **Results: t(48) = 3.21, p = .002, d = 0.91. Which conclusion is correct?**
+
+   ```{r}
+   opts_c1 <- c(
+     "There is no significant difference in alertness",
+     answer = "Participants who drank caffeinated coffee were significantly more alert, with a large effect size",
+     "The decaffeinated group was more alert",
+     "We cannot draw any conclusions from these results"
+   )
+   ```
+
+   `r longmcq(opts_c1)`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2
+
+A researcher investigates whether therapy reduces anxiety. 30 participants complete an anxiety questionnaire before and after 8 weeks of cognitive behavioural therapy.
+
+1. **What type of design is this?**
+
+   `r mcq(c("Between-subjects", answer = "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **What is the IV?**
+
+   `r mcq(c(answer = "Time (before vs after therapy)", "Anxiety score", "Type of therapy", "No IV"))`
+
+3. **What is the DV?**
+
+   `r mcq(c("Time point", answer = "Anxiety score", "Therapy sessions completed", "Participant motivation"))`
+
+4. **Which statistical test is appropriate?**
+
+   `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Mann-Whitney U"))`
+
+5. **Results: t(29) = -4.56, p < .001, d = 0.83. The negative t-value indicates:**
+
+   `r mcq(c("The result is not significant", answer = "Anxiety decreased after therapy (before > after)", "An error in calculation", "The effect is negative and meaningless"))`
+
+6. **The effect size (d = 0.83) is:**
+
+   `r mcq(c("Small", "Medium", answer = "Large", "Too small to matter"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 3
+
+A researcher measures hours of social media use and self-esteem scores in 100 university students to examine their relationship.
+
+1. **What type of design is this?**
+
+   `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+
+2. **What is the IV?**
+
+   `r mcq(c("Social media use", "Self-esteem score", "Student year", answer = "No IV — both variables are measured"))`
+
+3. **In a correlational design, the DV is:**
+
+   `r mcq(c("Social media use", "Self-esteem score", answer = "Neither — both variables are measured with no DV", "Student age"))`
+
+4. **Which statistical test is appropriate?**
+
+   `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "ANOVA"))`
+
+5. **Results: r(98) = -.32, p = .001. This indicates:**
+
+   `r mcq(c("No relationship", "A strong positive relationship", answer = "A moderate negative relationship", "A perfect negative relationship"))`
+
+6. **Can we conclude that social media use CAUSES lower self-esteem?**
+
+   `r mcq(c("Yes, the correlation proves causation", answer = "No, correlations cannot establish causation", "Yes, because p < .05", "It depends on the effect size"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 4
+
+A researcher compares problem-solving performance between people who slept 8 hours versus 4 hours the previous night. 60 participants are recruited, with 30 in each group.
+
+1. **What type of design is this?**
+
+   `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **What is the IV?**
+
+   `r mcq(c(answer = "Sleep duration (8 hours vs 4 hours)", "Problem-solving score", "Recruitment method", "No IV"))`
+
+3. **What is the DV?**
+
+   `r mcq(c("Sleep hours", answer = "Problem-solving performance", "Group size", "Participant tiredness"))`
+
+4. **Which statistical test is appropriate?**
+
+   `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Wilcoxon signed-rank"))`
+
+5. **Results: t(58) = 2.14, p = .037, d = 0.55. Is this result significant at α = .05?**
+
+   `r torf(TRUE)`
+
+6. **The effect size (d = 0.55) is:**
+
+   `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 5
+
+A researcher pairs participants based on their baseline memory scores, then randomly assigns one member of each pair to receive memory training while the other receives no training. Memory is tested after 4 weeks.
+
+1. **What type of design is this?**
+
+   `r mcq(c("Between-subjects", "Within-subjects", answer = "Matched pairs", "Correlational"))`
+
+2. **Why use matched pairs?**
+
+   `r mcq(c("It's easier to recruit participants", answer = "To control for individual differences in baseline memory ability", "To reduce the number of participants needed", "To make the study correlational"))`
+
+3. **What is the IV?**
+
+   `r mcq(c(answer = "Training condition (training vs no training)", "Baseline memory score", "Final memory score", "No IV"))`
+
+4. **What is the DV?**
+
+   `r mcq(c("Training condition", answer = "Memory score after 4 weeks", "Baseline memory", "Pair membership"))`
+
+5. **The analysis for matched pairs is similar to:**
+
+   `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Chi-square"))`
+
+6. **Results: t(19) = 3.87, p = .001, d = 0.86. This indicates:**
+
+   `r mcq(c("No significant difference", answer = "The training group performed significantly better, large effect", "The control group performed better", "The matching was unsuccessful"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 6
+
+A researcher examines whether handwriting quality is related to fine motor skills in 75 primary school children.
+
+1. **What type of design is this?**
+
+   `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+
+2. **What is the IV?**
+
+   `r mcq(c("Handwriting quality", "Fine motor skills", "Age", answer = "No IV"))`
+
+3. **Which statistical test is appropriate?**
+
+   `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r (or Spearman's rho)", "Chi-square"))`
+
+4. **Results: r(73) = .58, p < .001. What does this tell us?**
+
+   `r mcq(c("No relationship exists", answer = "There is a moderate-to-strong positive correlation", "Handwriting causes better motor skills", "Fine motor skills cause better handwriting"))`
+
+5. **What percentage of variance is shared between the variables?**
+
+   `r fitb(c("33.64", "34", "33.6", "about 34"), ignore_case = TRUE)`%
+
+6. **A possible third variable could be:**
+
+   `r fitb(c("age", "practice", "development", "maturation"), ignore_case = TRUE)`
+
+:::
+
+---
+
+## Key Reminders for the Exam
+
+### Design Types
+
+| Design | Key Feature | Test |
+|--------|-------------|------|
+| Between-subjects | Different participants in each condition | Independent t-test |
+| Within-subjects | Same participants in all conditions | Paired t-test |
+| Matched pairs | Participants paired, one per condition | Paired t-test |
+| Correlational | Measuring relationship, no manipulation | Pearson's r |
+
+### Effect Size Guidelines (Cohen's d)
+
+- **0.2** = Small
+- **0.5** = Medium
+- **0.8** = Large
+
+### Important Distinctions
+
+- p < .05 = significant at α = .05
+- p > .05 = not significant at α = .05
+- Correlation ≠ causation
+- No IV in correlational designs
+
+---
+
+## Summary Checklist
+
+Before the exam, verify you can:
+
+- [ ] Quickly identify design types from descriptions
+- [ ] Identify IV and DV (or recognise no IV in correlational designs)
+- [ ] Match designs to appropriate tests
+- [ ] Write one-tailed and two-tailed hypotheses
+- [ ] Interpret p-values (significant vs not significant)
+- [ ] Interpret effect sizes (small, medium, large)
+- [ ] Explain why correlation ≠ causation
+- [ ] Recognise matched pairs designs
+
+::: {.callout-important}
+## MCQ Exam This Week
+The exam is during Wednesday's lecture time. Bring a pen. You will have the full 2-hour slot. Good luck!
+:::

@@ -1,0 +1,237 @@
+---
+title: "Week 15 Self-Assessment"
+subtitle: "Significance Testing"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+This quiz applies everything from Weeks 12-14. You'll practice selecting and interpreting statistical tests, including p-values and effect sizes. This is the last new content before your Research Plan is due.
+
+---
+
+## Part 1: Hypothesis Testing Logic
+
+### Question 1: Null Hypothesis
+
+The null hypothesis (H₀) typically predicts:
+
+`r mcq(c("A significant effect", answer = "No effect or no difference", "The direction of the effect", "That the study will be successful"))`
+
+Why do we test the null hypothesis rather than directly testing our experimental hypothesis?
+
+`r mcq(c("The null is easier to understand", answer = "We can calculate the probability of our data IF the null were true", "The experimental hypothesis is too complex", "It's just tradition"))`
+
+### Question 2: p-Values
+
+A p-value tells us:
+
+`r mcq(c("The probability that the null hypothesis is true", "The probability that our hypothesis is correct", answer = "The probability of obtaining our results (or more extreme) if the null hypothesis were true", "The effect size"))`
+
+If p = .03, this means:
+
+`r mcq(c("There's a 3% chance our hypothesis is wrong", answer = "There's a 3% chance of getting these results if there were no real effect", "The effect size is 3%", "3% of participants showed the effect"))`
+
+### Question 3: Statistical Significance
+
+We typically reject the null hypothesis when:
+
+`r mcq(c("p > .05", answer = "p < .05", "p = .05", "p is any value"))`
+
+A result with p = .08 is:
+
+`r mcq(c("Statistically significant", answer = "Not statistically significant at α = .05", "Definitely not a real effect", "A large effect"))`
+
+---
+
+## Part 2: t-Tests Applied
+
+### Question 4: Choosing the Right t-Test
+
+**Different participants** in each condition → `r mcq(c(answer = "Independent t-test", "Paired t-test", "One-sample t-test", "Pearson's r"))`
+
+**Same participants** measured twice → `r mcq(c("Independent t-test", answer = "Paired t-test", "One-sample t-test", "Pearson's r"))`
+
+### Question 5: DataLab t-Test Selection
+
+**Room A vs Room B** reaction times (different students in each room):
+
+`r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+**Pre-mood vs Post-mood** ratings (same students before and after):
+
+`r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Chi-square"))`
+
+### Question 6: t-Test Assumptions
+
+Which assumption applies to BOTH independent and paired t-tests?
+
+`r mcq(c("Equal group sizes", answer = "Data should be approximately normally distributed", "Participants must be matched on characteristics", "Correlation between variables"))`
+
+The independent t-test additionally assumes:
+
+`r mcq(c(answer = "Homogeneity of variance (similar SDs in both groups)", "Repeated measures", "Perfect normal distribution", "Large effect size"))`
+
+---
+
+## Part 3: Effect Size
+
+### Question 7: Why Effect Size Matters
+
+Effect size tells us:
+
+`r mcq(c("Whether the result is significant", "The p-value", answer = "The magnitude or practical importance of the difference", "The sample size needed"))`
+
+A statistically significant result with a tiny effect size means:
+
+`r mcq(c("The finding is very important", answer = "The effect is real but may not be practically meaningful", "We should ignore the result", "The sample was too small"))`
+
+### Question 8: Cohen's d Interpretation
+
+Cohen's d = 0.2 is considered: `r mcq(c(answer = "Small", "Medium", "Large", "Very large"))`
+
+Cohen's d = 0.5 is considered: `r mcq(c("Small", answer = "Medium", "Large", "Very large"))`
+
+Cohen's d = 0.8 is considered: `r mcq(c("Small", "Medium", answer = "Large", "Very large"))`
+
+### Question 9: Effect Size Calculation
+
+Cohen's d is calculated as:
+
+`r mcq(c("Mean divided by SD", answer = "Difference between means divided by pooled SD", "SD divided by mean", "Sample size divided by variance"))`
+
+---
+
+## Part 4: Interpreting Output
+
+### Question 10: Reading Results
+
+A t-test output shows: t(48) = 2.35, p = .023, d = 0.67
+
+Is this result statistically significant at α = .05? `r torf(TRUE)`
+
+The effect size is: `r mcq(c("Small", answer = "Medium", "Large", "Cannot tell"))`
+
+The degrees of freedom (df) are: `r fitb(c("48"), ignore_case = TRUE)`
+
+### Question 11: APA Reporting
+
+The correct APA format for reporting a t-test is:
+
+`r mcq(c("t = 2.35, significant", answer = "t(48) = 2.35, p = .023, d = 0.67", "t-test was significant at .05 level", "The groups were different (t = 2.35)"))`
+
+### Question 12: Correlation Reporting
+
+A correlation analysis shows: r(38) = .45, p = .003
+
+This represents a `r mcq(c("Weak", answer = "Moderate to strong", "Perfect", "Non-significant"))` positive relationship.
+
+The result IS statistically significant. `r torf(TRUE)`
+
+---
+
+## Part 5: Complete Test Selection
+
+### Question 13: Design to Test Matching
+
+Fill in the correct test for each scenario:
+
+Comparing **two groups of different people**: `r fitb(c("independent t-test", "independent t test", "independent samples t-test"), ignore_case = TRUE)`
+
+Comparing the **same people at two time points**: `r fitb(c("paired t-test", "paired t test", "paired samples t-test", "related t-test"), ignore_case = TRUE)`
+
+Examining the **relationship between two continuous variables**: `r fitb(c("Pearson's r", "Pearsons r", "pearson", "correlation", "Pearson correlation"), ignore_case = TRUE)`
+
+### Question 14: Non-Parametric Alternatives
+
+When data violate normality assumptions:
+
+Independent t-test → `r mcq(c(answer = "Mann-Whitney U", "Wilcoxon signed-rank", "Spearman's rho", "Chi-square"))`
+
+Paired t-test → `r mcq(c("Mann-Whitney U", answer = "Wilcoxon signed-rank", "Spearman's rho", "Chi-square"))`
+
+Pearson's r → `r mcq(c("Mann-Whitney U", "Wilcoxon signed-rank", answer = "Spearman's rho", "Chi-square"))`
+
+---
+
+## Part 6: MCQ Exam Practice
+
+::: {.webex-check .webex-box}
+
+### Investigation 1
+
+A researcher tests whether a mindfulness intervention reduces stress. 30 participants are randomly assigned to either a mindfulness group or a control group. Stress is measured after 4 weeks.
+
+1. **Design**: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **IV**: `r mcq(c(answer = "Group (mindfulness vs control)", "Stress level", "Time (4 weeks)", "No IV"))`
+
+3. **DV**: `r mcq(c("Group assignment", answer = "Stress level", "Mindfulness practice", "Participant age"))`
+
+4. **Appropriate test**: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Mann-Whitney U"))`
+
+5. **Results: t(28) = 2.89, p = .007, d = 1.08. This is**:
+   - Significant? `r torf(TRUE)`
+   - Effect size: `r mcq(c("Small", "Medium", answer = "Large", "Cannot determine"))`
+
+6. **The correct conclusion is**: `r mcq(c(answer = "The mindfulness group had significantly lower stress than controls", "There was no significant difference", "The control group had lower stress", "We cannot draw any conclusions"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2
+
+A researcher measures students' confidence before and after receiving exam feedback.
+
+1. **Design**: `r mcq(c("Between-subjects", answer = "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **IV**: `r mcq(c(answer = "Time (before vs after feedback)", "Confidence level", "Exam grade", "No IV"))`
+
+3. **DV**: `r mcq(c("Time point", answer = "Confidence level", "Feedback content", "Student ID"))`
+
+4. **Appropriate test**: `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Wilcoxon signed-rank"))`
+
+5. **Results: t(24) = -3.45, p = .002, d = 0.69. The negative t-value means**: `r mcq(c("The result is not significant", answer = "Confidence decreased (before > after)", "The calculation is wrong", "The effect size is negative"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 3
+
+A researcher examines whether study hours predict exam scores in 60 students.
+
+1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+
+2. **IV**: `r mcq(c("Study hours", "Exam scores", "Number of students", answer = "No IV"))`
+
+3. **Appropriate test**: `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "ANOVA"))`
+
+4. **Results: r(58) = .52, p < .001. This represents**: `r mcq(c("A weak relationship", answer = "A moderate to strong positive relationship", "No relationship", "A negative relationship"))`
+
+5. **Can we conclude studying CAUSES better grades?** `r torf(FALSE)`
+
+:::
+
+---
+
+## Summary Checklist
+
+Before moving on, make sure you can:
+
+- [ ] Explain the logic of hypothesis testing (null hypothesis, p-value)
+- [ ] Interpret p-values correctly (NOT the probability the null is true)
+- [ ] Select the appropriate test for any design (independent t, paired t, Pearson's r)
+- [ ] Identify non-parametric alternatives
+- [ ] Interpret and report effect sizes (Cohen's d, r)
+- [ ] Read and interpret statistical output
+- [ ] Report results in APA format
+
+::: {.callout-important}
+## Research Plan Due Next Week
+Your Research Plan is due Week 16. You need to specify your hypothesis, design, IV, DV, and statistical test. This quiz covers all the content you need!
+:::

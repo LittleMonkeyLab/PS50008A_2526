@@ -1,0 +1,65 @@
+---
+title: "PS50008A Textbook"
+subtitle: "Research Methods & Experimental Design"
+---
+
+## Welcome
+
+This textbook accompanies PS50008A Research Methods & Experimental Design at Goldsmiths, University of London. It contains all lecture and lab readings organised by week, along with self-assessment quizzes to check your understanding.
+
+## How to Use This Textbook
+
+Each week has **two readings** to complete:
+
+1. **Lecture reading** — Read before or after Wednesday's lecture to reinforce the concepts
+2. **Lab reading** — Read before Thursday's lab to prepare for practical exercises
+
+After each week, test your understanding with the self-assessment quiz. These match the style of the MCQ exam.
+
+::: {.callout-tip}
+## PDF Downloads
+Each chapter and quiz can be downloaded as a PDF for offline reading. Look for the PDF link at the top of each page.
+:::
+
+---
+
+## Weekly Readings
+
+| Week | Lecture Reading | Lab Reading | Quiz |
+|------|-----------------|-------------|------|
+| **11** | [Week 11 Lecture: Introduction to Research](chapters/w11-lecture.qmd) | [Week 11 Lab: DataLab Foundations](chapters/w11-lab.qmd) | [Week 11 Quiz](quizzes/w11-quiz.qmd) |
+| **12** | [Week 12 Lecture: Research Design Framework](chapters/w12-lecture.qmd) | [Week 12 Lab: Descriptive Statistics in R](chapters/w12-lab.qmd) | [Week 12 Quiz](quizzes/w12-quiz.qmd) |
+| **13** | [Week 13 Lecture: Correlation & Relationships](chapters/w13-lecture.qmd) | [Week 13 Lab: Correlation in R](chapters/w13-lab.qmd) | [Week 13 Quiz](quizzes/w13-quiz.qmd) |
+| **14** | [Week 14 Lecture: Probability & Distributions](chapters/w14-lecture.qmd) | [Week 14 Lab: Visualising Distributions in R](chapters/w14-lab.qmd) | [Week 14 Quiz](quizzes/w14-quiz.qmd) |
+| **15** | [Week 15 Lecture: Significance Testing](chapters/w15-lecture.qmd) | [Week 15 Lab: Running t-tests in R](chapters/w15-lab.qmd) | [Week 15 Quiz](quizzes/w15-quiz.qmd) |
+| — | *Reading Week* | — | — |
+| **16** | [Week 16 Lecture: Research Plan Tips](chapters/w16-lecture.qmd) | [Week 16 Lab: Literature Review Skills](chapters/w16-lab.qmd) | [Week 16 Quiz](quizzes/w16-quiz.qmd) |
+| **17** | [Week 17 Lecture: MCQ Practice & Credibility](chapters/w17-lecture.qmd) | [Week 17 Lab: Methodology Workshop](chapters/w17-lab.qmd) | [Week 17 Quiz](quizzes/w17-quiz.qmd) |
+| **18** | [Week 18 Lecture: MCQ Exam Preparation](chapters/w18-lecture.qmd) | [Week 18 Lab: Ethics & Procedures](chapters/w18-lab.qmd) | [Week 18 Quiz](quizzes/w18-quiz.qmd) |
+| **19** | [Week 19 Lecture: Results & Lab Report Writing](chapters/w19-lecture.qmd) | [Week 19 Lab: Data Collection Support](chapters/w19-lab.qmd) | [Week 19 Quiz](quizzes/w19-quiz.qmd) |
+| **20** | [Week 20 Lecture: Discussion & EDS Preparation](chapters/w20-lecture.qmd) | [Week 20 Lab: Data Analysis Workshop](chapters/w20-lab.qmd) | [Week 20 Quiz](quizzes/w20-quiz.qmd) |
+
+::: {.callout-important}
+## Week 12 is Critical
+Week 12 introduces ALL the terminology you need for your Research Plan: IV, DV, design types, hypothesis types, test selection, and descriptive statistics.
+:::
+
+---
+
+## Assessment Deadlines
+
+| Week | Assessment |
+|------|------------|
+| 16 | Research Plan due Friday (20%) |
+| 18 | MCQ Exam Wednesday (20%) |
+| 20 | EDS Assignment due Friday (20%) |
+| Post-term | Research Report due 1 May (40%) |
+
+---
+
+## Quick Reference
+
+- [Assessment Overview](/assessments.qmd)
+- [Resources](/resources.qmd)
+- [Data Dictionary](/week11/lab/data-dictionary.qmd)
+- [Schedule](/schedule.qmd)

@@ -1,0 +1,17 @@
+author: "Gordon Wright"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+  typst:
+    mainfont: "Atkinson Hyperlegible"
+    number-sections: true
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf
+execute:
+  freeze: auto

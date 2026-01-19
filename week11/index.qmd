@@ -79,7 +79,7 @@ By the end of this week, you will be able to:
 | *Data Dictionary| Complete variable reference guide |
 <!-- | [*Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
 | [*Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
-| [*Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
+| [*Instructor Slides](lab/instructor-slides.html){target="_blank"} | Opening slides for the lab session |
 | [*Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide | -->
 
 * Made available after the lab!

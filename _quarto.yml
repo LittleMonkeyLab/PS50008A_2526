@@ -2,171 +2,325 @@ project:
   type: website
   output-dir: docs
   render:
-    - index.qmd
-    - syllabus.qmd
-    - schedule.qmd
-    - assessments.qmd
-    - assessments/
-    - resources.qmd
-    - week11/
-    # - week12/
-
+  - index.qmd
+  - 404.qmd
+  - syllabus.qmd
+  - schedule.qmd
+  - assessments.qmd
+  - assessments/
+  - resources.qmd
+  - week11/
+  - week12/
+  # - week12_v2/
+  - textbook/index.qmd
+  - textbook/chapters/w11-lecture.qmd
+  - textbook/chapters/w11-lab.qmd
+  - textbook/chapters/w12-lecture.qmd
+  - textbook/chapters/w12-lab.qmd
+  - textbook/quizzes/w11-quiz.qmd
+  - textbook/quizzes/w12-quiz.qmd
+  # --- Weeks 13-20: Uncomment as content is ready ---
+  # - week13/
+  # - week14/
+  # - week15/
+  # - week16/
+  # - week17/
+  # - week18/
+  # - week19/
+  # - week20/
+  # - textbook/chapters/w13-lecture.qmd
+  # - textbook/chapters/w13-lab.qmd
+  # - textbook/chapters/w14-lecture.qmd
+  # - textbook/chapters/w14-lab.qmd
+  # - textbook/chapters/w15-lecture.qmd
+  # - textbook/chapters/w15-lab.qmd
+  # - textbook/chapters/w16-lecture.qmd
+  # - textbook/chapters/w16-lab.qmd
+  # - textbook/chapters/w17-lecture.qmd
+  # - textbook/chapters/w17-lab.qmd
+  # - textbook/chapters/w18-lecture.qmd
+  # - textbook/chapters/w18-lab.qmd
+  # - textbook/chapters/w19-lecture.qmd
+  # - textbook/chapters/w19-lab.qmd
+  # - textbook/chapters/w20-lecture.qmd
+  # - textbook/chapters/w20-lab.qmd
+  # - textbook/quizzes/w13-quiz.qmd
+  # - textbook/quizzes/w14-quiz.qmd
+  # - textbook/quizzes/w15-quiz.qmd
+  # - textbook/quizzes/w16-quiz.qmd
+  # - textbook/quizzes/w17-quiz.qmd
+  # - textbook/quizzes/w18-quiz.qmd
+  # - textbook/quizzes/w19-quiz.qmd
+  # - textbook/quizzes/w20-quiz.qmd
 website:
-  title: "PS50008A Research Methods & Experimental Design"
-  description: "Term 2 Spring 2026"
-  site-url: https://littlemonkeylab.github.io/PS50008A_2526/  # Update when deployed
-  repo-url: https://github.com/LittleMonkeyLab/PS50008A_2526  # Update
-  repo-actions: [edit, issue]
-
+  title: PS50008A Research Methods & Experimental Design
+  description: Term 2 Spring 2026
+  site-url: https://littlemonkeylab.github.io/PS50008A_2526/
+  repo-url: https://github.com/LittleMonkeyLab/PS50008A_2526
+  repo-actions:
+  - edit
+  - issue
   navbar:
     logo: assets/foundations-26-logo.svg
     left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Syllabus"
-        href: syllabus.qmd
-      - text: "Schedule"
-        href: schedule.qmd
-      - text: "Assessments"
-        menu:
-          - text: "Overview"
-            href: assessments.qmd
-          - text: "---"
-          - text: "Research Plan"
-            href: assessments/research-plan.qmd
-          - text: "MCQ Exam"
-            href: assessments/mcq-exam.qmd
-          - text: "EDS Assignment"
-            href: assessments/eds-assignment.qmd
-          - text: "Research Report"
-            href: assessments/research-report.qmd
-      - text: "Resources"
-        href: resources.qmd
-
+    - text: Home
+      href: index.qmd
+    - text: Syllabus
+      href: syllabus.qmd
+    - text: Schedule
+      href: schedule.qmd
+    - text: Assessments
+      menu:
+      - text: Overview
+        href: assessments.qmd
+      - text: '---'
+      - text: Research Plan
+        href: assessments/research-plan.qmd
+      - text: MCQ Exam
+        href: assessments/mcq-exam.qmd
+      - text: EDS Assignment
+        href: assessments/eds-assignment.qmd
+      - text: Research Report
+        href: assessments/research-report.qmd
+    - text: Resources
+      href: resources.qmd
+    - text: Textbook
+      href: textbook/index.qmd
     right:
-      - icon: github
-        href: https://github.com/LittleMonkeyLab/PS50008A_2526
-
+    - icon: github
+      href: https://github.com/LittleMonkeyLab/PS50008A_2526
   sidebar:
     style: docked
     search: true
     contents:
-      - section: "Overview"
+    - section: Overview
+      contents:
+      - index.qmd
+      - syllabus.qmd
+      - schedule.qmd
+      - section: Assessments
         contents:
-          - index.qmd
-          - syllabus.qmd
-          - schedule.qmd
-          - section: "Assessments"
-            contents:
-              - text: "Overview"
-                href: assessments.qmd
-              - text: "Research Plan"
-                href: assessments/research-plan.qmd
-              - text: "MCQ Exam"
-                href: assessments/mcq-exam.qmd
-              - text: "EDS Assignment"
-                href: assessments/eds-assignment.qmd
-              - text: "Research Report"
-                href: assessments/research-report.qmd
-          - resources.qmd
-      - section: "Term 2"
+        - text: Overview
+          href: assessments.qmd
+        - text: Research Plan
+          href: assessments/research-plan.qmd
+        - text: MCQ Exam
+          href: assessments/mcq-exam.qmd
+        - text: EDS Assignment
+          href: assessments/eds-assignment.qmd
+        - text: Research Report
+          href: assessments/research-report.qmd
+      - resources.qmd
+    - section: Term 2
+      contents:
+      - section: 'Week 11: DataLab'
         contents:
-          - section: "Week 11: DataLab"
-            contents:
-              - text: "Overview"
-                href: week11/index.qmd
-              - section: "Lecture"
-                contents:
-                  # - text: "Video (NA)"
-                  #   href: week11/lecture/video.qmd
-                  - text: "Reading"
-                    href: week11/lecture/reading.qmd
-                  - text: "Slides"
-                    href: week11/lecture/slides.qmd
-                    target: _blank
-              - section: "Lab"
-                contents:
-                  - text: "Slides (after lab)"
-                    # href: week11/lab/slides.qmd
-                    # target: _blank
-                  - text: "Activity (after lab)"
-                    # href: week11/lab/activity.qmd
-                  - text: "Reading (after lab)"
-                    # href: week11/lab/reading.qmd
-                  - text: "Data Dictionary (after lab)"
-                    # href: week11/lab/data-dictionary.qmd
-
-          # - section: "Week 12: Distributions & Variability"
-          #   contents:
-          #     - text: "Overview"
-          #       href: week12/index.qmd
-          #     - section: "Lecture"
-          #       contents:
-          #         - text: "Preview Video"
-          #           href: week12/lecture/video.qmd
-          #         - text: "Reading"
-          #           href: week12/lecture/reading.qmd
-          #         - text: "Slides"
-          #           href: week12/lecture/slides.qmd
-          #           target: _blank
-          #     - section: "Lab"
-          #       contents:
-          #         - text: "Slides"
-          #           href: week12/lab/slides.qmd
-          #           target: _blank
-          #         - text: "Activity"
-          #           href: week12/lab/activity.qmd
-          #         - text: "Reading"
-          #           href: week12/lab/reading.qmd
-          #         - text: "Self-Assessment"
-          #           href: week12/lab/self-assessment.qmd
-          # - text: "Week 13: Estimation & CIs"
-          #   href: week13/index.qmd
-          # - text: "Week 14: Inference & t-tests"
-          #   href: week14/index.qmd
-          # - text: "Week 15: Correlation"
-          #   href: week15/index.qmd
-          # - text: "---"
-          # - text: "Reading Week"
-          # - text: "---"
-          # - text: "Week 16: Regression"
-          #   href: week16/index.qmd
-          # - text: "Week 17: Interpretation & Credibility"
-          #   href: week17/index.qmd
-          # - text: "Week 18: MCQ Exam"
-          #   href: week18/index.qmd
-          # - text: "Week 19: Project Workshop"
-          #   href: week19/index.qmd
-          # - text: "Week 20: EDS Prep"
-          #   href: week20/index.qmd
-
+        - text: Overview
+          href: week11/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week11/lecture/reading.qmd
+          - text: Slides
+            href: week11/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week11/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week11/lab/activity.qmd
+          - text: 'Reading '
+            href: week11/lab/reading.qmd
+          - text: Data Dictionary
+            href: week11/lab/data-dictionary.qmd
+      - section: 'Week 12: Research Design Framework'
+        contents:
+        - text: Overview
+          href: week12/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week12/lecture/reading.qmd
+          - text: Slides
+            href: week12/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week12/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week12/lab/activity.qmd
+          - text: Reading
+            href: week12/lab/reading.qmd
+          - text: Self-Assessment
+            href: week12/lab/self-assessment.qmd
+      # --- Weeks 13-20: Uncomment as content is ready ---
+      # - section: 'Week 13: Correlation & Relationships'
+      #   contents:
+      #   - text: Overview
+      #     href: week13/index.qmd
+      #   - section: Lecture
+      #     contents:
+      #     - text: Reading
+      #       href: week13/lecture/reading.qmd
+      #     - text: Slides
+      #       href: week13/lecture/slides.qmd
+      #       target: _blank
+      #   - section: Lab
+      #     contents:
+      #     - text: Instructor Slides
+      #       href: week13/lab/instructor-slides.qmd
+      #       target: _blank
+      #     - text: Activity
+      #       href: week13/lab/activity.qmd
+      #     - text: Reading
+      #       href: week13/lab/reading.qmd
+      # - section: 'Week 14: Probability & Distributions'
+      #   contents:
+      #   - text: Overview
+      #     href: week14/index.qmd
+      # - section: 'Week 15: Significance Testing'
+      #   contents:
+      #   - text: Overview
+      #     href: week15/index.qmd
+      # - section: 'Week 16: Research Plan Tips'
+      #   contents:
+      #   - text: Overview
+      #     href: week16/index.qmd
+      # - section: 'Week 17: MCQ Practice & Credibility'
+      #   contents:
+      #   - text: Overview
+      #     href: week17/index.qmd
+      # - section: 'Week 18: MCQ Exam'
+      #   contents:
+      #   - text: Overview
+      #     href: week18/index.qmd
+      # - section: 'Week 19: Results & Lab Report Writing'
+      #   contents:
+      #   - text: Overview
+      #     href: week19/index.qmd
+      # - section: 'Week 20: Discussion & EDS Preparation'
+      #   contents:
+      #   - text: Overview
+      #     href: week20/index.qmd
+    - section: Textbook
+      contents:
+      - text: Overview
+        href: textbook/index.qmd
+      - section: Week 11
+        contents:
+        - text: 'Lecture: Introduction to Research'
+          href: textbook/chapters/w11-lecture.qmd
+        - text: 'Lab: DataLab Foundations'
+          href: textbook/chapters/w11-lab.qmd
+      - section: Week 12
+        contents:
+        - text: 'Lecture: Research Design Framework'
+          href: textbook/chapters/w12-lecture.qmd
+        - text: 'Lab: Introduction to R'
+          href: textbook/chapters/w12-lab.qmd
+      # --- Weeks 13-20 Textbook Chapters: Uncomment as content is ready ---
+      # - section: Week 13
+      #   contents:
+      #   - text: 'Lecture: Correlation & Relationships'
+      #     href: textbook/chapters/w13-lecture.qmd
+      #   - text: 'Lab: Correlation in R'
+      #     href: textbook/chapters/w13-lab.qmd
+      # - section: Week 14
+      #   contents:
+      #   - text: 'Lecture: Probability & Distributions'
+      #     href: textbook/chapters/w14-lecture.qmd
+      #   - text: 'Lab: Visualising Distributions in R'
+      #     href: textbook/chapters/w14-lab.qmd
+      # - section: Week 15
+      #   contents:
+      #   - text: 'Lecture: Significance Testing'
+      #     href: textbook/chapters/w15-lecture.qmd
+      #   - text: 'Lab: Running t-tests in R'
+      #     href: textbook/chapters/w15-lab.qmd
+      # - section: Week 16
+      #   contents:
+      #   - text: 'Lecture: Research Plan Tips'
+      #     href: textbook/chapters/w16-lecture.qmd
+      #   - text: 'Lab: Literature Review Skills'
+      #     href: textbook/chapters/w16-lab.qmd
+      # - section: Week 17
+      #   contents:
+      #   - text: 'Lecture: MCQ Practice & Credibility'
+      #     href: textbook/chapters/w17-lecture.qmd
+      #   - text: 'Lab: Methodology Workshop'
+      #     href: textbook/chapters/w17-lab.qmd
+      # - section: Week 18
+      #   contents:
+      #   - text: 'Lecture: MCQ Exam Preparation'
+      #     href: textbook/chapters/w18-lecture.qmd
+      #   - text: 'Lab: Ethics & Procedures'
+      #     href: textbook/chapters/w18-lab.qmd
+      # - section: Week 19
+      #   contents:
+      #   - text: 'Lecture: Results & Lab Report Writing'
+      #     href: textbook/chapters/w19-lecture.qmd
+      #   - text: 'Lab: Data Collection Support'
+      #     href: textbook/chapters/w19-lab.qmd
+      # - section: Week 20
+      #   contents:
+      #   - text: 'Lecture: Discussion & EDS Preparation'
+      #     href: textbook/chapters/w20-lecture.qmd
+      #   - text: 'Lab: Data Analysis Workshop'
+      #     href: textbook/chapters/w20-lab.qmd
+      - section: Self-Assessment Quizzes
+        contents:
+        - text: Week 11 Quiz
+          href: textbook/quizzes/w11-quiz.qmd
+        - text: Week 12 Quiz
+          href: textbook/quizzes/w12-quiz.qmd
+        # --- Weeks 13-20 Quizzes: Uncomment as content is ready ---
+        # - text: Week 13 Quiz
+        #   href: textbook/quizzes/w13-quiz.qmd
+        # - text: Week 14 Quiz
+        #   href: textbook/quizzes/w14-quiz.qmd
+        # - text: Week 15 Quiz
+        #   href: textbook/quizzes/w15-quiz.qmd
+        # - text: Week 16 Quiz
+        #   href: textbook/quizzes/w16-quiz.qmd
+        # - text: Week 17 Quiz
+        #   href: textbook/quizzes/w17-quiz.qmd
+        # - text: Week 18 Quiz
+        #   href: textbook/quizzes/w18-quiz.qmd
+        # - text: Week 19 Quiz
+        #   href: textbook/quizzes/w19-quiz.qmd
+        # - text: Week 20 Quiz
+        #   href: textbook/quizzes/w20-quiz.qmd
   page-footer:
-    left: "PS50008A Research Methods & Experimental Design | Goldsmiths, University of London"
-    right: "Term 2 Spring 2026"
-
+    left: PS50008A Research Methods & Experimental Design | Goldsmiths, University
+      of London
+    right: Term 2 Spring 2026
 format:
   html:
     theme: cosmo
-    css: assets/custom.css
+    css:
+    - assets/custom.css
+    - include/webex.css
     toc: true
     toc-depth: 3
     code-fold: true
     code-tools: true
     link-external-newwindow: true
-    comments: 
+    comments:
       hypothesis:
         theme: clean
         openSidebar: false
-
+    include-after-body: include/webex.js
 date-format: D MMMM YYYY
 execute:
   freeze: auto
-
-# Metadata for taskmistress
 taskmistress:
   module_id: rm0
   module_code: PS50008A
-  module_name: "Research Methods & Experimental Design"
+  module_name: Research Methods & Experimental Design
   level: 0
   term: 2
-  academic_year: "2025-26"
+  academic_year: 2025-26

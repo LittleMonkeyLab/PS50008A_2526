@@ -39,7 +39,7 @@ Examples of all assessments will be provided with plenty of support. We cannot g
 
 The group project is **not separately assessed** but feeds into two assessments:
 
-- **[Research Plan](assessments/research-plan.qmd)** (due Week 16): Based on your group's research question
+- **[Research Plan](assessments/research-plan.qmd)** (due Week 16): Based on a choice of research ideas - you provide a research plan.
 - **[Research Report](assessments/research-report.qmd)** (due 1 May, post-term): Individual write-up of group project data
 
 ### Project Timeline

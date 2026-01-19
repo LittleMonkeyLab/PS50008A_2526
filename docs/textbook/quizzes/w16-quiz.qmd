@@ -1,0 +1,224 @@
+---
+title: "Week 16 Self-Assessment"
+subtitle: "Research Plan Tips"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+Your Research Plan is due this week. This quiz helps you check that you've covered all the key components. Use it as a final checklist before submitting.
+
+---
+
+## Part 1: Research Plan Components
+
+### Question 1: Essential Elements
+
+Which of the following MUST be included in your Research Plan?
+
+Experimental hypothesis `r torf(TRUE)`
+
+Identified IV and DV `r torf(TRUE)`
+
+Design type (between/within/correlational) `r torf(TRUE)`
+
+Full literature review `r torf(FALSE)`
+
+Method section outline `r torf(TRUE)`
+
+Statistical test selection `r torf(TRUE)`
+
+### Question 2: Hypothesis Requirements
+
+Your experimental hypothesis should be:
+
+`r mcq(c("Vague and general", answer = "Specific, testable, and directional (for one-tailed) or non-directional (for two-tailed)", "Based only on your intuition", "Identical to the null hypothesis"))`
+
+A one-tailed hypothesis must:
+
+`r mcq(c("Predict that variables are related", answer = "Specify the direction of the predicted effect", "Be longer than a two-tailed hypothesis", "Include statistical notation"))`
+
+---
+
+## Part 2: Variable Identification
+
+### Question 3: IV Characteristics
+
+The IV in an experimental study is:
+
+`r mcq(c(answer = "Manipulated by the researcher", "Measured as the outcome", "Always a continuous variable", "The same as the DV"))`
+
+In a correlational design, there is:
+
+`r mcq(c("One IV and one DV", "Two IVs", answer = "No IV — both variables are measured", "Only a DV"))`
+
+### Question 4: DV Characteristics
+
+The DV should be:
+
+`r mcq(c(answer = "Operationally defined (how exactly will you measure it?)", "Vague and flexible", "The same for all studies", "Categorical only"))`
+
+### Question 5: Practice - Identify Variables
+
+A researcher wants to test if caffeine improves reaction time. Participants are randomly assigned to drink coffee or water, then complete a reaction time task.
+
+IV: `r mcq(c(answer = "Drink type (coffee vs water)", "Reaction time", "Participant assignment", "Task difficulty"))`
+
+DV: `r mcq(c("Caffeine content", answer = "Reaction time", "Drink preference", "Group membership"))`
+
+---
+
+## Part 3: Design Specification
+
+### Question 6: Design Selection
+
+```{r}
+opts_design <- c(
+  "It determines the statistical test to use",
+  "It clarifies how participants are allocated",
+  "It affects the type of conclusions you can draw",
+  answer = "All of the above"
+)
+```
+
+Why is specifying your design type important?
+
+`r longmcq(opts_design)`
+
+### Question 7: Design Justification
+
+If you use a within-subjects design, you should justify it by noting:
+
+`r mcq(c(answer = "It controls for individual differences between participants", "It requires more participants", "It's always better than between-subjects", "It doesn't need justification"))`
+
+If you use a between-subjects design, a key consideration is:
+
+`r mcq(c(answer = "Random assignment to conditions to avoid confounds", "Testing participants multiple times", "Correlation between variables", "Using the same participants twice"))`
+
+---
+
+## Part 4: Test Selection
+
+### Question 8: Matching Design to Test
+
+Fill in the appropriate test:
+
+Between-subjects design (comparing two groups) → `r fitb(c("independent t-test", "independent t test", "independent samples t-test"), ignore_case = TRUE)`
+
+Within-subjects design (comparing same people twice) → `r fitb(c("paired t-test", "paired t test", "paired samples t-test", "related t-test"), ignore_case = TRUE)`
+
+Correlational design (measuring relationship) → `r fitb(c("Pearson's r", "Pearsons r", "correlation", "pearson"), ignore_case = TRUE)`
+
+### Question 9: Test Justification
+
+Your Research Plan should explain why your chosen test is appropriate. Which is the best justification for using an independent t-test?
+
+```{r}
+opts_justify <- c(
+  "Because it's the easiest test",
+  answer = "Because we have two separate groups (between-subjects) and continuous DV data",
+  "Because it always gives significant results",
+  "Because the lecturer said to use it"
+)
+```
+
+`r longmcq(opts_justify)`
+
+---
+
+## Part 5: Method Section Preview
+
+### Question 10: Method Components
+
+The Method section of a research report typically includes:
+
+Participants `r torf(TRUE)`
+
+Design `r torf(TRUE)`
+
+Full statistical results `r torf(FALSE)`
+
+Materials `r torf(TRUE)`
+
+Procedure `r torf(TRUE)`
+
+### Question 11: Participants Section
+
+What should the Participants section include?
+
+`r mcq(c(answer = "Sample size, demographics, and how participants were recruited", "The statistical test used", "The results of the study", "The hypothesis"))`
+
+### Question 12: Procedure Section
+
+The Procedure section should describe:
+
+`r mcq(c("Only what participants did wrong", answer = "Step-by-step what happened to participants during the study", "The statistical analysis", "The theory behind the study"))`
+
+---
+
+## Part 6: Common Mistakes to Avoid
+
+### Question 13: Hypothesis Errors
+
+Which is a correctly written **experimental hypothesis**?
+
+`r mcq(c("Caffeine might affect memory", answer = "Participants who consume caffeine will recall more words than those who consume water", "There is no effect of caffeine on memory", "Memory and caffeine are variables"))`
+
+### Question 14: Design-Test Mismatch
+
+A researcher claims to have a "between-subjects correlational design". This is:
+
+`r mcq(c("A valid combination", answer = "Incorrect — correlational designs measure relationships, not group differences", "The best type of design", "Required for the Research Plan"))`
+
+### Question 15: Data Table
+
+Your Research Plan should include a summary data table. This table should:
+
+`r mcq(c("Contain made-up data", "Show individual participant scores", answer = "Show the structure for presenting means and SDs (without actual data yet)", "Include all raw data"))`
+
+---
+
+## Part 7: Final Checklist
+
+::: {.webex-check .webex-box}
+
+### Research Plan Self-Check
+
+Before submitting, confirm you have:
+
+1. **A clear experimental hypothesis?** (one-tailed or two-tailed, justified) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+
+2. **Identified your IV?** (what you manipulate or compare) `r mcq(c(answer = "Yes", "No", "Not applicable"))`
+
+3. **Identified your DV?** (what you measure) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+
+4. **Specified your design?** (between/within/correlational) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+
+5. **Selected your statistical test?** (and justified it) `r mcq(c(answer = "Yes", "No", "Unsure"))`
+
+6. **Outlined your Method section?** (Participants, Design, Materials, Procedure) `r mcq(c(answer = "Yes", "No", "Partially"))`
+
+7. **Included a data summary table template?** `r mcq(c(answer = "Yes", "No", "What's that?"))`
+
+:::
+
+---
+
+## Summary Checklist
+
+Before submitting your Research Plan, verify:
+
+- [ ] Experimental hypothesis is specific and testable
+- [ ] IV and DV are clearly identified and operationally defined
+- [ ] Design type is specified and appropriate for your research question
+- [ ] Statistical test matches your design
+- [ ] Method section outlines Participants, Design, Materials, Procedure
+- [ ] Data summary table shows expected structure (without fabricated data)
+
+::: {.callout-important}
+## Research Plan Due This Week
+Submit your Research Plan by the deadline. This assessment is worth 20% of your module grade. Review the assessment brief on Canvas for formatting requirements.
+:::

@@ -1,0 +1,237 @@
+---
+title: "Week 17 Self-Assessment"
+subtitle: "MCQ Practice & Credibility"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+This quiz serves two purposes: (1) practice for the MCQ exam next week, and (2) understanding research credibility. Work through all the investigations to prepare for the exam format.
+
+---
+
+## Part 1: Research Credibility
+
+### Question 1: The Replication Crisis
+
+The "replication crisis" refers to:
+
+`r mcq(c("Too many studies being published", answer = "Many published findings failing to replicate in subsequent studies", "Researchers copying each other's work", "Students replicating experiments in labs"))`
+
+### Question 2: Questionable Research Practices
+
+Which of the following is a questionable research practice (QRP)?
+
+```{r}
+opts_qrp <- c(
+  "Pre-registering your hypothesis before data collection",
+  answer = "Running multiple analyses and only reporting the significant ones",
+  "Using a large sample size",
+  "Reporting effect sizes alongside p-values"
+)
+```
+
+`r longmcq(opts_qrp)`
+
+### Question 3: P-Hacking
+
+P-hacking involves:
+
+`r mcq(c("Using probability incorrectly", answer = "Manipulating analyses to achieve p < .05", "Hacking into statistical software", "Using very small p-values"))`
+
+Which of the following is an example of p-hacking?
+
+`r mcq(c(answer = "Removing outliers until the result becomes significant", "Pre-registering exclusion criteria", "Reporting non-significant results", "Calculating effect sizes"))`
+
+### Question 4: HARKing
+
+HARKing stands for:
+
+`r mcq(c("Having Another Research Knowledge", answer = "Hypothesising After Results are Known", "Honest And Reliable Knowledge", "High Achievement Research Kudos"))`
+
+Why is HARKing problematic?
+
+`r mcq(c("It takes too long", answer = "It presents exploratory findings as if they were predicted, inflating false positive rates", "It makes research too easy", "It uses too many participants"))`
+
+---
+
+## Part 2: Improving Research Quality
+
+### Question 5: Pre-Registration
+
+Pre-registration means:
+
+`r mcq(c("Registering participants before the study", answer = "Publicly documenting your hypotheses and analysis plan before collecting data", "Registering your publication before peer review", "Recording participant details"))`
+
+Pre-registration helps prevent:
+
+`r mcq(c("Data collection errors", answer = "HARKing and p-hacking", "Participant dropout", "Ethical violations"))`
+
+### Question 6: Open Science Practices
+
+Which practice improves research transparency?
+
+`r mcq(c(answer = "Sharing data and analysis code publicly", "Only publishing significant results", "Using proprietary software", "Keeping methods secret"))`
+
+### Question 7: Sample Size and Power
+
+A larger sample size generally:
+
+`r mcq(c("Guarantees significant results", answer = "Increases statistical power to detect real effects", "Makes studies less credible", "Is always unnecessary"))`
+
+Statistical power is the probability of:
+
+`r mcq(c("Getting p < .05 when there is no effect", answer = "Detecting a real effect when it exists", "Making a Type I error", "Rejecting a true alternative hypothesis"))`
+
+---
+
+## Part 3: Full MCQ Exam Practice
+
+Work through these investigations as if they were exam questions. Each investigation has 5-6 questions.
+
+::: {.webex-check .webex-box}
+
+### Investigation 1
+
+A researcher investigates whether listening to classical music while studying improves memory. 40 participants are randomly assigned to study with classical music or in silence, then take a memory test.
+
+1. **Design**: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **IV**: `r mcq(c(answer = "Study condition (music vs silence)", "Memory test score", "Type of music", "No IV"))`
+
+3. **DV**: `r mcq(c("Music condition", answer = "Memory test score", "Study duration", "Participant preference"))`
+
+4. **Appropriate test**: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+5. **One-tailed hypothesis**: `r mcq(c("Memory will differ between conditions", answer = "Participants studying with music will have higher memory scores than those in silence", "There will be no difference in memory", "Music and memory are correlated"))`
+
+6. **Results: t(38) = 1.85, p = .072. The result is**: `r mcq(c("Significant at α = .05", answer = "Not significant at α = .05", "Highly significant", "Cannot determine"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 2
+
+A researcher tests whether exercise affects mood. 25 participants rate their mood before and after a 30-minute exercise session.
+
+1. **Design**: `r mcq(c("Between-subjects", answer = "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **IV**: `r mcq(c(answer = "Time (before vs after exercise)", "Mood rating", "Exercise duration", "No IV"))`
+
+3. **DV**: `r mcq(c("Time point", answer = "Mood rating", "Type of exercise", "Participant fitness"))`
+
+4. **Appropriate test**: `r mcq(c("Independent t-test", answer = "Paired t-test", "Pearson's r", "Mann-Whitney U"))`
+
+5. **Results: t(24) = 4.23, p < .001, d = 0.85. This is**:
+   - Significant? `r torf(TRUE)`
+   - Effect size: `r mcq(c("Small", "Medium", answer = "Large", "Very small"))`
+
+6. **Conclusion**: `r mcq(c("Exercise has no effect on mood", answer = "Mood significantly improved after exercise", "Mood significantly decreased after exercise", "The study is flawed"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 3
+
+A researcher examines whether there is a relationship between screen time (hours per day) and sleep quality (score out of 100) in 80 university students.
+
+1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", "Matched pairs", answer = "Correlational"))`
+
+2. **IV**: `r mcq(c("Screen time", "Sleep quality", "Age", answer = "No IV"))`
+
+3. **Variables measured**: `r mcq(c("Only screen time", "Only sleep quality", answer = "Both screen time and sleep quality", "Neither"))`
+
+4. **Appropriate test**: `r mcq(c("Independent t-test", "Paired t-test", answer = "Pearson's r", "Wilcoxon test"))`
+
+5. **Results: r(78) = -.38, p < .001. This indicates**: `r mcq(c("No relationship", "Strong positive relationship", answer = "Moderate negative relationship", "Perfect correlation"))`
+
+6. **Can we conclude screen time CAUSES poor sleep?** `r torf(FALSE)`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 4
+
+A researcher investigates whether room temperature affects test performance. One classroom is set to 18°C, another to 24°C. Different students in each room take the same test.
+
+1. **Design**: `r mcq(c(answer = "Between-subjects", "Within-subjects", "Matched pairs", "Correlational"))`
+
+2. **IV**: `r mcq(c(answer = "Room temperature (18°C vs 24°C)", "Test score", "Classroom", "No IV"))`
+
+3. **DV**: `r mcq(c("Temperature", answer = "Test score", "Room assignment", "Student comfort"))`
+
+4. **Appropriate test**: `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+5. **Results: t(58) = 2.67, p = .010, d = 0.69**:
+   - The p-value indicates: `r mcq(c(answer = "Significant difference at α = .05", "No significant difference", "The effect is large", "The test failed"))`
+   - The effect size is: `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### Investigation 5
+
+A researcher pairs participants based on IQ scores, then randomly assigns one member of each pair to a cognitive training program while the other receives no training. Cognitive performance is measured after 6 weeks.
+
+1. **Design**: `r mcq(c("Between-subjects", "Within-subjects", answer = "Matched pairs", "Correlational"))`
+
+2. **Why matched pairs?**: `r mcq(c("To save time", answer = "To control for individual differences in IQ", "To increase sample size", "It's required for all studies"))`
+
+3. **IV**: `r mcq(c(answer = "Training condition (training vs no training)", "IQ score", "Cognitive performance", "No IV"))`
+
+4. **DV**: `r mcq(c("Training received", answer = "Cognitive performance", "IQ match", "Pair membership"))`
+
+5. **The appropriate test would be similar to**: `r mcq(c("Independent t-test", answer = "Paired t-test (because pairs are not independent)", "Pearson's r", "Chi-square"))`
+
+:::
+
+---
+
+## Part 4: Credibility Scenarios
+
+### Question 8: Evaluating Research
+
+A researcher reports: "After extensive analysis of our data, we discovered an unexpected finding that participants who ate breakfast performed better."
+
+What credibility concern does this raise?
+
+`r mcq(c("The finding is definitely wrong", answer = "Possible HARKing — the finding may be presented as predicted when it was exploratory", "The sample was too large", "The researcher used the wrong test"))`
+
+### Question 9: Red Flags
+
+Which of these is a red flag for research credibility?
+
+`r mcq(c("Large sample size", "Pre-registered hypotheses", answer = "Only significant results reported from a study with many variables", "Effect sizes reported"))`
+
+### Question 10: Good Practice
+
+Which researcher is following best practices?
+
+`r mcq(c("Researcher A who removes outliers until getting p < .05", "Researcher B who only reports their significant findings", answer = "Researcher C who pre-registered their hypothesis and reports all results", "Researcher D who changes their hypothesis after seeing the data"))`
+
+---
+
+## Summary Checklist
+
+Before the MCQ exam, make sure you can:
+
+- [ ] Identify design type from a research description
+- [ ] Identify IV and DV (or recognise when there's no IV)
+- [ ] Select the appropriate statistical test
+- [ ] Interpret p-values and effect sizes
+- [ ] Distinguish significant from non-significant results
+- [ ] Explain what the replication crisis is
+- [ ] Identify questionable research practices (p-hacking, HARKing)
+- [ ] Describe practices that improve research credibility
+
+::: {.callout-important}
+## MCQ Exam Next Week
+The MCQ exam is during Wednesday's lecture slot (Week 18). Review all quizzes from Weeks 11-17. The exam follows the investigation format practiced above.
+:::

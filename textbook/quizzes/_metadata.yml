@@ -1,0 +1,10 @@
+format:
+  html:
+    toc: true
+  typst:
+    mainfont: "Atkinson Hyperlegible"
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf

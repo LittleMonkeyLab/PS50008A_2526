@@ -36,8 +36,8 @@ format-links:
 | 16 | 23-27 Feb | Regression | Yes | Project groups | **Research Plan due Fri 27 Feb** |
 | 17 | 2-6 Mar | Interpretation & Credibility | Yes | Project groups | |
 | 18 | 9-13 Mar | MCQ Exam | **MCQ Exam** | Project groups | **MCQ Exam Mon 9 Mar** |
-| 19 | 16-20 Mar | Project Workshop | Yes | Project groups | |
-| 20 | 23-27 Mar | EDS Prep | No | EDS support | **EDS due Fri 20 Mar** |
+| 19 | 16-20 Mar | Project Workshop | Yes | Project groups | **EDS due Fri 20 Mar** |
+| 20 | 23-27 Mar | Wrapping Up | Yes | Report writing | |
 
 ## Session Times
 
@@ -137,12 +137,12 @@ There is no lecture in Week 11 due to employability events.
 - EDS preview
 - *Report writing: Discussion preview*
 
-**Week 20: EDS Prep**
+**Week 20: Wrapping Up**
 
 - **EDS Assignment due Friday**
-- No lecture
-- Lab support for EDS and projects
-- *Report writing: Discussion section*
+- Lecture: Project data showcase, lab report structure, discussion sections
+- Lab: Final analysis support and report writing
+- *Report writing: Discussion section — interpreting findings, limitations, implications*
 
 ## Key Dates Summary
 

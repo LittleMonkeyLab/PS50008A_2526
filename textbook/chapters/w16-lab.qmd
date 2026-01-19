@@ -1,0 +1,20 @@
+---
+title: "Chapter 12: Regression in R"
+subtitle: "Project Groups: Literature Review"
+---
+
+## Required Reading
+
+TBC - Lab-specific reading material
+
+## Reading Guide
+
+### Key Points to Focus On
+
+1. TBC
+2. TBC
+3. TBC
+
+## Additional Resources
+
+- TBC

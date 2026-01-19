@@ -71,6 +71,8 @@ setup_weeks.sh
 # Internal documentation
 .vscode/
 assets/*.md
+.claude
+moodle/
 
 # Module info (internal)
 MODULE-INFO.md

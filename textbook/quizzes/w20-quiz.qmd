@@ -1,0 +1,236 @@
+---
+title: "Week 20 Self-Assessment"
+subtitle: "Discussion & EDS Preparation"
+---
+
+```{r, echo=FALSE}
+library(webexercises)
+```
+
+## Instructions
+
+This quiz covers Discussion section writing and prepares you for the EDS (Empirical Data Skills) assignment. The EDS requires by-hand calculations and APA reporting.
+
+---
+
+## Part 1: Discussion Section Structure
+
+### Question 1: Discussion Components
+
+A Discussion section typically includes (in order):
+
+First: `r mcq(c(answer = "Summary of findings (did results support hypothesis?)", "Literature review", "Methodology critique", "Future research"))`
+
+Then: `r mcq(c("Raw data", answer = "Interpretation and relation to previous research", "Participant demographics", "Statistical formulas"))`
+
+Then: `r mcq(c("More statistics", answer = "Limitations of the study", "Introduction material", "Another hypothesis"))`
+
+Finally: `r mcq(c("A new study design", answer = "Implications and future directions", "The abstract", "References"))`
+
+### Question 2: Discussion vs Results
+
+Which statement belongs in the Discussion, NOT the Results?
+
+`r mcq(c("M = 45.30, SD = 8.25", "t(48) = 2.45, p = .018", answer = "This finding supports Smith's (2020) theory that...", "The experimental group scored higher than the control group"))`
+
+### Question 3: Starting the Discussion
+
+A good opening sentence for the Discussion might be:
+
+`r mcq(c("We did a study on memory", answer = "The present study examined whether X affects Y. Results supported/did not support the hypothesis that...", "Statistics showed significance", "There were limitations"))`
+
+---
+
+## Part 2: Interpreting and Discussing Results
+
+### Question 4: Connecting to Literature
+
+When discussing your findings, you should:
+
+`r mcq(c("Ignore previous research", "Only cite studies that agree with your findings", answer = "Relate findings to previous research, explaining consistency or inconsistency", "Copy the Introduction"))`
+
+### Question 5: Discussing Non-Significant Results
+
+If your results are NOT significant, you should:
+
+`r mcq(c("Hide the study and start again", "Claim significance anyway", answer = "Discuss possible reasons (e.g., low power, measurement issues, genuine null effect)", "Only write a short Discussion"))`
+
+### Question 6: Causation Claims
+
+In your Discussion, you can claim causation if:
+
+`r mcq(c("Your p-value is very small", answer = "You used an experimental design with random assignment", "You have a large correlation", "Your effect size is large"))`
+
+Correlational findings should be discussed as:
+
+`r mcq(c("Causal relationships", answer = "Associations/relationships (not causes)", "Unimportant", "Definitive proof"))`
+
+---
+
+## Part 3: Limitations
+
+### Question 7: Common Limitations
+
+Which is a valid limitation to discuss?
+
+`r mcq(c("The study was difficult to conduct", answer = "The sample was limited to university students, which may affect generalisability", "I didn't like the results", "Statistics are confusing"))`
+
+### Question 8: Constructive Limitations
+
+Good limitations are:
+
+`r mcq(c("Vague complaints about the study", answer = "Specific issues that could have affected results, with suggestions for improvement", "Excuses for non-significant results", "Comments about how hard you worked"))`
+
+### Question 9: Limitation Examples
+
+Match the limitation to its category:
+
+"Only students were sampled" → `r mcq(c(answer = "Sample/generalisability", "Measurement", "Design", "Statistical"))`
+
+"Self-report measures may not reflect actual behaviour" → `r mcq(c("Sample", answer = "Measurement", "Design", "Statistical"))`
+
+"Between-subjects design may have allowed individual differences to affect results" → `r mcq(c("Sample", "Measurement", answer = "Design", "Statistical"))`
+
+---
+
+## Part 4: EDS Preparation - By-Hand Calculations
+
+### Question 10: Calculating the Mean
+
+Calculate the mean of: 8, 12, 15, 9, 11
+
+Sum = `r fitb(c("55"), ignore_case = TRUE)`
+
+N = `r fitb(c("5"), ignore_case = TRUE)`
+
+Mean = `r fitb(c("11"), ignore_case = TRUE)`
+
+### Question 11: Calculating Standard Deviation
+
+For the data: 10, 12, 14 (Mean = 12)
+
+Step 1: Deviations from mean are: -2, 0, +2
+
+Step 2: Squared deviations: 4, 0, 4
+
+Step 3: Sum of squared deviations = `r fitb(c("8"), ignore_case = TRUE)`
+
+Step 4: Divide by (N-1) = 8/2 = `r fitb(c("4"), ignore_case = TRUE)` ← This is the variance
+
+Step 5: SD = √4 = `r fitb(c("2"), ignore_case = TRUE)`
+
+### Question 12: By-Hand t-Test Concept
+
+The t-statistic formula is:
+
+`r mcq(c(answer = "Difference between means divided by standard error", "Mean divided by standard deviation", "Sum of scores divided by N", "Variance times sample size"))`
+
+A larger t-value (further from 0) indicates:
+
+`r mcq(c("A smaller effect", answer = "A larger difference relative to variability", "An error", "Non-significance"))`
+
+---
+
+## Part 5: EDS-Style Questions
+
+::: {.webex-check .webex-box}
+
+### EDS Practice 1
+
+A researcher compares reaction times between participants who had coffee (n=10, M=250ms, SD=30) versus no coffee (n=10, M=280ms, SD=35).
+
+1. **What is the IV?** `r fitb(c("coffee", "caffeine", "drink", "coffee condition"), ignore_case = TRUE)`
+
+2. **What is the DV?** `r fitb(c("reaction time", "RT"), ignore_case = TRUE)`
+
+3. **What type of design is this?** `r mcq(c(answer = "Between-subjects", "Within-subjects", "Correlational", "Matched pairs"))`
+
+4. **What test would you use?** `r mcq(c(answer = "Independent t-test", "Paired t-test", "Pearson's r", "Chi-square"))`
+
+5. **Is the DV continuous, discrete, or categorical?** `r mcq(c(answer = "Continuous", "Discrete", "Categorical", "Ordinal"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### EDS Practice 2: Reporting Results
+
+Given these results: t(18) = 2.45, p = .025, d = 0.73
+
+Write the APA-formatted report by filling in the blanks:
+
+"An independent samples t-test revealed a significant difference in reaction times between the coffee group (*M* = 250.00, *SD* = 30.00) and no-coffee group (*M* = 280.00, *SD* = 35.00), *t*(`r fitb(c("18"), ignore_case = TRUE)`) = `r fitb(c("2.45"), ignore_case = TRUE)`, *p* = `r fitb(c(".025", "0.025"), ignore_case = TRUE)`, *d* = `r fitb(c("0.73", ".73"), ignore_case = TRUE)`."
+
+Effect size interpretation: `r mcq(c("Small", answer = "Medium", "Large", "Negligible"))`
+
+:::
+
+::: {.webex-check .webex-box}
+
+### EDS Practice 3: Correlation Reporting
+
+A correlation between anxiety and test performance yields: r(38) = -.42, p = .008
+
+1. **Is this significant at α = .05?** `r torf(TRUE)`
+
+2. **Direction of relationship:** `r mcq(c("Positive", answer = "Negative", "No relationship", "Perfect"))`
+
+3. **Strength:** `r mcq(c("Weak", answer = "Moderate", "Strong", "Very weak"))`
+
+4. **Can we say anxiety CAUSES poor performance?** `r torf(FALSE)`
+
+5. **Calculate r²:** `r fitb(c(".1764", "0.1764", "17.64%", "18%", ".18"), ignore_case = TRUE)`
+
+:::
+
+---
+
+## Part 6: Final Preparation
+
+### Question 13: EDS Section A Requirements
+
+Section A of the EDS requires you to:
+
+Write a hypothesis `r torf(TRUE)`
+
+Identify design, IV, DV, and data type `r torf(TRUE)`
+
+Calculate mean and SD by hand `r torf(TRUE)`
+
+Conduct a by-hand statistical test `r torf(TRUE)`
+
+Write a full lab report `r torf(FALSE)`
+
+Report results in APA format `r torf(TRUE)`
+
+### Question 14: EDS Section B
+
+Section B asks about:
+
+`r mcq(c("More statistics", answer = "Methodological improvements, individual differences, and ecological validity", "Rewriting Section A", "Planning a new study"))`
+
+### Question 15: Ecological Validity
+
+Ecological validity refers to:
+
+`r mcq(c("Whether the study is environmentally friendly", answer = "Whether findings generalise to real-world settings", "Whether the design is ecological", "The number of participants"))`
+
+---
+
+## Summary Checklist
+
+Before the EDS assignment, verify you can:
+
+- [ ] Write a complete Discussion section (summary, interpretation, limitations, future directions)
+- [ ] Calculate mean by hand (sum / n)
+- [ ] Calculate SD by hand (deviations → squared → sum → divide by n-1 → square root)
+- [ ] Understand t-test logic (difference relative to variability)
+- [ ] Report all statistics in APA format
+- [ ] Identify IV, DV, design type, and data type
+- [ ] Explain correlation ≠ causation
+- [ ] Discuss ecological validity and individual differences
+
+::: {.callout-important}
+## EDS Assignment Due This Week
+Submit your EDS assignment by the deadline. This assessment is worth 20% of your module grade. Show all working for by-hand calculations.
+:::

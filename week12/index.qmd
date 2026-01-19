@@ -1,5 +1,5 @@
 ---
-title: "Week 12: Distributions & Variability"
+title: "Week 12: Research Design Framework"
 subtitle: "PS50008A Research Methods | 19-23 January 2026"
 author: "Gordon Wright"
 date: "2026-01-19"
@@ -9,54 +9,75 @@ date: "2026-01-19"
 
 ::: {.callout-note}
 ## First Lecture Week
-This is your first full teaching week. Monday is a 2-hour lecture; Thursday is a 2-hour lab.
+This is your first full teaching week. Wednesday is a 2-hour lecture; Thursday is a 2-hour lab.
 :::
 
-**This week**: Learn how to describe and visualise data using measures of central tendency, variability, and distributions. Apply these concepts to your DataLab dataset.
+**This week**: Learn the complete research design framework — variables, designs, hypotheses, test selection, and descriptive statistics. All terminology you need for your Research Plan is introduced this week.
 
-**Lecture**: Monday (2 hours)
-**Lab**: Thursday 10:00-12:00
+**Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
+**Lab**: Thursday 10:00-12:00 WB304A and WB304B
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-- Distinguish between measures of central tendency (mean, median, mode)
-- Calculate and interpret measures of variability (range, variance, standard deviation)
-- Recognise different distribution shapes and what they tell us about data
-- Use R to compute descriptive statistics
+### Variables
+- Define and identify independent variables (IV) and dependent variables (DV)
+- Distinguish continuous from categorical variables
+- Recognise when there is no IV (correlational design)
+
+### Design Types
+- Define between-subjects, within-subjects, matched pairs, and correlational designs
+- Identify the appropriate design for a research question
+- Match DataLab examples to each design type
+
+### Hypotheses
+- Write experimental and null hypotheses
+- Distinguish one-tailed from two-tailed hypotheses
+- Justify your choice of hypothesis direction
+
+### Test Selection
+- Know which statistical test matches each design type
+- Understand the difference between parametric and non-parametric tests
+
+### Descriptive Statistics
+- Calculate and interpret mean and standard deviation
 - Report descriptive statistics in APA format
+- Create summary data tables
 
 ## Before the Lecture
 
 ::: {.callout-important}
 ## Required Preparation
-1. **Watch the preview video** (10 minutes)
-2. **Read the lecture reading** — covers distributions and variability concepts
-3. **Review your DataLab results** — we'll use this data in class
+1. **Read the lecture reading** — covers the complete research design framework
+2. **Review your DataLab results** — we'll use this data to illustrate every concept
 :::
 
 ## The Big Picture
 
-This week answers the question: **How do we summarise data?**
+This week answers the question: **How do we design and describe research?**
 
-Before we can test hypotheses or make inferences, we need to understand what our data looks like. Descriptive statistics give us tools to:
+::: {.callout-warning}
+## Critical Week
+This week introduces ALL the terminology you need for your Research Plan (due Week 16). Everything connects: research questions → variables → designs → hypotheses → tests → descriptives.
+:::
 
-- **Locate** where the data is centred (central tendency)
-- **Describe** how spread out the data is (variability)
-- **Visualise** the shape of the distribution
+We'll use YOUR DataLab data as the teaching vehicle for every concept:
 
-We'll apply these tools to YOUR DataLab data — the reaction times, memory scores, and estimations you generated last week.
+- **Room A vs Room B** → Between-subjects design
+- **Pre vs Post mood** → Within-subjects design
+- **Confidence vs accuracy** → Correlational design
+
+By the end of this week, you'll have all the tools to plan your own research study.
 
 ## Materials
 
 | Resource | Description |
-|----------|-------------|
-| [Preview Video](lecture/video.qmd) | What to expect this week (watch before lecture) |
+|----------|-------------| 
 | [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
 | [Lecture Reading](lecture/reading.qmd) | Distributions, central tendency, variability |
 | [Lab Reading](lab/reading.qmd) | Introduction to R and descriptive statistics |
-| [Lab Slides](lab/slides.html){target="_blank"} | Opening slides for the lab session |
+| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
 | [Lab Activity](lab/activity.qmd) | WebR exercises with DataLab data |
 | [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
 
@@ -64,37 +85,52 @@ We'll apply these tools to YOUR DataLab data — the reaction times, memory scor
 
 | Day | Session | Focus |
 |-----|---------|-------|
-| Monday | Lecture (2 hrs) | Distributions, central tendency, variability |
-| Thursday | Lab (2 hrs) | Computing descriptives in R |
-| By next Monday | Self-Assessment | Practice calculations and interpretation |
+| Wednesday | Lecture (2 hrs) | Complete research design framework: variables, designs, hypotheses, tests, descriptives |
+| Thursday | Lab (2 hrs) | Applying the framework: identifying variables, calculating descriptives in R |
+
 
 ## Key Concepts
 
-### Central Tendency
-- **Mean**: The arithmetic average — sum of values divided by count
-- **Median**: The middle value when data is ordered
-- **Mode**: The most frequent value
+### Variables
+- **Independent Variable (IV)**: What the researcher manipulates or selects
+- **Dependent Variable (DV)**: What the researcher measures
+- **No IV**: In correlational designs, we measure relationships without manipulation
 
-### Variability
-- **Range**: Difference between maximum and minimum
-- **Variance**: Average of squared deviations from the mean
-- **Standard Deviation**: Square root of variance — same units as the data
+### Design Types
+- **Between-subjects**: Different participants in each condition (e.g., Room A vs Room B)
+- **Within-subjects**: Same participants measured in all conditions (e.g., Pre vs Post mood)
+- **Matched pairs**: Participants paired on key characteristics
+- **Correlational**: Measuring relationships between variables (no manipulation)
 
-### Distribution Shape
-- **Normal**: Symmetric, bell-shaped
-- **Skewed**: Asymmetric (positive = tail to right, negative = tail to left)
-- **Bimodal**: Two peaks
+### Hypotheses
+- **Experimental hypothesis**: Predicts an effect or relationship will exist
+- **Null hypothesis**: Predicts no effect or relationship
+- **One-tailed**: Predicts the direction of the effect
+- **Two-tailed**: Predicts a difference but not the direction
+
+### Test Selection
+| Design | Parametric Test | Non-parametric |
+|--------|-----------------|----------------|
+| Between-subjects | Independent t-test | Mann-Whitney U |
+| Within-subjects | Paired t-test | Wilcoxon signed-rank |
+| Correlational | Pearson's r | Spearman's rho |
+
+### Descriptive Statistics
+- **Mean**: The arithmetic average
+- **Standard Deviation**: How spread out the data is
+- **APA Format**: Report as M = x.xx, SD = x.xx
 
 ## Connecting to Assessments
 
-This week's content directly supports:
+This week's content directly supports **ALL assessments**:
 
 | Assessment | Connection |
 |------------|------------|
-| **MCQ Exam** | Questions on identifying distributions and choosing statistics |
-| **EDS Assignment** | You'll calculate means and SDs by hand |
-| **Research Report** | Results section begins with descriptive statistics |
+| **Research Plan** | ALL terminology introduced this week — you can start planning |
+| **MCQ Exam** | Design identification, IV/DV, hypothesis types, test selection |
+| **EDS Assignment** | Calculating means and SDs, identifying designs |
+| **Research Report** | Method section structure, descriptive statistics |
 
 ## What's Next?
 
-**Week 13**: Estimation & Confidence Intervals — moving from describing data to making inferences about populations.
+**Week 13**: Correlation & Relationships — deepening your understanding of correlational design and how to analyse relationships between variables.
