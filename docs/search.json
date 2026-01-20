@@ -121,7 +121,7 @@
     "href": "textbook/chapters/w12-lab.html",
     "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
+    "text": "This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -134,7 +134,7 @@
     "href": "textbook/chapters/w12-lab.html#overview",
     "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
+    "text": "This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -195,50 +195,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#part-5-working-with-data-frames",
-    "href": "textbook/chapters/w12-lab.html#part-5-working-with-data-frames",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "6 Part 5: Working with Data Frames",
-    "text": "6 Part 5: Working with Data Frames\nReal datasets aren’t just vectors — they’re tables (data frames) with multiple variables.\n\n6.1 Accessing Columns\nUse the $ symbol to get a column from a data frame:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n6.2 Descriptives by Group\nTo compare groups, we can subset the data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 12",
-      "Lab: Design Detectives"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w12-lab.html#part-6-r-basics-youll-need",
-    "href": "textbook/chapters/w12-lab.html#part-6-r-basics-youll-need",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "7 Part 6: R Basics You’ll Need",
-    "text": "7 Part 6: R Basics You’ll Need\n\n7.1 Assigning Values\nUse &lt;- to store values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n7.2 Key Functions Reference\n\n\n\nFunction\nWhat It Does\nExample\n\n\n\n\nmean(x)\nArithmetic mean\nmean(c(4,5,6)) → 5\n\n\nmedian(x)\nMiddle value\nmedian(c(4,5,6)) → 5\n\n\nsd(x)\nStandard deviation\nsd(c(4,5,6)) → 1\n\n\nmin(x)\nSmallest value\nmin(c(4,5,6)) → 4\n\n\nmax(x)\nLargest value\nmax(c(4,5,6)) → 6\n\n\nrange(x)\nMin and max\nrange(c(4,5,6)) → 4, 6\n\n\nsummary(x)\nAll key stats\nShows quartiles, mean, etc.\n\n\nlength(x)\nHow many values\nlength(c(4,5,6)) → 3\n\n\n\n\n\n7.3 Common Errors\n“object not found”: You haven’t created that variable yet, or there’s a typo.\n“unexpected symbol”: Missing comma or parenthesis.\nR is case-sensitive: Mean() won’t work, but mean() will.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 12",
-      "Lab: Design Detectives"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w12-lab.html#part-7-preparing-for-the-lab",
-    "href": "textbook/chapters/w12-lab.html#part-7-preparing-for-the-lab",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "8 Part 7: Preparing for the Lab",
-    "text": "8 Part 7: Preparing for the Lab\n\n8.1 What You’ll Do\nIn the lab, you’ll:\n\nLoad the actual DataLab dataset (not example data)\nExplore variables using summary()\nCalculate means and SDs for different tasks\nCompare Room A vs Room B\nInterpret what the numbers tell us\n\n\n\n8.2 What to Focus On\nDon’t worry about memorising R syntax. Focus on:\n\nWhat does this statistic tell me?\nHow spread out is the data?\nIs this difference meaningful?\n\nThe code will be provided. Your job is to understand what it means.\n\n\n8.3 Before You Arrive\n\nReview the lecture reading on descriptive statistics\nUnderstand mean vs median, and when each is appropriate\nKnow what standard deviation represents (spread from the mean)",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 12",
-      "Lab: Design Detectives"
-    ]
-  },
-  {
     "objectID": "textbook/chapters/w12-lab.html#key-terms",
     "href": "textbook/chapters/w12-lab.html#key-terms",
     "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "9 Key Terms",
-    "text": "9 Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nMean\nArithmetic average (sum ÷ count)\n\n\nMedian\nMiddle value when sorted\n\n\nStandard Deviation\nAverage distance from the mean\n\n\nRange\nDifference between max and min\n\n\nQuartiles\nValues that divide data into four equal parts\n\n\nOutlier\nA value far from the others",
+    "section": "6 Key Terms",
+    "text": "6 Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nMean\nArithmetic average (sum ÷ count)\n\n\nMedian\nMiddle value when sorted\n\n\nStandard Deviation\nAverage distance from the mean\n\n\nRange\nDifference between max and min\n\n\nQuartiles\nValues that divide data into four equal parts\n\n\nOutlier\nA value far from the others",
     "crumbs": [
       "Home",
       "Textbook",
@@ -250,8 +211,8 @@
     "objectID": "textbook/chapters/w12-lab.html#summary",
     "href": "textbook/chapters/w12-lab.html#summary",
     "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "10 Summary",
-    "text": "10 Summary\n\n\n\nQuestion\nStatistic to Use\n\n\n\n\nWhat’s typical?\nMean or Median\n\n\nHow spread out?\nSD or Range\n\n\nAny extreme values?\nCompare Mean vs Median\n\n\nQuick overview?\nsummary()\n\n\nCompare groups?\nMean and SD for each",
+    "section": "7 Summary",
+    "text": "7 Summary\n\n\n\nQuestion\nStatistic to Use\n\n\n\n\nWhat’s typical?\nMean or Median\n\n\nHow spread out?\nSD or Range\n\n\nAny extreme values?\nCompare Mean vs Median\n\n\nQuick overview?\nsummary()\n\n\nCompare groups?\nMean and SD for each",
     "crumbs": [
       "Home",
       "Textbook",
@@ -263,8 +224,8 @@
     "objectID": "textbook/chapters/w12-lab.html#additional-resources",
     "href": "textbook/chapters/w12-lab.html#additional-resources",
     "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "11 Additional Resources",
-    "text": "11 Additional Resources\nIf you want to explore further:\n\nR for Data Science — Free online textbook\nQuick-R Statistics — Syntax reference",
+    "section": "8 Additional Resources",
+    "text": "8 Additional Resources\nIf you want to explore further:\n\nR for Data Science — Free online textbook\nQuick-R Statistics — Syntax reference",
     "crumbs": [
       "Home",
       "Textbook",
@@ -591,7 +552,7 @@
     "href": "week12/lab/activity.html#next-steps",
     "title": "Design Detectives: DataLab",
     "section": "Next Steps",
-    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz to test your understanding\nReview the Lecture Reading for more detail on these concepts\nStart thinking about your Research Plan (due Week 16) - you now have all the vocabulary you need!\n\n\n\n\n\n\n\n\nNoteCheck Your Progress\n\n\n\n\n\nHow many questions did you get correct? Use this as a guide:\n\n75-100%: Great understanding - ready for the self-assessment\n50-75%: Good start - review the concepts you missed\nBelow 50%: Spend time with the lecture reading before the quiz\n\nRemember: This is formative - mistakes are learning opportunities!",
+    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz to test your understanding - these are designed to be identical to assessments\nReview the Lecture Reading for more detail on these concepts\nStart thinking about your Research Plan (due Week 16) - you now have all the vocabulary you need!\n\n\n\n\n\n\n\n\nNoteCheck Your Progress\n\n\n\n\n\nHow many questions did you get correct? Use this as a guide:\n\n75-100%: Great understanding - ready for the self-assessment\n50-75%: Good start - review the concepts you missed\nBelow 50%: Spend time with the lecture reading before the quiz\n\nRemember: This is formative - mistakes are learning opportunities!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1207,7 +1168,7 @@
     "href": "week12/lab/instructor-slides.html#next-steps",
     "title": "Design Detectives: DataLab",
     "section": "Next Steps",
-    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz\nReview today’s activity page\nStart thinking about your Research Plan (due Week 16)",
+    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz\nReview today’s activity page in your own time and look up terms in the glossary\nRead about the Research Plan (due Week 16)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1271,6 +1232,244 @@
     "title": "Week 12 Preview Video",
     "section": "Questions?",
     "text": "Questions?\nIf you have questions after watching:\n\nPost in the VLE discussion board\nBring them to Monday’s lecture\nEmail g.wright@gold.ac.uk"
+  },
+  {
+    "objectID": "week12/lecture/slides.html#who-are-we",
+    "href": "week12/lecture/slides.html#who-are-we",
+    "title": "Your Data, Your Discoveries",
+    "section": "Who Are We?",
+    "text": "Who Are We?\n\n\nDr Gordon Wright\nModule Coordinator\nResearch: Social cognition, deception, dark personalities and interpersonal perception\nOffice hours: Thursdays 12:00-13:00\n\nDr Bence Palfi\nLecturer in the department and our second Lab instructor\nResearch: AI, Human-Computer Interactions, Meta-Science",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#what-is-this-module",
+    "href": "week12/lecture/slides.html#what-is-this-module",
+    "title": "Your Data, Your Discoveries",
+    "section": "What Is This Module?",
+    "text": "What Is This Module?\nResearch Methods & Experimental Design\nHow psychologists:\n\nAsk questions about the mind and behaviour\nDesign studies to answer those questions\nCollect and analyse data\nDraw valid conclusions\n\n\nEmphasise this is a practical, skills-based module. Not just theory — they will DO research.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#the-problem-with-common-sense",
+    "href": "week12/lecture/slides.html#the-problem-with-common-sense",
+    "title": "Your Data, Your Discoveries",
+    "section": "The Problem with Common Sense",
+    "text": "The Problem with Common Sense\n\n“Opposites attract”\n“Birds of a feather flock together”\nBoth can’t be true… can they?\n\n\n\nCommon sense often gives contradictory answers. Science provides a systematic way to find out what’s actually true.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#everyday-thinking-vs-scientific-thinking",
+    "href": "week12/lecture/slides.html#everyday-thinking-vs-scientific-thinking",
+    "title": "Your Data, Your Discoveries",
+    "section": "Everyday Thinking vs Scientific Thinking",
+    "text": "Everyday Thinking vs Scientific Thinking\n\n\nEveryday Thinking\n\nBased on personal experience\nInfluenced by biases\nAccepts anecdotes as evidence\nConfirmation bias\n“I just know”\n\n\nScientific Thinking\n\nBased on systematic observation\nControls for biases\nRequires replicable evidence\nSeeks disconfirmation\n“Let’s test it”",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#why-should-you-care",
+    "href": "week12/lecture/slides.html#why-should-you-care",
+    "title": "Your Data, Your Discoveries",
+    "section": "Why Should You Care?",
+    "text": "Why Should You Care?\n\nEvaluate claims you encounter daily\nUnderstand how psychological knowledge is created\nEssential for your dissertation\nTransferable skills for any career\nRequired for postgraduate study",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#from-question-to-knowledge",
+    "href": "week12/lecture/slides.html#from-question-to-knowledge",
+    "title": "Your Data, Your Discoveries",
+    "section": "From Question to Knowledge",
+    "text": "From Question to Knowledge\n\n\n\n\n\nflowchart LR\n    Q[Research Question] --&gt; H[Hypothesis]\n    H --&gt; D[Design Study]\n    D --&gt; C[Collect Data]\n    C --&gt; A[Analyse Data]\n    A --&gt; I[Interpret Results]\n    I --&gt; Q",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-1-the-research-question",
+    "href": "week12/lecture/slides.html#step-1-the-research-question",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 1: The Research Question",
+    "text": "Step 1: The Research Question\nWhere do research questions come from?\n\nCuriosity about behaviour\nGaps in existing research\nReal-world problems\nTheory testing\nUnexpected observations\n\n\nExample: Do people lie more when texting than face-to-face?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-2-the-hypothesis",
+    "href": "week12/lecture/slides.html#step-2-the-hypothesis",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 2: The Hypothesis",
+    "text": "Step 2: The Hypothesis\n\nA hypothesis is a specific, testable prediction about what you expect to find.\n\nGood hypothesis:\n\n“Participants will tell more lies per conversation when communicating via text message compared to face-to-face.”\n\nNot a hypothesis:\n\n“I wonder if texting affects lying.”",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-3-design-the-study",
+    "href": "week12/lecture/slides.html#step-3-design-the-study",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 3: Design the Study",
+    "text": "Step 3: Design the Study\nKey decisions:\n\nWho will you study? (participants)\nWhat will you measure? (variables)\nHow will you measure it? (methods)\nWhat comparisons will you make? (design)\n\n\nWe’ll spend most of this module on this step.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-4-collect-data",
+    "href": "week12/lecture/slides.html#step-4-collect-data",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 4: Collect Data",
+    "text": "Step 4: Collect Data\n\nFollow your plan precisely\nTreat participants ethically\nRecord everything carefully\nMinimise errors and bias",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-5-analyse-data",
+    "href": "week12/lecture/slides.html#step-5-analyse-data",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 5: Analyse Data",
+    "text": "Step 5: Analyse Data\n\nStatistics are tools for finding patterns in data and determining whether those patterns are meaningful.\n\nThis is where R comes in — and what you’ll learn in the labs.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#step-6-interpret-results",
+    "href": "week12/lecture/slides.html#step-6-interpret-results",
+    "title": "Your Data, Your Discoveries",
+    "section": "Step 6: Interpret Results",
+    "text": "Step 6: Interpret Results\n\nWhat do the findings mean?\nDo they support the hypothesis?\nWhat are the limitations?\nWhat questions remain?\n\n\nThen the cycle continues…",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#project-timeline",
+    "href": "week12/lecture/slides.html#project-timeline",
+    "title": "Your Data, Your Discoveries",
+    "section": "Project Timeline",
+    "text": "Project Timeline\n\n\n\nWeek\nMilestone\n\n\n\n\n11\nSee how much fun collecting data is!\n\n\n12-15\nDevelop research question and design\n\n\n—\nReading Week — Work on Research Plan\n\n\n16\nResearch Plan due; Begin data collection\n\n\n17-18\nData collection and initial analysis\n\n\n19-20\nComplete analysis; Develop write-up (term ends)\n\n\nSpring Break\nIndividual report writing\n\n\nPost-term\nResearch Report due Friday 1 May",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#lectures-vs-labs",
+    "href": "week12/lecture/slides.html#lectures-vs-labs",
+    "title": "Your Data, Your Discoveries",
+    "section": "Lectures vs Labs",
+    "text": "Lectures vs Labs\n\n\nLectures (Wednesday 10-12 from week 12)\n\nConcepts and theory\nResearch design principles\nHow to think about data\n\n\nLabs (Thursday 10-12)\n\nWorking with real data\nBuilding practical skills\nApplying design principles\nLearning about statistical test with R\n\n\n\nThey work together — lecture concepts, lab application.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#why-r-nothing-to-fear",
+    "href": "week12/lecture/slides.html#why-r-nothing-to-fear",
+    "title": "Your Data, Your Discoveries",
+    "section": "Why R? (nothing to fear!)",
+    "text": "Why R? (nothing to fear!)\n\nFree and open source\nIndustry standard in data science\nPowerful data analysis and visualisation\nReproducible research\nEmployable skill\n\n\n\n\n\n\n\n\nNo Experience Required\n\n\nWe assume you’ve never programmed before. We start from zero.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#assessment-overview",
+    "href": "week12/lecture/slides.html#assessment-overview",
+    "title": "Your Data, Your Discoveries",
+    "section": "Assessment Overview",
+    "text": "Assessment Overview\nFind an overview here\n\n\n\nAssessment\nWeight\nDeadline\nWeek\n\n\n\n\nResearch Plan\n20%\nFri 27 Feb 2026, 12 noon\n16\n\n\nMCQ Exam\n20%\nWed 11 Mar 2026, in lecture slot\n18\n\n\nEDS Assignment\n20%\nFri 20 Mar 2026, 12 noon\n20\n\n\nResearch Report\n40%\nFri 1 May 2026, 12 noon\nPost-term",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#before-we-begin",
+    "href": "week12/lecture/slides.html#before-we-begin",
+    "title": "Your Data, Your Discoveries",
+    "section": "Before We Begin",
+    "text": "Before We Begin\n\n\n\n\n\n\nBookmark These\n\n\n\nGlossary — Look up any unfamiliar terms\nSelf-Assessment Quizzes — Check your understanding\nTextbook Chapters — Go deeper on any topic\nHypothes.is — Ask questions, see classmates’ annotations\nAssessment 1 Guidance — Start here for your Research Plan",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
   },
   {
     "objectID": "week12/lecture/slides.html#your-data-tell-a-story-lets-learn-how-to-read-it",
@@ -8071,7 +8270,7 @@
     "href": "week11/lecture/slides.html#who-are-we",
     "title": "Introduction to Research Methods & Experimental Design",
     "section": "Who Are We?",
-    "text": "Who Are We?\n\n\nDr Gordon Wright\nModule Coordinator\nResearch: Social cognition, deception, dark personalities and interpersonal perception\nOffice hours: Thursdays 14:00-15:00\n\nDr Bence Palfi\nLecturer in the department and our second Lab instructor\nResearch: AI, Human-Computer Interactions, Meta-Science",
+    "text": "Who Are We?\n\n\nDr Gordon Wright\nModule Coordinator\nResearch: Social cognition, deception, dark personalities and interpersonal perception\nOffice hours: Thursdays 12:00-13:00\n\nDr Bence Palfi\nLecturer in the department and our second Lab instructor\nResearch: AI, Human-Computer Interactions, Meta-Science",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9126,7 +9325,7 @@
     "href": "week12/lab/reading.html",
     "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
+    "text": "This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9140,7 +9339,7 @@
     "href": "week12/lab/reading.html#overview",
     "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
+    "text": "This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9197,48 +9396,6 @@
     "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "Part 4: What the Numbers Mean",
     "text": "Part 4: What the Numbers Mean\n\nStandard Deviation in Context\nThe SD only makes sense relative to the mean and the scale.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nMemory: Mean = 6, SD = 0.77. An SD of 0.77 on a 10-point scale is fairly consistent.\nRT: Mean = 277ms, SD = 23ms. Is that a lot of variability? It’s about 8% of the mean — fairly typical for reaction times.\n\n\n\nWhen Means Can Mislead\nConsider these two possible DataLab results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week12/lab/reading.html#part-5-working-with-data-frames",
-    "href": "week12/lab/reading.html#part-5-working-with-data-frames",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "Part 5: Working with Data Frames",
-    "text": "Part 5: Working with Data Frames\nReal datasets aren’t just vectors — they’re tables (data frames) with multiple variables.\n\nAccessing Columns\nUse the $ symbol to get a column from a data frame:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDescriptives by Group\nTo compare groups, we can subset the data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week12/lab/reading.html#part-6-r-basics-youll-need",
-    "href": "week12/lab/reading.html#part-6-r-basics-youll-need",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "Part 6: R Basics You’ll Need",
-    "text": "Part 6: R Basics You’ll Need\n\nAssigning Values\nUse &lt;- to store values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nKey Functions Reference\n\n\n\nFunction\nWhat It Does\nExample\n\n\n\n\nmean(x)\nArithmetic mean\nmean(c(4,5,6)) → 5\n\n\nmedian(x)\nMiddle value\nmedian(c(4,5,6)) → 5\n\n\nsd(x)\nStandard deviation\nsd(c(4,5,6)) → 1\n\n\nmin(x)\nSmallest value\nmin(c(4,5,6)) → 4\n\n\nmax(x)\nLargest value\nmax(c(4,5,6)) → 6\n\n\nrange(x)\nMin and max\nrange(c(4,5,6)) → 4, 6\n\n\nsummary(x)\nAll key stats\nShows quartiles, mean, etc.\n\n\nlength(x)\nHow many values\nlength(c(4,5,6)) → 3\n\n\n\n\n\nCommon Errors\n“object not found”: You haven’t created that variable yet, or there’s a typo.\n“unexpected symbol”: Missing comma or parenthesis.\nR is case-sensitive: Mean() won’t work, but mean() will.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week12/lab/reading.html#part-7-preparing-for-the-lab",
-    "href": "week12/lab/reading.html#part-7-preparing-for-the-lab",
-    "title": "Chapter 4: Descriptive Statistics in Action",
-    "section": "Part 7: Preparing for the Lab",
-    "text": "Part 7: Preparing for the Lab\n\nWhat You’ll Do\nIn the lab, you’ll:\n\nLoad the actual DataLab dataset (not example data)\nExplore variables using summary()\nCalculate means and SDs for different tasks\nCompare Room A vs Room B\nInterpret what the numbers tell us\n\n\n\nWhat to Focus On\nDon’t worry about memorising R syntax. Focus on:\n\nWhat does this statistic tell me?\nHow spread out is the data?\nIs this difference meaningful?\n\nThe code will be provided. Your job is to understand what it means.\n\n\nBefore You Arrive\n\nReview the lecture reading on descriptive statistics\nUnderstand mean vs median, and when each is appropriate\nKnow what standard deviation represents (spread from the mean)",
     "crumbs": [
       "Home",
       "Term 2",

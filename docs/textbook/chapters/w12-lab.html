@@ -410,7 +410,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# Five memory scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# Calculate the mean\nmean(memory_scores)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Same five scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# The median\nmedian(memory_scores)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# One person did exceptionally well\nmemory_with_outlier <- c(4, 6, 7, 8, 25)\n\n# Compare mean and median\nmean(memory_with_outlier)\nmedian(memory_with_outlier)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Consistent group\ngroup_a <- c(6, 7, 7, 7, 8)\n\n# Variable group  \ngroup_b <- c(2, 4, 7, 10, 12)\n\n# Same mean!\nmean(group_a)\nmean(group_b)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Range gives you min and max\nrange(group_a)\nrange(group_b)\n\n# Calculate the spread\nmax(group_a) - min(group_a)\nmax(group_b) - min(group_b)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# SD for each group\nsd(group_a)\nsd(group_b)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Complete summary\nsummary(group_b)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Reaction times from 10 participants\nreaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)\n\n# Central tendency\nmean(reaction_times)\nmedian(reaction_times)\n\n# Spread\nsd(reaction_times)\nrange(reaction_times)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Lab A: Abstract words\nlab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)\n\n# Lab B: Concrete words\nlab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)\n\n# Compare means\nmean(lab_a)\nmean(lab_b)\n\n# Compare SDs\nsd(lab_a)\nsd(lab_b)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Before session (1-10 scale)\nmood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)\n\n# After session\nmood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)\n\n# Means\nmean(mood_pre)\nmean(mood_post)\n\n# The change for each person\nmood_change <- mood_post - mood_pre\nmean(mood_change)\nsd(mood_change)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Memory (0-10 scale)\nmemory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)\nmean(memory)\nsd(memory)\n\n# Reaction time (milliseconds)\nrt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)\nmean(rt)\nsd(rt)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scenario A: Everyone similar\nscenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)\n\n# Scenario B: Bimodal (two clusters)\nscenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)\n\n# Same mean!\nmean(scenario_a)\nmean(scenario_b)\n\n# But very different SDs\nsd(scenario_a)\nsd(scenario_b)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Create a small dataset\ndatalab <- data.frame(\n  participant = 1:6,\n  memory = c(5, 7, 6, 8, 4, 6),\n  room = c(\"A\", \"A\", \"A\", \"B\", \"B\", \"B\")\n)\n\n# View it\ndatalab\n\n# Get just the memory column\ndatalab$memory\n\n# Mean of memory scores\nmean(datalab$memory)","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scores for Room A only\nroom_a_scores <- datalab$memory[datalab$room == \"A\"]\nroom_a_scores\nmean(room_a_scores)\n\n# Scores for Room B only\nroom_b_scores <- datalab$memory[datalab$room == \"B\"]\nroom_b_scores\nmean(room_b_scores)","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Store a single value\nmy_score <- 75\n\n# Store multiple values with c()\nall_scores <- c(65, 72, 81, 78, 69)\n\n# Now you can use them\nmean(all_scores)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"# Five memory scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# Calculate the mean\nmean(memory_scores)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Same five scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# The median\nmedian(memory_scores)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# One person did exceptionally well\nmemory_with_outlier <- c(4, 6, 7, 8, 25)\n\n# Compare mean and median\nmean(memory_with_outlier)\nmedian(memory_with_outlier)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Consistent group\ngroup_a <- c(6, 7, 7, 7, 8)\n\n# Variable group  \ngroup_b <- c(2, 4, 7, 10, 12)\n\n# Same mean!\nmean(group_a)\nmean(group_b)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Range gives you min and max\nrange(group_a)\nrange(group_b)\n\n# Calculate the spread\nmax(group_a) - min(group_a)\nmax(group_b) - min(group_b)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# SD for each group\nsd(group_a)\nsd(group_b)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Complete summary\nsummary(group_b)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Reaction times from 10 participants\nreaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)\n\n# Central tendency\nmean(reaction_times)\nmedian(reaction_times)\n\n# Spread\nsd(reaction_times)\nrange(reaction_times)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Lab A: Abstract words\nlab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)\n\n# Lab B: Concrete words\nlab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)\n\n# Compare means\nmean(lab_a)\nmean(lab_b)\n\n# Compare SDs\nsd(lab_a)\nsd(lab_b)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Before session (1-10 scale)\nmood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)\n\n# After session\nmood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)\n\n# Means\nmean(mood_pre)\nmean(mood_post)\n\n# The change for each person\nmood_change <- mood_post - mood_pre\nmean(mood_change)\nsd(mood_change)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Memory (0-10 scale)\nmemory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)\nmean(memory)\nsd(memory)\n\n# Reaction time (milliseconds)\nrt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)\nmean(rt)\nsd(rt)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scenario A: Everyone similar\nscenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)\n\n# Scenario B: Bimodal (two clusters)\nscenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)\n\n# Same mean!\nmean(scenario_a)\nmean(scenario_b)\n\n# But very different SDs\nsd(scenario_a)\nsd(scenario_b)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -2147,26 +2147,9 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#standard-deviation-in-context" id="toc-standard-deviation-in-context" class="nav-link" data-scroll-target="#standard-deviation-in-context"><span class="header-section-number">5.1</span> Standard Deviation in Context</a></li>
   <li><a href="#when-means-can-mislead" id="toc-when-means-can-mislead" class="nav-link" data-scroll-target="#when-means-can-mislead"><span class="header-section-number">5.2</span> When Means Can Mislead</a></li>
   </ul></li>
-  <li><a href="#part-5-working-with-data-frames" id="toc-part-5-working-with-data-frames" class="nav-link" data-scroll-target="#part-5-working-with-data-frames"><span class="header-section-number">6</span> Part 5: Working with Data Frames</a>
-  <ul class="collapse">
-  <li><a href="#accessing-columns" id="toc-accessing-columns" class="nav-link" data-scroll-target="#accessing-columns"><span class="header-section-number">6.1</span> Accessing Columns</a></li>
-  <li><a href="#descriptives-by-group" id="toc-descriptives-by-group" class="nav-link" data-scroll-target="#descriptives-by-group"><span class="header-section-number">6.2</span> Descriptives by Group</a></li>
-  </ul></li>
-  <li><a href="#part-6-r-basics-youll-need" id="toc-part-6-r-basics-youll-need" class="nav-link" data-scroll-target="#part-6-r-basics-youll-need"><span class="header-section-number">7</span> Part 6: R Basics You’ll Need</a>
-  <ul class="collapse">
-  <li><a href="#assigning-values" id="toc-assigning-values" class="nav-link" data-scroll-target="#assigning-values"><span class="header-section-number">7.1</span> Assigning Values</a></li>
-  <li><a href="#key-functions-reference" id="toc-key-functions-reference" class="nav-link" data-scroll-target="#key-functions-reference"><span class="header-section-number">7.2</span> Key Functions Reference</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors"><span class="header-section-number">7.3</span> Common Errors</a></li>
-  </ul></li>
-  <li><a href="#part-7-preparing-for-the-lab" id="toc-part-7-preparing-for-the-lab" class="nav-link" data-scroll-target="#part-7-preparing-for-the-lab"><span class="header-section-number">8</span> Part 7: Preparing for the Lab</a>
-  <ul class="collapse">
-  <li><a href="#what-youll-do" id="toc-what-youll-do" class="nav-link" data-scroll-target="#what-youll-do"><span class="header-section-number">8.1</span> What You’ll Do</a></li>
-  <li><a href="#what-to-focus-on" id="toc-what-to-focus-on" class="nav-link" data-scroll-target="#what-to-focus-on"><span class="header-section-number">8.2</span> What to Focus On</a></li>
-  <li><a href="#before-you-arrive" id="toc-before-you-arrive" class="nav-link" data-scroll-target="#before-you-arrive"><span class="header-section-number">8.3</span> Before You Arrive</a></li>
-  </ul></li>
-  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">9</span> Key Terms</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">10</span> Summary</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">11</span> Additional Resources</a></li>
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">6</span> Key Terms</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">7</span> Summary</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">8</span> Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/edit/main/textbook/chapters/w12-lab.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="w12-lab.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -2485,7 +2468,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <section id="overview" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
-<p>This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.</p>
+<p>This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.</p>
 <p>By the end of this reading, you’ll be able to:</p>
 <ul>
 <li>Interpret means, medians, and standard deviations</li>
@@ -2628,131 +2611,10 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Both means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.</p>
-<hr>
 </section>
 </section>
-<section id="part-5-working-with-data-frames" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="part-5-working-with-data-frames"><span class="header-section-number">6</span> Part 5: Working with Data Frames</h2>
-<p>Real datasets aren’t just vectors — they’re tables (data frames) with multiple variables.</p>
-<section id="accessing-columns" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="accessing-columns"><span class="header-section-number">6.1</span> Accessing Columns</h3>
-<p>Use the <code>$</code> symbol to get a column from a data frame:</p>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="descriptives-by-group" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="descriptives-by-group"><span class="header-section-number">6.2</span> Descriptives by Group</h3>
-<p>To compare groups, we can subset the data:</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<hr>
-</section>
-</section>
-<section id="part-6-r-basics-youll-need" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="part-6-r-basics-youll-need"><span class="header-section-number">7</span> Part 6: R Basics You’ll Need</h2>
-<section id="assigning-values" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="assigning-values"><span class="header-section-number">7.1</span> Assigning Values</h3>
-<p>Use <code>&lt;-</code> to store values:</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="key-functions-reference" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="key-functions-reference"><span class="header-section-number">7.2</span> Key Functions Reference</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>What It Does</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>mean(x)</code></td>
-<td>Arithmetic mean</td>
-<td><code>mean(c(4,5,6))</code> → 5</td>
-</tr>
-<tr class="even">
-<td><code>median(x)</code></td>
-<td>Middle value</td>
-<td><code>median(c(4,5,6))</code> → 5</td>
-</tr>
-<tr class="odd">
-<td><code>sd(x)</code></td>
-<td>Standard deviation</td>
-<td><code>sd(c(4,5,6))</code> → 1</td>
-</tr>
-<tr class="even">
-<td><code>min(x)</code></td>
-<td>Smallest value</td>
-<td><code>min(c(4,5,6))</code> → 4</td>
-</tr>
-<tr class="odd">
-<td><code>max(x)</code></td>
-<td>Largest value</td>
-<td><code>max(c(4,5,6))</code> → 6</td>
-</tr>
-<tr class="even">
-<td><code>range(x)</code></td>
-<td>Min and max</td>
-<td><code>range(c(4,5,6))</code> → 4, 6</td>
-</tr>
-<tr class="odd">
-<td><code>summary(x)</code></td>
-<td>All key stats</td>
-<td>Shows quartiles, mean, etc.</td>
-</tr>
-<tr class="even">
-<td><code>length(x)</code></td>
-<td>How many values</td>
-<td><code>length(c(4,5,6))</code> → 3</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="common-errors" class="level3" data-number="7.3">
-<h3 data-number="7.3" class="anchored" data-anchor-id="common-errors"><span class="header-section-number">7.3</span> Common Errors</h3>
-<p><strong>“object not found”</strong>: You haven’t created that variable yet, or there’s a typo.</p>
-<p><strong>“unexpected symbol”</strong>: Missing comma or parenthesis.</p>
-<p>R is case-sensitive: <code>Mean()</code> won’t work, but <code>mean()</code> will.</p>
-<hr>
-</section>
-</section>
-<section id="part-7-preparing-for-the-lab" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="part-7-preparing-for-the-lab"><span class="header-section-number">8</span> Part 7: Preparing for the Lab</h2>
-<section id="what-youll-do" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="what-youll-do"><span class="header-section-number">8.1</span> What You’ll Do</h3>
-<p>In the lab, you’ll:</p>
-<ol type="1">
-<li>Load the actual DataLab dataset (not example data)</li>
-<li>Explore variables using <code>summary()</code></li>
-<li>Calculate means and SDs for different tasks</li>
-<li>Compare Room A vs Room B</li>
-<li>Interpret what the numbers tell us</li>
-</ol>
-</section>
-<section id="what-to-focus-on" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="what-to-focus-on"><span class="header-section-number">8.2</span> What to Focus On</h3>
-<p>Don’t worry about memorising R syntax. Focus on:</p>
-<ul>
-<li><strong>What does this statistic tell me?</strong></li>
-<li><strong>How spread out is the data?</strong></li>
-<li><strong>Is this difference meaningful?</strong></li>
-</ul>
-<p>The code will be provided. Your job is to understand what it means.</p>
-</section>
-<section id="before-you-arrive" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="before-you-arrive"><span class="header-section-number">8.3</span> Before You Arrive</h3>
-<ul>
-<li>Review the lecture reading on descriptive statistics</li>
-<li>Understand mean vs median, and when each is appropriate</li>
-<li>Know what standard deviation represents (spread from the mean)</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="key-terms" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">9</span> Key Terms</h2>
+<section id="key-terms" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">6</span> Key Terms</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2789,8 +2651,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </table>
 <hr>
 </section>
-<section id="summary" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="summary"><span class="header-section-number">10</span> Summary</h2>
+<section id="summary" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="summary"><span class="header-section-number">7</span> Summary</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -2823,8 +2685,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </table>
 <hr>
 </section>
-<section id="additional-resources" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">11</span> Additional Resources</h2>
+<section id="additional-resources" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">8</span> Additional Resources</h2>
 <p>If you want to explore further:</p>
 <ul>
 <li><a href="https://r4ds.had.co.nz/">R for Data Science</a> — Free online textbook</li>
@@ -3510,7 +3372,7 @@ window.onload = function() {
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This reading prepares you for the lab session where you'll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This reading supports the week 12 lab session where you'll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>By the end of this reading, you'll be able to:</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
@@ -3775,153 +3637,37 @@ window.onload = function() {
 <span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>Both means are 6, but Scenario B's huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.</span>
 <span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Terms</span></span>
 <span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 5: Working with Data Frames</span></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>Real datasets aren't just vectors — they're tables (data frames) with multiple variables.</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="fu">### Accessing Columns</span></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>Use the <span class="in">`$`</span> symbol to get a column from a data frame:</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr-r}</span></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="in"># Create a small dataset</span></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="in">datalab &lt;- data.frame(</span></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="in">  participant = 1:6,</span></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="in">  memory = c(5, 7, 6, 8, 4, 6),</span></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="in">  room = c("A", "A", "A", "B", "B", "B")</span></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="in"># View it</span></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="in">datalab</span></span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="in"># Get just the memory column</span></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="in">datalab$memory</span></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="in"># Mean of memory scores</span></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="in">mean(datalab$memory)</span></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="fu">### Descriptives by Group</span></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>To compare groups, we can subset the data:</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr-r}</span></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="in"># Scores for Room A only</span></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="in">room_a_scores &lt;- datalab$memory[datalab$room == "A"]</span></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="in">room_a_scores</span></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="in">mean(room_a_scores)</span></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="in"># Scores for Room B only</span></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="in">room_b_scores &lt;- datalab$memory[datalab$room == "B"]</span></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="in">room_b_scores</span></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="in">mean(room_b_scores)</span></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 6: R Basics You'll Need</span></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="fu">### Assigning Values</span></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`&lt;-`</span> to store values:</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="in">```{webr-r}</span></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="in"># Store a single value</span></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="in">my_score &lt;- 75</span></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="in"># Store multiple values with c()</span></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="in">all_scores &lt;- c(65, 72, 81, 78, 69)</span></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="in"># Now you can use them</span></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="in">mean(all_scores)</span></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="fu">### Key Functions Reference</span></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> What It Does <span class="pp">|</span> Example <span class="pp">|</span></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|--------------|---------|</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`mean(x)`</span> <span class="pp">|</span> Arithmetic mean <span class="pp">|</span> <span class="in">`mean(c(4,5,6))`</span> → 5 <span class="pp">|</span></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`median(x)`</span> <span class="pp">|</span> Middle value <span class="pp">|</span> <span class="in">`median(c(4,5,6))`</span> → 5 <span class="pp">|</span></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`sd(x)`</span> <span class="pp">|</span> Standard deviation <span class="pp">|</span> <span class="in">`sd(c(4,5,6))`</span> → 1 <span class="pp">|</span></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`min(x)`</span> <span class="pp">|</span> Smallest value <span class="pp">|</span> <span class="in">`min(c(4,5,6))`</span> → 4 <span class="pp">|</span></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`max(x)`</span> <span class="pp">|</span> Largest value <span class="pp">|</span> <span class="in">`max(c(4,5,6))`</span> → 6 <span class="pp">|</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`range(x)`</span> <span class="pp">|</span> Min and max <span class="pp">|</span> <span class="in">`range(c(4,5,6))`</span> → 4, 6 <span class="pp">|</span></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`summary(x)`</span> <span class="pp">|</span> All key stats <span class="pp">|</span> Shows quartiles, mean, etc. <span class="pp">|</span></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`length(x)`</span> <span class="pp">|</span> How many values <span class="pp">|</span> <span class="in">`length(c(4,5,6))`</span> → 3 <span class="pp">|</span></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="fu">### Common Errors</span></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>**"object not found"**: You haven't created that variable yet, or there's a typo.</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>**"unexpected symbol"**: Missing comma or parenthesis.</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>R is case-sensitive: <span class="in">`Mean()`</span> won't work, but <span class="in">`mean()`</span> will.</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part 7: Preparing for the Lab</span></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="fu">### What You'll Do</span></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>In the lab, you'll:</span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Load the actual DataLab dataset (not example data)</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Explore variables using <span class="in">`summary()`</span></span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Calculate means and SDs for different tasks</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Compare Room A vs Room B</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Interpret what the numbers tell us</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### What to Focus On</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>Don't worry about memorising R syntax. Focus on:</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What does this statistic tell me?**</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**How spread out is the data?**</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Is this difference meaningful?**</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>The code will be provided. Your job is to understand what it means.</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="fu">### Before You Arrive</span></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review the lecture reading on descriptive statistics</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand mean vs median, and when each is appropriate</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Know what standard deviation represents (spread from the mean)</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Terms</span></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Term <span class="pp">|</span> Definition <span class="pp">|</span></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|------------|</span></span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Mean** <span class="pp">|</span> Arithmetic average (sum ÷ count) <span class="pp">|</span></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Median** <span class="pp">|</span> Middle value when sorted <span class="pp">|</span></span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Standard Deviation** <span class="pp">|</span> Average distance from the mean <span class="pp">|</span></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Range** <span class="pp">|</span> Difference between max and min <span class="pp">|</span></span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quartiles** <span class="pp">|</span> Values that divide data into four equal parts <span class="pp">|</span></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Outlier** <span class="pp">|</span> A value far from the others <span class="pp">|</span></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Question <span class="pp">|</span> Statistic to Use <span class="pp">|</span></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|------------------|</span></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> What's typical? <span class="pp">|</span> Mean or Median <span class="pp">|</span></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> How spread out? <span class="pp">|</span> SD or Range <span class="pp">|</span></span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Any extreme values? <span class="pp">|</span> Compare Mean vs Median <span class="pp">|</span></span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quick overview? <span class="pp">|</span> <span class="in">`summary()`</span> <span class="pp">|</span></span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compare groups? <span class="pp">|</span> Mean and SD for each <span class="pp">|</span></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Resources</span></span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>If you want to explore further:</span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">R for Data Science</span><span class="co">](https://r4ds.had.co.nz/)</span> — Free online textbook</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quick-R Statistics</span><span class="co">](https://www.statmethods.net/stats/descriptives.html)</span> — Syntax reference</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Term <span class="pp">|</span> Definition <span class="pp">|</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|------------|</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Mean** <span class="pp">|</span> Arithmetic average (sum ÷ count) <span class="pp">|</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Median** <span class="pp">|</span> Middle value when sorted <span class="pp">|</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Standard Deviation** <span class="pp">|</span> Average distance from the mean <span class="pp">|</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Range** <span class="pp">|</span> Difference between max and min <span class="pp">|</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quartiles** <span class="pp">|</span> Values that divide data into four equal parts <span class="pp">|</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Outlier** <span class="pp">|</span> A value far from the others <span class="pp">|</span></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Question <span class="pp">|</span> Statistic to Use <span class="pp">|</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|------------------|</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> What's typical? <span class="pp">|</span> Mean or Median <span class="pp">|</span></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> How spread out? <span class="pp">|</span> SD or Range <span class="pp">|</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Any extreme values? <span class="pp">|</span> Compare Mean vs Median <span class="pp">|</span></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quick overview? <span class="pp">|</span> <span class="in">`summary()`</span> <span class="pp">|</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compare groups? <span class="pp">|</span> Mean and SD for each <span class="pp">|</span></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Resources</span></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>If you want to explore further:</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">R for Data Science</span><span class="co">](https://r4ds.had.co.nz/)</span> — Free online textbook</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quick-R Statistics</span><span class="co">](https://www.statmethods.net/stats/descriptives.html)</span> — Syntax reference</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

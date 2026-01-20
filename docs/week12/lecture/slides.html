@@ -122,6 +122,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -145,6 +148,350 @@ Gordon Wright
 <section id="welcome-to-week-12" class="title-slide slide level1 center" data-background-color="#275882">
 <h1>Welcome to Week 12</h1>
 
+</section>
+<section id="who-are-we" class="slide level2">
+<h2>Who Are We?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Dr Gordon Wright</strong></p>
+<p>Module Coordinator</p>
+<p>Research: Social cognition, deception, dark personalities and interpersonal perception</p>
+<p>Office hours: Thursdays 12:00-13:00</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Dr Bence Palfi</strong></p>
+<p>Lecturer in the department and our second Lab instructor</p>
+<p>Research: AI, Human-Computer Interactions, Meta-Science</p>
+</div></div>
+</section>
+<section id="what-is-this-module" class="slide level2">
+<h2>What Is This Module?</h2>
+<p><strong>Research Methods &amp; Experimental Design</strong></p>
+<p>How psychologists:</p>
+<ul>
+<li>Ask questions about the mind and behaviour</li>
+<li>Design studies to answer those questions</li>
+<li>Collect and analyse data</li>
+<li>Draw valid conclusions</li>
+</ul>
+<aside class="notes">
+<p>Emphasise this is a practical, skills-based module. Not just theory — they will DO research.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="why-research-methods" class="title-slide slide level1 center">
+<h1>Why Research Methods?</h1>
+
+</section>
+<section id="the-problem-with-common-sense" class="slide level2">
+<h2>The Problem with Common Sense</h2>
+<ul>
+<li class="fragment">“Opposites attract”</li>
+<li class="fragment">“Birds of a feather flock together”</li>
+<li class="fragment">Both can’t be true… can they?</li>
+</ul>
+<div class="fragment">
+<div class="concept-box">
+<p>Common sense often gives contradictory answers. Science provides a systematic way to find out what’s actually true.</p>
+</div>
+</div>
+</section>
+<section id="everyday-thinking-vs-scientific-thinking" class="slide level2">
+<h2>Everyday Thinking vs Scientific Thinking</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Everyday Thinking</strong></p>
+<ul>
+<li>Based on personal experience</li>
+<li>Influenced by biases</li>
+<li>Accepts anecdotes as evidence</li>
+<li>Confirmation bias</li>
+<li>“I just know”</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Scientific Thinking</strong></p>
+<ul>
+<li>Based on systematic observation</li>
+<li>Controls for biases</li>
+<li>Requires replicable evidence</li>
+<li>Seeks disconfirmation</li>
+<li>“Let’s test it”</li>
+</ul>
+</div></div>
+</section>
+<section id="why-should-you-care" class="slide level2">
+<h2>Why Should You Care?</h2>
+<ul>
+<li class="fragment">Evaluate claims you encounter daily</li>
+<li class="fragment">Understand how psychological knowledge is created</li>
+<li class="fragment">Essential for your dissertation</li>
+<li class="fragment">Transferable skills for any career</li>
+<li class="fragment">Required for postgraduate study</li>
+</ul>
+</section></section>
+<section>
+<section id="the-research-process" class="title-slide slide level1 center">
+<h1>The Research Process</h1>
+
+</section>
+<section id="from-question-to-knowledge" class="slide level2">
+<h2>From Question to Knowledge</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    Q[Research Question] --&gt; H[Hypothesis]
+    H --&gt; D[Design Study]
+    D --&gt; C[Collect Data]
+    C --&gt; A[Analyse Data]
+    A --&gt; I[Interpret Results]
+    I --&gt; Q
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-the-research-question" class="slide level2">
+<h2>Step 1: The Research Question</h2>
+<p>Where do research questions come from?</p>
+<ul>
+<li>Curiosity about behaviour</li>
+<li>Gaps in existing research</li>
+<li>Real-world problems</li>
+<li>Theory testing</li>
+<li>Unexpected observations</li>
+</ul>
+<div class="fragment">
+<p><strong>Example:</strong> Do people lie more when texting than face-to-face?</p>
+</div>
+</section>
+<section id="step-2-the-hypothesis" class="slide level2">
+<h2>Step 2: The Hypothesis</h2>
+<div class="concept-box">
+<p>A <strong>hypothesis</strong> is a specific, testable prediction about what you expect to find.</p>
+</div>
+<p><strong>Good hypothesis:</strong></p>
+<blockquote>
+<p>“Participants will tell more lies per conversation when communicating via text message compared to face-to-face.”</p>
+</blockquote>
+<p><strong>Not a hypothesis:</strong></p>
+<blockquote>
+<p>“I wonder if texting affects lying.”</p>
+</blockquote>
+</section>
+<section id="step-3-design-the-study" class="slide level2">
+<h2>Step 3: Design the Study</h2>
+<p>Key decisions:</p>
+<ul>
+<li>Who will you study? (participants)</li>
+<li>What will you measure? (variables)</li>
+<li>How will you measure it? (methods)</li>
+<li>What comparisons will you make? (design)</li>
+</ul>
+<div class="fragment">
+<p>We’ll spend most of this module on this step.</p>
+</div>
+</section>
+<section id="step-4-collect-data" class="slide level2">
+<h2>Step 4: Collect Data</h2>
+<ul>
+<li>Follow your plan precisely</li>
+<li>Treat participants ethically</li>
+<li>Record everything carefully</li>
+<li>Minimise errors and bias</li>
+</ul>
+</section>
+<section id="step-5-analyse-data" class="slide level2">
+<h2>Step 5: Analyse Data</h2>
+<div class="concept-box">
+<p><strong>Statistics</strong> are tools for finding patterns in data and determining whether those patterns are meaningful.</p>
+</div>
+<p>This is where <strong>R</strong> comes in — and what you’ll learn in the labs.</p>
+</section>
+<section id="step-6-interpret-results" class="slide level2">
+<h2>Step 6: Interpret Results</h2>
+<ul>
+<li>What do the findings mean?</li>
+<li>Do they support the hypothesis?</li>
+<li>What are the limitations?</li>
+<li>What questions remain?</li>
+</ul>
+<div class="fragment">
+<p>Then the cycle continues…</p>
+</div>
+</section></section>
+<section>
+<section id="what-youll-learn" class="title-slide slide level1 center">
+<h1>What You’ll Learn</h1>
+
+</section>
+<section id="project-timeline" class="slide level2">
+<h2>Project Timeline</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>11</td>
+<td>See how much fun collecting data is!</td>
+</tr>
+<tr class="even">
+<td>12-15</td>
+<td>Develop research question and design</td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td><em>Reading Week</em> — Work on Research Plan</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td><strong>Research Plan due</strong>; Begin data collection</td>
+</tr>
+<tr class="odd">
+<td>17-18</td>
+<td>Data collection and initial analysis</td>
+</tr>
+<tr class="even">
+<td>19-20</td>
+<td>Complete analysis; Develop write-up (term ends)</td>
+</tr>
+<tr class="odd">
+<td>Spring Break</td>
+<td>Individual report writing</td>
+</tr>
+<tr class="even">
+<td>Post-term</td>
+<td><strong>Research Report due</strong> Friday 1 May</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lectures-vs-labs" class="slide level2">
+<h2>Lectures vs Labs</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Lectures (Wednesday 10-12 from week 12)</strong></p>
+<ul>
+<li>Concepts and theory</li>
+<li>Research design principles</li>
+<li>How to think about data</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Labs (Thursday 10-12)</strong></p>
+<ul>
+<li>Working with real data</li>
+<li>Building practical skills</li>
+<li>Applying design principles</li>
+<li>Learning about statistical test with R</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p>They work together — lecture concepts, lab application.</p>
+</div>
+</section>
+<section id="why-r-nothing-to-fear" class="slide level2">
+<h2>Why R? (nothing to fear!)</h2>
+<ul>
+<li class="fragment">Free and open source</li>
+<li class="fragment">Industry standard in data science</li>
+<li class="fragment">Powerful data analysis and visualisation</li>
+<li class="fragment">Reproducible research</li>
+<li class="fragment">Employable skill</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>No Experience Required</strong></p>
+</div>
+<div class="callout-content">
+<p>We assume you’ve never programmed before. We start from zero.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="assessment-overview" class="slide level2">
+<h2>Assessment Overview</h2>
+<p>Find an <a href="../../assessments.html">overview</a> here</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Assessment</th>
+<th>Weight</th>
+<th>Deadline</th>
+<th style="text-align: center;">Week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../../assessments/research-plan.html">Research Plan</a></td>
+<td>20%</td>
+<td>Fri 27 Feb 2026, 12 noon</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="even">
+<td><a href="../../assessments/mcq-exam.html">MCQ Exam</a></td>
+<td>20%</td>
+<td>Wed 11 Mar 2026, in lecture slot</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr class="odd">
+<td><a href="../../assessments/eds-assignment.html">EDS Assignment</a></td>
+<td>20%</td>
+<td>Fri 20 Mar 2026, 12 noon</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td><a href="../../assessments/research-report.html">Research Report</a></td>
+<td>40%</td>
+<td>Fri 1 May 2026, 12 noon</td>
+<td style="text-align: center;">Post-term</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="before-we-begin" class="slide level2">
+<h2>Before We Begin</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Bookmark These</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Glossary</strong> — Look up any unfamiliar terms</li>
+<li><strong>Self-Assessment Quizzes</strong> — Check your understanding</li>
+<li><strong>Textbook Chapters</strong> — Go deeper on any topic</li>
+<li><strong>Hypothes.is</strong> — Ask questions, see classmates’ annotations</li>
+<li><strong>Assessment 1 Guidance</strong> — Start here for your Research Plan</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="your-data-tell-a-story-lets-learn-how-to-read-it" class="slide level2">
 <h2>Your data tell a story — let’s learn how to read it</h2>
@@ -233,7 +580,7 @@ Gordon Wright
 <section id="thats-what-i-mean" class="slide level2">
 <h2>That’s what I mean!</h2>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"><div class="fragment">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="fragment">
 <p>For your memory scores: <strong>Mean = 6.2 words</strong></p>
 </div>
 </section>

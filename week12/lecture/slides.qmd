@@ -45,6 +45,269 @@ orange <- "#EA8439"
 
 # Welcome to Week 12 {background-color="#275882"}
 
+## Who Are We?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Dr Gordon Wright**
+
+Module Coordinator
+
+Research: Social cognition, deception, dark personalities and interpersonal perception
+
+Office hours: Thursdays 12:00-13:00
+:::
+
+::: {.column width="50%"}
+**Dr Bence Palfi**
+
+Lecturer in the department and our second Lab instructor
+
+Research: AI, Human-Computer Interactions, Meta-Science
+
+:::
+
+::::
+
+## What Is This Module?
+
+**Research Methods & Experimental Design**
+
+How psychologists:
+
+- Ask questions about the mind and behaviour
+- Design studies to answer those questions
+- Collect and analyse data
+- Draw valid conclusions
+
+::: {.notes}
+Emphasise this is a practical, skills-based module.
+Not just theory — they will DO research.
+:::
+
+# Why Research Methods? {.center}
+
+## The Problem with Common Sense
+
+::: {.incremental}
+
+- "Opposites attract"
+- "Birds of a feather flock together"
+- Both can't be true... can they?
+
+:::
+
+::: {.fragment}
+::: {.concept-box}
+Common sense often gives contradictory answers. Science provides a systematic way to find out what's actually true.
+:::
+:::
+
+## Everyday Thinking vs Scientific Thinking
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Everyday Thinking**
+
+- Based on personal experience
+- Influenced by biases
+- Accepts anecdotes as evidence
+- Confirmation bias
+- "I just know"
+:::
+
+::: {.column width="50%"}
+**Scientific Thinking**
+
+- Based on systematic observation
+- Controls for biases
+- Requires replicable evidence
+- Seeks disconfirmation
+- "Let's test it"
+:::
+
+::::
+
+## Why Should You Care?
+
+::: {.incremental}
+
+- Evaluate claims you encounter daily
+- Understand how psychological knowledge is created
+- Essential for your dissertation
+- Transferable skills for any career
+- Required for postgraduate study
+
+:::
+
+# The Research Process {.center}
+
+## From Question to Knowledge
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+    Q[Research Question] --> H[Hypothesis]
+    H --> D[Design Study]
+    D --> C[Collect Data]
+    C --> A[Analyse Data]
+    A --> I[Interpret Results]
+    I --> Q
+```
+
+## Step 1: The Research Question
+
+Where do research questions come from?
+
+- Curiosity about behaviour
+- Gaps in existing research
+- Real-world problems
+- Theory testing
+- Unexpected observations
+
+::: {.fragment}
+**Example:** Do people lie more when texting than face-to-face?
+:::
+
+## Step 2: The Hypothesis
+
+::: {.concept-box}
+A **hypothesis** is a specific, testable prediction about what you expect to find.
+:::
+
+**Good hypothesis:**
+
+> "Participants will tell more lies per conversation when communicating via text message compared to face-to-face."
+
+**Not a hypothesis:**
+
+> "I wonder if texting affects lying."
+
+## Step 3: Design the Study
+
+Key decisions:
+
+- Who will you study? (participants)
+- What will you measure? (variables)
+- How will you measure it? (methods)
+- What comparisons will you make? (design)
+
+::: {.fragment}
+We'll spend most of this module on this step.
+:::
+
+## Step 4: Collect Data
+
+- Follow your plan precisely
+- Treat participants ethically
+- Record everything carefully
+- Minimise errors and bias
+
+## Step 5: Analyse Data
+
+::: {.concept-box}
+**Statistics** are tools for finding patterns in data and determining whether those patterns are meaningful.
+:::
+
+This is where **R** comes in — and what you'll learn in the labs.
+
+## Step 6: Interpret Results
+
+- What do the findings mean?
+- Do they support the hypothesis?
+- What are the limitations?
+- What questions remain?
+
+::: {.fragment}
+Then the cycle continues...
+:::
+
+# What You'll Learn {.center}
+
+## Project Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 11 | See how much fun collecting data is! |
+| 12-15 | Develop research question and design |
+| — | *Reading Week* — Work on Research Plan |
+| 16 | **Research Plan due**; Begin data collection |
+| 17-18 | Data collection and initial analysis |
+| 19-20 | Complete analysis; Develop write-up (term ends) |
+| Spring Break | Individual report writing |
+| Post-term | **Research Report due** Friday 1 May |
+
+## Lectures vs Labs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Lectures (Wednesday 10-12 from week 12)**
+
+- Concepts and theory
+- Research design principles
+- How to think about data
+:::
+
+::: {.column width="50%"}
+**Labs (Thursday 10-12)**
+
+- Working with real data
+- Building practical skills
+- Applying design principles
+- Learning about statistical test with R
+:::
+
+::::
+
+::: {.fragment}
+They work together — lecture concepts, lab application.
+:::
+
+## Why R? (nothing to fear!)
+
+::: {.incremental}
+
+- Free and open source
+- Industry standard in data science
+- Powerful data analysis and visualisation
+- Reproducible research
+- Employable skill
+
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## No Experience Required
+We assume you've never programmed before. We start from zero.
+:::
+:::
+
+## Assessment Overview
+
+Find an [overview](../../assessments.qmd) here
+
+| Assessment | Weight | Deadline | Week |
+|------------|--------|----------|:----:|
+| [Research Plan](../../assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
+| [MCQ Exam](../../assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
+| [EDS Assignment](../../assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
+| [Research Report](../../assessments/research-report.qmd) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+
+## Before We Begin
+
+::: {.callout-tip}
+## Bookmark These
+
+- **Glossary** — Look up any unfamiliar terms
+- **Self-Assessment Quizzes** — Check your understanding
+- **Textbook Chapters** — Go deeper on any topic
+- **Hypothes.is** — Ask questions, see classmates' annotations
+- **Assessment 1 Guidance** — Start here for your Research Plan
+:::
+
 ## Your data tell a story — let's learn how to read it
 
 ------------------------------------------------------------------------

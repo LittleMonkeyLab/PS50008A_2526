@@ -411,7 +411,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# Five memory scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# Calculate the mean\nmean(memory_scores)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Same five scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# The median\nmedian(memory_scores)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# One person did exceptionally well\nmemory_with_outlier <- c(4, 6, 7, 8, 25)\n\n# Compare mean and median\nmean(memory_with_outlier)\nmedian(memory_with_outlier)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Consistent group\ngroup_a <- c(6, 7, 7, 7, 8)\n\n# Variable group  \ngroup_b <- c(2, 4, 7, 10, 12)\n\n# Same mean!\nmean(group_a)\nmean(group_b)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Range gives you min and max\nrange(group_a)\nrange(group_b)\n\n# Calculate the spread\nmax(group_a) - min(group_a)\nmax(group_b) - min(group_b)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# SD for each group\nsd(group_a)\nsd(group_b)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Complete summary\nsummary(group_b)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Reaction times from 10 participants\nreaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)\n\n# Central tendency\nmean(reaction_times)\nmedian(reaction_times)\n\n# Spread\nsd(reaction_times)\nrange(reaction_times)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Lab A: Abstract words\nlab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)\n\n# Lab B: Concrete words\nlab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)\n\n# Compare means\nmean(lab_a)\nmean(lab_b)\n\n# Compare SDs\nsd(lab_a)\nsd(lab_b)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Before session (1-10 scale)\nmood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)\n\n# After session\nmood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)\n\n# Means\nmean(mood_pre)\nmean(mood_post)\n\n# The change for each person\nmood_change <- mood_post - mood_pre\nmean(mood_change)\nsd(mood_change)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Memory (0-10 scale)\nmemory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)\nmean(memory)\nsd(memory)\n\n# Reaction time (milliseconds)\nrt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)\nmean(rt)\nsd(rt)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scenario A: Everyone similar\nscenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)\n\n# Scenario B: Bimodal (two clusters)\nscenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)\n\n# Same mean!\nmean(scenario_a)\nmean(scenario_b)\n\n# But very different SDs\nsd(scenario_a)\nsd(scenario_b)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Create a small dataset\ndatalab <- data.frame(\n  participant = 1:6,\n  memory = c(5, 7, 6, 8, 4, 6),\n  room = c(\"A\", \"A\", \"A\", \"B\", \"B\", \"B\")\n)\n\n# View it\ndatalab\n\n# Get just the memory column\ndatalab$memory\n\n# Mean of memory scores\nmean(datalab$memory)","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scores for Room A only\nroom_a_scores <- datalab$memory[datalab$room == \"A\"]\nroom_a_scores\nmean(room_a_scores)\n\n# Scores for Room B only\nroom_b_scores <- datalab$memory[datalab$room == \"B\"]\nroom_b_scores\nmean(room_b_scores)","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Store a single value\nmy_score <- 75\n\n# Store multiple values with c()\nall_scores <- c(65, 72, 81, 78, 69)\n\n# Now you can use them\nmean(all_scores)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"# Five memory scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# Calculate the mean\nmean(memory_scores)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Same five scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# The median\nmedian(memory_scores)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# One person did exceptionally well\nmemory_with_outlier <- c(4, 6, 7, 8, 25)\n\n# Compare mean and median\nmean(memory_with_outlier)\nmedian(memory_with_outlier)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Consistent group\ngroup_a <- c(6, 7, 7, 7, 8)\n\n# Variable group  \ngroup_b <- c(2, 4, 7, 10, 12)\n\n# Same mean!\nmean(group_a)\nmean(group_b)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Range gives you min and max\nrange(group_a)\nrange(group_b)\n\n# Calculate the spread\nmax(group_a) - min(group_a)\nmax(group_b) - min(group_b)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# SD for each group\nsd(group_a)\nsd(group_b)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Complete summary\nsummary(group_b)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Reaction times from 10 participants\nreaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)\n\n# Central tendency\nmean(reaction_times)\nmedian(reaction_times)\n\n# Spread\nsd(reaction_times)\nrange(reaction_times)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Lab A: Abstract words\nlab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)\n\n# Lab B: Concrete words\nlab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)\n\n# Compare means\nmean(lab_a)\nmean(lab_b)\n\n# Compare SDs\nsd(lab_a)\nsd(lab_b)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Before session (1-10 scale)\nmood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)\n\n# After session\nmood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)\n\n# Means\nmean(mood_pre)\nmean(mood_post)\n\n# The change for each person\nmood_change <- mood_post - mood_pre\nmean(mood_change)\nsd(mood_change)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Memory (0-10 scale)\nmemory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)\nmean(memory)\nsd(memory)\n\n# Reaction time (milliseconds)\nrt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)\nmean(rt)\nsd(rt)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scenario A: Everyone similar\nscenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)\n\n# Scenario B: Bimodal (two clusters)\nscenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)\n\n# Same mean!\nmean(scenario_a)\nmean(scenario_b)\n\n# But very different SDs\nsd(scenario_a)\nsd(scenario_b)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -2148,23 +2148,6 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#standard-deviation-in-context" id="toc-standard-deviation-in-context" class="nav-link" data-scroll-target="#standard-deviation-in-context">Standard Deviation in Context</a></li>
   <li><a href="#when-means-can-mislead" id="toc-when-means-can-mislead" class="nav-link" data-scroll-target="#when-means-can-mislead">When Means Can Mislead</a></li>
   </ul></li>
-  <li><a href="#part-5-working-with-data-frames" id="toc-part-5-working-with-data-frames" class="nav-link" data-scroll-target="#part-5-working-with-data-frames">Part 5: Working with Data Frames</a>
-  <ul class="collapse">
-  <li><a href="#accessing-columns" id="toc-accessing-columns" class="nav-link" data-scroll-target="#accessing-columns">Accessing Columns</a></li>
-  <li><a href="#descriptives-by-group" id="toc-descriptives-by-group" class="nav-link" data-scroll-target="#descriptives-by-group">Descriptives by Group</a></li>
-  </ul></li>
-  <li><a href="#part-6-r-basics-youll-need" id="toc-part-6-r-basics-youll-need" class="nav-link" data-scroll-target="#part-6-r-basics-youll-need">Part 6: R Basics You’ll Need</a>
-  <ul class="collapse">
-  <li><a href="#assigning-values" id="toc-assigning-values" class="nav-link" data-scroll-target="#assigning-values">Assigning Values</a></li>
-  <li><a href="#key-functions-reference" id="toc-key-functions-reference" class="nav-link" data-scroll-target="#key-functions-reference">Key Functions Reference</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a></li>
-  </ul></li>
-  <li><a href="#part-7-preparing-for-the-lab" id="toc-part-7-preparing-for-the-lab" class="nav-link" data-scroll-target="#part-7-preparing-for-the-lab">Part 7: Preparing for the Lab</a>
-  <ul class="collapse">
-  <li><a href="#what-youll-do" id="toc-what-youll-do" class="nav-link" data-scroll-target="#what-youll-do">What You’ll Do</a></li>
-  <li><a href="#what-to-focus-on" id="toc-what-to-focus-on" class="nav-link" data-scroll-target="#what-to-focus-on">What to Focus On</a></li>
-  <li><a href="#before-you-arrive" id="toc-before-you-arrive" class="nav-link" data-scroll-target="#before-you-arrive">Before You Arrive</a></li>
-  </ul></li>
   <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key Terms</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
@@ -2492,7 +2475,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.</p>
+<p>This reading supports the week 12 lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.</p>
 <p>By the end of this reading, you’ll be able to:</p>
 <ul>
 <li>Interpret means, medians, and standard deviations</li>
@@ -2635,127 +2618,6 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Both means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.</p>
-<hr>
-</section>
-</section>
-<section id="part-5-working-with-data-frames" class="level2">
-<h2 class="anchored" data-anchor-id="part-5-working-with-data-frames">Part 5: Working with Data Frames</h2>
-<p>Real datasets aren’t just vectors — they’re tables (data frames) with multiple variables.</p>
-<section id="accessing-columns" class="level3">
-<h3 class="anchored" data-anchor-id="accessing-columns">Accessing Columns</h3>
-<p>Use the <code>$</code> symbol to get a column from a data frame:</p>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="descriptives-by-group" class="level3">
-<h3 class="anchored" data-anchor-id="descriptives-by-group">Descriptives by Group</h3>
-<p>To compare groups, we can subset the data:</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<hr>
-</section>
-</section>
-<section id="part-6-r-basics-youll-need" class="level2">
-<h2 class="anchored" data-anchor-id="part-6-r-basics-youll-need">Part 6: R Basics You’ll Need</h2>
-<section id="assigning-values" class="level3">
-<h3 class="anchored" data-anchor-id="assigning-values">Assigning Values</h3>
-<p>Use <code>&lt;-</code> to store values:</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="key-functions-reference" class="level3">
-<h3 class="anchored" data-anchor-id="key-functions-reference">Key Functions Reference</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>What It Does</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>mean(x)</code></td>
-<td>Arithmetic mean</td>
-<td><code>mean(c(4,5,6))</code> → 5</td>
-</tr>
-<tr class="even">
-<td><code>median(x)</code></td>
-<td>Middle value</td>
-<td><code>median(c(4,5,6))</code> → 5</td>
-</tr>
-<tr class="odd">
-<td><code>sd(x)</code></td>
-<td>Standard deviation</td>
-<td><code>sd(c(4,5,6))</code> → 1</td>
-</tr>
-<tr class="even">
-<td><code>min(x)</code></td>
-<td>Smallest value</td>
-<td><code>min(c(4,5,6))</code> → 4</td>
-</tr>
-<tr class="odd">
-<td><code>max(x)</code></td>
-<td>Largest value</td>
-<td><code>max(c(4,5,6))</code> → 6</td>
-</tr>
-<tr class="even">
-<td><code>range(x)</code></td>
-<td>Min and max</td>
-<td><code>range(c(4,5,6))</code> → 4, 6</td>
-</tr>
-<tr class="odd">
-<td><code>summary(x)</code></td>
-<td>All key stats</td>
-<td>Shows quartiles, mean, etc.</td>
-</tr>
-<tr class="even">
-<td><code>length(x)</code></td>
-<td>How many values</td>
-<td><code>length(c(4,5,6))</code> → 3</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="common-errors" class="level3">
-<h3 class="anchored" data-anchor-id="common-errors">Common Errors</h3>
-<p><strong>“object not found”</strong>: You haven’t created that variable yet, or there’s a typo.</p>
-<p><strong>“unexpected symbol”</strong>: Missing comma or parenthesis.</p>
-<p>R is case-sensitive: <code>Mean()</code> won’t work, but <code>mean()</code> will.</p>
-<hr>
-</section>
-</section>
-<section id="part-7-preparing-for-the-lab" class="level2">
-<h2 class="anchored" data-anchor-id="part-7-preparing-for-the-lab">Part 7: Preparing for the Lab</h2>
-<section id="what-youll-do" class="level3">
-<h3 class="anchored" data-anchor-id="what-youll-do">What You’ll Do</h3>
-<p>In the lab, you’ll:</p>
-<ol type="1">
-<li>Load the actual DataLab dataset (not example data)</li>
-<li>Explore variables using <code>summary()</code></li>
-<li>Calculate means and SDs for different tasks</li>
-<li>Compare Room A vs Room B</li>
-<li>Interpret what the numbers tell us</li>
-</ol>
-</section>
-<section id="what-to-focus-on" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-focus-on">What to Focus On</h3>
-<p>Don’t worry about memorising R syntax. Focus on:</p>
-<ul>
-<li><strong>What does this statistic tell me?</strong></li>
-<li><strong>How spread out is the data?</strong></li>
-<li><strong>Is this difference meaningful?</strong></li>
-</ul>
-<p>The code will be provided. Your job is to understand what it means.</p>
-</section>
-<section id="before-you-arrive" class="level3">
-<h3 class="anchored" data-anchor-id="before-you-arrive">Before You Arrive</h3>
-<ul>
-<li>Review the lecture reading on descriptive statistics</li>
-<li>Understand mean vs median, and when each is appropriate</li>
-<li>Know what standard deviation represents (spread from the mean)</li>
-</ul>
-<hr>
 </section>
 </section>
 <section id="key-terms" class="level2">

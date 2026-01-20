@@ -9,7 +9,7 @@ filters:
 
 ## Overview
 
-This reading prepares you for the lab session where you'll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.
+This reading supports the week 12 lab session where you'll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data.
 
 By the end of this reading, you'll be able to:
 
@@ -273,122 +273,6 @@ sd(scenario_b)
 ```
 
 Both means are 6, but Scenario B's huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.
-
----
-
-## Part 5: Working with Data Frames
-
-Real datasets aren't just vectors — they're tables (data frames) with multiple variables.
-
-### Accessing Columns
-
-Use the `$` symbol to get a column from a data frame:
-
-```{webr-r}
-# Create a small dataset
-datalab <- data.frame(
-  participant = 1:6,
-  memory = c(5, 7, 6, 8, 4, 6),
-  room = c("A", "A", "A", "B", "B", "B")
-)
-
-# View it
-datalab
-
-# Get just the memory column
-datalab$memory
-
-# Mean of memory scores
-mean(datalab$memory)
-```
-
-### Descriptives by Group
-
-To compare groups, we can subset the data:
-
-```{webr-r}
-# Scores for Room A only
-room_a_scores <- datalab$memory[datalab$room == "A"]
-room_a_scores
-mean(room_a_scores)
-
-# Scores for Room B only
-room_b_scores <- datalab$memory[datalab$room == "B"]
-room_b_scores
-mean(room_b_scores)
-```
-
----
-
-## Part 6: R Basics You'll Need
-
-### Assigning Values
-
-Use `<-` to store values:
-
-```{webr-r}
-# Store a single value
-my_score <- 75
-
-# Store multiple values with c()
-all_scores <- c(65, 72, 81, 78, 69)
-
-# Now you can use them
-mean(all_scores)
-```
-
-### Key Functions Reference
-
-| Function | What It Does | Example |
-|----------|--------------|---------|
-| `mean(x)` | Arithmetic mean | `mean(c(4,5,6))` → 5 |
-| `median(x)` | Middle value | `median(c(4,5,6))` → 5 |
-| `sd(x)` | Standard deviation | `sd(c(4,5,6))` → 1 |
-| `min(x)` | Smallest value | `min(c(4,5,6))` → 4 |
-| `max(x)` | Largest value | `max(c(4,5,6))` → 6 |
-| `range(x)` | Min and max | `range(c(4,5,6))` → 4, 6 |
-| `summary(x)` | All key stats | Shows quartiles, mean, etc. |
-| `length(x)` | How many values | `length(c(4,5,6))` → 3 |
-
-### Common Errors
-
-**"object not found"**: You haven't created that variable yet, or there's a typo.
-
-**"unexpected symbol"**: Missing comma or parenthesis.
-
-R is case-sensitive: `Mean()` won't work, but `mean()` will.
-
----
-
-## Part 7: Preparing for the Lab
-
-### What You'll Do
-
-In the lab, you'll:
-
-1. Load the actual DataLab dataset (not example data)
-2. Explore variables using `summary()`
-3. Calculate means and SDs for different tasks
-4. Compare Room A vs Room B
-5. Interpret what the numbers tell us
-
-### What to Focus On
-
-Don't worry about memorising R syntax. Focus on:
-
-- **What does this statistic tell me?**
-- **How spread out is the data?**
-- **Is this difference meaningful?**
-
-The code will be provided. Your job is to understand what it means.
-
-### Before You Arrive
-
-- Review the lecture reading on descriptive statistics
-- Understand mean vs median, and when each is appropriate
-- Know what standard deviation represents (spread from the mean)
-
----
 
 ## Key Terms
 
