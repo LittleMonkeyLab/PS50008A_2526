@@ -1,0 +1,102 @@
+---
+title: "Effect Size"
+description: "A standardised measure of the magnitude of an observed effect"
+categories: [Statistics]
+aliases:
+  - cohens-d
+  - magnitude
+related:
+  - paired-t-test
+  - independent-t-test
+  - standard-deviation
+---
+
+## Definition
+
+An **effect size** quantifies the magnitude of an effect, independent of sample size. While p-values tell us if an effect exists, effect sizes tell us how large the effect is.
+
+## Why Effect Sizes Matter
+
+| p-value | Effect size |
+|---------|-------------|
+| Tells if effect is statistically significant | Tells if effect is practically meaningful |
+| Depends heavily on sample size | Independent of sample size |
+| Binary decision (significant/not) | Continuous measure |
+| Can be "significant" but tiny | Reveals real-world importance |
+
+## Common Effect Size Measures
+
+| Statistic | Type | Formula |
+|-----------|------|---------|
+| Cohen's d | Standardised mean difference | $d = \frac{\bar{X}_1 - \bar{X}_2}{s_{pooled}}$ |
+| Pearson's r | Correlation | Ranges -1 to +1 |
+| Eta-squared ($\eta^2$) | Variance explained | $\frac{SS_{effect}}{SS_{total}}$ |
+| Odds ratio | Categorical | Ratio of odds |
+
+## Cohen's d Guidelines
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.2 | Small effect |
+| 0.5 | Medium effect |
+| 0.8 | Large effect |
+
+Note: These are rough guidelines, not rigid cutoffs. Context matters.
+
+## Correlation Guidelines
+
+| r value | Interpretation |
+|---------|----------------|
+| .10 | Small |
+| .30 | Medium |
+| .50 | Large |
+
+## R Code Example
+
+```r
+library(effectsize)
+
+# Cohen's d for independent groups
+cohens_d(score ~ group, data = mydata)
+
+# Cohen's d for paired samples
+cohens_d(condition_a, condition_b, paired = TRUE)
+
+# Convert t-value to d
+t_to_d(t = 2.45, df_error = 28)
+
+# Interpret effect size
+interpret_d(0.65)
+```
+
+## Reporting Effect Sizes
+
+Always report effect sizes alongside significance tests:
+
+> The treatment group scored significantly higher than the control group, *t*(58) = 3.21, *p* = .002, **d = 0.82** [0.28, 1.35].
+
+Include 95% confidence intervals when possible.
+
+## Effect Size vs. Statistical Significance
+
+```
+                    Effect Size
+                 Small       Large
+              ┌─────────┬─────────┐
+Significant   │ Large n │ True    │
+p < .05       │ needed  │ finding │
+              ├─────────┼─────────┤
+Non-signif.   │ True    │ Under-  │
+p > .05       │ null    │ powered │
+              └─────────┴─────────┘
+```
+
+## Related Concepts
+
+- [Paired t-test](../analysis/paired-t-test.qmd)
+- [Independent t-test](../analysis/independent-t-test.qmd)
+- [Standard Deviation](standard-deviation.qmd)
+
+## DataLab Connection
+
+When reporting results from any DataLab station, calculate and interpret effect sizes. A "significant" difference in reaction times means little without knowing the magnitude.

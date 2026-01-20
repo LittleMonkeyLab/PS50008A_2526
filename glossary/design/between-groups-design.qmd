@@ -1,0 +1,64 @@
+---
+title: "Between-Groups Design"
+description: "Different participants are assigned to each experimental condition"
+categories: [Design]
+aliases:
+  - between-subjects
+  - independent-groups
+related:
+  - within-groups-design
+  - random-assignment
+  - independent-t-test
+---
+
+## Definition
+
+A **between-groups design** (also called between-subjects or independent-groups design) is an experimental approach where different participants are assigned to different conditions of the independent variable.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Participants | Different individuals in each condition |
+| Comparison | Between separate groups |
+| Sample size | Requires more participants overall |
+| Control | Relies on random assignment |
+
+## Advantages
+
+- **No order effects**: Each participant only experiences one condition
+- **No carryover**: No contamination between conditions
+- **Shorter sessions**: Participants complete only one condition
+- **Fresh perspective**: No hypothesis guessing from repeated exposure
+
+## Disadvantages
+
+- **Individual differences**: Variability between people adds noise
+- **Larger samples needed**: More participants required for statistical power
+- **Random assignment critical**: Groups must be equivalent at baseline
+
+## Example
+
+Testing whether caffeine improves memory:
+
+- **Group A**: 30 participants receive caffeine
+- **Group B**: 30 different participants receive placebo
+- **Comparison**: Memory scores compared between groups
+
+## Ensuring Group Equivalence
+
+**Random assignment** is essential:
+
+1. Generate random numbers for each participant
+2. Assign to conditions based on random order
+3. Check baseline equivalence on key variables
+
+## Related Concepts
+
+- [Within-Groups Design](within-groups-design.qmd)
+- [Random Assignment](random-assignment.qmd)
+- [Independent t-test](../analysis/independent-t-test.qmd) (the analysis typically used)
+
+## DataLab Connection
+
+The **[Mind Palace](../datalab/mindpalace.qmd)** station uses a between-groups design: Lab 304A sees abstract words with music, while Lab 304B sees concrete words in silence. An independent t-test compares total recall between the two lab conditions.

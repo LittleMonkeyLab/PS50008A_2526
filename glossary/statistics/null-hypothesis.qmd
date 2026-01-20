@@ -1,0 +1,84 @@
+---
+title: "Null Hypothesis"
+description: "Predicts no effect of the IV on the DV"
+categories: [Statistics]
+aliases:
+  - H0
+  - nil-hypothesis
+related:
+  - experimental-hypothesis
+  - p-value
+  - type-i-error
+---
+
+## Definition
+
+The **null hypothesis** (H₀) predicts that the independent variable has no effect on the dependent variable. It states that any observed difference is due to chance or sampling error.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Predicts no effect | States IV does not influence DV |
+| Assumes equality | Population means are equal |
+| Default position | What we test against |
+| Symbol | H₀ |
+
+## Mathematical Statement
+
+| Design | Null Hypothesis |
+|--------|-----------------|
+| Two groups | H₀: µ₁ = µ₂ |
+| Correlation | H₀: ρ = 0 |
+| Single mean | H₀: µ = specified value |
+
+## Why Test the Null?
+
+We can't directly prove H₁ is true, but we can show H₀ is unlikely:
+
+```
+Logic of hypothesis testing:
+
+1. Assume H₀ is true (no effect)
+2. Calculate probability of our data under H₀
+3. If probability very low (p < .05):
+   → Data unlikely under H₀
+   → Reject H₀ in favour of H₁
+```
+
+## Decisions About H₀
+
+| p-value | Decision | Interpretation |
+|---------|----------|----------------|
+| p < .05 | Reject H₀ | Effect likely exists |
+| p ≥ .05 | Fail to reject H₀ | Insufficient evidence for effect |
+
+**Important:** "Fail to reject H₀" ≠ "Accept H₀"
+
+We never prove H₀ is true; we just lack evidence against it.
+
+## Errors in Hypothesis Testing
+
+| Error | Description | Probability |
+|-------|-------------|-------------|
+| Type I | Reject H₀ when it's true | α (usually .05) |
+| Type II | Fail to reject H₀ when it's false | β |
+
+## Example
+
+**Research question:** Does caffeine affect memory?
+
+| Hypothesis | Statement |
+|------------|-----------|
+| H₀ | There is no significant difference in memory scores between caffeine and placebo groups |
+| H₁ | There is a significant difference in memory scores between caffeine and placebo groups |
+
+## Related Concepts
+
+- [Experimental Hypothesis](experimental-hypothesis.qmd) - the alternative
+- [p-value](p-value.qmd) - probability under the null
+- [Type I Error](type-i-error.qmd) - incorrectly rejecting H₀
+
+## DataLab Connection
+
+For **Frontal Lob**: H₀ = "There is no significant difference in reaction time between congruent and incongruent trials." We test whether the data provide enough evidence to reject this.

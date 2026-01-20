@@ -1,0 +1,94 @@
+---
+title: "Matched Participants Design"
+description: "Pairs of similar participants are matched and randomly assigned to conditions"
+categories: [Design]
+aliases:
+  - matched-pairs
+  - matched-groups
+related:
+  - between-groups-design
+  - within-groups-design
+  - random-assignment
+---
+
+## Definition
+
+A **matched participants design** is a type of between-groups design where participants are paired based on key variables, and then each pair member is randomly assigned to different conditions.
+
+## How It Works
+
+```
+1. Identify key variable(s) to match on
+2. Pair participants with similar scores
+3. Randomly assign one from each pair to each condition
+
+Example matching on IQ:
+Pair 1: Person A (IQ=105) → Condition 1
+        Person B (IQ=103) → Condition 2
+Pair 2: Person C (IQ=118) → Condition 1
+        Person D (IQ=120) → Condition 2
+```
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Matched pairs | Similar participants grouped |
+| Random assignment | Within each pair |
+| Between-groups | Different people in each condition |
+| Reduced variance | Controls for matched variable |
+
+## Matching Variables
+
+Choose variables likely to affect the DV:
+
+| Study Type | Match On |
+|------------|----------|
+| Memory study | Age, education |
+| Reaction time | Age, gaming experience |
+| Academic intervention | Prior achievement |
+| Drug trial | Age, weight, baseline symptoms |
+
+## Advantages
+
+- Reduces individual differences for matched variables
+- More powerful than simple between-groups
+- No order effects (unlike within-groups)
+- Can use independent t-test analysis
+
+## Disadvantages
+
+- Time-consuming to match
+- May lose participants who can't be matched
+- Only controls for variables you match on
+- Requires large pool to find good matches
+
+## Analysis
+
+Use a **paired t-test** (treating matched pairs as related samples) or **independent t-test** (treating as independent groups):
+
+```r
+# As matched pairs (more powerful)
+t.test(condition1, condition2, paired = TRUE)
+
+# As independent groups
+t.test(score ~ condition, data = mydata)
+```
+
+## Comparison with Other Designs
+
+| Design | Controls Individual Differences |
+|--------|-------------------------------|
+| Within-groups | Completely (same person) |
+| Matched | Partially (similar person) |
+| Between-groups | Relies on randomisation |
+
+## Related Concepts
+
+- [Between-Groups Design](between-groups-design.qmd) - basic form
+- [Within-Groups Design](within-groups-design.qmd) - same participants
+- [Random Assignment](random-assignment.qmd) - used within pairs
+
+## DataLab Connection
+
+DataLab doesn't use pre-matching, but you could create matched pairs post-hoc for analysis—for example, matching participants by age before comparing reaction times across conditions.

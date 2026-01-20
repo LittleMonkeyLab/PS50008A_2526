@@ -1,0 +1,79 @@
+---
+title: "Ordinal Data"
+description: "Ranked data where the intervals between values are not necessarily equal"
+categories: [Statistics]
+aliases:
+  - ranked-data
+  - ordinal-scale
+related:
+  - nominal-data
+  - interval-data
+  - levels-of-measurement
+---
+
+## Definition
+
+**Ordinal data** have a meaningful order or ranking, but the intervals between values are not necessarily equal. We know the relative position but not the exact distance between values.
+
+## Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Order | Values can be ranked |
+| Unequal intervals | Distance between ranks varies |
+| No true zero | Zero is often arbitrary |
+| Relative position | Know "more than" but not "how much more" |
+
+## Examples
+
+| Variable | Values | Why Ordinal |
+|----------|--------|-------------|
+| Race position | 1st, 2nd, 3rd | Gap between 1st and 2nd ≠ gap between 2nd and 3rd |
+| Likert scale | 1-5 agreement | "Agree" to "Strongly agree" may not equal "Neutral" to "Agree" |
+| Pain rating | None, Mild, Moderate, Severe | Intervals not standardised |
+| Education | GCSE, A-Level, Degree | Not equally spaced |
+
+## Appropriate Statistics
+
+| Statistic | Use |
+|-----------|-----|
+| Median | Middle value |
+| Mode | Most frequent value |
+| Percentiles | Relative standing |
+| Spearman's rho | Correlation |
+| Mann-Whitney U | Between-groups comparison |
+| Wilcoxon | Within-groups comparison |
+
+## The Likert Scale Debate
+
+Likert scales (e.g., 1 = Strongly Disagree to 5 = Strongly Agree) are technically ordinal, but often treated as interval:
+
+| Argument | Position |
+|----------|----------|
+| Strict | Non-parametric tests only |
+| Pragmatic | Parametric tests are robust |
+| Common practice | Often treated as interval |
+
+**Recommendation:** With multiple Likert items summed into a scale, treating as interval is often acceptable.
+
+## Ordinal vs. Interval
+
+```
+Ordinal: Runners finish 1st, 2nd, 3rd
+         1st ●──?──● 2nd ──?──● 3rd
+         (gaps unknown)
+
+Interval: Temperature 10°C, 20°C, 30°C
+          10°●──10──●20°──10──●30°
+          (equal 10° intervals)
+```
+
+## Related Concepts
+
+- [Nominal Data](nominal-data.qmd) - categories without order
+- [Interval Data](interval-data.qmd) - equal intervals
+- [Levels of Measurement](levels-of-measurement.qmd) - overview
+
+## DataLab Connection
+
+At **Sixth Sense**, confidence ratings (1-7) are ordinal—we can't assume the difference between 1 and 2 equals the difference between 6 and 7. Use non-parametric tests or acknowledge the limitation.

@@ -1,0 +1,82 @@
+---
+title: "Ratio Data"
+description: "Numerical data with equal intervals and a true zero point"
+categories: [Statistics]
+aliases:
+  - ratio-scale
+related:
+  - interval-data
+  - levels-of-measurement
+---
+
+## Definition
+
+**Ratio data** have equal intervals between values AND a true zero point that represents the complete absence of the property being measured. This allows meaningful ratios between values.
+
+## Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Equal intervals | Distances between values are equal |
+| True zero | Zero means "none" |
+| Ratios meaningful | "Twice as much" makes sense |
+| All operations | Add, subtract, multiply, divide |
+
+## Examples
+
+| Variable | Why Ratio |
+|----------|-----------|
+| Reaction time (ms) | 0 ms = instant response; 400 ms is twice as slow as 200 ms |
+| Weight (kg) | 0 kg = no mass; 80 kg is twice 40 kg |
+| Height (cm) | 0 cm = no height; 180 cm is twice 90 cm |
+| Number of errors | 0 = no errors; 10 errors is twice 5 errors |
+| Distance (m) | 0 m = no distance |
+
+## Meaningful Ratios
+
+**Reaction time example:**
+
+- Participant A: 200 ms
+- Participant B: 400 ms
+- B is twice as slow as A ✓
+
+**Compare to interval (temperature):**
+
+- Location A: 20°C
+- Location B: 40°C
+- B is NOT twice as hot as A ✗
+
+## Appropriate Statistics
+
+All statistics are appropriate for ratio data:
+
+| Statistic | Appropriate |
+|-----------|-------------|
+| Mean | ✓ |
+| Median | ✓ |
+| Mode | ✓ |
+| Standard deviation | ✓ |
+| t-tests | ✓ |
+| ANOVA | ✓ |
+| Pearson's r | ✓ |
+| Geometric mean | ✓ |
+| Coefficient of variation | ✓ |
+| Ratios | ✓ |
+
+## Ratio vs. Interval
+
+| Property | Interval | Ratio |
+|----------|----------|-------|
+| True zero | ✗ | ✓ |
+| Meaningful ratios | ✗ | ✓ |
+| Examples | IQ, °C | RT, weight, height |
+
+## Related Concepts
+
+- [Interval Data](interval-data.qmd) - no true zero
+- [Levels of Measurement](levels-of-measurement.qmd) - overview
+- [Mean](../statistics/mean.qmd) - appropriate measure
+
+## DataLab Connection
+
+**Reflex Test** reaction times are ratio data—0 ms would mean an instant response (true zero), and 400 ms really is twice as slow as 200 ms. This allows the most flexible statistical analysis.

@@ -1,0 +1,101 @@
+---
+title: "Wilcoxon Signed-Rank Test"
+description: "Non-parametric test comparing two related samples"
+categories: [Analysis]
+aliases:
+  - wilcoxon-matched-pairs
+related:
+  - paired-t-test
+  - mann-whitney-u
+  - within-groups-design
+---
+
+## Definition
+
+The **Wilcoxon signed-rank test** is a non-parametric test that compares two related samples, matched samples, or repeated measurements on a single sample. It tests whether the distribution of differences is symmetric about zero.
+
+## When to Use
+
+Use a Wilcoxon signed-rank test when:
+
+- Comparing two related/paired conditions
+- Data are ordinal, or continuous but non-normal
+- Difference scores are skewed
+- Outliers are present in the differences
+- Assumptions of the paired t-test are violated
+
+## How It Works
+
+1. Calculate the difference for each pair
+2. Rank the absolute values of differences
+3. Assign signs (+ or -) based on difference direction
+4. Sum positive and negative ranks separately
+5. Compare to expected distribution
+
+## The Test Statistic
+
+$$W = \min(W^+, W^-)$$
+
+Where:
+
+- $W^+$ = sum of positive ranks
+- $W^-$ = sum of negative ranks
+
+## Assumptions
+
+| Assumption | Notes |
+|------------|-------|
+| Paired data | Each observation has a matched pair |
+| Ordinal differences | Differences can be ranked |
+| Symmetric distribution | Differences roughly symmetric around median |
+
+## Effect Size
+
+Calculate **matched-pairs rank-biserial correlation** ($r$):
+
+$$r = \frac{W^+ - W^-}{W^+ + W^-}$$
+
+| r value | Interpretation |
+|---------|----------------|
+| 0.1 | Small effect |
+| 0.3 | Medium effect |
+| 0.5 | Large effect |
+
+## R Code Example
+
+```r
+# Wilcoxon signed-rank test
+wilcox.test(condition_a, condition_b, paired = TRUE)
+
+# Or with exact p-value
+wilcox.test(condition_a, condition_b, paired = TRUE, exact = TRUE)
+
+# Effect size
+library(effectsize)
+rank_biserial(condition_a, condition_b, paired = TRUE)
+```
+
+## Reporting (APA Style)
+
+> A Wilcoxon signed-rank test showed a significant difference between Condition A (*Mdn* = 450) and Condition B (*Mdn* = 410), *W* = 156, *p* = .008, *r* = .42.
+
+Note: Report medians rather than means for non-parametric tests.
+
+## Comparison with Paired t-test
+
+| Feature | Paired t-test | Wilcoxon signed-rank |
+|---------|---------------|---------------------|
+| Data type | Continuous, normal differences | Ordinal or non-normal |
+| Compares | Mean differences | Median/distribution of differences |
+| Assumptions | More restrictive | Fewer assumptions |
+| Power | Higher when assumptions met | Lower but more robust |
+
+## Related Concepts
+
+- [Paired t-test](paired-t-test.qmd) (parametric alternative)
+- [Mann-Whitney U](mann-whitney-u.qmd) (independent non-parametric)
+- [Within-Groups Design](../design/within-groups-design.qmd)
+
+## DataLab Connection
+
+Reaction time data from the **Reflex Test** often show positive skew. The Wilcoxon signed-rank test provides a robust within-participant analysis for comparing conditions.

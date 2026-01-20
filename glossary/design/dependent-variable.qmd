@@ -1,0 +1,89 @@
+---
+title: "Dependent Variable"
+description: "The variable measured; the outcome or effect"
+categories: [Design]
+aliases:
+  - DV
+  - outcome-variable
+  - response-variable
+related:
+  - independent-variable
+  - variable
+  - operationalisation
+---
+
+## Definition
+
+The **dependent variable (DV)** is the variable that is measured in an experiment. It is the outcome that is expected to change as a result of manipulating the independent variable. It is the presumed *effect* in a cause-and-effect relationship.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Measured | Observed and recorded |
+| Presumed effect | Expected to be influenced by IV |
+| Depends on IV | Changes in response to manipulation |
+| Quantified | Expressed in measurable units |
+
+## Operationalising the DV
+
+The DV must be clearly defined and measurable:
+
+| Concept | Operationalised DV | Units |
+|---------|-------------------|-------|
+| Memory | Number of words recalled | Count |
+| Attention | Reaction time | Milliseconds |
+| Mood | Score on questionnaire | 1-10 scale |
+| Performance | Accuracy percentage | % correct |
+
+## Identifying the DV
+
+Ask: "What is being measured?"
+
+> "Does caffeine improve **memory**?"
+
+DV = Memory (operationalised as number of words recalled)
+
+> "Does music affect **concentration**?"
+
+DV = Concentration (operationalised as task accuracy)
+
+## Properties of a Good DV
+
+| Property | Description |
+|----------|-------------|
+| Reliable | Consistent measurement |
+| Valid | Measures what it claims to |
+| Sensitive | Can detect real differences |
+| Objective | Not biased by expectations |
+
+## Multiple DVs
+
+Studies can measure more than one DV:
+
+```
+Research question: Effect of caffeine on cognition
+
+DV1: Reaction time (ms)
+DV2: Accuracy (% correct)
+DV3: Subjective alertness (1-10)
+```
+
+## Common DV Types in Psychology
+
+| DV Type | Examples |
+|---------|----------|
+| Behavioural | Reaction time, choices made |
+| Self-report | Questionnaire scores, ratings |
+| Physiological | Heart rate, cortisol levels |
+| Performance | Accuracy, number correct |
+
+## Related Concepts
+
+- [Independent Variable](independent-variable.qmd) - what we manipulate
+- [Variable](variable.qmd) - general concept
+- [Operationalisation](operationalisation.qmd) - how DVs are defined
+
+## DataLab Connection
+
+At the **Reflex Test**, the DV is reaction time measured in milliseconds. At **Time Warp**, the DV is the estimated time in seconds. Clear operationalisation ensures everyone measures the same thing.

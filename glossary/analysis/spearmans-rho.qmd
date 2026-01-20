@@ -1,0 +1,104 @@
+---
+title: "Spearman's rho"
+description: "Non-parametric correlation coefficient based on ranks"
+categories: [Analysis]
+aliases:
+  - spearman-correlation
+  - rank-correlation
+related:
+  - pearsons-r
+  - correlation
+  - ordinal-data
+---
+
+## Definition
+
+**Spearman's rho** (ρ or rs) is a non-parametric correlation coefficient that measures the strength and direction of the monotonic relationship between two variables using ranked data.
+
+## When to Use
+
+Use Spearman's rho when:
+
+- Data are ordinal (ranked)
+- Relationship is monotonic (but not necessarily linear)
+- Assumptions of Pearson's r are violated
+- Outliers are present
+- Data are not normally distributed
+
+## How It Works
+
+1. Rank both variables separately
+2. Calculate Pearson's r on the ranks
+3. Result: Spearman's rho
+
+## The Formula
+
+$$\rho = 1 - \frac{6\sum d_i^2}{n(n^2-1)}$$
+
+Where d = difference between ranks for each pair.
+
+## Monotonic vs. Linear
+
+| Relationship | Pearson's r | Spearman's ρ |
+|--------------|-------------|--------------|
+| Linear | Detects well | Detects well |
+| Monotonic (curved) | May miss | Detects well |
+| Non-monotonic | Poor | Poor |
+
+```
+Linear:        Monotonic:      Non-monotonic:
+    ●              ●●●              ●
+   ●             ●●                  ●
+  ●            ●                ●  ●
+ ●           ●                    ●
+●          ●●
+Pearson ✓    Pearson ✗         Both ✗
+Spearman ✓   Spearman ✓        Both ✗
+```
+
+## Interpretation
+
+Same guidelines as Pearson's r:
+
+| ρ value | Interpretation |
+|---------|----------------|
+| .10 | Small effect |
+| .30 | Medium effect |
+| .50 | Large effect |
+
+## R Code Example
+
+```r
+# Spearman correlation with significance test
+cor.test(x, y, method = "spearman")
+
+# Just the correlation coefficient
+cor(x, y, method = "spearman")
+
+# Handling ties
+cor.test(x, y, method = "spearman", exact = FALSE)
+```
+
+## Reporting (APA Style)
+
+> A Spearman correlation showed a significant positive relationship between pain rating and medication dose, *rs*(28) = .58, *p* < .001.
+
+## Comparison with Pearson's r
+
+| Feature | Pearson's r | Spearman's ρ |
+|---------|-------------|--------------|
+| Data type | Interval/ratio | Ordinal or above |
+| Relationship | Linear | Monotonic |
+| Outlier sensitivity | High | Low |
+| Assumptions | More restrictive | Fewer |
+| Power | Higher when met | Lower |
+
+## Related Concepts
+
+- [Pearson's r](pearsons-r.qmd) - parametric alternative
+- [Correlation](correlation.qmd) - general concept
+- [Ordinal Data](../statistics/ordinal-data.qmd) - appropriate data type
+
+## DataLab Connection
+
+At **Sixth Sense**, use Spearman's rho to correlate confidence ratings (1-7, ordinal) with accuracy. It's more appropriate than Pearson's r for ordinal rating scales.

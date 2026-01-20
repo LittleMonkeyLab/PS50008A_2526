@@ -1,0 +1,76 @@
+---
+title: "Levels of Measurement"
+description: "The four scales of measurement that determine appropriate statistics"
+categories: [Statistics]
+aliases:
+  - scales-of-measurement
+  - measurement-scales
+related:
+  - nominal-data
+  - ordinal-data
+  - interval-data
+  - ratio-data
+---
+
+## Definition
+
+**Levels of measurement** (or scales of measurement) describe the mathematical properties of data. The level determines which statistical analyses are appropriate.
+
+## The Four Levels
+
+| Level | Properties | Example |
+|-------|------------|---------|
+| Nominal | Categories, no order | Gender, eye colour |
+| Ordinal | Ranked order, unequal intervals | Race position, ratings |
+| Interval | Equal intervals, no true zero | Temperature (°C), IQ |
+| Ratio | Equal intervals, true zero | Reaction time, weight |
+
+## Properties Summary
+
+```
+Level        Categories   Order   Equal Intervals   True Zero
+─────────────────────────────────────────────────────────────
+Nominal         ✓          ✗            ✗              ✗
+Ordinal         ✓          ✓            ✗              ✗
+Interval        ✓          ✓            ✓              ✗
+Ratio           ✓          ✓            ✓              ✓
+```
+
+## Why Levels Matter
+
+| Level | Appropriate Statistics |
+|-------|----------------------|
+| Nominal | Mode, frequencies, chi-square |
+| Ordinal | Median, percentiles, Spearman's rho, Mann-Whitney |
+| Interval | Mean, SD, t-tests, Pearson's r |
+| Ratio | All above, plus meaningful ratios |
+
+## Common Mistakes
+
+| Mistake | Problem |
+|---------|---------|
+| Treating Likert scales as interval | May violate assumptions |
+| Calculating mean of nominal data | Meaningless (mean of "male" and "female"?) |
+| Ignoring non-equal intervals | Can distort conclusions |
+
+## Quick Reference
+
+**"NOIR"**: Nominal, Ordinal, Interval, Ratio
+
+```
+N - Names/categories only
+O - Order matters
+I - Intervals are equal
+R - Ratios are meaningful
+```
+
+## Related Concepts
+
+- [Nominal Data](nominal-data.qmd)
+- [Ordinal Data](ordinal-data.qmd)
+- [Interval Data](interval-data.qmd)
+- [Ratio Data](ratio-data.qmd)
+
+## DataLab Connection
+
+**Reflex Test** reaction times are ratio data (true zero = instant response). **Sixth Sense** confidence ratings (1-7) are ordinal data. Choose your statistical test accordingly.

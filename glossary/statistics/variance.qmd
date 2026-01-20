@@ -1,0 +1,94 @@
+---
+title: "Variance"
+description: "The average squared deviation from the mean"
+categories: [Statistics]
+aliases:
+  - s-squared
+  - sigma-squared
+related:
+  - standard-deviation
+  - mean
+  - dispersion
+---
+
+## Definition
+
+**Variance** measures the average squared deviation of data points from the mean. It quantifies how spread out the values in a dataset are.
+
+## Formula
+
+**Sample variance:**
+
+$$s^2 = \frac{\sum_{i=1}^{n}(X_i - \bar{X})^2}{n-1}$$
+
+**Population variance:**
+
+$$\sigma^2 = \frac{\sum_{i=1}^{N}(X_i - \mu)^2}{N}$$
+
+Note: Sample formula uses n-1 (Bessel's correction) for unbiased estimation.
+
+## Calculation Steps
+
+1. Calculate the mean of the data
+2. Subtract the mean from each value (deviations)
+3. Square each deviation
+4. Sum the squared deviations
+5. Divide by n-1 (for sample) or N (for population)
+
+## Properties
+
+| Property | Description |
+|----------|-------------|
+| Always positive | Squared values can't be negative |
+| Units squared | If data in ms, variance in ms² |
+| Sensitive to outliers | Squaring amplifies extreme values |
+| Foundation for SD | Standard deviation = √variance |
+
+## Why Square the Deviations?
+
+- Raw deviations sum to zero (cancel out)
+- Squaring makes all values positive
+- Gives more weight to larger deviations
+- Has useful mathematical properties
+
+## Interpretation
+
+| Variance | Interpretation |
+|----------|----------------|
+| Small | Values cluster near the mean |
+| Large | Values spread widely from mean |
+| Zero | All values identical |
+
+## R Code Example
+
+```r
+# Sample variance
+var(scores)
+
+# With missing values
+var(scores, na.rm = TRUE)
+
+# Population variance (divide by n, not n-1)
+mean((scores - mean(scores))^2)
+
+# Relationship to SD
+var(scores) == sd(scores)^2
+```
+
+## Variance vs. Standard Deviation
+
+| Variance | Standard Deviation |
+|----------|-------------------|
+| Squared units | Original units |
+| Harder to interpret | Easier to interpret |
+| Mathematically convenient | More intuitive |
+| Used in calculations | Used in reporting |
+
+## Related Concepts
+
+- [Standard Deviation](standard-deviation.qmd) - square root of variance
+- [Mean](mean.qmd) - centre point from which deviations are calculated
+
+## DataLab Connection
+
+Variance helps compare the consistency of performance across participants. High variance in reaction times at the **Reflex Test** station indicates large individual differences.

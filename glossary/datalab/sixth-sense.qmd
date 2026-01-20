@@ -1,0 +1,161 @@
+---
+title: "Station 4: Sixth Sense"
+description: "Signal detection test - can you sense when someone is watching?"
+categories: [DataLab]
+station-number: 4
+duration: "~10 minutes"
+design: "Signal detection paradigm"
+analysis: "One-sample t-test vs chance, signal detection analysis"
+related:
+  - p-value
+  - null-hypothesis
+  - effect-size
+---
+
+![](images/station4-sixth-sense.png){width="300" fig-align="center"}
+
+## Station Overview
+
+The **Sixth Sense** station tests whether people can detect when someone is staring at them from behind. This classic psychology experiment creates a **signal detection paradigm** where we can calculate hit rates, false alarm rates, and test performance against chance (50%). Spoiler: most research finds no evidence for "gaze detection" beyond chance!
+
+## What Participants Do
+
+1. Sit **back-to-back** with your partner (~1m apart)
+2. **STARER**: Flip a coin
+   - Heads = Stare intently at partner's head
+   - Tails = Look away (at the floor or wall)
+3. Hold for **15 seconds**
+4. **TARGET**: Say "Staring" or "Not staring"
+5. Rate your **confidence** (1 = guessing, 5 = certain)
+6. Complete **6 trials** as target, then swap roles
+
+## Research Questions
+
+> Can people detect when they are being stared at better than chance (50%)?
+
+> Is confidence related to accuracy?
+
+> Do believers in psychic phenomena perform differently?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Signal detection paradigm |
+| Signal | Partner staring (coin = Heads) |
+| Noise | Partner not staring (coin = Tails) |
+| Response | "Staring" or "Not staring" |
+| Measure | Accuracy, confidence, hit rate, false alarm rate |
+
+## Data Variables
+
+| Variable | Type | Description | Values |
+|----------|------|-------------|--------|
+| `stare_t1_actual` – `stare_t6_actual` | Categorical | Was partner staring? | Staring, Not staring |
+| `stare_t1_guess` – `stare_t6_guess` | Categorical | What you guessed | Staring, Not staring |
+| `stare_t1_conf` – `stare_t6_conf` | Ordinal | Confidence rating | 1 (Guessing) – 5 (Certain) |
+| `stare_solo` | Categorical | Completed solo? | Yes, No |
+
+## Calculated Variables
+
+| Variable | Description | Expected Value |
+|----------|-------------|----------------|
+| `stare_correct_total` | Correct detections (0–6) | ~3 (chance) |
+| `stare_hit_rate` | P(say "staring" \| actually staring) | ~0.5 |
+| `stare_fa_rate` | P(say "staring" \| not staring) | ~0.5 |
+
+## Signal Detection Theory
+
+| Outcome | Actual: Staring | Actual: Not Staring |
+|---------|-----------------|---------------------|
+| **Guess: Staring** | Hit ✓ | False Alarm |
+| **Guess: Not Staring** | Miss | Correct Rejection ✓ |
+
+::: {.callout-note}
+## Testing Against Chance
+With 6 trials and 50% chance, we expect participants to get **3 correct** by guessing randomly. We use a one-sample t-test to compare the group mean to 3 (or equivalently, test if proportion correct differs from 0.5).
+:::
+
+## Expected Results
+
+| Metric | Expected Value |
+|--------|----------------|
+| Mean correct | ~3 out of 6 (50%) |
+| Hit rate | ~0.5 |
+| False alarm rate | ~0.5 |
+| Confidence | Often higher than accuracy warrants |
+
+::: {.callout-warning}
+## The Null Hypothesis
+The null hypothesis for this task is that people **cannot** detect gaze better than chance. Published research consistently fails to reject this null — there's no reliable evidence for "sixth sense" gaze detection!
+:::
+
+## Suggested Analyses
+
+**Primary analysis:**
+
+- **One-sample t-test**: Is mean correct different from 3?
+- Alternatively: Binomial test against 50%
+
+**Signal detection analysis:**
+
+- Calculate hit rate and false alarm rate
+- Compare d' (sensitivity) across conditions
+
+**Exploratory analyses:**
+
+- Correlation between confidence and accuracy
+- Compare believers vs sceptics
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Calculate correct total (need to create from individual trials)
+# Assuming trial data is in separate columns
+
+# One-sample t-test: Is mean different from chance (3)?
+t.test(datalab$stare_correct_total, mu = 3)
+
+# Descriptive statistics
+datalab |>
+  summarise(
+    mean_correct = mean(stare_correct_total, na.rm = TRUE),
+    sd_correct = sd(stare_correct_total, na.rm = TRUE),
+    prop_above_chance = mean(stare_correct_total > 3, na.rm = TRUE)
+  )
+
+# Hit rate and false alarm rate (per participant)
+# Would need trial-level data manipulation
+
+# Visualise distribution
+library(ggplot2)
+ggplot(datalab, aes(x = stare_correct_total)) +
+  geom_histogram(binwidth = 1, fill = "#275882", colour = "white") +
+  geom_vline(xintercept = 3, colour = "#EA8439", linewidth = 1.5, linetype = "dashed") +
+  scale_x_continuous(breaks = 0:6) +
+  labs(
+    x = "Number Correct (out of 6)",
+    y = "Count",
+    title = "Sixth Sense Performance",
+    subtitle = "Dashed line = chance performance (3/6)"
+  )
+```
+
+## Connection to Other Concepts
+
+This station demonstrates:
+
+- [Null Hypothesis](../statistics/null-hypothesis.qmd) — testing the claim that gaze cannot be detected
+- [P-value](../statistics/p-value.qmd) — probability of results if null is true
+- [Effect Size](../statistics/effect-size.qmd) — how far performance is from chance
+
+## Tips for Facilitators
+
+- Partners should sit **truly back-to-back** — no peeking!
+- The starer must commit fully to staring OR looking away
+- Coin flips should be hidden from the target
+- Confidence ratings are valuable — encourage honest self-assessment
+- If working solo, participants can use an online random generator

@@ -1,0 +1,89 @@
+---
+title: "Paired t-test"
+description: "Compares two related means from the same participants"
+categories: [Analysis]
+aliases:
+  - dependent-t-test
+  - related-samples-t-test
+related:
+  - independent-t-test
+  - wilcoxon-signed-rank
+  - within-groups-design
+---
+
+## Definition
+
+A **paired t-test** (also called dependent or related-samples t-test) compares two means that come from the same participants or matched pairs. It tests whether the average difference between paired observations is significantly different from zero.
+
+## When to Use
+
+Use a paired t-test when:
+
+- Same participants measured twice (e.g., before/after)
+- Participants matched in pairs across conditions
+- Comparing two conditions in a within-groups design
+- Data are approximately normally distributed (or n > 30)
+
+## The Formula
+
+$$t = \frac{\bar{d}}{s_d / \sqrt{n}}$$
+
+Where:
+
+- $\bar{d}$ = mean of the differences
+- $s_d$ = standard deviation of the differences
+- $n$ = number of pairs
+
+## Assumptions
+
+| Assumption | Check |
+|------------|-------|
+| Paired observations | Each participant provides two scores |
+| Independence | Different pairs are independent |
+| Normal differences | Difference scores approximately normal |
+| Continuous data | Interval or ratio scale |
+
+## Effect Size
+
+Calculate **Cohen's d** for paired data:
+
+$$d = \frac{\bar{d}}{s_d}$$
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.2 | Small effect |
+| 0.5 | Medium effect |
+| 0.8 | Large effect |
+
+## R Code Example
+
+```r
+# Paired t-test
+t.test(condition_a, condition_b, paired = TRUE)
+
+# Or with difference scores
+differences <- condition_a - condition_b
+t.test(differences, mu = 0)
+
+# Effect size
+library(effectsize)
+cohens_d(condition_a, condition_b, paired = TRUE)
+```
+
+## Reporting (APA Style)
+
+> A paired-samples t-test revealed a significant difference between Condition A (*M* = 450, *SD* = 52) and Condition B (*M* = 425, *SD* = 48), *t*(29) = 3.45, *p* = .002, *d* = 0.63.
+
+## Non-Parametric Alternative
+
+If assumptions are violated, use the [Wilcoxon Signed-Rank Test](wilcoxon-signed-rank.qmd).
+
+## Related Concepts
+
+- [Independent t-test](independent-t-test.qmd) for between-groups comparisons
+- [Within-Groups Design](../design/within-groups-design.qmd)
+- [Effect Size](../statistics/effect-size.qmd)
+
+## DataLab Connection
+
+The **[Pre-Post Survey](../datalab/pre-post-survey.qmd)** is ideal for paired t-tests: each participant rates mood, energy, and stress before AND after DataLab. Compare `mood_pre` vs `mood_post` to test whether the experience affected mood. The **[Reflex Test](../datalab/reflex-test.qmd)** also uses paired comparisons: Trial 1 vs Trial 5 reaction times to quantify practice effects.

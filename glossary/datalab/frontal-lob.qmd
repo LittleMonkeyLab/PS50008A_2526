@@ -1,0 +1,157 @@
+---
+title: "Station 6: Frontal Lob"
+description: "Metacognition and calibration - self-prediction vs actual performance"
+categories: [DataLab]
+station-number: 6
+duration: "~10 minutes"
+design: "Correlational"
+analysis: "Correlation, calibration analysis"
+related:
+  - correlational-design
+  - pearsons-r
+  - scatterplot
+---
+
+![](images/station6-frontal-lob.png){width="300" fig-align="center"}
+
+## Station Overview
+
+The **Frontal Lob** station investigates **metacognition** — your ability to accurately predict your own performance. Before throwing ping pong balls at a target, participants rate their throwing ability. We then compare their self-rating to actual performance, calculating a **calibration score** that reveals whether people are overconfident, underconfident, or well-calibrated.
+
+## What Participants Do
+
+1. **Before throwing**: Rate your throwing ability (1–10)
+2. Stand at the marked line
+3. Throw **10 ping pong balls** at the basket (dominant hand)
+4. Optionally: Throw **5 more** with your non-dominant hand
+5. Count your successes
+
+## Research Questions
+
+> Is self-rated ability correlated with actual performance?
+
+> Are people generally overconfident or underconfident?
+
+> Does dominant vs non-dominant hand performance differ?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Correlational (self-rating vs performance) |
+| Predictor | Self-rated throwing ability (1–10) |
+| Outcome | Actual throwing success (0–10) |
+| Measure | Calibration = accuracy − rating |
+
+## Data Variables
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `throw_self_rating` | Ordinal | Self-rated ability (before) | 1–10 |
+| `throw_dom_success` | Count | Dominant hand successes | 0–10 |
+| `throw_nondom_success` | Count | Non-dominant hand successes | 0–5 |
+| `throw_dom_hand` | Categorical | Dominant hand | Left, Right |
+
+## Calculated Variables
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `throw_accuracy_pct` | `(dom_success / 10) × 100` | Performance as percentage |
+| `throw_calibration` | `accuracy_pct/10 - rating` | Calibration score |
+
+::: {.callout-important}
+## Calibration Score Interpretation
+- **Positive calibration**: Performed better than predicted → **underconfident**
+- **Negative calibration**: Predicted better than performed → **overconfident**
+- **Zero calibration**: Perfect self-knowledge!
+:::
+
+## Expected Results
+
+| Metric | Typical Finding |
+|--------|-----------------|
+| Mean success rate | ~40–60% (4–6 out of 10) |
+| Self-rating mean | Often slightly higher than actual |
+| Calibration | Slight overconfidence (negative mean) |
+| Correlation (rating vs performance) | Moderate positive (r ≈ 0.3–0.5) |
+
+::: {.callout-note}
+## The Dunning-Kruger Effect?
+This task can reveal calibration biases. Research on metacognition shows that people are often **poorly calibrated** — we think we're better at things than we actually are. However, the relationship is complex and depends on task difficulty and expertise.
+:::
+
+## Suggested Analyses
+
+**Primary analyses:**
+
+- [Pearson's r](../analysis/pearsons-r.qmd): Correlation between self-rating and success
+- [Scatterplot](../analysis/scatterplot.qmd): Visualise the relationship
+
+**Calibration analysis:**
+
+- Calculate mean calibration score
+- One-sample t-test: Is mean calibration different from 0?
+
+**Exploratory analyses:**
+
+- Compare dominant vs non-dominant hand performance
+- Correlate conscientiousness (TIPI) with calibration
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Calculate calibration
+datalab <- datalab |>
+  mutate(
+    throw_accuracy_pct = (throw_dom_success / 10) * 100,
+    throw_calibration = (throw_accuracy_pct / 10) - throw_self_rating
+  )
+
+# Correlation between self-rating and performance
+cor.test(datalab$throw_self_rating, datalab$throw_dom_success)
+
+# Mean calibration (are people overconfident?)
+datalab |>
+  summarise(
+    mean_calibration = mean(throw_calibration, na.rm = TRUE),
+    sd_calibration = sd(throw_calibration, na.rm = TRUE)
+  )
+
+# One-sample t-test: Is calibration different from 0?
+t.test(datalab$throw_calibration, mu = 0)
+
+# Scatterplot
+library(ggplot2)
+ggplot(datalab, aes(x = throw_self_rating, y = throw_dom_success)) +
+  geom_jitter(width = 0.2, height = 0.2, alpha = 0.6, colour = "#275882") +
+  geom_smooth(method = "lm", se = TRUE, colour = "#EA8439") +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey50") +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(breaks = 0:10) +
+  labs(
+    x = "Self-Rated Ability (1-10)",
+    y = "Actual Success (out of 10)",
+    title = "Self-Prediction vs Actual Performance",
+    subtitle = "Dashed line = perfect calibration"
+  ) +
+  coord_fixed()
+```
+
+## Connection to Other Concepts
+
+This station demonstrates:
+
+- [Correlational Design](../design/correlational-design.qmd) — examining relationships between variables
+- [Pearson's r](../analysis/pearsons-r.qmd) — measuring correlation strength
+- [Scatterplot](../analysis/scatterplot.qmd) — visualising bivariate relationships
+
+## Tips for Facilitators
+
+- Ensure the throwing line is consistently positioned
+- Use standard ping pong balls and a consistent target
+- Record the dominant hand — this allows hand comparison
+- Encourage honest self-ratings **before** any practice throws
+- Non-dominant hand trials are optional but provide interesting comparisons

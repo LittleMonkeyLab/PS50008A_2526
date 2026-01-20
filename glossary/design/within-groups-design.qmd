@@ -1,0 +1,66 @@
+---
+title: "Within-Groups Design"
+description: "Each participant experiences all conditions of the experiment"
+categories: [Design]
+aliases:
+  - repeated-measures
+  - within-subjects
+related:
+  - between-groups-design
+  - counterbalancing
+  - order-effects
+---
+
+## Definition
+
+A **within-groups design** (also called within-subjects or repeated-measures design) is an experimental approach where the same participants are tested under all conditions of the independent variable.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Participants | Same individuals in all conditions |
+| Comparison | Each person serves as their own control |
+| Sample size | Typically requires fewer participants |
+| Control | Individual differences eliminated |
+
+## Advantages
+
+- **Eliminates individual differences**: Each participant acts as their own control, removing between-person variability
+- **Statistical power**: Requires fewer participants to detect effects
+- **Efficiency**: Collects more data per participant
+
+## Disadvantages
+
+- **Order effects**: Performance may change due to practice, fatigue, or carryover
+- **Demand characteristics**: Participants may guess the hypothesis
+- **Time constraints**: Sessions may be longer
+
+## Example
+
+Testing whether people respond faster to images or words:
+
+1. **Condition A**: Participant responds to 50 images
+2. **Condition B**: Same participant responds to 50 words
+3. **Comparison**: Response times compared within each individual
+
+## Controlling for Order Effects
+
+Use **counterbalancing** to distribute order effects evenly:
+
+- Half participants: Images first, then Words
+- Half participants: Words first, then Images
+
+## Related Concepts
+
+- [Between-Groups Design](between-groups-design.qmd)
+- [Counterbalancing](counterbalancing.qmd)
+- [Paired t-test](../analysis/paired-t-test.qmd) (the analysis typically used)
+
+## DataLab Connection
+
+Several DataLab activities use within-groups designs:
+
+- **[Pre-Post Survey](../datalab/pre-post-survey.qmd)**: Each participant rates mood, energy, and stress before AND after the session — classic pre-post repeated measures
+- **[Reflex Test](../datalab/reflex-test.qmd)**: The same participant completes 5 trials, demonstrating practice effects across repeated measures
+- **[Time Warp](../datalab/time-warp.qmd)**: Each participant completes multiple estimation tasks (time, visual, tactile)

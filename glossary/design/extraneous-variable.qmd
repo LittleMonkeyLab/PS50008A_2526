@@ -1,0 +1,82 @@
+---
+title: "Extraneous Variable"
+description: "An uncontrolled variable that may affect the results"
+categories: [Design]
+aliases:
+  - nuisance-variable
+related:
+  - confounding-variable
+  - random-assignment
+  - variable
+---
+
+## Definition
+
+An **extraneous variable** is any variable other than the independent variable that could potentially influence the dependent variable. These are unwanted sources of variation that can add "noise" to your data.
+
+## Extraneous vs. Confounding
+
+| Extraneous Variable | Confounding Variable |
+|--------------------|---------------------|
+| *Might* affect DV | *Does* affect DV |
+| Adds random noise | Creates systematic bias |
+| Reduces precision | Threatens validity |
+| Affects both groups equally | Varies with the IV |
+
+An extraneous variable becomes a **confound** when it systematically varies with the IV.
+
+## Examples
+
+| Study | Possible Extraneous Variables |
+|-------|------------------------------|
+| Memory test | Room temperature, time of day, noise |
+| Reaction time | Caffeine intake, sleep, motivation |
+| Therapy outcome | Therapist personality, life events |
+
+## Controlling Extraneous Variables
+
+| Method | How It Works |
+|--------|--------------|
+| Standardisation | Keep constant across conditions |
+| Random assignment | Distribute equally across groups |
+| Counterbalancing | Balance order effects |
+| Matching | Pair similar participants |
+| Statistical control | Include as covariate |
+
+## Example: Standardisation
+
+Testing effect of music on concentration:
+
+| Standardised | Variable |
+|--------------|----------|
+| Room | Same quiet room for all |
+| Time | All tested at same time |
+| Instructions | Read from script |
+| Breaks | Same duration |
+| Equipment | Identical for all |
+
+## When Extraneous Variables Matter
+
+```
+High extraneous variation:
+├── More noise in data
+├── Larger error variance
+├── Harder to detect true effects
+└── Need larger sample size
+
+Low extraneous variation:
+├── Cleaner data
+├── Smaller error variance
+├── Easier to detect effects
+└── More statistical power
+```
+
+## Related Concepts
+
+- [Confounding Variable](confounding-variable.qmd) - a problematic extraneous variable
+- [Random Assignment](random-assignment.qmd) - controls extraneous variables
+- [Variable](variable.qmd) - general concept
+
+## DataLab Connection
+
+At the **Reflex Test**, extraneous variables like prior caffeine intake, tiredness, or familiarity with computer tasks could affect reaction times. These add noise but don't systematically favour one condition.

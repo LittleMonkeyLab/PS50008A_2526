@@ -1,0 +1,149 @@
+---
+title: "Pre-Post Survey"
+description: "Within-subjects mood tracking before and after DataLab stations"
+categories: [DataLab]
+duration: "~2 minutes each"
+design: "Within-groups"
+analysis: "Paired t-test"
+related:
+  - within-groups-design
+  - paired-t-test
+  - mean
+  - standard-deviation
+---
+
+## Overview
+
+The **Pre-Post Survey** measures participants' mood, energy, and stress levels **before** and **after** completing the DataLab stations. This creates a classic **within-subjects pre-post design**, allowing us to test whether the DataLab experience affected how participants feel.
+
+## What Participants Do
+
+1. **Part 1 (Before stations)**: Rate current mood, energy, and stress on 1–10 scales
+2. **Complete all six stations** (~80 minutes)
+3. **Part 2 (After stations)**: Rate mood, energy, and stress again using identical scales
+4. **Reflect**: Complete session feedback questions
+
+## Research Questions
+
+> Did participants' mood improve after completing DataLab?
+
+> Did energy levels change during the session?
+
+> Did stress decrease after engaging with the activities?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Within-groups (repeated measures) |
+| IV | Time (pre-session vs post-session) |
+| DV | Mood, energy, and stress ratings (1–10) |
+| Controls | Same scales, same participant, ~2 hours apart |
+
+## Data Variables
+
+### Pre-Session Measures
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mood_pre` | Ordinal | Baseline mood rating | 1–10 |
+| `energy_pre` | Ordinal | Baseline energy rating | 1–10 |
+| `stress_pre` | Ordinal | Baseline stress rating | 1–10 |
+
+### Post-Session Measures
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mood_post` | Ordinal | Post-session mood rating | 1–10 |
+| `energy_post` | Ordinal | Post-session energy rating | 1–10 |
+| `stress_post` | Ordinal | Post-session stress rating | 1–10 |
+
+## Calculated Variables (Change Scores)
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `mood_change` | `mood_post - mood_pre` | + = mood improved |
+| `energy_change` | `energy_post - energy_pre` | + = more energetic |
+| `stress_change` | `stress_post - stress_pre` | − = less stressed (negative is good) |
+
+## Suggested Analyses
+
+**Primary analysis:**
+
+- [Paired t-test](../analysis/paired-t-test.qmd) comparing pre vs post scores
+
+**If assumptions violated:**
+
+- [Wilcoxon signed-rank test](../analysis/wilcoxon-signed-rank.qmd) for non-normal differences
+
+**Descriptive statistics:**
+
+- [Mean](../statistics/mean.qmd) and [SD](../statistics/standard-deviation.qmd) for each time point
+- Visualise with paired boxplots or before/after line plots
+
+**Exploratory analyses:**
+
+- Correlate mood change with personality (extraversion)
+- Compare change scores between Lab 304A vs 304B
+
+## Expected Results
+
+Typical findings in similar studies:
+
+- **Mood**: Often increases slightly after engaging activities
+- **Energy**: May decrease due to fatigue, or increase due to stimulation
+- **Stress**: Often decreases after structured, low-stakes activities
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Calculate change scores
+datalab <- datalab |>
+  mutate(
+    mood_change = mood_post - mood_pre,
+    energy_change = energy_post - energy_pre,
+    stress_change = stress_post - stress_pre
+  )
+
+# Descriptive statistics
+datalab |>
+  summarise(
+    mood_pre_mean = mean(mood_pre, na.rm = TRUE),
+    mood_post_mean = mean(mood_post, na.rm = TRUE),
+    mood_change_mean = mean(mood_change, na.rm = TRUE)
+  )
+
+# Paired t-test for mood
+t.test(datalab$mood_post, datalab$mood_pre, paired = TRUE)
+
+# Visualise change
+library(ggplot2)
+ggplot(datalab, aes(x = mood_pre, y = mood_post)) +
+  geom_point(alpha = 0.5) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  labs(
+    x = "Mood (Pre)",
+    y = "Mood (Post)",
+    title = "Mood Before vs After DataLab"
+  ) +
+  coord_fixed()
+```
+
+## Connection to Other Concepts
+
+This survey demonstrates:
+
+- [Within-Groups Design](../design/within-groups-design.qmd) — same participants measured twice
+- [Paired t-test](../analysis/paired-t-test.qmd) — appropriate test for pre-post data
+- [Mean](../statistics/mean.qmd) — summarising central tendency at each time point
+- [Standard Deviation](../statistics/standard-deviation.qmd) — quantifying variability in responses
+
+## Tips for Facilitators
+
+- Ensure participants complete pre-measures **before** seeing any station materials
+- Remind participants to complete post-measures **immediately** after finishing
+- The 2-hour gap between measures is typical for within-session designs
+- If a participant skips Part 1, their data cannot be used for pre-post analysis

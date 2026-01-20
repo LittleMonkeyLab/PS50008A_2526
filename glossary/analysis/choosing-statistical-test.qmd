@@ -1,0 +1,111 @@
+---
+title: "Choosing a Statistical Test"
+description: "A decision guide for selecting the appropriate statistical test"
+categories: [Analysis]
+aliases:
+  - test-selection
+  - which-test
+related:
+  - paired-t-test
+  - independent-t-test
+  - mann-whitney-u
+  - wilcoxon-signed-rank
+---
+
+## Decision Framework
+
+Selecting the right test depends on three key questions:
+
+1. **What is your research question?** (Difference or relationship?)
+2. **What is your design?** (Related or unrelated samples?)
+3. **What is your data type?** (Level of measurement?)
+
+## Decision Tree for Difference Tests
+
+```
+Is there a difference between conditions?
+              │
+              ▼
+    ┌─────────┴─────────┐
+    │                   │
+Related             Unrelated
+(within-groups)     (between-groups)
+    │                   │
+    ▼                   ▼
+Parametric?         Parametric?
+    │                   │
+┌───┴───┐           ┌───┴───┐
+Yes     No          Yes     No
+│       │           │       │
+▼       ▼           ▼       ▼
+Paired  Wilcoxon    Independent  Mann-Whitney
+t-test  signed-rank t-test       U test
+```
+
+## Quick Reference Table
+
+| Design | Data Type | Parametric Test | Non-Parametric Test |
+|--------|-----------|-----------------|---------------------|
+| Related (within) | Interval/ratio | Paired t-test | Wilcoxon signed-rank |
+| Unrelated (between) | Interval/ratio | Independent t-test | Mann-Whitney U |
+| Relationship | Interval/ratio | Pearson's r | Spearman's rho |
+
+## Parametric Assumptions
+
+Use parametric tests when:
+
+- Data are interval or ratio scale
+- Data are approximately normally distributed
+- For t-tests: homogeneity of variance (equal spread)
+- Sample size is adequate (n > 30 per group is often sufficient)
+
+Use non-parametric tests when:
+
+- Data are ordinal
+- Distribution is heavily skewed
+- Significant outliers present
+- Small sample size with non-normal distribution
+
+## Checking Assumptions
+
+```r
+# Normality
+shapiro.test(scores)  # p > .05 suggests normality
+hist(scores)
+
+# Homogeneity of variance (for independent t-test)
+var.test(score ~ group)  # or
+leveneTest(score ~ group)
+
+# Outliers
+boxplot(scores)
+```
+
+## Common Scenarios
+
+| Scenario | Test |
+|----------|------|
+| Two groups, different participants, RT data | Independent t-test |
+| Same participants, two conditions, skewed data | Wilcoxon signed-rank |
+| Correlation between two ordinal variables | Spearman's rho |
+| Two groups, Likert scale data | Mann-Whitney U |
+
+## When in Doubt
+
+1. Check your assumptions visually (histograms, boxplots)
+2. If assumptions are borderline, run both parametric and non-parametric
+3. If they agree, report the parametric (more powerful)
+4. If they disagree, report the non-parametric (more conservative)
+
+## Related Concepts
+
+- [Paired t-test](paired-t-test.qmd) - related samples, parametric
+- [Independent t-test](independent-t-test.qmd) - unrelated samples, parametric
+- [Mann-Whitney U](mann-whitney-u.qmd) - unrelated samples, non-parametric
+- [Wilcoxon Signed-Rank](wilcoxon-signed-rank.qmd) - related samples, non-parametric
+- [Pearson's r](pearsons-r.qmd) - correlation, parametric
+- [Spearman's rho](spearmans-rho.qmd) - correlation, non-parametric
+
+## DataLab Connection
+
+For **Reflex Test** (within-groups, RT data): Start with paired t-test, but check normality—RT data are often positively skewed, so Wilcoxon may be more appropriate.

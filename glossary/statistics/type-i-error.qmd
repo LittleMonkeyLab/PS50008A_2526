@@ -1,0 +1,82 @@
+---
+title: "Type I Error"
+description: "Rejecting the null hypothesis when it is actually true (false positive)"
+categories: [Statistics]
+aliases:
+  - false-positive
+  - alpha-error
+related:
+  - type-ii-error
+  - null-hypothesis
+  - significance-level
+---
+
+## Definition
+
+A **Type I error** occurs when we reject the null hypothesis when it is actually true. We conclude there is an effect when there really isn't one. This is also called a "false positive."
+
+## Understanding the Error
+
+| Reality | Decision: Reject H₀ | Decision: Don't Reject H₀ |
+|---------|--------------------|-----------------------|
+| H₀ True (no effect) | **Type I Error** ❌ | Correct ✓ |
+| H₀ False (effect exists) | Correct ✓ | Type II Error ❌ |
+
+## Probability of Type I Error
+
+- Denoted by **α** (alpha)
+- Conventionally set at .05 (5%)
+- This is the significance level
+
+$$P(\text{Type I Error}) = \alpha = .05$$
+
+This means: If we run 100 studies where H₀ is true, we'll incorrectly reject it about 5 times.
+
+## Real-World Example
+
+**Drug trial:**
+
+- H₀: Drug has no effect
+- H₁: Drug has an effect
+
+**Type I error:** Concluding the drug works when it actually doesn't
+
+**Consequence:** Ineffective drug gets approved
+
+## Why .05?
+
+The .05 threshold is a convention, meaning:
+
+- We accept a 5% risk of Type I error
+- We're 95% confident when rejecting H₀
+- It's a balance between too strict and too lenient
+
+## Reducing Type I Error
+
+| Method | Trade-off |
+|--------|-----------|
+| Lower α (e.g., .01) | Increases Type II error risk |
+| Bonferroni correction | For multiple comparisons |
+| Pre-registration | Prevents p-hacking |
+| Replication | Confirms findings |
+
+## Type I Error and Multiple Testing
+
+With 20 tests at α = .05:
+
+$$P(\text{at least one Type I}) = 1 - (1-.05)^{20} = .64$$
+
+64% chance of at least one false positive!
+
+Solution: Adjust α for multiple comparisons.
+
+## Related Concepts
+
+- [Type II Error](type-ii-error.qmd) - false negative
+- [Null Hypothesis](null-hypothesis.qmd) - what we're testing
+- [Significance Level](significance-level.qmd) - controls Type I error rate
+- [p-value](p-value.qmd) - probability used in decisions
+
+## DataLab Connection
+
+When analysing DataLab data, remember that a "significant" result has a 5% chance of being a Type I error. Replication and effect sizes help distinguish true effects from false positives.

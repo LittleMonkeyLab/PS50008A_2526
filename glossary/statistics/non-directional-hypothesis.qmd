@@ -1,0 +1,83 @@
+---
+title: "Non-directional Hypothesis"
+description: "Predicts a difference without specifying the direction"
+categories: [Statistics]
+aliases:
+  - two-tailed
+  - two-tailed-hypothesis
+related:
+  - directional-hypothesis
+  - experimental-hypothesis
+  - null-hypothesis
+---
+
+## Definition
+
+A **non-directional hypothesis** (two-tailed) predicts that there will be a difference or relationship between variables, but does not specify the direction of that effect.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| No direction specified | Just predicts "a difference" |
+| Two-tailed test | Critical regions in both tails |
+| More conservative | Harder to reach significance |
+| More flexible | Can detect effects in either direction |
+
+## Examples
+
+| Non-directional | Directional |
+|-----------------|-------------|
+| "There will be **a difference** in scores between groups" | "Group A will score **higher**" |
+| "Caffeine will **affect** memory" | "Caffeine will **improve** memory" |
+| "Age will be **related to** reaction time" | "Age will be **positively related to** reaction time" |
+
+## When to Use Non-directional Hypotheses
+
+Use when:
+
+- No strong theoretical basis for direction
+- Previous research shows mixed results
+- Both directions are theoretically possible
+- You want to detect effects in either direction
+
+## Two-Tailed Testing
+
+```
+Two-tailed test (α = .05):
+
+        ┌──2.5%──┐         ┌──2.5%──┐
+        │░░░░░░░░│         │░░░░░░░░│
+────────┴────────┴─────────┴────────┴────────
+       -1.96     0        +1.96
+       ← Reject H₀ →      ← Reject H₀ →
+
+Significant if result falls in EITHER tail
+```
+
+## Advantages and Disadvantages
+
+| Advantages | Disadvantages |
+|------------|---------------|
+| Detects effects in either direction | Less statistical power |
+| More conservative | Higher critical value |
+| Safer when direction uncertain | May miss real effects |
+
+## Choosing Between Directional and Non-directional
+
+| Consideration | Directional | Non-directional |
+|---------------|-------------|-----------------|
+| Theory | Strong prediction | Uncertain direction |
+| Prior research | Consistent findings | Mixed findings |
+| Interest | One direction only | Either direction |
+| Default | Less common | More common |
+
+## Related Concepts
+
+- [Directional Hypothesis](directional-hypothesis.qmd) - one-tailed
+- [Experimental Hypothesis](experimental-hypothesis.qmd) - general term
+- [Null Hypothesis](null-hypothesis.qmd) - what we test against
+
+## DataLab Connection
+
+For **Sixth Sense**, a non-directional hypothesis may be appropriate: "There will be a significant relationship between belief in intuition and prediction accuracy" (because we don't know if believers will be better or worse).

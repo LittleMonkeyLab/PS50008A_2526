@@ -8,6 +8,7 @@ project:
   - schedule.qmd
   - assessments.qmd
   - assessments/
+  - glossary/
   - resources.qmd
   - week11/
   - week12/
@@ -84,6 +85,8 @@ website:
       href: resources.qmd
     - text: Textbook
       href: textbook/index.qmd
+    - text: Glossary        
+      href: glossary/index.qmd
     right:
     - icon: github
       href: https://github.com/LittleMonkeyLab/PS50008A_2526
@@ -109,6 +112,8 @@ website:
         - text: Research Report
           href: assessments/research-report.qmd
       - resources.qmd
+      - text: Glossary           
+        href: glossary/index.qmd
     - section: Term 2
       contents:
       - section: 'Week 11: DataLab'

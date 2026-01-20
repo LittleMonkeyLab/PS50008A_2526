@@ -1,0 +1,103 @@
+---
+title: "Correlation"
+description: "A measure of the strength and direction of the relationship between two variables"
+categories: [Analysis]
+aliases:
+  - correlation-coefficient
+  - association
+related:
+  - pearsons-r
+  - spearmans-rho
+  - scatterplot
+---
+
+## Definition
+
+**Correlation** measures the strength and direction of the linear relationship between two variables. It tells us how much one variable tends to change when the other changes.
+
+## The Correlation Coefficient
+
+Denoted as **r** (sample) or **ρ** (rho, population), the correlation coefficient ranges from -1 to +1.
+
+| Value | Interpretation |
+|-------|----------------|
+| r = +1 | Perfect positive correlation |
+| r = 0 | No linear correlation |
+| r = -1 | Perfect negative correlation |
+
+## Direction of Correlation
+
+| Type | Description | Example |
+|------|-------------|---------|
+| Positive | Both variables increase together | Height and weight |
+| Negative | One increases, other decreases | Age and reaction time |
+| Zero | No systematic relationship | Shoe size and IQ |
+
+## Strength Guidelines
+
+| r value | Interpretation |
+|---------|----------------|
+| .00 - .10 | Negligible |
+| .10 - .30 | Small/weak |
+| .30 - .50 | Medium/moderate |
+| .50 - .70 | Large/strong |
+| .70 - 1.0 | Very strong |
+
+## Visual Representation
+
+```
+Strong Positive (r ≈ .8)    No Correlation (r ≈ 0)    Strong Negative (r ≈ -.8)
+        ●                         ●  ●                        ●
+       ●                       ●     ●                         ●
+      ●                     ●   ●   ●                           ●
+     ●                       ● ●  ●                              ●
+    ●                      ●    ●                                 ●
+```
+
+## Types of Correlation Tests
+
+| Test | When to Use |
+|------|-------------|
+| Pearson's r | Interval/ratio data, linear relationship |
+| Spearman's rho | Ordinal data, or non-linear monotonic |
+
+## Correlation ≠ Causation
+
+**Critical concept:** Correlation does not imply causation.
+
+```
+A and B are correlated:
+
+Possible explanations:
+1. A causes B        A → B
+2. B causes A        B → A
+3. C causes both     C → A, C → B
+4. Coincidence       No causal link
+```
+
+## R Code Example
+
+```r
+# Pearson correlation
+cor.test(x, y)
+
+# Spearman correlation
+cor.test(x, y, method = "spearman")
+
+# Correlation matrix
+cor(data_frame)
+```
+
+## Reporting (APA Style)
+
+> There was a significant positive correlation between study hours and exam scores, *r*(48) = .65, *p* < .001.
+
+## Related Concepts
+
+- [Pearson's r](pearsons-r.qmd) - parametric correlation
+- [Spearman's rho](spearmans-rho.qmd) - non-parametric correlation
+- [Scatterplot](scatterplot.qmd) - visual representation
+
+## DataLab Connection
+
+The **[Frontal Lob](../datalab/frontal-lob.qmd)** station is designed for correlation analysis: correlate self-rated throwing ability (1–10) with actual performance (successes out of 10). Always visualise with a scatterplot to check for linearity before interpreting Pearson's r.

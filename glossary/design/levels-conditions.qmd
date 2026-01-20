@@ -1,0 +1,92 @@
+---
+title: "Levels and Conditions"
+description: "The different values or states of the independent variable being compared"
+categories: [Design]
+aliases:
+  - levels
+  - conditions
+  - treatment-levels
+related:
+  - independent-variable
+  - experimental-condition
+  - control-condition
+---
+
+## Definition
+
+**Levels** (or **conditions**) are the different values or states of the independent variable that participants experience or are assigned to in an experiment.
+
+## Terminology
+
+| Term | Meaning | Example |
+|------|---------|---------|
+| Level | A specific value of the IV | "Caffeine" level |
+| Condition | The treatment participants receive | "Caffeine condition" |
+| Group | Participants in that condition | "Caffeine group" |
+
+These terms are often used interchangeably.
+
+## Examples
+
+| IV | Number of Levels | Levels |
+|----|-----------------|--------|
+| Caffeine | 2 | Caffeine, No caffeine |
+| Music type | 3 | None, Classical, Pop |
+| Drug dosage | 4 | 0mg, 25mg, 50mg, 100mg |
+| Time of day | 2 | Morning, Evening |
+
+## Key Conditions
+
+### Experimental Condition
+
+Where the variable of interest is present:
+
+- Receives the treatment
+- Drug group, caffeine group
+- The "active" condition
+
+### Control Condition
+
+Where the variable of interest is absent:
+
+- Baseline comparison
+- Placebo group, no-caffeine group
+- Shows what happens without the IV
+
+## Designing Levels
+
+Good levels should be:
+
+| Property | Description |
+|----------|-------------|
+| Distinct | Clearly different from each other |
+| Meaningful | Represent realistic or important values |
+| Balanced | Equal number of participants per level |
+| Ethical | Safe for participants |
+
+## How Many Levels?
+
+| Levels | Advantages | Disadvantages |
+|--------|------------|---------------|
+| 2 | Simple, clear comparison | Can't detect non-linear effects |
+| 3+ | More information, can detect curves | Needs more participants |
+
+```
+2 levels: Can only detect linear effect
+    ●───────────●
+
+3+ levels: Can detect non-linear effect
+    ●
+         ●
+              ●
+```
+
+## Related Concepts
+
+- [Independent Variable](independent-variable.qmd) - has the levels
+- [Experimental Condition](experimental-condition.qmd) - active treatment
+- [Control Condition](control-condition.qmd) - baseline comparison
+
+## DataLab Connection
+
+At the **Reflex Test**, the IV "stimulus type" has two levels: simple and choice. At **Frontal Lob**, the IV "trial type" has levels: congruent and incongruent. Count the levels to understand the design.

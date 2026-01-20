@@ -1,0 +1,89 @@
+---
+title: "Range"
+description: "The difference between the highest and lowest values"
+categories: [Statistics]
+aliases:
+  - data-range
+related:
+  - dispersion
+  - standard-deviation
+  - variance
+---
+
+## Definition
+
+The **range** is the simplest measure of dispersion, calculated as the difference between the maximum and minimum values in a dataset.
+
+## Formula
+
+$$\text{Range} = X_{max} - X_{min}$$
+
+## Example
+
+Dataset: 23, 45, 67, 89, 102
+
+$$\text{Range} = 102 - 23 = 79$$
+
+## Properties
+
+| Property | Description |
+|----------|-------------|
+| Simple | Easy to calculate |
+| Intuitive | Easy to understand |
+| Sensitive to outliers | One extreme value affects it greatly |
+| Ignores middle values | Only uses two data points |
+
+## Advantages and Disadvantages
+
+| Advantages | Disadvantages |
+|------------|---------------|
+| Quick to calculate | Highly sensitive to outliers |
+| Easy to interpret | Ignores all middle values |
+| Good for quick overview | Less informative than SD |
+
+## When to Use
+
+- Quick initial description of data
+- Checking data entry (implausible range suggests errors)
+- Reporting contest results (e.g., "scores ranged from 45 to 98")
+
+## When Not to Use
+
+- When outliers are present (use IQR instead)
+- When precise measure of spread needed (use SD)
+- For comparing variability across groups
+
+## R Code Example
+
+```r
+# Calculate range
+range(scores)  # Returns min and max
+
+# Calculate difference
+diff(range(scores))  # Returns range value
+
+# Or manually
+max(scores) - min(scores)
+```
+
+## Example with Outlier
+
+```
+Without outlier: 45, 48, 50, 52, 55
+Range = 55 - 45 = 10
+
+With outlier: 45, 48, 50, 52, 55, 150
+Range = 150 - 45 = 105
+
+One outlier dramatically changes the range!
+```
+
+## Related Concepts
+
+- [Dispersion](dispersion.qmd) - general concept
+- [Standard Deviation](standard-deviation.qmd) - more robust measure
+- [Variance](variance.qmd) - uses all data points
+
+## DataLab Connection
+
+At **Reflex Test**, check the range of reaction times. Values outside a plausible range (e.g., < 100 ms or > 2000 ms) may indicate errors or inattention and might need to be excluded.

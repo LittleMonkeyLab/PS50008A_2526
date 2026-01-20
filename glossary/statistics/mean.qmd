@@ -1,0 +1,104 @@
+---
+title: "Mean"
+description: "The arithmetic average of a set of values"
+categories: [Statistics]
+aliases:
+  - average
+  - arithmetic-mean
+related:
+  - median
+  - mode
+  - standard-deviation
+---
+
+## Definition
+
+The **mean** (arithmetic average) is calculated by summing all values and dividing by the number of observations. It represents the "balance point" of a distribution.
+
+## Formula
+
+$$\bar{X} = \frac{\sum_{i=1}^{n} X_i}{n}$$
+
+Where:
+
+- $\bar{X}$ = sample mean
+- $X_i$ = each individual value
+- $n$ = number of observations
+
+## Properties
+
+| Property | Description |
+|----------|-------------|
+| Uses all data | Every value contributes |
+| Algebraic centre | Deviations sum to zero |
+| Sensitive to outliers | Extreme values pull the mean |
+| Interval/ratio scale | Requires meaningful numerical distances |
+
+## When to Use the Mean
+
+The mean is most appropriate when:
+
+- Data are approximately normally distributed
+- No extreme outliers present
+- Interval or ratio scale measurement
+- Symmetric distribution
+
+## When to Avoid the Mean
+
+Consider alternatives when:
+
+- Data are heavily skewed (use median)
+- Extreme outliers present (use trimmed mean or median)
+- Ordinal data (use median)
+- Categorical/nominal data (use mode)
+
+## R Code Example
+
+```r
+# Calculate mean
+mean(scores)
+
+# Mean with missing values
+mean(scores, na.rm = TRUE)
+
+# Trimmed mean (removes outliers)
+mean(scores, trim = 0.1)  # removes top/bottom 10%
+```
+
+## Visual Representation
+
+```
+         Normal Distribution
+              ▲
+             ╱│╲
+            ╱ │ ╲
+           ╱  │  ╲
+          ╱   │   ╲
+         ╱    │    ╲
+        ╱     │     ╲
+       ╱      │      ╲
+──────────────┼──────────────►
+              │
+           Mean = Median = Mode
+
+         Positively Skewed
+              ▲
+             ╱╲
+            ╱  ╲
+           ╱    ╲
+          ╱      ╲────
+         ╱            ─────
+──────────────────────────────►
+        │  │   │
+       Mode Median Mean
+```
+
+## Related Concepts
+
+- [Median](median.qmd) - the middle value
+- [Mode](mode.qmd) - the most frequent value
+- [Standard Deviation](standard-deviation.qmd) - spread around the mean
+
+## DataLab Connection
+
+The **[Lady Luck](../datalab/lady-luck.qmd)** station tests whether human-generated "random" numbers have the expected mean. If truly random, the mean of 20 numbers (1–10) should be 5.5. Use a one-sample t-test to compare participants' mean to this theoretical value. At the **[Reflex Test](../datalab/reflex-test.qmd)**, calculate mean reaction time across trials, but check for skewness first — RT data often has positive skew.

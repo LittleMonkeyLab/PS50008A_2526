@@ -1,0 +1,82 @@
+---
+title: "Directional Hypothesis"
+description: "Specifies the direction of the predicted difference or relationship"
+categories: [Statistics]
+aliases:
+  - one-tailed
+  - one-tailed-hypothesis
+related:
+  - non-directional-hypothesis
+  - experimental-hypothesis
+  - null-hypothesis
+---
+
+## Definition
+
+A **directional hypothesis** (one-tailed) specifies not only that there will be a difference or relationship, but also the direction of that effect.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Specifies direction | States which group will be higher/lower |
+| One-tailed test | Critical region in one tail only |
+| More specific | Makes a precise prediction |
+| More power | Easier to detect effect in predicted direction |
+
+## Examples
+
+| Non-directional | Directional |
+|-----------------|-------------|
+| "There will be a difference..." | "Group A will score **higher** than..." |
+| "...will affect..." | "...will **increase**..." |
+| "...will be related to..." | "...will be **positively** related to..." |
+
+## When to Use Directional Hypotheses
+
+Use when:
+
+- Strong theoretical basis for direction
+- Previous research consistently shows direction
+- Only one direction makes logical sense
+- Only interested in effect in one direction
+
+## One-Tailed vs. Two-Tailed Tests
+
+```
+Two-tailed (non-directional):
+        ┌──2.5%──┐         ┌──2.5%──┐
+        │░░░░░░░░│         │░░░░░░░░│
+────────┴────────┴─────────┴────────┴────────
+       -1.96     0        +1.96
+
+One-tailed (directional, predicting higher):
+                           ┌───5%───┐
+                           │░░░░░░░░│
+───────────────────────────┴────────┴────────
+                  0       +1.65
+
+Critical value lower → easier to reach significance
+```
+
+## Advantages and Disadvantages
+
+| Advantages | Disadvantages |
+|------------|---------------|
+| More statistical power | Cannot detect opposite effects |
+| Lower critical value | Must justify direction a priori |
+| Matches specific predictions | Can seem like p-hacking if chosen after data |
+
+## Important Rule
+
+You must choose directional or non-directional **before** collecting data. Choosing after seeing the data is inappropriate and inflates Type I error.
+
+## Related Concepts
+
+- [Non-directional Hypothesis](non-directional-hypothesis.qmd) - two-tailed
+- [Experimental Hypothesis](experimental-hypothesis.qmd) - general term
+- [Null Hypothesis](null-hypothesis.qmd) - what we test against
+
+## DataLab Connection
+
+For **Reflex Test**, a directional hypothesis is appropriate: "Reaction times will be significantly **slower** in the choice condition than in the simple condition" (based on well-established Hick's Law).

@@ -1,0 +1,87 @@
+---
+title: "Interval Data"
+description: "Numerical data with equal intervals but no true zero point"
+categories: [Statistics]
+aliases:
+  - interval-scale
+related:
+  - ordinal-data
+  - ratio-data
+  - levels-of-measurement
+---
+
+## Definition
+
+**Interval data** have equal distances between adjacent values, but no true zero point. Zero is arbitrary rather than representing the complete absence of the property.
+
+## Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Equal intervals | 10-20 = same distance as 40-50 |
+| No true zero | Zero is arbitrary, not "none" |
+| Addition/subtraction | Meaningful operations |
+| Ratios not meaningful | Can't say "twice as much" |
+
+## Examples
+
+| Variable | Why Interval |
+|----------|--------------|
+| Temperature (°C/°F) | 0°C ≠ absence of temperature; 40°C is not "twice as hot" as 20°C |
+| IQ scores | 0 doesn't mean no intelligence; 140 isn't "twice as intelligent" as 70 |
+| Calendar years | Year 0 is arbitrary; 2000 isn't "twice" 1000 |
+| Standardised test scores | Zero is arbitrary |
+
+## Why Ratios Don't Work
+
+**Temperature example:**
+
+- 20°C and 40°C
+- Is 40°C "twice as hot"?
+- Convert to Kelvin: 293K and 313K
+- Now the ratio is 313/293 ≈ 1.07
+
+The ratio changes with the scale because zero is arbitrary.
+
+## Appropriate Statistics
+
+| Statistic | Appropriate |
+|-----------|-------------|
+| Mean | ✓ |
+| Standard deviation | ✓ |
+| t-tests | ✓ |
+| ANOVA | ✓ |
+| Pearson's r | ✓ |
+| Ratios | ✗ |
+
+## Interval vs. Ratio
+
+```
+Interval (Temperature °C):
+    │    │    │    │    │
+   -10   0   10   20   30
+        (arbitrary zero)
+
+Ratio (Temperature Kelvin):
+    │    │    │    │    │
+    0   73   173  273  373
+    (true zero: absolute zero)
+```
+
+## Practical Note
+
+In psychology, most continuous data are treated as interval/ratio, including:
+
+- Questionnaire totals
+- Reaction times (actually ratio)
+- Test scores
+
+## Related Concepts
+
+- [Ordinal Data](ordinal-data.qmd) - unequal intervals
+- [Ratio Data](ratio-data.qmd) - has true zero
+- [Levels of Measurement](levels-of-measurement.qmd) - overview
+
+## DataLab Connection
+
+Standardised scores from questionnaires at DataLab are interval data. You can calculate means and run t-tests, but avoid statements like "twice as anxious."

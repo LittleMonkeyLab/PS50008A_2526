@@ -1,0 +1,107 @@
+---
+title: "Random Assignment"
+description: "Allocating participants to conditions using chance to control for confounds"
+categories: [Design]
+aliases:
+  - randomisation
+  - random-allocation
+related:
+  - between-groups-design
+  - confounding-variable
+  - extraneous-variable
+---
+
+## Definition
+
+**Random assignment** (randomisation) is the process of allocating participants to experimental conditions using chance, ensuring each participant has an equal probability of being assigned to any condition.
+
+## Why Randomise?
+
+Random assignment:
+
+- Distributes individual differences equally across conditions
+- Controls for unknown confounding variables
+- Establishes group equivalence at baseline
+- Enables causal inference
+
+## How It Works
+
+```
+Pool of Participants (N = 60)
+         |
+    Random Assignment
+    (e.g., coin flip, random numbers)
+         |
+    ┌────┴────┐
+    ▼         ▼
+Group A    Group B
+(n = 30)   (n = 30)
+
+Groups should be equivalent on:
+- Age, gender, ability
+- Motivation, prior experience
+- Unknown factors
+```
+
+## Methods of Randomisation
+
+| Method | Description | Best For |
+|--------|-------------|----------|
+| Simple | Each participant randomly assigned | Large samples |
+| Block | Equal numbers in each block | Ensuring equal group sizes |
+| Stratified | Random within strata (e.g., gender) | Controlling key variables |
+
+## Simple Randomisation Example
+
+```r
+# Assign 60 participants to two groups
+set.seed(42)  # For reproducibility
+n <- 60
+
+# Method 1: Random sample
+group <- sample(rep(c("A", "B"), each = n/2))
+
+# Method 2: Random numbers
+group <- ifelse(runif(n) < 0.5, "A", "B")
+
+# Check balance
+table(group)
+```
+
+## Random Assignment vs. Random Sampling
+
+| Random Assignment | Random Sampling |
+|-------------------|-----------------|
+| Assigns to conditions | Selects from population |
+| Controls confounds | Increases representativeness |
+| Internal validity | External validity |
+| Who gets what treatment | Who participates |
+
+## Checking Balance
+
+After randomisation, verify groups are equivalent:
+
+```r
+# Compare groups on baseline variables
+t.test(age ~ group, data = mydata)
+chisq.test(table(mydata$gender, mydata$group))
+```
+
+## When Randomisation Fails
+
+With small samples, random assignment can produce unbalanced groups by chance. Solutions:
+
+- Use larger samples
+- Use stratified randomisation
+- Check and report baseline equivalence
+- Use matching procedures
+
+## Related Concepts
+
+- [Between-Groups Design](between-groups-design.qmd) - requires random assignment
+- [Confounding Variable](confounding-variable.qmd) - what randomisation controls
+- [Extraneous Variable](extraneous-variable.qmd) - distributed by randomisation
+
+## DataLab Connection
+
+When analysing DataLab data with between-groups comparisons, remember that participants self-selected their strategies rather than being randomly assigned. This limits causal conclusions.

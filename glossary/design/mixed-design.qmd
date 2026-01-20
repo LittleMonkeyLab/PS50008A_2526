@@ -1,0 +1,78 @@
+---
+title: "Mixed Design"
+description: "Combines within-groups and between-groups factors in one experiment"
+categories: [Design]
+aliases:
+  - split-plot
+  - mixed-factorial
+related:
+  - within-groups-design
+  - between-groups-design
+  - factorial-design
+---
+
+## Definition
+
+A **mixed design** combines both within-groups and between-groups factors in a single experiment. At least one independent variable is manipulated within participants, while at least one other is manipulated between participants.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Within factor | Same participants across levels |
+| Between factor | Different participants at each level |
+| Interactions | Can examine how factors combine |
+| Complexity | Requires careful planning |
+
+## Structure
+
+```
+                    Between-Groups Factor
+                    (e.g., Training Type)
+                    ┌─────────────┬─────────────┐
+                    │  Method A   │  Method B   │
+Within-Groups       │  (Group 1)  │  (Group 2)  │
+Factor          ├───┼─────────────┼─────────────┤
+(e.g., Time)    │Pre│  Scores     │  Scores     │
+                ├───┼─────────────┼─────────────┤
+                │Pst│  Scores     │  Scores     │
+                    └─────────────┴─────────────┘
+```
+
+## Advantages
+
+- **Efficiency**: Tests multiple questions simultaneously
+- **Interactions**: Reveals how factors combine
+- **Control**: Within factor eliminates individual differences for that comparison
+- **Generalisability**: Tests effects across different groups
+
+## Disadvantages
+
+- **Complexity**: Analysis and interpretation more challenging
+- **Sample size**: Still requires adequate participants for between factor
+- **Assumptions**: More statistical assumptions to meet
+
+## Example
+
+Testing whether two teaching methods differ in improving test scores over time:
+
+- **Between factor**: Teaching method (Traditional vs. Active Learning)
+- **Within factor**: Time (Pre-test vs. Post-test)
+- **Research question**: Do the methods differ in how much improvement occurs?
+
+## Analysis
+
+Mixed designs typically require:
+
+- **Mixed ANOVA** (also called split-plot ANOVA)
+- Tests main effects of both factors
+- Tests the interaction between factors
+
+## Related Concepts
+
+- [Within-Groups Design](within-groups-design.qmd)
+- [Between-Groups Design](between-groups-design.qmd)
+
+## DataLab Connection
+
+DataLab data can support mixed designs when combining within-participant comparisons (e.g., reaction time conditions) with between-participant factors (e.g., self-reported characteristics).

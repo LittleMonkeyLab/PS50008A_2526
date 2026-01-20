@@ -1,0 +1,108 @@
+---
+title: "Mode"
+description: "The most frequently occurring value in a dataset"
+categories: [Statistics]
+aliases:
+  - modal-value
+related:
+  - mean
+  - median
+  - frequency-distribution
+---
+
+## Definition
+
+The **mode** is the value that appears most frequently in a dataset. It is the only measure of central tendency that can be used with nominal (categorical) data.
+
+## Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Frequency-based | Depends on count, not value |
+| Any scale | Works with all measurement levels |
+| May not exist | Possible when all values unique |
+| May be multiple | Bimodal, multimodal distributions |
+
+## Types of Modes
+
+| Type | Description | Example |
+|------|-------------|---------|
+| Unimodal | One mode | 2, 3, **4**, **4**, **4**, 5, 6 |
+| Bimodal | Two modes | **2**, **2**, 4, 5, **7**, **7** |
+| Multimodal | Multiple modes | **1**, **1**, 3, **5**, **5**, **7**, **7** |
+| No mode | All values unique | 1, 2, 3, 4, 5 |
+
+## When to Use the Mode
+
+The mode is most appropriate when:
+
+- Data are categorical (nominal)
+- Identifying the most common response
+- Describing non-numeric data
+- Identifying peaks in a distribution
+
+## When Mode is Less Useful
+
+- Continuous data with many unique values
+- Small sample sizes
+- When you need mathematical properties
+
+## R Code Example
+
+```r
+# R doesn't have a built-in mode function
+# Create your own
+get_mode <- function(x) {
+  uniq <- unique(x)
+  uniq[which.max(tabulate(match(x, uniq)))]
+}
+
+get_mode(responses)
+
+# Or use table to see frequencies
+table(responses)
+sort(table(responses), decreasing = TRUE)
+
+# For multiple modes
+get_modes <- function(x) {
+  tab <- table(x)
+  names(tab)[tab == max(tab)]
+}
+```
+
+## Visual Representation
+
+```
+         Bimodal Distribution
+              ▲
+             ╱╲    ╱╲
+            ╱  ╲  ╱  ╲
+           ╱    ╲╱    ╲
+          ╱            ╲
+         ╱              ╲
+──────────────────────────────►
+         │        │
+        Mode₁    Mode₂
+```
+
+## Example: Categorical Data
+
+Survey question: "What is your favourite research method?"
+
+| Method | Count |
+|--------|-------|
+| Experiment | 45 |
+| Survey | 32 |
+| Interview | 18 |
+| Observation | 5 |
+
+**Mode**: Experiment (most frequently chosen)
+
+## Related Concepts
+
+- [Mean](mean.qmd) - the arithmetic average
+- [Median](median.qmd) - the middle value
+
+## DataLab Connection
+
+At the **Lady Luck** station, identify the mode to determine the most popular gambling strategy chosen by participants. At the **Sixth Sense** station, find the modal confidence rating.

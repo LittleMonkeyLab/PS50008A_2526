@@ -1,0 +1,101 @@
+---
+title: "Mann-Whitney U Test"
+description: "Non-parametric test comparing distributions between two independent groups"
+categories: [Analysis]
+aliases:
+  - wilcoxon-rank-sum
+  - mann-whitney-wilcoxon
+related:
+  - independent-t-test
+  - wilcoxon-signed-rank
+  - between-groups-design
+---
+
+## Definition
+
+The **Mann-Whitney U test** (also called Wilcoxon rank-sum test) is a non-parametric test that compares the distributions of two independent groups. It tests whether one group tends to have larger values than the other.
+
+## When to Use
+
+Use a Mann-Whitney U test when:
+
+- Comparing two independent groups
+- Data are ordinal, or continuous but non-normal
+- Sample sizes are small
+- Outliers are present
+- Assumptions of the independent t-test are violated
+
+## How It Works
+
+1. Combine all observations from both groups
+2. Rank all values from lowest to highest
+3. Sum the ranks for each group
+4. Compare rank sums to expected values
+
+## The Test Statistic
+
+$$U = n_1 n_2 + \frac{n_1(n_1 + 1)}{2} - R_1$$
+
+Where:
+
+- $n_1, n_2$ = sample sizes of groups
+- $R_1$ = sum of ranks in group 1
+
+## Assumptions
+
+| Assumption | Notes |
+|------------|-------|
+| Independence | Observations between groups independent |
+| Ordinal data | At minimum, can rank the values |
+| Similar shape | Distributions have similar shape |
+
+## Effect Size
+
+Calculate **rank-biserial correlation** ($r$):
+
+$$r = \frac{2U}{n_1 n_2} - 1$$
+
+| r value | Interpretation |
+|---------|----------------|
+| 0.1 | Small effect |
+| 0.3 | Medium effect |
+| 0.5 | Large effect |
+
+## R Code Example
+
+```r
+# Mann-Whitney U test (Wilcoxon rank-sum)
+wilcox.test(score ~ group, data = mydata)
+
+# With exact p-value for small samples
+wilcox.test(score ~ group, data = mydata, exact = TRUE)
+
+# Effect size
+library(effectsize)
+rank_biserial(score ~ group, data = mydata)
+```
+
+## Reporting (APA Style)
+
+> A Mann-Whitney U test indicated that scores were significantly higher in Group A (*Mdn* = 75) than Group B (*Mdn* = 68), *U* = 245, *p* = .023, *r* = .34.
+
+Note: Report medians rather than means for non-parametric tests.
+
+## Comparison with Independent t-test
+
+| Feature | Independent t-test | Mann-Whitney U |
+|---------|-------------------|----------------|
+| Data type | Continuous, normal | Ordinal or non-normal |
+| Central tendency | Compares means | Compares distributions |
+| Assumptions | More restrictive | Fewer assumptions |
+| Power | Higher when assumptions met | Lower but more robust |
+
+## Related Concepts
+
+- [Independent t-test](independent-t-test.qmd) (parametric alternative)
+- [Wilcoxon Signed-Rank](wilcoxon-signed-rank.qmd) (paired non-parametric)
+- [Between-Groups Design](../design/between-groups-design.qmd)
+
+## DataLab Connection
+
+When DataLab data show non-normal distributions (common with reaction times), the Mann-Whitney U provides a robust between-groups analysis.

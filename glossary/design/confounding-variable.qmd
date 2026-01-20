@@ -1,0 +1,92 @@
+---
+title: "Confounding Variable"
+description: "A variable that systematically varies with the IV, threatening causal inference"
+categories: [Design]
+aliases:
+  - confound
+  - third-variable
+related:
+  - extraneous-variable
+  - random-assignment
+  - internal-validity
+---
+
+## Definition
+
+A **confounding variable** (or confound) is a variable that:
+
+1. Varies systematically with the independent variable
+2. Also affects the dependent variable
+
+This makes it impossible to determine whether changes in the DV are due to the IV or the confound.
+
+## The Problem
+
+```
+                    Confound
+                   ╱        ╲
+                  ↓          ↓
+               IV   →→→?→→→   DV
+
+Is the relationship IV→DV real?
+Or is it actually: Confound→DV?
+We can't tell!
+```
+
+## Classic Example
+
+> "Ice cream sales and drowning deaths are correlated"
+
+| Variable | Role |
+|----------|------|
+| Ice cream sales | Appears to be IV |
+| Drowning deaths | Appears to be DV |
+| **Hot weather** | **Confound** - causes both! |
+
+## Confound in Experiment
+
+Testing effect of exercise on mood:
+
+| Group | Manipulation | Confound |
+|-------|--------------|----------|
+| Exercise | 30 min jogging | Outdoors, social |
+| Control | Stay seated | Indoors, alone |
+
+The exercise group is also outdoors and may socialise—these are confounded with exercise!
+
+## Detecting Confounds
+
+Ask:
+
+1. Does this variable vary with the IV?
+2. Could it affect the DV?
+
+If yes to both → potential confound
+
+## Preventing Confounds
+
+| Strategy | How It Helps |
+|----------|--------------|
+| Random assignment | Distributes individual differences |
+| Careful design | Match conditions on everything but IV |
+| Control conditions | Isolate the IV effect |
+| Standardisation | Keep other variables constant |
+
+## Fixed Example
+
+| Group | Manipulation | Controlled |
+|-------|--------------|------------|
+| Exercise | 30 min jogging | Outdoors, alone |
+| Control | 30 min walking | Outdoors, alone |
+
+Now only the exercise intensity differs.
+
+## Related Concepts
+
+- [Extraneous Variable](extraneous-variable.qmd) - potential confound before it's confirmed
+- [Random Assignment](random-assignment.qmd) - prevents confounds
+- [Variable](variable.qmd) - general concept
+
+## DataLab Connection
+
+At **Lady Luck**, risk-taking behaviour and gender may be confounded—if more males choose risky options, we can't tell if it's gender or some other variable associated with gender that drives the effect.

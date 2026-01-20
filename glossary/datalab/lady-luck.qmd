@@ -1,0 +1,185 @@
+---
+title: "Station 5: Lady Luck"
+description: "Human randomness perception and cognitive biases"
+categories: [DataLab]
+station-number: 5
+duration: "~10 minutes"
+design: "Within-groups"
+analysis: "One-sample t-test, frequency distributions"
+related:
+  - mean
+  - p-value
+  - null-hypothesis
+---
+
+![](images/station5-lady-luck.png){width="300" fig-align="center"}
+
+## Station Overview
+
+The **Lady Luck** station investigates how well humans can generate and perceive randomness. Participants generate "random" numbers, roll dice, and flip coins. The key finding: **humans are bad at being random** — we systematically avoid repetitions and produce sequences that are "too varied" to be truly random.
+
+## What Participants Do
+
+### Part A: Random Number Generation
+1. Say **20 "random" numbers** between 1 and 10 aloud
+2. Partner records each number
+3. Try to be as random as possible!
+
+### Part B: Dice Rolling
+1. Predict: Will you roll more 6s than expected by chance?
+2. Roll the die **10 times**
+3. Record each outcome (1–6)
+
+### Part C: Coin Flipping
+1. Flip a coin **10 times**
+2. Record each outcome (Heads or Tails)
+3. Note the **longest run** of the same outcome
+
+## Research Questions
+
+> Do human-generated "random" numbers differ from true random?
+
+> Do people roll more or fewer 6s than expected (1.67 out of 10)?
+
+> Do people expect fewer runs in random sequences than actually occur?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Comparison to theoretical distributions |
+| Benchmark | True random: mean = 5.5, equal digit frequencies |
+| Measure | Generated sequence properties vs expected |
+| Controls | No feedback during generation |
+
+## Data Variables
+
+### Random Number Generation
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `rand_num1` – `rand_num20` | Integer | Generated "random" numbers | 1–10 |
+
+### Dice Rolling
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `dice_predict` | Categorical | Prediction about 6s | Yes, No, Unsure |
+| `dice_roll1` – `dice_roll10` | Integer | Dice outcomes | 1–6 |
+
+### Coin Flipping
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `coin_flip1` – `coin_flip10` | Categorical | Coin outcomes | Heads, Tails |
+| `coin_longest_run` | Count | Longest same-outcome streak | 1–10 |
+
+## Calculated Variables
+
+| Variable | Description | True Random Expected |
+|----------|-------------|---------------------|
+| `rand_mean` | Mean of 20 numbers | 5.5 |
+| `rand_repeats` | Adjacent repetitions (same number twice in a row) | ~2 |
+| `dice_sixes` | Count of 6s rolled | ~1.67 |
+| `coin_heads` | Count of heads | ~5 |
+
+::: {.callout-note}
+## The Psychology of Randomness
+Humans typically:
+
+- **Avoid repetitions** — we think 3, 7, 2, 9, 4 is "more random" than 3, 3, 7, 7, 2
+- **Underestimate runs** — in 10 coin flips, a run of 3+ is actually common!
+- **Use the gambler's fallacy** — thinking tails is "due" after several heads
+
+These biases make human-generated "random" sequences systematically different from true random.
+:::
+
+## Expected Results
+
+| Measure | Human Tendency | True Random |
+|---------|----------------|-------------|
+| Mean of 20 numbers | ~5.5 (similar) | 5.5 |
+| Adjacent repetitions | ~0.5–1 (too few) | ~2 |
+| Digit frequencies | Too uniform | More variable |
+| Coin runs | Surprise at long runs | Common |
+
+## Suggested Analyses
+
+**Primary analyses:**
+
+- **One-sample t-test**: Is mean of generated numbers different from 5.5?
+- Count repetitions and compare to expected (~2 in 20 numbers)
+
+**Dice and coin analyses:**
+
+- Compare dice 6s to expected (binomial test)
+- Count coin heads vs expected 5
+
+**Exploratory analyses:**
+
+- Frequency distribution of each digit (1–10)
+- Longest run length vs expectations
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Calculate mean of random numbers (wide to long)
+library(tidyr)
+datalab_rand <- datalab |>
+  select(participant_id, rand_num1:rand_num20) |>
+  pivot_longer(
+    cols = starts_with("rand_num"),
+    names_to = "position",
+    values_to = "number"
+  )
+
+# Mean per participant
+rand_means <- datalab_rand |>
+  group_by(participant_id) |>
+  summarise(rand_mean = mean(number, na.rm = TRUE))
+
+# One-sample t-test: Is mean different from 5.5?
+t.test(rand_means$rand_mean, mu = 5.5)
+
+# Count repetitions (adjacent same numbers)
+count_reps <- function(nums) {
+  sum(nums[-1] == nums[-length(nums)], na.rm = TRUE)
+}
+
+datalab <- datalab |>
+  rowwise() |>
+  mutate(rand_repeats = count_reps(c_across(rand_num1:rand_num20)))
+
+# Compare repetitions to expected (~2)
+t.test(datalab$rand_repeats, mu = 2)
+
+# Visualise digit frequencies
+ggplot(datalab_rand, aes(x = factor(number))) +
+  geom_bar(fill = "#275882") +
+  geom_hline(yintercept = nrow(datalab_rand) / 10,
+             colour = "#EA8439", linewidth = 1, linetype = "dashed") +
+  labs(
+    x = "Number Generated",
+    y = "Frequency",
+    title = "Human 'Random' Number Distribution",
+    subtitle = "Dashed line = expected if truly random"
+  )
+```
+
+## Connection to Other Concepts
+
+This station demonstrates:
+
+- [Mean](../statistics/mean.qmd) — comparing human-generated mean to expected
+- [P-value](../statistics/p-value.qmd) — testing against theoretical values
+- [Null Hypothesis](../statistics/null-hypothesis.qmd) — H₀: mean = 5.5 (truly random)
+
+## Tips for Facilitators
+
+- Encourage participants to "be as random as possible"
+- Partner should record numbers **without comment** (no feedback)
+- Dice and coins should be standard, fair equipment
+- Note any observable strategies (patterns, sequences)

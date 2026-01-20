@@ -1,0 +1,96 @@
+---
+title: "Practice Effect"
+description: "Improvement in performance due to repeated exposure or familiarity with a task"
+categories: [Design]
+aliases:
+  - learning-effect
+related:
+  - order-effects
+  - within-groups-design
+  - counterbalancing
+---
+
+## Definition
+
+A **practice effect** is the improvement in performance that occurs when participants become more familiar with a task through repetition, independent of the experimental manipulation.
+
+## Why Practice Effects Occur
+
+- Learning the task requirements
+- Developing efficient strategies
+- Reduced anxiety/unfamiliarity
+- Motor skill improvement
+- Understanding response options
+
+## Example
+
+Testing memory with two techniques:
+
+| Order | Technique | Score | Interpretation |
+|-------|-----------|-------|----------------|
+| 1st | Method A | 12/20 | Baseline |
+| 2nd | Method B | 16/20 | Better method or practice? |
+
+The 4-point improvement could be:
+
+- Method B is genuinely better, OR
+- Participant learned the task
+
+## Controlling Practice Effects
+
+### 1. Counterbalancing
+
+```
+Group 1: Method A → Method B
+Group 2: Method B → Method A
+
+If Method B still better in both orders → genuine effect
+```
+
+### 2. Practice Trials
+
+Give participants practice before the real task:
+
+```
+Practice trials (not scored)
+    ↓
+Condition A (scored)
+    ↓
+Condition B (scored)
+```
+
+### 3. Long Delays Between Conditions
+
+Allows any practice benefit to dissipate.
+
+### 4. Different Stimuli
+
+Use different (but equivalent) materials in each condition.
+
+## Distinguishing Practice from True Effects
+
+Check the condition × order interaction:
+
+```r
+# If this interaction is significant, order matters
+summary(aov(score ~ condition * order + Error(id/condition)))
+```
+
+```
+                    Order
+                 A-first    B-first
+Condition A        12         14      ← Both improve
+Condition B        18         16      ← with practice
+
+If B > A in both orders → genuine condition effect
+```
+
+## Related Concepts
+
+- [Order Effects](order-effects.qmd) - the broader category
+- [Within-Groups Design](within-groups-design.qmd) - where practice effects occur
+- [Counterbalancing](counterbalancing.qmd) - main control strategy
+
+## DataLab Connection
+
+The **[Reflex Test](../datalab/reflex-test.qmd)** station directly demonstrates practice effects: participants catch a dropped ruler across 5 trials. Reaction times typically improve from Trial 1 to Trial 5 as participants learn the timing and develop better strategies. A paired t-test comparing Trial 1 vs Trial 5 can quantify the practice effect.

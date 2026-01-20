@@ -1,0 +1,62 @@
+---
+title: "Variable"
+description: "Something that varies; can have different values or levels"
+categories: [Design]
+aliases:
+  - variables
+related:
+  - independent-variable
+  - dependent-variable
+  - extraneous-variable
+---
+
+## Definition
+
+A **variable** is anything that can vary or take on different values. In research, variables are the characteristics or properties we measure, manipulate, or control.
+
+## Types of Variables in Experiments
+
+| Variable Type | Definition | Role |
+|--------------|------------|------|
+| Independent (IV) | Manipulated by researcher | Presumed cause |
+| Dependent (DV) | Measured outcome | Presumed effect |
+| Extraneous | Uncontrolled variables | Potential noise |
+| Confounding | Varies systematically with IV | Threatens validity |
+
+## Examples
+
+| Research Question | IV | DV |
+|-------------------|----|----|
+| Does caffeine improve memory? | Caffeine (yes/no) | Memory score |
+| Does music affect concentration? | Music type (none/classical/pop) | Task accuracy |
+| Does sleep duration affect mood? | Hours of sleep | Mood rating |
+
+## Variable vs. Constant
+
+| Variable | Constant |
+|----------|----------|
+| Changes across conditions/participants | Kept the same |
+| Source of variation we study | Controlled to reduce noise |
+| Example: Drug dosage | Example: Room temperature |
+
+## Operationalising Variables
+
+Variables must be **operationalised** - defined in terms of how they are measured or manipulated:
+
+| Abstract Concept | Operationalised As |
+|------------------|-------------------|
+| Intelligence | Score on IQ test |
+| Stress | Cortisol level in saliva |
+| Happiness | Rating on 1-10 scale |
+| Attention | Reaction time on task |
+
+## Related Concepts
+
+- [Independent Variable](independent-variable.qmd) - the manipulated variable
+- [Dependent Variable](dependent-variable.qmd) - the measured variable
+- [Extraneous Variable](extraneous-variable.qmd) - unwanted sources of variation
+- [Operationalisation](operationalisation.qmd) - how variables are defined
+
+## DataLab Connection
+
+At each DataLab station, identify the IV (what differs between conditions) and the DV (what is measured). For example, at the **Reflex Test**, the IV is stimulus type and the DV is reaction time.

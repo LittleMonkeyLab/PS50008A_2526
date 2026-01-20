@@ -1,0 +1,93 @@
+---
+title: "Significance Level"
+description: "The threshold probability for rejecting the null hypothesis, typically set at .05"
+categories: [Statistics]
+aliases:
+  - alpha-level
+  - critical-alpha
+related:
+  - p-value
+  - type-i-error
+  - null-hypothesis
+---
+
+## Definition
+
+The **significance level** (α, alpha) is the threshold probability used to decide whether to reject the null hypothesis. It represents the maximum acceptable risk of making a Type I error.
+
+## Standard Levels
+
+| Significance Level | Interpretation | Use |
+|-------------------|----------------|-----|
+| α = .05 | 5% risk | Standard in psychology |
+| α = .01 | 1% risk | More conservative |
+| α = .001 | 0.1% risk | Very conservative |
+
+## How It Works
+
+```
+Decision rule:
+
+If p-value < α → Reject H₀ (significant)
+If p-value ≥ α → Fail to reject H₀ (not significant)
+
+With α = .05:
+  p = .03 → Significant (p < .05) ✓
+  p = .07 → Not significant (p > .05) ✗
+```
+
+## Why .05?
+
+The .05 level was popularised by Ronald Fisher and has become convention:
+
+- 1 in 20 chance of false positive
+- Balance between Type I and Type II errors
+- Not a natural law—just a social convention
+
+## Critical Values
+
+The significance level determines the **critical value**—the threshold for the test statistic:
+
+| Test | α = .05 (two-tailed) | α = .01 (two-tailed) |
+|------|---------------------|---------------------|
+| z-test | ±1.96 | ±2.58 |
+| t-test (df=30) | ±2.04 | ±2.75 |
+
+## Setting α Before Testing
+
+**Important:** The significance level must be set *before* collecting data.
+
+- Choosing α after seeing results is inappropriate
+- Pre-registration helps ensure this
+
+## Multiple Comparisons
+
+When running multiple tests, the overall Type I error rate inflates:
+
+| Tests | Familywise α |
+|-------|--------------|
+| 1 | .05 |
+| 2 | .10 |
+| 5 | .23 |
+| 20 | .64 |
+
+**Solution:** Bonferroni correction: α' = α / number of tests
+
+## Significance ≠ Importance
+
+| Significant result | Non-significant result |
+|-------------------|----------------------|
+| p < α | p ≥ α |
+| Effect probably exists | Insufficient evidence |
+| May be trivially small | May have missed real effect |
+| Still need effect size | May lack power |
+
+## Related Concepts
+
+- [p-value](p-value.qmd) - compared to α
+- [Type I Error](type-i-error.qmd) - probability equals α
+- [Null Hypothesis](null-hypothesis.qmd) - what we're testing
+
+## DataLab Connection
+
+When analysing DataLab data, use the conventional α = .05. Remember that "significant" means unlikely under the null hypothesis—not necessarily important or large in magnitude.

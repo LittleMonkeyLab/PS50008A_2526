@@ -1,0 +1,86 @@
+---
+title: "Experimental Hypothesis"
+description: "Predicts that the IV will affect the DV"
+categories: [Statistics]
+aliases:
+  - H1
+  - alternative-hypothesis
+  - research-hypothesis
+related:
+  - null-hypothesis
+  - directional-hypothesis
+  - non-directional-hypothesis
+---
+
+## Definition
+
+The **experimental hypothesis** (H₁ or Hₐ) predicts that the independent variable will have an effect on the dependent variable. It is also called the alternative hypothesis or research hypothesis.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Predicts effect | States IV will influence DV |
+| Testable | Can be supported or refuted by data |
+| Based on theory | Derived from existing knowledge |
+| Symbol | H₁ or Hₐ |
+
+## Types of Experimental Hypotheses
+
+| Type | Description | Example |
+|------|-------------|---------|
+| Directional | Specifies direction | "Caffeine will *increase* alertness" |
+| Non-directional | Predicts difference only | "Caffeine will *affect* alertness" |
+
+## Writing Hypotheses
+
+A good hypothesis:
+
+1. States the IV and DV clearly
+2. Predicts the relationship
+3. Is operationalised
+4. Is testable
+
+### Example
+
+**Abstract:** "Caffeine affects memory"
+
+**Operationalised:** "Participants who consume 200mg caffeine will recall significantly more words from a 30-word list than participants who consume a placebo."
+
+## Hypothesis Testing Logic
+
+```
+State hypotheses
+      │
+      ▼
+H₀: No effect (µ₁ = µ₂)
+H₁: Effect exists (µ₁ ≠ µ₂)
+      │
+      ▼
+Collect data
+      │
+      ▼
+Calculate p-value
+      │
+      ├── p < .05 → Reject H₀, support H₁
+      │
+      └── p ≥ .05 → Fail to reject H₀
+```
+
+## Important Notes
+
+- We never "prove" H₁
+- We either reject or fail to reject H₀
+- Supporting H₁ means the data are unlikely under H₀
+- Non-significant results don't prove H₀ is true
+
+## Related Concepts
+
+- [Null Hypothesis](null-hypothesis.qmd) - the "no effect" prediction
+- [Directional Hypothesis](directional-hypothesis.qmd) - one-tailed
+- [Non-directional Hypothesis](non-directional-hypothesis.qmd) - two-tailed
+- [p-value](p-value.qmd) - probability used to evaluate hypotheses
+
+## DataLab Connection
+
+For each DataLab station, formulate a clear experimental hypothesis. For **Reflex Test**: "Reaction times will be significantly faster in the simple condition than in the choice condition."

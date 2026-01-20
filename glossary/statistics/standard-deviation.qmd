@@ -1,0 +1,103 @@
+---
+title: "Standard Deviation"
+description: "The average distance of scores from the mean"
+categories: [Statistics]
+aliases:
+  - sd
+  - sigma
+related:
+  - variance
+  - mean
+  - normal-distribution
+---
+
+## Definition
+
+The **standard deviation** measures the average distance of data points from the mean. It quantifies the spread or dispersion of values in a dataset.
+
+## Formula
+
+**Sample standard deviation:**
+
+$$s = \sqrt{\frac{\sum_{i=1}^{n}(X_i - \bar{X})^2}{n-1}}$$
+
+**Population standard deviation:**
+
+$$\sigma = \sqrt{\frac{\sum_{i=1}^{N}(X_i - \mu)^2}{N}}$$
+
+Note: Sample formula uses n-1 (Bessel's correction) for unbiased estimation.
+
+## Interpretation
+
+| SD value | Interpretation |
+|----------|----------------|
+| Small SD | Values clustered near the mean |
+| Large SD | Values spread widely from mean |
+| SD = 0 | All values identical |
+
+## The 68-95-99.7 Rule
+
+For normally distributed data:
+
+```
+                     ▲
+                    ╱│╲
+                   ╱ │ ╲
+            68%   ╱  │  ╲   
+                 ╱   │   ╲
+           95%  ╱    │    ╲  
+               ╱     │     ╲
+          99.7%      │      
+──────────┼────┼─────┼─────┼────┼──────►
+        -3SD -2SD  -1SD   Mean  +1SD +2SD +3SD
+
+• 68% of values within ±1 SD
+• 95% of values within ±2 SD  
+• 99.7% of values within ±3 SD
+```
+
+## Calculation Steps
+
+1. Calculate the mean
+2. Subtract mean from each value (deviations)
+3. Square each deviation
+4. Sum the squared deviations
+5. Divide by n-1 (variance)
+6. Take the square root
+
+## R Code Example
+
+```r
+# Standard deviation
+sd(scores)
+
+# With missing values
+sd(scores, na.rm = TRUE)
+
+# Population SD (divide by n, not n-1)
+sqrt(mean((scores - mean(scores))^2))
+
+# Variance (SD squared)
+var(scores)
+```
+
+## Reporting (APA Style)
+
+> Participants had a mean reaction time of 450 ms (*SD* = 52).
+
+Always report SD alongside the mean to convey both central tendency and spread.
+
+## Comparing Variability
+
+**Coefficient of Variation** (for comparing SDs across different scales):
+
+$$CV = \frac{SD}{Mean} \times 100$$
+
+## Related Concepts
+
+- [Variance](variance.qmd) - SD squared
+- [Mean](mean.qmd) - centre of the distribution
+
+## DataLab Connection
+
+Calculate SD for reaction times at the **Reflex Test** to understand individual consistency. High SD suggests variable performance; low SD suggests consistent responding.

@@ -1,0 +1,108 @@
+---
+title: "p-value"
+description: "The probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true"
+categories: [Statistics]
+aliases:
+  - significance
+  - probability-value
+related:
+  - effect-size
+  - paired-t-test
+  - independent-t-test
+---
+
+## Definition
+
+A **p-value** is the probability of obtaining results at least as extreme as those observed, assuming the null hypothesis is true. It is NOT the probability that the null hypothesis is true.
+
+## Common Misconceptions
+
+| Wrong interpretation | Correct interpretation |
+|---------------------|----------------------|
+| Probability the null is true | Probability of data given null |
+| Probability results are due to chance | Extremity of data under null |
+| Effect size measure | Only indicates statistical significance |
+| Smaller p = larger effect | Smaller p = stronger evidence against null |
+
+## The Logic of p-values
+
+1. Assume null hypothesis is true (no effect)
+2. Calculate probability of getting data this extreme or more
+3. If probability very low (p < .05), reject null
+4. Conclude the effect is "statistically significant"
+
+## Significance Thresholds
+
+| p-value | Interpretation |
+|---------|----------------|
+| p > .05 | Not significant |
+| p < .05 | Significant * |
+| p < .01 | Significant ** |
+| p < .001 | Significant *** |
+
+Note: The .05 threshold is a convention, not a law of nature.
+
+## What p-values Depend On
+
+| Factor | Effect on p-value |
+|--------|-------------------|
+| Effect size | Larger effect → smaller p |
+| Sample size | Larger n → smaller p |
+| Variability | Less noise → smaller p |
+
+## Critical Perspective
+
+Problems with over-reliance on p-values:
+
+- Dichotomous thinking (significant/not)
+- Ignores effect size
+- Sample size dependent
+- Publication bias ("p-hacking")
+- .049 vs .051 treated very differently
+
+## R Code Example
+
+```r
+# The p-value from a t-test
+result <- t.test(group_a, group_b)
+result$p.value
+
+# Rounding
+round(result$p.value, 3)
+
+# Reporting
+if (result$p.value < .001) {
+  "p < .001"
+} else {
+  paste0("p = ", round(result$p.value, 3))
+}
+```
+
+## Reporting (APA Style)
+
+> *t*(58) = 3.21, *p* = .002
+
+For very small p-values:
+
+> *t*(58) = 5.67, *p* < .001
+
+Always report exact p-values unless p < .001.
+
+## Effect Size Companion
+
+Always report effect sizes alongside p-values:
+
+| p-value alone | p-value + effect size |
+|---------------|----------------------|
+| "Significant" | "Significant, small effect (d = 0.25)" |
+| Incomplete | Complete picture |
+
+## Related Concepts
+
+- [Effect Size](effect-size.qmd)
+- [Paired t-test](../analysis/paired-t-test.qmd)
+- [Independent t-test](../analysis/independent-t-test.qmd)
+
+## DataLab Connection
+
+The **[Sixth Sense](../datalab/sixth-sense.qmd)** station tests performance against chance: with 6 trials, we expect 3 correct (50%) by random guessing. The p-value tells us the probability of observing our data if the null hypothesis (no ability to detect gaze) is true. At **[Lady Luck](../datalab/lady-luck.qmd)**, test whether human-generated "random" sequences differ significantly from true random (p-value from one-sample t-test against mean = 5.5).

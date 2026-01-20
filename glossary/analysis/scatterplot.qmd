@@ -1,0 +1,103 @@
+---
+title: "Scatterplot"
+description: "A graph showing the relationship between two continuous variables"
+categories: [Analysis]
+aliases:
+  - scatter-diagram
+  - scatter-graph
+related:
+  - correlation
+  - pearsons-r
+  - spearmans-rho
+---
+
+## Definition
+
+A **scatterplot** is a graph that displays the relationship between two continuous variables, with one variable on the x-axis and the other on the y-axis. Each point represents one observation.
+
+## Purpose
+
+Scatterplots help you:
+
+- Visualise relationships between variables
+- Identify the direction of correlation (positive/negative)
+- Assess linearity of the relationship
+- Detect outliers
+- Check assumptions before correlation analysis
+
+## Interpreting Patterns
+
+```
+Positive Correlation    Negative Correlation    No Correlation
+        ●                        ●                   ●  ●
+       ●  ●                       ●  ●             ●     ●
+      ●  ●                          ●  ●        ●   ●   ●
+     ●  ●                             ●  ●       ● ●  ●
+    ●  ●                                ●  ●   ●    ●
+
+Curved (Non-linear)     Outlier Effect
+     ●●●●                      ●
+   ●●
+  ●                       ●●●●●●
+ ●                        ●●●●●●
+●●●●●                     ●●●●●●
+```
+
+## R Code Example
+
+```r
+# Basic scatterplot
+plot(x, y,
+     xlab = "Variable X",
+     ylab = "Variable Y",
+     main = "Relationship between X and Y")
+
+# With ggplot2
+library(ggplot2)
+ggplot(data, aes(x = variable1, y = variable2)) +
+  geom_point() +
+  geom_smooth(method = "lm") +  # Add trend line
+  labs(x = "Variable 1", y = "Variable 2")
+
+# Check linearity before Pearson's r
+plot(x, y)
+abline(lm(y ~ x), col = "red")
+```
+
+## Adding a Line of Best Fit
+
+The **regression line** summarises the relationship:
+
+```
+         ●
+        ●╱●
+       ╱●
+     ●╱●
+    ╱●●
+   ╱●
+  ●
+
+Line of best fit minimises
+distance from points to line
+```
+
+## What to Look For
+
+| Pattern | Interpretation |
+|---------|----------------|
+| Upward slope | Positive correlation |
+| Downward slope | Negative correlation |
+| Tight cluster | Strong correlation |
+| Wide scatter | Weak correlation |
+| Curve | Non-linear relationship |
+| Isolated point | Potential outlier |
+
+## Related Concepts
+
+- [Correlation](correlation.qmd) - what scatterplots visualise
+- [Pearson's r](pearsons-r.qmd) - assumes linearity
+- [Spearman's rho](spearmans-rho.qmd) - for monotonic relationships
+
+## DataLab Connection
+
+Before calculating correlations with DataLab data, always create a scatterplot. At **Lady Luck**, plot risk preference vs. proportion of risky choices to check whether the relationship is linear.

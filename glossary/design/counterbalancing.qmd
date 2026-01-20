@@ -1,0 +1,131 @@
+---
+title: "Counterbalancing"
+description: "Systematically varying the order of conditions to control for order effects"
+categories: [Design]
+aliases:
+  - latin-square
+  - order-control
+related:
+  - within-groups-design
+  - order-effects
+  - experimental-control
+---
+
+## Definition
+
+**Counterbalancing** is a technique used in within-groups designs to distribute order effects evenly across conditions. Different participants experience conditions in different orders.
+
+## Why Counterbalancing Matters
+
+In within-groups designs, the order in which conditions are presented can affect performance through:
+
+- **Practice effects**: Performance improves with repetition
+- **Fatigue effects**: Performance declines over time
+- **Carryover effects**: One condition influences the next
+
+## Types of Counterbalancing
+
+### Complete Counterbalancing
+
+Every possible order is used equally. Works well with 2-3 conditions.
+
+**2 conditions (A, B):**
+
+| Group | Order |
+|-------|-------|
+| 1 | A → B |
+| 2 | B → A |
+
+**3 conditions (A, B, C):** 3! = 6 orders
+
+| Group | Order |
+|-------|-------|
+| 1 | A → B → C |
+| 2 | A → C → B |
+| 3 | B → A → C |
+| 4 | B → C → A |
+| 5 | C → A → B |
+| 6 | C → B → A |
+
+### Latin Square
+
+Each condition appears in each position, but not all orders used.
+
+**4 conditions:**
+
+| Group | 1st | 2nd | 3rd | 4th |
+|-------|-----|-----|-----|-----|
+| 1 | A | B | C | D |
+| 2 | B | C | D | A |
+| 3 | C | D | A | B |
+| 4 | D | A | B | C |
+
+More efficient than complete counterbalancing for many conditions.
+
+### Reverse Counterbalancing (ABBA)
+
+Simple approach for two conditions:
+
+```
+First half:   A → B
+Second half:  B → A
+```
+
+This controls for linear trends (e.g., steady fatigue).
+
+## Implementation
+
+```
+Sample: N = 40 participants
+Conditions: 2 (Visual, Auditory)
+
+Random assignment to order:
+  - 20 participants: Visual first, then Auditory
+  - 20 participants: Auditory first, then Visual
+
+Analysis: Include order as a factor to check for effects
+```
+
+## R Code Example
+
+```r
+# Create counterbalanced design
+set.seed(42)
+n <- 40
+participants <- 1:n
+
+# Assign to orders
+orders <- rep(c("AB", "BA"), each = n/2)
+orders <- sample(orders)  # Randomise assignment
+
+design <- tibble(
+  participant_id = participants,
+  order = orders,
+  first_condition = ifelse(order == "AB", "Visual", "Auditory"),
+  second_condition = ifelse(order == "AB", "Auditory", "Visual")
+)
+
+# Check balance
+table(design$order)
+
+# Analyse including order
+model <- aov(dv ~ condition * order + Error(participant_id/condition), data = mydata)
+```
+
+## Checking for Order Effects
+
+Always test whether order affected results:
+
+1. Include order as a between-subjects factor
+2. Test the condition × order interaction
+3. If significant, order effects may be present
+
+## Related Concepts
+
+- [Within-Groups Design](within-groups-design.qmd)
+- [Mixed Design](mixed-design.qmd)
+- [Order Effects](order-effects.qmd)
+
+## DataLab Connection
+
+The **Reflex Test** station should use counterbalancing when comparing stimulus conditions. Half of participants complete visual trials first, half complete auditory first.

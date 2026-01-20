@@ -1,0 +1,75 @@
+---
+title: "Experimental Condition"
+description: "The condition where the causal variable of interest is present"
+categories: [Design]
+aliases:
+  - treatment-condition
+  - treatment-group
+related:
+  - control-condition
+  - levels-conditions
+  - independent-variable
+---
+
+## Definition
+
+The **experimental condition** (or treatment condition) is where the independent variable of interest is present or applied. Participants in this condition receive the treatment being tested.
+
+## Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Treatment present | Active ingredient/manipulation applied |
+| Test group | Used to test the hypothesis |
+| Compared to control | Evaluated against baseline |
+
+## Examples
+
+| Study | Experimental Condition |
+|-------|----------------------|
+| Drug trial | Receives active medication |
+| Caffeine study | Drinks caffeinated coffee |
+| Therapy evaluation | Receives CBT therapy |
+| Teaching method | Uses new teaching approach |
+
+## Experimental vs. Control
+
+```
+Research: Does caffeine improve alertness?
+
+Experimental Condition     Control Condition
+        │                        │
+        ▼                        ▼
+   Caffeinated              Decaffeinated
+     coffee                   coffee
+        │                        │
+        ▼                        ▼
+   Measure                   Measure
+   alertness                 alertness
+        │                        │
+        └────────┬───────────────┘
+                 │
+                 ▼
+              Compare
+```
+
+## Multiple Experimental Conditions
+
+Studies can have several experimental conditions:
+
+| Condition | Description |
+|-----------|-------------|
+| Control | Placebo (0mg caffeine) |
+| Experimental 1 | Low dose (50mg caffeine) |
+| Experimental 2 | Medium dose (100mg caffeine) |
+| Experimental 3 | High dose (200mg caffeine) |
+
+## Related Concepts
+
+- [Control Condition](control-condition.qmd) - the comparison group
+- [Levels/Conditions](levels-conditions.qmd) - all conditions in the study
+- [Independent Variable](independent-variable.qmd) - defines the conditions
+
+## DataLab Connection
+
+At the **Frontal Lob** station, the incongruent trials represent the experimental condition where interference is present, while congruent trials serve as the control.

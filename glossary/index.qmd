@@ -1,0 +1,57 @@
+---
+title: "Research Methods Glossary"
+subtitle: "Key concepts, statistical methods, and DataLab activities"
+page-layout: full
+toc: false
+listing:
+  - id: glossary-listing
+    contents: 
+      - design/*.qmd
+      - datalab/*.qmd
+      - analysis/*.qmd
+      - statistics/*.qmd
+    type: table
+    sort: "title asc"
+    categories: numbered
+    sort-ui: [title, categories]
+    filter-ui: [title, categories, description]
+    page-size: 25
+    table-striped: true
+    table-hover: true
+    fields: [title, categories, description]
+    field-display-names:
+      title: "Term"
+      categories: "Category"
+      description: "Definition"
+    field-links: [title]
+---
+
+## Browse All Glossary Items
+
+Use the category sidebar to filter by topic, or search and sort using the controls below.
+
+::: {#glossary-listing}
+:::
+
+---
+
+## Categories Overview
+
+| Category | Description |
+|----------|-------------|
+| **Design** | Research designs and experimental structures |
+| **Analysis** | Statistical tests and analytical methods |
+| **Statistics** | Descriptive statistics and measures |
+| **DataLab** | Hands-on data collection stations |
+
+---
+
+## How to Use This Glossary
+
+Each entry includes a brief definition in the table view. Click any term to see the full explanation with examples, formulas, and related concepts.
+
+You can:
+
+- **Filter by category** using the sidebar
+- **Search** for specific terms using the search box
+- **Sort** by name or category using the dropdown

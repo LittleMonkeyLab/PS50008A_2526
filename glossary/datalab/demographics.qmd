@@ -1,0 +1,132 @@
+---
+title: "Demographics & Baseline Measures"
+description: "Participant background information and TIPI personality collected at DataLab"
+categories: [DataLab]
+duration: "~5 minutes"
+design: "Survey"
+analysis: "Descriptive statistics"
+related:
+  - nominal-data
+  - ordinal-data
+  - interval-data
+  - levels-of-measurement
+---
+
+## Overview
+
+The **Demographics & Baseline** section of the DataLab survey (Part 1) collects background information about participants before they begin the experimental stations. This data enables between-groups comparisons, provides potential covariates for analysis, and helps characterise the sample in research reports.
+
+## What Participants Provide
+
+1. **Consent** to participate in the study
+2. **Basic identifiers** — lab room assignment, group colour for rotation
+3. **Sleep and lifestyle** — hours slept, caffeine intake, exercise, screen time
+4. **Personality** — Ten-Item Personality Inventory (TIPI) measuring Big Five traits
+
+## Participant Identifiers
+
+| Variable | Type | Description | Values |
+|----------|------|-------------|--------|
+| `participant_id` | Integer | Unique participant number | 1–60 |
+| `lab_room` | Categorical | Lab assignment | 304A, 304B |
+| `group_colour` | Categorical | Rotation group | Red, Blue, Green, Yellow, Orange, Purple, Pink, White, Solo |
+| `session_date` | Date | Auto-captured timestamp | ISO format |
+
+## Sleep & Lifestyle Variables
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `sleep_hours` | Continuous | Hours of sleep last night | 0–14 |
+| `sleep_quality` | Ordinal | Sleep quality rating | 1 (Very poor) – 5 (Excellent) |
+| `caffeine_today` | Count | Cups of tea/coffee today | 0–10 |
+| `exercise_week` | Count | Days exercised this week | 0–7 |
+| `screen_estimate` | Continuous | Estimated daily phone screen time (hours) | 0–16 |
+
+## Personality (TIPI) Variables
+
+The **Ten-Item Personality Inventory** measures the Big Five personality traits using 10 questions (2 per trait). Scores are averaged to produce a single score per trait.
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `extraversion` | Continuous | Extraversion score | 1–7 |
+| `agreeableness` | Continuous | Agreeableness score | 1–7 |
+| `conscientiousness` | Continuous | Conscientiousness score | 1–7 |
+| `emotional_stability` | Continuous | Emotional stability score | 1–7 |
+| `openness` | Continuous | Openness to experience | 1–7 |
+
+## Data Types and Levels of Measurement
+
+| Variable | Level of Measurement |
+|----------|---------------------|
+| Lab room | Nominal |
+| Group colour | Nominal |
+| Sleep hours | Ratio |
+| Sleep quality | Ordinal |
+| TIPI traits | Interval (treated as continuous) |
+
+## Uses in Analysis
+
+**Descriptive purposes:**
+
+- Characterise the sample in your Method section
+- Report demographic summary statistics
+- Check sample representativeness
+
+**Analytical purposes:**
+
+- **Grouping variable**: Compare outcomes between Lab 304A vs 304B
+- **Covariates**: Control for sleep, caffeine, or personality in analyses
+- **Correlational research**: Explore relationships between personality and performance
+
+## Research Questions
+
+> Do personality traits predict performance on DataLab tasks?
+
+> Does sleep quality relate to reaction time or memory performance?
+
+> Are there differences between lab groups on baseline measures?
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Descriptive statistics for sleep
+datalab |>
+  summarise(
+    mean_sleep = mean(sleep_hours, na.rm = TRUE),
+    sd_sleep = sd(sleep_hours, na.rm = TRUE),
+    mean_caffeine = mean(caffeine_today, na.rm = TRUE)
+  )
+
+# TIPI personality summary
+datalab |>
+  summarise(
+    across(
+      c(extraversion, agreeableness, conscientiousness,
+        emotional_stability, openness),
+      list(mean = mean, sd = sd),
+      na.rm = TRUE
+    )
+  )
+
+# Compare labs on personality
+datalab |>
+  group_by(lab_room) |>
+  summarise(mean_extra = mean(extraversion, na.rm = TRUE))
+```
+
+## Connection to Other Concepts
+
+- [Nominal Data](../statistics/nominal-data.qmd) — lab room and group colour
+- [Ordinal Data](../statistics/ordinal-data.qmd) — sleep quality ratings
+- [Interval Data](../statistics/interval-data.qmd) — TIPI personality scores
+- [Levels of Measurement](../statistics/levels-of-measurement.qmd) — choosing appropriate statistics
+
+## Ethical Considerations
+
+- Data collected anonymously (participant IDs not linked to names)
+- Voluntary disclosure of all information
+- Stored securely on university systems
+- Used only for educational research purposes

@@ -1,0 +1,98 @@
+---
+title: "Correlational Design"
+description: "Measures the relationship between variables without manipulation"
+categories: [Design]
+aliases:
+  - correlational-study
+  - observational-study
+related:
+  - correlation
+  - pearsons-r
+  - spearmans-rho
+---
+
+## Definition
+
+A **correlational design** measures the relationship between two or more variables without manipulating any of them. It examines how variables naturally co-vary.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| No manipulation | Variables measured, not controlled |
+| Natural variation | Uses existing differences |
+| Relationship focus | Tests association, not causation |
+| Both variables measured | Neither is IV/DV in causal sense |
+
+## Comparison with Experimental Design
+
+| Experimental | Correlational |
+|--------------|---------------|
+| Manipulates IV | Measures all variables |
+| Random assignment | Natural groups |
+| Tests causation | Tests association |
+| Controls confounds | Confounds remain |
+
+## Examples
+
+| Variables | Research Question |
+|-----------|-------------------|
+| Study hours, exam grades | Do students who study more get better grades? |
+| Anxiety, sleep quality | Is anxiety related to sleep problems? |
+| Age, reaction time | Does reaction time change with age? |
+| Social media use, wellbeing | Is social media use related to mental health? |
+
+## Why Use Correlational Designs?
+
+When you **cannot** manipulate the IV:
+
+- Ethical constraints (can't make people smoke)
+- Practical constraints (can't change someone's age)
+- Natural phenomena (can't control earthquakes)
+
+When you **want** to study real-world relationships:
+
+- More ecologically valid
+- Natural setting
+- No artificial manipulation
+
+## The Causation Problem
+
+```
+Correlation: A and B are related
+
+Possible explanations:
+1. A → B         A causes B
+2. B → A         B causes A
+3. C → A, B      Third variable causes both
+4. Coincidence   No real relationship
+
+CANNOT determine which is true!
+```
+
+## Third Variable Problem
+
+**Example:** Ice cream sales correlate with drowning deaths.
+
+- Does ice cream cause drowning? No!
+- Hot weather (third variable) causes both
+
+## Reporting Correlational Findings
+
+Use appropriate language:
+
+| Avoid | Use Instead |
+|-------|-------------|
+| "X causes Y" | "X is associated with Y" |
+| "X affects Y" | "X is related to Y" |
+| "X leads to Y" | "X correlates with Y" |
+
+## Related Concepts
+
+- [Correlation](../analysis/correlation.qmd) - the statistical test
+- [Pearson's r](../analysis/pearsons-r.qmd) - parametric correlation
+- [Spearman's rho](../analysis/spearmans-rho.qmd) - non-parametric correlation
+
+## DataLab Connection
+
+The **[Frontal Lob](../datalab/frontal-lob.qmd)** station is a correlational study: participants rate their own throwing ability (1–10), then perform the task. We correlate self-rating with actual performance. This is correlational because we measure both variables but don't manipulate either — we cannot conclude that self-belief causes performance (or vice versa).

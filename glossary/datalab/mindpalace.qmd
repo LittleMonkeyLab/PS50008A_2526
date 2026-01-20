@@ -1,0 +1,174 @@
+---
+title: "Station 2: Mind Palace"
+description: "Memory test exploring serial position effect and word type"
+categories: [DataLab]
+station-number: 2
+duration: "~5 minutes"
+design: "Between-groups"
+analysis: "Independent t-test, serial position analysis"
+related:
+  - between-groups-design
+  - independent-t-test
+  - mean
+---
+
+![](images/station2-mind-palace.png){width="300" fig-align="center"}
+
+## Station Overview
+
+The **Mind Palace** station tests short-term memory using a classic word list paradigm. Participants study a list of 10 words, complete a distractor task, then recall as many words as possible. This station demonstrates the **serial position effect** — the tendency to remember words at the beginning (primacy) and end (recency) of a list better than those in the middle.
+
+Additionally, this station implements a **between-groups manipulation**: Lab 304A sees abstract words with background music, while Lab 304B sees concrete words in silence.
+
+## What Participants Do
+
+1. **STUDY (30 seconds)**: Memorise 10 words shown on screen
+2. **DISTRACT (60 seconds)**: Complete simple maths problems
+3. **RECALL (90 seconds)**: Write down as many words as remembered on paper
+4. **RECORD**: Enter results in Qualtrics — total recalled, which positions, intrusions
+
+## Research Questions
+
+> Do participants recall more words from the beginning and end of the list (serial position effect)?
+
+> Do concrete words lead to better recall than abstract words (between-labs comparison)?
+
+> Does background music affect memory performance?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Between-groups (lab room) + Within-subjects (serial position) |
+| IV 1 | Word type: Abstract (Lab 304A) vs Concrete (Lab 304B) |
+| IV 2 | Serial position (positions 1–10) |
+| DV | Number of words correctly recalled |
+| Controls | Same presentation time, same distractor task |
+
+## Data Variables
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `mem_total` | Count | Words correctly recalled | 0–10 |
+| `mem_pos1` – `mem_pos10` | Categorical | Recalled each position? | Yes, No, Unsure |
+| `mem_intrusions` | Count | False memories (wrong words) | 0–10 |
+| `mem_strategy` | Text | Strategy used (if any) | Open text |
+
+## Between-Groups Conditions
+
+| Lab Room | Word Type | Background |
+|----------|-----------|------------|
+| 304A | Abstract words | Music playing |
+| 304B | Concrete words | Silence |
+
+::: {.callout-note}
+## Word Types
+- **Concrete words**: Easily visualised (e.g., apple, chair, dog)
+- **Abstract words**: Cannot be directly sensed (e.g., justice, freedom, thought)
+
+Research typically shows concrete words are easier to remember due to dual-coding (visual + verbal).
+:::
+
+## Serial Position Effect
+
+| Position | Effect | Explanation |
+|----------|--------|-------------|
+| 1–3 | **Primacy** | More rehearsal time, transferred to long-term memory |
+| 4–7 | **Asymptote** | Less rehearsal, interference from adjacent items |
+| 8–10 | **Recency** | Still in short-term memory at recall |
+
+## Expected Results
+
+| Metric | Typical Range |
+|--------|---------------|
+| Total recalled | 5–7 out of 10 |
+| Primacy (pos 1–3) | 60–80% recall |
+| Middle (pos 4–7) | 40–60% recall |
+| Recency (pos 8–10) | 70–90% recall |
+| Intrusions | 0–2 words |
+
+## Suggested Analyses
+
+**Primary analyses:**
+
+- [Independent t-test](../analysis/independent-t-test.qmd) comparing Lab 304A vs 304B on total recall
+- Serial position curve (line graph of recall % by position)
+
+**Descriptive statistics:**
+
+- [Mean](../statistics/mean.qmd) total recall per lab room
+- Proportion recalled at each position
+
+**Exploratory analyses:**
+
+- Do intrusions differ between labs?
+- Does strategy use predict performance?
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Compare total recall between labs
+datalab |>
+  group_by(lab_room) |>
+  summarise(
+    mean_recall = mean(mem_total, na.rm = TRUE),
+    sd_recall = sd(mem_total, na.rm = TRUE),
+    n = n()
+  )
+
+# Independent t-test
+t.test(mem_total ~ lab_room, data = datalab)
+
+# Serial position analysis
+library(tidyr)
+library(ggplot2)
+
+# Convert position data to long format
+position_data <- datalab |>
+  select(participant_id, lab_room, mem_pos1:mem_pos10) |>
+  pivot_longer(
+    cols = starts_with("mem_pos"),
+    names_to = "position",
+    values_to = "recalled"
+  ) |>
+  mutate(
+    position = parse_number(position),
+    recalled = if_else(recalled == "Yes", 1, 0)
+  )
+
+# Calculate proportion recalled at each position
+serial_curve <- position_data |>
+  group_by(position) |>
+  summarise(prop_recalled = mean(recalled, na.rm = TRUE))
+
+# Plot serial position curve
+ggplot(serial_curve, aes(x = position, y = prop_recalled)) +
+  geom_line(colour = "#275882", linewidth = 1.2) +
+  geom_point(colour = "#EA8439", size = 3) +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent) +
+  labs(
+    x = "Serial Position",
+    y = "Proportion Recalled",
+    title = "Serial Position Curve"
+  )
+```
+
+## Connection to Other Concepts
+
+This station demonstrates:
+
+- [Between-Groups Design](../design/between-groups-design.qmd) — different participants in different conditions
+- [Independent t-test](../analysis/independent-t-test.qmd) — comparing two independent groups
+- [Mean](../statistics/mean.qmd) — summarising recall performance
+
+## Tips for Facilitators
+
+- This station is completed **together** as a whole-lab activity
+- Ensure participants only look at **their assigned list** (left or right side of screen)
+- The 60-second distractor task is crucial — it clears short-term memory
+- Remind participants to write on paper during recall, not look back at the screen
+- Intrusions (false memories) are valuable data — encourage honest reporting

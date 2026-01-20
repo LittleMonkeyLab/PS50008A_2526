@@ -1,0 +1,101 @@
+---
+title: "Pearson's r"
+description: "Parametric correlation coefficient for interval/ratio data"
+categories: [Analysis]
+aliases:
+  - pearson-correlation
+  - product-moment-correlation
+related:
+  - spearmans-rho
+  - correlation
+  - interval-data
+---
+
+## Definition
+
+**Pearson's r** (also called Pearson's product-moment correlation coefficient) measures the strength and direction of the linear relationship between two continuous variables. It is the parametric correlation test.
+
+## When to Use
+
+Use Pearson's r when:
+
+- Both variables are interval or ratio scale
+- Relationship is linear
+- Data are approximately normally distributed
+- No significant outliers
+- Homoscedasticity (equal variance throughout range)
+
+## The Formula
+
+$$r = \frac{\sum(X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum(X_i - \bar{X})^2 \sum(Y_i - \bar{Y})^2}}$$
+
+Or using z-scores:
+
+$$r = \frac{\sum z_X z_Y}{n-1}$$
+
+## Interpretation
+
+| r value | Interpretation |
+|---------|----------------|
+| .10 | Small effect |
+| .30 | Medium effect |
+| .50 | Large effect |
+
+## Assumptions
+
+| Assumption | Check |
+|------------|-------|
+| Linearity | Scatterplot shows linear pattern |
+| Normality | Both variables approximately normal |
+| Homoscedasticity | Equal spread throughout |
+| No outliers | Extreme values can distort r |
+| Continuous data | Interval or ratio scale |
+
+## R Code Example
+
+```r
+# Pearson correlation with significance test
+cor.test(x, y, method = "pearson")
+
+# Just the correlation coefficient
+cor(x, y)
+
+# Correlation matrix for multiple variables
+cor(data_frame)
+
+# With confidence intervals
+cor.test(x, y)$conf.int
+```
+
+## Reporting (APA Style)
+
+> A Pearson correlation revealed a significant positive relationship between study hours and exam scores, *r*(48) = .65, *p* < .001, 95% CI [.45, .79].
+
+Where:
+
+- r = correlation coefficient
+- (48) = degrees of freedom (N - 2)
+- p = p-value
+- CI = confidence interval
+
+## Coefficient of Determination
+
+**r²** tells us the proportion of variance explained:
+
+$$r^2 = \text{shared variance}$$
+
+If r = .70, then r² = .49, meaning 49% of variance in Y is explained by X.
+
+## Non-Parametric Alternative
+
+If assumptions are violated, use [Spearman's rho](spearmans-rho.qmd).
+
+## Related Concepts
+
+- [Spearman's rho](spearmans-rho.qmd) - non-parametric alternative
+- [Correlation](correlation.qmd) - general concept
+- [Interval Data](../statistics/interval-data.qmd) - required data type
+
+## DataLab Connection
+
+The **[Frontal Lob](../datalab/frontal-lob.qmd)** station data is ideal for Pearson's r: correlate self-rated throwing ability with actual success rate. Both are continuous variables, and the relationship is expected to be linear. Calculate r² to determine how much variance in performance is "explained" by self-ratings.

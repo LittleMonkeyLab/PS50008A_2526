@@ -1,0 +1,103 @@
+---
+title: "Order Effects"
+description: "Changes in performance due to the sequence of conditions in within-groups designs"
+categories: [Design]
+aliases:
+  - sequence-effects
+  - position-effects
+related:
+  - within-groups-design
+  - counterbalancing
+  - practice-effect
+---
+
+## Definition
+
+**Order effects** occur in within-groups designs when performance changes simply because of the sequence in which conditions are experienced, rather than the conditions themselves.
+
+## Types of Order Effects
+
+| Effect | Description | Example |
+|--------|-------------|---------|
+| Practice | Performance improves with repetition | Faster responses in later trials |
+| Fatigue | Performance declines over time | More errors when tired |
+| Carryover | One condition affects the next | Mood from task 1 influences task 2 |
+| Sensitisation | Earlier exposure changes response | Noticing differences after practice |
+
+## Visual Representation
+
+```
+Practice Effect:
+Performance ▲
+            │        ●
+            │     ●
+            │  ●
+            │●
+            └──────────────► Time/Trials
+            Condition A → Condition B
+
+Fatigue Effect:
+Performance ▲
+            │●
+            │  ●
+            │     ●
+            │        ●
+            └──────────────► Time/Trials
+            Condition A → Condition B
+```
+
+## The Problem
+
+In a within-groups design:
+
+- If everyone does A then B
+- And B scores higher than A
+- Is it because B is genuinely better?
+- Or because participants improved with practice?
+
+**We can't tell!** The effect is confounded with order.
+
+## Solutions
+
+### 1. Counterbalancing
+
+Half do A→B, half do B→A
+
+```
+Group 1: A → B
+Group 2: B → A
+
+Order effects balance out across groups
+```
+
+### 2. Randomisation
+
+Randomise condition order for each participant
+
+### 3. Include Order as a Factor
+
+Analyse whether order interacted with condition:
+
+```r
+# Check for order effects
+model <- aov(dv ~ condition * order + Error(participant_id/condition))
+summary(model)
+```
+
+## Detecting Order Effects
+
+Signs that order effects may be present:
+
+- Significant condition × order interaction
+- Performance systematically changes across trials
+- Large difference between first and last conditions
+
+## Related Concepts
+
+- [Within-Groups Design](within-groups-design.qmd) - where order effects occur
+- [Counterbalancing](counterbalancing.qmd) - the solution to order effects
+- [Practice Effect](practice-effect.qmd) - a specific type of order effect
+
+## DataLab Connection
+
+At the **Reflex Test** station, reaction times typically improve across trials due to practice. Counterbalancing the order of simple vs. choice conditions helps separate true condition differences from practice effects.

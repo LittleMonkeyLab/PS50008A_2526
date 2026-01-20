@@ -1,0 +1,167 @@
+---
+title: "Station 3: Time Warp"
+description: "Time and magnitude estimation tasks"
+categories: [DataLab]
+station-number: 3
+duration: "~10 minutes"
+design: "Within-groups"
+analysis: "One-sample t-test, error analysis"
+related:
+  - within-groups-design
+  - mean
+  - standard-deviation
+---
+
+![](images/station3-time-warp.png){width="300" fig-align="center"}
+
+## Station Overview
+
+The **Time Warp** station investigates how accurately we perceive time and physical dimensions. Participants estimate a 60-second interval, visually estimate line lengths, tactilely estimate string lengths (with eyes closed), and guess the room temperature. This station generates **error scores** that reveal systematic biases in human perception.
+
+## What Participants Do
+
+### Part A: 60-Second Estimation
+1. Close your eyes
+2. When your partner says "Start", sense time passing
+3. Say "Stop" when you think **60 seconds** have passed
+4. Partner records the actual time elapsed
+
+### Part B: Visual Estimation (Lines)
+1. Look at **Line Card A** — estimate its length in cm
+2. Repeat with **Line Card B**
+
+### Part C: Tactile Estimation (Strings)
+1. Feel **String 1** with eyes closed — estimate its length in cm
+2. Repeat with **String 2**
+
+### Part D: Temperature Estimation
+1. Guess the current room temperature in °C
+
+## Research Questions
+
+> Do people systematically over- or under-estimate 60 seconds?
+
+> Is visual estimation more accurate than tactile estimation?
+
+> Does counting during time estimation improve accuracy?
+
+## Experimental Design
+
+| Element | Description |
+|---------|-------------|
+| Design | Within-groups (multiple estimation tasks) |
+| IV | Estimation modality (time, visual, tactile, temperature) |
+| DV | Estimation error (estimate − actual) |
+| Controls | Consistent environment, no visible clocks |
+
+## Data Variables
+
+| Variable | Type | Description | Range |
+|----------|------|-------------|-------|
+| `time_estimate_sec` | Continuous | 60-second estimation | ~30–90 sec |
+| `line_a_estimate_cm` | Continuous | Line A length estimate | 1–25 cm |
+| `line_b_estimate_cm` | Continuous | Line B length estimate | 1–25 cm |
+| `string1_estimate_cm` | Continuous | String 1 estimate (tactile) | 1–40 cm |
+| `string2_estimate_cm` | Continuous | String 2 estimate (tactile) | 1–40 cm |
+| `temp_estimate_c` | Continuous | Room temperature guess | 15–30 °C |
+| `time_counting` | Categorical | Counted during timing? | Yes steadily, Yes sometimes, No |
+| `music_condition` | Categorical | Lab condition | silence, music |
+
+## Calculated Variables (Error Scores)
+
+| Variable | Formula | Interpretation |
+|----------|---------|----------------|
+| `time_error` | `time_estimate - 60` | + = overestimate (felt longer) |
+| `line_a_error` | `estimate - actual` | + = thought longer than reality |
+| `line_b_error` | `estimate - actual` | + = thought longer than reality |
+| `string1_error` | `estimate - actual` | + = thought longer than reality |
+| `string2_error` | `estimate - actual` | + = thought longer than reality |
+| `temp_error` | `estimate - actual` | + = thought warmer than reality |
+
+## Expected Results
+
+| Measure | Typical Finding |
+|---------|-----------------|
+| 60-second estimation | Usually underestimate (say "stop" early) |
+| Time error | Mean around −5 to −15 seconds |
+| Visual vs tactile | Visual typically more accurate |
+| Counters | More accurate than non-counters |
+
+::: {.callout-tip}
+## Why Do We Underestimate Time?
+When waiting without distraction, people often feel time passing more slowly than it actually is, leading them to say "stop" before 60 seconds have elapsed. This is called **temporal underestimation**.
+:::
+
+## Suggested Analyses
+
+**Primary analyses:**
+
+- **One-sample t-test**: Is mean time error different from 0?
+- **Paired comparison**: Visual vs tactile estimation accuracy
+
+**Descriptive statistics:**
+
+- [Mean](../statistics/mean.qmd) and [SD](../statistics/standard-deviation.qmd) of each error score
+- Proportion of over- vs under-estimators
+
+**Exploratory analyses:**
+
+- Does counting improve time estimation accuracy?
+- Compare music vs silence conditions on time perception
+
+## R Code Starter
+
+```r
+# Load data
+datalab <- read_csv("datalab_data.csv")
+
+# Calculate time error
+datalab <- datalab |>
+  mutate(time_error = time_estimate_sec - 60)
+
+# One-sample t-test: Is mean error different from 0?
+t.test(datalab$time_error, mu = 0)
+
+# Descriptive statistics
+datalab |>
+  summarise(
+    mean_error = mean(time_error, na.rm = TRUE),
+    sd_error = sd(time_error, na.rm = TRUE),
+    prop_under = mean(time_error < 0, na.rm = TRUE)
+  )
+
+# Compare counters vs non-counters
+datalab |>
+  group_by(time_counting) |>
+  summarise(
+    mean_error = mean(time_error, na.rm = TRUE),
+    sd_error = sd(time_error, na.rm = TRUE)
+  )
+
+# Visualise time estimation
+library(ggplot2)
+ggplot(datalab, aes(x = time_estimate_sec)) +
+  geom_histogram(binwidth = 5, fill = "#275882", colour = "white") +
+  geom_vline(xintercept = 60, colour = "#EA8439", linewidth = 1.5, linetype = "dashed") +
+  labs(
+    x = "Time Estimate (seconds)",
+    y = "Count",
+    title = "60-Second Estimation Distribution",
+    subtitle = "Dashed line = actual 60 seconds"
+  )
+```
+
+## Connection to Other Concepts
+
+This station demonstrates:
+
+- [Within-Groups Design](../design/within-groups-design.qmd) — same participant across multiple tasks
+- [Mean](../statistics/mean.qmd) — calculating average error
+- Testing against a hypothesised value (one-sample t-test)
+
+## Tips for Facilitators
+
+- Ensure participants **cannot see clocks or phones** during time estimation
+- For tactile estimation, participants should keep eyes **fully closed**
+- Note if participants use counting strategies — this is valuable data
+- Actual measurements (line lengths, string lengths, room temp) should be recorded beforehand

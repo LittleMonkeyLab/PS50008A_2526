@@ -1,0 +1,84 @@
+---
+title: "Nominal Data"
+description: "Categorical data with no inherent order or ranking"
+categories: [Statistics]
+aliases:
+  - categorical-data
+  - nominal-scale
+related:
+  - ordinal-data
+  - levels-of-measurement
+  - mode
+---
+
+## Definition
+
+**Nominal data** consist of categories or names with no inherent order or ranking. Numbers assigned to categories are arbitrary labels, not quantities.
+
+## Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Categories | Data grouped into distinct classes |
+| No order | Categories cannot be ranked |
+| No intervals | No meaningful distance between categories |
+| Mutually exclusive | Each case belongs to one category |
+
+## Examples
+
+| Variable | Categories |
+|----------|------------|
+| Gender | Male, Female, Non-binary |
+| Eye colour | Brown, Blue, Green, Hazel |
+| Blood type | A, B, AB, O |
+| Experimental condition | Treatment, Control |
+| Country | UK, USA, France, Germany |
+
+## Appropriate Statistics
+
+| Statistic | Use |
+|-----------|-----|
+| Mode | Most frequent category |
+| Frequencies | Count per category |
+| Percentages | Proportion per category |
+| Chi-square | Test of association |
+
+## Inappropriate Operations
+
+❌ Cannot calculate:
+
+- Mean (what's the "average" of male and female?)
+- Median (no order to find middle)
+- Standard deviation (no numerical distances)
+
+## Coding Nominal Data
+
+Numbers can be used as labels, but they're arbitrary:
+
+| Gender | Code |
+|--------|------|
+| Male | 1 |
+| Female | 2 |
+| Non-binary | 3 |
+
+The numbers don't mean 2 > 1 or that Female > Male.
+
+## Binary/Dichotomous Variables
+
+A special case of nominal with only two categories:
+
+| Variable | Categories |
+|----------|------------|
+| Correct/Incorrect | 1, 0 |
+| Yes/No | 1, 0 |
+| Pass/Fail | 1, 0 |
+
+## Related Concepts
+
+- [Ordinal Data](ordinal-data.qmd) - next level up
+- [Levels of Measurement](levels-of-measurement.qmd) - overview
+- [Mode](mode.qmd) - appropriate measure of central tendency
+
+## DataLab Connection
+
+At **Lady Luck**, the choice variable (Safe/Risky) is nominal. At **Reflex Test**, accuracy (Correct/Incorrect) is nominal. Use chi-square tests to analyse relationships between nominal variables.

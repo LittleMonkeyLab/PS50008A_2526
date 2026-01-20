@@ -1,0 +1,100 @@
+---
+title: "Type II Error"
+description: "Failing to reject the null hypothesis when it is actually false (false negative)"
+categories: [Statistics]
+aliases:
+  - false-negative
+  - beta-error
+related:
+  - type-i-error
+  - null-hypothesis
+  - statistical-power
+---
+
+## Definition
+
+A **Type II error** occurs when we fail to reject the null hypothesis when it is actually false. We conclude there is no effect when there really is one. This is also called a "false negative."
+
+## Understanding the Error
+
+| Reality | Decision: Reject H₀ | Decision: Don't Reject H₀ |
+|---------|--------------------|-----------------------|
+| H₀ True (no effect) | Type I Error ❌ | Correct ✓ |
+| H₀ False (effect exists) | Correct ✓ | **Type II Error** ❌ |
+
+## Probability of Type II Error
+
+- Denoted by **β** (beta)
+- Typically ranges from .10 to .20
+- Related to statistical power: Power = 1 - β
+
+$$P(\text{Type II Error}) = \beta$$
+
+## Real-World Example
+
+**Drug trial:**
+
+- H₀: Drug has no effect
+- H₁: Drug has an effect
+
+**Type II error:** Concluding the drug doesn't work when it actually does
+
+**Consequence:** Effective treatment never gets approved
+
+## Factors Affecting Type II Error
+
+| Factor | Type II Error Rate |
+|--------|-------------------|
+| Small sample size | Higher β |
+| Large sample size | Lower β |
+| Small effect size | Higher β |
+| Large effect size | Lower β |
+| High variability | Higher β |
+| Low variability | Lower β |
+| α = .01 (stricter) | Higher β |
+| α = .05 (standard) | Lower β |
+
+## The Trade-off
+
+```
+         ← More conservative        More liberal →
+
+Type I:    Lower ←──────────────────────→ Higher
+Type II:   Higher ←──────────────────────→ Lower
+
+Reducing α increases β
+Reducing β increases α
+```
+
+## Reducing Type II Error
+
+| Method | How It Helps |
+|--------|--------------|
+| Larger sample | More power to detect effects |
+| Reduce noise | Control extraneous variables |
+| Larger effect | Use stronger manipulations |
+| Higher α | More liberal threshold (trade-off) |
+
+## Statistical Power
+
+**Power** = Probability of correctly rejecting H₀ when it's false
+
+$$\text{Power} = 1 - \beta$$
+
+| Power | Type II Error (β) |
+|-------|-------------------|
+| .80 | .20 |
+| .90 | .10 |
+| .95 | .05 |
+
+Convention: Aim for power ≥ .80
+
+## Related Concepts
+
+- [Type I Error](type-i-error.qmd) - false positive
+- [Null Hypothesis](null-hypothesis.qmd) - what we're testing
+- [Effect Size](effect-size.qmd) - affects power
+
+## DataLab Connection
+
+With small samples at DataLab stations, Type II errors are a real concern. A non-significant result might mean no effect exists, OR that we lacked the power to detect it. Always consider sample size when interpreting null results.

@@ -111,9 +111,25 @@ The main dataset for this module is generated in Week 11 (DataLab). Additional p
 
 - WebR issues: Post in VLE discussion -->
 
-<!-- ## Hypothesis Annotation
+## Hypothes.is Annotation
 
-This module uses **Hypothes.is** for collaborative annotation. You can highlight and comment on course materials, and see comments from other students.
+This module uses **Hypothes.is** for collaborative annotation. Think of it as a shared highlighter and sticky-note system that lives on top of web pages. You can highlight passages, add comments and questions, and see what other students have noticed or wondered about.
 
-- [Hypothes.is website](https://hypothes.is/)
-- Look for the Hypothes.is sidebar on course pages -->
+Why use it?
+
+- **Active reading** - Annotation helps you engage with material rather than passively skimming
+- **Shared learning** - See what confuses or interests your classmates (you're probably not alone!)
+- **Ask questions in context** - Flag something unclear right where it appears, rather than trying to describe it later
+- **Build a revision resource** - Your annotations become a personalised study guide
+
+### Getting Started
+
+1. **Create a free account** at [hypothes.is](https://hypothes.is/)
+2. **Join our module group**: [Foundations26](https://hypothes.is/groups/qkwKVoRZ/foundations26)
+3. **Install the browser extension** or use the bookmarklet (instructions on the Hypothes.is site)
+4. **Start annotating** - Look for the sidebar on course pages, or activate the extension on any web page
+
+::: {.callout-tip}
+## Private vs Group Annotations
+When you annotate, you can choose to make your notes **private** (only you see them), share them with our **Foundations26 group** (classmates see them), or make them **public** (the whole internet). For this module, group annotations are most useful - but private notes work well for personal revision.
+:::

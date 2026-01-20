@@ -1,0 +1,104 @@
+---
+title: "Median"
+description: "The middle value when data are ordered from lowest to highest"
+categories: [Statistics]
+aliases:
+  - middle-value
+  - 50th-percentile
+related:
+  - mean
+  - mode
+  - interquartile-range
+---
+
+## Definition
+
+The **median** is the middle value in an ordered dataset. Half the values fall below the median and half fall above. It represents the 50th percentile.
+
+## Calculation
+
+For odd number of values:
+
+1. Order values from lowest to highest
+2. Median = the middle value
+
+For even number of values:
+
+1. Order values from lowest to highest
+2. Median = average of the two middle values
+
+## Formula
+
+$$Median = X_{\frac{n+1}{2}}$$ (for odd n)
+
+$$Median = \frac{X_{\frac{n}{2}} + X_{\frac{n}{2}+1}}{2}$$ (for even n)
+
+## Properties
+
+| Property | Description |
+|----------|-------------|
+| Robust | Resistant to outliers |
+| Positional | Based on rank, not values |
+| Ordinal or above | Works with ranked data |
+| Distribution-free | No assumptions about shape |
+
+## When to Use the Median
+
+The median is most appropriate when:
+
+- Data are skewed
+- Outliers are present
+- Ordinal scale measurement
+- Reporting "typical" values
+
+## Example
+
+Dataset: 2, 5, 7, 8, 12, 15, 150
+
+- Mean = 28.4 (pulled up by outlier 150)
+- Median = 8 (not affected by outlier)
+
+The median better represents the typical value.
+
+## R Code Example
+
+```r
+# Calculate median
+median(scores)
+
+# Median with missing values
+median(scores, na.rm = TRUE)
+
+# Compare mean and median to detect skew
+mean(scores) > median(scores)  # TRUE suggests positive skew
+```
+
+## Visual Comparison with Mean
+
+```
+         Positively Skewed Distribution
+         (e.g., reaction times, income)
+              ▲
+             ╱╲
+            ╱  ╲
+           ╱    ╲
+          ╱      ╲────
+         ╱            ─────
+──────────────────────────────►
+           │     │
+         Median Mean
+
+         Median < Mean = Positive skew
+         Median > Mean = Negative skew
+         Median ≈ Mean = Symmetric
+```
+
+## Related Concepts
+
+- [Mean](mean.qmd) - the arithmetic average
+- [Mode](mode.qmd) - the most frequent value
+- [Standard Deviation](standard-deviation.qmd) - measure of spread
+
+## DataLab Connection
+
+Reaction time data from the **Reflex Test** and **Time Warp** stations typically show positive skew. Report the median for a more accurate representation of "typical" performance.

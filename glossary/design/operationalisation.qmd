@@ -1,0 +1,87 @@
+---
+title: "Operationalisation"
+description: "Defining abstract concepts in terms of specific, measurable procedures"
+categories: [Design]
+aliases:
+  - operational-definition
+related:
+  - variable
+  - independent-variable
+  - dependent-variable
+---
+
+## Definition
+
+**Operationalisation** is the process of defining abstract or theoretical concepts in terms of specific, observable, and measurable procedures. It answers: "How exactly will we measure or manipulate this?"
+
+## Why Operationalise?
+
+| Abstract Concept | Problem | Operationalised |
+|------------------|---------|-----------------|
+| "Intelligence" | Vague, subjective | Score on WAIS-IV test |
+| "Stress" | Many meanings | Cortisol level (ng/mL) |
+| "Happiness" | Hard to observe | Rating on 1-10 scale |
+
+## Operationalising IVs
+
+The IV must specify exactly what manipulation occurs:
+
+| Abstract IV | Operationalised |
+|-------------|-----------------|
+| Caffeine | 200mg caffeine pill vs. placebo |
+| Exercise | 30 minutes jogging at 70% max HR |
+| Sleep deprivation | Less than 4 hours sleep |
+| Stress | 5-minute public speaking task |
+
+## Operationalising DVs
+
+The DV must specify exactly what is measured and how:
+
+| Abstract DV | Operationalised |
+|-------------|-----------------|
+| Memory | Number of words correctly recalled from a 20-word list |
+| Attention | Mean reaction time (ms) on Stroop task |
+| Anxiety | Score on State-Trait Anxiety Inventory |
+| Performance | Percentage of correct responses |
+
+## Good Operationalisation
+
+| Criterion | Description |
+|-----------|-------------|
+| Specific | Clear, unambiguous definition |
+| Measurable | Can be quantified |
+| Replicable | Others can use same definition |
+| Valid | Captures the intended concept |
+
+## Example: Full Operationalisation
+
+**Research question:** Does caffeine improve memory?
+
+| Component | Abstract | Operationalised |
+|-----------|----------|-----------------|
+| IV | Caffeine | 200mg caffeine capsule vs. identical placebo |
+| DV | Memory | Number of words correctly recalled from a 30-word list after 10-minute delay |
+| Participants | Adults | University students aged 18-25 |
+
+## Multiple Operationalisations
+
+The same concept can be operationalised differently:
+
+**"Aggression" could be:**
+
+- Number of aggressive words used
+- Intensity of electric shock chosen
+- Score on aggression questionnaire
+- Observer ratings of behaviour
+
+Different operationalisations may yield different results!
+
+## Related Concepts
+
+- [Variable](variable.qmd) - what we operationalise
+- [Independent Variable](independent-variable.qmd) - IV operationalisation
+- [Dependent Variable](dependent-variable.qmd) - DV operationalisation
+
+## DataLab Connection
+
+Each DataLab station operationalises concepts clearly. **Reflex Test** operationalises "reaction speed" as time in milliseconds from stimulus onset to button press. **Sixth Sense** operationalises "accuracy" as proportion of correct predictions.

@@ -1,0 +1,86 @@
+---
+title: "Independent Variable"
+description: "The variable manipulated by the researcher; the presumed cause"
+categories: [Design]
+aliases:
+  - IV
+  - predictor-variable
+  - factor
+related:
+  - dependent-variable
+  - variable
+  - levels-conditions
+---
+
+## Definition
+
+The **independent variable (IV)** is the variable that the researcher manipulates or selects to examine its effect on the dependent variable. It is the presumed *cause* in a cause-and-effect relationship.
+
+## Key Characteristics
+
+| Feature | Description |
+|---------|-------------|
+| Manipulated | Researcher controls the levels |
+| Presumed cause | Expected to influence the DV |
+| Has levels | Different conditions or values |
+| Comes first | Temporally precedes the DV |
+
+## Levels/Conditions
+
+The IV has different **levels** (also called conditions):
+
+| IV | Levels |
+|----|--------|
+| Caffeine | Present vs. Absent |
+| Music type | None, Classical, Pop |
+| Teaching method | Traditional, Active, Online |
+| Drug dosage | 0mg, 50mg, 100mg |
+
+## Experimental vs. Measured IVs
+
+| Experimental IV | Measured IV |
+|-----------------|-------------|
+| Actively manipulated | Naturally occurring |
+| Random assignment possible | Participant characteristic |
+| Stronger causal inference | Weaker causal inference |
+| Example: Drug vs. placebo | Example: Gender, age |
+
+## Identifying the IV
+
+Ask: "What is being manipulated or compared?"
+
+> "Does **caffeine** improve memory?"
+
+IV = Caffeine (levels: caffeine vs. no caffeine)
+
+> "Is there a difference in anxiety between **students and workers**?"
+
+IV = Occupation (levels: student vs. worker)
+
+## Multiple IVs
+
+Experiments can have more than one IV:
+
+```
+Factorial Design: 2 × 2
+
+IV1: Caffeine (yes/no)
+IV2: Sleep deprivation (yes/no)
+
+Creates 4 conditions:
+1. Caffeine + Sleep
+2. Caffeine + No sleep
+3. No caffeine + Sleep
+4. No caffeine + No sleep
+```
+
+## Related Concepts
+
+- [Dependent Variable](dependent-variable.qmd) - what we measure
+- [Levels/Conditions](levels-conditions.qmd) - the values of the IV
+- [Variable](variable.qmd) - general concept
+- [Operationalisation](operationalisation.qmd) - how IVs are defined
+
+## DataLab Connection
+
+At the **Frontal Lob** station, the IV is trial type (congruent vs. incongruent). At **Lady Luck**, the measured IV might be risk preference. Always identify whether the IV is manipulated or measured.

@@ -1,0 +1,92 @@
+---
+title: "Independent t-test"
+description: "Compares means between two separate groups of participants"
+categories: [Analysis]
+aliases:
+  - two-sample-t-test
+  - unpaired-t-test
+related:
+  - paired-t-test
+  - mann-whitney-u
+  - between-groups-design
+---
+
+## Definition
+
+An **independent t-test** (also called unpaired or two-sample t-test) compares the means of two separate groups of participants. It tests whether the difference between group means is significantly different from zero.
+
+## When to Use
+
+Use an independent t-test when:
+
+- Comparing two different groups of participants
+- Groups are independent (no participant in both groups)
+- Testing a between-groups design
+- Data are approximately normally distributed (or n > 30 per group)
+
+## The Formula
+
+$$t = \frac{\bar{X}_1 - \bar{X}_2}{SE_{pooled}}$$
+
+Where the pooled standard error depends on whether variances are assumed equal.
+
+## Assumptions
+
+| Assumption | Check |
+|------------|-------|
+| Independence | Participants only in one group |
+| Normality | Data approximately normal in each group |
+| Homogeneity of variance | Similar spread in both groups |
+| Continuous data | Interval or ratio scale |
+
+## Welch's t-test
+
+When variances are unequal, use **Welch's t-test** (the default in R):
+
+- Does not assume equal variances
+- Adjusts degrees of freedom
+- More robust in most situations
+
+## Effect Size
+
+Calculate **Cohen's d**:
+
+$$d = \frac{\bar{X}_1 - \bar{X}_2}{s_{pooled}}$$
+
+| d value | Interpretation |
+|---------|----------------|
+| 0.2 | Small effect |
+| 0.5 | Medium effect |
+| 0.8 | Large effect |
+
+## R Code Example
+
+```r
+# Welch's t-test (default, does not assume equal variance)
+t.test(score ~ group, data = mydata)
+
+# Student's t-test (assumes equal variance)
+t.test(score ~ group, data = mydata, var.equal = TRUE)
+
+# Effect size
+library(effectsize)
+cohens_d(score ~ group, data = mydata)
+```
+
+## Reporting (APA Style)
+
+> An independent-samples t-test showed that Group A (*M* = 72.3, *SD* = 8.4) scored significantly higher than Group B (*M* = 65.1, *SD* = 9.2), *t*(58) = 3.21, *p* = .002, *d* = 0.82.
+
+## Non-Parametric Alternative
+
+If assumptions are violated, use the [Mann-Whitney U Test](mann-whitney-u.qmd).
+
+## Related Concepts
+
+- [Paired t-test](paired-t-test.qmd) for within-groups comparisons
+- [Between-Groups Design](../design/between-groups-design.qmd)
+- [Effect Size](../statistics/effect-size.qmd)
+
+## DataLab Connection
+
+The **[Mind Palace](../datalab/mindpalace.qmd)** station uses an independent t-test to compare memory recall between Lab 304A (abstract words, music) and Lab 304B (concrete words, silence). The two lab groups are independent — no participant is in both conditions.

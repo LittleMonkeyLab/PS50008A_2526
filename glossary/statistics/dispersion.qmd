@@ -1,0 +1,94 @@
+---
+title: "Dispersion"
+description: "How spread out the data are around the central value"
+categories: [Statistics]
+aliases:
+  - spread
+  - variability
+related:
+  - standard-deviation
+  - variance
+  - range
+---
+
+## Definition
+
+**Dispersion** (also called spread or variability) describes how spread out the values in a dataset are around the central tendency (mean or median).
+
+## Why Dispersion Matters
+
+Two datasets can have the same mean but very different spreads:
+
+```
+Dataset A: 48, 49, 50, 51, 52    Mean = 50, Low spread
+Dataset B: 10, 30, 50, 70, 90    Mean = 50, High spread
+```
+
+Reporting the mean alone is incomplete without a measure of dispersion.
+
+## Measures of Dispersion
+
+| Measure | Formula | Best For |
+|---------|---------|----------|
+| Range | Max - Min | Quick overview |
+| Interquartile Range | Q3 - Q1 | Ordinal data, outliers present |
+| Variance | Mean squared deviation | Mathematical calculations |
+| Standard Deviation | √Variance | Most common, same units as data |
+
+## Visual Comparison
+
+```
+Low Dispersion          High Dispersion
+    ▲ █ ▲                    ▲
+    ███                    ▲   ▲
+   █████                 ▲       ▲
+  ███████              ▲           ▲
+─────┼─────          ─────┼─────
+   Mean                  Mean
+```
+
+## Choosing a Measure
+
+| Data Type | Recommended |
+|-----------|-------------|
+| Interval/ratio, normal | Standard deviation |
+| Ordinal or skewed | Interquartile range |
+| Quick description | Range |
+
+## R Code Example
+
+```r
+# Range
+range(scores)
+diff(range(scores))
+
+# IQR
+IQR(scores)
+
+# Standard deviation
+sd(scores)
+
+# Variance
+var(scores)
+
+# Summary statistics
+summary(scores)
+```
+
+## Reporting
+
+Always report a measure of dispersion with central tendency:
+
+> Reaction times had a mean of 450 ms (*SD* = 52).
+
+> Ratings had a median of 4 (*IQR* = 2).
+
+## Related Concepts
+
+- [Standard Deviation](standard-deviation.qmd) - most common measure
+- [Variance](variance.qmd) - SD squared
+- [Range](range.qmd) - simplest measure
+
+## DataLab Connection
+
+When reporting DataLab results, always include a measure of dispersion. High dispersion in reaction times at **Reflex Test** suggests large individual differences in processing speed.

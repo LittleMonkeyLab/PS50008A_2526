@@ -1,0 +1,72 @@
+---
+title: "Control Condition"
+description: "The condition where the causal variable is absent, providing a baseline for comparison"
+categories: [Design]
+aliases:
+  - control-group
+  - baseline-condition
+  - placebo-group
+related:
+  - experimental-condition
+  - levels-conditions
+  - confounding-variable
+---
+
+## Definition
+
+The **control condition** is where the independent variable of interest is absent or set to a baseline level. It provides a comparison point to evaluate the effect of the experimental manipulation.
+
+## Purpose
+
+The control condition answers: "What happens *without* the treatment?"
+
+| Without Control | With Control |
+|-----------------|--------------|
+| Can't isolate IV effect | IV effect is clear |
+| Other factors confounded | Other factors controlled |
+| No baseline | Clear baseline |
+
+## Types of Control Conditions
+
+| Type | Description | Example |
+|------|-------------|---------|
+| No treatment | Nothing given | Waitlist control |
+| Placebo | Inert substitute | Sugar pill, decaf coffee |
+| Standard treatment | Usual care | Current best practice |
+| Active control | Alternative treatment | Different therapy type |
+
+## Why Placebos?
+
+Placebos control for:
+
+- Participant expectations
+- Attention/contact effects
+- Natural recovery over time
+- Measurement effects
+
+```
+With placebo control:
+Drug group:    Drug + Expectations + Contact + Time
+Placebo group: Pill + Expectations + Contact + Time
+                     ─────────────────────────────
+Difference:    Drug effect only
+```
+
+## Control in Within-Groups Designs
+
+In within-groups designs, the control condition is experienced by the same participants:
+
+```
+Participant 1: Control → Experimental
+Participant 2: Experimental → Control (counterbalanced)
+```
+
+## Related Concepts
+
+- [Experimental Condition](experimental-condition.qmd) - the treatment group
+- [Levels/Conditions](levels-conditions.qmd) - all conditions
+- [Confounding Variable](confounding-variable.qmd) - what controls help avoid
+
+## DataLab Connection
+
+At the **Frontal Lob** station, congruent trials serve as the control condition (no interference), while incongruent trials are the experimental condition. The difference between them reveals the interference effect.
