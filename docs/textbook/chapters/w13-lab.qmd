@@ -1,281 +1,281 @@
 ---
-title: "Chapter 6: Bootstrap CIs in R"
-subtitle: "Building Confidence with Resampling"
+title: "Chapter 6: Research Plan Workshop"
+subtitle: "Preparing Your Research Plan"
 ---
 
 ## Overview
 
-This reading prepares you for the lab session where you'll use R to calculate **bootstrap confidence intervals**. Bootstrapping is a powerful, intuitive approach to understanding uncertainty in your data --- and it requires minimal statistical assumptions.
+This reading prepares you for the lab session where you'll develop your Research Plan. This is a **workshop-based lab** — you'll be writing and drafting, not coding.
 
 ::: {.callout-note}
-## What You'll Learn
-By the end of this lab, you'll be able to:
+## What You'll Do
+By the end of this lab, you'll have:
 
-- Explain what bootstrapping does and why it works
-- Use the `infer` package to generate bootstrap distributions
-- Calculate and interpret bootstrap confidence intervals
-- Visualise the sampling distribution of a statistic
+- Operationalised your IV and DV for your chosen topic
+- Written H₀ and H₁ with appropriate direction justification
+- Decided between-subjects or within-subjects design
+- Matched your design to the appropriate statistical test
+- Drafted your Method section
 :::
 
-## Why Bootstrap?
-
-Traditional confidence intervals rely on mathematical formulas that assume your data follow specific distributions (often the normal distribution). But what if your data are skewed, have outliers, or come from an unknown distribution?
-
-**Bootstrapping** offers an alternative: instead of assuming a distribution, we use the data itself to estimate uncertainty.
-
-### The Core Idea
-
-Imagine you could repeat your study thousands of times, each time with a new random sample from the population. You'd get a distribution of sample means (or medians, or any statistic). The spread of this distribution tells you how much uncertainty there is.
-
-**The problem**: We can't actually repeat our study thousands of times.
-
-**The solution**: We treat our sample as if it were the population, and resample from it --- with replacement --- many times.
-
-### Resampling with Replacement
-
-"With replacement" means that after drawing an observation, we put it back before drawing the next one. This means:
-
-- The same observation can appear multiple times in a bootstrap sample
-- Some observations might not appear at all
-- Each bootstrap sample has the same size as the original
-
-## The `infer` Package
-
-We'll use the **infer** package, which provides a clean, readable workflow for statistical inference. The package uses a consistent "pipe" approach:
-
-```r
-data |>
-  specify(response = variable) |>
-  generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
-```
-
-Let's break down each step.
-
-### Step 1: `specify()`
-
-Tell R which variable you're interested in:
-
-```r
-# For a single variable (e.g., reaction time)
-datalab |>
-  specify(response = reaction_time)
-```
-
-### Step 2: `generate()`
-
-Create many bootstrap resamples:
-
-```r
-# Generate 1000 bootstrap samples
-datalab |>
-  specify(response = reaction_time) |>
-  generate(reps = 1000, type = "bootstrap")
-```
-
-### Step 3: `calculate()`
-
-Compute the statistic for each bootstrap sample:
-
-```r
-# Calculate the mean of each bootstrap sample
-boot_dist <- datalab |>
-  specify(response = reaction_time) |>
-  generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
-```
-
-### Step 4: `get_confidence_interval()`
-
-Extract the confidence interval from the bootstrap distribution:
-
-```r
-# Get 95% CI using percentile method
-boot_dist |>
-  get_confidence_interval(level = 0.95, type = "percentile")
-```
-
-## Complete Example
-
-Here's a full workflow for calculating a bootstrap CI for the mean reaction time:
-
-```r
-library(infer)
-
-# Generate bootstrap distribution
-boot_dist <- datalab |>
-  specify(response = reaction_time) |>
-  generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
-
-# Get the confidence interval
-boot_ci <- boot_dist |>
-  get_confidence_interval(level = 0.95, type = "percentile")
-
-# View the interval
-boot_ci
-```
-
-## Visualising the Bootstrap Distribution
-
-The `infer` package makes it easy to visualise your results:
-
-```r
-# Visualise the bootstrap distribution with CI shaded
-boot_dist |>
-  visualize() +
-  shade_confidence_interval(endpoints = boot_ci)
-```
-
-This shows:
-
-- The distribution of bootstrap sample means
-- The 95% CI as shaded regions
-- Where most plausible population values lie
-
-## Interpreting Bootstrap CIs
-
-A 95% bootstrap confidence interval means: if we repeated this resampling procedure many times, 95% of the intervals we construct would contain the true population parameter.
-
-::: {.callout-important}
-## Key Interpretation
-The interval gives a range of **plausible values** for the population parameter. Values inside the interval are consistent with your data; values outside are less plausible.
-:::
-
-### What the CI Does NOT Mean
-
-- It does NOT mean there's a 95% probability the true value is in this specific interval
-- It does NOT mean 95% of your data falls in this range
-- It does NOT mean the population parameter is definitely in the interval
-
-## Key Functions Reference
-
-| Function | Purpose | Example |
-|----------|---------|---------|
-| `specify()` | Declare the variable(s) | `specify(response = rt)` |
-| `generate()` | Create bootstrap samples | `generate(reps = 1000, type = "bootstrap")` |
-| `calculate()` | Compute statistic | `calculate(stat = "mean")` |
-| `get_confidence_interval()` | Extract CI | `get_confidence_interval(level = 0.95)` |
-| `visualize()` | Plot distribution | `boot_dist |> visualize()` |
-| `shade_confidence_interval()` | Add CI to plot | `shade_confidence_interval(endpoints = ci)` |
-
-### Available Statistics
-
-The `calculate()` function can compute various statistics:
-
-| `stat =` | What It Calculates |
-|----------|-------------------|
-| `"mean"` | Arithmetic mean |
-| `"median"` | Median |
-| `"sd"` | Standard deviation |
-| `"prop"` | Proportion (for categorical data) |
-| `"diff in means"` | Difference between group means |
-
-## Common Errors and How to Fix Them
-
-### Error: Column 'x' is not found
-
-```r
-# Wrong
-data |> specify(response = Reaction_Time)
-
-# Right (check exact spelling and case)
-data |> specify(response = reaction_time)
-```
-
-**Fix**: R is case-sensitive. Check the exact column name using `names(data)` or `glimpse(data)`.
-
-### Error: object 'boot_dist' not found
-
-**Fix**: Make sure you've assigned the result to a variable:
-
-```r
-# Wrong (not saved)
-datalab |>
-  specify(response = reaction_time) |>
-  generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
-
-# Right (saved to boot_dist)
-boot_dist <- datalab |>
-  specify(response = reaction_time) |>
-  generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
-```
-
-### Error: could not find function "specify"
-
-**Fix**: Load the `infer` package first:
-
-```r
-library(infer)
-```
-
-### Warning: Removed rows containing missing values
-
-**Fix**: This happens when your data has `NA` values. Either:
-
-1. Filter them out first: `data |> filter(!is.na(reaction_time))`
-2. Or use `na.rm = TRUE` where available
-
-### The visualisation looks strange
-
-**Fix**: If your histogram looks odd, try:
-
-- Increasing the number of bootstrap resamples (e.g., `reps = 5000`)
-- Checking for outliers in your original data
-- Making sure you're using numeric data
-
-## Why 1000 Resamples?
-
-You'll often see `reps = 1000` in bootstrap code. This is a common default because:
-
-- It provides reasonable precision for 95% CIs
-- It runs quickly on modern computers
-- More resamples (e.g., 10,000) give more precise intervals but take longer
-
-::: {.callout-tip}
-## Rule of Thumb
-For 95% CIs, 1000 resamples is usually sufficient. For 99% CIs or when publishing, consider 5000-10,000 resamples.
-:::
-
-## Preparation Checklist
-
-Before arriving at the lab:
-
-::: {.callout-warning}
-## Before You Arrive
-
-- [ ] Read this chapter carefully
-- [ ] Review the lecture material on confidence intervals
-- [ ] Ensure you understand what "resampling with replacement" means
-- [ ] Have a device with a web browser ready (for WebR)
-- [ ] Review the `|>` pipe operator from previous labs
-:::
-
-### Concepts to Review
-
-- What is a sampling distribution?
-- What does a confidence interval represent?
-- Why do we care about uncertainty in estimates?
+## Before the Lab
 
 ### What to Bring
 
-- Laptop, tablet, or phone with a modern browser
-- Your questions about bootstrapping
-- Curiosity about your DataLab data!
+- Notebook or laptop for writing drafts
+- Your lecture notes from Wednesday
+- Access to the online lab activity (for MCQs)
+
+### What to Know
+
+Make sure you're comfortable with these concepts:
+
+1. **Operationalisation**: Turning abstract concepts into measurable variables
+2. **Hypotheses**: H₀ (no effect) vs H₁ (effect exists); one-tailed vs two-tailed
+3. **Designs**: Between-subjects (different people) vs within-subjects (same people)
+4. **The test link**: Between → independent t-test; Within → paired t-test
+
+---
+
+## The Three Topics
+
+Your Research Plan will address ONE of these questions:
+
+### Topic 1: Font Difficulty → Memory
+
+**Question**: Does reading text in a harder-to-read font improve memory retention?
+
+**Background**: Diemand-Yauman et al. (2011) proposed that "desirable difficulties" can enhance learning. Harder-to-read fonts require more cognitive effort, which might deepen processing and improve retention.
+
+**Key operationalisation decisions**:
+
+- What specific fonts will you use?
+- How will you ensure only readability differs?
+- How will you measure memory?
+
+### Topic 2: Hydration → Cognitive Performance
+
+**Question**: Does drinking water improve cognitive task performance?
+
+**Background**: Edmonds & Burford (2009) found that children who drank water performed better on cognitive tests. Dehydration may impair attention and processing speed.
+
+**Key operationalisation decisions**:
+
+- How much water? When?
+- What's your control condition?
+- What cognitive task will you use?
+
+### Topic 3: Eye Contact → Perceived Trustworthiness
+
+**Question**: Does eye contact duration affect how trustworthy a person is perceived to be?
+
+**Background**: Research on gaze and social perception shows that direct eye contact influences impressions of confidence, competence, and trustworthiness.
+
+**Key operationalisation decisions**:
+
+- Photos or videos?
+- How will you manipulate gaze direction?
+- How will you measure trustworthiness?
+
+---
+
+## Templates for the Workshop
+
+### IV Operationalisation Template
+
+> "The independent variable is _____________ with two levels:
+>
+> **Condition 1**: [Specific details including exact parameters]
+>
+> **Condition 2**: [Specific details including exact parameters]"
+
+**Good example (font study)**:
+
+> "The independent variable is font type with two levels:
+>
+> Condition 1 (Fluent): Arial, 16-point, black text on white background
+>
+> Condition 2 (Disfluent): Comic Sans MS, 12-point, 75% grey text on white background"
+
+### DV Operationalisation Template
+
+> "The dependent variable is _____________ measured by:
+>
+> **Task**: [What participants do]
+>
+> **Scoring**: [How performance is quantified]
+>
+> **Range**: [Possible values]"
+
+**Good example (font study)**:
+
+> "The dependent variable is memory performance measured by:
+>
+> Task: Free recall — participants write all words they remember
+>
+> Scoring: Count of correctly recalled words
+>
+> Range: 0-20 (20 words presented)"
+
+### Hypothesis Template
+
+**Null hypothesis**:
+
+> H₀: There is no difference in [DV] between [Condition 1] and [Condition 2].
+
+**Alternative hypothesis (two-tailed)**:
+
+> H₁: [DV] will differ between [Condition 1] and [Condition 2].
+
+**Alternative hypothesis (one-tailed)**:
+
+> H₁: [DV] will be [higher/lower] in [Condition X] than [Condition Y].
+
+### Justification Template
+
+> "I have chosen a [one-tailed / two-tailed] hypothesis because:
+>
+> Prior research [summary of relevant findings with citations].
+>
+> Therefore, [I predict/do not predict] a specific direction."
+
+### Design & Test Justification Template
+
+> "This study employs a [between-subjects / within-subjects] design because [specific advantages for your study and how disadvantages are addressed].
+>
+> Given this design, the data will consist of [two independent groups / paired scores from the same participants].
+>
+> Therefore, an [independent samples / paired samples] t-test is appropriate because [explain how data structure matches test requirements]."
+
+---
+
+## Method Section Structure
+
+Your Research Plan requires a brief Method section with four subsections:
+
+### Design
+
+State the design type and define variables:
+
+- Design type (between-subjects or within-subjects)
+- IV with both levels fully operationalised
+- DV with measurement details
+
+### Participants
+
+Describe your sample:
+
+- Target sample size
+- Recruitment source
+- How participants are assigned to conditions (or counterbalancing for within-subjects)
+
+### Materials
+
+Describe everything participants will see or use:
+
+- Stimuli (with specific details)
+- Measures (rating scales, tests, etc.)
+- Equipment (computers, software, paper materials)
+
+### Procedure
+
+Describe what happens step by step:
+
+- Setting (where testing occurs)
+- Instructions given
+- Sequence of events with timing
+- Total session duration
+
+---
+
+## Checklist for Your Draft
+
+Before leaving the lab, check that you have:
+
+::: {.callout-important}
+## Draft Checklist
+
+**Operationalisation**:
+
+- [ ] IV specified with exact parameters for both conditions
+- [ ] DV specified with task, scoring, and range
+- [ ] Another researcher could replicate from your description
+
+**Hypotheses**:
+
+- [ ] H₀ clearly stated (no effect)
+- [ ] H₁ clearly stated (effect exists)
+- [ ] Direction justified with reference to prior research
+
+**Design & Test**:
+
+- [ ] Design type stated and justified
+- [ ] Disadvantages addressed
+- [ ] Test selected and matched to design
+- [ ] Explanation of WHY this test fits your data structure
+
+**Method Section**:
+
+- [ ] Design subsection drafted
+- [ ] Participants subsection drafted
+- [ ] Materials subsection drafted
+- [ ] Procedure subsection drafted
+:::
+
+---
+
+## Common Mistakes to Avoid
+
+### In Operationalisation
+
+- **Too vague**: "We showed participants different fonts" — which fonts exactly?
+- **Confounded conditions**: Changing multiple things between conditions
+- **Missing control details**: Only describing the experimental condition
+
+### In Hypotheses
+
+- **No justification**: Choosing one-tailed without explaining why
+- **Wrong direction**: Citing evidence for one direction but predicting the other
+- **After-the-fact**: Planning to decide direction after seeing data (this invalidates one-tailed tests)
+
+### In Design Justification
+
+- **Stating without explaining**: "I will use an independent t-test" with no justification
+- **Mismatched design-test**: Claiming within-subjects but selecting independent t-test
+- **Missing the logic**: Not explaining how design determines data structure
+
+### In Method Section
+
+- **Not replicable**: Missing crucial details about timing, materials, or procedure
+- **Too brief**: Participants, materials, and procedure each need substantive description
+- **Missing counterbalancing**: For within-subjects designs, failing to address order effects
+
+---
 
 ## Summary
 
-| Concept | Key Point |
-|---------|-----------|
-| **Bootstrap** | Resampling with replacement to estimate uncertainty |
-| **Why use it** | Makes minimal assumptions about data distribution |
-| **`infer` workflow** | specify > generate > calculate > get_ci |
-| **Interpretation** | CI gives range of plausible population values |
+| Element | What to Include |
+|---------|-----------------|
+| **IV Operationalisation** | Variable name, both levels with exact parameters |
+| **DV Operationalisation** | Variable name, task, scoring method, range |
+| **Null Hypothesis** | Statement of no effect |
+| **Alternative Hypothesis** | Statement of effect, with direction if appropriate |
+| **Direction Justification** | Prior research supporting your choice |
+| **Design Justification** | Advantages for your study, how disadvantages are managed |
+| **Test Justification** | How your design produces data that matches the test |
 
-## Additional Resources
+---
 
-- [ModernDive Chapter 8: Bootstrapping](https://moderndive.com/8-confidence-intervals.html) --- Excellent visual explanations
-- [infer package documentation](https://infer.netlify.app/) --- Full function reference
-- [Seeing Theory: Bootstrapping](https://seeing-theory.brown.edu/) --- Interactive visualisations
+## Next Steps After the Lab
+
+1. **Finish your draft** before Reading Week
+2. **Seek feedback** from your tutor or study group
+3. **Revise** based on feedback
+4. **Submit** by Friday 27 February (Week 16)
+
+::: {.callout-warning}
+## Research Plan Due Date
+**Friday 27 February 2026, 12:00 noon**
+
+Allow time for revision. First drafts always need improvement.
+:::

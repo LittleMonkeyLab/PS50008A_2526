@@ -1,6 +1,6 @@
 ---
-title: "Chapter 4: Introduction to R"
-subtitle: "R for Descriptive Statistics"
+title: "Chapter 4: Descriptive Statistics in Action"
+subtitle: "Understanding Your Data Through Numbers"
 format: html
 engine: knitr
 filters:
@@ -9,242 +9,415 @@ filters:
 
 ## Overview
 
-This reading prepares you for the lab session where you'll use R to compute descriptive statistics. You don't need any prior programming experience — we'll use WebR, which runs directly in your browser.
+This reading prepares you for the lab session where you'll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.
 
-## What Is R?
+By the end of this reading, you'll be able to:
 
-**R** is a programming language designed for statistical analysis. It's:
+- Interpret means, medians, and standard deviations
+- Understand what the range and quartiles tell us
+- Recognise when different measures are appropriate
+- Use R to compute these statistics (with help)
 
-- **Free and open-source** — anyone can use it
-- **Powerful** — handles everything from simple means to complex models
-- **Widely used** — the standard in psychology, biology, medicine, and data science
-- **Reproducible** — your analysis is documented in code
+---
 
-### Why Learn R?
+## Part 1: Describing the Centre
 
-Excel can calculate a mean. So why bother with R?
+When we collect data, the first question is usually: **What's typical?**
 
-1. **Reproducibility**: R code documents exactly what you did. "I calculated the mean" becomes `mean(data$reaction_time)` — clear and precise.
+### The Mean: The Balancing Point
 
-2. **Efficiency**: Once written, code can be reused. Analyse one dataset, apply the same analysis to another.
-
-3. **Capabilities**: R handles analyses that Excel simply cannot — bootstrapping, mixed models, complex visualisations.
-
-4. **Transparency**: Sharing code lets others check your work. This is increasingly required in psychology journals.
-
-## WebR: R in Your Browser
-
-We use **WebR** — R that runs entirely in your browser. No installation needed.
-
-### How It Works
-
-When you see a code box like this:
+The mean is the arithmetic average. If we measured 5 people's memory scores:
 
 ```{webr-r}
-mean(c(5, 10, 15, 20))
+# Five memory scores
+memory_scores <- c(4, 6, 7, 8, 10)
+
+# Calculate the mean
+mean(memory_scores)
 ```
 
-You can:
+The mean is 7. This is the "balancing point" — if you put these scores on a seesaw, 7 is where it would balance.
 
-1. Click in the box
-2. Press the "Run" button
-3. See the output immediately
+### The Median: The Middle Value
 
-The code runs in your browser, not on a server. Your data stays on your machine.
-
-## R Basics for Today
-
-You don't need to master R today — just understand enough to follow along. Here are the essentials:
-
-### Assigning Values
-
-Use `<-` (less-than followed by dash) to assign values:
+The median is the middle value when data are sorted. Half the values are above it, half below.
 
 ```{webr-r}
-# Store a value
-my_score <- 75
+# Same five scores
+memory_scores <- c(4, 6, 7, 8, 10)
 
-# Store multiple values
-reaction_times <- c(245, 312, 278, 298, 267)
+# The median
+median(memory_scores)
 ```
 
-The `c()` function combines values into a **vector** (a list of numbers).
+With 5 values, the median is the 3rd value (when sorted). Here, both mean and median are 7.
 
-### Basic Functions
+### When Mean and Median Differ
 
-Functions do things. They have a name followed by parentheses containing inputs:
+Sometimes they tell different stories. Consider these scores:
 
 ```{webr-r}
-# Mean of values
-mean(c(10, 20, 30))
+# One person did exceptionally well
+memory_with_outlier <- c(4, 6, 7, 8, 25)
 
-# Sum of values
-sum(c(10, 20, 30))
-
-# Number of values
-length(c(10, 20, 30))
+# Compare mean and median
+mean(memory_with_outlier)
+median(memory_with_outlier)
 ```
 
-### Computing Descriptives
+The mean shoots up to 10, but the median stays at 7. The median is **resistant** to extreme values (outliers). The mean is pulled by them.
 
-For descriptive statistics, you'll use:
+**When to use which?**
 
-| Function | What It Does |
-|----------|--------------|
-| `mean(x)` | Arithmetic mean |
-| `median(x)` | Median (middle value) |
-| `sd(x)` | Standard deviation |
-| `var(x)` | Variance |
-| `min(x)` | Minimum value |
-| `max(x)` | Maximum value |
-| `range(x)` | Returns both min and max |
-| `summary(x)` | Overview (min, quartiles, mean, max) |
+- Mean: When data are roughly symmetric, no extreme outliers
+- Median: When data are skewed or have outliers (like income data)
 
-### Example: Reaction Times
+---
+
+## Part 2: Describing the Spread
+
+The centre isn't the whole story. Two groups can have the same mean but look completely different:
 
 ```{webr-r}
-# Create data
-rt <- c(245, 312, 278, 298, 267)
+# Consistent group
+group_a <- c(6, 7, 7, 7, 8)
 
-# Compute statistics
-mean(rt)     # 280
-median(rt)   # 278
-sd(rt)       # 26.2
+# Variable group  
+group_b <- c(2, 4, 7, 10, 12)
+
+# Same mean!
+mean(group_a)
+mean(group_b)
 ```
 
-## Understanding Output
+Both means are 7, but the groups are very different. We need measures of **spread**.
 
-When R gives you output, it includes some formatting. For example:
+### The Range: Simplest Spread
 
+The range is just the distance from lowest to highest:
+
+```{webr-r}
+# Range gives you min and max
+range(group_a)
+range(group_b)
+
+# Calculate the spread
+max(group_a) - min(group_a)
+max(group_b) - min(group_b)
 ```
-[1] 280
+
+Group A spans 2 points (6 to 8). Group B spans 10 points (2 to 12). The range immediately shows Group B is more variable.
+
+**Limitation**: The range only uses two values, so it's sensitive to outliers.
+
+### The Standard Deviation: The Gold Standard
+
+The **standard deviation (SD)** measures how far scores typically fall from the mean.
+
+```{webr-r}
+# SD for each group
+sd(group_a)
+sd(group_b)
 ```
 
-The `[1]` just means "first element." For a single number, you can ignore it.
+Group A's SD is about 0.7 — scores cluster tightly around 7.
+Group B's SD is about 4.2 — scores are much more spread out.
 
-For longer output:
+**Rule of thumb**: In roughly normal data, about 68% of values fall within 1 SD of the mean.
 
+If the mean is 7 and SD is 1:
+
+- ~68% of scores fall between 6 and 8
+
+### The summary() Function: Everything at Once
+
+R's `summary()` function gives you a quick overview:
+
+```{webr-r}
+# Complete summary
+summary(group_b)
 ```
-[1] 245 267 278 298 312
+
+This shows:
+
+- Min and Max (the range endpoints)
+- 1st and 3rd Quartile (the middle 50%)
+- Median (the middle value)
+- Mean
+
+---
+
+## Part 3: Seeing Descriptives in Psychology Data
+
+Let's look at what descriptive statistics tell us with realistic psychology examples.
+
+### Example 1: Reaction Times
+
+Imagine we measured 10 participants' reaction times (in milliseconds):
+
+```{webr-r}
+# Reaction times from 10 participants
+reaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)
+
+# Central tendency
+mean(reaction_times)
+median(reaction_times)
+
+# Spread
+sd(reaction_times)
+range(reaction_times)
 ```
 
-The numbers 245, 267, etc. are your data. The `[1]` tells you where the first element is.
+**Interpretation**: 
 
-## Working with Data Frames
+- Mean reaction time is about 285ms
+- The median (284ms) is similar, suggesting roughly symmetric data
+- SD of about 28ms tells us most people fall within ±28ms of the mean
+- Range of 245 to 334ms shows the fastest and slowest participants
 
-Real datasets aren't just vectors — they're **data frames** (like a spreadsheet with rows and columns).
+### Example 2: Memory Scores by Condition
+
+Now let's compare two groups. Lab A saw abstract words, Lab B saw concrete words:
+
+```{webr-r}
+# Lab A: Abstract words
+lab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)
+
+# Lab B: Concrete words
+lab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)
+
+# Compare means
+mean(lab_a)
+mean(lab_b)
+
+# Compare SDs
+sd(lab_a)
+sd(lab_b)
+```
+
+**Interpretation**:
+
+- Lab A mean: ~5.3 words recalled
+- Lab B mean: ~7.3 words recalled
+- The difference is 2 words — but is that meaningful?
+- Both SDs are around 1, so 2 words is about **2 standard deviations** — a substantial difference
+
+### Example 3: Pre-Post Mood Ratings
+
+Same people rated their mood before and after the session:
+
+```{webr-r}
+# Before session (1-10 scale)
+mood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)
+
+# After session
+mood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)
+
+# Means
+mean(mood_pre)
+mean(mood_post)
+
+# The change for each person
+mood_change <- mood_post - mood_pre
+mean(mood_change)
+sd(mood_change)
+```
+
+**Interpretation**:
+
+- Mean mood increased by 1.1 points on average
+- The SD of change (0.7) tells us most people improved by 0.4 to 1.8 points
+- This is a within-subjects comparison — same people before and after
+
+---
+
+## Part 4: What the Numbers Mean
+
+### Standard Deviation in Context
+
+The SD only makes sense relative to the mean and the scale.
+
+```{webr-r}
+# Memory (0-10 scale)
+memory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)
+mean(memory)
+sd(memory)
+
+# Reaction time (milliseconds)
+rt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)
+mean(rt)
+sd(rt)
+```
+
+- Memory: Mean = 6, SD = 0.77. An SD of 0.77 on a 10-point scale is fairly consistent.
+- RT: Mean = 277ms, SD = 23ms. Is that a lot of variability? It's about 8% of the mean — fairly typical for reaction times.
+
+### When Means Can Mislead
+
+Consider these two possible DataLab results:
+
+```{webr-r}
+# Scenario A: Everyone similar
+scenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)
+
+# Scenario B: Bimodal (two clusters)
+scenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)
+
+# Same mean!
+mean(scenario_a)
+mean(scenario_b)
+
+# But very different SDs
+sd(scenario_a)
+sd(scenario_b)
+```
+
+Both means are 6, but Scenario B's huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.
+
+---
+
+## Part 5: Working with Data Frames
+
+Real datasets aren't just vectors — they're tables (data frames) with multiple variables.
 
 ### Accessing Columns
 
-Use `$` to access a column:
+Use the `$` symbol to get a column from a data frame:
 
 ```{webr-r}
-# Create example dataset
-olympics <- data.frame(
-  reaction_time = c(245, 312, 278, 298, 267),
-  room = c("A", "A", "B", "B", "A")
+# Create a small dataset
+datalab <- data.frame(
+  participant = 1:6,
+  memory = c(5, 7, 6, 8, 4, 6),
+  room = c("A", "A", "A", "B", "B", "B")
 )
 
-# Get the reaction_time column
-olympics$reaction_time
+# View it
+datalab
 
-# Mean of that column
-mean(olympics$reaction_time)
+# Get just the memory column
+datalab$memory
+
+# Mean of memory scores
+mean(datalab$memory)
 ```
 
-### Subsetting Data
+### Descriptives by Group
 
-Get specific parts of your data:
+To compare groups, we can subset the data:
 
 ```{webr-r}
-# Using the olympics data from above
-# Filter rows where room is "A"
-room_a <- olympics[olympics$room == "A", ]
+# Scores for Room A only
+room_a_scores <- datalab$memory[datalab$room == "A"]
+room_a_scores
+mean(room_a_scores)
 
-# Get mean reaction time for Room A only
-mean(room_a$reaction_time)
+# Scores for Room B only
+room_b_scores <- datalab$memory[datalab$room == "B"]
+room_b_scores
+mean(room_b_scores)
 ```
 
-## Common Errors (And How to Fix Them)
+---
 
-### Error: object 'x' not found
+## Part 6: R Basics You'll Need
 
-**Meaning**: R doesn't recognise that name.
+### Assigning Values
 
-**Fixes**:
+Use `<-` to store values:
 
-- Check spelling (R is case-sensitive: `Data` ≠ `data`)
-- Make sure you created the object first
-- Run all code chunks in order
+```{webr-r}
+# Store a single value
+my_score <- 75
 
-### Error: could not find function "x"
+# Store multiple values with c()
+all_scores <- c(65, 72, 81, 78, 69)
 
-**Meaning**: R doesn't recognise that function.
+# Now you can use them
+mean(all_scores)
+```
 
-**Fixes**:
+### Key Functions Reference
 
-- Check spelling
-- Some functions need packages (we'll load these for you)
+| Function | What It Does | Example |
+|----------|--------------|---------|
+| `mean(x)` | Arithmetic mean | `mean(c(4,5,6))` → 5 |
+| `median(x)` | Middle value | `median(c(4,5,6))` → 5 |
+| `sd(x)` | Standard deviation | `sd(c(4,5,6))` → 1 |
+| `min(x)` | Smallest value | `min(c(4,5,6))` → 4 |
+| `max(x)` | Largest value | `max(c(4,5,6))` → 6 |
+| `range(x)` | Min and max | `range(c(4,5,6))` → 4, 6 |
+| `summary(x)` | All key stats | Shows quartiles, mean, etc. |
+| `length(x)` | How many values | `length(c(4,5,6))` → 3 |
 
-### Unexpected symbol error
+### Common Errors
 
-**Meaning**: R found something it didn't expect.
+**"object not found"**: You haven't created that variable yet, or there's a typo.
 
-**Fixes**:
+**"unexpected symbol"**: Missing comma or parenthesis.
 
-- Check for missing commas or parentheses
-- Make sure quotes match (both `"` or both `'`)
+R is case-sensitive: `Mean()` won't work, but `mean()` will.
 
-## Preparing for the Lab
+---
+
+## Part 7: Preparing for the Lab
 
 ### What You'll Do
 
 In the lab, you'll:
 
-1. Load the DataLab dataset
-2. Explore the variables (columns)
-3. Calculate means, medians, and SDs for different measures
+1. Load the actual DataLab dataset (not example data)
+2. Explore variables using `summary()`
+3. Calculate means and SDs for different tasks
 4. Compare Room A vs Room B
-5. Visualise distributions with histograms
-
-### Before You Arrive
-
-- Read this page (you're doing that now!)
-- Have the [Lecture Reading](/textbook/chapters/w12-lecture.qmd) fresh in mind
-- Bring a laptop or phone (WebR runs in any modern browser)
+5. Interpret what the numbers tell us
 
 ### What to Focus On
 
-The goal isn't to memorise R syntax. Focus on:
+Don't worry about memorising R syntax. Focus on:
 
-- **What** each statistic tells you (meaning over mechanics)
-- **How** the statistics relate to your DataLab experience
-- **Why** we compute these particular measures
+- **What does this statistic tell me?**
+- **How spread out is the data?**
+- **Is this difference meaningful?**
+
+The code will be provided. Your job is to understand what it means.
+
+### Before You Arrive
+
+- Review the lecture reading on descriptive statistics
+- Understand mean vs median, and when each is appropriate
+- Know what standard deviation represents (spread from the mean)
+
+---
 
 ## Key Terms
 
 | Term | Definition |
 |------|------------|
-| **R** | Programming language for statistical analysis |
-| **WebR** | R running in a web browser |
-| **Vector** | A list of values of the same type |
-| **Data frame** | A table with rows and columns |
-| **Function** | Code that performs an action (like `mean()`) |
+| **Mean** | Arithmetic average (sum ÷ count) |
+| **Median** | Middle value when sorted |
+| **Standard Deviation** | Average distance from the mean |
+| **Range** | Difference between max and min |
+| **Quartiles** | Values that divide data into four equal parts |
+| **Outlier** | A value far from the others |
+
+---
 
 ## Summary
 
-| What | How in R |
-|------|----------|
-| Mean | `mean(x)` |
-| Median | `median(x)` |
-| SD | `sd(x)` |
-| Access column | `data$column` |
-| Create vector | `c(1, 2, 3)` |
+| Question | Statistic to Use |
+|----------|------------------|
+| What's typical? | Mean or Median |
+| How spread out? | SD or Range |
+| Any extreme values? | Compare Mean vs Median |
+| Quick overview? | `summary()` |
+| Compare groups? | Mean and SD for each |
+
+---
 
 ## Additional Resources
 
-If you want to explore R further:
+If you want to explore further:
 
 - [R for Data Science](https://r4ds.had.co.nz/) — Free online textbook
-- [RStudio Primers](https://posit.cloud/learn/primers) — Interactive tutorials
-- [Quick-R](https://www.statmethods.net/) — Syntax reference
+- [Quick-R Statistics](https://www.statmethods.net/stats/descriptives.html) — Syntax reference

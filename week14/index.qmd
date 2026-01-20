@@ -1,5 +1,5 @@
 ---
-title: "Week 14: Inference & t-tests"
+title: "Week 14: Is Your Effect Real?"
 subtitle: "PS50008A Research Methods | 2-6 February 2026"
 author: "Gordon Wright"
 date: "2026-02-02"
@@ -8,11 +8,11 @@ date: "2026-02-02"
 ## Overview
 
 ::: {.callout-note}
-## The Heart of Statistics
-This week introduces null hypothesis significance testing - the framework you'll use to determine whether your results are statistically meaningful.
+## The Complete Inferential Toolkit
+This week brings together everything you need to analyse and interpret your results: hypothesis testing to determine IF there's an effect, confidence intervals to show HOW CERTAIN you are, and effect sizes to show HOW BIG it is.
 :::
 
-**This week**: Learn about null hypotheses, p-values, significance thresholds, and how to conduct and interpret t-tests for comparing means.
+**This week**: Learn about null hypothesis significance testing, p-values, t-tests for comparing means, confidence intervals for precision, and effect sizes for practical importance.
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
 **Lab**: Thursday 10:00-12:00 WB304A and WB304B
@@ -23,9 +23,9 @@ By the end of this week, you will be able to:
 
 ### Null Hypothesis Significance Testing
 - State the null and alternative hypotheses for a study
-- Explain what a p-value represents (probability of data given H0)
+- Explain what a p-value represents (probability of data given H₀)
 - Interpret p-values correctly (and avoid common misconceptions)
-- Apply the significance threshold (alpha = .05)
+- Apply the significance threshold (α = .05)
 
 ### Statistical Significance
 - Distinguish between statistical significance and practical importance
@@ -38,36 +38,54 @@ By the end of this week, you will be able to:
 - Report t-test results in APA format
 - Interpret t-test output (t-value, df, p-value)
 
+### Confidence Intervals
+- Interpret 95% confidence intervals correctly
+- Understand what CIs tell us about precision and plausible values
+- Use CIs to assess statistical significance (does the CI include zero?)
+
+### Effect Sizes
+- Define and calculate Cohen's d
+- Interpret effect size magnitude (small, medium, large)
+- Explain why effect sizes complement significance testing
+
 ## Before the Lecture
 
 ::: {.callout-important}
 ## Required Preparation
-1. **Read the lecture reading** - covers NHST logic and t-test procedures
-2. **Review Week 13 content** - confidence intervals provide context for p-values
+1. **Read the lecture reading** — covers NHST logic, t-tests, CIs, and effect sizes
+2. **Review Week 13 content** — design choices determine which t-test you use
 :::
 
 ## The Big Picture
 
-This week answers the question: **Is our effect real or just chance?**
+This week answers three questions about your results:
+
+::: {.callout-tip}
+## The Three Questions
+
+1. **Is it real?** — Hypothesis testing and p-values tell us if the effect is likely genuine
+2. **How certain are we?** — Confidence intervals show the range of plausible values
+3. **How big is it?** — Effect sizes tell us about practical importance
+:::
 
 ::: {.callout-warning}
 ## Critical for Assessments
-The t-test is the statistical test you'll use for your Research Report. Understanding NHST logic is essential for interpreting and reporting your results correctly.
+The t-test is the statistical test you'll use for your Research Report. You must understand how to choose the right test (from Week 13), interpret results, and report them with effect sizes and CIs.
 :::
 
 We'll use YOUR DataLab data to run actual hypothesis tests:
 
-- **Room A vs Room B** - Independent samples t-test (between-subjects)
-- **Pre vs Post mood** - Paired samples t-test (within-subjects)
-- **Combining everything** - p-values, CIs, and effect sizes together
+- **Lab A vs Lab B** — Independent samples t-test (between-subjects)
+- **Pre vs Post mood** — Paired samples t-test (within-subjects)
+- **Complete reporting** — p-values, CIs, and effect sizes together
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
-| [Lecture Reading](lecture/reading.qmd) | NHST logic, p-values, t-test procedures |
-| [Lab Reading](lab/reading.qmd) | Running t-tests in R |
+| [Lecture Reading](lecture/reading.qmd) | NHST logic, p-values, CIs, effect sizes, t-test procedures |
+| [Lab Reading](lab/reading.qmd) | Running t-tests in R, computing CIs and effect sizes |
 | [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
 | [Lab Activity](lab/activity.qmd) | WebR exercises: t-tests with DataLab data |
 | [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
@@ -76,29 +94,41 @@ We'll use YOUR DataLab data to run actual hypothesis tests:
 
 | Day | Session | Focus |
 |-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | Null hypothesis, p-values, significance, t-test logic |
-| Thursday | Lab (2 hrs) | Running and interpreting t-tests in R |
+| Wednesday | Lecture (2 hrs) | NHST logic, p-values, t-tests, confidence intervals, effect sizes |
+| Thursday | Lab (2 hrs) | Running and interpreting t-tests in R, computing CIs and Cohen's d |
 
 
 ## Key Concepts
 
 ### Null Hypothesis Significance Testing (NHST)
-- **Null hypothesis (H0)**: There is no effect or no difference
-- **Alternative hypothesis (H1)**: There is an effect or difference
-- **p-value**: Probability of obtaining results this extreme if H0 were true
+- **Null hypothesis (H₀)**: There is no effect or no difference
+- **Alternative hypothesis (H₁)**: There is an effect or difference
+- **p-value**: Probability of obtaining results this extreme if H₀ were true
 - **Alpha level**: Threshold for significance (typically .05)
 
 ### Making Decisions
-- **p < .05**: Reject H0, result is statistically significant
-- **p >= .05**: Fail to reject H0, result is not statistically significant
-- **Type I error**: Rejecting H0 when it's true (false positive)
-- **Type II error**: Failing to reject H0 when it's false (false negative)
+- **p < .05**: Reject H₀, result is statistically significant
+- **p ≥ .05**: Fail to reject H₀, result is not statistically significant
+- **Type I error**: Rejecting H₀ when it's true (false positive)
+- **Type II error**: Failing to reject H₀ when it's false (false negative)
 
 ### t-tests
 | Design | t-test Type | R Function |
 |--------|-------------|------------|
 | Between-subjects | Independent samples | `t.test(x, y)` |
 | Within-subjects | Paired samples | `t.test(x, y, paired = TRUE)` |
+
+### Confidence Intervals
+- **What they show**: Range of plausible values for the population parameter
+- **95% CI interpretation**: If we repeated the study many times, 95% of CIs would contain the true value
+- **CI and significance**: If the CI for a difference doesn't include zero, the result is significant at p < .05
+- **Width**: Narrower CI = more precision
+
+### Effect Sizes (Cohen's d)
+- **What it measures**: Difference between means in standard deviation units
+- **Benchmarks**: Small (0.2), Medium (0.5), Large (0.8)
+- **Why important**: Statistical significance ≠ practical importance
+- **Report both**: Always include effect size alongside p-value
 
 ### APA Reporting
 - **Format**: t(df) = x.xx, p = .xxx, d = x.xx, 95% CI [x.xx, x.xx]
@@ -111,11 +141,11 @@ This week's content directly supports your assessments:
 
 | Assessment | Connection |
 |------------|------------|
-| **Research Plan** | Choosing the correct test, stating hypotheses |
-| **MCQ Exam** | NHST logic, p-value interpretation, test selection |
-| **EDS Assignment** | Running t-tests, interpreting output |
-| **Research Report** | Complete inferential statistics section |
+| **Research Plan** | Choosing the correct test, stating hypotheses (Week 13 + 14) |
+| **MCQ Exam** | NHST logic, p-value interpretation, effect size benchmarks |
+| **EDS Assignment** | Running t-tests, computing CIs and effect sizes |
+| **Research Report** | Complete inferential statistics section with APA reporting |
 
 ## What's Next?
 
-**Week 15**: Correlation & Regression - analysing relationships between continuous variables using Pearson's r and simple linear regression.
+**Week 15**: Correlation & Regression — analysing relationships between continuous variables using Pearson's r and simple linear regression.

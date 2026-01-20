@@ -1,0 +1,488 @@
+---
+title: "Your Data, Your Discoveries"
+subtitle: "Foundations Datalab Results"
+author: "PS50008A Research Methods"
+date: today
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    preview-links: auto
+    transition: slide
+    code-fold: true
+    code-tools: true
+    fig-align: center
+    footer: "Foundations Datalab | Wednesday Lecture"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(knitr)
+library(scales)
+
+# Load all datasets
+demog <- read_csv("../data/processed/demog_clean.csv", show_col_types = FALSE)
+memory <- read_csv("../data/processed/memory_clean.csv", show_col_types = FALSE)
+reflex <- read_csv("../data/processed/task1_reflex_clean.csv", show_col_types = FALSE)
+timewarp <- read_csv("../data/processed/task2_timewarp_clean.csv", show_col_types = FALSE)
+sixthsense <- read_csv("../data/processed/task3_sixthsense_clean.csv", show_col_types = FALSE)
+ladyluck <- read_csv("../data/processed/task4_ladyluck_clean.csv", show_col_types = FALSE)
+frontallob <- read_csv("../data/processed/task5_frontallob_clean.csv", show_col_types = FALSE)
+post <- read_csv("../data/processed/post_clean.csv", show_col_types = FALSE)
+
+theme_set(theme_minimal(base_size = 18))
+```
+
+# What Did You Actually Do? {background-color="#2c3e50"}
+
+## DataLab: The Tasks
+
+You completed **6 tasks** plus pre/post surveys:
+
+1. **Memory Test** (Mind Palace)
+2. **Reflex Test** (Ruler catch)
+3. **Time Warp** (60 second estimation)
+4. **Sixth Sense** (Staring detection)
+5. **Lady Luck** (Randomness)
+6. **Frontal Lob** (Throwing accuracy)
+
+::: {.fragment}
+Each task generates **data** - numbers we can analyse!
+:::
+
+## What Is Data?
+
+**Data** = observations recorded as values
+
+| What you did | What we recorded |
+|--------------|------------------|
+| Caught a ruler | Distance in cm |
+| Estimated 60 seconds | Your estimate in seconds |
+| Remembered words | Number correct |
+| Threw balls at a bucket | How many went in |
+
+::: {.fragment}
+Every number tells part of a story.
+:::
+
+## You Are a Data Point
+
+On every graph today, one point is **you**.
+
+```{r}
+#| label: you-are-here
+#| fig-height: 4
+mem_plot <- memory |>
+  filter(!is.na(mem_total))
+
+ggplot(mem_plot, aes(x = "", y = mem_total)) +
+  geom_jitter(width = 0.2, size = 4, alpha = 0.6, color = "#3498db") +
+  labs(x = NULL, y = "Words Recalled",
+       title = "Memory Scores - Each Dot Is One Person") +
+  theme(axis.text.x = element_blank())
+```
+
+::: {.fragment}
+Can you spot yourself?
+:::
+
+# Looking at Your Data {background-color="#27ae60"}
+
+## The Simplest Question: What's Typical?
+
+When we have a bunch of numbers, we want to know: **what's normal?**
+
+::: {.fragment}
+**The Average (Mean)**: Add them up, divide by how many
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
+# Memory scores
+memory_scores <- c(5, 3, 6, 6, 6, 7, 7, 6, 6, 10, 8, 3, 3, 9, 8, 7, 2, 8, 8, 6)
+mean(memory_scores)
+```
+:::
+
+## But Averages Can Be Misleading...
+
+Two groups with the **same average** can look very different!
+
+```{r}
+#| label: spread-demo
+#| fig-height: 4
+tibble(
+  Group = rep(c("Group A", "Group B"), each = 10),
+  Score = c(5, 5, 6, 6, 6, 6, 6, 7, 7, 7,   # Group A: clustered
+            2, 3, 4, 5, 6, 7, 8, 9, 10, 7)   # Group B: spread out
+) |>
+  ggplot(aes(x = Group, y = Score, color = Group)) +
+  geom_jitter(width = 0.1, size = 4) +
+  geom_hline(yintercept = 6.1, linetype = "dashed") +
+  scale_color_manual(values = c("#3498db", "#e74c3c")) +
+  labs(y = "Score", title = "Same Average, Different Spread") +
+  annotate("text", x = 2.5, y = 6.3, label = "Both groups: Mean ≈ 6") +
+  theme(legend.position = "none")
+```
+
+::: {.fragment}
+We also need to know about **spread** (variation)
+:::
+
+## Visualising Data: The Histogram
+
+A histogram shows **how often** each value occurs.
+
+```{r}
+#| label: memory-hist
+#| fig-height: 4.5
+ggplot(memory, aes(x = mem_total)) +
+  geom_histogram(binwidth = 1, fill = "#3498db", color = "white", alpha = 0.8) +
+  labs(x = "Words Recalled (out of 10)", y = "Number of People",
+       title = "How Many Words Did You Remember?") +
+  scale_x_continuous(breaks = 0:10)
+```
+
+::: {.fragment}
+Each bar = how many people got that score
+:::
+
+## Your Reaction Times
+
+```{r}
+#| label: rt-simple
+#| fig-height: 4.5
+reflex_long <- reflex |>
+  pivot_longer(cols = starts_with("trial"),
+               names_to = "trial", values_to = "distance") |>
+  filter(!is.na(distance) & distance > 0 & distance < 50) |>
+  mutate(trial_num = as.numeric(str_extract(trial, "\\d+")))
+
+ggplot(reflex_long, aes(x = distance)) +
+  geom_histogram(binwidth = 2, fill = "#27ae60", color = "white") +
+  labs(x = "Distance Caught (cm)", y = "Count",
+       title = "Reflex Test: How Far Did the Ruler Fall?")
+```
+
+::: {.fragment}
+**Shorter distance = faster reaction**
+:::
+
+## Time Estimation
+
+You tried to count **60 seconds** in your head.
+
+```{r}
+#| label: time-est
+#| fig-height: 4.5
+timewarp_clean <- timewarp |>
+  filter(!is.na(time_estimate_sec) & time_estimate_sec > 0 & time_estimate_sec < 200)
+
+ggplot(timewarp_clean, aes(x = time_estimate_sec)) +
+  geom_histogram(binwidth = 5, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 60, color = "red", linewidth = 2, linetype = "dashed") +
+  labs(x = "Your Estimate (seconds)", y = "Count",
+       title = "60 Second Estimation") +
+  annotate("text", x = 62, y = 3, label = "Actual\n60 sec",
+           color = "red", hjust = 0, size = 5)
+```
+
+::: {.fragment}
+Were you an over-estimator or under-estimator?
+:::
+
+# The Memory Experiment {background-color="#f39c12"}
+
+## What Was Different Between Labs?
+
+This wasn't just about testing memory...
+
+::: {.fragment}
+**Lab A (with Gordon)**: Memorised **abstract** words
+
+*things like: justice, freedom, wisdom...*
+:::
+
+::: {.fragment}
+**Lab B (with Bence)**: Memorised **concrete** words
+
+*things like: chair, river, mountain...*
+:::
+
+::: {.fragment}
+**The Question**: Are concrete words easier to remember?
+:::
+
+## Why Would Word Type Matter?
+
+::: {.fragment}
+**Concrete words** = you can picture them
+
+"Think of an **apple**" → You see an apple
+:::
+
+::: {.fragment}
+**Abstract words** = harder to visualise
+
+"Think of **justice**" → ???
+:::
+
+::: {.fragment}
+The **dual coding hypothesis**: Pictures + words = better memory
+:::
+
+## Let's Look at the Data
+
+```{r}
+#| label: memory-by-lab
+#| fig-height: 5
+# lab_room indicates lab group (1 = A, 2 = B)
+memory_by_lab <- memory |>
+  filter(!is.na(lab_room) & !is.na(mem_total))
+
+ggplot(memory_by_lab, aes(x = factor(lab_room, labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)")),
+                          y = mem_total,
+                          fill = factor(lab_room))) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA) +
+  geom_jitter(width = 0.15, size = 3, alpha = 0.6) +
+  scale_fill_manual(values = c("#3498db", "#e67e22")) +
+  labs(x = NULL, y = "Words Recalled (out of 10)",
+       title = "Memory by Lab Group") +
+  theme(legend.position = "none")
+```
+
+## Comparing Groups
+
+```{r}
+#| label: group-means
+lab_a <- memory_by_lab |> filter(lab_room == 1) |> pull(mem_total)
+lab_b <- memory_by_lab |> filter(lab_room == 2) |> pull(mem_total)
+```
+
+| Lab | Word Type | Mean | How Many |
+|-----|-----------|------|----------|
+| Lab A | Abstract | `r round(mean(lab_a, na.rm=TRUE), 1)` words | `r length(lab_a)` people |
+| Lab B | Concrete | `r round(mean(lab_b, na.rm=TRUE), 1)` words | `r length(lab_b)` people |
+
+::: {.fragment}
+**Difference**: `r round(mean(lab_b, na.rm=TRUE) - mean(lab_a, na.rm=TRUE), 1)` words
+
+Is this difference **real** or just **luck**?
+:::
+
+# What Is "Statistically Significant"? {background-color="#9b59b6"}
+
+## The Problem with Small Samples
+
+Even if there's **no real difference**, random chance can create one.
+
+::: {.fragment}
+Imagine flipping a coin 10 times:
+
+- Sometimes you get 7 heads, sometimes 3
+- That doesn't mean the coin is biased!
+:::
+
+::: {.fragment}
+Same with experiments: we need to ask **"could chance explain this?"**
+:::
+
+## The Sixth Sense Task
+
+You tried to detect if someone was staring at you.
+
+- 6 trials
+- Guessed "staring" or "not staring"
+
+::: {.fragment}
+**If you're just guessing**: You'd expect to get **3 out of 6** right (50%)
+:::
+
+## Your Results
+
+```{r}
+#| label: sixth-results
+#| fig-height: 4
+stare_data <- sixthsense |>
+  select(participant_id, starts_with("t")) |>
+  pivot_longer(
+    cols = starts_with("t"),
+    names_to = c("trial", ".value"),
+    names_pattern = "t(\\d+)_(.+)"
+  ) |>
+  mutate(correct = actual == guess)
+
+accuracy <- stare_data |>
+  group_by(participant_id) |>
+  summarise(n_correct = sum(correct, na.rm = TRUE),
+            accuracy = mean(correct, na.rm = TRUE))
+
+ggplot(accuracy, aes(x = factor(n_correct))) +
+  geom_bar(fill = "#9b59b6", alpha = 0.8) +
+  geom_vline(xintercept = 3.5, linetype = "dashed", color = "red", linewidth = 1.5) +
+  labs(x = "How Many Correct (out of 6)", y = "Number of People",
+       title = "Sixth Sense Accuracy") +
+  annotate("text", x = 4.5, y = 4, label = "3 = chance", color = "red", size = 5)
+```
+
+## Some People Got 5 or 6 Right!
+
+Does that mean they have a sixth sense?
+
+::: {.fragment}
+**Not necessarily!**
+
+If you flip a coin 6 times, sometimes you'll get 5 or 6 heads **just by luck**.
+:::
+
+::: {.fragment}
+Statistics helps us figure out: **how surprising is this result?**
+:::
+
+## The Key Question
+
+When we see a difference or pattern:
+
+1. Is it a **real effect**?
+2. Or could **random chance** produce this?
+
+::: {.fragment}
+This is what **statistical testing** helps us determine.
+
+Tomorrow in the lab, you'll learn how to answer this question!
+:::
+
+# What Makes You... You? {background-color="#3498db"}
+
+## Self-Ratings vs Reality
+
+Before the throwing task, you rated how good you thought you'd be.
+
+**Question**: Do people know themselves?
+
+## Your Self-Ratings
+
+```{r}
+#| label: self-rating
+#| fig-height: 5
+throw_data <- frontallob |>
+  mutate(dom_accuracy = dom_success / 10 * 100) |>
+  filter(!is.na(self_rating) & !is.na(dom_accuracy))
+
+ggplot(throw_data, aes(x = self_rating, y = dom_accuracy)) +
+  geom_point(size = 5, color = "#3498db", alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, color = "#e74c3c", linewidth = 2) +
+  labs(x = "How Good You Thought You'd Be (1-10)",
+       y = "Actual Accuracy (%)",
+       title = "Self-Rating vs Actual Performance") +
+  scale_x_continuous(breaks = 1:10)
+```
+
+::: {.fragment}
+Each dot is one person. The line shows the **relationship**.
+:::
+
+## What the Pattern Tells Us
+
+If people know themselves well:
+
+- High self-raters → High performance
+- Low self-raters → Low performance
+- Points cluster around the line
+
+::: {.fragment}
+If people **don't** know themselves:
+
+- Self-ratings don't predict performance
+- Points scattered everywhere
+:::
+
+# Your "Random" Numbers {background-color="#e74c3c"}
+
+## Can Humans Be Random?
+
+You tried to generate 20 random numbers between 1 and 10.
+
+If truly random: each number should appear **equally often**.
+
+## What You Actually Did
+
+```{r}
+#| label: random-numbers
+#| fig-height: 4.5
+rand_data <- ladyluck |>
+  select(rand1:rand10) |>
+  pivot_longer(everything(), values_to = "number") |>
+  filter(!is.na(number) & number >= 1 & number <= 10)
+
+expected <- nrow(rand_data) / 10
+
+ggplot(rand_data, aes(x = factor(number))) +
+  geom_bar(fill = "#e74c3c", alpha = 0.8) +
+  geom_hline(yintercept = expected, linetype = "dashed",
+             color = "blue", linewidth = 1.5) +
+  labs(x = "Number", y = "How Often Chosen",
+       title = "Your 'Random' Numbers") +
+  annotate("text", x = 9.5, y = expected + 2,
+           label = "Expected if random", color = "blue", hjust = 1)
+```
+
+::: {.fragment}
+**Notice anything?** Humans avoid 1 and 10, favour middle numbers!
+:::
+
+## We're Bad at Random
+
+This is a well-known finding in psychology:
+
+- We avoid **extremes** (1 and 10 feel "not random")
+- We avoid **patterns** (not 1,2,3,4...)
+- We avoid **repeats** (same number twice feels wrong)
+
+::: {.fragment}
+Real randomness doesn't care about any of that!
+:::
+
+# Key Takeaways {background-color="#2c3e50"}
+
+## What You've Learned Today
+
+1. **Data = recorded observations** that we can analyse
+
+2. **Averages** tell us what's typical, but **spread** matters too
+
+3. **Histograms** show us the shape of our data
+
+4. **Group differences** might be real or might be chance
+
+5. **Statistical tests** help us tell the difference
+
+## Tomorrow's Lab
+
+You'll get hands-on with this data:
+
+- **Visualise** your own results
+- **Calculate** averages and compare groups
+- **Test** whether differences are significant
+
+::: {.fragment}
+Bring your laptop and find **your data point** in every analysis!
+:::
+
+## Questions?
+
+::: {.callout-tip}
+## Remember
+- You generated this data
+- Every number came from something you did
+- Tomorrow you'll analyse it yourself
+:::
+
+# See You in the Lab! {background-color="#2c3e50"}

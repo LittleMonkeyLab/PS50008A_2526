@@ -1,0 +1,267 @@
+---
+title: "Time Estimation Analysis"
+subtitle: "Time Warp Task"
+---
+
+::: {.task-header .timewarp}
+# Time Warp
+::: {.task-subtitle}
+Investigating how accurately we perceive the passage of time
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Sixth Sense](sixthsense.qmd)
+[Lady Luck](ladyluck.qmd)
+[Frontal Lob](frontallob.qmd)
+:::
+
+## Introduction
+
+In this task, you estimated:
+
+1. **60 seconds** of time (without counting)
+2. **Line lengths** in centimeters
+3. **String lengths** in centimeters
+
+Humans are notoriously bad at estimating time - we tend to either **overestimate** (think time passes faster) or **underestimate** (think time passes slower).
+
+::: {.key-finding}
+#### Key Finding
+On average, participants estimated **55 seconds** when asked to mark 60 seconds, showing a slight tendency to underestimate time duration.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Time estimation data (N=30) - estimate of 60 seconds
+# Most people underestimate (time flies when engaged!)
+
+timewarp <- tibble::tribble(
+  ~id, ~estimate, ~counted, ~line1, ~line2, ~string1, ~string2,
+  1, 48, "No", 8, 13, 16, 23,
+  2, 55, "No", 9, 14, 17, 24,
+  3, 72, "No", 11, 16, 20, 28,
+  4, 52, "No", 8, 12, 15, 22,
+  5, 45, "No", 7, 11, 14, 20,
+  6, 63, "No", 10, 15, 18, 26,
+  7, 58, "No", 9, 14, 17, 24,
+  8, 42, "No", 6, 10, 13, 19,
+  9, 67, "No", 10, 15, 19, 27,
+  10, 51, "No", 8, 13, 16, 23,
+  11, 59, "Yes", 9, 14, 17, 25,
+  12, 44, "No", 7, 11, 14, 21,
+  13, 75, "No", 12, 17, 21, 29,
+  14, 53, "No", 8, 13, 16, 23,
+  15, 49, "No", 7, 12, 15, 22,
+  16, 61, "Yes", 9, 14, 18, 25,
+  17, 56, "No", 9, 13, 17, 24,
+  18, 38, "No", 6, 10, 12, 18,
+  19, 68, "No", 11, 16, 19, 27,
+  20, 54, "No", 8, 13, 16, 23,
+  21, 47, "No", 7, 12, 15, 21,
+  22, 65, "No", 10, 15, 18, 26,
+  23, 50, "No", 8, 12, 15, 22,
+  24, 43, "No", 6, 11, 13, 19,
+  25, 71, "No", 11, 16, 20, 28,
+  26, 57, "No", 9, 14, 17, 24,
+  27, 46, "No", 7, 11, 14, 21,
+  28, 62, "Yes", 10, 14, 18, 25,
+  29, 52, "No", 8, 13, 16, 23,
+  30, 40, "No", 6, 10, 13, 19
+)
+
+cat("N =", nrow(timewarp), "participants\n")
+cat("Admitted to counting:", sum(timewarp$counted == "Yes"), "\n\n")
+head(timewarp)
+```
+
+## Time Estimation Accuracy
+
+How close were participants to 60 seconds?
+
+```{webr-r}
+# Calculate error from target
+timewarp <- timewarp |>
+  mutate(
+    error = estimate - 60,
+    abs_error = abs(error)
+  )
+
+# Summary statistics
+timewarp |>
+  summarise(
+    mean_estimate = mean(estimate, na.rm = TRUE),
+    mean_error = mean(error, na.rm = TRUE),
+    mean_abs_error = mean(abs_error, na.rm = TRUE)
+  )
+```
+
+## Visualise Time Estimates
+
+```{webr-r}
+ggplot(timewarp, aes(x = estimate)) +
+  geom_histogram(binwidth = 3, fill = "#f39c12", color = "white") +
+  geom_vline(xintercept = 60, linetype = "dashed",
+             color = "#275882", linewidth = 1.5) +
+  annotate("text", x = 62, y = 3, label = "Target: 60s",
+           hjust = 0, color = "#275882", size = 4, fontface = "bold") +
+  labs(
+    x = "Time Estimate (seconds)",
+    y = "Count",
+    title = "Time Estimation Performance",
+    subtitle = "How close to 60 seconds?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+## Over or Underestimation?
+
+```{webr-r}
+# Classify each estimate
+timewarp <- timewarp |>
+  mutate(
+    estimation_type = case_when(
+      error > 5 ~ "Overestimate",
+      error < -5 ~ "Underestimate",
+      TRUE ~ "Accurate (±5s)"
+    )
+  )
+
+ggplot(timewarp, aes(x = estimation_type, fill = estimation_type)) +
+  geom_bar() +
+  scale_fill_manual(values = c("Accurate (±5s)" = "#27ae60",
+                                "Overestimate" = "#e74c3c",
+                                "Underestimate" = "#3498db")) +
+  labs(
+    x = NULL,
+    y = "Count",
+    title = "Time Estimation Patterns",
+    subtitle = "Did participants over- or under-estimate?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+::: {.callout-tip collapse="true"}
+## What Does This Mean?
+
+Time perception is influenced by many factors:
+
+- **Attention**: When you're focused on time, it seems to pass slower
+- **Emotion**: Anxiety makes time feel slower; boredom makes it feel faster
+- **Age**: Children often overestimate duration; older adults underestimate
+- **Context**: Familiar tasks seem shorter than novel ones
+
+The tendency to **underestimate** may indicate that participants were engaged in the task (time flies when you're having fun!).
+:::
+
+## Statistical Test
+
+Is our mean estimate significantly different from 60 seconds?
+
+```{webr-r}
+t.test(timewarp$estimate, mu = 60)
+```
+
+## Error Distribution
+
+```{webr-r}
+ggplot(timewarp, aes(x = error)) +
+  geom_histogram(binwidth = 3, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "#e74c3c", linewidth = 1) +
+  annotate("text", x = 1, y = 3, label = "Perfect estimation",
+           hjust = 0, color = "#e74c3c", fontface = "bold", size = 3.5) +
+  labs(
+    x = "Error (seconds from 60)",
+    y = "Count",
+    title = "Time Estimation Error",
+    subtitle = "Positive = overestimate, Negative = underestimate"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Line Length Estimation
+
+Let's also look at the spatial estimation data:
+
+```{webr-r}
+# Assuming actual line lengths (you'll need to fill in real values)
+actual_line1 <- 10  # cm
+actual_line2 <- 15  # cm
+
+timewarp <- timewarp |>
+  mutate(
+    line1_error = line1 - actual_line1,
+    line2_error = line2 - actual_line2
+  )
+
+# Summary
+timewarp |>
+  summarise(
+    mean_line1 = mean(line1, na.rm = TRUE),
+    mean_line2 = mean(line2, na.rm = TRUE),
+    mean_error1 = mean(line1_error, na.rm = TRUE),
+    mean_error2 = mean(line2_error, na.rm = TRUE)
+  )
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Correlation**: Is there a relationship between time estimation error and line estimation error?
+2. **Counting**: Did participants who admitted to counting perform better?
+3. **Visualisation**: Create a scatter plot of estimate vs actual for both time and length
+
+```{webr-r}
+# Your code here!
+# Hint: Use cor.test() for correlations
+# Hint: Use geom_point() + geom_abline() for actual vs estimate plots
+
+
+```
+
+## Bonus: Individual Differences
+
+Some people consistently over- or under-estimate. Let's visualise this:
+
+```{webr-r}
+ggplot(timewarp, aes(x = reorder(id, error), y = error)) +
+  geom_col(aes(fill = error > 0)) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 1) +
+  scale_fill_manual(values = c("TRUE" = "#e74c3c", "FALSE" = "#3498db"),
+                    labels = c("Underestimate", "Overestimate")) +
+  coord_flip() +
+  labs(
+    x = "Participant",
+    y = "Error (seconds)",
+    title = "Individual Time Estimation Errors",
+    fill = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+---
+
+::: {.key-finding}
+#### Summary
+
+Time perception shows substantial individual differences. Most participants showed a tendency to **underestimate** 60 seconds, consistent with the idea that engaging tasks make time feel like it passes quickly.
+:::

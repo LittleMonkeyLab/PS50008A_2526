@@ -1,0 +1,365 @@
+/*-- scss:defaults --*/
+
+// Brand Colors
+$navy: #275882;
+$orange: #EA8439;
+$black: #000000;
+$white: #FFFFFF;
+
+// Task-specific accent colors
+$color-memory: #27ae60;    // Green
+$color-reflex: #e74c3c;    // Red
+$color-timewarp: #f39c12;  // Gold
+$color-sixthsense: #9b59b6; // Purple
+$color-ladyluck: #1abc9c;  // Teal
+$color-frontallob: #3498db; // Blue
+$color-personality: #8e44ad; // Deep purple
+$color-mood: #16a085;       // Sea green
+
+// Base theme overrides
+$primary: $navy;
+$secondary: $orange;
+$link-color: $navy;
+$link-hover-color: $orange;
+
+// Typography
+$font-family-sans-serif: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight: 600;
+
+// Navbar
+$navbar-bg: $navy;
+$navbar-fg: $white;
+
+// Code
+$code-bg: #f8f9fa;
+$code-color: $navy;
+
+/*-- scss:rules --*/
+
+// Import Atkinson Hyperlegible font
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Global styles
+body {
+  font-family: $font-family-sans-serif;
+}
+
+// Header styling
+h1, h2, h3, h4, h5, h6 {
+  color: $navy;
+  font-family: $font-family-sans-serif;
+}
+
+// Hero banner
+.hero-banner {
+  background: linear-gradient(135deg, $navy 0%, darken($navy, 10%) 100%);
+  color: $white;
+  padding: 4rem 2rem;
+  margin: -1rem -1rem 2rem -1rem;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+
+  h1 {
+    color: $white;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+  }
+}
+
+// Station cards grid
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.station-card {
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+  }
+
+  // Task-specific border colors
+  &.memory { border-left: 5px solid $color-memory; }
+  &.reflex { border-left: 5px solid $color-reflex; }
+  &.timewarp { border-left: 5px solid $color-timewarp; }
+  &.sixthsense { border-left: 5px solid $color-sixthsense; }
+  &.ladyluck { border-left: 5px solid $color-ladyluck; }
+  &.frontallob { border-left: 5px solid $color-frontallob; }
+}
+
+// Key findings statistics cards
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: $white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-top: 4px solid $navy;
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $navy;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  // Colored variants
+  &.memory { border-top-color: $color-memory; .stat-value { color: $color-memory; } }
+  &.reflex { border-top-color: $color-reflex; .stat-value { color: $color-reflex; } }
+  &.timewarp { border-top-color: $color-timewarp; .stat-value { color: $color-timewarp; } }
+  &.sixthsense { border-top-color: $color-sixthsense; .stat-value { color: $color-sixthsense; } }
+  &.ladyluck { border-top-color: $color-ladyluck; .stat-value { color: $color-ladyluck; } }
+  &.frontallob { border-top-color: $color-frontallob; .stat-value { color: $color-frontallob; } }
+  &.personality { border-top-color: $color-personality; .stat-value { color: $color-personality; } }
+  &.mood { border-top-color: $color-mood; .stat-value { color: $color-mood; } }
+}
+
+// Task page header banners
+.task-header {
+  padding: 2rem;
+  margin: -1rem -1rem 2rem -1rem;
+  border-radius: 0 0 12px 12px;
+  color: $white;
+
+  h1 {
+    color: $white;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .task-subtitle {
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+
+  &.memory { background: linear-gradient(135deg, $color-memory, darken($color-memory, 10%)); }
+  &.reflex { background: linear-gradient(135deg, $color-reflex, darken($color-reflex, 10%)); }
+  &.timewarp { background: linear-gradient(135deg, $color-timewarp, darken($color-timewarp, 10%)); }
+  &.sixthsense { background: linear-gradient(135deg, $color-sixthsense, darken($color-sixthsense, 10%)); }
+  &.ladyluck { background: linear-gradient(135deg, $color-ladyluck, darken($color-ladyluck, 10%)); }
+  &.frontallob { background: linear-gradient(135deg, $color-frontallob, darken($color-frontallob, 10%)); }
+  &.personality { background: linear-gradient(135deg, $color-personality, darken($color-personality, 10%)); }
+  &.mood { background: linear-gradient(135deg, $color-mood, darken($color-mood, 10%)); }
+}
+
+// Key finding callout boxes
+.key-finding {
+  background: linear-gradient(135deg, $navy 0%, darken($navy, 5%) 100%);
+  color: $white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+
+  .finding-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    color: $white;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.95;
+  }
+}
+
+// Quick links section
+.quick-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+
+  .quick-link {
+    background: $white;
+    border: 2px solid $navy;
+    color: $navy;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $navy;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &.primary {
+      background: $orange;
+      border-color: $orange;
+      color: $white;
+
+      &:hover {
+        background: darken($orange, 10%);
+        border-color: darken($orange, 10%);
+      }
+    }
+  }
+}
+
+// WebR-specific styling
+.webr-code-output {
+  border-left: 3px solid $navy;
+  background: #f8f9fa;
+}
+
+// Table styling
+.table {
+  th {
+    background: $navy;
+    color: $white;
+  }
+}
+
+// Callout customization
+.callout-tip {
+  border-left-color: $color-memory !important;
+}
+
+.callout-note {
+  border-left-color: $navy !important;
+}
+
+.callout-warning {
+  border-left-color: $orange !important;
+}
+
+// Section dividers
+.section-divider {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(90deg, $navy, $orange);
+  margin: 3rem 0;
+  border-radius: 2px;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .station-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// About WebR box
+.webr-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid $navy;
+
+  h4 {
+    color: $navy;
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+// Navigation pills for task pages
+.task-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+
+  a {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: #e9ecef;
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+
+    &:hover, &.active {
+      background: $navy;
+      color: $white;
+    }
+  }
+}

@@ -1,393 +1,532 @@
 ---
-title: "Chapter 5: Estimation & Confidence Intervals"
-subtitle: "From Samples to Populations"
+title: "Chapter 5: Building Your Research"
+subtitle: "From Concepts to Testable Studies"
 ---
 
 ## Overview
 
 ::: {.callout-tip}
 ## Before You Begin
-This chapter bridges the gap between describing data and making inferences about populations. You will learn how to move from what you observed in your sample to what you can say about the broader population.
+This chapter bridges the gap between understanding experimental design concepts and actually planning your own research. You'll learn to turn abstract ideas into concrete, testable studies — the foundation of your Research Plan assessment.
 :::
 
 This chapter covers:
 
-- Point estimates and population parameters
-- Sampling variability and why samples differ
-- Confidence intervals (what the 95% CI really means)
-- The bootstrap method for estimation
-- Effect sizes using Cohen's d
+- Operationalisation: Making variables measurable
+- Writing hypotheses: One-tailed vs two-tailed choices
+- Design decisions: Between-subjects vs within-subjects trade-offs
+- Connecting design to analysis: Why your design determines your test
+- Method section structure: What to include and why
 
-All concepts are illustrated using DataLab examples from your class.
-
----
-
-## Part 1: The Big Picture — Samples and Populations
-
-### What Are We Actually Trying to Do?
-
-When you collected data in DataLab, you tested a specific group of students. But you're probably not interested in *just* those students — you want to know something about people in general.
-
-This is the fundamental challenge of research:
-
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**The Problem**: We can only measure a **sample** (a subset of people), but we want to learn about the **population** (everyone we're interested in).
-:::
-
-For example:
-
-- You measured memory scores from ~60 students
-- But you want to know: How do people *in general* remember abstract vs concrete words?
-
-The sample is what we have. The population is what we care about.
-
-### Populations and Parameters
-
-A **population** is the entire group you want to draw conclusions about. This could be:
-
-- All psychology students in the UK
-- All humans
-- All people with a specific condition
-- All possible outcomes of an experiment
-
-A **parameter** is a numerical characteristic of a population:
-
-| Parameter | Symbol | Meaning |
-|-----------|--------|---------|
-| Population mean | μ (mu) | The true average in the population |
-| Population SD | σ (sigma) | The true spread in the population |
-| Population correlation | ρ (rho) | The true relationship in the population |
-
-::: {.callout-note}
-## Greek vs Latin
-Population parameters use Greek letters (μ, σ, ρ). Sample statistics use Latin letters (*M* or x̄, *SD* or *s*, *r*). This convention helps distinguish what we calculated from what we're trying to estimate.
-:::
-
-### Samples and Statistics
-
-A **sample** is a subset of the population that we actually measure.
-
-A **statistic** is a numerical summary calculated from sample data:
-
-| Statistic | Symbol | What It Estimates |
-|-----------|--------|-------------------|
-| Sample mean | *M* or x̄ | Population mean (μ) |
-| Sample SD | *SD* or *s* | Population SD (σ) |
-| Sample correlation | *r* | Population correlation (ρ) |
-
-### Point Estimates
-
-When we use a sample statistic to estimate a population parameter, we call it a **point estimate** — a single "best guess" about the population value.
-
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Point estimate**: A single value from sample data used to estimate a population parameter.
-:::
-
-**DataLab Example**:
-
-Suppose your class's memory data showed:
-
-- Lab A (abstract words): *M* = 5.4 words
-- Lab B (concrete words): *M* = 6.8 words
-
-These means are point estimates of the true population means. Our best guess is that people in general remember about 5.4 abstract words and 6.8 concrete words.
-
-But here's the question: [How confident should we be in these estimates?]{style="background-color: #FFF3CD; font-weight: bold"}
+By the end of this reading, you should feel prepared to start planning your Research Plan.
 
 ---
 
-## Part 2: Sampling Variability — Why Samples Differ
+## Part 1: What is Operationalisation?
 
-### The Core Problem
+### The Gap Between Ideas and Measurement
 
-Imagine you ran DataLab again with a different group of 60 students. Would you get exactly the same means?
+Research starts with ideas: *Does stress affect memory?* *Does eye contact build trust?* *Does hydration improve thinking?*
 
-Almost certainly not.
+These are interesting questions, but they're not yet testable. To test them, we need to answer:
 
-This is **sampling variability**: different samples from the same population give different results, just by chance.
+- What exactly do we mean by "stress" or "memory" or "trust"?
+- How will we create different levels of our independent variable?
+- How will we measure the dependent variable?
 
-### A Thought Experiment
-
-Suppose the true population mean for concrete word recall is μ = 7.0 words.
-
-If you took 100 different samples of 30 people each and calculated the mean for each sample, you might get:
-
-| Sample | Mean |
-|--------|------|
-| 1 | 6.8 |
-| 2 | 7.3 |
-| 3 | 6.5 |
-| 4 | 7.1 |
-| ... | ... |
-
-Every sample gives a slightly different answer — even though they're all estimating the same thing.
-
-### The Sampling Distribution
-
-If you plotted all possible sample means you could get, you'd create the **sampling distribution of the mean**.
+This is where operationalisation comes in.
 
 ::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Sampling distribution**: The distribution of a statistic (like the mean) across all possible samples of a given size.
+**Operationalisation**: The process of turning an abstract concept into a concrete, measurable variable with a specific procedure for manipulation or measurement.
 :::
 
-Key properties:
+### Why Operationalisation Matters
 
-1. **Centre**: The sampling distribution is centred on the true population parameter
-2. **Spread**: Larger samples give less variable estimates (the distribution is narrower)
-3. **Shape**: With large enough samples, it's approximately normal (thanks to the Central Limit Theorem)
+Good operationalisation enables:
 
-### The Standard Error
+1. **Replication**: Other researchers can repeat your study exactly
+2. **Communication**: Readers understand precisely what you did
+3. **Validity**: Your measure actually captures what you claim to measure
+4. **Control**: You know exactly what differs between conditions
 
-The spread of the sampling distribution is called the **standard error** (SE).
+Poor operationalisation leads to:
 
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Standard Error (SE)**: The standard deviation of the sampling distribution — it measures how much sample statistics vary from sample to sample.
+1. **Ambiguity**: "We measured mood" — how? With what?
+2. **Confounds**: Multiple things differ between conditions
+3. **Irreplicability**: No one can reproduce your findings
+4. **Invalid conclusions**: You measured something, but not what you think
 
-$$SE = \frac{SD}{\sqrt{n}}$$
-:::
+### Operationalising the Independent Variable
 
-**Key insight**: The standard error depends on two things:
+The IV is what you manipulate. You need to specify exactly how the conditions differ.
 
-1. **SD** — More variable populations have more variable samples
-2. **n** — Larger samples have smaller standard errors
+**Vague**: "Participants were either stressed or not stressed"
 
-This is why sample size matters! With more data, our estimates become more precise.
+**Operationalised**: "Participants in the stress condition completed a timed mental arithmetic task (counting backwards from 2,043 by 17s) while being observed by an experimenter who maintained a neutral expression. Participants in the control condition sat quietly for the same duration (3 minutes) without any task."
 
-### DataLab Example: Standard Error
+Notice how the operationalised version tells you:
 
-Suppose Lab B (concrete words) had:
+- What the stressor was (timed arithmetic)
+- Specific parameters (starting number, subtraction amount)
+- The social element (observed, neutral expression)
+- The control condition (matched for time, no task)
+- Duration (3 minutes)
 
-- *M* = 6.8 words
-- *SD* = 2.0 words
-- *n* = 30 participants
+### Operationalising the Dependent Variable
 
-The standard error would be:
+The DV is what you measure. You need to specify the exact measurement procedure.
 
-$$SE = \frac{2.0}{\sqrt{30}} = \frac{2.0}{5.48} = 0.37$$
+**Vague**: "We measured their memory"
 
-This tells us: if we ran this study many times, sample means would typically vary by about 0.37 words around the true population mean.
+**Operationalised**: "Memory was assessed using a free recall task. Participants were shown 20 words (10 concrete nouns, 10 abstract nouns) for 3 seconds each. After a 30-second filled delay (counting backwards from 50), participants wrote down as many words as they could remember in 2 minutes. The dependent variable was the total number of correctly recalled words (maximum = 20)."
+
+This version specifies:
+
+- The type of memory test (free recall)
+- The stimuli (20 words, types specified)
+- Presentation timing (3 seconds each)
+- The retention interval (30 seconds, filled)
+- The recall procedure (written, 2 minutes)
+- The scoring method (total correct, max = 20)
 
 ---
 
-## Part 3: Confidence Intervals
+## Part 2: The Three Research Plan Topics
 
-### Beyond Point Estimates
+Your Research Plan assessment requires you to design an experiment on one of three topics. Let's work through the operationalisation challenges for each.
 
-A point estimate tells us our best guess, but it doesn't tell us how uncertain we should be. We need to communicate the *range* of plausible values.
+### Topic 1: Font Difficulty → Memory
 
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Confidence Interval (CI)**: A range of values that is likely to contain the true population parameter.
-:::
+**The Research Question**: Does reading text in a harder-to-read font improve memory retention?
 
-### The 95% Confidence Interval
+**Background**: Diemand-Yauman et al. (2011) proposed that "desirable difficulties" — challenges that require more cognitive effort during learning — can enhance long-term retention. Reading disfluent fonts requires more effort, which might deepen processing.
 
-The most common confidence interval is the **95% CI**.
+#### Operationalising "Font Difficulty"
 
-**The formula**:
+You need two conditions that differ ONLY in font readability:
 
-$$95\% \text{ CI} = \bar{x} \pm (t \times SE)$$
+| Condition | Font Specification |
+|-----------|-------------------|
+| Fluent (Easy) | Arial, 16-point, black on white |
+| Disfluent (Hard) | Comic Sans MS, 12-point, 75% grey on white |
 
-For large samples, *t* ≈ 1.96, so:
+The key principle: Keep everything else constant (same words, same screen, same instructions) so that font is the only thing that differs.
 
-$$95\% \text{ CI} = \bar{x} \pm (1.96 \times SE)$$
+**Alternative operationalisations**:
 
-### DataLab Example: Calculating a 95% CI
-
-Using Lab B data:
-
-- *M* = 6.8 words
-- *SE* = 0.37 words
-
-$$95\% \text{ CI} = 6.8 \pm (1.96 \times 0.37)$$
-$$= 6.8 \pm 0.73$$
-$$= [6.07, 7.53]$$
-
-We can report: "The mean number of concrete words recalled was 6.8 (95% CI [6.07, 7.53])."
-
-### What the 95% CI Actually Means
-
-::: {.callout-important}
-## Common Misconception
-A 95% CI does **NOT** mean "there's a 95% probability that the true value is in this interval."
-
-The true value either is or isn't in the interval — we just don't know which.
-:::
-
-The correct interpretation:
-
-::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Correct interpretation**: If we repeated this study many times and calculated a 95% CI each time, about 95% of those intervals would contain the true population parameter.
-
-In other words, our *procedure* works 95% of the time — but any particular interval either captured the truth or it didn't.
-:::
-
-### Visualising Confidence Intervals
-
-Confidence intervals are often shown as error bars on graphs:
-
-```
-        |-----●-----|
-        6.07  6.8  7.53
-```
-
-The point shows the estimate; the line shows the range of plausible values.
-
-### Why CIs Are Useful
-
-1. **They show uncertainty**: Wide CIs mean we're less sure; narrow CIs mean more precision
-2. **They allow comparison**: If CIs don't overlap much, groups are probably different
-3. **They connect to significance**: If a 95% CI for a difference doesn't include zero, the difference is significant at p < .05
-
----
-
-## Part 4: The Bootstrap Method
-
-### When Formulas Aren't Enough
-
-The formula-based CI we calculated assumes data are normally distributed. But what if they're not? What about medians, or more complex statistics?
-
-The **bootstrap** is a flexible, computer-intensive method that works for almost any statistic.
-
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Bootstrap**: A resampling method that estimates the sampling distribution by repeatedly sampling *with replacement* from your data.
-:::
-
-### How Bootstrapping Works
-
-1. **Start with your sample** (e.g., 30 memory scores)
-2. **Resample**: Randomly draw 30 scores *with replacement* (some scores may be picked multiple times, others not at all)
-3. **Calculate the statistic** (e.g., the mean of this resample)
-4. **Repeat** many times (e.g., 10,000 times)
-5. **Examine the distribution** of all those calculated statistics
-
-### Example: Bootstrap Procedure
-
-Original sample: [5, 7, 6, 8, 9, 6, 7, 8]
-
-**Resample 1**: [7, 7, 5, 9, 6, 6, 8, 7] → Mean = 6.88
-
-**Resample 2**: [6, 8, 8, 5, 7, 9, 9, 6] → Mean = 7.25
-
-**Resample 3**: [5, 5, 7, 8, 6, 7, 6, 9] → Mean = 6.63
-
-...repeat 10,000 times...
-
-### Bootstrap Confidence Interval
-
-After 10,000 resamples, you have 10,000 means. To get a 95% CI:
-
-1. Sort all 10,000 means from smallest to largest
-2. Find the 2.5th percentile (250th smallest)
-3. Find the 97.5th percentile (9,750th smallest)
-4. These two values are your 95% CI
-
-::: {.callout-tip}
-## Why "Bootstrap"?
-The name comes from the phrase "pulling yourself up by your bootstraps" — an impossible task. Similarly, it seems impossible to learn about population variability when you only have one sample. But the bootstrap makes it work!
-:::
-
-### Advantages of Bootstrapping
-
-- Works for any statistic (means, medians, correlations, etc.)
-- Makes no assumptions about the distribution shape
-- Conceptually straightforward
-- Easy to implement with modern computers
-
----
-
-## Part 5: Effect Sizes — How Big Is the Effect?
-
-### Beyond "Is There a Difference?"
-
-Statistical tests tell you whether an effect exists. But they don't tell you how *big* it is. A tiny effect can be statistically significant with a large enough sample.
-
-::: {style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Key principle**: Always report effect sizes alongside significance tests. They answer different questions:
-
-- Significance: "Is there an effect?"
-- Effect size: "How big is the effect?"
-:::
-
-### Cohen's d
-
-The most common effect size for comparing two means is **Cohen's d**.
-
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Cohen's d**: The difference between two means, divided by the pooled standard deviation.
-
-$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
-:::
-
-Cohen's d expresses the difference in standard deviation units:
-
-- d = 0.5 means the means differ by half a standard deviation
-- d = 1.0 means the means differ by one full standard deviation
-
-### Calculating Cohen's d
-
-**DataLab Example**:
-
-- Lab A (abstract): *M* = 5.4, *SD* = 1.8, *n* = 30
-- Lab B (concrete): *M* = 6.8, *SD* = 2.0, *n* = 30
-
-**Step 1**: Calculate the pooled standard deviation:
-
-$$s_{pooled} = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}}$$
-
-$$s_{pooled} = \sqrt{\frac{(29)(1.8)^2 + (29)(2.0)^2}{58}} = \sqrt{\frac{93.96 + 116}{58}} = \sqrt{3.62} = 1.90$$
-
-**Step 2**: Calculate d:
-
-$$d = \frac{6.8 - 5.4}{1.90} = \frac{1.4}{1.90} = 0.74$$
-
-### Interpreting Cohen's d
-
-Cohen (1988) suggested these benchmarks:
-
-| d value | Interpretation |
-|---------|----------------|
-| 0.2 | Small effect |
-| 0.5 | Medium effect |
-| 0.8 | Large effect |
-
-Our d = 0.74 suggests a **medium-to-large effect** of word type on memory.
+- Fluent vs Italic versions of the same font
+- Standard vs reduced contrast
+- Clear vs slightly blurred text
 
 ::: {.callout-warning}
-## Use Benchmarks Cautiously
-These are rough guidelines, not strict rules. What counts as "large" depends on the research context. In some fields, d = 0.3 might be impressive; in others, d = 0.8 might be typical.
+## Potential Confound
+If your fonts differ in more than just readability (e.g., one is much smaller, or associated with different contexts), you can't be sure which difference caused any effect.
 :::
 
-### Why Effect Sizes Matter
+#### Operationalising "Memory"
 
-1. **Practical significance**: A statistically significant result might be too small to matter in practice
-2. **Comparison across studies**: Effect sizes let you compare findings from different studies
-3. **Meta-analysis**: Combining results across studies requires effect sizes
-4. **Power analysis**: Planning sample sizes requires knowing expected effect sizes
+Common options:
+
+| Measure | Description | Pros | Cons |
+|---------|-------------|------|------|
+| Free recall | Write down everything remembered | Sensitive to deeper processing | Floor/ceiling effects possible |
+| Recognition | Multiple choice: "Was this word shown?" | Easy to score | May not detect subtle effects |
+| Cued recall | Given category, recall specific items | Balanced difficulty | Requires careful stimulus design |
+
+Your choice should be justified based on prior research or theoretical considerations.
+
+### Topic 2: Hydration → Cognitive Performance
+
+**The Research Question**: Does drinking water improve cognitive task performance?
+
+**Background**: Edmonds & Burford (2009) found that children who drank water before cognitive tests performed better. Dehydration may impair attention and processing speed.
+
+#### Operationalising "Hydration"
+
+Options for your IV manipulation:
+
+| Approach | Water Condition | Control Condition | Considerations |
+|----------|----------------|-------------------|----------------|
+| Simple manipulation | Drink 300ml water | No drink | Confound: act of drinking vs water |
+| Placebo control | Drink 300ml water | Sip water (no swallowing) | Controls for drinking action |
+| Standardised | Drink 250ml after 2-hour abstention | 2-hour abstention, no drink | Controls prior hydration state |
+
+::: {.callout-note}
+## Design Consideration
+Consider whether participants knowing they're in a "hydration" study might create expectation effects. If people believe water helps cognition, their performance might improve regardless of actual hydration.
+:::
+
+#### Operationalising "Cognitive Performance"
+
+Options include:
+
+- **Attention tasks**: Simple/choice reaction time, sustained attention (continuous performance task)
+- **Working memory**: Digit span, n-back task
+- **Processing speed**: Symbol-digit substitution, pattern comparison
+- **Executive function**: Stroop task, Wisconsin Card Sorting Test
+
+Your choice should match the theoretical mechanism. If hydration affects attention, use an attention task.
+
+### Topic 3: Eye Contact → Perceived Trustworthiness
+
+**The Research Question**: Does eye contact duration affect how trustworthy a person is perceived to be?
+
+**Background**: Argyle & Dean (1965) established that eye contact is a fundamental component of social interaction. Subsequent research has linked direct gaze to perceptions of competence, confidence, and trustworthiness.
+
+#### Operationalising "Eye Contact"
+
+Options for manipulation:
+
+| Approach | High Eye Contact | Low Eye Contact | Considerations |
+|----------|-----------------|-----------------|----------------|
+| Photographs | Eyes looking at camera | Eyes looking slightly away | Maximum control, less realistic |
+| Videos | 80% direct gaze | 20% direct gaze | More realistic, harder to control |
+| Duration | 5 seconds of direct gaze | 1 second of direct gaze | Tests duration specifically |
+
+Using photos or videos allows tight control — you can be sure the only difference is eye contact. Live interactions are more ecologically valid but introduce many confounds (voice, body language, natural variation).
+
+#### Operationalising "Trustworthiness"
+
+Options:
+
+| Measure | Example | Pros | Cons |
+|---------|---------|------|------|
+| Single rating scale | "How trustworthy is this person?" (1-7) | Simple, direct | May not capture full concept |
+| Multiple-item scale | Trust subscale from established measure | More reliable | Longer, may be redundant |
+| Behavioural measure | "Would you lend this person £10?" | Face valid | Binary data less sensitive |
+| Economic game | How much would you invest with them? | Behavioural, continuous | Complex to administer |
+
+Multi-item scales are generally more reliable than single items. Consider using an established trustworthiness measure if one exists.
 
 ---
 
-## Part 6: Connecting Estimation to DataLab
+## Part 3: Writing Hypotheses
 
-### Your Memory Data
+### Review: Null and Alternative Hypotheses
 
-When you analyse the class memory data, you'll:
+Every statistical test compares your data against a null hypothesis.
 
-1. **Calculate point estimates**: What are the means for Lab A and Lab B?
-2. **Calculate standard errors**: How precise are those estimates?
-3. **Construct confidence intervals**: What's the plausible range for the true means?
-4. **Calculate Cohen's d**: How large is the effect of word type?
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Null Hypothesis (H₀)**: There is no effect — any observed difference is due to chance.
 
-### Sample Output
+**Alternative Hypothesis (H₁)**: There IS an effect — the observed difference is not due to chance.
+:::
 
-A complete analysis might look like this:
+For the font study:
 
-> Participants in the concrete words condition (*M* = 6.8, *SD* = 2.0, 95% CI [6.07, 7.53]) recalled more words than those in the abstract words condition (*M* = 5.4, *SD* = 1.8, 95% CI [4.73, 6.07]). This represents a medium-to-large effect (*d* = 0.74).
+- H₀: Font type has no effect on memory (μ_fluent = μ_disfluent)
+- H₁: Font type does affect memory (μ_fluent ≠ μ_disfluent)
 
-Notice how this tells you:
+### One-Tailed vs Two-Tailed Hypotheses
 
-- The direction of the effect (concrete > abstract)
-- The size of each mean with precision (CIs)
-- The magnitude of the difference (Cohen's d)
+The alternative hypothesis can be:
+
+**Two-tailed (non-directional)**: Predicts there IS a difference, without specifying which direction.
+
+> H₁: Memory scores will differ between fluent and disfluent font conditions.
+
+**One-tailed (directional)**: Predicts the specific direction of the difference.
+
+> H₁: Memory scores will be higher in the disfluent font condition than the fluent font condition.
+
+### When to Use Each
+
+| Use Two-Tailed When... | Use One-Tailed When... |
+|------------------------|------------------------|
+| Effect could reasonably go either way | Strong theoretical basis for direction |
+| Prior literature is mixed | Consistent prior findings support one direction |
+| You're exploring a new question | Replicating established effect |
+| You want to detect unexpected effects | You're focused on confirming a specific prediction |
+
+### Justifying Your Choice
+
+For your Research Plan, you must justify why you chose one-tailed or two-tailed:
+
+**Example two-tailed justification**:
+
+> "A two-tailed hypothesis was used because prior research on disfluency effects has produced mixed results. While Diemand-Yauman et al. (2011) found memory benefits, subsequent replications have been inconsistent (Rummer et al., 2016). Given this uncertainty, we test for any difference rather than predicting a specific direction."
+
+**Example one-tailed justification**:
+
+> "A one-tailed hypothesis was used because the desirable difficulties framework (Bjork & Bjork, 2011) and the original disfluency research (Diemand-Yauman et al., 2011) both predict that harder-to-read fonts should enhance memory. We therefore predict that recall will be higher in the disfluent condition."
+
+::: {.callout-important}
+## Assessment Requirement
+Your Research Plan MUST include justification for your hypothesis direction choice. This demonstrates critical thinking about the research literature and your theoretical position.
+:::
+
+### Writing Complete Hypotheses
+
+A complete hypothesis statement includes:
+
+1. The IV and its levels
+2. The DV and how it's measured
+3. The predicted relationship
+
+**Complete two-tailed**:
+
+> "Participants who read a word list in a disfluent font (Comic Sans MS, 12pt, 75% grey) will show different free recall scores compared to participants who read the same word list in a fluent font (Arial, 16pt, black)."
+
+**Complete one-tailed**:
+
+> "Participants who read a word list in a disfluent font (Comic Sans MS, 12pt, 75% grey) will recall significantly more words than participants who read the same word list in a fluent font (Arial, 16pt, black)."
+
+---
+
+## Part 4: Design Decisions — Between vs Within
+
+### The Fundamental Trade-off
+
+You've chosen your topic, operationalised your variables, and written your hypotheses. Now you must decide how to assign participants to conditions.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Between-Subjects Design**: Different participants in each condition. Each person experiences only ONE level of the IV.
+
+**Within-Subjects Design**: Same participants in all conditions. Each person experiences EVERY level of the IV.
+:::
+
+### Between-Subjects Design
+
+**How it works**:
+
+- Randomly assign 30 participants to Condition A
+- Randomly assign 30 different participants to Condition B
+- Compare the mean scores of each group
+
+**Advantages**:
+
+1. **No order effects**: Participants can't be influenced by having done another condition first
+2. **No practice effects**: Performance doesn't improve/decline across conditions
+3. **No demand characteristics from comparison**: Participants don't try to be "consistent" or "different"
+4. **Simpler procedure**: Each participant does one thing
+
+**Disadvantages**:
+
+1. **Individual differences add noise**: Smart people in one group inflate that mean
+2. **Needs more participants**: Twice as many people for two conditions
+3. **Pre-existing group differences**: Even with randomisation, groups might differ
+
+### Within-Subjects Design
+
+**How it works**:
+
+- All 30 participants complete Condition A
+- Same 30 participants complete Condition B
+- Compare each person's scores across conditions
+
+**Advantages**:
+
+1. **Controls individual differences**: Each person is their own control
+2. **More statistical power**: Less "noise" makes real effects easier to detect
+3. **Fewer participants needed**: Same people generate data for all conditions
+4. **Can detect small effects**: Removing individual differences unmasks subtle differences
+
+**Disadvantages**:
+
+1. **Order effects**: First condition might affect second
+2. **Practice effects**: Performance changes with repeated testing
+3. **Fatigue effects**: Performance declines with longer sessions
+4. **Demand characteristics**: Participants might guess what you expect
+
+### Design Decisions for Each Topic
+
+#### Font Difficulty → Memory
+
+| Design | Implementation | Key Concern |
+|--------|---------------|-------------|
+| Between | Group A reads fluent, Group B reads disfluent | Individual differences in memory ability |
+| Within | Everyone reads BOTH font versions | Memory for first list affects second |
+
+**Typical choice**: Between-subjects
+
+**Reasoning**: If participants read the same words in both fonts, memory from the first reading will contaminate the second. If we use different word lists, we can't be sure the lists are equivalent in difficulty.
+
+#### Hydration → Cognitive Performance
+
+| Design | Implementation | Key Concern |
+|--------|---------------|-------------|
+| Between | Group A drinks water, Group B doesn't | Individual differences in cognitive ability |
+| Within | Same person tested hydrated and not hydrated | Requires two sessions or dehydration manipulation |
+
+**Typical choice**: Between-subjects (simpler) or within-subjects with two sessions (more powerful but logistically harder)
+
+#### Eye Contact → Trustworthiness
+
+| Design | Implementation | Key Concern |
+|--------|---------------|-------------|
+| Between | Different participants see different gaze conditions | Individual differences in trust tendencies |
+| Within | Same participants rate BOTH gaze conditions | Demand to rate them differently |
+
+**Typical choice**: Within-subjects with counterbalancing
+
+**Reasoning**: If each participant rates multiple faces, we can have them see some faces with direct gaze and some with averted gaze. This controls for individual differences in how trusting people generally are.
+
+### Counterbalancing in Within-Subjects Designs
+
+If you use a within-subjects design, you must address order effects through counterbalancing:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Counterbalancing**: Varying the order of conditions across participants so that order effects cancel out.
+
+- Half of participants: Condition A first, then Condition B
+- Other half: Condition B first, then Condition A
+:::
+
+---
+
+## Part 5: Connecting Design to Statistical Test
+
+### The Critical Link
+
+This section is essential for your Research Plan. You must demonstrate understanding of WHY your design choice leads to your test choice.
+
+::: {.callout-important}
+## Key Principle
+The structure of your data (determined by your design) dictates which statistical test is appropriate.
+:::
+
+### Between-Subjects → Independent Samples t-test
+
+**The logic**:
+
+- You have two groups of participants
+- Each participant provides one score
+- The scores from Group A are independent of scores from Group B
+- We compare the two group means
+
+**Why "independent"?**: The scores in one group tell us nothing about the scores in the other group. Participant 1 in Group A has no connection to Participant 1 in Group B.
+
+**Example**:
+
+> "This study uses a between-subjects design with different participants randomly assigned to each font condition. The data therefore consist of two independent groups of recall scores. An independent samples t-test is the appropriate analysis because it compares the means of two unrelated groups."
+
+### Within-Subjects → Paired Samples t-test
+
+**The logic**:
+
+- You have one group of participants
+- Each participant provides two scores (one per condition)
+- The scores are paired — each person's Condition A score is linked to their Condition B score
+- We compare the mean difference within each person
+
+**Why "paired"?**: Participant 1's score in Condition A is meaningfully connected to Participant 1's score in Condition B — they come from the same person.
+
+**Example**:
+
+> "This study uses a within-subjects design with each participant rating faces in both gaze conditions. Because each participant provides paired scores (one trustworthiness rating for direct gaze, one for averted gaze), a paired samples t-test is appropriate. This test analyses whether the mean difference in ratings within individuals is significantly different from zero."
+
+### The Consequences of Using the Wrong Test
+
+What happens if you use the wrong test?
+
+| Error | Consequence |
+|-------|-------------|
+| Independent t-test on paired data | Loses statistical power (harder to detect real effects) |
+| Paired t-test on independent data | Violates assumptions, produces invalid results |
+
+Both errors lead to incorrect conclusions about your research question.
+
+### Complete Justification Template
+
+For your Research Plan, structure your justification like this:
+
+> "This study employs a [between-subjects / within-subjects] design because [reason for design choice — reference advantages and how disadvantages are managed].
+>
+> Given this design, the data will consist of [description of data structure — independent groups OR paired scores].
+>
+> Therefore, [an independent samples / a paired samples] t-test is the appropriate statistical analysis. This test will compare [what is being compared] to determine whether [the research question]."
+
+---
+
+## Part 6: Method Section Structure
+
+Your Research Plan requires a brief Method section. Here's what belongs in each subsection.
+
+### Design
+
+State the design type and define your variables:
+
+> "This study employed a between-subjects experimental design. The independent variable was font type with two levels: fluent (Arial, 16pt, black) and disfluent (Comic Sans MS, 12pt, 75% grey). The dependent variable was free recall score (number of words correctly recalled from a 20-word list, range 0-20)."
+
+**Must include**:
+
+- Design type (between-subjects, within-subjects)
+- IV with levels fully operationalised
+- DV with measurement details
+
+### Participants
+
+Describe who participated and how they were assigned:
+
+> "Sixty undergraduate psychology students will be recruited through the department participant pool. Participants will be randomly assigned to either the fluent font condition (n = 30) or the disfluent font condition (n = 30)."
+
+**Must include**:
+
+- Target sample size
+- Recruitment method
+- Assignment method (random, counterbalanced)
+
+**For within-subjects designs**, specify counterbalancing:
+
+> "Order of conditions will be counterbalanced, with half of participants seeing direct gaze faces first and half seeing averted gaze faces first."
+
+### Materials
+
+Describe everything participants will see or use:
+
+> "Stimuli consisted of 20 common concrete nouns selected from the MRC Psycholinguistic Database, matched for word frequency and imageability. In the fluent condition, words were displayed in 16-point Arial (black text on white background). In the disfluent condition, the same words were displayed in 12-point Comic Sans MS (75% grey on white background). Presentation was controlled using PsychoPy. Participants recorded responses on a blank A4 sheet."
+
+**Must include**:
+
+- Stimulus details (what, how selected)
+- Condition-specific differences
+- Measurement tools/materials
+
+### Procedure
+
+Describe what happens, step by step:
+
+> "Participants will be tested individually in a quiet laboratory room. After providing informed consent, they will be seated at a computer and given standardised instructions to memorise the upcoming word list. Twenty words will be presented sequentially for 3 seconds each. After the final word, participants will count backwards from 50 for 30 seconds (filled delay), then write down as many words as they can remember for 2 minutes. The session will last approximately 10 minutes."
+
+**Must include**:
+
+- Setting
+- Sequence of events
+- Timing for each phase
+- Key instructions given
+- Total duration
+
+---
+
+## Part 7: Setting Up Your Results Table
+
+Your Research Plan asks you to create a summary results table **without actual data**. This demonstrates you understand what you'll measure and how to organise it.
+
+### What the Table Should Show
+
+| Condition | n | M | SD |
+|-----------|---|---|---|
+| Fluent Font | 30 | — | — |
+| Disfluent Font | 30 | — | — |
+
+Leave M and SD columns empty — you're showing the structure, not inventing numbers.
+
+### For Within-Subjects Designs
+
+The table structure is similar, but you might also show the mean difference:
+
+| Condition | M | SD |
+|-----------|---|---|
+| Direct Gaze | — | — |
+| Averted Gaze | — | — |
+| Difference | — | — |
+
+Or present it as paired observations:
+
+| Participant | Direct Gaze | Averted Gaze | Difference |
+|-------------|-------------|--------------|------------|
+| 1-30 | — | — | — |
+| **Mean** | — | — | — |
 
 ---
 
@@ -395,16 +534,16 @@ Notice how this tells you:
 
 | Concept | Key Point |
 |---------|-----------|
-| **Population** | The entire group we want to learn about |
-| **Sample** | The subset we actually measure |
-| **Parameter** | A characteristic of the population (μ, σ) |
-| **Statistic** | A characteristic of the sample (*M*, *SD*) |
-| **Point estimate** | Using a sample statistic to estimate a parameter |
-| **Sampling variability** | Different samples give different results |
-| **Standard error** | How much statistics vary across samples |
-| **Confidence interval** | A range likely to contain the true parameter |
-| **Bootstrap** | Resampling method for estimating uncertainty |
-| **Cohen's d** | Standardised measure of effect size |
+| **Operationalisation** | Turning abstract concepts into concrete, measurable variables |
+| **IV operationalisation** | Exactly how you create different conditions |
+| **DV operationalisation** | Exactly how you measure the outcome |
+| **Two-tailed hypothesis** | Predicts difference without direction — use when uncertain |
+| **One-tailed hypothesis** | Predicts specific direction — use when theory supports it |
+| **Between-subjects** | Different people in each condition — no order effects but individual differences |
+| **Within-subjects** | Same people in all conditions — controls individual differences but order effects |
+| **Independent t-test** | Compares means from different groups (between-subjects) |
+| **Paired t-test** | Compares means from same people (within-subjects) |
+| **Design-test link** | Your design structure determines which test is appropriate |
 
 ---
 
@@ -412,13 +551,15 @@ Notice how this tells you:
 
 Before the lecture, make sure you can answer these questions:
 
-1. What's the difference between a population parameter and a sample statistic?
-2. Why do different samples give different means, even from the same population?
-3. If the standard error is large, what does that tell you about your estimate?
-4. What does a 95% confidence interval actually mean?
-5. Explain the bootstrap method in your own words.
-6. What does a Cohen's d of 0.5 tell you?
-7. Why should we report effect sizes alongside p-values?
+1. What is operationalisation and why does it matter for research?
+2. For your chosen topic, how would you operationalise the IV and DV?
+3. What's the difference between one-tailed and two-tailed hypotheses?
+4. When would you choose each type of hypothesis?
+5. What are the main advantages and disadvantages of between-subjects designs?
+6. What are the main advantages and disadvantages of within-subjects designs?
+7. Why does a between-subjects design require an independent t-test?
+8. Why does a within-subjects design require a paired t-test?
+9. What happens if you use the wrong statistical test?
 
 ---
 
@@ -426,5 +567,6 @@ Before the lecture, make sure you can answer these questions:
 
 For additional depth:
 
-- Cumming, G. (2014). The new statistics: Why and how. *Psychological Science, 25*, 7-29.
-- Coolican, H. (2017). Chapter 14: Estimation. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
+- Diemand-Yauman, C., Oppenheimer, D. M., & Vaughan, E. B. (2011). Fortune favors the bold (and the italicized): Effects of disfluency on educational outcomes. *Cognition, 118*, 111-115.
+- Edmonds, C. J., & Burford, D. (2009). Should children drink more water? The effects of drinking water on cognition in children. *Appetite, 52*, 776-779.
+- Coolican, H. (2017). Chapter 2: Planning research. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)

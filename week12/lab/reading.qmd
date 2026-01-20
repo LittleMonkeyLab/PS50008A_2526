@@ -1,6 +1,6 @@
 ---
 title: "Week 12 Lab Reading"
-subtitle: "Introduction to R for Descriptive Statistics"
+subtitle: "Design Detectives"
 author: "Gordon Wright"
 date: "2026-01-23"
 format:

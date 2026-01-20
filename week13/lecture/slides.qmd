@@ -1,5 +1,5 @@
 ---
-title: "Estimation & Confidence Intervals"
+title: "Building Your Research"
 subtitle: "PS50008A Week 13 | Lecture"
 author: "Gordon Wright"
 date: "2026-01-28"
@@ -23,286 +23,711 @@ execute:
 
 By the end of this lecture you will be able to:
 
-- Explain the difference between point estimates and interval estimates
-- Interpret confidence intervals correctly
-- Understand the bootstrap method for estimation
-- Calculate and interpret effect sizes using Cohen's d
+- Operationalise abstract concepts into measurable variables
+- Write clear hypotheses (one-tailed vs two-tailed) with justification
+- Choose between-subjects or within-subjects designs and explain trade-offs
+- Connect your design choice to the appropriate statistical test
 
-# Point Estimates {background-color="#275882"}
+# Setting the Scene {background-color="#275882"}
 
-## What is a Point Estimate?
+## Where We Are
 
-<!-- TODO: Define point estimates -->
+::: {.fragment}
+**Week 12**: You learned the framework
 
-::: {.definition-box}
-**Point Estimate**: A single value calculated from sample data that serves as a "best guess" for an unknown population parameter.
+- Hypotheses (H₀ and H₁)
+- Independent and dependent variables
+- Between-subjects and within-subjects designs
 :::
 
 ::: {.fragment}
-**Examples of point estimates:**
+**Week 13**: Now we USE it
 
-- Sample mean as estimate of population mean
-- Sample proportion as estimate of population proportion
-- Sample standard deviation as estimate of population SD
+- Build YOUR Research Plan
+- Make real decisions about real studies
 :::
 
-## Sample Statistics as Estimators
+## The Research Plan Assessment
 
-<!-- TODO: Add content about sample statistics -->
+::: {.definition-box}
+**Due**: Friday 27th February (Week 16)
+
+**Weight**: 20% of module mark
+
+**Task**: Design an experiment on ONE of three topics
+:::
+
+::: {.fragment}
+You must demonstrate you can plan rigorous research — even before collecting data.
+:::
+
+## The Three Topics
+
+Choose ONE for your Research Plan:
+
+::: {.incremental}
+1. **Font difficulty → Memory**
+   - Does harder-to-read text improve memory?
+
+2. **Hydration → Cognitive performance**
+   - Does drinking water improve thinking?
+
+3. **Eye contact → Perceived trustworthiness**
+   - Does eye contact affect how trustworthy someone seems?
+:::
+
+# Act 1: From Concept to Measurement {background-color="#275882"}
+
+## Operationalisation (~25 min)
+
+---
+
+## What is Operationalisation?
+
+::: {.definition-box}
+**Operationalisation**: The process of turning an abstract concept into a concrete, measurable variable.
+:::
+
+::: {.fragment}
+Your Research Plan requires you to specify:
+
+- **Exactly** how you'll manipulate the IV
+- **Exactly** how you'll measure the DV
+:::
+
+## Why Does It Matter?
+
+::: {.incremental}
+- Vague variables = unmeasurable research
+- Other researchers need to replicate your study
+- Poor operationalisation = confounded results
+- Reviewers (and markers!) will critique weak operationalisation
+:::
+
+::: {.fragment}
+::: {.example-box}
+**Bad**: "We measured happiness"
+
+**Good**: "Participants rated their current happiness on a 1-10 scale, with 1 = extremely unhappy and 10 = extremely happy"
+:::
+:::
+
+## Topic 1: Font Difficulty → Memory
+
+::: {.research-box}
+**The claim**: Reading in hard-to-read fonts creates "desirable difficulty" that enhances learning
+
+**Source**: Diemand-Yauman et al. (2011)
+:::
+
+::: {.fragment}
+### Questions to answer:
+
+- What counts as "difficult to read"?
+- How different should the fonts be?
+- What "memory" outcome do we measure?
+:::
+
+## Operationalising "Font Difficulty"
+
+::: {.incremental}
+**Option 1**: Fluent (Arial 12pt) vs Disfluent (Comic Sans 12pt, 75% grey)
+
+**Option 2**: Fluent (Times New Roman 14pt) vs Disfluent (Haettenschweiler 12pt)
+
+**Option 3**: Fluent (standard) vs Disfluent (Italicised, smaller font)
+:::
+
+::: {.fragment}
+::: {.callout-note}
+The key is CLEAR CONTRAST between conditions that isolates font readability while keeping content identical.
+:::
+:::
+
+## Operationalising "Memory"
+
+::: {.incremental}
+- **Free recall**: How many facts can participants remember?
+- **Recognition test**: Multiple choice on material content
+- **Cued recall**: Provide category, ask for specific items
+:::
+
+::: {.fragment}
+Each measures slightly different aspects of memory. **Your choice must be justified**.
+:::
+
+## Topic 2: Hydration → Cognitive Performance
+
+::: {.research-box}
+**The claim**: Being hydrated improves cognitive function
+
+**Source**: Edmonds & Burford (2009)
+:::
+
+::: {.fragment}
+### Questions to answer:
+
+- What does "hydration" mean operationally?
+- What cognitive task(s) measure "performance"?
+:::
+
+## Operationalising "Hydration"
+
+::: {.incremental}
+**Option 1**: Water group drinks 500ml; control group drinks nothing
+
+**Option 2**: Water group drinks 250ml; control group sips (no swallowing)
+
+**Option 3**: Measure time since last drink (observational)
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+## Potential Confound
+If water group *believes* water helps cognition, expectation effects may drive results. Consider a placebo control?
+:::
+:::
+
+## Operationalising "Cognitive Performance"
+
+::: {.incremental}
+- **Attention task**: Reaction time, sustained attention
+- **Working memory**: Digit span, n-back task
+- **Processing speed**: Symbol substitution
+- **Combined score**: Multiple tasks averaged
+:::
+
+## Topic 3: Eye Contact → Trustworthiness
+
+::: {.research-box}
+**The claim**: Eye contact increases perceptions of trustworthiness
+
+**Source**: Argyle & Dean (1965); subsequent research on gaze and trust
+:::
+
+::: {.fragment}
+### Questions to answer:
+
+- How do you manipulate eye contact?
+- How do you measure "perceived trustworthiness"?
+:::
+
+## Operationalising "Eye Contact"
+
+::: {.incremental}
+**Option 1**: Video of person with direct gaze vs averted gaze
+
+**Option 2**: Photo with eyes meeting camera vs eyes looking away
+
+**Option 3**: Duration manipulation: 2 seconds vs 6 seconds of eye contact
+:::
+
+::: {.fragment}
+::: {.callout-note}
+Videos/photos provide control. Live interaction adds realism but introduces variability.
+:::
+:::
+
+## Operationalising "Trustworthiness"
+
+::: {.incremental}
+- **Rating scale**: "How trustworthy does this person seem?" (1-7)
+- **Behavioural proxy**: "Would you lend this person money?" (Yes/No)
+- **Investment game**: How much would you invest with this person?
+- **Multiple items**: Composite trustworthiness scale (Likert items)
+:::
+
+## Common Operationalisation Pitfalls
+
+::: {.incremental}
+1. **Vague language**: "We changed the IV" — HOW exactly?
+2. **Confounded manipulation**: Changing multiple things at once
+3. **Unreliable measures**: Single-item scales, ceiling/floor effects
+4. **Missing details**: Another researcher couldn't replicate
+:::
+
+::: {.fragment}
+::: {.exercise-box}
+**Test yourself**: Could a stranger run your study exactly from your description?
+:::
+:::
+
+# Act 2: Hypotheses That Work {background-color="#275882"}
+
+## One-Tailed vs Two-Tailed (~20 min)
+
+---
+
+## Review: H₀ and H₁
+
+::: {.definition-box}
+**Null Hypothesis (H₀)**: There is no effect or no difference
+
+**Alternative Hypothesis (H₁)**: There IS an effect or difference
+:::
+
+::: {.fragment}
+We test H₀. If the data is very unlikely under H₀, we reject it and accept H₁.
+:::
+
+## Two Types of H₁
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Population Parameters**
+**Two-Tailed (Non-directional)**
 
-- Fixed but unknown
-- Greek letters (mu, sigma)
-- What we want to know
+H₁: μ₁ ≠ μ₂
+
+"There IS a difference"
+
+*Direction not specified*
 :::
 
 ::: {.column width="50%"}
-**Sample Statistics**
+**One-Tailed (Directional)**
 
-- Calculated from data
-- Roman letters (x-bar, s)
-- Our best estimates
+H₁: μ₁ > μ₂ OR H₁: μ₁ < μ₂
+
+"Group 1 is higher/lower than Group 2"
+
+*Direction IS specified*
 :::
 
 ::::
 
-::: {.fragment}
-<!-- TODO: Add example with real data -->
+## When to Use Each
+
+::: {.definition-box}
+**Two-Tailed**: When you're uncertain about direction, or the effect could reasonably go either way
+
+**One-Tailed**: When strong theory or prior evidence supports a specific direction
 :::
 
-## The Problem with Point Estimates
-
-<!-- TODO: Discuss limitations -->
+## One-Tailed: Pros and Cons
 
 ::: {.incremental}
-- A single number gives no indication of uncertainty
-- Different samples give different estimates
-- How confident can we be in our estimate?
+**Advantages**:
+
+- More statistical power to detect effect in predicted direction
+- More precise research question
+
+**Disadvantages**:
+
+- Must JUSTIFY the direction (prior literature)
+- Cannot claim significance if effect goes the OTHER way
+- Some journals/reviewers are skeptical
 :::
 
-::: {.fragment}
+## Two-Tailed: Pros and Cons
+
+::: {.incremental}
+**Advantages**:
+
+- Safe choice when direction is uncertain
+- Can detect effects in either direction
+- More widely accepted
+
+**Disadvantages**:
+
+- Less statistical power
+- Less precise prediction
+:::
+
+## Font Difficulty: Writing Hypotheses
+
 ::: {.example-box}
-**Example:** If our sample mean is 75, is the population mean likely to be 74? 70? 50?
-:::
-:::
+**Two-tailed**:
 
-# Interval Estimates & Confidence Intervals {background-color="#275882"}
+- H₀: There is no difference in recall between fluent and disfluent font conditions
+- H₁: Recall scores differ between fluent and disfluent font conditions
 
-## From Points to Intervals
+**One-tailed**:
 
-<!-- TODO: Introduce interval estimation -->
-
-::: {.definition-box}
-**Interval Estimate**: A range of values that is likely to contain the population parameter.
+- H₀: Disfluent font does not improve recall
+- H₁: Participants in the disfluent font condition will recall more words than those in the fluent font condition
 :::
 
-::: {.fragment}
-Instead of saying "the mean is 75", we say "the mean is between 72 and 78".
-:::
+## Justifying Your Direction
 
-## What is a Confidence Interval?
+For your Research Plan, if you choose one-tailed:
 
-<!-- TODO: Define CIs properly -->
-
-::: {.definition-box}
-**Confidence Interval (CI)**: An interval estimate combined with a probability statement about how often such intervals capture the true parameter.
+::: {.incremental}
+1. Cite prior research supporting the direction
+2. Explain the theoretical mechanism
+3. Acknowledge what you'll conclude if the effect is opposite
 :::
 
 ::: {.fragment}
-**Common confidence levels:**
-
-- 95% CI (most common)
-- 99% CI (more conservative)
-- 90% CI (less common)
-:::
-
-## Interpreting Confidence Intervals
-
-<!-- TODO: Add correct vs incorrect interpretations -->
-
 ::: {.callout-warning}
-## Common Misconception
-A 95% CI does NOT mean there is a 95% probability that the true parameter lies within this specific interval.
+## Assessment Requirement
+Your Research Plan MUST include justification for your hypothesis choice.
+:::
+:::
+
+## Practice: Hydration Study
+
+::: {.poll-box}
+Write H₀ and H₁ for the hydration → cognitive performance study.
+
+Would you choose one-tailed or two-tailed? Why?
+
+*Discuss with your neighbour (2 minutes)*
+:::
+
+# BREAK {background-color="#EA8439"}
+
+## 10 minutes
+
+---
+
+# Act 3: Design Decisions {background-color="#275882"}
+
+## Between vs Within (~25 min)
+
+---
+
+## The Fundamental Choice
+
+::: {.definition-box}
+**Between-Subjects**: Different people in each condition
+
+**Within-Subjects**: Same people in all conditions
+:::
+
+::: {.fragment}
+Both test the SAME hypothesis. The difference is HOW you assign participants.
+:::
+
+## Between-Subjects Design
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**How it works**:
+
+- Participant 1-30: Condition A
+- Participant 31-60: Condition B
+- Compare group means
+:::
+
+::: {.column width="50%"}
+**Advantages**:
+
+- No order effects
+- No practice/fatigue
+- Simpler procedure
+
+**Disadvantages**:
+
+- Individual differences add noise
+- Need more participants
+:::
+
+::::
+
+## Within-Subjects Design
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**How it works**:
+
+- All 30 participants do BOTH conditions
+- Each person is their own control
+- Compare within-person differences
+:::
+
+::: {.column width="50%"}
+**Advantages**:
+
+- Controls individual differences
+- More statistical power
+- Fewer participants needed
+
+**Disadvantages**:
+
+- Order effects
+- Practice/fatigue
+- Demand characteristics
+:::
+
+::::
+
+## Decision Tree for Our Topics
+
+::: {.exercise-box}
+**Font difficulty → Memory**
+
+- Between: Group A reads fluent, Group B reads disfluent
+- Within: Everyone reads BOTH (counterbalanced)
+
+*Which is better? What are the trade-offs?*
+:::
+
+## Font Study: Design Analysis
+
+::: {.incremental}
+**Within-subjects concerns**:
+
+- If same content twice → memory for first reading confounds second
+- If different content → is content equivalent?
+- Order effects: Which font first?
+
+**Between-subjects concerns**:
+
+- Some people have better memory naturally
+- Need twice as many participants
 :::
 
 ::: {.fragment}
 ::: {.callout-tip}
-## Correct Interpretation
-If we repeated our study many times, 95% of the confidence intervals we calculate would contain the true population parameter.
+**Typical choice**: Between-subjects for memory studies with identical content
 :::
 :::
 
-## Visualising Confidence Intervals
+## Hydration Study: Design Analysis
 
-<!-- TODO: Add visual demonstration -->
+::: {.exercise-box}
+**Think**: What would between-subjects vs within-subjects look like?
 
-```{r}
-#| eval: false
-# TODO: Add R code to visualise multiple CIs
-# Show how most but not all capture the true parameter
-```
+What are the trade-offs for each?
+:::
 
-## Width of Confidence Intervals
+::: {.fragment}
+::: {.incremental}
+- **Within**: Same person tested hydrated and dehydrated
+  - Problem: Requires multiple sessions or dehydration manipulation
+- **Between**: Different people in water vs no-water groups
+  - Problem: Individual differences in cognitive ability
+:::
+:::
 
-<!-- TODO: Explain factors affecting CI width -->
+## Eye Contact Study: Design Analysis
 
-**Factors affecting CI width:**
+::: {.poll-box}
+**Vote**: For the eye contact → trustworthiness study, which design would you choose?
+
+A) Between-subjects (different photos/videos for each participant)
+
+B) Within-subjects (same participant rates BOTH gaze conditions)
+:::
+
+::: {.fragment}
+**Within-subjects is common here**: Each participant can rate multiple stimuli, and we compare their ratings across conditions.
+:::
+
+## Practical Constraints
+
+Your design choice isn't just about statistics. Consider:
 
 ::: {.incremental}
-- **Sample size**: Larger n = narrower CI
-- **Variability**: More variation = wider CI
-- **Confidence level**: Higher confidence = wider CI
+- **Time**: How long can you test each participant?
+- **Participants**: How many can you realistically recruit?
+- **Ethics**: Any concerns with repeated testing or manipulation?
+- **Materials**: Can you create equivalent stimuli?
 :::
 
-# Bootstrap Method {background-color="#275882"}
+# Act 4: From Design to Analysis {background-color="#275882"}
 
-## Why Bootstrap?
+## The Critical Link (~15 min)
 
-<!-- TODO: Introduce bootstrap rationale -->
+---
 
-::: {.incremental}
-- Traditional CIs assume normal distribution
-- What if our data isn't normal?
-- What if we have small samples?
-- Bootstrap provides a flexible alternative
-:::
-
-## The Bootstrap Idea
-
-<!-- TODO: Explain resampling concept -->
+## Why Design Determines Test
 
 ::: {.definition-box}
-**Bootstrap**: A resampling method that treats your sample as if it were the population, drawing many new samples (with replacement) to estimate sampling variability.
+**The data structure from your design determines which statistical test is appropriate.**
 :::
 
 ::: {.fragment}
-<!-- TODO: Add step-by-step explanation -->
+Different designs produce different types of data relationships. The test must match.
 :::
 
-## Bootstrap Steps
-
-<!-- TODO: Outline the procedure -->
-
-::: {.incremental}
-1. Take your original sample (n observations)
-2. Resample n observations WITH replacement
-3. Calculate the statistic of interest
-4. Repeat steps 2-3 many times (e.g., 10,000)
-5. Use the distribution of statistics to build CI
-:::
-
-## Bootstrap in Action
-
-<!-- TODO: Add worked example -->
-
-```{r}
-#| eval: false
-# TODO: Add R code demonstrating bootstrap
-```
+## Between-Subjects → Independent t-test
 
 ::: {.example-box}
-**Example:** Bootstrapping the mean of reaction times
+**Design**: 30 people in Font A, 30 different people in Font B
+
+**Data**: Two independent groups of scores
+
+**Test**: Independent samples t-test
+
+**Assumptions**: Scores in Group A are independent of scores in Group B
 :::
 
-## Percentile Bootstrap CI
+## Within-Subjects → Paired t-test
 
-<!-- TODO: Show how to construct CI -->
+::: {.example-box}
+**Design**: 30 people rate trustworthiness for BOTH gaze conditions
 
-::: {.fragment}
-For a 95% CI:
+**Data**: Paired scores (same person, two measurements)
 
-- Find the 2.5th percentile of bootstrap statistics
-- Find the 97.5th percentile of bootstrap statistics
-- These form your interval
+**Test**: Paired samples t-test
+
+**Assumptions**: Pairs of scores are related (same individual)
 :::
 
-# Effect Sizes (Cohen's d) {background-color="#275882"}
+## The Match Matters
 
-## Why Effect Sizes Matter
+::: {.callout-warning}
+## Critical Point
+Using the WRONG test gives you WRONG results.
 
-<!-- TODO: Introduce effect sizes -->
-
-::: {.incremental}
-- Statistical significance tells us IF there's an effect
-- Effect size tells us HOW BIG the effect is
-- Essential for practical importance
-- Allows comparison across studies
+- Independent t-test on paired data → loses power, wrong df
+- Paired t-test on independent data → violates assumptions
 :::
 
-## What is Cohen's d?
-
-<!-- TODO: Define Cohen's d -->
+## For Your Research Plan
 
 ::: {.definition-box}
-**Cohen's d**: A standardised measure of the difference between two means, expressed in standard deviation units.
+**You MUST**:
+
+1. State your design (between or within)
+2. State your test (independent or paired t-test)
+3. EXPLAIN why this test matches your design
 :::
-
-$$d = \frac{\bar{X}_1 - \bar{X}_2}{s_{pooled}}$$
-
-## Interpreting Cohen's d
-
-<!-- TODO: Add Cohen's conventions -->
-
-**Cohen's (1988) conventions:**
-
-| d value | Interpretation |
-|---------|----------------|
-| 0.2     | Small effect   |
-| 0.5     | Medium effect  |
-| 0.8     | Large effect   |
 
 ::: {.fragment}
-::: {.callout-note}
-These are rough guidelines, not strict rules. Context matters!
-:::
+This is the "justify your choice of test" requirement.
 :::
 
-## Visualising Effect Sizes
-
-<!-- TODO: Add visual comparison of effect sizes -->
-
-```{r}
-#| eval: false
-# TODO: Add R code showing overlapping distributions
-# for small, medium, and large effects
-```
-
-## Effect Size and Sample Size
-
-<!-- TODO: Discuss relationship -->
+## Example Justification
 
 ::: {.example-box}
-**Key insight:** A small effect can be statistically significant with a large enough sample. A large effect might not reach significance with a small sample.
+"This study uses a between-subjects design with different participants randomly assigned to each font condition. Because the data consist of scores from two independent groups, an **independent samples t-test** is the appropriate statistical test. This test compares the mean recall scores between the fluent and disfluent font groups to determine whether any observed difference is statistically significant."
+:::
+
+# Act 5: Method Section Walkthrough {background-color="#275882"}
+
+## What Goes Where (~15 min)
+
+---
+
+## The Four Subsections
+
+A Method section typically includes:
+
+::: {.incremental}
+1. **Design**: What type? What are the IV and DV?
+2. **Participants**: Who? How many? How recruited?
+3. **Materials**: What stimuli, measures, equipment?
+4. **Procedure**: What happened, step by step?
+:::
+
+## Design Subsection
+
+::: {.example-box}
+**Example**:
+
+"This study employed a between-subjects experimental design. The independent variable was font type (fluent vs disfluent), and the dependent variable was the number of words correctly recalled from a 20-word list."
 :::
 
 ::: {.fragment}
-This is why reporting both p-values AND effect sizes is crucial.
+**Include**: Design type, IV with levels, DV with how measured
 :::
 
-# Summary {background-color="#275882"}
+## Participants Subsection
+
+::: {.example-box}
+**Example**:
+
+"Sixty undergraduate psychology students (43 female, 17 male; mean age = 20.3 years, SD = 2.1) participated for course credit. Participants were randomly assigned to either the fluent font condition (n = 30) or the disfluent font condition (n = 30)."
+:::
+
+::: {.fragment}
+**Include**: N, demographics, how recruited, how assigned
+:::
+
+## Materials Subsection
+
+::: {.example-box}
+**Example**:
+
+"The word list consisted of 20 common concrete nouns (e.g., 'table', 'flower'). In the fluent condition, words were presented in 16-point Arial font. In the disfluent condition, words were presented in 12-point Comic Sans MS at 75% greyscale. A blank recall sheet was provided for participants to write remembered words."
+:::
+
+::: {.fragment}
+**Include**: Stimuli descriptions, measures, equipment
+:::
+
+## Procedure Subsection
+
+::: {.example-box}
+**Example**:
+
+"Participants were tested individually. After providing informed consent, they were presented with the word list for 60 seconds and instructed to memorise as many words as possible. The screen then went blank for 30 seconds (retention interval), followed by a 2-minute recall period during which participants wrote down all remembered words. Participation took approximately 10 minutes."
+:::
+
+::: {.fragment}
+**Include**: Step-by-step what happened, timing, instructions given
+:::
+
+## The Replicability Test
+
+::: {.poll-box}
+**Ask yourself**: Could another researcher, using only my Method section, run the exact same study?
+
+If not, what's missing?
+:::
+
+# Closing {background-color="#275882"}
+
+## Summary (~10 min)
+
+---
+
+## Draft Results Table Structure
+
+Your Research Plan asks for a **summary results table** (without data):
+
+::: {.example-box}
+| Condition | n | M | SD |
+|-----------|---|---|---|
+| Fluent Font | | | |
+| Disfluent Font | | | |
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+## "Do NOT invent data"
+You're showing you know WHAT to measure and HOW to organise it — not making up numbers.
+:::
+:::
+
+## This Week: Your Tasks
+
+::: {.incremental}
+1. **Choose your topic** (font, hydration, or eye contact)
+2. **Operationalise your variables** precisely
+3. **Write your hypotheses** with justification
+4. **Decide your design** and explain trade-offs
+5. **Match design to test** and justify
+:::
+
+## Research Plan Timeline
+
+::: {.callout-important}
+## Key Dates
+
+- **Week 13** (this week): Learn the content
+- **Reading Week**: Write your draft
+- **Week 16**: Research Plan due Friday 27 Feb
+:::
+
+::: {.fragment}
+Start early. Get feedback from TAs and tutors.
+:::
 
 ## Key Takeaways
 
 ::: {.incremental}
-- **Point estimates** are single-value guesses about population parameters
-- **Confidence intervals** provide a range plus uncertainty information
-- **Bootstrap** offers a flexible, distribution-free approach to CIs
-- **Cohen's d** quantifies effect magnitude in standardised units
+- **Operationalisation** makes abstract ideas testable
+- **Hypothesis direction** requires justification
+- **Design choice** involves trade-offs
+- **Design determines test** — this link is essential
+- **Method sections** must enable replication
 :::
-
-## Next Week
-
-<!-- TODO: Update with next week's topic -->
-
-**Week 14: Inference & t-tests**
-
-- The logic of hypothesis testing
-- Understanding p-values
-- Comparing means between groups
 
 ## Questions?
 
@@ -310,4 +735,4 @@ This is why reporting both p-values AND effect sizes is crucial.
 Questions?
 :::
 
-See you in the lab!
+See you in the lab for hands-on Research Plan work!

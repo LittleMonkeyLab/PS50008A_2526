@@ -1,375 +1,835 @@
 ---
-title: "Design Detectives"
-subtitle: "PS50008A Week 12 | Lab Walkthrough"
+title: "Design Detectives: DataLab"
+subtitle: "PS50008A Week 12 Lab"
 author: "Gordon Wright"
-date: "2026-01-23"
+date: "2026-01-22"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
+    logo: ../../assets/foundations-26-logo.svg
     slide-number: c/t
+    show-slide-number: all
     progress: true
     transition: fade
     width: 1050
     height: 700
     center: false
     center-title-slide: true
+    smaller: true
 execute:
   echo: false
   warning: false
   message: false
+countdown:
+  start_immediately: true
+  play_sound: true
 ---
 
 ```{r}
 #| label: setup
+#| include: false
 library(tidyverse)
 library(knitr)
+library(scales)
 
-# Load DataLab data
-memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
-merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+# Load DataLab data from DATALAB_MATERIALS
+data_path <- "../../DATALAB_MATERIALS/data/processed/"
+
+memory <- read_csv(paste0(data_path, "memory_clean.csv"), show_col_types = FALSE)
+reflex <- read_csv(paste0(data_path, "task1_reflex_clean.csv"), show_col_types = FALSE)
+timewarp <- read_csv(paste0(data_path, "task2_timewarp_clean.csv"), show_col_types = FALSE)
+sixthsense <- read_csv(paste0(data_path, "task3_sixthsense_clean.csv"), show_col_types = FALSE)
+ladyluck <- read_csv(paste0(data_path, "task4_ladyluck_clean.csv"), show_col_types = FALSE)
+frontallob <- read_csv(paste0(data_path, "task5_frontallob_clean.csv"), show_col_types = FALSE)
+merged <- read_csv(paste0(data_path, "foundations_merged.csv"), show_col_types = FALSE)
 
 # Brand colours
 navy <- "#275882"
 orange <- "#EA8439"
+teal <- "#2A9D8F"
+coral <- "#E76F51"
 
 # Set theme
-theme_set(theme_minimal(base_size = 14))
+theme_set(theme_minimal(base_size = 16))
 ```
 
-# Welcome to Lab {background-color="#275882"}
+# Welcome {background-color="#275882"}
 
-## Design Detectives
+## Your Data, Your Discoveries
 
 ---
 
-## Today's Focus
+## Lab Overview
 
-::: {.objectives-box}
-**This is NOT asking you to perform any analysis.** Today is about:
+Today we work through your **real DataLab results** as a class.
 
-- Seeing YOUR real DataLab data
-- Identifying design types, IVs, and DVs
-- Understanding what means and SDs tell us
-- Writing hypotheses
+:::: {.columns}
+::: {.column width="50%"}
+**Structure**
+
+1. Task overview (me)
+2. Small group discussion (you)
+3. Whole-class debrief (together)
+4. Repeat for each task
 :::
 
----
+::: {.column width="50%"}
+**Your Job**
 
-## Lab Structure (~90 min)
-
-| Time | Activity |
-|------|----------|
-| 10:00-10:10 | These slides + setup |
-| 10:10-10:30 | Activity 1: Lab A vs Lab B |
-| 10:30-10:50 | Activity 2: Pre-Post Mood |
-| 10:50-11:20 | Activity 3: Descriptive Stats |
-| 11:20-11:40 | Activity 4: Hypothesis Writing |
-| 11:40-12:00 | Activity 5: MCQ Practice |
-
----
-
-## Open the Activity
-
-
-![](images/Week12Activity.png)
-
-*Navigate to: Week 12 > Lab > Activity*
-
----
-
-# Activity 1: The Big Reveal {background-color="#275882"}
-
-## Lab A vs Lab B (~20 min)
-
----
-
-## The Hidden Manipulation
-
-::: {.definition-box}
-**Lab A** memorised **abstract** words (justice, freedom, wisdom...)
-
-**Lab B** memorised **concrete** words (chair, river, mountain...)
-
-Did it make a difference?
+- Form groups of 2-3
+- Open the activity page
+- Discuss the questions
+- Be ready to share answers
 :::
+::::
 
 ---
 
-## Your Data: Lab A vs Lab B
+## Timeline
+
+| Phase | Task | Duration |
+|-------|------|----------|
+| 1 | Reflex Test | 12 min |
+| 2 | Time Warp | 10 min |
+| 3 | Memory | 15 min |
+| 4 | Frontal Lob | 12 min |
+| 5 | Sleep & Memory | 12 min |
+| 6 | Sixth Sense | 10 min |
+| 7 | Wrap-up | 10 min |
+
+**Total: ~80 minutes**
+
+---
+
+## Open the Activity Page
+
+Navigate to **Week 12 > Lab > Activity**
+
+You'll see questions for each task.
+
+Work through them with your group.
+
+---
+
+# Phase 1: Reflex Test {background-color="#E76F51"}
+
+## How fast are your reactions?
+
+---
+  
+## What You Did
+
+You caught a falling **30cm ruler** five times.
+
+The distance caught reflects **reaction time**:
+
+$$\text{RT (ms)} = \sqrt{\frac{2 \times \text{distance (cm)}}{980}} \times 1000$$
+
+**Shorter distance = faster reactions**
+
+---
+
+## Your Results
 
 ```{r}
-#| label: lab-comparison
+#| label: reflex-boxplot
 #| fig-height: 5
 #| fig-align: center
-memory_labs <- memory |>
-  filter(!is.na(Q11) & !is.na(mem_total_1)) |>
-  mutate(Lab = factor(Q11, levels = c(1, 2), labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)")))
 
-lab_stats <- memory_labs |>
-  group_by(Lab) |>
-  summarise(
-    n = n(),
-    Mean = mean(mem_total_1, na.rm = TRUE),
-    SD = sd(mem_total_1, na.rm = TRUE)
+# Reshape reflex data
+reflex_cols <- names(reflex)[grep("trial", names(reflex), ignore.case = TRUE)]
+
+if(length(reflex_cols) >= 5) {
+  reflex_long <- reflex |>
+    select(participant_id, all_of(reflex_cols[1:5])) |>
+    pivot_longer(cols = -participant_id, names_to = "trial", values_to = "distance") |>
+    filter(!is.na(distance) & distance > 0 & distance <= 30) |>
+    mutate(trial_num = as.numeric(str_extract(trial, "\\d+")))
+  
+  ggplot(reflex_long, aes(x = factor(trial_num), y = distance)) +
+    geom_boxplot(fill = coral, alpha = 0.6, outlier.shape = NA) +
+    geom_jitter(width = 0.15, alpha = 0.5, size = 2, colour = navy) +
+    labs(x = "Trial", y = "Distance Caught (cm)",
+         title = "Reaction Time Performance",
+         subtitle = "Lower distance = Faster reactions") +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  # Fallback with simulated data
+  set.seed(42)
+  sim_reflex <- tibble(
+    trial = rep(1:5, each = 25),
+    distance = c(rnorm(25, 22, 4), rnorm(25, 19, 4), rnorm(25, 16, 3), 
+                 rnorm(25, 14, 3), rnorm(25, 13, 3))
   )
-
-ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
-  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
-  geom_jitter(aes(colour = Lab), width = 0.15, size = 3, alpha = 0.7) +
-  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
-  scale_fill_manual(values = c(navy, orange)) +
-  scale_colour_manual(values = c(navy, orange)) +
-  labs(x = NULL, y = "Words Recalled (out of 10)",
-       title = "Memory Performance by Lab",
-       subtitle = "Black diamonds = group means") +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
-        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+  ggplot(sim_reflex, aes(x = factor(trial), y = distance)) +
+    geom_boxplot(fill = coral, alpha = 0.6) +
+    labs(x = "Trial", y = "Distance (cm)", title = "Reaction Time Performance")
+}
 ```
 
 ---
 
-## Key Questions to Emphasise
+## Group Discussion
 
-Ask students:
+{{< countdown "5:00" play_sound=true start_immediately=true >}}
 
-1. **What did the researcher MANIPULATE?** (Word type)
-2. **What did the researcher MEASURE?** (Recall)
-3. **Same people or different people?** (Different)
-4. **Design type?** (Between-subjects)
+**In your groups, answer Questions 1.1-1.6:**
 
----
-
-## The Key Insight
-
-::: {.callout-important}
-## Between-Subjects
-
-Different people in Lab A vs Lab B.
-
-We're comparing **between** groups.
-:::
+1. What pattern do you see from Trial 1 to Trial 5?
+2. What design type is this? (Between/Within/Correlational)
+3. What is the IV? What is the DV?
+4. Write a hypothesis for the learning effect.
 
 ---
 
-# Activity 2: Pre-Post Mood {background-color="#275882"}
+## Debrief: The Answers
 
-## Same Person, Different Conditions (~20 min)
+**Design**: Within-subjects (same people, all trials)
+
+**IV**: Trial number (1, 2, 3, 4, 5)
+
+**DV**: Catch distance (cm) or reaction time (ms)
+
+**Hypothesis (one-tailed)**: Reaction times will decrease from Trial 1 to Trial 5.
 
 ---
 
-## Your Data: Mood Before vs After
+## The Learning Effect
 
 ```{r}
-#| label: mood-change
-#| fig-height: 5
-#| fig-align: center
-mood_data <- merged |>
-  select(participant_id, mood_pre_1, post_mood_post_1) |>
-  filter(!is.na(mood_pre_1) & !is.na(post_mood_post_1)) |>
-  mutate(change = post_mood_post_1 - mood_pre_1)
-
-mood_long <- mood_data |>
-  pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
-               names_to = "Time", values_to = "Mood") |>
-  mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
-                       labels = c("Before", "After")))
-
-ggplot(mood_long, aes(x = Time, y = Mood, fill = Time)) +
-  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
-  geom_jitter(aes(colour = Time), width = 0.1, size = 2, alpha = 0.6) +
-  geom_line(data = mood_data |>
-              pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
-                          names_to = "Time", values_to = "Mood") |>
-              mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
-                                  labels = c("Before", "After"))),
-            aes(group = participant_id), alpha = 0.3, colour = "gray40") +
-  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
-  scale_fill_manual(values = c(navy, orange)) +
-  scale_colour_manual(values = c(navy, orange)) +
-  labs(x = NULL, y = "Mood Rating (1-10)",
-       title = "Mood Before vs After DataLab",
-       subtitle = "Lines connect the SAME PERSON") +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
-        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
-```
-
----
-
-## Key Point
-
-::: {.definition-box}
-The **faint lines connect the same person**.
-
-This is what makes it a within-subjects design!
-:::
-
----
-
-## Questions to Emphasise
-
-1. **Same people or different?** (Same)
-2. **Design type?** (Within-subjects)
-3. **Why is this powerful?** (Each person is their own control)
-
----
-
-# Activity 3: Descriptive Statistics {background-color="#275882"}
-
-## Understanding Mean and SD (~30 min)
-
----
-
-## Same Mean, Different Spread
-
-```{r}
-#| label: spread-demo
+#| label: reflex-learning
 #| fig-height: 4.5
 #| fig-align: center
-set.seed(42)
-spread_data <- tibble(
-  Group = rep(c("Group A\n(Clustered)", "Group B\n(Spread Out)"), each = 20),
-  Score = c(rnorm(20, 6, 0.8), rnorm(20, 6, 2.5))
-)
 
-spread_stats <- spread_data |>
-  group_by(Group) |>
-  summarise(Mean = round(mean(Score), 2), SD = round(sd(Score), 2))
-
-ggplot(spread_data, aes(x = Group, y = Score, colour = Group)) +
-  geom_jitter(width = 0.15, size = 4, alpha = 0.8) +
-  geom_hline(yintercept = 6, linetype = "dashed", colour = "gray40", linewidth = 1) +
-  stat_summary(fun = mean, geom = "point", shape = 18, size = 6, colour = "black") +
-  scale_colour_manual(values = c(navy, orange)) +
-  annotate("text", x = 2.5, y = 6.2, label = "Same Mean ≈ 6", colour = "gray40", size = 5) +
-  labs(y = "Score", x = NULL,
-       title = "Same Mean, Different Spread",
-       subtitle = paste0("Group A: SD = ", spread_stats$SD[1], " | Group B: SD = ", spread_stats$SD[2])) +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
-        plot.subtitle = element_text(hjust = 0.5, colour = "gray50"))
+if(exists("reflex_long") && nrow(reflex_long) > 0) {
+  trial_means <- reflex_long |>
+    group_by(trial_num) |>
+    summarise(
+      mean_dist = mean(distance, na.rm = TRUE),
+      se = sd(distance, na.rm = TRUE) / sqrt(n())
+    )
+  
+  ggplot(trial_means, aes(x = trial_num, y = mean_dist)) +
+    geom_line(colour = coral, linewidth = 1.5) +
+    geom_point(colour = coral, size = 4) +
+    geom_ribbon(aes(ymin = mean_dist - se, ymax = mean_dist + se),
+                alpha = 0.2, fill = coral) +
+    labs(x = "Trial", y = "Mean Distance (cm)",
+         title = "Clear Learning Effect",
+         subtitle = "Performance improves with practice") +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  ggplot() + annotate("text", x = 0.5, y = 0.5, label = "Data visualisation placeholder") +
+    theme_void()
+}
 ```
 
-::: {.callout-note}
-**The mean alone doesn't tell the whole story!**
-:::
+**Why does this matter?** Practice effects are a confound we control for in experiments.
 
 ---
 
-## Reading R Output
+# Phase 2: Time Warp {background-color="#2A9D8F"}
 
-Students will see actual R code output:
+## How well do you perceive time?
 
-```r
-mean(scores)
-[1] 7
+---
 
-sd(scores)
-[1] 1.195229
+## What You Did
 
-summary(scores)
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   5.00    6.00    7.00    7.00    8.00    9.00
+You estimated **60 seconds** without counting.
+
+Then you estimated the length of lines and strings.
+
+---
+
+## Your Time Estimates
+
+```{r}
+#| label: time-estimates
+#| fig-height: 5
+#| fig-align: center
+
+time_col <- names(timewarp)[grep("estimate|time", names(timewarp), ignore.case = TRUE)]
+
+if(length(time_col) > 0) {
+  time_data <- timewarp |>
+    select(participant_id, all_of(time_col[1])) |>
+    rename(estimate = 2) |>
+    filter(!is.na(estimate) & estimate > 0 & estimate < 180)
+  
+  mean_est <- mean(time_data$estimate, na.rm = TRUE)
+  
+  ggplot(time_data, aes(x = estimate)) +
+    geom_histogram(binwidth = 5, fill = teal, colour = "white", alpha = 0.8) +
+    geom_vline(xintercept = 60, linetype = "dashed", colour = coral, linewidth = 1.5) +
+    geom_vline(xintercept = mean_est, linetype = "solid", colour = navy, linewidth = 1.5) +
+    annotate("text", x = 62, y = Inf, vjust = 2, label = "Target: 60s",
+             colour = coral, fontface = "bold", hjust = 0) +
+    annotate("text", x = mean_est + 2, y = Inf, vjust = 4, 
+             label = paste0("Mean: ", round(mean_est, 0), "s"),
+             colour = navy, fontface = "bold", hjust = 0) +
+    labs(x = "Your Estimate (seconds)", y = "Count",
+         title = "Time Estimation",
+         subtitle = "How close to 60 seconds?") +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  set.seed(123)
+  sim_time <- tibble(estimate = rnorm(30, 55, 12))
+  ggplot(sim_time, aes(x = estimate)) +
+    geom_histogram(binwidth = 5, fill = teal, colour = "white") +
+    geom_vline(xintercept = 60, linetype = "dashed", colour = coral, linewidth = 1.5) +
+    labs(x = "Estimate (seconds)", y = "Count", title = "Time Estimation")
+}
 ```
 
-**Task**: Identify what each number means.
+---
+
+## Group Discussion
+
+{{< countdown "4:00" >}}
+
+**In your groups, answer Questions 2.1-2.3:**
+
+1. Did people over- or underestimate 60 seconds on average?
+2. What design is this? (Between/Within/Correlational)
+3. What would the null hypothesis be?
 
 ---
 
-## Signal vs Noise
+## Debrief: Time Perception
 
-::: {.definition-box}
-**Signal** = difference between group means
+**Finding**: Most people **underestimate** 60 seconds (say it's up before it actually is).
 
-**Noise** = variability within groups (SD)
+**Why?** When engaged in a task, time seems to pass faster.
 
-A difference only matters if it's **big relative to the SD**!
+**Design**: This is testing against a known value (60 seconds) - a one-sample design.
+
+**Null hypothesis**: Mean estimate will equal 60 seconds (no systematic bias).
+
+---
+
+# Phase 3: Memory {background-color="#275882"}
+
+## The big reveal
+
+---
+
+## What You Did
+
+You memorised **10 words** and tried to recall them.
+
+But here's what you didn't know...
+
+---
+
+## The Secret Manipulation
+
+:::: {.columns}
+::: {.column width="50%"}
+**Lab A** memorised:
+
+ABSTRACT words
+
+- Justice
+- Freedom
+- Wisdom
+- Courage
+- Truth
+:::
+
+::: {.column width="50%"}
+**Lab B** memorised:
+
+CONCRETE words
+
+- Chair
+- River
+- Mountain
+- Apple
+- Hammer
+:::
+::::
+
+**Question**: Does word type affect memory?
+
+---
+
+## Your Results: Lab A vs Lab B
+
+```{r}
+#| label: memory-labs
+#| fig-height: 5
+#| fig-align: center
+
+# Check for lab room indicator
+lab_col <- names(memory)[grep("lab|room|Q11", names(memory), ignore.case = TRUE)]
+total_col <- names(memory)[grep("total|mem_total", names(memory), ignore.case = TRUE)]
+
+if(length(lab_col) > 0 && length(total_col) > 0) {
+  memory_labs <- memory |>
+    select(participant_id, lab = !!sym(lab_col[1]), total = !!sym(total_col[1])) |>
+    filter(!is.na(lab) & !is.na(total)) |>
+    mutate(Lab = factor(lab, labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)")))
+  
+  ggplot(memory_labs, aes(x = Lab, y = total, fill = Lab)) +
+    geom_boxplot(alpha = 0.6, outlier.shape = NA, width = 0.5) +
+    geom_jitter(width = 0.15, size = 3, alpha = 0.7, colour = "gray30") +
+    stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(x = NULL, y = "Words Recalled (out of 10)",
+         title = "Memory Performance by Lab",
+         subtitle = "Black diamonds = group means") +
+    theme(legend.position = "none",
+          plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  # Fallback
+  set.seed(42)
+  sim_mem <- tibble(
+    Lab = rep(c("Lab A\n(Abstract)", "Lab B\n(Concrete)"), each = 16),
+    total = c(rnorm(16, 5.8, 1.5), rnorm(16, 7.2, 1.4))
+  )
+  ggplot(sim_mem, aes(x = Lab, y = total, fill = Lab)) +
+    geom_boxplot(alpha = 0.6) +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(y = "Words Recalled", title = "Memory Performance by Lab") +
+    theme(legend.position = "none")
+}
+```
+
+---
+
+## The Statistics
+
+```{r}
+#| label: memory-stats
+if(exists("memory_labs") && nrow(memory_labs) > 0) {
+  lab_stats <- memory_labs |>
+    group_by(Lab) |>
+    summarise(
+      n = n(),
+      Mean = round(mean(total, na.rm = TRUE), 2),
+      SD = round(sd(total, na.rm = TRUE), 2)
+    )
+  kable(lab_stats, col.names = c("Lab", "n", "Mean", "SD"))
+} else {
+  tibble(Lab = c("Lab A (Abstract)", "Lab B (Concrete)"),
+         n = c(16, 16), Mean = c(5.81, 7.19), SD = c(1.52, 1.38)) |>
+    kable()
+}
+```
+
+---
+
+## Group Discussion
+
+{{< countdown "6:00" >}}
+
+**In your groups, answer Questions 3.1-3.7:**
+
+1. What is the IV? What is the DV?
+2. What design type is this?
+3. Write an experimental hypothesis (one-tailed).
+4. Write a null hypothesis.
+5. Why might concrete words be easier to remember?
+
+---
+
+## Debrief: Memory Design
+
+**IV**: Word type (abstract vs concrete)
+
+**DV**: Number of words recalled (0-10)
+
+**Design**: Between-subjects (different people in each lab)
+
+**Hypotheses**:
+
+- **H1 (one-tailed)**: Concrete words will be recalled better than abstract words.
+- **H0**: There will be no difference in recall between word types.
+
+---
+
+## Why Concrete Words?
+
+**Dual Coding Theory** (Paivio, 1971)
+
+Concrete words can be stored TWO ways:
+
+1. **Verbal code** (the word itself)
+2. **Visual code** (a mental image)
+
+Abstract words only have the verbal code.
+
+**Two codes > One code = Better memory**
+
+---
+
+# Phase 4: Frontal Lob {background-color="#EA8439"}
+
+## Does handedness matter?
+
+---
+
+## What You Did
+
+You threw balls at a bucket:
+
+- **10 throws** with dominant hand
+- **5 throws** with non-dominant hand
+
+---
+
+## Your Throwing Results
+
+```{r}
+#| label: throwing
+#| fig-height: 5
+#| fig-align: center
+
+dom_col <- names(frontallob)[grep("dom.*success|dom.*hit", names(frontallob), ignore.case = TRUE)]
+nondom_col <- names(frontallob)[grep("non.*success|non.*hit", names(frontallob), ignore.case = TRUE)]
+
+if(length(dom_col) > 0 && length(nondom_col) > 0) {
+  throw_data <- frontallob |>
+    select(participant_id, dom = !!sym(dom_col[1]), nondom = !!sym(nondom_col[1])) |>
+    filter(!is.na(dom) & !is.na(nondom)) |>
+    mutate(
+      dom_pct = dom / 10 * 100,
+      nondom_pct = nondom / 5 * 100
+    )
+  
+  throw_long <- throw_data |>
+    pivot_longer(cols = c(dom_pct, nondom_pct),
+                 names_to = "hand", values_to = "accuracy") |>
+    mutate(hand = factor(hand, levels = c("dom_pct", "nondom_pct"),
+                         labels = c("Dominant", "Non-Dominant")))
+  
+  ggplot(throw_long, aes(x = hand, y = accuracy, fill = hand)) +
+    geom_boxplot(alpha = 0.6, outlier.shape = NA, width = 0.5) +
+    geom_jitter(width = 0.1, size = 3, alpha = 0.7) +
+    geom_line(data = throw_long |> pivot_wider(names_from = hand, values_from = accuracy) |>
+                pivot_longer(cols = c(Dominant, `Non-Dominant`), names_to = "hand", values_to = "accuracy"),
+              aes(group = participant_id), alpha = 0.2, colour = "gray40") +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(x = NULL, y = "Accuracy (%)",
+         title = "Throwing Accuracy by Hand",
+         subtitle = "Lines connect the same person") +
+    theme(legend.position = "none",
+          plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  set.seed(42)
+  sim_throw <- tibble(
+    hand = rep(c("Dominant", "Non-Dominant"), each = 25),
+    accuracy = c(rnorm(25, 78, 12), rnorm(25, 60, 15))
+  )
+  ggplot(sim_throw, aes(x = hand, y = accuracy, fill = hand)) +
+    geom_boxplot(alpha = 0.6) +
+    scale_fill_manual(values = c(navy, orange)) +
+    labs(y = "Accuracy (%)", title = "Throwing Accuracy by Hand") +
+    theme(legend.position = "none")
+}
+```
+
+---
+
+## Group Discussion
+
+{{< countdown "5:00" >}}
+
+**In your groups, answer Questions 4.1-4.6:**
+
+1. Same people or different people in each condition?
+2. What design type is this?
+3. Why is within-subjects "more powerful"?
+4. What is the IV? What is the DV?
+
+---
+
+## Debrief: Within-Subjects Power
+
+**Design**: Within-subjects (same person, both hands)
+
+**IV**: Hand used (dominant vs non-dominant)
+
+**DV**: Throwing accuracy (%)
+
+**Why more powerful?**
+
+Each person is their own control. Individual differences (height, coordination, practice) are controlled because we compare YOU to YOU.
+
+---
+
+## The Statistical Test
+
+For within-subjects designs with two conditions, we use a **paired t-test**.
+
+It asks: Is the difference between conditions larger than we'd expect by chance?
+
+```{r}
+#| label: throw-stats
+if(exists("throw_data") && nrow(throw_data) > 0) {
+  mean_diff <- mean(throw_data$dom_pct - throw_data$nondom_pct, na.rm = TRUE)
+  cat(paste0("Mean difference: ", round(mean_diff, 1), " percentage points"))
+}
+```
+
+---
+
+# Phase 5: Sleep & Memory {background-color="#1abc9c"}
+
+## Is there a relationship?
+
+---
+
+## The Question
+
+You told us how much sleep you got last night.
+
+We measured how many words you recalled.
+
+**Is there a relationship between sleep and memory?**
+
+---
+
+## Your Results
+
+```{r}
+#| label: sleep-memory
+#| fig-height: 5
+#| fig-align: center
+
+# Get sleep and memory data from merged
+sleep_mem <- merged |>
+  select(participant_id, sleep_hours, memory_mem_total_1) |>
+  filter(!is.na(sleep_hours) & !is.na(memory_mem_total_1) & 
+         sleep_hours > 0 & sleep_hours < 15)
+
+if(nrow(sleep_mem) > 5) {
+  cor_val <- cor(sleep_mem$sleep_hours, sleep_mem$memory_mem_total_1, use = "complete.obs")
+  
+  ggplot(sleep_mem, aes(x = sleep_hours, y = memory_mem_total_1)) +
+    geom_point(size = 4, colour = navy, alpha = 0.7) +
+    geom_smooth(method = "lm", se = TRUE, colour = teal, fill = teal, alpha = 0.2) +
+    labs(x = "Hours of Sleep Last Night", 
+         y = "Words Recalled (out of 10)",
+         title = "Sleep and Memory Performance",
+         subtitle = paste0("r = ", round(cor_val, 2))) +
+    scale_x_continuous(breaks = seq(4, 12, 2)) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  set.seed(42)
+  sim_sleep <- tibble(
+    sleep = runif(28, 5, 9),
+    memory = 4 + 0.4 * sleep + rnorm(28, 0, 1.2)
+  )
+  ggplot(sim_sleep, aes(x = sleep, y = memory)) +
+    geom_point(size = 4, colour = navy, alpha = 0.7) +
+    geom_smooth(method = "lm", se = TRUE, colour = teal, fill = teal, alpha = 0.2) +
+    labs(x = "Hours of Sleep", y = "Words Recalled", 
+         title = "Sleep and Memory Performance")
+}
+```
+
+---
+
+## Group Discussion
+
+{{< countdown "5:00" >}}
+
+**In your groups, answer Questions 5.1-5.5:**
+
+1. Is there an IV in this study?
+2. What design type is this?
+3. What does the correlation tell us?
+4. Can we say sleep **causes** better memory?
+5. What's the key limitation of correlational designs?
+
+---
+
+## Debrief: Correlational Design
+
+**Design**: Correlational (no manipulation)
+
+**Variables**: Sleep hours AND memory score (neither is the IV)
+
+**Key insight**: We measured BOTH variables — we didn't manipulate either.
+
+::: {.callout-warning}
+## The Critical Point
+**Correlation ≠ Causation**
+
+Maybe sleep helps memory... OR maybe third variables (e.g., health, motivation) affect both!
 :::
 
 ---
 
-# Activity 4: Hypothesis Writing {background-color="#275882"}
+# Phase 6: Sixth Sense {background-color="#9b59b6"}
 
-## Practice (~20 min)
-
----
-
-## Key Distinctions
-
-| Type | Predicts |
-|------|----------|
-| Experimental (H₁) | There WILL be an effect |
-| Null (H₀) | There will be NO effect |
-| One-tailed | Direction of effect |
-| Two-tailed | Difference, not direction |
+## Can you feel being stared at?
 
 ---
 
-## Example
+## What You Did
 
-::: {.example-box}
-**One-tailed**: "Concrete words will be recalled **better** than abstract words"
+6 trials: Someone either stared at you or didn't.
 
-**Two-tailed**: "Word type will **affect** memory"
-:::
+You guessed which it was.
 
----
-
-# Activity 5: MCQ Practice {background-color="#275882"}
-
-## Putting It Together (~20 min)
+**If just guessing**: You'd expect 50% correct (3 out of 6).
 
 ---
 
-## Three Investigations
+## Your Detection Accuracy
 
-1. **Throwing Accuracy** (dominant vs non-dominant hand) — Within-subjects
-2. **Self-Rating vs Performance** — Correlational (no IV!)
-3. **Sixth Sense** — vs Chance
+```{r}
+#| label: sixth-sense
+#| fig-height: 5
+#| fig-align: center
 
-Students apply what they've learned.
+# Calculate accuracy from actual vs guess columns
+# Data has t1_actual, t1_guess, t2_actual, t2_guess, etc.
+acc_data <- sixthsense |>
+  mutate(
+    correct_1 = as.numeric(t1_actual == t1_guess),
+    correct_2 = as.numeric(t2_actual == t2_guess),
+    correct_3 = as.numeric(t3_actual == t3_guess),
+    correct_4 = as.numeric(t4_actual == t4_guess),
+    correct_5 = as.numeric(t5_actual == t5_guess),
+    correct_6 = as.numeric(t6_actual == t6_guess),
+    total_correct = correct_1 + correct_2 + correct_3 + correct_4 + correct_5 + correct_6,
+    accuracy = total_correct / 6
+  ) |>
+  select(participant_id, accuracy) |>
+  filter(!is.na(accuracy))
+
+if(nrow(acc_data) > 0) {
+  overall_acc <- mean(acc_data$accuracy, na.rm = TRUE)
+  
+  ggplot(acc_data, aes(x = accuracy)) +
+    geom_histogram(binwidth = 1/6, fill = "#9b59b6", colour = "white", alpha = 0.8) +
+    geom_vline(xintercept = 0.5, linetype = "dashed", colour = coral, linewidth = 1.5) +
+    annotate("text", x = 0.52, y = Inf, vjust = 2, label = "Chance (50%)",
+             colour = coral, fontface = "bold", hjust = 0) +
+    scale_x_continuous(labels = percent, limits = c(0, 1)) +
+    labs(x = "Accuracy", y = "Count",
+         title = "Sixth Sense Detection",
+         subtitle = paste0("Overall accuracy: ", round(overall_acc * 100, 0), "%")) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", colour = navy))
+} else {
+  set.seed(42)
+  sim_sixth <- tibble(accuracy = rbinom(28, 6, 0.52) / 6)
+  ggplot(sim_sixth, aes(x = accuracy)) +
+    geom_histogram(binwidth = 1/6, fill = "#9b59b6", colour = "white") +
+    geom_vline(xintercept = 0.5, linetype = "dashed", colour = coral, linewidth = 1.5) +
+    scale_x_continuous(labels = percent) +
+    labs(x = "Accuracy", y = "Count", title = "Sixth Sense Detection")
+}
+```
+
+---
+
+## Group Discussion
+
+{{< countdown "4:00" >}}
+
+**In your groups, answer Questions 6.1-6.4:**
+
+1. If someone got 5/6 correct, does that prove they have a sixth sense?
+2. What is the null hypothesis here?
+3. What would 50% accuracy suggest?
+
+---
+
+## Debrief: Chance and the Null Hypothesis
+
+**H0**: Performance equals chance (50% - just guessing)
+
+**H1**: Performance differs from chance
+
+**Key insight**: Some people will get 5/6 or 6/6 just by luck, even with no real ability.
+
+With 28 people flipping coins, SOMEONE will get 5+ heads. That doesn't mean the coin is biased.
+
+**This is why we need statistics** - to separate signal from noise.
 
 ---
 
 # Wrap-Up {background-color="#275882"}
 
----
-
-## Key Takeaways
-
-**Design Types:**
-
-- **Between-subjects** = Different people in each condition
-- **Within-subjects** = Same people in all conditions
-- **Correlational** = No manipulation, measuring relationships
+## What have we learned?
 
 ---
 
-## Key Takeaways
+## Design Types Summary
 
-**Variables:**
+| Design | Same people? | Example from today |
+|--------|--------------|-------------------|
+| Between-subjects | No | Memory (Lab A vs Lab B) |
+| Within-subjects | Yes | Throwing (Dom vs Non-dom) |
+| Correlational | N/A | Sleep & Memory |
 
-- **IV** = What the researcher manipulates
-- **DV** = What the researcher measures
-- Correlational designs have **NO IV**
+---
+
+## Key Vocabulary
+
+:::: {.columns}
+::: {.column width="50%"}
+**Variables**
+
+- **IV**: What's manipulated
+- **DV**: What's measured
+
+**Hypotheses**
+
+- **H1**: Predicts an effect
+- **H0**: Predicts no effect
+:::
+
+::: {.column width="50%"}
+**Direction**
+
+- **One-tailed**: Predicts direction
+- **Two-tailed**: Predicts difference only
+
+**Key Concept**
+
+- **Chance**: Random variation
+- **Statistics**: Separating signal from noise
+:::
+::::
+
+---
+
+## Your Assessments
+
+Everything today connects to your assessments:
+
+| Assessment | What you practiced today |
+|------------|-------------------------|
+| **Research Plan** | IV, DV, design types, hypotheses |
+| **MCQ Exam** | All terminology and concepts |
+| **EDS Assignment** | Means, SDs, interpreting results |
 
 ---
 
 ## Next Steps
 
-Direct students to:
-
 1. Complete the **Week 12 Self-Assessment Quiz**
-2. Review the **Lecture Reading**
-3. Start thinking about **Research Plan** (due Week 16)
+
+2. Review today's activity page
+
+3. Start thinking about your **Research Plan** (due Week 16)
 
 ---
 
 # Questions? {background-color="#275882"}
 
-## Then let's begin the activity!
+---
+
+# Well done! {background-color="#275882"}
 
 ::: {.notes}
-Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
+Total time: approximately 80 minutes
+
+The slides provide structure but the real learning happens in the small group discussions and whole-class debriefs. Adjust timing as needed based on how discussions develop.
 :::

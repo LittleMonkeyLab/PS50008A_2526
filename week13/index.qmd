@@ -1,5 +1,5 @@
 ---
-title: "Week 13: Estimation & Confidence Intervals"
+title: "Week 13: Building Your Research"
 subtitle: "PS50008A Research Methods | 26-30 January 2026"
 author: "Gordon Wright"
 date: "2026-01-26"
@@ -8,11 +8,11 @@ date: "2026-01-26"
 ## Overview
 
 ::: {.callout-note}
-## Building on Descriptives
-This week we move from describing data to estimating population values. You'll learn how to quantify uncertainty using confidence intervals.
+## From Learning to Doing
+Last week you learned the framework for experimental research. This week we put it into practice — building the foundation for YOUR Research Plan.
 :::
 
-**This week**: Learn the difference between point estimates and interval estimates, understand how bootstrap confidence intervals work, and calculate effect sizes using Cohen's d.
+**This week**: Learn to operationalise variables, write testable hypotheses, choose appropriate designs, and connect your design choices to statistical tests. This directly prepares you for the Research Plan (due Week 16).
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
 **Lab**: Thursday 10:00-12:00 WB304A and WB304B
@@ -21,82 +21,105 @@ This week we move from describing data to estimating population values. You'll l
 
 By the end of this week, you will be able to:
 
-### Point Estimates vs Interval Estimates
-- Explain why a single number (point estimate) is often insufficient
-- Understand that sample statistics estimate population parameters
-- Describe the concept of sampling variability
+### Operationalisation
+- Turn abstract concepts into measurable variables
+- Identify precise IV manipulations and DV measurements
+- Recognise common operationalisation pitfalls
 
-### Bootstrap Confidence Intervals
-- Explain the logic of bootstrapping (resampling with replacement)
-- Interpret a 95% confidence interval correctly
-- Understand what confidence intervals tell us about precision
+### Writing Hypotheses
+- Write clear null and alternative hypotheses
+- Choose between one-tailed and two-tailed hypotheses with justification
+- Understand when directional predictions are appropriate
 
-### Effect Sizes
-- Define and calculate Cohen's d
-- Interpret effect size magnitude (small, medium, large)
-- Explain why effect sizes complement significance testing
-- Report effect sizes in APA format
+### Design Decisions
+- Choose between within-subjects and between-subjects designs
+- Explain the trade-offs for each design type
+- Apply practical constraints (time, participants, ethics) to design choices
+
+### Connecting Design to Analysis
+- Match your research design to the appropriate statistical test
+- Explain WHY different designs require different tests
+- Justify your choice of analysis method (required for your Research Plan)
 
 ## Before the Lecture
 
 ::: {.callout-important}
 ## Required Preparation
-1. **Read the lecture reading** - covers estimation concepts and confidence intervals
-2. **Review your DataLab descriptives** - we'll use these to build confidence intervals
+1. **Review Week 12 content** — hypotheses, IVs, DVs, and experimental designs
+2. **Look at the Research Plan brief** — understand what you need to produce
 :::
 
-## The Big Picture
+## The Three Research Plan Topics
 
-This week answers the question: **How certain can we be about our estimates?**
+Your Research Plan will investigate one of these questions:
 
-::: {.callout-warning}
-## Foundation for Inference
-Confidence intervals are essential preparation for next week's hypothesis testing. Understanding uncertainty in estimation is crucial before learning about statistical inference.
+::: {.callout-tip}
+## Topic 1: Font Difficulty → Memory
+Does reading text in a harder-to-read font improve memory retention?
+
+*Based on research by Diemand-Yauman et al. (2011) on "desirable difficulties"*
 :::
 
-We'll continue using YOUR DataLab data to illustrate:
+::: {.callout-tip}
+## Topic 2: Hydration → Cognitive Performance
+Does drinking water improve cognitive task performance?
 
-- **Sample means as estimates** - your mean confidence score estimates the population mean
-- **Bootstrap CIs** - how much could your estimates vary?
-- **Effect sizes** - how big is the difference between conditions?
+*Based on research by Edmonds & Burford (2009) on hydration and cognition*
+:::
+
+::: {.callout-tip}
+## Topic 3: Eye Contact → Perceived Trustworthiness
+Does eye contact duration affect how trustworthy a person is perceived to be?
+
+*Based on research by Argyle & Dean (1965) on eye contact and social perception*
+:::
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | Full lecture presentation |
-| [Lecture Reading](lecture/reading.qmd) | Point estimates, confidence intervals, effect sizes |
-| [Lab Reading](lab/reading.qmd) | Bootstrap methods in R |
+| [Lecture Reading](lecture/reading.qmd) | Operationalisation, hypotheses, design decisions |
+| [Lab Reading](lab/reading.qmd) | Research Plan workshop preparation |
 | [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
-| [Lab Activity](lab/activity.qmd) | WebR exercises: bootstrap CIs with DataLab data |
+| [Lab Activity](lab/activity.qmd) | Research Plan development workshop |
 | [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
 
 ## Week at a Glance
 
 | Day | Session | Focus |
 |-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | Point vs interval estimates, bootstrap logic, confidence intervals, Cohen's d |
-| Thursday | Lab (2 hrs) | Calculating bootstrap CIs in R, computing effect sizes |
+| Wednesday | Lecture (2 hrs) | Operationalisation, hypotheses, design decisions, design-to-analysis link |
+| Thursday | Lab (2 hrs) | Hands-on Research Plan development workshop |
 
 
 ## Key Concepts
 
-### Point Estimates
-- **Sample mean**: Our best single guess for the population mean
-- **Sample SD**: Our estimate of population variability
-- **Limitation**: A point estimate alone tells us nothing about precision
+### Operationalisation
+- **Definition**: Turning abstract concepts into concrete, measurable variables
+- **IV operationalisation**: How exactly will you manipulate the independent variable?
+- **DV operationalisation**: How exactly will you measure the dependent variable?
+- **Key question**: Would another researcher be able to replicate your study from your description?
 
-### Confidence Intervals
-- **Bootstrap method**: Resample your data (with replacement) thousands of times
-- **95% CI**: The range that captures the middle 95% of bootstrap estimates
-- **Interpretation**: If we repeated the study many times, 95% of CIs would contain the true value
-- **Narrow CI**: More precision; **Wide CI**: Less precision
+### Hypotheses
+- **Null hypothesis (H₀)**: There is no effect — the default assumption
+- **Alternative hypothesis (H₁)**: There IS an effect — what you're testing
+- **One-tailed**: Predicts direction ("A > B") — use when theory/evidence strongly supports a direction
+- **Two-tailed**: Predicts difference without direction ("A ≠ B") — use when direction is uncertain
 
-### Effect Sizes
-- **Cohen's d**: Standardised difference between means
-- **Formula**: d = (M1 - M2) / pooled SD
-- **Benchmarks**: Small (0.2), Medium (0.5), Large (0.8)
-- **Why use them**: Effect sizes are comparable across studies and don't depend on sample size
+### Design Trade-offs
+| Design | Advantage | Disadvantage |
+|--------|-----------|--------------|
+| **Between-subjects** | No order effects, no practice effects | Individual differences add noise, needs more participants |
+| **Within-subjects** | Controls individual differences, more statistical power | Order effects possible, demand characteristics |
+
+### The Design → Test Link
+| Your Design | Your Statistical Test |
+|-------------|----------------------|
+| Between-subjects (different people) | Independent samples t-test |
+| Within-subjects (same people) | Paired samples t-test |
+
+This connection is ESSENTIAL for your Research Plan. You must justify why your design choice leads to your test choice.
 
 ## Connecting to Assessments
 
@@ -104,11 +127,21 @@ This week's content directly supports your assessments:
 
 | Assessment | Connection |
 |------------|------------|
-| **Research Plan** | Effect size justification for sample size |
-| **MCQ Exam** | CI interpretation, effect size calculations |
-| **EDS Assignment** | Reporting CIs and effect sizes with descriptives |
-| **Research Report** | Results section: CIs and effect sizes alongside tests |
+| **Research Plan** | DIRECT preparation — operationalisation, hypotheses, design, test justification |
+| **MCQ Exam** | Hypothesis writing, design identification, test selection |
+| **EDS Assignment** | Understanding the logic behind test choices |
+| **Research Report** | Method section structure and rationale |
+
+::: {.callout-warning}
+## Research Plan Due Week 16
+Your Research Plan is due Friday 27th February. This week's content directly teaches you how to write:
+
+- **Operationalised variables** (Section 1)
+- **Hypotheses with justification** (Section 2)
+- **Design with justification** (Section 3)
+- **Statistical test with justification** (Section 4)
+:::
 
 ## What's Next?
 
-**Week 14**: Inference & t-tests - putting it all together with null hypothesis significance testing and t-tests for comparing means.
+**Week 14**: Is Your Effect Real? — Combining inference logic (hypothesis testing, p-values) with estimation (confidence intervals, effect sizes) to interpret your results.

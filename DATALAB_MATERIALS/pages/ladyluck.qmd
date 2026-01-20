@@ -1,0 +1,341 @@
+---
+title: "Lady Luck Analysis"
+subtitle: "Random Number Generation"
+---
+
+::: {.task-header .ladyluck}
+# Lady Luck
+::: {.task-subtitle}
+Examining how our brains generate (or fail to generate) random numbers
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+[Sixth Sense](sixthsense.qmd)
+[Frontal Lob](frontallob.qmd)
+:::
+
+## Introduction
+
+Humans are notoriously **bad at being random**. When asked to generate random numbers, we show systematic biases:
+
+1. **Avoidance of repetitions** - We think "7, 7" is less random than "7, 4"
+2. **Favourite numbers** - Some numbers feel "more random" (like 7)
+3. **Avoidance of patterns** - We avoid sequences like "1, 2, 3"
+
+In this task, you generated random numbers and coin flips to see if these biases appear in your data.
+
+::: {.key-finding}
+#### Key Finding
+Participants showed a preference for numbers like **3 and 7** while avoiding round numbers like **5 and 10**. They also alternated between heads/tails more than truly random sequences would.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Random number generation data (N=30)
+# Shows preference for 7, avoidance of 5/10, and alternation bias in coins
+
+ladyluck <- tibble::tribble(
+  ~id, ~n1, ~n2, ~n3, ~n4, ~n5, ~n6, ~n7, ~n8, ~n9, ~n10, ~c1, ~c2, ~c3, ~c4, ~c5, ~c6, ~c7, ~c8, ~c9, ~c10,
+  1, 7, 3, 9, 2, 6, 8, 4, 1, 7, 3, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  2, 4, 8, 2, 7, 9, 3, 6, 1, 4, 8, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  3, 3, 7, 1, 9, 4, 6, 2, 8, 3, 7, "H", "T", "T", "H", "T", "H", "H", "T", "T", "H",
+  4, 6, 2, 8, 4, 7, 1, 9, 3, 6, 2, "T", "H", "H", "T", "T", "H", "T", "H", "H", "T",
+  5, 9, 3, 7, 2, 8, 4, 6, 1, 9, 3, "H", "T", "H", "H", "T", "T", "H", "T", "H", "T",
+  6, 8, 4, 6, 2, 9, 3, 7, 1, 8, 4, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  7, 2, 7, 9, 3, 6, 4, 8, 1, 2, 7, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  8, 7, 3, 4, 9, 2, 6, 1, 8, 7, 3, "T", "T", "H", "H", "T", "T", "H", "H", "T", "T",
+  9, 4, 8, 2, 6, 9, 1, 7, 3, 4, 8, "H", "H", "T", "T", "H", "H", "T", "T", "H", "H",
+  10, 9, 3, 7, 1, 8, 4, 2, 6, 9, 3, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  11, 3, 7, 9, 4, 2, 8, 6, 1, 3, 7, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  12, 7, 2, 4, 8, 6, 3, 9, 1, 7, 2, "T", "H", "H", "T", "T", "H", "H", "T", "T", "H",
+  13, 6, 8, 3, 7, 1, 9, 4, 2, 6, 8, "H", "T", "T", "H", "H", "T", "T", "H", "H", "T",
+  14, 4, 7, 2, 9, 3, 6, 8, 1, 4, 7, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  15, 8, 3, 7, 4, 9, 2, 6, 1, 8, 3, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  16, 2, 9, 4, 7, 3, 8, 1, 6, 2, 9, "T", "H", "H", "T", "T", "H", "H", "T", "T", "H",
+  17, 7, 4, 8, 2, 6, 9, 3, 1, 7, 4, "H", "T", "T", "H", "T", "H", "T", "H", "H", "T",
+  18, 3, 8, 6, 9, 4, 2, 7, 1, 3, 8, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  19, 9, 2, 7, 4, 8, 3, 6, 1, 9, 2, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  20, 6, 7, 3, 8, 2, 9, 4, 1, 6, 7, "T", "H", "H", "T", "T", "H", "H", "T", "T", "H",
+  21, 4, 3, 9, 7, 6, 2, 8, 1, 4, 3, "H", "T", "T", "H", "H", "T", "T", "H", "H", "T",
+  22, 7, 8, 2, 4, 9, 6, 3, 1, 7, 8, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  23, 8, 4, 7, 3, 6, 9, 2, 1, 8, 4, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  24, 3, 9, 6, 7, 2, 4, 8, 1, 3, 9, "T", "H", "H", "T", "T", "H", "H", "T", "T", "H",
+  25, 7, 2, 8, 4, 3, 9, 6, 1, 7, 2, "H", "T", "T", "H", "T", "H", "T", "H", "H", "T",
+  26, 4, 7, 3, 9, 8, 2, 6, 1, 4, 7, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H",
+  27, 9, 3, 7, 6, 4, 8, 2, 1, 9, 3, "H", "T", "H", "T", "H", "T", "H", "T", "H", "T",
+  28, 6, 8, 4, 3, 7, 9, 2, 1, 6, 8, "T", "H", "H", "T", "T", "H", "H", "T", "T", "H",
+  29, 7, 4, 9, 2, 8, 3, 6, 1, 7, 4, "H", "T", "T", "H", "H", "T", "T", "H", "H", "T",
+  30, 3, 7, 6, 8, 4, 2, 9, 1, 3, 7, "T", "H", "T", "H", "T", "H", "T", "H", "T", "H"
+)
+
+cat("N =", nrow(ladyluck), "participants\n")
+cat("10 random numbers + 10 coin flips each\n\n")
+head(ladyluck)
+```
+
+## Number Frequency Distribution
+
+If we're truly random, each number 1-10 should appear equally often (10% each).
+
+```{webr-r}
+# Reshape number data
+numbers <- ladyluck |>
+  select(id, starts_with("n")) |>
+  pivot_longer(
+    cols = -id,
+    names_to = "position",
+    values_to = "number"
+  )
+
+# Count frequencies
+number_freq <- numbers |>
+  count(number) |>
+  mutate(
+    expected = nrow(numbers) / 10,
+    deviation = n - expected
+  )
+
+number_freq
+```
+
+## Visualise Number Preferences
+
+```{webr-r}
+ggplot(number_freq, aes(x = factor(number), y = n)) +
+  geom_col(aes(fill = deviation > 0), width = 0.7) +
+  geom_hline(yintercept = nrow(numbers) / 10,
+             linetype = "dashed", color = "#275882", linewidth = 1) +
+  annotate("text", x = 10, y = nrow(numbers)/10 + 1.5,
+           label = "Expected if random", hjust = 1, color = "#275882",
+           fontface = "bold", size = 3.5) +
+  scale_fill_manual(values = c("TRUE" = "#1abc9c", "FALSE" = "#e74c3c"),
+                    labels = c("Below expected", "Above expected")) +
+  labs(
+    x = "Number",
+    y = "Frequency",
+    title = "Random Number Generation",
+    subtitle = "Do some numbers appear more often?",
+    fill = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+::: {.callout-tip collapse="true"}
+## Why Do We Have Favourite "Random" Numbers?
+
+The number **7** is famously the most common "random" choice because:
+
+- It's a **prime number** (feels less "obvious")
+- It's in the **middle of the range** (not too high, not too low)
+- It **looks random** (no obvious patterns like 5 or 10)
+
+Numbers like **5** and **10** are often avoided because they feel "too neat" to be random. This illustrates our fundamental misunderstanding of what randomness looks like!
+:::
+
+## Chi-Square Test: Are Numbers Uniform?
+
+```{webr-r}
+# Chi-square test for uniform distribution
+chisq_result <- chisq.test(number_freq$n)
+chisq_result
+```
+
+```{webr-r}
+if (chisq_result$p.value < 0.05) {
+  cat("Result: Number selection is NOT uniform - we have preferences!\n")
+} else {
+  cat("Result: Number selection appears uniform - no clear preferences detected.\n")
+}
+```
+
+## Repetition Avoidance
+
+Do people avoid repeating numbers?
+
+```{webr-r}
+# Check for consecutive repetitions
+repetitions <- ladyluck |>
+  select(id, starts_with("n")) |>
+  pivot_longer(cols = -id, names_to = "pos", values_to = "num") |>
+  group_by(id) |>
+  arrange(id, pos) |>
+  mutate(is_repetition = num == lag(num)) |>
+  summarise(
+    n_repetitions = sum(is_repetition, na.rm = TRUE),
+    n_opportunities = n() - 1
+  )
+
+# Expected repetitions if truly random: 9 opportunities × 10% chance = 0.9
+expected_reps <- 9 * 0.1
+observed_reps <- mean(repetitions$n_repetitions)
+
+cat("Expected repetitions per person (if random):", round(expected_reps, 2), "\n")
+cat("Observed mean repetitions:", round(observed_reps, 2), "\n")
+```
+
+```{webr-r}
+# Visualise
+tibble(
+  Type = c("Expected\n(Random)", "Observed"),
+  Repetitions = c(expected_reps, observed_reps)
+) |>
+  ggplot(aes(x = Type, y = Repetitions, fill = Type)) +
+  geom_col(width = 0.5) +
+  scale_fill_manual(values = c("#3498db", "#e74c3c")) +
+  labs(
+    y = "Mean Repetitions",
+    x = NULL,
+    title = "Do Humans Avoid Repetitions?",
+    subtitle = "Comparing observed vs expected if truly random"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Coin Flip Analysis
+
+Let's look at the coin flip data - are heads and tails equally likely?
+
+```{webr-r}
+# Reshape coin data
+coins <- ladyluck |>
+  select(id, starts_with("c")) |>
+  pivot_longer(
+    cols = -id,
+    names_to = "flip",
+    values_to = "outcome"
+  )
+
+# Count outcomes
+coin_freq <- coins |>
+  count(outcome) |>
+  mutate(proportion = n / sum(n))
+
+coin_freq
+```
+
+```{webr-r}
+ggplot(coin_freq, aes(x = outcome, y = n, fill = outcome)) +
+  geom_col(width = 0.5) +
+  scale_fill_manual(values = c("H" = "#f39c12", "T" = "#9b59b6")) +
+  geom_hline(yintercept = nrow(coins) / 2,
+             linetype = "dashed", color = "#275882", linewidth = 1) +
+  annotate("text", x = 2.3, y = nrow(coins)/2 + 2,
+           label = "Expected (50%)", color = "#275882", fontface = "bold") +
+  labs(
+    x = "Outcome",
+    y = "Count",
+    title = "Coin Flip Distribution",
+    subtitle = "Heads vs Tails"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Run Length Analysis
+
+In truly random coin flips, you'd expect some **long runs** (e.g., HHHH). Do humans produce enough long runs?
+
+```{webr-r}
+# Calculate run lengths for each participant
+calc_max_run <- function(flips) {
+  runs <- rle(flips)
+  max(runs$lengths)
+}
+
+run_analysis <- ladyluck |>
+  select(id, starts_with("c")) |>
+  pivot_longer(cols = -id, names_to = "flip", values_to = "outcome") |>
+  group_by(id) |>
+  arrange(id, flip) |>
+  summarise(max_run = calc_max_run(outcome))
+
+# Expected max run in 10 flips is typically around 3-4
+ggplot(run_analysis, aes(x = factor(max_run))) +
+  geom_bar(fill = "#e74c3c") +
+  labs(
+    x = "Longest Run Length",
+    y = "Count",
+    title = "Maximum Run Lengths",
+    subtitle = "Truly random sequences often have runs of 3-4"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Alternation bias**: Do people switch between H and T more than expected?
+2. **Number 7**: Is 7 the most "random" feeling number?
+3. **Sequential patterns**: Do people avoid patterns like 1,2,3?
+
+```{webr-r}
+# Your code here!
+# Hint: Count H→T and T→H transitions vs H→H and T→T
+
+
+```
+
+## Bonus: The Gambler's Fallacy
+
+After a "heads", are people more likely to guess "tails" next?
+
+```{webr-r}
+# Check for alternation bias
+alternations <- coins |>
+  group_by(id) |>
+  arrange(id, flip) |>
+  mutate(
+    prev_outcome = lag(outcome),
+    is_alternation = outcome != prev_outcome
+  ) |>
+  filter(!is.na(is_alternation))
+
+alt_rate <- mean(alternations$is_alternation)
+expected_alt <- 0.5  # If random, 50% chance of alternation
+
+cat("Expected alternation rate (random):", scales::percent(expected_alt), "\n")
+cat("Observed alternation rate:", scales::percent(alt_rate), "\n")
+
+if (alt_rate > 0.55) {
+  cat("\nPeople are alternating MORE than expected - Gambler's Fallacy!\n")
+} else if (alt_rate < 0.45) {
+  cat("\nPeople are alternating LESS than expected.\n")
+} else {
+  cat("\nAlternation rate is close to random.\n")
+}
+```
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The data reveals classic biases in human "randomness":
+
+1. **Number preferences**: Some numbers (like 7) feel more random than others
+2. **Repetition avoidance**: People avoid consecutive repetitions, even though they occur in truly random sequences
+3. **Gambler's fallacy**: After heads, people tend to say tails (excessive alternation)
+
+These findings demonstrate that our intuitive understanding of randomness is systematically biased!
+:::

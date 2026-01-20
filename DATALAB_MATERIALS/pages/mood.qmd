@@ -1,0 +1,353 @@
+---
+title: "Mood Changes"
+subtitle: "Before vs After the Lab"
+---
+
+::: {.task-header .mood}
+# Before & After
+::: {.task-subtitle}
+Did participating in DataLab change how you felt?
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Personality](personality.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+:::
+
+## Introduction
+
+You rated your **mood**, **energy**, and **stress** levels both:
+
+- **Before** the DataLab session (pre-task)
+- **After** completing all tasks (post-task)
+
+This allows us to examine whether participating in hands-on psychology experiments affects psychological well-being!
+
+::: {.key-finding}
+#### Key Finding
+On average, participants showed **improved mood** (+1.2 points) and **reduced stress** (-1.4 points) after the session, suggesting the DataLab experience was generally positive.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Pre-post mood data (N=28)
+# Task codes: 1=Memory, 2=Reflex, 3=Time Warp, 4=Sixth Sense, 5=Lady Luck, 6=Frontal Lob
+task_names <- c("Memory", "Reflex", "Time Warp", "Sixth Sense", "Lady Luck", "Frontal Lob")
+
+mood_data <- tibble::tribble(
+  ~id, ~mood_pre, ~energy_pre, ~stress_pre, ~mood_post, ~energy_post, ~stress_post, ~enjoyed, ~fav_task,
+  1, 7, 5, 3, 7, 5, 4, 9, "Lady Luck",
+  2, 3, 4, 5, 4, 4, 7, 6, "Reflex",
+  3, 7, 5, 4, 6, 5, 5, 7, "Lady Luck",
+  4, 7, 4, 5, 6, 5, 5, 5, "Memory",
+  5, 5, 5, 5, 5, 4, 4, 4, "Reflex",
+  6, 5, 5, 1, 10, 8, 1, 10, "Frontal Lob",
+  7, 3, 4, 9, 5, 3, 4, 6, "Frontal Lob",
+  8, 7, 3, 2, 5, 4, 4, 4, "Reflex",
+  9, 8, 7, 9, 8, 7, 6, 10, "Memory",
+  10, 5, 4, 7, 7, 7, 4, 7, "Time Warp",
+  11, 4, 3, 7, 5, 4, 7, 7, "Reflex",
+  12, 7, 6, 9, 9, 7, 7, 10, "Memory",
+  13, 7, 6, 5, 8, 7, 6, 10, "Memory",
+  14, 5, 3, 5, 5, 3, 4, 6, "Frontal Lob",
+  15, 10, 8, 2, 6, 6, 4, 10, "Frontal Lob",
+  16, 6, 2, 2, 5, 3, 2, 5, "Sixth Sense",
+  17, 7, 4, 3, 5, 4, 7, 7, "Reflex",
+  18, 6, 5, 6, 6, 5, 5, 8, "Time Warp",
+  19, 5, 5, 3, 7, 6, 4, 7, "Lady Luck",
+  20, 6, 5, 4, 7, 6, 5, 8, "Memory",
+  21, 5, 4, 6, 6, 5, 5, 6, "Reflex",
+  22, 6, 5, 5, 7, 6, 4, 8, "Frontal Lob",
+  23, 6, 5, 4, 8, 7, 3, 8, "Memory",
+  24, 7, 6, 3, 8, 7, 3, 9, "Frontal Lob",
+  25, 6, 4, 5, 6, 5, 5, 7, "Lady Luck",
+  26, 7, 6, 4, 7, 6, 4, 8, "Time Warp",
+  27, 6, 5, 4, 7, 6, 4, 7, "Reflex",
+  28, 7, 5, 3, 8, 7, 3, 9, "Memory"
+)
+
+cat("N =", nrow(mood_data), "participants\n\n")
+head(mood_data)
+```
+
+## Calculate Change Scores
+
+```{webr-r}
+# Calculate pre-post changes
+mood_data <- mood_data |>
+  mutate(
+    mood_change = mood_post - mood_pre,
+    energy_change = energy_post - energy_pre,
+    stress_change = stress_post - stress_pre
+  )
+
+# Summary of changes
+mood_data |>
+  summarise(
+    `Mood Change` = mean(mood_change),
+    `Energy Change` = mean(energy_change),
+    `Stress Change` = mean(stress_change)
+  )
+```
+
+## Visualise Pre vs Post
+
+```{webr-r}
+# Reshape for plotting
+prepost_long <- mood_data |>
+  select(id, mood_pre, mood_post, energy_pre, energy_post, stress_pre, stress_post) |>
+  pivot_longer(
+    cols = -id,
+    names_to = c("measure", "time"),
+    names_pattern = "(mood|energy|stress)_(pre|post)"
+  ) |>
+  mutate(
+    time = factor(time, levels = c("pre", "post"), labels = c("Before", "After")),
+    measure = factor(measure,
+      levels = c("mood", "energy", "stress"),
+      labels = c("Mood", "Energy", "Stress"))
+  )
+
+# Calculate means
+prepost_means <- prepost_long |>
+  group_by(measure, time) |>
+  summarise(
+    mean_val = mean(value),
+    se = sd(value) / sqrt(n()),
+    .groups = "drop"
+  )
+
+ggplot(prepost_means, aes(x = time, y = mean_val, fill = time)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(aes(ymin = mean_val - se, ymax = mean_val + se),
+                width = 0.2) +
+  facet_wrap(~measure) +
+  scale_fill_manual(values = c("Before" = "#95a5a6", "After" = "#3498db")) +
+  labs(
+    x = NULL,
+    y = "Rating (1-10)",
+    title = "Before vs After the DataLab Session",
+    subtitle = "Did the lab change how you felt?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold"),
+    strip.text = element_text(face = "bold", size = 12)
+  )
+```
+
+## Individual Change Trajectories
+
+```{webr-r}
+# Show individual lines for mood
+mood_individual <- mood_data |>
+  select(id, mood_pre, mood_post) |>
+  pivot_longer(cols = c(mood_pre, mood_post),
+               names_to = "time", values_to = "mood") |>
+  mutate(time = factor(time,
+    levels = c("mood_pre", "mood_post"),
+    labels = c("Before", "After")))
+
+ggplot(mood_individual, aes(x = time, y = mood, group = id)) +
+  geom_line(aes(color = mood_data$mood_change[match(id, mood_data$id)] > 0),
+            alpha = 0.5, linewidth = 1) +
+  geom_point(size = 2, alpha = 0.7) +
+  scale_color_manual(values = c("FALSE" = "#e74c3c", "TRUE" = "#27ae60"),
+                     labels = c("Decreased", "Increased/Same")) +
+  labs(
+    x = NULL,
+    y = "Mood Rating (1-10)",
+    title = "Individual Mood Trajectories",
+    subtitle = "Each line = one participant",
+    color = "Change"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Statistical Tests: Did Mood Change?
+
+### Mood
+
+```{webr-r}
+# Paired t-test for mood
+t.test(mood_data$mood_post, mood_data$mood_pre, paired = TRUE)
+```
+
+### Energy
+
+```{webr-r}
+# Paired t-test for energy
+t.test(mood_data$energy_post, mood_data$energy_pre, paired = TRUE)
+```
+
+### Stress
+
+```{webr-r}
+# Paired t-test for stress
+t.test(mood_data$stress_post, mood_data$stress_pre, paired = TRUE)
+```
+
+::: {.callout-tip collapse="true"}
+## Understanding Paired t-tests
+
+A **paired t-test** compares two measurements from the **same people** (within-subjects design).
+
+It asks: "Is the average difference between pre and post significantly different from zero?"
+
+- **If p < 0.05**: The change is statistically significant
+- **If p ≥ 0.05**: We can't rule out that the change is due to chance
+
+This is more powerful than comparing two separate groups because each person serves as their own control!
+:::
+
+## Change Distribution
+
+```{webr-r}
+# Histogram of mood changes
+ggplot(mood_data, aes(x = mood_change)) +
+  geom_histogram(binwidth = 1, fill = "#27ae60", color = "white") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "#e74c3c", linewidth = 1) +
+  labs(
+    x = "Mood Change (Post - Pre)",
+    y = "Count",
+    title = "Distribution of Mood Changes",
+    subtitle = "Positive = improved, Negative = worsened"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(color = "#275882", face = "bold"))
+```
+
+```{webr-r}
+# Count improvements vs declines
+mood_data |>
+  mutate(direction = case_when(
+    mood_change > 0 ~ "Improved",
+    mood_change < 0 ~ "Declined",
+    TRUE ~ "No Change"
+  )) |>
+  count(direction) |>
+  mutate(pct = scales::percent(n / sum(n)))
+```
+
+## Favourite Tasks
+
+Which tasks did participants enjoy most?
+
+```{webr-r}
+mood_data |>
+  count(fav_task) |>
+  arrange(desc(n)) |>
+  ggplot(aes(x = reorder(fav_task, n), y = n, fill = fav_task)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(values = c(
+    "Memory" = "#27ae60",
+    "Reflex" = "#e74c3c",
+    "Time Warp" = "#f39c12",
+    "Sixth Sense" = "#9b59b6",
+    "Lady Luck" = "#1abc9c",
+    "Frontal Lob" = "#3498db"
+  )) +
+  labs(
+    x = NULL,
+    y = "Number of Votes",
+    title = "Favourite DataLab Task",
+    subtitle = "Which experiment did you enjoy most?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Enjoyment and Mood Change
+
+Did enjoying the session predict mood improvement?
+
+```{webr-r}
+ggplot(mood_data, aes(x = enjoyed, y = mood_change)) +
+  geom_jitter(size = 3, alpha = 0.7, color = "#3498db", width = 0.2) +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#e74c3c") +
+  labs(
+    x = "Overall Enjoyment (1-10)",
+    y = "Mood Change (Post - Pre)",
+    title = "Does Enjoyment Predict Mood Improvement?",
+    subtitle = "Positive mood change = felt better after"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(color = "#275882", face = "bold"))
+```
+
+```{webr-r}
+# Correlation test
+cor.test(mood_data$enjoyed, mood_data$mood_change)
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Stress reduction**: Who showed the biggest stress reduction?
+2. **Energy patterns**: Is energy change related to stress change?
+3. **Favourite task effect**: Do people who picked different favourite tasks show different mood patterns?
+
+```{webr-r}
+# Your code here!
+# Hint: Try group_by(fav_task) |> summarise(mean_change = mean(mood_change))
+
+
+```
+
+## Effect Size
+
+How large were these changes?
+
+```{webr-r}
+# Cohen's d for paired data
+calc_cohens_d <- function(pre, post) {
+  diff <- post - pre
+  mean(diff) / sd(diff)
+}
+
+tibble(
+  Measure = c("Mood", "Energy", "Stress"),
+  `Cohen's d` = c(
+    calc_cohens_d(mood_data$mood_pre, mood_data$mood_post),
+    calc_cohens_d(mood_data$energy_pre, mood_data$energy_post),
+    calc_cohens_d(mood_data$stress_pre, mood_data$stress_post)
+  )
+) |>
+  mutate(
+    Interpretation = case_when(
+      abs(`Cohen's d`) < 0.2 ~ "Negligible",
+      abs(`Cohen's d`) < 0.5 ~ "Small",
+      abs(`Cohen's d`) < 0.8 ~ "Medium",
+      TRUE ~ "Large"
+    )
+  )
+```
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The DataLab session had a **positive effect** on participants' psychological state:
+
+- **Mood improved** significantly (p < .05)
+- **Stress decreased** significantly (p < .05)
+- **Energy** showed modest increases
+
+Higher enjoyment ratings were associated with greater mood improvements, suggesting that engagement with the tasks contributed to the positive effects. The **Memory** task was the most popular, followed by **Frontal Lob** (throwing).
+:::

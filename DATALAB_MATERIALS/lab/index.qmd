@@ -1,0 +1,541 @@
+---
+title: "Analyse Your Own Data"
+subtitle: "Thursday Lab Session"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-tools: true
+engine: knitr
+webr:
+  packages: ['tidyverse', 'knitr']
+filters:
+  - webr
+---
+
+## Welcome to the Lab!
+
+Today you'll analyse the data **you** collected in the Foundations Datalab session.
+
+**Time**: ~90 minutes
+
+**Structure**:
+
+1. **Setup** (10 min) - Load data, find yourself
+2. **Activity 1** (25 min) - Describe & Visualise
+3. **Activity 2** (25 min) - Test a Hypothesis
+4. **Activity 3** (25 min) - Explore a Relationship
+5. **Wrap-up** (15 min) - Share findings
+
+::: {.callout-note}
+## Deliverables
+By the end, you should have:
+
+- 1 histogram with interpretation
+- 1 statistical test with interpretation
+- 1 scatterplot with correlation
+:::
+
+---
+
+# Setup {#setup}
+
+## Load the Data
+
+First, let's load all the datasets. Run the code below:
+
+```{webr-r}
+# Load the tidyverse
+library(tidyverse)
+
+# Sample merged dataset (in production, load from URL)
+merged <- tibble::tribble(
+  ~participant_id, ~lab_room, ~mood_pre_1, ~energy_pre_1, ~stress_pre_1, ~mood_post_1, ~energy_post_1, ~stress_post_1, ~mem_total_1, ~time_estimate_sec, ~throw_self_rating_1, ~throw_dom_success, ~throw_nondom_success, ~rt_mean, ~stare_accuracy, ~tipi_1,
+  "A01", 1, 5, 4, 6, 6, 5, 5, 5, 35, 5, 7, 3, 180, 0.50, 4,
+  "A02", 1, 7, 6, 4, 8, 7, 3, 6, 28, 6, 8, 4, 165, 0.67, 6,
+  "A03", 1, 4, 3, 7, 5, 4, 6, 4, 42, 4, 6, 2, 195, 0.33, 3,
+  "A04", 1, 6, 5, 5, 7, 6, 4, 7, 32, 7, 9, 4, 170, 0.50, 5,
+  "A07", 1, 5, 4, 6, 6, 5, 5, 3, 25, 4, 6, 2, 190, 0.83, 4,
+  "A09", 1, 8, 7, 3, 9, 8, 2, 8, 38, 8, 9, 5, 155, 0.67, 7,
+  "A10", 1, 6, 5, 5, 7, 6, 4, 6, 30, 5, 7, 3, 175, 0.50, 5,
+  "B01", 2, 5, 4, 6, 7, 6, 4, 6, 32, 5, 7, 3, 172, 0.67, 4,
+  "B02", 2, 6, 5, 5, 7, 6, 4, 8, 27, 6, 8, 4, 168, 0.50, 5,
+  "B03", 2, 4, 3, 7, 5, 4, 6, 5, 35, 4, 6, 2, 188, 0.33, 3,
+  "B05", 2, 7, 6, 4, 8, 7, 3, 9, 25, 7, 9, 5, 158, 0.83, 6,
+  "B07", 2, 5, 5, 5, 6, 5, 4, 10, 30, 6, 8, 4, 165, 0.67, 5,
+  "B09", 2, 6, 4, 6, 7, 5, 5, 6, 28, 5, 7, 3, 178, 0.50, 4,
+  "B10", 2, 5, 5, 5, 6, 6, 4, 7, 33, 6, 8, 4, 170, 0.67, 5,
+  "B11", 2, 7, 6, 4, 8, 7, 3, 8, 26, 7, 9, 4, 162, 0.50, 6,
+  "B12", 2, 4, 4, 6, 5, 4, 5, 5, 38, 4, 6, 2, 185, 0.33, 3
+)
+
+# View first few rows
+head(merged)
+```
+
+## Variable Guide
+
+Here's what each variable means:
+
+| Variable | Description |
+|----------|-------------|
+| `participant_id` | Your ID (e.g., A01, B05) |
+| `lab_room` | 1 = Lab A (silence), 2 = Lab B (music) |
+| `mood_pre_1` / `mood_post_1` | Mood rating (1-10) |
+| `energy_pre_1` / `energy_post_1` | Energy rating (1-10) |
+| `stress_pre_1` / `stress_post_1` | Stress rating (1-10) |
+| `mem_total_1` | Words recalled (out of 10) |
+| `time_estimate_sec` | Time estimate (seconds) |
+| `throw_self_rating_1` | Self-rated throwing ability |
+| `throw_dom_success` | Dominant hand hits (out of 10) |
+| `throw_nondom_success` | Non-dominant hand hits (out of 5) |
+| `rt_mean` | Mean reaction time (ms) |
+| `stare_accuracy` | Sixth sense accuracy (0-1) |
+| `tipi_1` | Extraversion score |
+
+## Find Yourself!
+
+Enter your participant ID to find your row:
+
+```{webr-r}
+# Change this to YOUR participant ID
+my_id <- "B01"
+
+# Find your data
+my_data <- merged |> filter(participant_id == my_id)
+my_data
+```
+
+::: {.callout-tip}
+## Where Are You?
+Run this to see where you fall on the mood distribution:
+```{webr-r}
+ggplot(merged, aes(x = mood_pre_1)) +
+  geom_histogram(binwidth = 1, fill = "grey70", color = "white") +
+  geom_vline(xintercept = my_data$mood_pre_1,
+             color = "red", linewidth = 2) +
+  annotate("text", x = my_data$mood_pre_1 + 0.3, y = 3,
+           label = "YOU", color = "red", fontface = "bold") +
+  labs(x = "Pre-Session Mood", y = "Count", title = "Where Are You?")
+```
+:::
+
+---
+
+# Activity 1: Describe & Visualise {#activity1}
+
+**Time**: 25 minutes
+
+**Goal**: Create a histogram and describe a distribution
+
+## Step 1: Choose a Variable
+
+Pick ONE continuous variable to explore:
+
+- `mood_pre_1` - Starting mood
+- `time_estimate_sec` - Time estimation
+- `rt_mean` - Reaction time
+- `mem_total_1` - Memory performance
+
+```{webr-r}
+# Choose your variable
+my_variable <- "rt_mean"  # Change this!
+
+# Pull out just that column
+my_values <- merged |> pull(!!sym(my_variable))
+```
+
+## Step 2: Calculate Descriptive Statistics
+
+```{webr-r}
+# Calculate statistics
+tibble(
+  Statistic = c("N", "Mean", "SD", "Min", "Max", "Median"),
+  Value = c(
+    length(my_values),
+    round(mean(my_values, na.rm = TRUE), 2),
+    round(sd(my_values, na.rm = TRUE), 2),
+    min(my_values, na.rm = TRUE),
+    max(my_values, na.rm = TRUE),
+    median(my_values, na.rm = TRUE)
+  )
+)
+```
+
+## Step 3: Create a Histogram
+
+```{webr-r}
+# Create your histogram
+ggplot(merged, aes(x = .data[[my_variable]])) +
+  geom_histogram(binwidth = 10, fill = "#3498db", color = "white") +
+  geom_vline(xintercept = mean(my_values, na.rm = TRUE),
+             linetype = "dashed", color = "red", linewidth = 1) +
+  labs(
+    x = my_variable,
+    y = "Count",
+    title = paste("Distribution of", my_variable),
+    subtitle = "Red line = mean"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+## Step 4: Assess Normality
+
+Is your distribution approximately normal?
+
+```{webr-r}
+# Skewness (rough assessment)
+# If mean ≈ median, likely symmetric
+cat("Mean:", round(mean(my_values, na.rm = TRUE), 2), "\n")
+cat("Median:", median(my_values, na.rm = TRUE), "\n")
+cat("\nIf mean > median: positive skew (tail to right)")
+cat("\nIf mean < median: negative skew (tail to left)")
+cat("\nIf mean ≈ median: approximately symmetric")
+```
+
+## Your Interpretation
+
+Write your answers here (in the code chunk as comments):
+
+```{webr-r}
+# ACTIVITY 1 ANSWERS
+#
+# Variable I chose: _______________
+#
+# Shape of distribution (normal/skewed/other): _______________
+#
+# Were there any outliers? _______________
+#
+# One interesting observation: _______________
+
+
+```
+
+---
+
+# Activity 2: Test a Hypothesis {#activity2}
+
+**Time**: 25 minutes
+
+**Goal**: Run a statistical test and interpret the results
+
+Choose ONE of these three hypotheses to test:
+
+## Option A: Mood Change (Paired t-test)
+
+**Hypothesis**: Mood changed from before to after the session
+
+```{webr-r}
+# Option A: Paired t-test
+# Did mood change?
+
+# Step 1: Visualise the change
+mood_change <- merged |>
+  select(participant_id, mood_pre_1, mood_post_1) |>
+  mutate(change = mood_post_1 - mood_pre_1)
+
+ggplot(mood_change, aes(x = change)) +
+  geom_histogram(binwidth = 1, fill = "#27ae60", color = "white") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  labs(x = "Mood Change (Post - Pre)", y = "Count",
+       title = "Did Mood Change?")
+```
+
+```{webr-r}
+# Step 2: Run the paired t-test
+t.test(merged$mood_post_1, merged$mood_pre_1, paired = TRUE)
+```
+
+```{webr-r}
+# Step 3: Calculate effect size
+diff <- merged$mood_post_1 - merged$mood_pre_1
+cohens_d <- mean(diff, na.rm = TRUE) / sd(diff, na.rm = TRUE)
+cat("Cohen's d =", round(cohens_d, 2))
+cat("\n\nInterpretation: 0.2 = small, 0.5 = medium, 0.8 = large")
+```
+
+## Option B: Word Type Effect (Independent t-test)
+
+**Hypothesis**: Concrete words (Lab B) are easier to remember than abstract words (Lab A)
+
+```{webr-r}
+# Option B: Independent samples t-test
+# Are concrete words easier to remember than abstract words?
+
+# Step 1: Visualise by group
+merged |>
+  filter(!is.na(mem_total_1) & !is.na(lab_room)) |>
+  mutate(lab = factor(lab_room, labels = c("Lab A\n(Abstract)", "Lab B\n(Concrete)"))) |>
+  ggplot(aes(x = lab, y = mem_total_1, fill = lab)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_jitter(width = 0.1, alpha = 0.5) +
+  scale_fill_manual(values = c("#3498db", "#e67e22")) +
+  labs(x = NULL, y = "Words Recalled",
+       title = "Memory: Abstract vs Concrete Words") +
+  theme(legend.position = "none")
+```
+
+```{webr-r}
+# Step 2: Run independent t-test
+lab_a <- merged |> filter(lab_room == 1) |> pull(mem_total_1)  # Abstract
+lab_b <- merged |> filter(lab_room == 2) |> pull(mem_total_1)  # Concrete
+
+t.test(lab_a, lab_b)
+```
+
+```{webr-r}
+# Step 3: Calculate effect size
+lab_a <- lab_a[!is.na(lab_a)]
+lab_b <- lab_b[!is.na(lab_b)]
+pooled_sd <- sqrt((var(lab_a) + var(lab_b)) / 2)
+cohens_d <- (mean(lab_b) - mean(lab_a)) / pooled_sd  # Concrete - Abstract
+cat("Cohen's d =", round(cohens_d, 2))
+```
+
+## Option C: Sixth Sense (One-sample t-test)
+
+**Hypothesis**: Detection accuracy was better than chance (50%)
+
+```{webr-r}
+# Option C: One-sample t-test
+# Was sixth sense accuracy better than chance?
+
+# Step 1: Visualise distribution
+ggplot(merged, aes(x = stare_accuracy)) +
+  geom_histogram(binwidth = 0.1, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 0.5, linetype = "dashed", color = "red", linewidth = 1.5) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(x = "Accuracy", y = "Count",
+       title = "Sixth Sense Accuracy",
+       subtitle = "Red line = chance (50%)")
+```
+
+```{webr-r}
+# Step 2: Run one-sample t-test against 0.5
+t.test(merged$stare_accuracy, mu = 0.5)
+```
+
+```{webr-r}
+# Step 3: Calculate effect size
+cohens_d <- (mean(merged$stare_accuracy) - 0.5) / sd(merged$stare_accuracy)
+cat("Cohen's d =", round(cohens_d, 2))
+```
+
+## Your Interpretation
+
+Write your answers here:
+
+```{webr-r}
+# ACTIVITY 2 ANSWERS
+#
+# Test I chose: _______________
+#
+# My hypothesis: _______________
+#
+# t-value: _______________
+#
+# p-value: _______________
+#
+# Significant (p < 0.05)? _______________
+#
+# Effect size (Cohen's d): _______________
+#
+# Conclusion in plain English: _______________
+
+
+```
+
+---
+
+# Activity 3: Explore a Relationship {#activity3}
+
+**Time**: 25 minutes
+
+**Goal**: Create a scatterplot and calculate a correlation
+
+Choose ONE relationship to explore:
+
+## Option A: Self-Rating vs Performance (Calibration)
+
+Are people accurate judges of their own ability?
+
+```{webr-r}
+# Option A: Self-rating vs throwing accuracy
+merged <- merged |>
+  mutate(throw_accuracy = throw_dom_success / 10 * 100)
+
+ggplot(merged, aes(x = throw_self_rating_1, y = throw_accuracy)) +
+  geom_point(size = 3, color = "#3498db") +
+  geom_smooth(method = "lm", se = TRUE, color = "#e74c3c") +
+  labs(
+    x = "Self-Rating (1-10)",
+    y = "Actual Accuracy (%)",
+    title = "Are You Calibrated?",
+    subtitle = "Self-perception vs reality"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+```{webr-r}
+# Correlation test
+cor.test(merged$throw_self_rating_1, merged$throw_accuracy)
+```
+
+## Option B: Extraversion vs Mood Change
+
+Do extraverts enjoy the session more?
+
+```{webr-r}
+# Option B: Extraversion vs mood change
+merged <- merged |>
+  mutate(mood_change = mood_post_1 - mood_pre_1)
+
+ggplot(merged, aes(x = tipi_1, y = mood_change)) +
+  geom_point(size = 3, color = "#27ae60") +
+  geom_smooth(method = "lm", se = TRUE, color = "#e74c3c") +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(
+    x = "Extraversion Score",
+    y = "Mood Change (Post - Pre)",
+    title = "Does Personality Predict Enjoyment?"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+```{webr-r}
+cor.test(merged$tipi_1, merged$mood_change)
+```
+
+## Option C: Sleep and Reaction Time
+
+Does sleep affect performance?
+
+```{webr-r}
+# Option C: Create your own exploration!
+# Example: Stress and memory
+ggplot(merged, aes(x = stress_pre_1, y = mem_total_1)) +
+  geom_point(size = 3, color = "#e74c3c") +
+  geom_smooth(method = "lm", se = TRUE, color = "#3498db") +
+  labs(
+    x = "Pre-Session Stress",
+    y = "Words Recalled",
+    title = "Does Stress Affect Memory?"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+```{webr-r}
+cor.test(merged$stress_pre_1, merged$mem_total_1)
+```
+
+## Interpreting Correlations
+
+| r value | Strength |
+|---------|----------|
+| 0.1 - 0.3 | Weak |
+| 0.3 - 0.5 | Moderate |
+| 0.5 - 0.7 | Strong |
+| > 0.7 | Very strong |
+
+## Your Interpretation
+
+```{webr-r}
+# ACTIVITY 3 ANSWERS
+#
+# Relationship I explored: _______________ vs _______________
+#
+# Correlation (r): _______________
+#
+# p-value: _______________
+#
+# Significant? _______________
+#
+# Direction (positive/negative): _______________
+#
+# Strength (weak/moderate/strong): _______________
+#
+# What does this mean? _______________
+
+
+```
+
+---
+
+# Wrap-Up {#wrapup}
+
+## Share Your Findings
+
+In your group, discuss:
+
+1. What was the most surprising finding?
+2. What would you do differently if you ran this study again?
+3. What other questions could you ask of this data?
+
+## Extension Challenges
+
+If you finish early, try these:
+
+```{webr-r}
+# Challenge 1: Does RT improve with practice?
+# Hint: Compare trial 1 to trial 5 in the reflex data
+
+
+```
+
+```{webr-r}
+# Challenge 2: Dunning-Kruger effect
+# Are poor performers overconfident? Good performers underconfident?
+# Hint: Plot residuals from the regression line
+
+
+```
+
+```{webr-r}
+# Challenge 3: Multiple regression
+# Can you predict mood_post from mood_pre AND extraversion?
+# model <- lm(mood_post_1 ~ mood_pre_1 + tipi_1, data = merged)
+# summary(model)
+
+
+```
+
+## Mini Results Section
+
+**Optional assessment task**: Write a mini results section (100 words) for one of your analyses.
+
+Include:
+
+- What you tested
+- The statistical test used
+- The result (with numbers)
+- Your interpretation
+
+```{webr-r}
+# MINI RESULTS SECTION
+#
+# Write your 100-word results section here:
+#
+# _______________________________________________
+# _______________________________________________
+# _______________________________________________
+# _______________________________________________
+# _______________________________________________
+
+
+```
+
+---
+
+## Well Done!
+
+You've completed the Foundations Datalab analysis lab.
+
+**Key skills practised**:
+
+- Data wrangling with `dplyr`
+- Visualisation with `ggplot2`
+- Descriptive statistics
+- t-tests (paired, independent, one-sample)
+- Correlation and scatterplots
+
+These are the same techniques you'll use in your mini-dissertation!

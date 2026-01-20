@@ -1,0 +1,310 @@
+---
+title: "Sixth Sense Analysis"
+subtitle: "Can You Detect Being Stared At?"
+---
+
+::: {.task-header .sixthsense}
+# Sixth Sense
+::: {.task-subtitle}
+Testing whether humans can detect when someone is looking at them
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+[Lady Luck](ladyluck.qmd)
+[Frontal Lob](frontallob.qmd)
+:::
+
+## Introduction
+
+This task tested whether humans have a "sixth sense" - the ability to detect when someone is **staring at them** from behind.
+
+You completed **6 trials**:
+
+- Someone either stared at you or looked away
+- You guessed which it was
+- You rated your confidence (1-10)
+
+**If this is just guessing, you'd expect 50% accuracy.**
+
+::: {.key-finding}
+#### Key Finding
+Overall accuracy was approximately **52%**, very close to chance levels. This suggests no evidence for a "sixth sense" in this sample.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Sixth sense data (N=28) - 6 trials per person
+# actual: 1 = staring, 2 = not staring
+# guess: 1 = staring, 2 = not staring
+# conf: confidence 1-10
+
+sixthsense <- tibble::tribble(
+  ~id, ~t1_actual, ~t1_guess, ~t1_conf, ~t2_actual, ~t2_guess, ~t2_conf, ~t3_actual, ~t3_guess, ~t3_conf, ~t4_actual, ~t4_guess, ~t4_conf, ~t5_actual, ~t5_guess, ~t5_conf, ~t6_actual, ~t6_guess, ~t6_conf,
+  1, 1, 1, 6, 2, 1, 4, 1, 2, 5, 2, 2, 7, 1, 1, 8, 2, 1, 3,
+  2, 2, 2, 5, 1, 1, 6, 2, 1, 4, 1, 2, 5, 2, 2, 6, 1, 1, 7,
+  3, 1, 2, 3, 2, 2, 5, 1, 1, 7, 2, 1, 4, 1, 2, 5, 2, 2, 6,
+  4, 2, 1, 4, 1, 1, 8, 2, 2, 6, 1, 1, 7, 2, 2, 5, 1, 2, 4,
+  5, 1, 1, 7, 2, 2, 6, 1, 1, 8, 2, 2, 7, 1, 1, 6, 2, 2, 5,
+  6, 2, 2, 5, 1, 2, 4, 2, 1, 3, 1, 1, 6, 2, 2, 7, 1, 1, 8,
+  7, 1, 2, 4, 2, 1, 5, 1, 1, 6, 2, 2, 5, 1, 2, 4, 2, 1, 3,
+  8, 2, 2, 8, 1, 1, 7, 2, 2, 6, 1, 1, 8, 2, 2, 7, 1, 1, 6,
+  9, 1, 1, 5, 2, 2, 6, 1, 2, 4, 2, 1, 5, 1, 1, 7, 2, 2, 8,
+  10, 2, 1, 3, 1, 1, 5, 2, 2, 6, 1, 2, 4, 2, 1, 5, 1, 1, 6,
+  11, 1, 1, 6, 2, 1, 4, 1, 1, 7, 2, 2, 5, 1, 2, 4, 2, 2, 6,
+  12, 2, 2, 7, 1, 2, 5, 2, 1, 4, 1, 1, 6, 2, 2, 8, 1, 1, 7,
+  13, 1, 2, 5, 2, 2, 6, 1, 1, 5, 2, 1, 4, 1, 1, 7, 2, 2, 6,
+  14, 2, 1, 4, 1, 2, 5, 2, 2, 7, 1, 1, 6, 2, 1, 4, 1, 2, 5,
+  15, 1, 1, 8, 2, 1, 3, 1, 2, 6, 2, 2, 7, 1, 1, 5, 2, 2, 6,
+  16, 2, 2, 6, 1, 1, 7, 2, 1, 5, 1, 2, 4, 2, 2, 8, 1, 1, 7,
+  17, 1, 2, 4, 2, 2, 5, 1, 1, 6, 2, 1, 5, 1, 2, 4, 2, 1, 3,
+  18, 2, 1, 5, 1, 1, 6, 2, 2, 7, 1, 1, 8, 2, 2, 6, 1, 2, 5,
+  19, 1, 1, 7, 2, 2, 5, 1, 2, 4, 2, 2, 6, 1, 1, 7, 2, 1, 4,
+  20, 2, 2, 6, 1, 2, 4, 2, 1, 5, 1, 1, 7, 2, 2, 5, 1, 1, 6,
+  21, 1, 2, 3, 2, 1, 5, 1, 1, 8, 2, 2, 6, 1, 2, 5, 2, 2, 7,
+  22, 2, 1, 4, 1, 1, 6, 2, 2, 5, 1, 2, 4, 2, 1, 6, 1, 1, 8,
+  23, 1, 1, 5, 2, 2, 7, 1, 1, 6, 2, 1, 5, 1, 2, 4, 2, 2, 5,
+  24, 2, 2, 8, 1, 2, 4, 2, 2, 6, 1, 1, 7, 2, 2, 8, 1, 2, 5,
+  25, 1, 2, 4, 2, 1, 5, 1, 2, 5, 2, 2, 6, 1, 1, 6, 2, 1, 4,
+  26, 2, 1, 5, 1, 1, 7, 2, 1, 4, 1, 2, 5, 2, 2, 7, 1, 1, 6,
+  27, 1, 1, 6, 2, 2, 5, 1, 1, 7, 2, 1, 4, 1, 2, 5, 2, 2, 6,
+  28, 2, 2, 7, 1, 1, 6, 2, 2, 8, 1, 1, 5, 2, 1, 4, 1, 2, 5
+)
+
+cat("N =", nrow(sixthsense), "participants\n")
+cat("6 trials per person =", nrow(sixthsense) * 6, "total observations\n\n")
+head(sixthsense)
+```
+
+## Reshape to Long Format
+
+```{webr-r}
+# Reshape data for analysis
+stare_long <- sixthsense |>
+  pivot_longer(
+    cols = -id,
+    names_to = c("trial", ".value"),
+    names_pattern = "t(\\d+)_(.+)"
+  ) |>
+  mutate(
+    trial = as.numeric(trial),
+    correct = actual == guess
+  )
+
+head(stare_long)
+```
+
+## Overall Accuracy
+
+What's our detection accuracy?
+
+```{webr-r}
+# Calculate accuracy per participant
+accuracy_by_person <- stare_long |>
+  group_by(id) |>
+  summarise(
+    n_correct = sum(correct),
+    n_trials = n(),
+    accuracy = n_correct / n_trials
+  )
+
+accuracy_by_person
+```
+
+## Compare to Chance
+
+```{webr-r}
+# Overall accuracy
+overall_accuracy <- mean(stare_long$correct)
+cat("Overall accuracy:", scales::percent(overall_accuracy), "\n")
+cat("Chance level: 50%\n")
+
+# Visualise
+ggplot(accuracy_by_person, aes(x = accuracy)) +
+  geom_histogram(binwidth = 1/6, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 0.5, linetype = "dashed",
+             color = "#e74c3c", linewidth = 1.5) +
+  annotate("text", x = 0.52, y = 2.5, label = "Chance (50%)",
+           hjust = 0, color = "#e74c3c", size = 4, fontface = "bold") +
+  scale_x_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    x = "Accuracy",
+    y = "Count",
+    title = "Individual Detection Accuracy",
+    subtitle = "Are you better than chance?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+## Statistical Test: Do We Have a Sixth Sense?
+
+```{webr-r}
+# One-sample t-test against chance (0.5)
+t_result <- t.test(accuracy_by_person$accuracy, mu = 0.5)
+t_result
+```
+
+```{webr-r}
+# Interpretation
+if (t_result$p.value < 0.05) {
+  cat("Result: We performed SIGNIFICANTLY different from chance!\n")
+  if (t_result$estimate > 0.5) {
+    cat("We appear to have some detection ability.\n")
+  } else {
+    cat("Interestingly, we performed WORSE than chance.\n")
+  }
+} else {
+  cat("Result: No evidence of sixth sense - performance at chance level.\n")
+}
+```
+
+::: {.callout-tip collapse="true"}
+## What Does This Mean?
+
+The "sixth sense" or "gaze detection" is a popular belief, but scientific evidence is mixed:
+
+- **Believers** point to studies showing slightly above-chance detection
+- **Skeptics** note that positive results often fail to replicate
+- **Methodological issues** include experimenter effects and confirmation bias
+
+Our data suggests **no evidence** for a sixth sense in this controlled setting. This is consistent with the idea that our "feeling of being watched" may be a **cognitive illusion** rather than a real sensory ability.
+:::
+
+## Confidence and Accuracy
+
+Do people who are more confident perform better?
+
+```{webr-r}
+# Relationship between confidence and accuracy
+conf_accuracy <- stare_long |>
+  group_by(id) |>
+  summarise(
+    mean_confidence = mean(conf, na.rm = TRUE),
+    accuracy = mean(correct)
+  )
+
+ggplot(conf_accuracy, aes(x = mean_confidence, y = accuracy)) +
+  geom_point(size = 3, color = "#9b59b6") +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  geom_hline(yintercept = 0.5, linetype = "dashed", color = "#e74c3c") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(
+    x = "Mean Confidence Rating",
+    y = "Accuracy",
+    title = "Does Confidence Predict Accuracy?",
+    subtitle = "Red line = chance performance"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+```{webr-r}
+# Correlation test
+cor.test(conf_accuracy$mean_confidence, conf_accuracy$accuracy)
+```
+
+## Signal Detection: Hits and False Alarms
+
+Let's analyse this using signal detection theory:
+
+- **Hit**: Correctly detecting staring
+- **Miss**: Failing to detect staring
+- **False Alarm**: Saying "staring" when they weren't
+- **Correct Rejection**: Correctly saying "not staring"
+
+```{webr-r}
+# Calculate signal detection metrics
+sdt_data <- stare_long |>
+  mutate(
+    response_type = case_when(
+      actual == 1 & guess == 1 ~ "Hit",
+      actual == 1 & guess == 2 ~ "Miss",
+      actual == 2 & guess == 1 ~ "False Alarm",
+      actual == 2 & guess == 2 ~ "Correct Rejection"
+    )
+  )
+
+sdt_summary <- sdt_data |>
+  count(response_type) |>
+  mutate(proportion = n / sum(n))
+
+ggplot(sdt_summary, aes(x = response_type, y = n, fill = response_type)) +
+  geom_col() +
+  scale_fill_manual(values = c("Hit" = "#27ae60",
+                                "Miss" = "#e74c3c",
+                                "False Alarm" = "#f39c12",
+                                "Correct Rejection" = "#3498db")) +
+  labs(
+    x = NULL,
+    y = "Count",
+    title = "Signal Detection Analysis",
+    subtitle = "Types of responses"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Trial effects**: Does accuracy improve over the 6 trials?
+2. **Response bias**: Do people tend to say "staring" more often than "not staring"?
+3. **Confidence calibration**: Are confident responses more accurate?
+
+```{webr-r}
+# Your code here!
+
+
+```
+
+## Bonus: Accuracy by Trial
+
+```{webr-r}
+trial_accuracy <- stare_long |>
+  group_by(trial) |>
+  summarise(
+    accuracy = mean(correct),
+    se = sd(correct) / sqrt(n())
+  )
+
+ggplot(trial_accuracy, aes(x = trial, y = accuracy)) +
+  geom_line(color = "#9b59b6", linewidth = 1.5) +
+  geom_point(color = "#9b59b6", size = 4) +
+  geom_ribbon(aes(ymin = accuracy - se, ymax = accuracy + se),
+              alpha = 0.2, fill = "#9b59b6") +
+  geom_hline(yintercept = 0.5, linetype = "dashed", color = "#e74c3c", linewidth = 1) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    x = "Trial",
+    y = "Accuracy",
+    title = "Detection Accuracy Across Trials",
+    subtitle = "Red line = chance level (50%)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The data shows **no evidence** for a "sixth sense" - detection accuracy was not significantly different from chance (50%). Additionally, confidence did not predict accuracy, suggesting people lack insight into when their guesses are correct.
+:::

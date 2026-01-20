@@ -9,7 +9,7 @@
 <meta name="author" content="Gordon Wright">
 <meta name="dcterms.date" content="2026-01-23">
 
-<title>Chapter 4: Introduction to R – PS50008A Research Methods &amp; Experimental Design</title>
+<title>Chapter 4: Descriptive Statistics in Action – PS50008A Research Methods &amp; Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -411,7 +411,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"mean(c(5, 10, 15, 20))","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Store a value\nmy_score <- 75\n\n# Store multiple values\nreaction_times <- c(245, 312, 278, 298, 267)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Mean of values\nmean(c(10, 20, 30))\n\n# Sum of values\nsum(c(10, 20, 30))\n\n# Number of values\nlength(c(10, 20, 30))","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Create data\nrt <- c(245, 312, 278, 298, 267)\n\n# Compute statistics\nmean(rt)     # 280\nmedian(rt)   # 278\nsd(rt)       # 26.2","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Create example dataset\nolympics <- data.frame(\n  reaction_time = c(245, 312, 278, 298, 267),\n  room = c(\"A\", \"A\", \"B\", \"B\", \"A\")\n)\n\n# Get the reaction_time column\nolympics$reaction_time\n\n# Mean of that column\nmean(olympics$reaction_time)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Using the olympics data from above\n# Filter rows where room is \"A\"\nroom_a <- olympics[olympics$room == \"A\", ]\n\n# Get mean reaction time for Room A only\nmean(room_a$reaction_time)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"# Five memory scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# Calculate the mean\nmean(memory_scores)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Same five scores\nmemory_scores <- c(4, 6, 7, 8, 10)\n\n# The median\nmedian(memory_scores)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# One person did exceptionally well\nmemory_with_outlier <- c(4, 6, 7, 8, 25)\n\n# Compare mean and median\nmean(memory_with_outlier)\nmedian(memory_with_outlier)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Consistent group\ngroup_a <- c(6, 7, 7, 7, 8)\n\n# Variable group  \ngroup_b <- c(2, 4, 7, 10, 12)\n\n# Same mean!\nmean(group_a)\nmean(group_b)","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Range gives you min and max\nrange(group_a)\nrange(group_b)\n\n# Calculate the spread\nmax(group_a) - min(group_a)\nmax(group_b) - min(group_b)","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# SD for each group\nsd(group_a)\nsd(group_b)","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Complete summary\nsummary(group_b)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Reaction times from 10 participants\nreaction_times <- c(245, 267, 278, 298, 312, 289, 301, 256, 334, 271)\n\n# Central tendency\nmean(reaction_times)\nmedian(reaction_times)\n\n# Spread\nsd(reaction_times)\nrange(reaction_times)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Lab A: Abstract words\nlab_a <- c(4, 5, 6, 5, 7, 4, 6, 5, 5, 6)\n\n# Lab B: Concrete words\nlab_b <- c(6, 7, 8, 7, 9, 6, 8, 7, 8, 7)\n\n# Compare means\nmean(lab_a)\nmean(lab_b)\n\n# Compare SDs\nsd(lab_a)\nsd(lab_b)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Before session (1-10 scale)\nmood_pre <- c(5, 6, 4, 7, 5, 6, 4, 5, 6, 5)\n\n# After session\nmood_post <- c(6, 7, 6, 8, 6, 7, 5, 6, 7, 6)\n\n# Means\nmean(mood_pre)\nmean(mood_post)\n\n# The change for each person\nmood_change <- mood_post - mood_pre\nmean(mood_change)\nsd(mood_change)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Memory (0-10 scale)\nmemory <- c(5, 6, 7, 5, 6, 7, 6, 5, 6, 7)\nmean(memory)\nsd(memory)\n\n# Reaction time (milliseconds)\nrt <- c(250, 280, 310, 240, 290, 300, 260, 270, 290, 280)\nmean(rt)\nsd(rt)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scenario A: Everyone similar\nscenario_a <- c(5, 5, 6, 6, 6, 6, 7, 7)\n\n# Scenario B: Bimodal (two clusters)\nscenario_b <- c(2, 2, 3, 3, 9, 9, 10, 10)\n\n# Same mean!\nmean(scenario_a)\nmean(scenario_b)\n\n# But very different SDs\nsd(scenario_a)\nsd(scenario_b)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Create a small dataset\ndatalab <- data.frame(\n  participant = 1:6,\n  memory = c(5, 7, 6, 8, 4, 6),\n  room = c(\"A\", \"A\", \"A\", \"B\", \"B\", \"B\")\n)\n\n# View it\ndatalab\n\n# Get just the memory column\ndatalab$memory\n\n# Mean of memory scores\nmean(datalab$memory)","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Scores for Room A only\nroom_a_scores <- datalab$memory[datalab$room == \"A\"]\nroom_a_scores\nmean(room_a_scores)\n\n# Scores for Room B only\nroom_b_scores <- datalab$memory[datalab$room == \"B\"]\nroom_b_scores\nmean(room_b_scores)","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Store a single value\nmy_score <- 75\n\n# Store multiple values with c()\nall_scores <- c(65, 72, 81, 78, 69)\n\n# Now you can use them\nmean(all_scores)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -2125,38 +2125,45 @@ globalThis.qwebrExecuteCode = async function (
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link" data-scroll-target="#what-is-r">What Is R?</a>
+  <li><a href="#part-1-describing-the-centre" id="toc-part-1-describing-the-centre" class="nav-link" data-scroll-target="#part-1-describing-the-centre">Part 1: Describing the Centre</a>
   <ul class="collapse">
-  <li><a href="#why-learn-r" id="toc-why-learn-r" class="nav-link" data-scroll-target="#why-learn-r">Why Learn R?</a></li>
+  <li><a href="#the-mean-the-balancing-point" id="toc-the-mean-the-balancing-point" class="nav-link" data-scroll-target="#the-mean-the-balancing-point">The Mean: The Balancing Point</a></li>
+  <li><a href="#the-median-the-middle-value" id="toc-the-median-the-middle-value" class="nav-link" data-scroll-target="#the-median-the-middle-value">The Median: The Middle Value</a></li>
+  <li><a href="#when-mean-and-median-differ" id="toc-when-mean-and-median-differ" class="nav-link" data-scroll-target="#when-mean-and-median-differ">When Mean and Median Differ</a></li>
   </ul></li>
-  <li><a href="#webr-r-in-your-browser" id="toc-webr-r-in-your-browser" class="nav-link" data-scroll-target="#webr-r-in-your-browser">WebR: R in Your Browser</a>
+  <li><a href="#part-2-describing-the-spread" id="toc-part-2-describing-the-spread" class="nav-link" data-scroll-target="#part-2-describing-the-spread">Part 2: Describing the Spread</a>
   <ul class="collapse">
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works</a></li>
+  <li><a href="#the-range-simplest-spread" id="toc-the-range-simplest-spread" class="nav-link" data-scroll-target="#the-range-simplest-spread">The Range: Simplest Spread</a></li>
+  <li><a href="#the-standard-deviation-the-gold-standard" id="toc-the-standard-deviation-the-gold-standard" class="nav-link" data-scroll-target="#the-standard-deviation-the-gold-standard">The Standard Deviation: The Gold Standard</a></li>
+  <li><a href="#the-summary-function-everything-at-once" id="toc-the-summary-function-everything-at-once" class="nav-link" data-scroll-target="#the-summary-function-everything-at-once">The summary() Function: Everything at Once</a></li>
   </ul></li>
-  <li><a href="#r-basics-for-today" id="toc-r-basics-for-today" class="nav-link" data-scroll-target="#r-basics-for-today">R Basics for Today</a>
+  <li><a href="#part-3-seeing-descriptives-in-psychology-data" id="toc-part-3-seeing-descriptives-in-psychology-data" class="nav-link" data-scroll-target="#part-3-seeing-descriptives-in-psychology-data">Part 3: Seeing Descriptives in Psychology Data</a>
   <ul class="collapse">
-  <li><a href="#assigning-values" id="toc-assigning-values" class="nav-link" data-scroll-target="#assigning-values">Assigning Values</a></li>
-  <li><a href="#basic-functions" id="toc-basic-functions" class="nav-link" data-scroll-target="#basic-functions">Basic Functions</a></li>
-  <li><a href="#computing-descriptives" id="toc-computing-descriptives" class="nav-link" data-scroll-target="#computing-descriptives">Computing Descriptives</a></li>
-  <li><a href="#example-reaction-times" id="toc-example-reaction-times" class="nav-link" data-scroll-target="#example-reaction-times">Example: Reaction Times</a></li>
+  <li><a href="#example-1-reaction-times" id="toc-example-1-reaction-times" class="nav-link" data-scroll-target="#example-1-reaction-times">Example 1: Reaction Times</a></li>
+  <li><a href="#example-2-memory-scores-by-condition" id="toc-example-2-memory-scores-by-condition" class="nav-link" data-scroll-target="#example-2-memory-scores-by-condition">Example 2: Memory Scores by Condition</a></li>
+  <li><a href="#example-3-pre-post-mood-ratings" id="toc-example-3-pre-post-mood-ratings" class="nav-link" data-scroll-target="#example-3-pre-post-mood-ratings">Example 3: Pre-Post Mood Ratings</a></li>
   </ul></li>
-  <li><a href="#understanding-output" id="toc-understanding-output" class="nav-link" data-scroll-target="#understanding-output">Understanding Output</a></li>
-  <li><a href="#working-with-data-frames" id="toc-working-with-data-frames" class="nav-link" data-scroll-target="#working-with-data-frames">Working with Data Frames</a>
+  <li><a href="#part-4-what-the-numbers-mean" id="toc-part-4-what-the-numbers-mean" class="nav-link" data-scroll-target="#part-4-what-the-numbers-mean">Part 4: What the Numbers Mean</a>
+  <ul class="collapse">
+  <li><a href="#standard-deviation-in-context" id="toc-standard-deviation-in-context" class="nav-link" data-scroll-target="#standard-deviation-in-context">Standard Deviation in Context</a></li>
+  <li><a href="#when-means-can-mislead" id="toc-when-means-can-mislead" class="nav-link" data-scroll-target="#when-means-can-mislead">When Means Can Mislead</a></li>
+  </ul></li>
+  <li><a href="#part-5-working-with-data-frames" id="toc-part-5-working-with-data-frames" class="nav-link" data-scroll-target="#part-5-working-with-data-frames">Part 5: Working with Data Frames</a>
   <ul class="collapse">
   <li><a href="#accessing-columns" id="toc-accessing-columns" class="nav-link" data-scroll-target="#accessing-columns">Accessing Columns</a></li>
-  <li><a href="#subsetting-data" id="toc-subsetting-data" class="nav-link" data-scroll-target="#subsetting-data">Subsetting Data</a></li>
+  <li><a href="#descriptives-by-group" id="toc-descriptives-by-group" class="nav-link" data-scroll-target="#descriptives-by-group">Descriptives by Group</a></li>
   </ul></li>
-  <li><a href="#common-errors-and-how-to-fix-them" id="toc-common-errors-and-how-to-fix-them" class="nav-link" data-scroll-target="#common-errors-and-how-to-fix-them">Common Errors (And How to Fix Them)</a>
+  <li><a href="#part-6-r-basics-youll-need" id="toc-part-6-r-basics-youll-need" class="nav-link" data-scroll-target="#part-6-r-basics-youll-need">Part 6: R Basics You’ll Need</a>
   <ul class="collapse">
-  <li><a href="#error-object-x-not-found" id="toc-error-object-x-not-found" class="nav-link" data-scroll-target="#error-object-x-not-found">Error: object ‘x’ not found</a></li>
-  <li><a href="#error-could-not-find-function-x" id="toc-error-could-not-find-function-x" class="nav-link" data-scroll-target="#error-could-not-find-function-x">Error: could not find function “x”</a></li>
-  <li><a href="#unexpected-symbol-error" id="toc-unexpected-symbol-error" class="nav-link" data-scroll-target="#unexpected-symbol-error">Unexpected symbol error</a></li>
+  <li><a href="#assigning-values" id="toc-assigning-values" class="nav-link" data-scroll-target="#assigning-values">Assigning Values</a></li>
+  <li><a href="#key-functions-reference" id="toc-key-functions-reference" class="nav-link" data-scroll-target="#key-functions-reference">Key Functions Reference</a></li>
+  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a></li>
   </ul></li>
-  <li><a href="#preparing-for-the-lab" id="toc-preparing-for-the-lab" class="nav-link" data-scroll-target="#preparing-for-the-lab">Preparing for the Lab</a>
+  <li><a href="#part-7-preparing-for-the-lab" id="toc-part-7-preparing-for-the-lab" class="nav-link" data-scroll-target="#part-7-preparing-for-the-lab">Part 7: Preparing for the Lab</a>
   <ul class="collapse">
   <li><a href="#what-youll-do" id="toc-what-youll-do" class="nav-link" data-scroll-target="#what-youll-do">What You’ll Do</a></li>
-  <li><a href="#before-you-arrive" id="toc-before-you-arrive" class="nav-link" data-scroll-target="#before-you-arrive">Before You Arrive</a></li>
   <li><a href="#what-to-focus-on" id="toc-what-to-focus-on" class="nav-link" data-scroll-target="#what-to-focus-on">What to Focus On</a></li>
+  <li><a href="#before-you-arrive" id="toc-before-you-arrive" class="nav-link" data-scroll-target="#before-you-arrive">Before You Arrive</a></li>
   </ul></li>
   <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key Terms</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
@@ -2453,8 +2460,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Term 2</li><li class="breadcrumb-item"><a href="../../week12/index.html">Week 12: Research Design Framework</a></li><li class="breadcrumb-item"><a href="../../week12/lab/instructor-slides.html">Lab</a></li><li class="breadcrumb-item"><a href="../../week12/lab/reading.html">Reading</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Chapter 4: Introduction to R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">R for Descriptive Statistics</p>
+<div class="quarto-title-block"><div><h1 class="title">Chapter 4: Descriptive Statistics in Action</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Understanding Your Data Through Numbers</p>
 </div>
 
 
@@ -2485,198 +2492,270 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This reading prepares you for the lab session where you’ll use R to compute descriptive statistics. You don’t need any prior programming experience — we’ll use WebR, which runs directly in your browser.</p>
-</section>
-<section id="what-is-r" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-r">What Is R?</h2>
-<p><strong>R</strong> is a programming language designed for statistical analysis. It’s:</p>
+<p>This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.</p>
+<p>By the end of this reading, you’ll be able to:</p>
 <ul>
-<li><strong>Free and open-source</strong> — anyone can use it</li>
-<li><strong>Powerful</strong> — handles everything from simple means to complex models</li>
-<li><strong>Widely used</strong> — the standard in psychology, biology, medicine, and data science</li>
-<li><strong>Reproducible</strong> — your analysis is documented in code</li>
+<li>Interpret means, medians, and standard deviations</li>
+<li>Understand what the range and quartiles tell us</li>
+<li>Recognise when different measures are appropriate</li>
+<li>Use R to compute these statistics (with help)</li>
 </ul>
-<section id="why-learn-r" class="level3">
-<h3 class="anchored" data-anchor-id="why-learn-r">Why Learn R?</h3>
-<p>Excel can calculate a mean. So why bother with R?</p>
-<ol type="1">
-<li><p><strong>Reproducibility</strong>: R code documents exactly what you did. “I calculated the mean” becomes <code>mean(data$reaction_time)</code> — clear and precise.</p></li>
-<li><p><strong>Efficiency</strong>: Once written, code can be reused. Analyse one dataset, apply the same analysis to another.</p></li>
-<li><p><strong>Capabilities</strong>: R handles analyses that Excel simply cannot — bootstrapping, mixed models, complex visualisations.</p></li>
-<li><p><strong>Transparency</strong>: Sharing code lets others check your work. This is increasingly required in psychology journals.</p></li>
-</ol>
+<hr>
 </section>
-</section>
-<section id="webr-r-in-your-browser" class="level2">
-<h2 class="anchored" data-anchor-id="webr-r-in-your-browser">WebR: R in Your Browser</h2>
-<p>We use <strong>WebR</strong> — R that runs entirely in your browser. No installation needed.</p>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How It Works</h3>
-<p>When you see a code box like this:</p>
+<section id="part-1-describing-the-centre" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-describing-the-centre">Part 1: Describing the Centre</h2>
+<p>When we collect data, the first question is usually: <strong>What’s typical?</strong></p>
+<section id="the-mean-the-balancing-point" class="level3">
+<h3 class="anchored" data-anchor-id="the-mean-the-balancing-point">The Mean: The Balancing Point</h3>
+<p>The mean is the arithmetic average. If we measured 5 people’s memory scores:</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can:</p>
-<ol type="1">
-<li>Click in the box</li>
-<li>Press the “Run” button</li>
-<li>See the output immediately</li>
-</ol>
-<p>The code runs in your browser, not on a server. Your data stays on your machine.</p>
+<p>The mean is 7. This is the “balancing point” — if you put these scores on a seesaw, 7 is where it would balance.</p>
 </section>
-</section>
-<section id="r-basics-for-today" class="level2">
-<h2 class="anchored" data-anchor-id="r-basics-for-today">R Basics for Today</h2>
-<p>You don’t need to master R today — just understand enough to follow along. Here are the essentials:</p>
-<section id="assigning-values" class="level3">
-<h3 class="anchored" data-anchor-id="assigning-values">Assigning Values</h3>
-<p>Use <code>&lt;-</code> (less-than followed by dash) to assign values:</p>
+<section id="the-median-the-middle-value" class="level3">
+<h3 class="anchored" data-anchor-id="the-median-the-middle-value">The Median: The Middle Value</h3>
+<p>The median is the middle value when data are sorted. Half the values are above it, half below.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The <code>c()</code> function combines values into a <strong>vector</strong> (a list of numbers).</p>
+<p>With 5 values, the median is the 3rd value (when sorted). Here, both mean and median are 7.</p>
 </section>
-<section id="basic-functions" class="level3">
-<h3 class="anchored" data-anchor-id="basic-functions">Basic Functions</h3>
-<p>Functions do things. They have a name followed by parentheses containing inputs:</p>
+<section id="when-mean-and-median-differ" class="level3">
+<h3 class="anchored" data-anchor-id="when-mean-and-median-differ">When Mean and Median Differ</h3>
+<p>Sometimes they tell different stories. Consider these scores:</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The mean shoots up to 10, but the median stays at 7. The median is <strong>resistant</strong> to extreme values (outliers). The mean is pulled by them.</p>
+<p><strong>When to use which?</strong></p>
+<ul>
+<li>Mean: When data are roughly symmetric, no extreme outliers</li>
+<li>Median: When data are skewed or have outliers (like income data)</li>
+</ul>
+<hr>
 </section>
-<section id="computing-descriptives" class="level3">
-<h3 class="anchored" data-anchor-id="computing-descriptives">Computing Descriptives</h3>
-<p>For descriptive statistics, you’ll use:</p>
+</section>
+<section id="part-2-describing-the-spread" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-describing-the-spread">Part 2: Describing the Spread</h2>
+<p>The centre isn’t the whole story. Two groups can have the same mean but look completely different:</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Both means are 7, but the groups are very different. We need measures of <strong>spread</strong>.</p>
+<section id="the-range-simplest-spread" class="level3">
+<h3 class="anchored" data-anchor-id="the-range-simplest-spread">The Range: Simplest Spread</h3>
+<p>The range is just the distance from lowest to highest:</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Group A spans 2 points (6 to 8). Group B spans 10 points (2 to 12). The range immediately shows Group B is more variable.</p>
+<p><strong>Limitation</strong>: The range only uses two values, so it’s sensitive to outliers.</p>
+</section>
+<section id="the-standard-deviation-the-gold-standard" class="level3">
+<h3 class="anchored" data-anchor-id="the-standard-deviation-the-gold-standard">The Standard Deviation: The Gold Standard</h3>
+<p>The <strong>standard deviation (SD)</strong> measures how far scores typically fall from the mean.</p>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Group A’s SD is about 0.7 — scores cluster tightly around 7. Group B’s SD is about 4.2 — scores are much more spread out.</p>
+<p><strong>Rule of thumb</strong>: In roughly normal data, about 68% of values fall within 1 SD of the mean.</p>
+<p>If the mean is 7 and SD is 1:</p>
+<ul>
+<li>~68% of scores fall between 6 and 8</li>
+</ul>
+</section>
+<section id="the-summary-function-everything-at-once" class="level3">
+<h3 class="anchored" data-anchor-id="the-summary-function-everything-at-once">The summary() Function: Everything at Once</h3>
+<p>R’s <code>summary()</code> function gives you a quick overview:</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>This shows:</p>
+<ul>
+<li>Min and Max (the range endpoints)</li>
+<li>1st and 3rd Quartile (the middle 50%)</li>
+<li>Median (the middle value)</li>
+<li>Mean</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-3-seeing-descriptives-in-psychology-data" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-seeing-descriptives-in-psychology-data">Part 3: Seeing Descriptives in Psychology Data</h2>
+<p>Let’s look at what descriptive statistics tell us with realistic psychology examples.</p>
+<section id="example-1-reaction-times" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-reaction-times">Example 1: Reaction Times</h3>
+<p>Imagine we measured 10 participants’ reaction times (in milliseconds):</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Interpretation</strong>:</p>
+<ul>
+<li>Mean reaction time is about 285ms</li>
+<li>The median (284ms) is similar, suggesting roughly symmetric data</li>
+<li>SD of about 28ms tells us most people fall within ±28ms of the mean</li>
+<li>Range of 245 to 334ms shows the fastest and slowest participants</li>
+</ul>
+</section>
+<section id="example-2-memory-scores-by-condition" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-memory-scores-by-condition">Example 2: Memory Scores by Condition</h3>
+<p>Now let’s compare two groups. Lab A saw abstract words, Lab B saw concrete words:</p>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Interpretation</strong>:</p>
+<ul>
+<li>Lab A mean: ~5.3 words recalled</li>
+<li>Lab B mean: ~7.3 words recalled</li>
+<li>The difference is 2 words — but is that meaningful?</li>
+<li>Both SDs are around 1, so 2 words is about <strong>2 standard deviations</strong> — a substantial difference</li>
+</ul>
+</section>
+<section id="example-3-pre-post-mood-ratings" class="level3">
+<h3 class="anchored" data-anchor-id="example-3-pre-post-mood-ratings">Example 3: Pre-Post Mood Ratings</h3>
+<p>Same people rated their mood before and after the session:</p>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Interpretation</strong>:</p>
+<ul>
+<li>Mean mood increased by 1.1 points on average</li>
+<li>The SD of change (0.7) tells us most people improved by 0.4 to 1.8 points</li>
+<li>This is a within-subjects comparison — same people before and after</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-4-what-the-numbers-mean" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-what-the-numbers-mean">Part 4: What the Numbers Mean</h2>
+<section id="standard-deviation-in-context" class="level3">
+<h3 class="anchored" data-anchor-id="standard-deviation-in-context">Standard Deviation in Context</h3>
+<p>The SD only makes sense relative to the mean and the scale.</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>Memory: Mean = 6, SD = 0.77. An SD of 0.77 on a 10-point scale is fairly consistent.</li>
+<li>RT: Mean = 277ms, SD = 23ms. Is that a lot of variability? It’s about 8% of the mean — fairly typical for reaction times.</li>
+</ul>
+</section>
+<section id="when-means-can-mislead" class="level3">
+<h3 class="anchored" data-anchor-id="when-means-can-mislead">When Means Can Mislead</h3>
+<p>Consider these two possible DataLab results:</p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Both means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.</p>
+<hr>
+</section>
+</section>
+<section id="part-5-working-with-data-frames" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-working-with-data-frames">Part 5: Working with Data Frames</h2>
+<p>Real datasets aren’t just vectors — they’re tables (data frames) with multiple variables.</p>
+<section id="accessing-columns" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-columns">Accessing Columns</h3>
+<p>Use the <code>$</code> symbol to get a column from a data frame:</p>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="descriptives-by-group" class="level3">
+<h3 class="anchored" data-anchor-id="descriptives-by-group">Descriptives by Group</h3>
+<p>To compare groups, we can subset the data:</p>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<hr>
+</section>
+</section>
+<section id="part-6-r-basics-youll-need" class="level2">
+<h2 class="anchored" data-anchor-id="part-6-r-basics-youll-need">Part 6: R Basics You’ll Need</h2>
+<section id="assigning-values" class="level3">
+<h3 class="anchored" data-anchor-id="assigning-values">Assigning Values</h3>
+<p>Use <code>&lt;-</code> to store values:</p>
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="key-functions-reference" class="level3">
+<h3 class="anchored" data-anchor-id="key-functions-reference">Key Functions Reference</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Function</th>
 <th>What It Does</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>mean(x)</code></td>
 <td>Arithmetic mean</td>
+<td><code>mean(c(4,5,6))</code> → 5</td>
 </tr>
 <tr class="even">
 <td><code>median(x)</code></td>
-<td>Median (middle value)</td>
+<td>Middle value</td>
+<td><code>median(c(4,5,6))</code> → 5</td>
 </tr>
 <tr class="odd">
 <td><code>sd(x)</code></td>
 <td>Standard deviation</td>
+<td><code>sd(c(4,5,6))</code> → 1</td>
 </tr>
 <tr class="even">
-<td><code>var(x)</code></td>
-<td>Variance</td>
-</tr>
-<tr class="odd">
 <td><code>min(x)</code></td>
-<td>Minimum value</td>
-</tr>
-<tr class="even">
-<td><code>max(x)</code></td>
-<td>Maximum value</td>
+<td>Smallest value</td>
+<td><code>min(c(4,5,6))</code> → 4</td>
 </tr>
 <tr class="odd">
-<td><code>range(x)</code></td>
-<td>Returns both min and max</td>
+<td><code>max(x)</code></td>
+<td>Largest value</td>
+<td><code>max(c(4,5,6))</code> → 6</td>
 </tr>
 <tr class="even">
+<td><code>range(x)</code></td>
+<td>Min and max</td>
+<td><code>range(c(4,5,6))</code> → 4, 6</td>
+</tr>
+<tr class="odd">
 <td><code>summary(x)</code></td>
-<td>Overview (min, quartiles, mean, max)</td>
+<td>All key stats</td>
+<td>Shows quartiles, mean, etc.</td>
+</tr>
+<tr class="even">
+<td><code>length(x)</code></td>
+<td>How many values</td>
+<td><code>length(c(4,5,6))</code> → 3</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="example-reaction-times" class="level3">
-<h3 class="anchored" data-anchor-id="example-reaction-times">Example: Reaction Times</h3>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="common-errors" class="level3">
+<h3 class="anchored" data-anchor-id="common-errors">Common Errors</h3>
+<p><strong>“object not found”</strong>: You haven’t created that variable yet, or there’s a typo.</p>
+<p><strong>“unexpected symbol”</strong>: Missing comma or parenthesis.</p>
+<p>R is case-sensitive: <code>Mean()</code> won’t work, but <code>mean()</code> will.</p>
+<hr>
 </section>
 </section>
-<section id="understanding-output" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-output">Understanding Output</h2>
-<p>When R gives you output, it includes some formatting. For example:</p>
-<pre><code>[1] 280</code></pre>
-<p>The <code>[1]</code> just means “first element.” For a single number, you can ignore it.</p>
-<p>For longer output:</p>
-<pre><code>[1] 245 267 278 298 312</code></pre>
-<p>The numbers 245, 267, etc. are your data. The <code>[1]</code> tells you where the first element is.</p>
-</section>
-<section id="working-with-data-frames" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-data-frames">Working with Data Frames</h2>
-<p>Real datasets aren’t just vectors — they’re <strong>data frames</strong> (like a spreadsheet with rows and columns).</p>
-<section id="accessing-columns" class="level3">
-<h3 class="anchored" data-anchor-id="accessing-columns">Accessing Columns</h3>
-<p>Use <code>$</code> to access a column:</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="subsetting-data" class="level3">
-<h3 class="anchored" data-anchor-id="subsetting-data">Subsetting Data</h3>
-<p>Get specific parts of your data:</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="common-errors-and-how-to-fix-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-errors-and-how-to-fix-them">Common Errors (And How to Fix Them)</h2>
-<section id="error-object-x-not-found" class="level3">
-<h3 class="anchored" data-anchor-id="error-object-x-not-found">Error: object ‘x’ not found</h3>
-<p><strong>Meaning</strong>: R doesn’t recognise that name.</p>
-<p><strong>Fixes</strong>:</p>
-<ul>
-<li>Check spelling (R is case-sensitive: <code>Data</code> ≠ <code>data</code>)</li>
-<li>Make sure you created the object first</li>
-<li>Run all code chunks in order</li>
-</ul>
-</section>
-<section id="error-could-not-find-function-x" class="level3">
-<h3 class="anchored" data-anchor-id="error-could-not-find-function-x">Error: could not find function “x”</h3>
-<p><strong>Meaning</strong>: R doesn’t recognise that function.</p>
-<p><strong>Fixes</strong>:</p>
-<ul>
-<li>Check spelling</li>
-<li>Some functions need packages (we’ll load these for you)</li>
-</ul>
-</section>
-<section id="unexpected-symbol-error" class="level3">
-<h3 class="anchored" data-anchor-id="unexpected-symbol-error">Unexpected symbol error</h3>
-<p><strong>Meaning</strong>: R found something it didn’t expect.</p>
-<p><strong>Fixes</strong>:</p>
-<ul>
-<li>Check for missing commas or parentheses</li>
-<li>Make sure quotes match (both <code>"</code> or both <code>'</code>)</li>
-</ul>
-</section>
-</section>
-<section id="preparing-for-the-lab" class="level2">
-<h2 class="anchored" data-anchor-id="preparing-for-the-lab">Preparing for the Lab</h2>
+<section id="part-7-preparing-for-the-lab" class="level2">
+<h2 class="anchored" data-anchor-id="part-7-preparing-for-the-lab">Part 7: Preparing for the Lab</h2>
 <section id="what-youll-do" class="level3">
 <h3 class="anchored" data-anchor-id="what-youll-do">What You’ll Do</h3>
 <p>In the lab, you’ll:</p>
 <ol type="1">
-<li>Load the DataLab dataset</li>
-<li>Explore the variables (columns)</li>
-<li>Calculate means, medians, and SDs for different measures</li>
+<li>Load the actual DataLab dataset (not example data)</li>
+<li>Explore variables using <code>summary()</code></li>
+<li>Calculate means and SDs for different tasks</li>
 <li>Compare Room A vs Room B</li>
-<li>Visualise distributions with histograms</li>
+<li>Interpret what the numbers tell us</li>
 </ol>
+</section>
+<section id="what-to-focus-on" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-focus-on">What to Focus On</h3>
+<p>Don’t worry about memorising R syntax. Focus on:</p>
+<ul>
+<li><strong>What does this statistic tell me?</strong></li>
+<li><strong>How spread out is the data?</strong></li>
+<li><strong>Is this difference meaningful?</strong></li>
+</ul>
+<p>The code will be provided. Your job is to understand what it means.</p>
 </section>
 <section id="before-you-arrive" class="level3">
 <h3 class="anchored" data-anchor-id="before-you-arrive">Before You Arrive</h3>
 <ul>
-<li>Read this page (you’re doing that now!)</li>
-<li>Have the <a href="../../textbook/chapters/w12-lecture.html">Lecture Reading</a> fresh in mind</li>
-<li>Bring a laptop or phone (WebR runs in any modern browser)</li>
+<li>Review the lecture reading on descriptive statistics</li>
+<li>Understand mean vs median, and when each is appropriate</li>
+<li>Know what standard deviation represents (spread from the mean)</li>
 </ul>
-</section>
-<section id="what-to-focus-on" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-focus-on">What to Focus On</h3>
-<p>The goal isn’t to memorise R syntax. Focus on:</p>
-<ul>
-<li><strong>What</strong> each statistic tells you (meaning over mechanics)</li>
-<li><strong>How</strong> the statistics relate to your DataLab experience</li>
-<li><strong>Why</strong> we compute these particular measures</li>
-</ul>
+<hr>
 </section>
 </section>
 <section id="key-terms" class="level2">
@@ -2690,68 +2769,73 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>R</strong></td>
-<td>Programming language for statistical analysis</td>
+<td><strong>Mean</strong></td>
+<td>Arithmetic average (sum ÷ count)</td>
 </tr>
 <tr class="even">
-<td><strong>WebR</strong></td>
-<td>R running in a web browser</td>
+<td><strong>Median</strong></td>
+<td>Middle value when sorted</td>
 </tr>
 <tr class="odd">
-<td><strong>Vector</strong></td>
-<td>A list of values of the same type</td>
+<td><strong>Standard Deviation</strong></td>
+<td>Average distance from the mean</td>
 </tr>
 <tr class="even">
-<td><strong>Data frame</strong></td>
-<td>A table with rows and columns</td>
+<td><strong>Range</strong></td>
+<td>Difference between max and min</td>
 </tr>
 <tr class="odd">
-<td><strong>Function</strong></td>
-<td>Code that performs an action (like <code>mean()</code>)</td>
+<td><strong>Quartiles</strong></td>
+<td>Values that divide data into four equal parts</td>
+</tr>
+<tr class="even">
+<td><strong>Outlier</strong></td>
+<td>A value far from the others</td>
 </tr>
 </tbody>
 </table>
+<hr>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>What</th>
-<th>How in R</th>
+<th>Question</th>
+<th>Statistic to Use</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Mean</td>
-<td><code>mean(x)</code></td>
+<td>What’s typical?</td>
+<td>Mean or Median</td>
 </tr>
 <tr class="even">
-<td>Median</td>
-<td><code>median(x)</code></td>
+<td>How spread out?</td>
+<td>SD or Range</td>
 </tr>
 <tr class="odd">
-<td>SD</td>
-<td><code>sd(x)</code></td>
+<td>Any extreme values?</td>
+<td>Compare Mean vs Median</td>
 </tr>
 <tr class="even">
-<td>Access column</td>
-<td><code>data$column</code></td>
+<td>Quick overview?</td>
+<td><code>summary()</code></td>
 </tr>
 <tr class="odd">
-<td>Create vector</td>
-<td><code>c(1, 2, 3)</code></td>
+<td>Compare groups?</td>
+<td>Mean and SD for each</td>
 </tr>
 </tbody>
 </table>
+<hr>
 </section>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<p>If you want to explore R further:</p>
+<p>If you want to explore further:</p>
 <ul>
 <li><a href="https://r4ds.had.co.nz/">R for Data Science</a> — Free online textbook</li>
-<li><a href="https://posit.cloud/learn/primers">RStudio Primers</a> — Interactive tutorials</li>
-<li><a href="https://www.statmethods.net/">Quick-R</a> — Syntax reference</li>
+<li><a href="https://www.statmethods.net/stats/descriptives.html">Quick-R Statistics</a> — Syntax reference</li>
 </ul>
 
 
@@ -3422,23 +3506,23 @@ window.onload = function() {
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 12 Lab Reading"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Introduction to R for Descriptive Statistics"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Gordon Wright"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-23"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">  typst:</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfont: "Atkinson Hyperlegible"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="an">format-links:</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - html</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - format: typst</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">    text: PDF</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">    icon: file-pdf</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w12-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 12 Lab Reading"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Design Detectives"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Gordon Wright"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-23"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  typst:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    mainfont: "Atkinson Hyperlegible"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">format-links:</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - html</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - format: typst</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    text: PDF</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    icon: file-pdf</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w12-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

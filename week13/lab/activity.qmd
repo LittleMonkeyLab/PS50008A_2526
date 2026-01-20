@@ -1,8 +1,8 @@
 ---
-title: "Bootstrap Confidence Intervals in R"
+title: "Research Plan Workshop"
 subtitle: "PS50008A Week 13 Lab Activity"
 author: "Gordon Wright"
-date: "2026-01-28"
+date: "2026-01-30"
 format:
   html:
     toc: true
@@ -16,222 +16,389 @@ execute:
 ```{r}
 #| label: setup
 library(webexercises)
-library(tidyverse)
 library(knitr)
-
-# Load DataLab data
-memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
-merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
-
-navy <- "#275882"
-orange <- "#EA8439"
-theme_set(theme_minimal(base_size = 14))
 ```
 
 ## Overview
 
 ::: {.callout-important}
 ## Focus for Today
-This lab introduces **bootstrap confidence intervals** - a powerful resampling technique for estimating uncertainty:
+This lab is a **hands-on workshop** to develop your Research Plan. By the end of today, you will have:
 
-- Understanding point estimates vs interval estimates
-- Building confidence intervals through bootstrapping
-- Interpreting what CIs tell us (and don't tell us)
-- Connecting CIs to effect sizes
+- Operationalised your IV and DV for your chosen topic
+- Written and justified your hypotheses
+- Decided on your experimental design
+- Matched your design to the appropriate statistical test
+- Begun drafting your Method section
 :::
 
----
-
-## Activity 1: Understanding Point Estimates (15 min)
-
-### The Problem with Single Numbers
-
-When we calculate a mean from our sample, we get a **point estimate** - a single number. But how confident can we be in this number?
-
-```{r}
-#| label: sample-means-demo
-#| fig-height: 4
-#| fig-align: center
-memory_clean <- memory |> filter(!is.na(mem_total_1))
-sample_mean <- mean(memory_clean$mem_total_1, na.rm = TRUE)
-sample_sd <- sd(memory_clean$mem_total_1, na.rm = TRUE)
-sample_n <- nrow(memory_clean)
-
-ggplot(memory_clean, aes(x = mem_total_1)) +
-  geom_histogram(binwidth = 1, fill = navy, colour = "white", alpha = 0.8) +
-  geom_vline(xintercept = sample_mean, colour = orange, linewidth = 2) +
-  annotate("text", x = sample_mean + 0.3, y = Inf, vjust = 2,
-           label = paste0("Mean = ", round(sample_mean, 2)),
-           colour = orange, size = 5, hjust = 0) +
-  labs(x = "Words Recalled", y = "Count",
-       title = "Memory Scores from DataLab",
-       subtitle = paste0("n = ", sample_n, " | SD = ", round(sample_sd, 2))) +
-  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
-```
-
-### Conceptual Questions
-
-**1. A point estimate is:**
-
-`r mcq(c(answer = "A single value calculated from sample data", "A range of plausible values", "The true population parameter", "A measure of variability"))`
-
-**2. Why might a point estimate be misleading?**
-
-`r mcq(c("It's always wrong", "It's too complicated", answer = "It doesn't show how uncertain we are about the true value", "Point estimates can't be calculated"))`
-
-**3. If we took a new sample of students and calculated the mean memory score, we would likely get:**
-
-`r mcq(c("Exactly the same mean", answer = "A different mean due to sampling variability", "A smaller standard deviation", "The population mean"))`
-
-True or False: The sample mean is always equal to the population mean. `r torf(FALSE)`
-
-True or False: Larger samples generally give more precise estimates. `r torf(TRUE)`
+Today's activities directly prepare you for the **Research Plan assessment** (due Week 16, Friday 27 February).
 
 ---
 
-## Activity 2: Building Bootstrap CIs (25 min)
+## Activity 1: Operationalisation Workshop (30 min)
 
-### What is Bootstrapping?
+### Choose Your Topic
 
-Bootstrapping is a resampling technique where we:
-1. Take our sample data
-2. Resample WITH REPLACEMENT many times
-3. Calculate the statistic of interest for each resample
-4. Use the distribution of resampled statistics to estimate uncertainty
+The Research Plan requires you to investigate ONE of these three questions:
 
-### The Bootstrap Process
+1. **Font difficulty → Memory**: Does reading in a harder-to-read font improve retention?
+2. **Hydration → Cognitive performance**: Does drinking water improve cognitive task performance?
+3. **Eye contact → Perceived trustworthiness**: Does eye contact affect how trustworthy someone seems?
 
-**1. When we resample "with replacement", this means:**
+::: {.callout-note}
+## Your Topic
+Write down which topic you've chosen (or are leaning towards) before continuing.
+:::
 
-`r mcq(c("We only use each data point once", answer = "The same data point can be selected multiple times", "We add new data points", "We remove outliers"))`
+### Operationalising Your Independent Variable
 
-**2. If our original sample has 30 observations, each bootstrap sample will have:**
+The IV is what you manipulate. You need to specify EXACTLY how your two conditions will differ.
 
-`r mcq(c("More than 30 observations", "Fewer than 30 observations", answer = "Exactly 30 observations", "A random number of observations"))`
+**1. For your chosen topic, what is the independent variable?**
 
-**3. A typical bootstrap analysis might create how many resampled datasets?**
-
-`r mcq(c("5", "50", answer = "1000 or more", "It doesn't matter"))`
-
-### Building a 95% CI
-
-After creating many bootstrap samples and calculating the mean of each, we order these means and find the middle 95%.
-
-**4. A 95% confidence interval uses which percentiles of the bootstrap distribution?**
-
-`r mcq(c("0th and 100th", "1st and 99th", answer = "2.5th and 97.5th", "5th and 95th"))`
-
-**5. If our bootstrap means range from 5.2 to 7.8, and our 95% CI is [5.5, 7.3], this means:**
-
-`r mcq(c("All bootstrap means fell in this range", answer = "95% of bootstrap means fell in this range", "The true mean is definitely in this range", "Only 5% of bootstrap means fell in this range"))`
+`r mcq(c("Font difficulty / Hydration level / Eye contact", answer = "Depends on topic chosen", "Memory / Cognition / Trustworthiness"))`
 
 ::: {.callout-tip collapse="true"}
-## Understanding the Bootstrap
-The bootstrap works because our sample is our best estimate of the population. By resampling from our sample, we simulate what would happen if we took many samples from the population.
+## Answer
+The IV depends on your topic:
+
+- Font study: Font type (fluent vs disfluent)
+- Hydration study: Hydration condition (water vs no water)
+- Eye contact study: Gaze direction (direct vs averted)
 :::
 
+**2. Now, specify your IV operationally. Complete this template:**
+
+> "The independent variable is _____________ with two levels:
+>
+> **Condition 1**: _____________________________________________
+>
+> **Condition 2**: _____________________________________________"
+
+### Examples of Good Operationalisation
+
+**Font study example:**
+
+> "The independent variable is font type with two levels:
+>
+> Condition 1 (Fluent): Arial, 16-point, black text on white background
+>
+> Condition 2 (Disfluent): Comic Sans MS, 12-point, 75% grey text on white background"
+
+**Hydration study example:**
+
+> "The independent variable is water consumption with two levels:
+>
+> Condition 1 (Water): Participants drink 300ml of still water
+>
+> Condition 2 (Control): Participants do not drink anything"
+
+**Eye contact study example:**
+
+> "The independent variable is gaze direction with two levels:
+>
+> Condition 1 (Direct): Photograph shows person looking directly at camera
+>
+> Condition 2 (Averted): Photograph shows same person looking 30° to the left"
+
+### Check Your IV Operationalisation
+
+**3. Could another researcher replicate your manipulation exactly from your description?**
+
+`r mcq(c(answer = "Yes - I've specified all details needed", "Maybe - I could add more detail", "No - it's too vague"))`
+
+If you answered "Maybe" or "No", revise your operationalisation to add missing details.
+
+### Operationalising Your Dependent Variable
+
+The DV is what you measure. You need to specify the exact measurement procedure.
+
+**4. For your chosen topic, what is the dependent variable?**
+
+`r mcq(c("Memory performance / Cognitive performance / Trustworthiness rating", answer = "Depends on topic chosen", "The same as the IV"))`
+
+::: {.callout-tip collapse="true"}
+## Answer
+The DV depends on your topic:
+
+- Font study: Memory performance (e.g., number of words recalled)
+- Hydration study: Cognitive performance (e.g., reaction time, accuracy)
+- Eye contact study: Perceived trustworthiness (e.g., rating on 1-7 scale)
+:::
+
+**5. Complete this template for your DV:**
+
+> "The dependent variable is _____________ measured by:
+>
+> **Task/Measure**: ___________________________________________
+>
+> **Scoring**: _______________________________________________
+>
+> **Range**: ________________________________________________"
+
+### Examples of Good DV Operationalisation
+
+**Font study example:**
+
+> "The dependent variable is memory performance measured by:
+>
+> Task: Free recall test — participants write down all words they remember
+>
+> Scoring: Count of correctly recalled words
+>
+> Range: 0-20 (20 words presented)"
+
+**Hydration study example:**
+
+> "The dependent variable is cognitive performance measured by:
+>
+> Task: Simple reaction time test — press spacebar when stimulus appears
+>
+> Scoring: Mean reaction time in milliseconds across 30 trials
+>
+> Range: Continuous, typically 150-400ms"
+
+**Eye contact study example:**
+
+> "The dependent variable is perceived trustworthiness measured by:
+>
+> Task: Single-item rating scale: "How trustworthy does this person seem?"
+>
+> Scoring: 1 = Not at all trustworthy, 7 = Extremely trustworthy
+>
+> Range: 1-7"
+
 ---
 
-## Activity 3: Interpreting CIs (20 min)
+## Activity 2: Hypothesis Writing Practice (25 min)
 
-### What Does a 95% CI Mean?
+### Writing Your Null Hypothesis
 
-This is one of the most commonly misunderstood concepts in statistics!
+The null hypothesis (H₀) states there is NO effect.
 
-**1. The correct interpretation of a 95% CI is:**
+**1. For your topic, write a null hypothesis:**
 
-`r mcq(c("There is a 95% chance the true mean is in this interval", answer = "If we repeated this procedure many times, 95% of the intervals would contain the true mean", "95% of the sample data falls in this interval", "We are 95% certain of our results"))`
+H₀: _________________________________________________
 
-**2. True or False: A 95% CI tells us the probability that the true mean is in the interval.**
+**Example null hypotheses:**
 
-`r torf(FALSE)`
+- Font: "There is no difference in recall scores between participants who read words in fluent vs disfluent fonts."
+- Hydration: "Drinking water has no effect on reaction time performance."
+- Eye contact: "Gaze direction does not affect trustworthiness ratings."
 
-**3. A narrower confidence interval indicates:**
+### Writing Your Alternative Hypothesis
 
-`r mcq(c(answer = "More precision in our estimate", "Less precision in our estimate", "A larger sample size only", "The true mean is closer to zero"))`
+Now you must decide: **one-tailed or two-tailed?**
 
-### Comparing Groups with CIs
+**2. Should your alternative hypothesis be one-tailed (directional) or two-tailed (non-directional)?**
 
-When comparing two groups (like Lab A vs Lab B), we can look at whether their CIs overlap.
+`r mcq(c("One-tailed - I'm predicting a specific direction", "Two-tailed - I'm not sure which direction", answer = "I need to consider the evidence before deciding"))`
 
-```{r}
-#| label: ci-comparison-demo
-#| echo: false
-# Simulate CI comparison
-group_data <- tibble(
-  Group = c("Lab A", "Lab B"),
-  Mean = c(5.2, 6.8),
-  Lower = c(4.5, 6.0),
-  Upper = c(5.9, 7.6)
-)
+### Making the Decision
 
-ggplot(group_data, aes(x = Group, y = Mean, colour = Group)) +
-  geom_point(size = 4) +
-  geom_errorbar(aes(ymin = Lower, ymax = Upper), width = 0.2, linewidth = 1.2) +
-  scale_colour_manual(values = c(navy, orange)) +
-  labs(y = "Mean Memory Score", title = "95% CIs for Memory by Lab",
-       subtitle = "Error bars show 95% confidence intervals") +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, face = "bold"))
-```
+**3. Which of these is TRUE about choosing hypothesis direction?**
 
-**4. Looking at the plot above, do the CIs overlap?**
+`r mcq(c("Always use two-tailed because it's safer", answer = "Choose based on prior research and theory", "One-tailed is always more powerful so use it", "It doesn't really matter"))`
 
-`r mcq(c("Yes, they overlap completely", "Yes, they overlap slightly", answer = "No, they do not overlap", "Can't tell from the plot"))`
+**4. If prior research consistently shows an effect in one direction, which should you use?**
 
-**5. Non-overlapping 95% CIs suggest:**
+`r mcq(c("Two-tailed, because you never know", answer = "One-tailed, because you can cite evidence for the direction", "Either - it's personal preference"))`
 
-`r mcq(c("No difference between groups", answer = "A likely significant difference between groups", "The data is wrong", "We need more participants"))`
+### Write Your Alternative Hypothesis
 
-**6. If two 95% CIs overlap slightly, the difference between groups is:**
+**Two-tailed version:**
 
-`r mcq(c("Definitely significant", "Definitely not significant", answer = "Uncertain - we need a formal test", "Impossible to determine"))`
+H₁: _________________________________________________
+
+**One-tailed version (if appropriate):**
+
+H₁: _________________________________________________
+
+### Justifying Your Choice
+
+**5. Complete this justification template:**
+
+> "I have chosen a [one-tailed / two-tailed] hypothesis because:
+>
+> _________________________________________________________
+>
+> Prior research suggests: __________________________________
+>
+> Therefore: ______________________________________________"
+
+### Example Justifications
+
+**One-tailed (font study):**
+
+> "I have chosen a one-tailed hypothesis predicting better recall in the disfluent font condition because:
+>
+> Prior research by Diemand-Yauman et al. (2011) found that disfluent fonts increased recall scores by 14%.
+>
+> The desirable difficulties framework (Bjork & Bjork, 2011) provides a theoretical mechanism: harder processing leads to deeper encoding.
+>
+> Therefore, I predict recall will be higher in the disfluent condition."
+
+**Two-tailed (font study alternative):**
+
+> "I have chosen a two-tailed hypothesis because:
+>
+> While Diemand-Yauman et al. (2011) found memory benefits, several replication attempts have failed (Rummer et al., 2016).
+>
+> There's also reason to think disfluent fonts could HARM memory by causing frustration or reduced reading time.
+>
+> Therefore, I predict there will be a difference but do not specify direction."
+
+True or False: A one-tailed hypothesis gives you more statistical power to detect an effect in the predicted direction. `r torf(TRUE)`
+
+True or False: If your effect goes in the opposite direction to your one-tailed prediction, you can still claim significance. `r torf(FALSE)`
 
 ---
 
-## Activity 4: Effect Sizes (20 min)
+## Activity 3: Design & Analysis Matching (25 min)
 
-### Beyond Statistical Significance
+### Choosing Your Design
 
-Confidence intervals tell us about precision, but **effect sizes** tell us about the magnitude of differences.
+You need to decide: **between-subjects or within-subjects?**
 
-### Cohen's d
+**1. In a between-subjects design:**
 
-Cohen's d expresses a difference in standard deviation units:
+`r mcq(c(answer = "Different participants are in each condition", "Same participants are in all conditions", "Participants are matched in pairs", "There is no control group"))`
 
-$$d = \frac{\bar{X}_1 - \bar{X}_2}{SD_{pooled}}$$
+**2. In a within-subjects design:**
 
-**1. Cohen's d tells us:**
+`r mcq(c("Different participants are in each condition", answer = "Same participants are in all conditions", "Only between-group variance is analysed", "Randomisation is not needed"))`
 
-`r mcq(c("Whether a result is statistically significant", answer = "How large the difference is in standardised units", "The probability of the null hypothesis", "The sample size needed"))`
+### Evaluating Your Options
 
-**2. According to Cohen's conventions, a d = 0.2 is considered:**
+**3. For YOUR topic, what would a between-subjects design look like?**
 
-`r mcq(c(answer = "Small", "Medium", "Large", "Negligible"))`
+Write it out:
 
-**3. A d = 0.8 would be considered:**
+> "In a between-subjects design:
+>
+> Group A (n = ___): ________________________________________
+>
+> Group B (n = ___): ________________________________________"
 
-`r mcq(c("Small", "Medium", answer = "Large", "Very small"))`
+**4. For YOUR topic, what would a within-subjects design look like?**
 
-**4. If two groups differ by d = 0.5, this means the difference equals:**
+Write it out:
 
-`r mcq(c("0.5 points", "0.5 percent", answer = "Half a standard deviation", "50% of the mean"))`
+> "In a within-subjects design:
+>
+> All participants (n = ___): _________________________________
+>
+> Then: ___________________________________________________"
 
-### Confidence Intervals for Effect Sizes
+### Identifying Trade-offs
 
-Just like means, effect sizes have uncertainty. We can calculate CIs for Cohen's d.
+**5. The main ADVANTAGE of between-subjects is:**
 
-**5. If Cohen's d = 0.6 with 95% CI [0.2, 1.0], what can we conclude?**
+`r mcq(c(answer = "No order effects or practice effects", "More statistical power", "Fewer participants needed", "More ecologically valid"))`
 
-`r mcq(c("The effect is definitely large", "The effect is definitely medium", answer = "The effect is likely real (CI doesn't include 0) but size uncertain", "The effect is not significant"))`
+**6. The main ADVANTAGE of within-subjects is:**
 
-**6. If Cohen's d = 0.3 with 95% CI [-0.1, 0.7], what can we conclude?**
+`r mcq(c("No individual differences", answer = "Controls for individual differences, more power", "Simpler to analyse", "No counterbalancing needed"))`
 
-`r mcq(c("The effect is definitely small", answer = "We cannot rule out zero effect - more data needed", "The effect is large", "The experiment failed"))`
+**7. The main DISADVANTAGE of between-subjects is:**
 
-True or False: Effect sizes help us understand practical significance, not just statistical significance. `r torf(TRUE)`
+`r mcq(c("Order effects", answer = "Individual differences add noise, need more participants", "Too statistically powerful", "Participants get bored"))`
 
-True or False: A statistically significant result always means a large effect size. `r torf(FALSE)`
+**8. The main DISADVANTAGE of within-subjects is:**
+
+`r mcq(c(answer = "Order effects, practice effects, demand characteristics", "Not enough statistical power", "Individual differences", "Can't use t-tests"))`
+
+### Make Your Decision
+
+**9. For your study, which design will you use?**
+
+`r mcq(c("Between-subjects", "Within-subjects", answer = "I need to weigh the specific trade-offs for my topic"))`
+
+**10. Write your justification:**
+
+> "I have chosen a [between-subjects / within-subjects] design because:
+>
+> Advantages for my study: _________________________________
+>
+> How I'll address disadvantages: ___________________________"
+
+### Matching Design to Test
+
+**11. If you use a between-subjects design, you will use:**
+
+`r mcq(c("Paired samples t-test", answer = "Independent samples t-test", "One-sample t-test", "ANOVA"))`
+
+**12. If you use a within-subjects design, you will use:**
+
+`r mcq(c(answer = "Paired samples t-test", "Independent samples t-test", "One-sample t-test", "Chi-square test"))`
+
+**13. WHY does design determine test?**
+
+`r mcq(c("It doesn't - you can use either", "Tradition requires it", answer = "Different designs produce different data structures requiring different analyses", "R only allows one test per design"))`
+
+### Write Your Complete Justification
+
+**Complete this template for your Research Plan:**
+
+> "This study will use a [between-subjects / within-subjects] design because [advantages for your specific study] and [how you'll manage disadvantages].
+>
+> Given this design, the data will consist of [two independent groups / paired scores from the same participants].
+>
+> An [independent samples / paired samples] t-test is therefore appropriate because [explain how the test matches your data structure]."
+
+---
+
+## Activity 4: Method Section Draft (30 min)
+
+### Begin Your Method Section
+
+Use the templates below to draft each subsection. These will form the basis of your Research Plan submission.
+
+### Design Subsection
+
+**Write yours:**
+
+> "This study employs a [between-subjects / within-subjects] experimental design. The independent variable is _____________ with two levels: _____________ and _____________. The dependent variable is _____________ measured by _____________."
+
+### Participants Subsection
+
+**Write yours:**
+
+> "[Number] participants will be recruited from [recruitment source]. Participants will be [randomly assigned to conditions / complete all conditions with counterbalanced order]."
+
+For between-subjects: "Participants will be randomly assigned to either the ______ condition (n = __) or the ______ condition (n = __)."
+
+For within-subjects: "Order of conditions will be counterbalanced, with half of participants completing ______ first and half completing ______ first."
+
+### Materials Subsection
+
+**Write yours:**
+
+> "Materials include: [describe stimuli, measures, and equipment with enough detail to replicate]."
+
+Be specific: What exactly will participants see? What will they respond with? What software/equipment is needed?
+
+### Procedure Subsection
+
+**Write yours:**
+
+> "Participants will be tested [individually / in groups] in [location]. After providing informed consent, [step-by-step description of what happens]. The session will last approximately __ minutes."
+
+Include: Instructions given, timing for each phase, any delays or filler tasks.
+
+---
+
+## Peer Feedback
+
+If time permits, exchange your draft Method with a neighbour.
+
+**Feedback questions:**
+
+1. Could you replicate this study from the description alone?
+2. Are all variables clearly operationalised?
+3. Is the design-to-test justification clear?
+4. What details are missing?
 
 ---
 
@@ -240,30 +407,38 @@ True or False: A statistically significant result always means a large effect si
 ::: {.callout-important}
 ## Key Takeaways
 
-**Point Estimates vs Interval Estimates:**
-- Point estimates give a single value (e.g., sample mean)
-- Interval estimates (CIs) show a range of plausible values
+**Operationalisation:**
+- IV: Specify EXACTLY how conditions differ
+- DV: Specify EXACTLY how you'll measure the outcome
 
-**Bootstrap Confidence Intervals:**
-- Resample with replacement many times
-- Calculate statistic for each resample
-- Use the distribution to estimate uncertainty
+**Hypotheses:**
+- One-tailed: Requires justification from prior research
+- Two-tailed: Safe choice when direction uncertain
 
-**Interpreting 95% CIs:**
-- If we repeated the procedure, 95% of intervals would contain the true value
-- Non-overlapping CIs suggest significant differences
-- Narrower CIs = more precision
+**Design:**
+- Between-subjects → Independent t-test
+- Within-subjects → Paired t-test
+- Choice depends on specific trade-offs for your topic
 
-**Effect Sizes:**
-- Express differences in standardised units
-- Cohen's d: small (0.2), medium (0.5), large (0.8)
-- CIs for effect sizes show uncertainty about magnitude
+**Method Section:**
+- Design: Type, IV with levels, DV with measurement
+- Participants: N, recruitment, assignment
+- Materials: Everything needed to replicate
+- Procedure: Step-by-step what happens
 :::
 
 ---
 
 ## Next Steps
 
-1. Complete the [Week 13 Self-Assessment](self-assessment.qmd)
-2. Review the [Lecture Reading](reading.qmd)
-3. Prepare for Week 14: t-tests in R
+1. Complete your Method section draft before Reading Week
+2. Seek feedback from your tutorial group
+3. Use the [Research Plan template] to structure your submission
+4. Submit by Friday 27 February (Week 16)
+
+::: {.callout-warning}
+## Research Plan Due Date
+**Friday 27 February 2026, 12:00 noon**
+
+Start early. The quality of your operationalisation and justifications will determine your grade.
+:::

@@ -1,0 +1,285 @@
+---
+title: "Reaction Time Analysis"
+subtitle: "The Ruler Catch Test"
+---
+
+::: {.task-header .reflex}
+# Reflex Test
+::: {.task-subtitle}
+Measuring reaction time through the classic ruler catch task
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Memory](memory.qmd)
+[Time Warp](timewarp.qmd)
+[Sixth Sense](sixthsense.qmd)
+[Lady Luck](ladyluck.qmd)
+[Frontal Lob](frontallob.qmd)
+:::
+
+## Introduction
+
+In this task, you caught a falling **30cm ruler** 5 times. The distance you caught it at (in cm) reflects your **reaction time**. Values greater than 30cm indicate a missed catch.
+
+**Physics refresher**: The ruler falls due to gravity. Using the equation:
+
+$$d = \frac{1}{2}gt^2$$
+
+We can convert distance (d) to reaction time (t):
+
+$$t = \sqrt{\frac{2d}{g}}$$
+
+Where g = 980 cm/s²
+
+::: {.key-finding}
+#### Key Finding
+The average reaction time was approximately **175ms**, with clear evidence of a **learning effect** - people got faster with practice!
+:::
+
+## Load the Data
+
+```{webr-r}
+# Reaction time data (N=28) - distance caught in cm (max 30cm)
+# Clear learning effect visible across trials
+
+reflex <- tibble::tribble(
+  ~id, ~t1, ~t2, ~t3, ~t4, ~t5, ~hand,
+  1, 22, 18, 15, 14, 13, "Right",
+  2, 19, 16, 14, 13, 12, "Right",
+  3, 25, 21, 18, 16, 15, "Right",
+  4, 18, 15, 13, 12, 11, "Right",
+  5, 24, 20, 17, 15, 14, "Left",
+  6, 20, 17, 15, 13, 12, "Right",
+  7, 16, 14, 12, 11, 10, "Right",
+  8, 23, 19, 16, 14, 13, "Right",
+  9, 21, 18, 15, 14, 13, "Right",
+  10, 26, 22, 19, 17, 16, "Left",
+  11, 17, 15, 13, 12, 11, "Right",
+  12, 20, 17, 14, 13, 12, "Right",
+  13, 28, 24, 20, 18, 17, "Right",
+  14, 19, 16, 14, 12, 11, "Right",
+  15, 22, 18, 16, 14, 13, "Left",
+  16, 15, 13, 11, 10, 9, "Right",
+  17, 21, 17, 15, 13, 12, "Right",
+  18, 24, 20, 17, 15, 14, "Right",
+  19, 18, 15, 13, 12, 11, "Right",
+  20, 23, 19, 16, 15, 14, "Left",
+  21, 20, 16, 14, 12, 11, "Right",
+  22, 17, 14, 12, 11, 10, "Right",
+  23, 25, 21, 18, 16, 15, "Right",
+  24, 19, 16, 14, 13, 12, "Right",
+  25, 22, 18, 15, 14, 13, "Left",
+  26, 16, 14, 12, 11, 10, "Right",
+  27, 21, 17, 15, 13, 12, "Right",
+  28, 14, 12, 10, 9, 8, "Right"
+)
+
+cat("N =", nrow(reflex), "participants\n")
+cat("Handedness:", sum(reflex$hand == "Right"), "right,", sum(reflex$hand == "Left"), "left\n\n")
+head(reflex)
+```
+
+## Clean the Data
+
+The ruler was 30cm long, so any values > 30cm represent missed catches. Let's clean these:
+
+```{webr-r}
+# Cap any values > 30 at 30 (or set to NA for missed catches)
+reflex <- reflex |>
+  mutate(across(starts_with("t"), ~ if_else(.x > 30, NA_real_, .x)))
+
+# Check for any cleaned values
+cat("Rows with missing values after cleaning:",
+    sum(!complete.cases(reflex)), "\n")
+```
+
+## Convert to Long Format
+
+For analysis, we need the data in "long" format (one row per trial):
+
+```{webr-r}
+reflex_long <- reflex |>
+  pivot_longer(
+    cols = starts_with("t"),
+    names_to = "trial",
+    values_to = "distance_cm"
+  ) |>
+  mutate(trial = as.numeric(str_extract(trial, "\\d+")))
+
+head(reflex_long)
+```
+
+## Calculate Reaction Time
+
+Let's convert distance to reaction time in milliseconds:
+
+```{webr-r}
+# Add reaction time calculation
+reflex_long <- reflex_long |>
+  mutate(
+    # RT in seconds = sqrt(2 * distance_cm / 980)
+    rt_seconds = sqrt(2 * distance_cm / 980),
+    # Convert to milliseconds
+    rt_ms = rt_seconds * 1000
+  )
+
+# Summary by trial
+reflex_long |>
+  group_by(trial) |>
+  summarise(
+    mean_distance = mean(distance_cm),
+    mean_rt_ms = mean(rt_ms),
+    sd_rt_ms = sd(rt_ms)
+  )
+```
+
+## Visualise Performance
+
+```{webr-r}
+ggplot(reflex_long, aes(x = factor(trial), y = distance_cm)) +
+  geom_boxplot(fill = "#e74c3c", alpha = 0.7, outlier.shape = NA) +
+  geom_jitter(width = 0.1, alpha = 0.6, size = 2, color = "#275882") +
+  labs(
+    x = "Trial",
+    y = "Distance Caught (cm)",
+    title = "Reaction Time Performance",
+    subtitle = "Lower distance = Faster reactions"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+## Learning Effect
+
+Do people get faster with practice?
+
+```{webr-r}
+# Calculate means per trial
+trial_means <- reflex_long |>
+  group_by(trial) |>
+  summarise(
+    mean_dist = mean(distance_cm),
+    se = sd(distance_cm) / sqrt(n())
+  )
+
+ggplot(trial_means, aes(x = trial, y = mean_dist)) +
+  geom_line(color = "#e74c3c", linewidth = 1.5) +
+  geom_point(color = "#e74c3c", size = 4) +
+  geom_ribbon(aes(ymin = mean_dist - se, ymax = mean_dist + se),
+              alpha = 0.2, fill = "#e74c3c") +
+  geom_errorbar(
+    aes(ymin = mean_dist - se, ymax = mean_dist + se),
+    width = 0.2, color = "#e74c3c"
+  ) +
+  labs(
+    x = "Trial",
+    y = "Mean Distance (cm)",
+    title = "Learning Curve",
+    subtitle = "Does performance improve with practice?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+::: {.callout-tip collapse="true"}
+## What Does This Show?
+
+The **downward trend** indicates a **learning effect**:
+
+- **Trial 1**: Participants are warming up, getting used to the task
+- **Trials 2-3**: Rapid improvement as they learn the timing
+- **Trials 4-5**: Performance plateaus near their optimal reaction time
+
+This demonstrates **motor learning** and the importance of practice effects in experimental design.
+:::
+
+## Statistical Test: Learning Effect
+
+Is there a significant improvement from Trial 1 to Trial 5?
+
+```{webr-r}
+# Paired t-test: Trial 1 vs Trial 5
+trial1 <- reflex |> pull(t1)
+trial5 <- reflex |> pull(t5)
+
+t.test(trial1, trial5, paired = TRUE)
+```
+
+## Individual Differences
+
+Let's look at each participant's trajectory:
+
+```{webr-r}
+ggplot(reflex_long, aes(x = trial, y = distance_cm,
+                         color = id, group = id)) +
+  geom_line(linewidth = 1, alpha = 0.7) +
+  geom_point(size = 2) +
+  scale_color_viridis_d(option = "plasma") +
+  labs(
+    x = "Trial",
+    y = "Distance (cm)",
+    title = "Individual Learning Curves",
+    color = "Participant"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    legend.position = "right"
+  )
+```
+
+## Your Turn!
+
+Try these challenges:
+
+1. **Calculate your personal best** reaction time in milliseconds
+2. **Compare hands** - Do left-handers and right-handers differ?
+3. **Calculate improvement** - What's the average % improvement from trial 1 to 5?
+
+```{webr-r}
+# Your code here!
+# Hint: Use group_by() and mutate() to calculate improvement
+
+
+```
+
+## Bonus: Reaction Time Distribution
+
+What's the distribution of reaction times (in ms)?
+
+```{webr-r}
+ggplot(reflex_long, aes(x = rt_ms)) +
+  geom_histogram(binwidth = 10, fill = "#3498db", color = "white") +
+  geom_vline(xintercept = mean(reflex_long$rt_ms),
+             linetype = "dashed", color = "#e74c3c", linewidth = 1) +
+  annotate("text", x = mean(reflex_long$rt_ms) + 5, y = 8,
+           label = paste0("Mean: ", round(mean(reflex_long$rt_ms)), "ms"),
+           hjust = 0, color = "#e74c3c", fontface = "bold") +
+  labs(
+    x = "Reaction Time (ms)",
+    y = "Count",
+    title = "Reaction Time Distribution"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+**Typical human reaction time**: 150-300 ms for visual stimuli
+
+---
+
+::: {.key-finding}
+#### Summary
+
+Participants showed a clear **learning effect** over 5 trials, with reaction times improving significantly from Trial 1 to Trial 5. The average reaction time (~175ms) is within the expected range for visual-motor tasks.
+:::

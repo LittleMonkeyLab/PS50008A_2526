@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap Confidence Intervals in R"
+title: "Research Plan Workshop"
 subtitle: "PS50008A Week 13 | Lab Walkthrough"
 author: "Gordon Wright"
 date: "2026-01-30"
@@ -17,172 +17,290 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## Bootstrap Confidence Intervals in R
+## Research Plan Workshop
 
 ---
 
 ## Today's Focus
 
 ::: {.objectives-box}
-**Building on Wednesday's lecture.** Today you will:
+**Building on Wednesday's lecture.** Today students will:
 
-- Calculate bootstrap confidence intervals using R
-- Visualise sampling distributions
-- Interpret CIs for means and mean differences
-- Compute and interpret Cohen's d
+- Operationalise their IV and DV for their chosen topic
+- Write and justify hypotheses (one-tailed vs two-tailed)
+- Decide on experimental design (between vs within)
+- Match design to appropriate statistical test
+- Begin drafting their Method section
 :::
 
 ---
 
-## Lab Structure (~90 min)
+## Lab Structure (~120 min)
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:10 | These slides + setup |
-| 10:10-10:30 | Part 1: Bootstrap basics |
-| 10:30-11:00 | Part 2: CIs for single means |
-| 11:00-11:30 | Part 3: CIs for mean differences |
-| 11:30-11:50 | Part 4: Effect sizes (Cohen's d) |
-| 11:50-12:00 | Wrap-up + self-assessment |
+| 10:00-10:10 | These slides + overview |
+| 10:10-10:40 | Activity 1: Operationalisation Workshop |
+| 10:40-11:05 | Activity 2: Hypothesis Writing |
+| 11:05-11:15 | BREAK |
+| 11:15-11:40 | Activity 3: Design & Analysis Matching |
+| 11:40-12:00 | Activity 4: Method Section Draft |
 
 ---
 
-## Open the Activity
+## Key Differences from Previous Labs
 
-Navigate to: **Week 13 > Lab > Activity**
+::: {.callout-important}
+## Workshop Format
+Today is NOT a WebR coding lab. It's a structured **writing workshop**.
 
-Make sure WebR loads before proceeding.
+Students should have:
+
+- Paper/document for writing drafts
+- Access to the lab activity page for MCQs
+- Their lecture notes from Wednesday
+:::
 
 ---
 
-# Part 1: Bootstrap Basics {background-color="#275882"}
+# Activity 1: Operationalisation {background-color="#275882"}
 
-## Understanding Resampling (~20 min)
+## 30 minutes
 
 ---
 
-## Key Points to Emphasise
+## The Three Topics
+
+Remind students of the Research Plan topics:
+
+1. **Font difficulty → Memory**
+   - Does harder-to-read text improve retention?
+
+2. **Hydration → Cognitive performance**
+   - Does drinking water improve thinking?
+
+3. **Eye contact → Perceived trustworthiness**
+   - Does eye contact affect trust perceptions?
+
+---
+
+## Guide the IV Discussion
 
 ::: {.definition-box}
-**Bootstrap = Resampling with Replacement**
+**Key question**: How EXACTLY will the conditions differ?
+:::
 
-- Take your original sample
-- Randomly sample from it (WITH replacement)
-- Calculate the statistic (e.g., mean)
-- Repeat thousands of times
-- The distribution of statistics = bootstrap distribution
+**Font study**: What fonts? What sizes? What colours?
+
+**Hydration study**: How much water? What's the control?
+
+**Eye contact study**: Photos or videos? What angle of gaze?
+
+---
+
+## Common Student Errors
+
+Watch for these issues in IV operationalisation:
+
+::: {.incremental}
+- **Too vague**: "One group saw hard font, one saw easy font"
+- **Multiple differences**: Font AND size AND colour all change
+- **No control details**: Only describing experimental condition
+- **Unmeasurable**: "Participants felt more stressed"
 :::
 
 ---
 
-## Why Bootstrap?
-
-Students should understand:
-
-1. We only have ONE sample
-2. We want to know how much our estimate could vary
-3. Bootstrap simulates what would happen if we repeated the study
-4. The spread of bootstrap estimates shows our uncertainty
-
----
-
-# Part 2: CIs for Single Means {background-color="#275882"}
-
-## Confidence Intervals in Practice (~30 min)
-
----
-
-## The 95% CI
+## Guide the DV Discussion
 
 ::: {.definition-box}
-**95% CI**: The middle 95% of bootstrap estimates
-
-- Find the 2.5th and 97.5th percentiles
-- This range captures our uncertainty
-- Narrower CI = more precision
+**Key question**: How EXACTLY will you measure the outcome?
 :::
+
+Students need to specify:
+
+- The task/measure used
+- The scoring method
+- The possible range of scores
 
 ---
 
-## Common Misconception
-
-::: {.callout-warning}
-## Wrong Interpretation
-"There is a 95% probability that the true mean is in this interval"
-
-## Correct Interpretation
-"If we repeated this study many times, 95% of the resulting CIs would contain the true population mean"
-:::
-
----
-
-## Check Understanding
+## Check: The Replicability Test
 
 Ask students:
 
-- What makes a CI wider? (smaller n, more variability)
-- What makes a CI narrower? (larger n, less variability)
-- Does the CI tell us about individual scores? (No - it's about the mean)
+> "Could a stranger run your study EXACTLY from your description?"
+
+If the answer is "maybe" or "no" — more detail is needed.
 
 ---
 
-# Part 3: CIs for Mean Differences {background-color="#275882"}
+# Activity 2: Hypothesis Writing {background-color="#275882"}
 
-## Comparing Groups (~30 min)
+## 25 minutes
 
 ---
 
-## The Critical Question
+## Key Teaching Points
 
 ::: {.definition-box}
-**Does the CI for the difference include zero?**
-
-- CI includes 0: Difference is NOT statistically significant
-- CI excludes 0: Difference IS statistically significant
+**One-tailed vs Two-tailed**: Not about preference, but about evidence
 :::
 
-This links directly to next week's t-tests.
+Students must understand:
+
+- One-tailed = strong prior evidence for direction
+- Two-tailed = uncertainty about direction
+- Choice must be JUSTIFIED with citations
 
 ---
 
-## DataLab Example
+## Facilitation Questions
 
-Students will calculate CIs for:
+Ask groups:
 
-- Lab A vs Lab B memory scores (between-subjects)
-- Pre vs Post mood (within-subjects)
-
-Watch for students confusing the two designs.
-
----
-
-# Part 4: Effect Sizes {background-color="#275882"}
-
-## Cohen's d (~20 min)
+1. "What does prior research say about your topic?"
+2. "Is there strong evidence for a specific direction?"
+3. "What would you conclude if the effect went the OTHER way?"
 
 ---
 
-## Effect Size Formula
+## Watch for These Misconceptions
+
+::: {.incremental}
+- "One-tailed is better because it's more powerful"
+- "Two-tailed is always safer"
+- "I can decide after seeing my data"
+- "It doesn't really matter"
+:::
+
+All of these are problematic! Discuss why.
+
+---
+
+## Example Justifications to Share
+
+**One-tailed (appropriate)**:
+
+> "Diemand-Yauman et al. (2011) found disfluent fonts improved recall, and this has been replicated. I predict disfluent > fluent."
+
+**Two-tailed (appropriate)**:
+
+> "Replication attempts have been mixed. I predict a difference but won't specify direction."
+
+---
+
+# BREAK {background-color="#EA8439"}
+
+## 10 minutes
+
+---
+
+# Activity 3: Design Matching {background-color="#275882"}
+
+## 25 minutes
+
+---
+
+## The Critical Link
 
 ::: {.definition-box}
-**Cohen's d** = (M1 - M2) / pooled SD
+**Design → Data Structure → Statistical Test**
 
-**Benchmarks:**
+This chain of logic is REQUIRED in the Research Plan.
+:::
 
-- Small: d = 0.2
-- Medium: d = 0.5
-- Large: d = 0.8
+Students must explain WHY their design leads to their test choice.
+
+---
+
+## Work Through Each Topic
+
+For each topic, have students articulate:
+
+| Topic | Between-Subjects | Within-Subjects |
+|-------|-----------------|-----------------|
+| Font | Group A: fluent; Group B: disfluent | Same people read BOTH |
+| Hydration | Group A: water; Group B: no water | Same person tested twice |
+| Eye contact | Different photos for different people | Same person rates BOTH gaze types |
+
+---
+
+## Design Trade-offs Discussion
+
+| Design | Pro | Con |
+|--------|-----|-----|
+| **Between** | No order effects | Individual differences |
+| **Within** | Controls individual differences | Order effects |
+
+---
+
+## The Test Selection Rule
+
+::: {.definition-box}
+**Between-subjects** → Independent samples t-test
+
+- Two separate groups
+- Scores are unrelated
+
+**Within-subjects** → Paired samples t-test
+
+- Same people twice
+- Scores are paired
 :::
 
 ---
 
-## Why Report Effect Sizes?
+## Common Error
 
-Key points:
+::: {.callout-warning}
+## Watch for this mistake
+Students stating the test WITHOUT justifying why.
 
-1. **p-values depend on sample size** - large n = small p
-2. **Effect sizes are standardised** - comparable across studies
-3. **Practical importance** - a significant p doesn't mean a big effect
+**Wrong**: "I will use an independent t-test."
+
+**Right**: "Because different participants are in each condition, the data will consist of two independent groups. An independent samples t-test is therefore appropriate."
+:::
+
+---
+
+# Activity 4: Method Draft {background-color="#275882"}
+
+## 20 minutes
+
+---
+
+## Method Section Structure
+
+Students should draft these subsections:
+
+1. **Design**: Type, IV with levels, DV with measurement
+2. **Participants**: N, recruitment, assignment
+3. **Materials**: Stimuli, measures, equipment
+4. **Procedure**: Step-by-step what happens
+
+---
+
+## Circulate and Provide Feedback
+
+As students write, check for:
+
+::: {.incremental}
+- Sufficient operationalisation detail
+- Clear design-to-test justification
+- Replicable procedure description
+- Appropriate sample size (typically n = 30 per group)
+:::
+
+---
+
+## Peer Feedback (if time permits)
+
+Have students swap drafts and answer:
+
+1. Could you replicate this study?
+2. What details are missing?
+3. Is the design-test link clear?
 
 ---
 
@@ -190,33 +308,34 @@ Key points:
 
 ---
 
-## Key Takeaways
+## Key Messages for Students
 
 ::: {.callout-important}
-## Today We Learned
+## Before they leave, emphasise:
 
-1. **Bootstrap CIs** quantify uncertainty in our estimates
-2. **95% CI** = middle 95% of bootstrap distribution
-3. **CI excludes zero** = statistically significant difference
-4. **Cohen's d** measures effect size independently of sample size
+1. **Reading Week** = Time to write the Research Plan draft
+2. **Operationalisation** = The foundation of a good plan
+3. **Justification** = Required for hypotheses AND test choice
+4. **Due date** = Friday 27 February, Week 16
 :::
 
 ---
 
-## Next Steps
+## Next Week
 
-Direct students to:
+**Week 14: Is Your Effect Real?**
 
-1. Complete the **Week 13 Self-Assessment Quiz**
-2. Review the **Lab Reading** on bootstrap methods
-3. Prepare for **Week 14: t-tests** - we'll test significance formally
+- NHST logic and p-values
+- Confidence intervals and effect sizes
+- t-tests in practice
+- Complete inferential toolkit
 
 ---
 
 # Questions? {background-color="#275882"}
 
-## Then let's begin the activity!
+## Then let's begin the workshop!
 
 ::: {.notes}
-Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
+This is a workshop lab, not a coding lab. Move around the room, check student work, and provide formative feedback on their operationalisations and justifications. The goal is that every student leaves with a solid draft of their Research Plan Method section.
 :::

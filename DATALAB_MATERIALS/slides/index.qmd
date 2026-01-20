@@ -1,0 +1,461 @@
+---
+title: "Foundations Datalab"
+subtitle: "Your Data, Your Results"
+author: "PS50008A Research Methods"
+date: today
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    preview-links: auto
+    transition: slide
+    code-fold: true
+    code-tools: true
+    fig-align: center
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(knitr)
+
+# Load all datasets (already cleaned by Python pipeline)
+demog <- read_csv("../data/processed/demog_clean.csv", show_col_types = FALSE)
+memory <- read_csv("../data/processed/memory_clean.csv", show_col_types = FALSE)
+reflex <- read_csv("../data/processed/task1_reflex_clean.csv", show_col_types = FALSE)
+timewarp <- read_csv("../data/processed/task2_timewarp_clean.csv", show_col_types = FALSE)
+sixthsense <- read_csv("../data/processed/task3_sixthsense_clean.csv", show_col_types = FALSE)
+ladyluck <- read_csv("../data/processed/task4_ladyluck_clean.csv", show_col_types = FALSE)
+frontallob <- read_csv("../data/processed/task5_frontallob_clean.csv", show_col_types = FALSE)
+post <- read_csv("../data/processed/post_clean.csv", show_col_types = FALSE)
+```
+
+# Welcome! {background-color="#2c3e50"}
+
+## What We Did
+
+You participated in **6 classic psychology tasks**:
+
+1. **Memory Test** - Word recall and serial position
+2. **Reflex Test** - Ruler catch reaction time
+3. **Time Warp** - Time and length estimation
+4. **Sixth Sense** - Can you detect being stared at?
+5. **Lady Luck** - Random number generation
+6. **Frontal Lob** - Motor control and handedness
+
+## Our Sample
+
+```{r}
+#| label: sample-overview
+#| fig-height: 4
+demog |>
+  ggplot(aes(x = factor(lab_room, labels = c("Lab A", "Lab B")))) +
+  geom_bar(fill = "#3498db", width = 0.6) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 6) +
+  labs(x = NULL, y = "Count", title = "Participants by Lab") +
+  theme_minimal(base_size = 18) +
+  ylim(0, 15)
+```
+
+**N = `r nrow(demog)`** participants completed demographics
+
+## Who Are You?
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
+#| label: age-dist
+#| fig-height: 5
+demog |>
+  filter(!is.na(age)) |>
+  ggplot(aes(x = age)) +
+  geom_histogram(binwidth = 2, fill = "#9b59b6", color = "white") +
+  labs(x = "Age", y = "Count", title = "Age Distribution") +
+  theme_minimal(base_size = 16)
+```
+:::
+::: {.column width="50%"}
+```{r}
+#| label: gender-dist
+#| fig-height: 5
+demog |>
+  filter(!is.na(gender)) |>
+  mutate(gender = factor(gender, labels = c("Male", "Female"))) |>
+  ggplot(aes(x = gender)) +
+  geom_bar(fill = "#e74c3c", width = 0.6) +
+  labs(x = NULL, y = "Count", title = "Gender") +
+  theme_minimal(base_size = 16)
+```
+:::
+::::
+
+# Memory Task {background-color="#27ae60"}
+
+## The Serial Position Effect
+
+You saw **10 words** and tried to recall them in order.
+
+**Classic finding**: We remember the first words (primacy) and last words (recency) better than the middle.
+
+## Your Results: Words Recalled
+
+```{r}
+#| label: memory-total
+#| fig-height: 5
+memory |>
+  ggplot(aes(x = mem_total)) +
+  geom_histogram(binwidth = 1, fill = "#27ae60", color = "white") +
+  geom_vline(xintercept = mean(memory$mem_total, na.rm = TRUE),
+             linetype = "dashed", color = "red", linewidth = 1.5) +
+  annotate("text", x = mean(memory$mem_total, na.rm = TRUE) + 0.5, y = 4,
+           label = paste("Mean =", round(mean(memory$mem_total, na.rm = TRUE), 1)),
+           hjust = 0, size = 5, color = "red") +
+  labs(x = "Words Correctly Recalled (out of 10)", y = "Count",
+       title = "Memory Performance") +
+  scale_x_continuous(breaks = 0:10) +
+  theme_minimal(base_size = 18)
+```
+
+## Serial Position Curve
+
+```{r}
+#| label: serial-position
+#| fig-height: 5
+# Calculate accuracy at each position (1 = correct, 0 = incorrect)
+position_data <- memory |>
+  select(participant_id, pos1:pos10) |>
+  pivot_longer(cols = pos1:pos10,
+               names_to = "position",
+               values_to = "correct") |>
+  mutate(position = as.numeric(str_extract(position, "\\d+"))) |>
+  group_by(position) |>
+  summarise(prop_correct = mean(correct, na.rm = TRUE),
+            se = sd(correct, na.rm = TRUE) / sqrt(n()))
+
+position_data |>
+  ggplot(aes(x = position, y = prop_correct)) +
+  geom_line(color = "#27ae60", linewidth = 1.5) +
+  geom_point(color = "#27ae60", size = 4) +
+  geom_errorbar(aes(ymin = prop_correct - se, ymax = prop_correct + se),
+                width = 0.2, color = "#27ae60") +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(x = "Word Position", y = "Proportion Correct Position",
+       title = "Serial Position Effect",
+       subtitle = "Do you see primacy and recency?") +
+  theme_minimal(base_size = 18)
+```
+
+# Reaction Time {background-color="#e74c3c"}
+
+## The Ruler Catch Test
+
+You caught a falling ruler **5 times**.
+
+The distance caught (in cm) reflects your **reaction time** - shorter distance = faster reactions!
+
+## Your Reaction Times
+
+```{r}
+#| label: reflex-trials
+#| fig-height: 5
+reflex_long <- reflex |>
+  select(participant_id, trial1_cm:trial5_cm) |>
+  pivot_longer(cols = trial1_cm:trial5_cm,
+               names_to = "trial",
+               values_to = "distance_cm") |>
+  filter(!is.na(distance_cm) & distance_cm > 0) |>
+  mutate(trial = as.numeric(str_extract(trial, "\\d+")))
+
+reflex_long |>
+  ggplot(aes(x = factor(trial), y = distance_cm)) +
+  geom_boxplot(fill = "#e74c3c", alpha = 0.7) +
+  geom_jitter(width = 0.1, alpha = 0.5, size = 2) +
+  labs(x = "Trial", y = "Distance Caught (cm)",
+       title = "Reaction Time Across Trials",
+       subtitle = "Lower = Faster reactions") +
+  theme_minimal(base_size = 18)
+```
+
+## Do You Get Better With Practice?
+
+```{r}
+#| label: reflex-learning
+#| fig-height: 5
+reflex_means <- reflex_long |>
+  group_by(trial) |>
+  summarise(mean_dist = mean(distance_cm, na.rm = TRUE),
+            se = sd(distance_cm, na.rm = TRUE) / sqrt(n()))
+
+reflex_means |>
+  ggplot(aes(x = trial, y = mean_dist)) +
+  geom_line(color = "#e74c3c", linewidth = 1.5) +
+  geom_point(color = "#e74c3c", size = 4) +
+  geom_errorbar(aes(ymin = mean_dist - se, ymax = mean_dist + se),
+                width = 0.2, color = "#e74c3c") +
+  labs(x = "Trial", y = "Mean Distance (cm)",
+       title = "Learning Effect?",
+       subtitle = "Does reaction time improve with practice?") +
+  theme_minimal(base_size = 18)
+```
+
+# Time Estimation {background-color="#f39c12"}
+
+## Can You Estimate 60 Seconds?
+
+Without counting, you estimated when **60 seconds** had passed.
+
+```{r}
+#| label: time-estimate
+#| fig-height: 5
+timewarp |>
+  filter(!is.na(time_estimate_sec)) |>
+  mutate(time_estimate_sec = as.numeric(time_estimate_sec)) |>
+  filter(!is.na(time_estimate_sec) & time_estimate_sec < 120) |>
+  ggplot(aes(x = time_estimate_sec)) +
+  geom_histogram(binwidth = 5, fill = "#f39c12", color = "white") +
+  geom_vline(xintercept = 60, linetype = "dashed", color = "blue", linewidth = 1.5) +
+  annotate("text", x = 62, y = 3, label = "Target: 60s", hjust = 0,
+           color = "blue", size = 5) +
+  labs(x = "Your Estimate (seconds)", y = "Count",
+       title = "Time Estimation",
+       subtitle = "How close were you to 60 seconds?") +
+  theme_minimal(base_size = 18)
+```
+
+# Sixth Sense {background-color="#9b59b6"}
+
+## Can You Feel Being Stared At?
+
+You completed **6 trials** where someone either stared at you or looked away.
+
+You guessed whether you were being stared at and rated your confidence.
+
+## Detection Accuracy
+
+```{r}
+#| label: stare-accuracy
+#| fig-height: 5
+# Calculate accuracy for each participant
+stare_data <- sixthsense |>
+  select(participant_id, contains("actual"), contains("guess")) |>
+  pivot_longer(cols = -participant_id,
+               names_to = c("trial", ".value"),
+               names_pattern = "t(\\d+)_(.+)") |>
+  mutate(correct = actual == guess)
+
+accuracy_summary <- stare_data |>
+  group_by(participant_id) |>
+  summarise(accuracy = mean(correct, na.rm = TRUE))
+
+accuracy_summary |>
+  ggplot(aes(x = accuracy)) +
+  geom_histogram(binwidth = 1/6, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 0.5, linetype = "dashed", color = "red", linewidth = 1.5) +
+  annotate("text", x = 0.52, y = 3, label = "Chance (50%)", hjust = 0,
+           color = "red", size = 5) +
+  scale_x_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(x = "Accuracy", y = "Count",
+       title = "Sixth Sense: Detection Accuracy",
+       subtitle = "Can you do better than chance?") +
+  theme_minimal(base_size = 18)
+```
+
+## Group Performance
+
+```{r}
+#| label: stare-group
+overall_acc <- mean(stare_data$correct, na.rm = TRUE)
+```
+
+**Overall accuracy: `r scales::percent(overall_acc, accuracy = 0.1)`**
+
+```{r}
+#| label: stare-test
+# One-sample t-test against chance
+t_result <- t.test(accuracy_summary$accuracy, mu = 0.5)
+```
+
+Statistical test against chance (50%):
+
+- **t(`r t_result$parameter`)** = `r round(t_result$statistic, 2)`
+- **p** = `r round(t_result$p.value, 3)`
+
+::: {.fragment}
+**Conclusion**: `r if(t_result$p.value < 0.05) "We performed significantly different from chance!" else "We performed at chance level - no sixth sense detected!"`
+:::
+
+# Lady Luck {background-color="#1abc9c"}
+
+## Random Number Generation
+
+You generated **20 random numbers** between 1-10.
+
+Humans are notoriously **bad** at being random - we avoid repetitions and prefer certain numbers.
+
+## Number Frequency
+
+```{r}
+#| label: random-numbers
+#| fig-height: 5
+rand_data <- ladyluck |>
+  select(participant_id, rand1:rand10) |>
+  pivot_longer(cols = -participant_id,
+               names_to = "position",
+               values_to = "number") |>
+  filter(!is.na(number) & number >= 1 & number <= 10)
+
+rand_data |>
+  ggplot(aes(x = factor(number))) +
+  geom_bar(fill = "#1abc9c") +
+  geom_hline(yintercept = nrow(rand_data) / 10, linetype = "dashed",
+             color = "red", linewidth = 1) +
+  annotate("text", x = 10, y = nrow(rand_data) / 10 + 2,
+           label = "Expected if truly random", hjust = 1, color = "red", size = 4) +
+  labs(x = "Number", y = "Frequency",
+       title = "Which Numbers Did You Generate?",
+       subtitle = "If truly random, each number should appear equally often") +
+  theme_minimal(base_size = 18)
+```
+
+## Avoiding Repetitions?
+
+```{r}
+#| label: repetitions
+#| fig-height: 4
+# Check for consecutive repetitions
+check_reps <- ladyluck |>
+  select(participant_id, rand1:rand10) |>
+  pivot_longer(cols = -participant_id, names_to = "pos", values_to = "num") |>
+  group_by(participant_id) |>
+  arrange(participant_id, pos) |>
+  mutate(repetition = num == lag(num)) |>
+  summarise(n_reps = sum(repetition, na.rm = TRUE))
+
+mean_reps <- mean(check_reps$n_reps)
+expected_reps <- 9 * 0.1  # 9 opportunities, 10% chance each
+
+tibble(
+  Type = c("Your Data", "Expected (Random)"),
+  Repetitions = c(mean_reps, expected_reps)
+) |>
+  ggplot(aes(x = Type, y = Repetitions, fill = Type)) +
+  geom_col(width = 0.5) +
+  scale_fill_manual(values = c("#e74c3c", "#1abc9c")) +
+  labs(y = "Mean Consecutive Repetitions", x = NULL,
+       title = "Do Humans Avoid Repetitions?") +
+  theme_minimal(base_size = 18) +
+  theme(legend.position = "none")
+```
+
+# Motor Control {background-color="#3498db"}
+
+## Dominant vs Non-Dominant Hand
+
+You threw balls at a target with **both hands**.
+
+How much does handedness matter?
+
+## Throwing Accuracy
+
+```{r}
+#| label: throwing
+#| fig-height: 5
+throw_data <- frontallob |>
+  select(participant_id, dom_success, nondom_success) |>
+  mutate(dom_pct = dom_success / 10 * 100,
+         nondom_pct = nondom_success / 5 * 100) |>
+  pivot_longer(cols = c(dom_pct, nondom_pct),
+               names_to = "hand",
+               values_to = "accuracy") |>
+  mutate(hand = factor(hand, levels = c("dom_pct", "nondom_pct"),
+                       labels = c("Dominant", "Non-Dominant")))
+
+throw_data |>
+  ggplot(aes(x = hand, y = accuracy, fill = hand)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_jitter(width = 0.1, alpha = 0.5, size = 2) +
+  scale_fill_manual(values = c("#3498db", "#e67e22")) +
+  labs(x = NULL, y = "Accuracy (%)",
+       title = "Throwing Accuracy by Hand",
+       subtitle = "Dominant hand advantage?") +
+  theme_minimal(base_size = 18) +
+  theme(legend.position = "none")
+```
+
+# Wrap Up {background-color="#2c3e50"}
+
+## What Did You Enjoy?
+
+```{r}
+#| label: enjoyment
+#| fig-height: 5
+post |>
+  filter(!is.na(fav_task)) |>
+  count(fav_task) |>
+  ggplot(aes(x = reorder(fav_task, n), y = n)) +
+  geom_col(fill = "#27ae60") +
+  coord_flip() +
+  labs(x = NULL, y = "Votes",
+       title = "Favourite Task") +
+  theme_minimal(base_size = 18)
+```
+
+## Pre vs Post Mood
+
+```{r}
+#| label: mood-change
+#| fig-height: 4
+# Merge pre and post mood
+mood_data <- demog |>
+  select(participant_id, mood_pre, energy_pre, stress_pre) |>
+  inner_join(
+    post |> select(participant_id, mood_post, energy_post, stress_post),
+    by = "participant_id"
+  ) |>
+  pivot_longer(cols = -participant_id,
+               names_to = c("measure", "time"),
+               names_pattern = "(mood|energy|stress)_(pre|post)") |>
+  mutate(time = factor(time, levels = c("pre", "post")))
+
+mood_data |>
+  group_by(measure, time) |>
+  summarise(mean_val = mean(value, na.rm = TRUE),
+            se = sd(value, na.rm = TRUE) / sqrt(n())) |>
+  ggplot(aes(x = time, y = mean_val, fill = time)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = mean_val - se, ymax = mean_val + se), width = 0.2) +
+  facet_wrap(~measure) +
+  scale_fill_manual(values = c("#95a5a6", "#3498db")) +
+  labs(x = NULL, y = "Rating (1-10)", title = "Before vs After the Session") +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "none")
+```
+
+## Now It's Your Turn!
+
+Explore the data yourself using the **interactive WebR pages**:
+
+- Run the code
+- Modify analyses
+- Ask new questions
+
+::: {.callout-tip}
+## Key Skills
+- Data wrangling with `dplyr`
+- Visualization with `ggplot2`
+- Statistical testing with t-tests
+:::
+
+# Questions? {background-color="#2c3e50"}
+
+## Thank You!
+
+Data and code available in the course materials.
+
+**Happy Analysing!**

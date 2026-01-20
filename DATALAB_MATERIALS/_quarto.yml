@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "DataLab Results | PS50008A"
+  # favicon: images/favicon.png  # Add favicon when available
+
+  navbar:
+    # logo: images/datalab-logo.png  # Add logo when available
+    background: "#275882"
+    foreground: light
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Results
+        menu:
+          - text: "---"
+          - text: "About You"
+          - text: "Personality & Demographics"
+            href: pages/personality.qmd
+          - text: "Mood Changes (Pre/Post)"
+            href: pages/mood.qmd
+          - text: "---"
+          - text: "Task Results"
+          - text: "Memory (Mind Palace)"
+            href: pages/memory.qmd
+          - text: "Reflex Test"
+            href: pages/reflex.qmd
+          - text: "Time Warp"
+            href: pages/timewarp.qmd
+          - text: "Sixth Sense"
+            href: pages/sixthsense.qmd
+          - text: "Lady Luck"
+            href: pages/ladyluck.qmd
+          - text: "Frontal Lob"
+            href: pages/frontallob.qmd
+      - text: Lab Activity
+        href: lab/index.qmd
+      - text: Slides
+        menu:
+          - text: "Lecture Slides"
+            href: slides/lecture.qmd
+          - text: "Results Summary"
+            href: slides/index.qmd
+
+  page-footer:
+    background: "#275882"
+    foreground: light
+    left: |
+      DataLab Results | PS50008A Foundations of Research
+    right: |
+      Built with [Quarto](https://quarto.org) & [WebR](https://webr.r-wasm.org/)
+
+format:
+  html:
+    theme: [cosmo, assets/datalab-theme.scss]
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    link-external-newwindow: true
+
+engine: knitr
+
+webr:
+  packages: ['tidyverse', 'knitr', 'scales']
+
+filters:
+  - webr

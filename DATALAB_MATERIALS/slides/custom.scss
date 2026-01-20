@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+$presentation-heading-color: #2c3e50;
+$link-color: #3498db;
+
+/*-- scss:rules --*/
+
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+}
+
+.reveal .slide-background-content {
+  background-size: cover;
+}
+
+.reveal pre {
+  font-size: 0.7em;
+}
+
+.reveal .callout {
+  font-size: 0.8em;
+}

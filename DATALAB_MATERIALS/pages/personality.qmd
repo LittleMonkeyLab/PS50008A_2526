@@ -1,0 +1,292 @@
+---
+title: "Personality & Demographics"
+subtitle: "Who Are You?"
+---
+
+::: {.task-header .personality}
+# Who Are You?
+::: {.task-subtitle}
+Exploring personality traits, sleep patterns, and lifestyle factors
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Mood Changes](mood.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+:::
+
+## Introduction
+
+Before the DataLab tasks, you completed a brief survey about:
+
+- **Demographics**: Age, gender, handedness
+- **Lifestyle**: Sleep, caffeine, exercise, screen time
+- **Pre-task state**: Mood, energy, stress levels
+- **Personality**: The Ten-Item Personality Inventory (TIPI)
+
+::: {.key-finding}
+#### Key Finding
+Participants showed typical variation in Big Five personality traits, with **Agreeableness** and **Conscientiousness** scoring highest on average. Sleep quality was positively correlated with pre-task mood.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Demographics and personality data (N=28)
+demog <- tibble::tribble(
+  ~id, ~lab, ~sleep_hours, ~sleep_quality, ~caffeine, ~exercise, ~screen_hrs,
+  ~mood_pre, ~energy_pre, ~stress_pre,
+  ~tipi_1, ~tipi_2, ~tipi_3, ~tipi_4, ~tipi_5, ~tipi_6, ~tipi_7, ~tipi_8, ~tipi_9, ~tipi_10,
+  ~age, ~gender, ~handedness,
+  1, "B", 7, 2, 2, 0, 13, 7, 5, 3, 4, 5, 5, 6, 4, 3, 6, 3, 5, 4, 33, "Female", "Right",
+  2, "B", 6, 4, 5, 3, 10, 3, 4, 5, 2, 3, 2, 6, 3, 7, 5, 7, 3, 3, 20, "Female", "Right",
+  3, "B", 8.5, 3, 0, 3, 4, 7, 5, 4, 5, 2, 5, 4, 3, 5, 7, 2, 4, 5, 20, "Female", "Right",
+  4, "B", 9, 3, 3, 5, 5, 7, 4, 5, 4, 4, 4, 5, 6, 5, 6, 7, 4, 1, 34, "Female", "Right",
+  5, "B", 6.5, 3, 0, 3, 6, 5, 5, 5, 2, 4, 5, 5, 5, 6, 6, 4, 5, 4, 18, "Female", "Right",
+  6, "A", 7, 4, 0, 2, 6, 5, 5, 1, 3, 2, 5, 5, 5, 7, 5, 5, 5, 1, 19, "Female", "Right",
+  7, "A", 5, 3, 0, 2, 8, 3, 4, 9, 4, 3, 5, 5, 5, 4, 6, 4, 3, 4, 21, "Female", "Left",
+  8, "B", 5, 2, 0, 3, 10, 7, 3, 2, 6, 4, 5, 5, 5, 3, 6, 6, 4, 5, 19, "Female", "Right",
+  9, "B", 4, 3, 1, 0, 10, 8, 7, 9, 6, 4, 5, 5, 3, 6, 6, 5, 3, 2, 18, "Female", "Right",
+  10, "A", 7, 3, 0, 0, 7, 5, 4, 7, 6, 5, 4, 1, 7, 1, 5, 2, 5, 1, 18, "Male", "Right",
+  11, "B", 5.5, 2, 0, 3, 7, 4, 3, 7, 7, 5, 3, 7, 5, 5, 7, 5, 1, 2, 18, "Female", "Right",
+  12, "A", 6, 4, 0, 1, 14, 7, 6, 9, 3, 5, 3, 4, 7, 7, 6, 4, 6, 4, 23, "Female", "Right",
+  13, "A", 5.5, 3, 1, 1, 12, 7, 6, 5, 5, 4, 5, 6, 6, 4, 5, 4, 4, 4, 21, "Female", "Right",
+  14, "A", 8, 4, 2, 4, 9, 5, 3, 5, 3, 4, 5, 6, 4, 3, 5, 5, 4, 4, 21, "Male", "Right",
+  15, "A", 9, 5, 2, 1, 8, 10, 8, 2, 4, 5, 5, 3, 5, 6, 6, 3, 5, 4, 20, "Female", "Right",
+  16, "B", 4, 3, 0, 6, 4, 6, 2, 2, 6, 5, 5, 5, 3, 3, 5, 5, 3, 2, 18, "Female", "Right",
+  17, "B", 8.5, 4, 0, 0, 12, 7, 4, 3, 2, 2, 4, 5, 4, 6, 6, 3, 3, 4, 19, "Female", "Right",
+  18, "A", 8, 3, 1, 5, 7, 6, 5, 6, 4, 4, 5, 7, 5, 4, 6, 3, 5, 2, 21, "Male", "Right",
+  19, "B", 6, 3, 0, 3, 8, 5, 5, 3, 5, 4, 5, 5, 4, 5, 6, 4, 5, 3, 19, "Female", "Right",
+  20, "A", 7, 4, 1, 2, 7, 6, 5, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 20, "Female", "Right",
+  21, "B", 5, 2, 1, 2, 9, 5, 4, 6, 3, 5, 4, 6, 4, 6, 5, 5, 3, 5, 18, "Female", "Right",
+  22, "A", 6, 3, 0, 3, 6, 6, 5, 5, 5, 4, 5, 5, 5, 5, 6, 4, 5, 3, 22, "Female", "Right",
+  23, "B", 7, 3, 2, 2, 8, 6, 5, 4, 4, 5, 5, 5, 4, 5, 5, 4, 4, 4, 19, "Female", "Right",
+  24, "A", 8, 4, 0, 4, 7, 7, 6, 3, 5, 4, 6, 5, 5, 4, 6, 3, 5, 3, 21, "Female", "Right",
+  25, "B", 6, 3, 1, 2, 10, 6, 4, 5, 4, 4, 5, 5, 5, 5, 5, 5, 4, 4, 18, "Male", "Right",
+  26, "A", 7, 3, 0, 3, 8, 7, 6, 4, 5, 3, 5, 4, 6, 4, 6, 4, 5, 3, 28, "Male", "Right",
+  27, "B", 6.5, 4, 1, 2, 9, 6, 5, 4, 5, 4, 5, 5, 5, 5, 6, 4, 4, 3, 18, "Female", "Right",
+  28, "A", 7.5, 3, 0, 4, 7, 7, 5, 3, 4, 3, 6, 5, 5, 4, 6, 3, 5, 4, 19, "Male", "Right"
+)
+
+cat("N =", nrow(demog), "participants\n")
+cat("Gender: 22 Female, 6 Male\n")
+cat("Labs:", sum(demog$lab == "A"), "in Lab A,", sum(demog$lab == "B"), "in Lab B\n\n")
+head(demog)
+```
+
+## Demographics Overview
+
+```{webr-r}
+# Age distribution
+ggplot(demog, aes(x = age)) +
+  geom_histogram(binwidth = 1, fill = "#3498db", color = "white") +
+  labs(
+    x = "Age",
+    y = "Count",
+    title = "Age Distribution",
+    subtitle = paste("Mean age:", round(mean(demog$age), 1), "years")
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+```{webr-r}
+# Gender and handedness
+demog |>
+  count(gender) |>
+  ggplot(aes(x = gender, y = n, fill = gender)) +
+  geom_col() +
+  scale_fill_manual(values = c("Male" = "#3498db", "Female" = "#e74c3c", "Other" = "#9b59b6")) +
+  labs(x = NULL, y = "Count", title = "Gender Distribution") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none",
+        plot.title = element_text(color = "#275882", face = "bold"))
+```
+
+## Sleep Patterns
+
+```{webr-r}
+ggplot(demog, aes(x = sleep_hours)) +
+  geom_histogram(binwidth = 1, fill = "#9b59b6", color = "white") +
+  geom_vline(xintercept = 8, linetype = "dashed", color = "#e74c3c", linewidth = 1) +
+  annotate("text", x = 8.2, y = 5, label = "Recommended\n(8 hours)",
+           hjust = 0, color = "#e74c3c", size = 3.5) +
+  labs(
+    x = "Hours of Sleep (Previous Night)",
+    y = "Count",
+    title = "Sleep Duration",
+    subtitle = paste("Mean:", round(mean(demog$sleep_hours), 1), "hours")
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(color = "#275882", face = "bold"))
+```
+
+```{webr-r}
+# Sleep quality vs mood
+ggplot(demog, aes(x = sleep_quality, y = mood_pre)) +
+  geom_jitter(size = 3, alpha = 0.7, color = "#9b59b6", width = 0.1) +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  labs(
+    x = "Sleep Quality (1-5)",
+    y = "Pre-Task Mood (1-10)",
+    title = "Does Sleep Quality Affect Mood?",
+    subtitle = "Better sleep = better mood?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(color = "#275882", face = "bold"))
+```
+
+```{webr-r}
+# Correlation test
+cor.test(demog$sleep_quality, demog$mood_pre)
+```
+
+## The Big Five Personality Traits
+
+The **TIPI (Ten-Item Personality Inventory)** measures five personality dimensions:
+
+| Trait | Items | Description |
+|-------|-------|-------------|
+| **Extraversion** | 1, 6R | Outgoing vs reserved |
+| **Agreeableness** | 2R, 7 | Friendly vs critical |
+| **Conscientiousness** | 3, 8R | Organised vs careless |
+| **Emotional Stability** | 4R, 9 | Calm vs anxious |
+| **Openness** | 5, 10R | Creative vs conventional |
+
+*R = reverse scored (8 - score)*
+
+```{webr-r}
+# Calculate Big Five scores
+demog <- demog |>
+  mutate(
+    extraversion = (tipi_1 + (8 - tipi_6)) / 2,
+    agreeableness = ((8 - tipi_2) + tipi_7) / 2,
+    conscientiousness = (tipi_3 + (8 - tipi_8)) / 2,
+    emotional_stability = ((8 - tipi_4) + tipi_9) / 2,
+    openness = (tipi_5 + (8 - tipi_10)) / 2
+  )
+
+# Summary
+demog |>
+  summarise(
+    Extraversion = mean(extraversion),
+    Agreeableness = mean(agreeableness),
+    Conscientiousness = mean(conscientiousness),
+    `Emotional Stability` = mean(emotional_stability),
+    Openness = mean(openness)
+  ) |>
+  pivot_longer(everything(), names_to = "Trait", values_to = "Mean") |>
+  arrange(desc(Mean))
+```
+
+## Visualise Personality Profile
+
+```{webr-r}
+# Reshape for plotting
+big5_long <- demog |>
+  select(id, extraversion, agreeableness, conscientiousness,
+         emotional_stability, openness) |>
+  pivot_longer(
+    cols = -id,
+    names_to = "trait",
+    values_to = "score"
+  ) |>
+  mutate(trait = factor(trait,
+    levels = c("extraversion", "agreeableness", "conscientiousness",
+               "emotional_stability", "openness"),
+    labels = c("Extraversion", "Agreeableness", "Conscientiousness",
+               "Emotional\nStability", "Openness")))
+
+ggplot(big5_long, aes(x = trait, y = score, fill = trait)) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA) +
+  geom_jitter(width = 0.15, alpha = 0.5, size = 2, color = "#275882") +
+  scale_fill_manual(values = c("#e74c3c", "#27ae60", "#3498db", "#f39c12", "#9b59b6")) +
+  geom_hline(yintercept = 4, linetype = "dashed", color = "#275882") +
+  annotate("text", x = 5.3, y = 4.2, label = "Midpoint", color = "#275882", size = 3) +
+  labs(
+    x = NULL,
+    y = "Score (1-7)",
+    title = "Big Five Personality Profile",
+    subtitle = "Higher scores = more of that trait"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.text.x = element_text(size = 10)
+  )
+```
+
+## Pre-Task State
+
+How were participants feeling before the lab?
+
+```{webr-r}
+# Pre-task mood, energy, stress
+state_data <- demog |>
+  select(id, mood_pre, energy_pre, stress_pre) |>
+  pivot_longer(
+    cols = -id,
+    names_to = "measure",
+    values_to = "rating"
+  ) |>
+  mutate(measure = factor(measure,
+    levels = c("mood_pre", "energy_pre", "stress_pre"),
+    labels = c("Mood", "Energy", "Stress")))
+
+ggplot(state_data, aes(x = measure, y = rating, fill = measure)) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA) +
+  geom_jitter(width = 0.15, alpha = 0.5, size = 2) +
+  scale_fill_manual(values = c("#27ae60", "#f39c12", "#e74c3c")) +
+  labs(
+    x = NULL,
+    y = "Rating (1-10)",
+    title = "Pre-Task Psychological State",
+    subtitle = "How were you feeling before the lab?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Personality and sleep**: Do extraverts sleep less?
+2. **Caffeine and stress**: Is caffeine consumption related to stress levels?
+3. **Exercise and energy**: Do people who exercise more have higher energy?
+
+```{webr-r}
+# Your code here!
+# Hint: Use cor.test() or ggplot with geom_point() + geom_smooth()
+
+
+```
+
+::: {.callout-tip collapse="true"}
+## The TIPI in Research
+
+The **Ten-Item Personality Inventory** (Gosling et al., 2003) is a brief measure of the Big Five personality traits. While not as reliable as longer measures (like the 44-item BFI), it's useful for:
+
+- **Time-limited studies** where personality is not the main focus
+- **Large-scale surveys** where brevity is essential
+- **Screening purposes** before more detailed assessment
+
+Typical internal reliability (Cronbach's α) is lower than full inventories, but test-retest reliability is adequate for research purposes.
+:::
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The sample showed typical variation in Big Five personality traits. Sleep quality was positively associated with pre-task mood, highlighting the importance of rest for psychological well-being. The data provides a foundation for exploring how individual differences might relate to task performance.
+:::

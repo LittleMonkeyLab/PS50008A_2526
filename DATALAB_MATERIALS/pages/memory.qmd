@@ -1,0 +1,246 @@
+---
+title: "Memory Task Analysis"
+subtitle: "Serial Position Effect"
+---
+
+::: {.task-header .memory}
+# Memory (Mind Palace)
+::: {.task-subtitle}
+Exploring the Serial Position Effect - How word position affects recall
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+[Sixth Sense](sixthsense.qmd)
+[Lady Luck](ladyluck.qmd)
+[Frontal Lob](frontallob.qmd)
+:::
+
+## Introduction
+
+In this task, you saw **10 words** presented one at a time and then tried to recall them in order.
+
+The **Serial Position Effect** predicts that:
+
+- **Primacy**: Words at the beginning are remembered better (more rehearsal time)
+- **Recency**: Words at the end are remembered better (still in short-term memory)
+
+::: {.key-finding}
+#### Key Finding
+On average, participants recalled **6.2 out of 10 words**, with clear primacy and recency effects visible in the data.
+:::
+
+## Load the Data
+
+First, let's load our memory data. Run the code below:
+
+```{webr-r}
+# Sample data showing clear serial position effects (N=32)
+# Position codes: 1 = correct position, 2 = recalled wrong position, 3 = not recalled
+
+memory <- tibble::tribble(
+  ~id, ~lab, ~total, ~pos1, ~pos2, ~pos3, ~pos4, ~pos5, ~pos6, ~pos7, ~pos8, ~pos9, ~pos10, ~intrusions,
+  1, "A", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1,
+  2, "A", 6, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 0,
+  3, "A", 5, 1, 1, 2, 2, 3, 3, 2, 2, 1, 1, 2,
+  4, "A", 8, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0,
+  5, "A", 4, 1, 2, 2, 3, 3, 3, 3, 2, 1, 1, 1,
+  6, "A", 6, 1, 1, 1, 2, 2, 3, 2, 2, 1, 1, 0,
+  7, "A", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1,
+  8, "A", 5, 1, 1, 2, 2, 3, 3, 2, 2, 1, 1, 0,
+  9, "A", 9, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 0,
+  10, "A", 6, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1,
+  11, "A", 4, 1, 2, 2, 3, 3, 3, 3, 2, 2, 1, 2,
+  12, "A", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 0,
+  13, "A", 5, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 1,
+  14, "A", 6, 1, 1, 1, 2, 2, 3, 2, 2, 1, 1, 0,
+  15, "A", 8, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0,
+  16, "A", 3, 1, 2, 3, 3, 3, 3, 3, 2, 1, 1, 3,
+  17, "B", 8, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0,
+  18, "B", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1,
+  19, "B", 6, 1, 1, 2, 2, 2, 3, 2, 2, 1, 1, 0,
+  20, "B", 9, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 0,
+  21, "B", 5, 1, 1, 2, 2, 3, 3, 2, 2, 1, 1, 1,
+  22, "B", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 0,
+  23, "B", 10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+  24, "B", 6, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1,
+  25, "B", 8, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0,
+  26, "B", 5, 1, 1, 2, 3, 3, 3, 2, 2, 1, 1, 2,
+  27, "B", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 0,
+  28, "B", 4, 1, 2, 2, 3, 3, 3, 3, 2, 1, 1, 3,
+  29, "B", 8, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 0,
+  30, "B", 6, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1,
+  31, "B", 7, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 0,
+  32, "B", 9, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 0
+)
+
+cat("N =", nrow(memory), "participants\n")
+cat("Labs: A (abstract words), B (concrete words)\n\n")
+head(memory)
+```
+
+## Overall Performance
+
+How many words did participants recall on average?
+
+```{webr-r}
+# Summary statistics
+memory |>
+  summarise(
+    n = n(),
+    mean_recalled = mean(total, na.rm = TRUE),
+    sd_recalled = sd(total, na.rm = TRUE),
+    min_recalled = min(total, na.rm = TRUE),
+    max_recalled = max(total, na.rm = TRUE)
+  )
+```
+
+## Visualise Performance
+
+Let's create a histogram of recall performance:
+
+```{webr-r}
+ggplot(memory, aes(x = total)) +
+  geom_histogram(binwidth = 1, fill = "#27ae60", color = "white") +
+  geom_vline(xintercept = mean(memory$total),
+             linetype = "dashed", color = "#275882", linewidth = 1) +
+  scale_x_continuous(breaks = 0:10) +
+  labs(
+    x = "Words Correctly Recalled",
+    y = "Count",
+    title = "Memory Performance Distribution",
+    subtitle = "Blue dashed line = mean"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+## Serial Position Effect
+
+Now let's look at accuracy by position. The `pos` columns indicate:
+
+- `1` = Correct position
+- `2` = Recalled but wrong position
+- `3` = Not recalled
+
+```{webr-r}
+# Reshape data to long format
+position_data <- memory |>
+  select(id, starts_with("pos")) |>
+  pivot_longer(
+    cols = starts_with("pos"),
+    names_to = "position",
+    values_to = "accuracy"
+  ) |>
+  mutate(
+    position = as.numeric(str_extract(position, "\\d+")),
+    correct = accuracy == 1
+  )
+
+# Calculate proportion correct at each position
+serial_curve <- position_data |>
+  group_by(position) |>
+  summarise(
+    prop_correct = mean(correct, na.rm = TRUE),
+    n = n()
+  )
+
+serial_curve
+```
+
+## Plot the Serial Position Curve
+
+```{webr-r}
+ggplot(serial_curve, aes(x = position, y = prop_correct)) +
+  geom_line(color = "#27ae60", linewidth = 1.5) +
+  geom_point(color = "#27ae60", size = 4) +
+  geom_area(alpha = 0.2, fill = "#27ae60") +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  annotate("text", x = 2, y = 0.85, label = "Primacy Effect",
+           color = "#275882", fontface = "bold", size = 4) +
+  annotate("text", x = 9, y = 0.85, label = "Recency Effect",
+           color = "#275882", fontface = "bold", size = 4) +
+  labs(
+    x = "Word Position",
+    y = "Proportion Recalled in Correct Position",
+    title = "Serial Position Effect",
+    subtitle = "Do you see primacy (start) and recency (end) effects?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+::: {.callout-tip collapse="true"}
+## What Does This Show?
+
+The **U-shaped curve** is a classic finding in memory research:
+
+1. **Primacy** (first 2-3 words): High recall because you had time to rehearse them
+2. **Middle**: Lower recall - too many words competing for attention
+3. **Recency** (last 2-3 words): High recall because they're still in short-term memory
+
+This supports the **multi-store model** of memory (Atkinson & Shiffrin, 1968).
+:::
+
+## Your Turn!
+
+Try modifying the code above to:
+
+1. **Change the colors** - Replace `"#27ae60"` with another hex color
+2. **Add error bars** - Calculate standard error and add `geom_errorbar()`
+3. **Compare labs** - Split the analysis by Lab A vs Lab B
+
+```{webr-r}
+# Your code here!
+# Hint: To compare labs, add the lab column and use facet_wrap() or group_by()
+
+
+```
+
+## Intrusions
+
+Intrusions are words recalled that were **not** on the original list. Let's look at how many intrusions occurred:
+
+```{webr-r}
+ggplot(memory, aes(x = factor(intrusions))) +
+  geom_bar(fill = "#e74c3c") +
+  labs(
+    x = "Number of Intrusions",
+    y = "Count",
+    title = "Memory Intrusions",
+    subtitle = "Words recalled that weren't on the list"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Statistical Test
+
+Is our recall significantly better than chance (guessing 1 out of 10 words)?
+
+```{webr-r}
+# One-sample t-test against chance (10% = 1 word)
+t.test(memory$total, mu = 1)
+```
+
+**Interpretation**: If p < 0.05, we performed significantly better than chance!
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The memory data shows clear evidence of the **serial position effect**, with better recall for words at the beginning (primacy) and end (recency) of the list. This supports classic memory theory.
+:::

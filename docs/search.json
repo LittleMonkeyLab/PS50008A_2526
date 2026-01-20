@@ -119,9 +119,9 @@
   {
     "objectID": "textbook/chapters/w12-lab.html",
     "href": "textbook/chapters/w12-lab.html",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll use R to compute descriptive statistics. You don’t need any prior programming experience — we’ll use WebR, which runs directly in your browser.",
+    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -132,9 +132,9 @@
   {
     "objectID": "textbook/chapters/w12-lab.html#overview",
     "href": "textbook/chapters/w12-lab.html#overview",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll use R to compute descriptive statistics. You don’t need any prior programming experience — we’ll use WebR, which runs directly in your browser.",
+    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -143,11 +143,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#what-is-r",
-    "href": "textbook/chapters/w12-lab.html#what-is-r",
-    "title": "Chapter 4: Introduction to R",
-    "section": "2 What Is R?",
-    "text": "2 What Is R?\nR is a programming language designed for statistical analysis. It’s:\n\nFree and open-source — anyone can use it\nPowerful — handles everything from simple means to complex models\nWidely used — the standard in psychology, biology, medicine, and data science\nReproducible — your analysis is documented in code\n\n\n2.1 Why Learn R?\nExcel can calculate a mean. So why bother with R?\n\nReproducibility: R code documents exactly what you did. “I calculated the mean” becomes mean(data$reaction_time) — clear and precise.\nEfficiency: Once written, code can be reused. Analyse one dataset, apply the same analysis to another.\nCapabilities: R handles analyses that Excel simply cannot — bootstrapping, mixed models, complex visualisations.\nTransparency: Sharing code lets others check your work. This is increasingly required in psychology journals.",
+    "objectID": "textbook/chapters/w12-lab.html#part-1-describing-the-centre",
+    "href": "textbook/chapters/w12-lab.html#part-1-describing-the-centre",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "2 Part 1: Describing the Centre",
+    "text": "2 Part 1: Describing the Centre\nWhen we collect data, the first question is usually: What’s typical?\n\n2.1 The Mean: The Balancing Point\nThe mean is the arithmetic average. If we measured 5 people’s memory scores:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe mean is 7. This is the “balancing point” — if you put these scores on a seesaw, 7 is where it would balance.\n\n\n2.2 The Median: The Middle Value\nThe median is the middle value when data are sorted. Half the values are above it, half below.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWith 5 values, the median is the 3rd value (when sorted). Here, both mean and median are 7.\n\n\n2.3 When Mean and Median Differ\nSometimes they tell different stories. Consider these scores:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe mean shoots up to 10, but the median stays at 7. The median is resistant to extreme values (outliers). The mean is pulled by them.\nWhen to use which?\n\nMean: When data are roughly symmetric, no extreme outliers\nMedian: When data are skewed or have outliers (like income data)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -156,11 +156,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#webr-r-in-your-browser",
-    "href": "textbook/chapters/w12-lab.html#webr-r-in-your-browser",
-    "title": "Chapter 4: Introduction to R",
-    "section": "3 WebR: R in Your Browser",
-    "text": "3 WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\n3.1 How It Works\nWhen you see a code box like this:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
+    "objectID": "textbook/chapters/w12-lab.html#part-2-describing-the-spread",
+    "href": "textbook/chapters/w12-lab.html#part-2-describing-the-spread",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "3 Part 2: Describing the Spread",
+    "text": "3 Part 2: Describing the Spread\nThe centre isn’t the whole story. Two groups can have the same mean but look completely different:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth means are 7, but the groups are very different. We need measures of spread.\n\n3.1 The Range: Simplest Spread\nThe range is just the distance from lowest to highest:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGroup A spans 2 points (6 to 8). Group B spans 10 points (2 to 12). The range immediately shows Group B is more variable.\nLimitation: The range only uses two values, so it’s sensitive to outliers.\n\n\n3.2 The Standard Deviation: The Gold Standard\nThe standard deviation (SD) measures how far scores typically fall from the mean.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGroup A’s SD is about 0.7 — scores cluster tightly around 7. Group B’s SD is about 4.2 — scores are much more spread out.\nRule of thumb: In roughly normal data, about 68% of values fall within 1 SD of the mean.\nIf the mean is 7 and SD is 1:\n\n~68% of scores fall between 6 and 8\n\n\n\n3.3 The summary() Function: Everything at Once\nR’s summary() function gives you a quick overview:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis shows:\n\nMin and Max (the range endpoints)\n1st and 3rd Quartile (the middle 50%)\nMedian (the middle value)\nMean",
     "crumbs": [
       "Home",
       "Textbook",
@@ -169,11 +169,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#r-basics-for-today",
-    "href": "textbook/chapters/w12-lab.html#r-basics-for-today",
-    "title": "Chapter 4: Introduction to R",
-    "section": "4 R Basics for Today",
-    "text": "4 R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\n4.1 Assigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe c() function combines values into a vector (a list of numbers).\n\n\n4.2 Basic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n4.3 Computing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\n4.4 Example: Reaction Times\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "textbook/chapters/w12-lab.html#part-3-seeing-descriptives-in-psychology-data",
+    "href": "textbook/chapters/w12-lab.html#part-3-seeing-descriptives-in-psychology-data",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "4 Part 3: Seeing Descriptives in Psychology Data",
+    "text": "4 Part 3: Seeing Descriptives in Psychology Data\nLet’s look at what descriptive statistics tell us with realistic psychology examples.\n\n4.1 Example 1: Reaction Times\nImagine we measured 10 participants’ reaction times (in milliseconds):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nMean reaction time is about 285ms\nThe median (284ms) is similar, suggesting roughly symmetric data\nSD of about 28ms tells us most people fall within ±28ms of the mean\nRange of 245 to 334ms shows the fastest and slowest participants\n\n\n\n4.2 Example 2: Memory Scores by Condition\nNow let’s compare two groups. Lab A saw abstract words, Lab B saw concrete words:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nLab A mean: ~5.3 words recalled\nLab B mean: ~7.3 words recalled\nThe difference is 2 words — but is that meaningful?\nBoth SDs are around 1, so 2 words is about 2 standard deviations — a substantial difference\n\n\n\n4.3 Example 3: Pre-Post Mood Ratings\nSame people rated their mood before and after the session:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nMean mood increased by 1.1 points on average\nThe SD of change (0.7) tells us most people improved by 0.4 to 1.8 points\nThis is a within-subjects comparison — same people before and after",
     "crumbs": [
       "Home",
       "Textbook",
@@ -182,11 +182,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#understanding-output",
-    "href": "textbook/chapters/w12-lab.html#understanding-output",
-    "title": "Chapter 4: Introduction to R",
-    "section": "5 Understanding Output",
-    "text": "5 Understanding Output\nWhen R gives you output, it includes some formatting. For example:\n[1] 280\nThe [1] just means “first element.” For a single number, you can ignore it.\nFor longer output:\n[1] 245 267 278 298 312\nThe numbers 245, 267, etc. are your data. The [1] tells you where the first element is.",
+    "objectID": "textbook/chapters/w12-lab.html#part-4-what-the-numbers-mean",
+    "href": "textbook/chapters/w12-lab.html#part-4-what-the-numbers-mean",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "5 Part 4: What the Numbers Mean",
+    "text": "5 Part 4: What the Numbers Mean\n\n5.1 Standard Deviation in Context\nThe SD only makes sense relative to the mean and the scale.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nMemory: Mean = 6, SD = 0.77. An SD of 0.77 on a 10-point scale is fairly consistent.\nRT: Mean = 277ms, SD = 23ms. Is that a lot of variability? It’s about 8% of the mean — fairly typical for reaction times.\n\n\n\n5.2 When Means Can Mislead\nConsider these two possible DataLab results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -195,11 +195,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#working-with-data-frames",
-    "href": "textbook/chapters/w12-lab.html#working-with-data-frames",
-    "title": "Chapter 4: Introduction to R",
-    "section": "6 Working with Data Frames",
-    "text": "6 Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\n6.1 Accessing Columns\nUse $ to access a column:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n6.2 Subsetting Data\nGet specific parts of your data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "textbook/chapters/w12-lab.html#part-5-working-with-data-frames",
+    "href": "textbook/chapters/w12-lab.html#part-5-working-with-data-frames",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "6 Part 5: Working with Data Frames",
+    "text": "6 Part 5: Working with Data Frames\nReal datasets aren’t just vectors — they’re tables (data frames) with multiple variables.\n\n6.1 Accessing Columns\nUse the $ symbol to get a column from a data frame:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n6.2 Descriptives by Group\nTo compare groups, we can subset the data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -208,11 +208,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#common-errors-and-how-to-fix-them",
-    "href": "textbook/chapters/w12-lab.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 4: Introduction to R",
-    "section": "7 Common Errors (And How to Fix Them)",
-    "text": "7 Common Errors (And How to Fix Them)\n\n7.1 Error: object ‘x’ not found\nMeaning: R doesn’t recognise that name.\nFixes:\n\nCheck spelling (R is case-sensitive: Data ≠ data)\nMake sure you created the object first\nRun all code chunks in order\n\n\n\n7.2 Error: could not find function “x”\nMeaning: R doesn’t recognise that function.\nFixes:\n\nCheck spelling\nSome functions need packages (we’ll load these for you)\n\n\n\n7.3 Unexpected symbol error\nMeaning: R found something it didn’t expect.\nFixes:\n\nCheck for missing commas or parentheses\nMake sure quotes match (both \" or both ')",
+    "objectID": "textbook/chapters/w12-lab.html#part-6-r-basics-youll-need",
+    "href": "textbook/chapters/w12-lab.html#part-6-r-basics-youll-need",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "7 Part 6: R Basics You’ll Need",
+    "text": "7 Part 6: R Basics You’ll Need\n\n7.1 Assigning Values\nUse &lt;- to store values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n7.2 Key Functions Reference\n\n\n\nFunction\nWhat It Does\nExample\n\n\n\n\nmean(x)\nArithmetic mean\nmean(c(4,5,6)) → 5\n\n\nmedian(x)\nMiddle value\nmedian(c(4,5,6)) → 5\n\n\nsd(x)\nStandard deviation\nsd(c(4,5,6)) → 1\n\n\nmin(x)\nSmallest value\nmin(c(4,5,6)) → 4\n\n\nmax(x)\nLargest value\nmax(c(4,5,6)) → 6\n\n\nrange(x)\nMin and max\nrange(c(4,5,6)) → 4, 6\n\n\nsummary(x)\nAll key stats\nShows quartiles, mean, etc.\n\n\nlength(x)\nHow many values\nlength(c(4,5,6)) → 3\n\n\n\n\n\n7.3 Common Errors\n“object not found”: You haven’t created that variable yet, or there’s a typo.\n“unexpected symbol”: Missing comma or parenthesis.\nR is case-sensitive: Mean() won’t work, but mean() will.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -221,11 +221,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w12-lab.html#preparing-for-the-lab",
-    "href": "textbook/chapters/w12-lab.html#preparing-for-the-lab",
-    "title": "Chapter 4: Introduction to R",
-    "section": "8 Preparing for the Lab",
-    "text": "8 Preparing for the Lab\n\n8.1 What You’ll Do\nIn the lab, you’ll:\n\nLoad the DataLab dataset\nExplore the variables (columns)\nCalculate means, medians, and SDs for different measures\nCompare Room A vs Room B\nVisualise distributions with histograms\n\n\n\n8.2 Before You Arrive\n\nRead this page (you’re doing that now!)\nHave the Lecture Reading fresh in mind\nBring a laptop or phone (WebR runs in any modern browser)\n\n\n\n8.3 What to Focus On\nThe goal isn’t to memorise R syntax. Focus on:\n\nWhat each statistic tells you (meaning over mechanics)\nHow the statistics relate to your DataLab experience\nWhy we compute these particular measures",
+    "objectID": "textbook/chapters/w12-lab.html#part-7-preparing-for-the-lab",
+    "href": "textbook/chapters/w12-lab.html#part-7-preparing-for-the-lab",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "8 Part 7: Preparing for the Lab",
+    "text": "8 Part 7: Preparing for the Lab\n\n8.1 What You’ll Do\nIn the lab, you’ll:\n\nLoad the actual DataLab dataset (not example data)\nExplore variables using summary()\nCalculate means and SDs for different tasks\nCompare Room A vs Room B\nInterpret what the numbers tell us\n\n\n\n8.2 What to Focus On\nDon’t worry about memorising R syntax. Focus on:\n\nWhat does this statistic tell me?\nHow spread out is the data?\nIs this difference meaningful?\n\nThe code will be provided. Your job is to understand what it means.\n\n\n8.3 Before You Arrive\n\nReview the lecture reading on descriptive statistics\nUnderstand mean vs median, and when each is appropriate\nKnow what standard deviation represents (spread from the mean)",
     "crumbs": [
       "Home",
       "Textbook",
@@ -236,9 +236,9 @@
   {
     "objectID": "textbook/chapters/w12-lab.html#key-terms",
     "href": "textbook/chapters/w12-lab.html#key-terms",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "9 Key Terms",
-    "text": "9 Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nR\nProgramming language for statistical analysis\n\n\nWebR\nR running in a web browser\n\n\nVector\nA list of values of the same type\n\n\nData frame\nA table with rows and columns\n\n\nFunction\nCode that performs an action (like mean())",
+    "text": "9 Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nMean\nArithmetic average (sum ÷ count)\n\n\nMedian\nMiddle value when sorted\n\n\nStandard Deviation\nAverage distance from the mean\n\n\nRange\nDifference between max and min\n\n\nQuartiles\nValues that divide data into four equal parts\n\n\nOutlier\nA value far from the others",
     "crumbs": [
       "Home",
       "Textbook",
@@ -249,9 +249,9 @@
   {
     "objectID": "textbook/chapters/w12-lab.html#summary",
     "href": "textbook/chapters/w12-lab.html#summary",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "10 Summary",
-    "text": "10 Summary\n\n\n\nWhat\nHow in R\n\n\n\n\nMean\nmean(x)\n\n\nMedian\nmedian(x)\n\n\nSD\nsd(x)\n\n\nAccess column\ndata$column\n\n\nCreate vector\nc(1, 2, 3)",
+    "text": "10 Summary\n\n\n\nQuestion\nStatistic to Use\n\n\n\n\nWhat’s typical?\nMean or Median\n\n\nHow spread out?\nSD or Range\n\n\nAny extreme values?\nCompare Mean vs Median\n\n\nQuick overview?\nsummary()\n\n\nCompare groups?\nMean and SD for each",
     "crumbs": [
       "Home",
       "Textbook",
@@ -262,9 +262,9 @@
   {
     "objectID": "textbook/chapters/w12-lab.html#additional-resources",
     "href": "textbook/chapters/w12-lab.html#additional-resources",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "11 Additional Resources",
-    "text": "11 Additional Resources\nIf you want to explore R further:\n\nR for Data Science — Free online textbook\nRStudio Primers — Interactive tutorials\nQuick-R — Syntax reference",
+    "text": "11 Additional Resources\nIf you want to explore further:\n\nR for Data Science — Free online textbook\nQuick-R Statistics — Syntax reference",
     "crumbs": [
       "Home",
       "Textbook",
@@ -477,9 +477,9 @@
   {
     "objectID": "week12/lab/activity.html",
     "href": "week12/lab/activity.html",
-    "title": "Week 12 Lab Activity",
+    "title": "Design Detectives: DataLab",
     "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis is NOT a heavy R coding session. Today focuses on conceptual understanding:\n\nSeeing your REAL data\nIdentifying design types, IVs, and DVs\nUnderstanding what means and SDs tell us\nWriting hypotheses",
+    "text": "NoteHow This Works\n\n\n\nThis activity accompanies the instructor slides. Your instructor will guide you through each phase:\n\nTask overview (instructor presents)\nGroup discussion (you work through questions below)\nWhole-class debrief (we discuss answers together)\n\nForm groups of 2-3 people and work through each section when prompted.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -489,11 +489,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#overview",
-    "href": "week12/lab/activity.html#overview",
-    "title": "Week 12 Lab Activity",
-    "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis is NOT a heavy R coding session. Today focuses on conceptual understanding:\n\nSeeing your REAL data\nIdentifying design types, IVs, and DVs\nUnderstanding what means and SDs tell us\nWriting hypotheses",
+    "objectID": "week12/lab/activity.html#task-1-reflex-test",
+    "href": "week12/lab/activity.html#task-1-reflex-test",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 1: Reflex Test",
+    "text": "Task 1: Reflex Test\n\nWhat You Did\nYou caught a falling 30cm ruler five times. The distance you caught it at reflects your reaction time - shorter distance means faster reactions.\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ1.1 Look at the graph. What happens to performance from Trial 1 to Trial 5?\nPerformance gets worsePerformance improvesPerformance stays the samePerformance is random\nQ1.2 Were the same people tested in all 5 trials, or different people in each trial?\nDifferent people in each trialSame people in all trials\nQ1.3 What design type is this? (See within-subjects design)\nBetween-subjectsWithin-subjectsCorrelationalMatched pairs\nQ1.4 What is the Independent Variable (IV)?\nTrial number (1, 2, 3, 4, 5)Distance caughtReaction timeNothing - no IV\nQ1.5 What is the Dependent Variable (DV)?\nTrial numberDistance caught (or reaction time)The participantThe ruler\nQ1.6 Write a one-tailed hypothesis for this experiment:\n\n\n\n\n\n\nTipExample Answer\n\n\n\n\n\n“Reaction time will decrease (improve) from Trial 1 to Trial 5” OR “Catch distance will decrease from Trial 1 to Trial 5”\nThis is a practice effect - performance improves with repetition.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -503,11 +503,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#your-data-is-real",
-    "href": "week12/lab/activity.html#your-data-is-real",
-    "title": "Week 12 Lab Activity",
-    "section": "Your Data Is Real",
-    "text": "Your Data Is Real\nLast week you generated this data. Let’s look at it!\n\nMemory Scores — Every Dot Is One Person\n\n\n\n\n\n\n\n\n\nCan you spot yourself? The solid orange line is the mean. The dashed lines show ±1 SD — about 68% of people fall between them.\n\n\n\nThe Distribution — How Scores Spread Out\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteQuick Check\n\n\n\nLooking at the histogram:\nIs the distribution roughly symmetric or skewed? Roughly symmetricSkewed leftSkewed rightUniform\nAre most scores clustered near the mean or spread across the range? Clustered near the meanSpread evenlyAll at one endBimodal",
+    "objectID": "week12/lab/activity.html#task-2-time-warp",
+    "href": "week12/lab/activity.html#task-2-time-warp",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 2: Time Warp",
+    "text": "Task 2: Time Warp\n\nWhat You Did\nYou estimated 60 seconds without counting. We wanted to see if people systematically over- or underestimate time.\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ2.1 On average, did people over- or underestimate 60 seconds?\nOverestimate (said ‘stop’ too late)Underestimate (said ‘stop’ too early)Perfectly accurate\nQ2.2 What does it mean if someone underestimates 60 seconds?\nTime felt like it passed quickly (they thought 60s was up before it actually was)Time felt like it passed slowlyThey were counting accurately\nQ2.3 This experiment compares people’s estimates to a known target (60 seconds). The null hypothesis would be:\nMean estimate will equal 60 seconds (no systematic bias)Mean estimate will be less than 60 secondsMean estimate will be greater than 60 secondsThere is no null hypothesis",
     "crumbs": [
       "Home",
       "Term 2",
@@ -517,11 +517,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#activity-1-the-big-reveal-lab-a-vs-lab-b-20-min",
-    "href": "week12/lab/activity.html#activity-1-the-big-reveal-lab-a-vs-lab-b-20-min",
-    "title": "Week 12 Lab Activity",
-    "section": "Activity 1: The Big Reveal — Lab A vs Lab B (20 min)",
-    "text": "Activity 1: The Big Reveal — Lab A vs Lab B (20 min)\n\nWhat You Didn’t Know\nThere was a hidden manipulation in the memory task:\n\nLab A memorised abstract words: justice, freedom, wisdom…\nLab B memorised concrete words: chair, river, mountain…\n\nLet’s see if it made a difference!\n\n\n\n\n\n\n\n\n\n\n\nThe Numbers\n\n\n\nDescriptive Statistics by Lab\n\n\nLab\nn\nMean\nSD\nMin\nMax\n\n\n\n\nLab A\n\n\n\n\n\n\n\n(Abstract)\n8\n6.00\n1.51\n3\n8\n\n\nLab B\n\n\n\n\n\n\n\n(Concrete)\n12\n6.33\n2.53\n2\n10\n\n\n\n\n\nThe difference in means is 0.33 words.\n\n\n\nDesign Detective Questions\nNow identify the design elements:\n1. What did the researcher MANIPULATE?\nWord type (abstract vs concrete)Number of wordsTime allowedNothing was manipulated\n2. What variable is this called?\nIndependent Variable (IV)Dependent Variable (DV)Control VariableConfounding Variable\n3. What did the researcher MEASURE?\nWord typeNumber of words recalledTime to recallParticipant happiness\n4. What variable is this called?\nIndependent Variable (IV)Dependent Variable (DV)Control VariableConfounding Variable\n5. Were the SAME people in both labs, or DIFFERENT people?\nSame people in both labsDifferent people in each lab\n6. What type of design is this?\nBetween-subjectsWithin-subjectsCorrelationalMatched pairs\n\n\n\n\n\n\nTipCheck Your Understanding\n\n\n\n\n\n\nIV = Word type (abstract vs concrete) — this was manipulated\nDV = Words recalled — this was measured\nDesign = Between-subjects — different people in Lab A vs Lab B\nYou were in ONE lab only, not both!",
+    "objectID": "week12/lab/activity.html#task-3-memory",
+    "href": "week12/lab/activity.html#task-3-memory",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 3: Memory",
+    "text": "Task 3: Memory\n\nThe Secret Manipulation\nHere’s what you didn’t know: Lab A and Lab B saw different words!\n\nLab A: Abstract words (justice, freedom, wisdom…)\nLab B: Concrete words (chair, river, mountain…)\n\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nDescriptive Statistics\n\n\n\nMemory scores by lab group\n\n\nLab\nn\nMean\nSD\n\n\n\n\nLab A (Abstract)\n13\n6.31\n1.89\n\n\nLab B (Concrete)\n15\n6.27\n1.98\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ3.1 What is the Independent Variable (IV)?\nWord type (abstract vs concrete)Number of words recalledThe participantMemory ability\nQ3.2 What is the Dependent Variable (DV)?\nWord typeNumber of words recalledLab roomTime to recall\nQ3.3 Were the same people in both labs?\nYes, same people saw both word typesNo, different people in each lab\nQ3.4 What design type is this? (See between-subjects design)\nBetween-subjectsWithin-subjectsCorrelationalMatched pairs\nQ3.5 Write an experimental hypothesis (H1) - one-tailed:\nConcrete words will be recalled better than abstract wordsThere will be no difference between word typesAbstract words will be recalled betterWord type will have some effect\nQ3.6 Write a null hypothesis (H0):\nConcrete words will be easier to rememberAbstract words will be easier to rememberThere will be no difference in recall between word typesMemory is always the same\nQ3.7 Why might concrete words be easier to remember?\n\n\n\n\n\n\nTipThe Answer: Dual Coding Theory\n\n\n\n\n\nConcrete words can be stored in TWO ways: as a verbal code (the word) AND as a visual image (you can picture “chair”). Abstract words only have the verbal code. Two codes = better memory.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -531,11 +531,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#activity-2-same-person-different-conditions-20-min",
-    "href": "week12/lab/activity.html#activity-2-same-person-different-conditions-20-min",
-    "title": "Week 12 Lab Activity",
-    "section": "Activity 2: Same Person, Different Conditions (20 min)",
-    "text": "Activity 2: Same Person, Different Conditions (20 min)\n\nPre-Post Mood\nYou rated your mood BEFORE and AFTER the session. Let’s see the change!\n\n\n\n\n\n\n\n\n\nThe faint lines connect the SAME PERSON. This is what makes it a within-subjects design!\n\n\n\nMood Ratings Before and After\n\n\nTime\nMean\nSD\nn\n\n\n\n\nBefore\n5.9\n1.37\n10\n\n\nAfter\n6.5\n1.96\n10\n\n\n\n\n\n\n\nDesign Detective Questions\n1. Were SAME people measured at both time points, or DIFFERENT people?\nSame people at both time pointsDifferent people at each time point\n2. What type of design is this?\nBetween-subjectsWithin-subjectsCorrelationalMatched pairs\n3. What is the IV?\nTime (before vs after)Mood ratingParticipant IDNo IV\n4. What is the DV?\nTimeMood ratingParticipant IDChange score\n5. Why is within-subjects design considered “powerful”?\nMore participantsEach person is their own controlEasier to runNo IV needed\n\n\n\n\n\n\nNoteThe Key Insight\n\n\n\nIn the graph above, the lines connect the same person before and after. By comparing each person to THEMSELVES, we control for all individual differences (age, personality, baseline mood, etc.).",
+    "objectID": "week12/lab/activity.html#task-4-frontal-lob",
+    "href": "week12/lab/activity.html#task-4-frontal-lob",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 4: Frontal Lob",
+    "text": "Task 4: Frontal Lob\n\nWhat You Did\nYou threw balls at a bucket:\n\n10 throws with your dominant hand\n5 throws with your non-dominant hand\n\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ4.1 Were the same people tested with both hands?\nNo, different people used different handsYes, same people used both hands\nQ4.2 What design type is this? (See within-subjects design)\nBetween-subjectsWithin-subjectsCorrelationalMatched pairs\nQ4.3 What is the IV?\nHand used (dominant vs non-dominant)AccuracyNumber of throwsThe participant\nQ4.4 What is the DV?\nHand usedThrowing accuracy (%)Number of attemptsThe bucket\nQ4.5 Why is within-subjects design considered “more powerful”?\nYou need fewer participantsThe statistics are simplerEach person is their own control - individual differences are eliminatedThe results are always significant\nQ4.6 Which statistical test would you use to compare dominant vs non-dominant hand?\nIndependent t-testPaired t-testCorrelationChi-square",
     "crumbs": [
       "Home",
       "Term 2",
@@ -545,11 +545,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#activity-3-descriptive-statistics-practice-30-min",
-    "href": "week12/lab/activity.html#activity-3-descriptive-statistics-practice-30-min",
-    "title": "Week 12 Lab Activity",
-    "section": "Activity 3: Descriptive Statistics Practice (30 min)",
-    "text": "Activity 3: Descriptive Statistics Practice (30 min)\n\nUnderstanding Mean and SD\nLook at these two groups with the SAME MEAN but different spreads:\n\n\n\n\n\n\n\n\n\nThe mean alone doesn’t tell the whole story!\nWhich group shows more VARIABILITY?\nGroup A (Clustered)Group B (Spread Out)They’re the sameCan’t tell\nWhich group has the LARGER standard deviation?\nGroup A (Clustered)Group B (Spread Out)They’re the sameCan’t tell\n\n\n\nReading R Output\nHere’s what R produces when we ask for descriptive statistics:\n\n# A sample of memory scores\nscores &lt;- c(6, 8, 5, 7, 9, 6, 7, 8)\n\n# Get descriptive statistics\nmean(scores)\n\n[1] 7\n\nsd(scores)\n\n[1] 1.309307\n\nsummary(scores)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n      5       6       7       7       8       9 \n\n\nReading the output above:\n1. What is the mean of these scores?\n66.577.5\n2. What is the standard deviation (rounded to 1 decimal)?\n0.51.01.22.0\n3. In the summary() output, what does “Min.” tell you?\nThe lowest score in the dataThe average scoreThe most common scoreThe middle score\n4. What does “Median” tell you?\nThe lowest scoreThe highest scoreThe middle value when data is orderedThe most common score\n\n\n\n\n\n\nTipReading R Output\n\n\n\nThe key functions for descriptive statistics:\n\nmean() gives you the average\nsd() gives you the standard deviation\nsummary() gives you Min, Quartiles, Median, Mean, Max — a complete picture!\n\n\n\nTrue or False: A larger SD means scores are MORE spread out. TRUEFALSE\nTrue or False: A SD of 0 would mean everyone got the exact same score. TRUEFALSE\n\n\n\nReal Data: Comparing Labs\n\n\n\nMemory Scores by Lab\n\n\nLab\nn\nMean\nSD\nMin\nMax\n\n\n\n\nLab A\n\n\n\n\n\n\n\n(Abstract)\n8\n6.00\n1.51\n3\n8\n\n\nLab B\n\n\n\n\n\n\n\n(Concrete)\n12\n6.33\n2.53\n2\n10\n\n\n\n\n\nLooking at the table above:\nWhich lab had the higher mean recall?\nLab A (Abstract)Lab B (Concrete)They were the same\nIs the difference between means (about 0.3 words) large or small compared to the SD (about 2)?\nAbout the same size as the SDMuch larger than the SDMuch smaller than the SD\n\n\n\n\n\n\nImportantThe Key Insight\n\n\n\nA difference between means only matters if it’s big relative to the spread (SD).\n\nSignal = difference between means\nNoise = variability within groups (SD)\n\nIs the signal bigger than the noise?",
+    "objectID": "week12/lab/activity.html#task-5-sleep-memory",
+    "href": "week12/lab/activity.html#task-5-sleep-memory",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 5: Sleep & Memory",
+    "text": "Task 5: Sleep & Memory\n\nThe Question\nBefore the session, you told us how many hours you slept last night. We also measured how many words you recalled.\nIs there a relationship between sleep and memory?\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ5.1 Is there an IV in this study?\nYes - sleep hoursYes - memory scoreNo - we measured both variables, we didn’t manipulate eitherYes - the participant\nQ5.2 What design type is this? (See correlational design)\nBetween-subjectsWithin-subjectsCorrelationalExperimental\nQ5.3 What does a positive correlation mean here?\nSleep causes better memoryPeople who slept more tended to recall more wordsPeople who slept less recalled more wordsThere is no relationship\nQ5.4 Can we say that sleep causes better memory based on this data?\nTRUEFALSE\nQ5.5 Why can’t we make causal claims from correlational data?\nThe sample was too smallThe correlation wasn’t strong enoughThird variables might explain the relationship (e.g., health, motivation)Correlations are always meaningless\n\n\n\n\n\n\nWarningThe Critical Point: Correlation ≠ Causation\n\n\n\nEven if we find a relationship between sleep and memory, we cannot say sleep causes better memory. Why?\n\nMaybe healthier people sleep more AND have better memory\nMaybe motivated students prepare better (sleep AND study)\nMaybe stress reduces both sleep AND memory\n\nThis is why experiments (with manipulation) are needed to establish causation.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -559,25 +559,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/activity.html#activity-4-hypothesis-writing-practice-20-min",
-    "href": "week12/lab/activity.html#activity-4-hypothesis-writing-practice-20-min",
-    "title": "Week 12 Lab Activity",
-    "section": "Activity 4: Hypothesis Writing Practice (20 min)",
-    "text": "Activity 4: Hypothesis Writing Practice (20 min)\n\nWriting Hypotheses for the Memory Experiment\nThe experimental hypothesis (H₁) predicts there WILL be an effect.\nThe null hypothesis (H₀) predicts there will be NO effect.\nFor the Lab A vs Lab B memory comparison:\nWhich is a correct EXPERIMENTAL hypothesis?\nConcrete words will be recalled better than abstract wordsThere will be no difference between word typesWord type cannot affect memoryAll participants will recall 5 words\nWhich is a correct NULL hypothesis?\nConcrete words will be recalled betterAbstract words will be recalled betterThere will be no difference in recall between word typesMemory doesn’t exist\n\n\n\nOne-tailed vs Two-tailed\nOne-tailed: Predicts the DIRECTION (“Group A will be HIGHER than Group B”)\nTwo-tailed: Predicts a difference but NOT the direction (“Groups will DIFFER”)\n“Concrete words will be easier to remember than abstract words” is:\nOne-tailed (predicts direction)Two-tailed (no direction)Null hypothesisNot a hypothesis\n“Word type will affect memory” is:\nOne-tailed (predicts direction)Two-tailed (no direction)Null hypothesisNot a hypothesis\n\n\n\nWrite Your Own\nFor the pre-post mood comparison, which hypothesis is correctly written?\nOne-tailed hypothesis:\nMood ratings will be higher after the session than beforeMood ratings will change after the sessionThere will be no change in moodMood cannot be measured\nTwo-tailed hypothesis:\nMood will improve after the sessionMood ratings will differ between before and after the sessionThere will be no change in moodMood will decrease",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Activity"
-    ]
-  },
-  {
-    "objectID": "week12/lab/activity.html#activity-5-mcq-practice-20-min",
-    "href": "week12/lab/activity.html#activity-5-mcq-practice-20-min",
-    "title": "Week 12 Lab Activity",
-    "section": "Activity 5: MCQ Practice (20 min)",
-    "text": "Activity 5: MCQ Practice (20 min)\n\nInvestigation 1: Throwing Accuracy\nStudents threw balls with their dominant hand (10 throws) and their non-dominant hand (5 throws). We measured accuracy (% successful throws).\n1. Design type:\nBetween-subjectsWithin-subjectsCorrelational\n2. Why is this within-subjects?\nDifferent people used different handsThe same person threw with BOTH handsHands were randomly assigned\n3. What is the IV?\nHand used (dominant vs non-dominant)Throwing accuracyNumber of throwsNo IV\n4. What is the DV?\nHand usedThrowing accuracy (%)Number of throwsParticipant age\n\n\nInvestigation 2: Self-Rating vs Performance\nBefore throwing, students rated how good they thought they’d be (1-10). We then measured their actual accuracy.\n1. Design type:\nBetween-subjectsWithin-subjectsCorrelational\n2. Is there an IV?\nYes - self-ratingYes - actual accuracyNo - neither variable was manipulated\n3. Why can’t we say self-rating CAUSES good performance?\nSample too smallWrong testNo manipulation means no causal claim\n\n\nInvestigation 3: Sixth Sense\nStudents tried to detect if someone was staring at them (6 trials). If just guessing, you’d expect 3/6 (50%) correct.\n1. If someone got 5/6 correct, does that PROVE they have a sixth sense?\nTRUEFALSE\n2. Why not?\n5/6 is impossibleSome people will get 5/6 just by luckThe experiment was flawedSixth sense doesn’t exist\n3. What would 50% accuracy suggest?\nThey definitely have a sixth senseThey definitely don’t have a sixth sensePerformance at chance level - just guessing",
+    "objectID": "week12/lab/activity.html#task-6-sixth-sense",
+    "href": "week12/lab/activity.html#task-6-sixth-sense",
+    "title": "Design Detectives: DataLab",
+    "section": "Task 6: Sixth Sense",
+    "text": "Task 6: Sixth Sense\n\nWhat You Did\n6 trials: Someone either stared at you or didn’t. You guessed which.\nIf just guessing randomly: You’d expect to get 3 out of 6 correct (50%).\n\n\nYour Results\n\n\n\n\n\n\n\n\n\n\n\nGroup Discussion Questions\nQ6.1 If someone got 5 out of 6 correct, does that prove they have a sixth sense?\nTRUEFALSE\nQ6.2 Why not?\n5/6 is impossibleSome people will get 5/6 just by luck, even without any real abilityThe experiment was designed wrongSixth sense definitely doesn’t exist\nQ6.3 What does 50% accuracy suggest?\nThey definitely have a sixth senseThey definitely don’t have a sixth sensePerformance is at chance level - consistent with random guessingThe task was too hard\nQ6.4 What is the null hypothesis for this study?\nPeople can detect staringPeople cannot detect staringDetection accuracy equals 50% (chance level)There is no null hypothesis\n\n\n\n\n\n\nTipWhy Statistics Matter\n\n\n\n\n\nWith 28 people, some will get lucky just by chance. If everyone flipped a coin 6 times, someone would get 5 or 6 heads - but that doesn’t mean their coin is biased!\nStatistics help us ask: Is this result more extreme than we’d expect from chance alone?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -589,9 +575,9 @@
   {
     "objectID": "week12/lab/activity.html#summary",
     "href": "week12/lab/activity.html#summary",
-    "title": "Week 12 Lab Activity",
+    "title": "Design Detectives: DataLab",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nImportantKey Takeaways\n\n\n\nDesign Types:\n\nBetween-subjects = Different people in each condition (Lab A vs Lab B)\nWithin-subjects = Same people in all conditions (Pre vs Post mood)\nCorrelational = No manipulation, measuring relationships (Self-rating vs accuracy)\n\nVariables:\n\nIV = What the researcher manipulates (word type, time)\nDV = What the researcher measures (recall, mood rating)\nCorrelational designs have NO IV\n\nDescriptive Statistics:\n\nMean = Average value\nSD = How spread out values are\nA difference between means matters if it’s big relative to the SD",
+    "text": "Summary\n\n\n\n\n\n\nImportantKey Concepts from Today\n\n\n\nDesign Types (See glossary)\n\n\n\nType\nSame people?\nIV?\nTest to use\nExample\n\n\n\n\nBetween-subjects\nNo\nYes\nIndependent t-test\nMemory (Lab A vs B)\n\n\nWithin-subjects\nYes\nYes\nPaired t-test\nThrowing (Dom vs Non-dom)\n\n\nCorrelational\nN/A\nNo\nCorrelation\nSleep & Memory\n\n\n\nVariables\n\nIV (Independent Variable): What the researcher manipulates or controls\nDV (Dependent Variable): What the researcher measures\n\nHypotheses\n\nExperimental (H1): Predicts an effect or difference\nNull (H0): Predicts no effect (any difference is due to chance)\nOne-tailed: Specifies the direction (“A will be greater than B”)\nTwo-tailed: Just predicts a difference (“A and B will differ”)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -603,9 +589,9 @@
   {
     "objectID": "week12/lab/activity.html#next-steps",
     "href": "week12/lab/activity.html#next-steps",
-    "title": "Week 12 Lab Activity",
+    "title": "Design Detectives: DataLab",
     "section": "Next Steps",
-    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz\nReview the Lecture Reading\nStart thinking about your Research Plan (due Week 16)!",
+    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz to test your understanding\nReview the Lecture Reading for more detail on these concepts\nStart thinking about your Research Plan (due Week 16) - you now have all the vocabulary you need!\n\n\n\n\n\n\n\n\nNoteCheck Your Progress\n\n\n\n\n\nHow many questions did you get correct? Use this as a guide:\n\n75-100%: Great understanding - ready for the self-assessment\n50-75%: Good start - review the concepts you missed\nBelow 50%: Spend time with the lecture reading before the quiz\n\nRemember: This is formative - mistakes are learning opportunities!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -615,11 +601,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#design-detectives",
-    "href": "week12/lab/instructor-slides.html#design-detectives",
-    "title": "Design Detectives",
-    "section": "Design Detectives",
-    "text": "Design Detectives",
+    "objectID": "week12/lab/instructor-slides.html#your-data-your-discoveries",
+    "href": "week12/lab/instructor-slides.html#your-data-your-discoveries",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Data, Your Discoveries",
+    "text": "Your Data, Your Discoveries",
     "crumbs": [
       "Home",
       "Term 2",
@@ -629,11 +615,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#todays-focus",
-    "href": "week12/lab/instructor-slides.html#todays-focus",
-    "title": "Design Detectives",
-    "section": "Today’s Focus",
-    "text": "Today’s Focus\n\nThis is NOT asking you to perform any analysis. Today is about:\n\nSeeing YOUR real DataLab data\nIdentifying design types, IVs, and DVs\nUnderstanding what means and SDs tell us\nWriting hypotheses",
+    "objectID": "week12/lab/instructor-slides.html#lab-overview",
+    "href": "week12/lab/instructor-slides.html#lab-overview",
+    "title": "Design Detectives: DataLab",
+    "section": "Lab Overview",
+    "text": "Lab Overview\nToday we work through your real DataLab results as a class.\n\n\nStructure\n\nTask overview (me)\nSmall group discussion (you)\nWhole-class debrief (together)\nRepeat for each task\n\n\nYour Job\n\nForm groups of 2-3\nOpen the activity page\nDiscuss the questions\nBe ready to share answers",
     "crumbs": [
       "Home",
       "Term 2",
@@ -643,11 +629,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#lab-structure-90-min",
-    "href": "week12/lab/instructor-slides.html#lab-structure-90-min",
-    "title": "Design Detectives",
-    "section": "Lab Structure (~90 min)",
-    "text": "Lab Structure (~90 min)\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:10\nThese slides + setup\n\n\n10:10-10:30\nActivity 1: Lab A vs Lab B\n\n\n10:30-10:50\nActivity 2: Pre-Post Mood\n\n\n10:50-11:20\nActivity 3: Descriptive Stats\n\n\n11:20-11:40\nActivity 4: Hypothesis Writing\n\n\n11:40-12:00\nActivity 5: MCQ Practice",
+    "objectID": "week12/lab/instructor-slides.html#timeline",
+    "href": "week12/lab/instructor-slides.html#timeline",
+    "title": "Design Detectives: DataLab",
+    "section": "Timeline",
+    "text": "Timeline\n\n\n\nPhase\nTask\nDuration\n\n\n\n\n1\nReflex Test\n12 min\n\n\n2\nTime Warp\n10 min\n\n\n3\nMemory\n15 min\n\n\n4\nFrontal Lob\n12 min\n\n\n5\nSleep & Memory\n12 min\n\n\n6\nSixth Sense\n10 min\n\n\n7\nWrap-up\n10 min\n\n\n\nTotal: ~80 minutes",
     "crumbs": [
       "Home",
       "Term 2",
@@ -657,11 +643,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#open-the-activity",
-    "href": "week12/lab/instructor-slides.html#open-the-activity",
-    "title": "Design Detectives",
-    "section": "Open the Activity",
-    "text": "Open the Activity\n\nNavigate to: Week 12 &gt; Lab &gt; Activity",
+    "objectID": "week12/lab/instructor-slides.html#open-the-activity-page",
+    "href": "week12/lab/instructor-slides.html#open-the-activity-page",
+    "title": "Design Detectives: DataLab",
+    "section": "Open the Activity Page",
+    "text": "Open the Activity Page\nNavigate to Week 12 &gt; Lab &gt; Activity\nYou’ll see questions for each task.\nWork through them with your group.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -671,11 +657,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#lab-a-vs-lab-b-20-min",
-    "href": "week12/lab/instructor-slides.html#lab-a-vs-lab-b-20-min",
-    "title": "Design Detectives",
-    "section": "Lab A vs Lab B (~20 min)",
-    "text": "Lab A vs Lab B (~20 min)",
+    "objectID": "week12/lab/instructor-slides.html#how-fast-are-your-reactions",
+    "href": "week12/lab/instructor-slides.html#how-fast-are-your-reactions",
+    "title": "Design Detectives: DataLab",
+    "section": "How fast are your reactions?",
+    "text": "How fast are your reactions?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -685,11 +671,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#the-hidden-manipulation",
-    "href": "week12/lab/instructor-slides.html#the-hidden-manipulation",
-    "title": "Design Detectives",
-    "section": "The Hidden Manipulation",
-    "text": "The Hidden Manipulation\n\nLab A memorised abstract words (justice, freedom, wisdom…)\nLab B memorised concrete words (chair, river, mountain…)\nDid it make a difference?",
+    "objectID": "week12/lab/instructor-slides.html#what-you-did",
+    "href": "week12/lab/instructor-slides.html#what-you-did",
+    "title": "Design Detectives: DataLab",
+    "section": "What You Did",
+    "text": "What You Did\nYou caught a falling 30cm ruler five times.\nThe distance caught reflects reaction time:\n\\[\\text{RT (ms)} = \\sqrt{\\frac{2 \\times \\text{distance (cm)}}{980}} \\times 1000\\]\nShorter distance = faster reactions",
     "crumbs": [
       "Home",
       "Term 2",
@@ -699,11 +685,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#your-data-lab-a-vs-lab-b",
-    "href": "week12/lab/instructor-slides.html#your-data-lab-a-vs-lab-b",
-    "title": "Design Detectives",
-    "section": "Your Data: Lab A vs Lab B",
-    "text": "Your Data: Lab A vs Lab B",
+    "objectID": "week12/lab/instructor-slides.html#your-results",
+    "href": "week12/lab/instructor-slides.html#your-results",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Results",
+    "text": "Your Results",
     "crumbs": [
       "Home",
       "Term 2",
@@ -713,11 +699,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#key-questions-to-emphasise",
-    "href": "week12/lab/instructor-slides.html#key-questions-to-emphasise",
-    "title": "Design Detectives",
-    "section": "Key Questions to Emphasise",
-    "text": "Key Questions to Emphasise\nAsk students:\n\nWhat did the researcher MANIPULATE? (Word type)\nWhat did the researcher MEASURE? (Recall)\nSame people or different people? (Different)\nDesign type? (Between-subjects)",
+    "objectID": "week12/lab/instructor-slides.html#group-discussion",
+    "href": "week12/lab/instructor-slides.html#group-discussion",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 1.1-1.6:\n\nWhat pattern do you see from Trial 1 to Trial 5?\nWhat design type is this? (Between/Within/Correlational)\nWhat is the IV? What is the DV?\nWrite a hypothesis for the learning effect.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -727,11 +713,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#the-key-insight",
-    "href": "week12/lab/instructor-slides.html#the-key-insight",
-    "title": "Design Detectives",
-    "section": "The Key Insight",
-    "text": "The Key Insight\n\n\n\n\n\n\nBetween-Subjects\n\n\nDifferent people in Lab A vs Lab B.\nWe’re comparing between groups.",
+    "objectID": "week12/lab/instructor-slides.html#debrief-the-answers",
+    "href": "week12/lab/instructor-slides.html#debrief-the-answers",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: The Answers",
+    "text": "Debrief: The Answers\nDesign: Within-subjects (same people, all trials)\nIV: Trial number (1, 2, 3, 4, 5)\nDV: Catch distance (cm) or reaction time (ms)\nHypothesis (one-tailed): Reaction times will decrease from Trial 1 to Trial 5.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -741,11 +727,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#same-person-different-conditions-20-min",
-    "href": "week12/lab/instructor-slides.html#same-person-different-conditions-20-min",
-    "title": "Design Detectives",
-    "section": "Same Person, Different Conditions (~20 min)",
-    "text": "Same Person, Different Conditions (~20 min)",
+    "objectID": "week12/lab/instructor-slides.html#the-learning-effect",
+    "href": "week12/lab/instructor-slides.html#the-learning-effect",
+    "title": "Design Detectives: DataLab",
+    "section": "The Learning Effect",
+    "text": "The Learning Effect\n\nWhy does this matter? Practice effects are a confound we control for in experiments.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -755,11 +741,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#your-data-mood-before-vs-after",
-    "href": "week12/lab/instructor-slides.html#your-data-mood-before-vs-after",
-    "title": "Design Detectives",
-    "section": "Your Data: Mood Before vs After",
-    "text": "Your Data: Mood Before vs After",
+    "objectID": "week12/lab/instructor-slides.html#how-well-do-you-perceive-time",
+    "href": "week12/lab/instructor-slides.html#how-well-do-you-perceive-time",
+    "title": "Design Detectives: DataLab",
+    "section": "How well do you perceive time?",
+    "text": "How well do you perceive time?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -769,11 +755,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#key-point",
-    "href": "week12/lab/instructor-slides.html#key-point",
-    "title": "Design Detectives",
-    "section": "Key Point",
-    "text": "Key Point\n\nThe faint lines connect the same person.\nThis is what makes it a within-subjects design!",
+    "objectID": "week12/lab/instructor-slides.html#what-you-did-1",
+    "href": "week12/lab/instructor-slides.html#what-you-did-1",
+    "title": "Design Detectives: DataLab",
+    "section": "What You Did",
+    "text": "What You Did\nYou estimated 60 seconds without counting.\nThen you estimated the length of lines and strings.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -783,11 +769,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#questions-to-emphasise",
-    "href": "week12/lab/instructor-slides.html#questions-to-emphasise",
-    "title": "Design Detectives",
-    "section": "Questions to Emphasise",
-    "text": "Questions to Emphasise\n\nSame people or different? (Same)\nDesign type? (Within-subjects)\nWhy is this powerful? (Each person is their own control)",
+    "objectID": "week12/lab/instructor-slides.html#your-time-estimates",
+    "href": "week12/lab/instructor-slides.html#your-time-estimates",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Time Estimates",
+    "text": "Your Time Estimates",
     "crumbs": [
       "Home",
       "Term 2",
@@ -797,11 +783,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#understanding-mean-and-sd-30-min",
-    "href": "week12/lab/instructor-slides.html#understanding-mean-and-sd-30-min",
-    "title": "Design Detectives",
-    "section": "Understanding Mean and SD (~30 min)",
-    "text": "Understanding Mean and SD (~30 min)",
+    "objectID": "week12/lab/instructor-slides.html#group-discussion-1",
+    "href": "week12/lab/instructor-slides.html#group-discussion-1",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 2.1-2.3:\n\nDid people over- or underestimate 60 seconds on average?\nWhat design is this? (Between/Within/Correlational)\nWhat would the null hypothesis be?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -811,11 +797,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#same-mean-different-spread",
-    "href": "week12/lab/instructor-slides.html#same-mean-different-spread",
-    "title": "Design Detectives",
-    "section": "Same Mean, Different Spread",
-    "text": "Same Mean, Different Spread\n\n\n\n\n\n\n\nNote\n\n\nThe mean alone doesn’t tell the whole story!",
+    "objectID": "week12/lab/instructor-slides.html#debrief-time-perception",
+    "href": "week12/lab/instructor-slides.html#debrief-time-perception",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: Time Perception",
+    "text": "Debrief: Time Perception\nFinding: Most people underestimate 60 seconds (say it’s up before it actually is).\nWhy? When engaged in a task, time seems to pass faster.\nDesign: This is testing against a known value (60 seconds) - a one-sample design.\nNull hypothesis: Mean estimate will equal 60 seconds (no systematic bias).",
     "crumbs": [
       "Home",
       "Term 2",
@@ -825,11 +811,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#reading-r-output",
-    "href": "week12/lab/instructor-slides.html#reading-r-output",
-    "title": "Design Detectives",
-    "section": "Reading R Output",
-    "text": "Reading R Output\nStudents will see actual R code output:\nmean(scores)\n[1] 7\n\nsd(scores)\n[1] 1.195229\n\nsummary(scores)\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.\n   5.00    6.00    7.00    7.00    8.00    9.00\nTask: Identify what each number means.",
+    "objectID": "week12/lab/instructor-slides.html#the-big-reveal",
+    "href": "week12/lab/instructor-slides.html#the-big-reveal",
+    "title": "Design Detectives: DataLab",
+    "section": "The big reveal",
+    "text": "The big reveal",
     "crumbs": [
       "Home",
       "Term 2",
@@ -839,11 +825,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#signal-vs-noise",
-    "href": "week12/lab/instructor-slides.html#signal-vs-noise",
-    "title": "Design Detectives",
-    "section": "Signal vs Noise",
-    "text": "Signal vs Noise\n\nSignal = difference between group means\nNoise = variability within groups (SD)\nA difference only matters if it’s big relative to the SD!",
+    "objectID": "week12/lab/instructor-slides.html#what-you-did-2",
+    "href": "week12/lab/instructor-slides.html#what-you-did-2",
+    "title": "Design Detectives: DataLab",
+    "section": "What You Did",
+    "text": "What You Did\nYou memorised 10 words and tried to recall them.\nBut here’s what you didn’t know…",
     "crumbs": [
       "Home",
       "Term 2",
@@ -853,11 +839,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#practice-20-min",
-    "href": "week12/lab/instructor-slides.html#practice-20-min",
-    "title": "Design Detectives",
-    "section": "Practice (~20 min)",
-    "text": "Practice (~20 min)",
+    "objectID": "week12/lab/instructor-slides.html#the-secret-manipulation",
+    "href": "week12/lab/instructor-slides.html#the-secret-manipulation",
+    "title": "Design Detectives: DataLab",
+    "section": "The Secret Manipulation",
+    "text": "The Secret Manipulation\n\n\nLab A memorised:\nABSTRACT words\n\nJustice\nFreedom\nWisdom\nCourage\nTruth\n\n\nLab B memorised:\nCONCRETE words\n\nChair\nRiver\nMountain\nApple\nHammer\n\n\nQuestion: Does word type affect memory?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -867,11 +853,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#key-distinctions",
-    "href": "week12/lab/instructor-slides.html#key-distinctions",
-    "title": "Design Detectives",
-    "section": "Key Distinctions",
-    "text": "Key Distinctions\n\n\n\nType\nPredicts\n\n\n\n\nExperimental (H₁)\nThere WILL be an effect\n\n\nNull (H₀)\nThere will be NO effect\n\n\nOne-tailed\nDirection of effect\n\n\nTwo-tailed\nDifference, not direction",
+    "objectID": "week12/lab/instructor-slides.html#your-results-lab-a-vs-lab-b",
+    "href": "week12/lab/instructor-slides.html#your-results-lab-a-vs-lab-b",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Results: Lab A vs Lab B",
+    "text": "Your Results: Lab A vs Lab B",
     "crumbs": [
       "Home",
       "Term 2",
@@ -881,11 +867,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#example",
-    "href": "week12/lab/instructor-slides.html#example",
-    "title": "Design Detectives",
-    "section": "Example",
-    "text": "Example\n\nOne-tailed: “Concrete words will be recalled better than abstract words”\nTwo-tailed: “Word type will affect memory”",
+    "objectID": "week12/lab/instructor-slides.html#the-statistics",
+    "href": "week12/lab/instructor-slides.html#the-statistics",
+    "title": "Design Detectives: DataLab",
+    "section": "The Statistics",
+    "text": "The Statistics\n\n\n\n\n\nLab\nn\nMean\nSD\n\n\n\n\nLab A\n\n\n\n\n\n(Abstract)\n13\n6.31\n1.89\n\n\nLab B\n\n\n\n\n\n(Concrete)\n15\n6.27\n1.98",
     "crumbs": [
       "Home",
       "Term 2",
@@ -895,11 +881,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#putting-it-together-20-min",
-    "href": "week12/lab/instructor-slides.html#putting-it-together-20-min",
-    "title": "Design Detectives",
-    "section": "Putting It Together (~20 min)",
-    "text": "Putting It Together (~20 min)",
+    "objectID": "week12/lab/instructor-slides.html#group-discussion-2",
+    "href": "week12/lab/instructor-slides.html#group-discussion-2",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 3.1-3.7:\n\nWhat is the IV? What is the DV?\nWhat design type is this?\nWrite an experimental hypothesis (one-tailed).\nWrite a null hypothesis.\nWhy might concrete words be easier to remember?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -909,11 +895,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#three-investigations",
-    "href": "week12/lab/instructor-slides.html#three-investigations",
-    "title": "Design Detectives",
-    "section": "Three Investigations",
-    "text": "Three Investigations\n\nThrowing Accuracy (dominant vs non-dominant hand) — Within-subjects\nSelf-Rating vs Performance — Correlational (no IV!)\nSixth Sense — vs Chance\n\nStudents apply what they’ve learned.",
+    "objectID": "week12/lab/instructor-slides.html#debrief-memory-design",
+    "href": "week12/lab/instructor-slides.html#debrief-memory-design",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: Memory Design",
+    "text": "Debrief: Memory Design\nIV: Word type (abstract vs concrete)\nDV: Number of words recalled (0-10)\nDesign: Between-subjects (different people in each lab)\nHypotheses:\n\nH1 (one-tailed): Concrete words will be recalled better than abstract words.\nH0: There will be no difference in recall between word types.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -923,11 +909,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#key-takeaways",
-    "href": "week12/lab/instructor-slides.html#key-takeaways",
-    "title": "Design Detectives",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\nDesign Types:\n\nBetween-subjects = Different people in each condition\nWithin-subjects = Same people in all conditions\nCorrelational = No manipulation, measuring relationships",
+    "objectID": "week12/lab/instructor-slides.html#why-concrete-words",
+    "href": "week12/lab/instructor-slides.html#why-concrete-words",
+    "title": "Design Detectives: DataLab",
+    "section": "Why Concrete Words?",
+    "text": "Why Concrete Words?\nDual Coding Theory (Paivio, 1971)\nConcrete words can be stored TWO ways:\n\nVerbal code (the word itself)\nVisual code (a mental image)\n\nAbstract words only have the verbal code.\nTwo codes &gt; One code = Better memory",
     "crumbs": [
       "Home",
       "Term 2",
@@ -937,11 +923,277 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#key-takeaways-1",
-    "href": "week12/lab/instructor-slides.html#key-takeaways-1",
-    "title": "Design Detectives",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\nVariables:\n\nIV = What the researcher manipulates\nDV = What the researcher measures\nCorrelational designs have NO IV",
+    "objectID": "week12/lab/instructor-slides.html#does-handedness-matter",
+    "href": "week12/lab/instructor-slides.html#does-handedness-matter",
+    "title": "Design Detectives: DataLab",
+    "section": "Does handedness matter?",
+    "text": "Does handedness matter?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#what-you-did-3",
+    "href": "week12/lab/instructor-slides.html#what-you-did-3",
+    "title": "Design Detectives: DataLab",
+    "section": "What You Did",
+    "text": "What You Did\nYou threw balls at a bucket:\n\n10 throws with dominant hand\n5 throws with non-dominant hand",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#your-throwing-results",
+    "href": "week12/lab/instructor-slides.html#your-throwing-results",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Throwing Results",
+    "text": "Your Throwing Results",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#group-discussion-3",
+    "href": "week12/lab/instructor-slides.html#group-discussion-3",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 4.1-4.6:\n\nSame people or different people in each condition?\nWhat design type is this?\nWhy is within-subjects “more powerful”?\nWhat is the IV? What is the DV?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#debrief-within-subjects-power",
+    "href": "week12/lab/instructor-slides.html#debrief-within-subjects-power",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: Within-Subjects Power",
+    "text": "Debrief: Within-Subjects Power\nDesign: Within-subjects (same person, both hands)\nIV: Hand used (dominant vs non-dominant)\nDV: Throwing accuracy (%)\nWhy more powerful?\nEach person is their own control. Individual differences (height, coordination, practice) are controlled because we compare YOU to YOU.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#the-statistical-test",
+    "href": "week12/lab/instructor-slides.html#the-statistical-test",
+    "title": "Design Detectives: DataLab",
+    "section": "The Statistical Test",
+    "text": "The Statistical Test\nFor within-subjects designs with two conditions, we use a paired t-test.\nIt asks: Is the difference between conditions larger than we’d expect by chance?\n\n\nMean difference: 13.7 percentage points",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#is-there-a-relationship",
+    "href": "week12/lab/instructor-slides.html#is-there-a-relationship",
+    "title": "Design Detectives: DataLab",
+    "section": "Is there a relationship?",
+    "text": "Is there a relationship?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#the-question",
+    "href": "week12/lab/instructor-slides.html#the-question",
+    "title": "Design Detectives: DataLab",
+    "section": "The Question",
+    "text": "The Question\nYou told us how much sleep you got last night.\nWe measured how many words you recalled.\nIs there a relationship between sleep and memory?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#your-results-1",
+    "href": "week12/lab/instructor-slides.html#your-results-1",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Results",
+    "text": "Your Results",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#group-discussion-4",
+    "href": "week12/lab/instructor-slides.html#group-discussion-4",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 5.1-5.5:\n\nIs there an IV in this study?\nWhat design type is this?\nWhat does the correlation tell us?\nCan we say sleep causes better memory?\nWhat’s the key limitation of correlational designs?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#debrief-correlational-design",
+    "href": "week12/lab/instructor-slides.html#debrief-correlational-design",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: Correlational Design",
+    "text": "Debrief: Correlational Design\nDesign: Correlational (no manipulation)\nVariables: Sleep hours AND memory score (neither is the IV)\nKey insight: We measured BOTH variables — we didn’t manipulate either.\n\n\n\n\n\n\nThe Critical Point\n\n\nCorrelation ≠ Causation\nMaybe sleep helps memory… OR maybe third variables (e.g., health, motivation) affect both!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#can-you-feel-being-stared-at",
+    "href": "week12/lab/instructor-slides.html#can-you-feel-being-stared-at",
+    "title": "Design Detectives: DataLab",
+    "section": "Can you feel being stared at?",
+    "text": "Can you feel being stared at?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#what-you-did-4",
+    "href": "week12/lab/instructor-slides.html#what-you-did-4",
+    "title": "Design Detectives: DataLab",
+    "section": "What You Did",
+    "text": "What You Did\n6 trials: Someone either stared at you or didn’t.\nYou guessed which it was.\nIf just guessing: You’d expect 50% correct (3 out of 6).",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#your-detection-accuracy",
+    "href": "week12/lab/instructor-slides.html#your-detection-accuracy",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Detection Accuracy",
+    "text": "Your Detection Accuracy",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#group-discussion-5",
+    "href": "week12/lab/instructor-slides.html#group-discussion-5",
+    "title": "Design Detectives: DataLab",
+    "section": "Group Discussion",
+    "text": "Group Discussion\n\n \nIn your groups, answer Questions 6.1-6.4:\n\nIf someone got 5/6 correct, does that prove they have a sixth sense?\nWhat is the null hypothesis here?\nWhat would 50% accuracy suggest?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#debrief-chance-and-the-null-hypothesis",
+    "href": "week12/lab/instructor-slides.html#debrief-chance-and-the-null-hypothesis",
+    "title": "Design Detectives: DataLab",
+    "section": "Debrief: Chance and the Null Hypothesis",
+    "text": "Debrief: Chance and the Null Hypothesis\nH0: Performance equals chance (50% - just guessing)\nH1: Performance differs from chance\nKey insight: Some people will get 5/6 or 6/6 just by luck, even with no real ability.\nWith 28 people flipping coins, SOMEONE will get 5+ heads. That doesn’t mean the coin is biased.\nThis is why we need statistics - to separate signal from noise.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#what-have-we-learned",
+    "href": "week12/lab/instructor-slides.html#what-have-we-learned",
+    "title": "Design Detectives: DataLab",
+    "section": "What have we learned?",
+    "text": "What have we learned?",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#design-types-summary",
+    "href": "week12/lab/instructor-slides.html#design-types-summary",
+    "title": "Design Detectives: DataLab",
+    "section": "Design Types Summary",
+    "text": "Design Types Summary\n\n\n\nDesign\nSame people?\nExample from today\n\n\n\n\nBetween-subjects\nNo\nMemory (Lab A vs Lab B)\n\n\nWithin-subjects\nYes\nThrowing (Dom vs Non-dom)\n\n\nCorrelational\nN/A\nSleep & Memory",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#key-vocabulary",
+    "href": "week12/lab/instructor-slides.html#key-vocabulary",
+    "title": "Design Detectives: DataLab",
+    "section": "Key Vocabulary",
+    "text": "Key Vocabulary\n\n\nVariables\n\nIV: What’s manipulated\nDV: What’s measured\n\nHypotheses\n\nH1: Predicts an effect\nH0: Predicts no effect\n\n\nDirection\n\nOne-tailed: Predicts direction\nTwo-tailed: Predicts difference only\n\nKey Concept\n\nChance: Random variation\nStatistics: Separating signal from noise",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lab/instructor-slides.html#your-assessments",
+    "href": "week12/lab/instructor-slides.html#your-assessments",
+    "title": "Design Detectives: DataLab",
+    "section": "Your Assessments",
+    "text": "Your Assessments\nEverything today connects to your assessments:\n\n\n\nAssessment\nWhat you practiced today\n\n\n\n\nResearch Plan\nIV, DV, design types, hypotheses\n\n\nMCQ Exam\nAll terminology and concepts\n\n\nEDS Assignment\nMeans, SDs, interpreting results",
     "crumbs": [
       "Home",
       "Term 2",
@@ -953,23 +1205,9 @@
   {
     "objectID": "week12/lab/instructor-slides.html#next-steps",
     "href": "week12/lab/instructor-slides.html#next-steps",
-    "title": "Design Detectives",
+    "title": "Design Detectives: DataLab",
     "section": "Next Steps",
-    "text": "Next Steps\nDirect students to:\n\nComplete the Week 12 Self-Assessment Quiz\nReview the Lecture Reading\nStart thinking about Research Plan (due Week 16)",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Instructor Slides"
-    ]
-  },
-  {
-    "objectID": "week12/lab/instructor-slides.html#then-lets-begin-the-activity",
-    "href": "week12/lab/instructor-slides.html#then-lets-begin-the-activity",
-    "title": "Design Detectives",
-    "section": "Then let’s begin the activity!",
-    "text": "Then let’s begin the activity!\n\nInstructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.",
+    "text": "Next Steps\n\nComplete the Week 12 Self-Assessment Quiz\nReview today’s activity page\nStart thinking about your Research Plan (due Week 16)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1035,11 +1273,11 @@
     "text": "Questions?\nIf you have questions after watching:\n\nPost in the VLE discussion board\nBring them to Monday’s lecture\nEmail g.wright@gold.ac.uk"
   },
   {
-    "objectID": "week12/lecture/slides.html#your-data-tells-a-story-lets-learn-how-to-read-it",
-    "href": "week12/lecture/slides.html#your-data-tells-a-story-lets-learn-how-to-read-it",
+    "objectID": "week12/lecture/slides.html#your-data-tell-a-story-lets-learn-how-to-read-it",
+    "href": "week12/lecture/slides.html#your-data-tell-a-story-lets-learn-how-to-read-it",
     "title": "Your Data, Your Discoveries",
-    "section": "Your data tells a story — let’s learn how to read it",
-    "text": "Your data tells a story — let’s learn how to read it",
+    "section": "Your data tell a story — let’s learn how to read it",
+    "text": "Your data tell a story — let’s learn how to read it",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1077,11 +1315,11 @@
     ]
   },
   {
-    "objectID": "week12/lecture/slides.html#you-generated-this-data-15-min",
-    "href": "week12/lecture/slides.html#you-generated-this-data-15-min",
+    "objectID": "week12/lecture/slides.html#you-generated-these-data-15-min",
+    "href": "week12/lecture/slides.html#you-generated-these-data-15-min",
     "title": "Your Data, Your Discoveries",
-    "section": "You generated this data (15 min)",
-    "text": "You generated this data (15 min)",
+    "section": "You generated these data (15 min)",
+    "text": "You generated these data (15 min)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1105,11 +1343,11 @@
     ]
   },
   {
-    "objectID": "week12/lecture/slides.html#you-are-a-data-point",
-    "href": "week12/lecture/slides.html#you-are-a-data-point",
+    "objectID": "week12/lecture/slides.html#you-are-a-data-point---a-datum",
+    "href": "week12/lecture/slides.html#you-are-a-data-point---a-datum",
     "title": "Your Data, Your Discoveries",
-    "section": "You Are a Data Point",
-    "text": "You Are a Data Point\n\n\nCan you spot yourself?",
+    "section": "You Are a Data Point - a datum",
+    "text": "You Are a Data Point - a datum\n\n\nCan you spot yourself?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1151,7 +1389,21 @@
     "href": "week12/lecture/slides.html#the-mean-whats-average",
     "title": "Your Data, Your Discoveries",
     "section": "The Mean: What’s Average?",
-    "text": "The Mean: What’s Average?\n\nMean (\\(\\bar{x}\\)) = Sum of all values ÷ Number of values\n\\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\n\n\nFor your memory scores: Mean = 6.2 words",
+    "text": "The Mean: What’s Average?\n\nMean (\\(\\bar{x}\\)) = Sum of all values ÷ Number of values\n\\[\\bar{x} = \\frac{\\sum x_i}{n}\\]",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 12: Research Design Framework",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week12/lecture/slides.html#thats-what-i-mean",
+    "href": "week12/lecture/slides.html#thats-what-i-mean",
+    "title": "Your Data, Your Discoveries",
+    "section": "That’s what I mean!",
+    "text": "That’s what I mean!\n\n\nFor your memory scores: Mean = 6.2 words",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1179,7 +1431,7 @@
     "href": "week12/lecture/slides.html#we-need-to-measure-spread",
     "title": "Your Data, Your Discoveries",
     "section": "We Need to Measure Spread",
-    "text": "We Need to Measure Spread\n\nStandard Deviation (SD) = How spread out the data is from the mean\n\n\nLow SD = Scores clustered together (consistent)\nHigh SD = Scores spread out (variable)\n\n\nFor your memory scores: SD = 2.14 words",
+    "text": "We Need to Measure Spread\n\nStandard Deviation (SD) = How spread out the data are from the mean\n\n\nLow SD = Scores clustered together (consistent)\nHigh SD = Scores spread out (variable)\n\n\nFor your memory scores: SD = 2.14 words",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1263,7 +1515,7 @@
     "href": "week12/lecture/slides.html#the-numbers",
     "title": "Your Data, Your Discoveries",
     "section": "The Numbers",
-    "text": "The Numbers\n\n\n\nLab\nWord Type\nn\nMean\nSD\n\n\n\n\nLab A\nAbstract\n8\n6\n1.51\n\n\nLab B\nConcrete\n12\n6.3\n2.53\n\n\n\n\nDifference: 0.3 words\n\n\nIs this difference real or just chance?",
+    "text": "The Numbers\n\n\n\n\n\n\n\n\n\n\nLab\nWord Type\nn\nMean\nSD\n\n\n\n\nLab A\nAbstract\n8\n6\n1.51\n\n\nLab B\nConcrete\n12\n6.3\n2.53\n\n\n\n\nDifference: 0.3 words\n\n\nIs this difference real or just chance?\n\n\nJoin us in week 14 and we will put that to the t-test!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1277,7 +1529,7 @@
     "href": "week12/lecture/slides.html#now-lets-introduce-the-terminology",
     "title": "Your Data, Your Discoveries",
     "section": "Now Let’s Introduce the Terminology",
-    "text": "Now Let’s Introduce the Terminology\n\nIndependent Variable (IV): What the researcher manipulates or controls\nDependent Variable (DV): What the researcher measures — the outcome\n\n\nIn the memory experiment:\n\nIV = Word type (abstract vs concrete)\nDV = Number of words recalled (0-10)",
+    "text": "Now Let’s Introduce the Terminology\n\nIndependent Variable (IV): What the researcher manipulates or controls\nDependent Variable (DV): What the researcher measures — the outcome\n\n\n\nIn the memory experiment:\n\nIV = Word type (abstract vs concrete)\nDV = Number of words recalled (0-10)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1291,7 +1543,7 @@
     "href": "week12/lecture/slides.html#design-type-between-subjects",
     "title": "Your Data, Your Discoveries",
     "section": "Design Type: Between-Subjects",
-    "text": "Design Type: Between-Subjects\n\nBetween-subjects design: Different participants in each condition\n\n\n\nLab A people only saw abstract words\nLab B people only saw concrete words\nYou couldn’t be in both labs!\n\n\n\nWhy? Between = different people in each group",
+    "text": "Design Type: Between-Subjects\n\nBetween-subjects design: Different participants in each condition\n\n\n\n\nLab A people only saw abstract words\nLab B people only saw concrete words\nYou couldn’t be in both labs!\n\n\n\nWhy? Between = different people in each group",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1543,7 +1795,7 @@
     "href": "week12/lecture/slides.html#why-statistics",
     "title": "Your Data, Your Discoveries",
     "section": "Why Statistics?",
-    "text": "Why Statistics?\nWith 20 people, some will get lucky:\n\nA few might get 5/6 or 6/6 just by chance\nDice won’t land perfectly evenly\nCoins won’t be exactly 50/50\n\n\nStatistics helps us ask: How surprising is this result?",
+    "text": "Why Statistics?\nWith 20 people, some will get lucky:\n\nA few might get 5/6 or 6/6 just by chance\nDice won’t land perfectly evenly\nCoins won’t be exactly 50/50\n\n\nStatistics helps us ask: How surprising is this result? See week14!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -5486,7 +5738,7 @@
     "href": "schedule.html#weekly-overview",
     "title": "Schedule",
     "section": "Weekly Overview",
-    "text": "Weekly Overview\n\n\n\nWeek\nDates\nTopic\nLecture\nLab\nAssessment\n\n\n\n\n11\n12-16 Jan\nDataLab\nNone\nDataLab\n\n\n\n12\n19-23 Jan\nDistributions & Variability\nYes\nDescriptives in R\n\n\n\n13\n26-30 Jan\nEstimation & CIs\nYes\nBootstrap CIs\n\n\n\n14\n2-6 Feb\nInference & t-tests\nYes\nt-tests in R\n\n\n\n15\n9-13 Feb\nCorrelation\nYes\nCorrelation in R\n\n\n\n—\n16-20 Feb\nReading Week\n—\n—\nWork on Research Plan\n\n\n16\n23-27 Feb\nRegression\nYes\nProject groups\nResearch Plan due Fri 27 Feb\n\n\n17\n2-6 Mar\nInterpretation & Credibility\nYes\nProject groups\n\n\n\n18\n9-13 Mar\nMCQ Exam\nMCQ Exam\nProject groups\nMCQ Exam Mon 9 Mar\n\n\n19\n16-20 Mar\nProject Workshop\nYes\nProject groups\nEDS due Fri 20 Mar\n\n\n20\n23-27 Mar\nWrapping Up\nYes\nReport writing",
+    "text": "Weekly Overview\n\n\n\nWeek\nDates\nTopic\nLecture\nLab\nAssessment\n\n\n\n\n11\n12-16 Jan\nDataLab\nNone\nDataLab\n\n\n\n12\n19-23 Jan\nDistributions & Variability\nYes\nDescriptives in R\n\n\n\n13\n26-30 Jan\nBuilding Your Research\nYes\nResearch Plan Workshop\n\n\n\n14\n2-6 Feb\nIs Your Effect Real?\nYes\nt-tests in R\n\n\n\n15\n9-13 Feb\nCorrelation\nYes\nCorrelation in R\n\n\n\n—\n16-20 Feb\nReading Week\n—\n—\nWork on Research Plan\n\n\n16\n23-27 Feb\nRegression\nYes\nProject groups\nResearch Plan due Fri 27 Feb\n\n\n17\n2-6 Mar\nInterpretation & Credibility\nYes\nProject groups\n\n\n\n18\n9-13 Mar\nMCQ Exam\nMCQ Exam\nProject groups\nMCQ Exam Mon 9 Mar\n\n\n19\n16-20 Mar\nProject Workshop\nYes\nProject groups\nEDS due Fri 20 Mar\n\n\n20\n23-27 Mar\nWrapping Up\nYes\nReport writing",
     "crumbs": [
       "Home",
       "Overview",
@@ -5522,7 +5774,7 @@
     "href": "schedule.html#week-by-week-detail",
     "title": "Schedule",
     "section": "Week-by-Week Detail",
-    "text": "Week-by-Week Detail\n\nFirst Half: Building Skills (Weeks 11-15)\nWeek 11: DataLab\n\nGenerate the dataset you’ll use all term\nForm your project groups\nNo lecture\n\nWeek 12: Distributions & Variability\n\nFirst lecture (2 hours)\nMean, median, mode, standard deviation\nIntroduction to R for descriptives\nReport writing: Descriptive statistics\n\nWeek 13: Estimation & Confidence Intervals\n\nPoint estimates vs interval estimates\nBootstrap confidence intervals\nEffect sizes (Cohen’s d)\nReport writing: CIs and effect sizes\n\nWeek 14: Inference & t-tests\n\nNull hypothesis logic\np-values and significance\nBetween vs within designs\nt-tests and their nonparametric alternatives\nReport writing: t-test results\n\nWeek 15: Correlation\n\nScatterplots and relationships\nPearson vs Spearman\nCorrelation ≠ causation\nLast week before Reading Week\nReport writing: Correlation results\n\n\n\nReading Week\n\nWork on your Research Plan (due Week 16)\nReview material for MCQ (Week 18)\nNo taught sessions\n\n\n\nSecond Half: Application & Assessment (Weeks 16-20)\nWeek 16: Regression\n\nResearch Plan due Friday\nFrom correlation to prediction\nLine of best fit\nLabs now in project groups\nReport writing: Methods section\n\nWeek 17: Interpretation & Credibility\n\nP-hacking and HARKing\nReplication crisis\nMCQ prep in lecture\nReport writing: Introduction section\n\nWeek 18: MCQ Exam\n\nMCQ Exam Monday (in lecture slot)\nLab is project support\nReport writing: Introduction continued\n\nWeek 19: Project Workshop\n\nAPA results reporting\nProject analysis support\nEDS preview\nReport writing: Discussion preview\n\nWeek 20: Wrapping Up\n\nEDS Assignment due Friday\nLecture: Project data showcase, lab report structure, discussion sections\nLab: Final analysis support and report writing\nReport writing: Discussion section — interpreting findings, limitations, implications",
+    "text": "Week-by-Week Detail\n\nFirst Half: Building Skills (Weeks 11-15)\nWeek 11: DataLab\n\nGenerate the dataset you’ll use all term\nForm your project groups\nNo lecture\n\nWeek 12: Distributions & Variability\n\nFirst lecture (2 hours)\nMean, median, mode, standard deviation\nIntroduction to R for descriptives\nReport writing: Descriptive statistics\n\nWeek 13: Building Your Research\n\nOperationalising variables (with real paper examples)\nWriting hypotheses (one-tailed vs two-tailed)\nDesign decisions and trade-offs\nConnecting design to statistical tests\nAssessment focus: Research Plan preparation\n\nWeek 14: Is Your Effect Real?\n\nNull hypothesis significance testing\np-values and significance\nConfidence intervals and effect sizes (Cohen’s d)\nIndependent vs paired t-tests\nComplete APA reporting\nReport writing: t-test results with CIs and effect sizes\n\nWeek 15: Correlation\n\nScatterplots and relationships\nPearson vs Spearman\nCorrelation ≠ causation\nLast week before Reading Week\nReport writing: Correlation results\n\n\n\nReading Week\n\nWork on your Research Plan (due Week 16)\nReview material for MCQ (Week 18)\nNo taught sessions\n\n\n\nSecond Half: Application & Assessment (Weeks 16-20)\nWeek 16: Regression\n\nResearch Plan due Friday\nFrom correlation to prediction\nLine of best fit\nLabs now in project groups\nReport writing: Methods section\n\nWeek 17: Interpretation & Credibility\n\nP-hacking and HARKing\nReplication crisis\nMCQ prep in lecture\nReport writing: Introduction section\n\nWeek 18: MCQ Exam\n\nMCQ Exam Monday (in lecture slot)\nLab is project support\nReport writing: Introduction continued\n\nWeek 19: Project Workshop\n\nAPA results reporting\nProject analysis support\nEDS preview\nReport writing: Discussion preview\n\nWeek 20: Wrapping Up\n\nEDS Assignment due Friday\nLecture: Project data showcase, lab report structure, discussion sections\nLab: Final analysis support and report writing\nReport writing: Discussion section — interpreting findings, limitations, implications",
     "crumbs": [
       "Home",
       "Overview",
@@ -8872,9 +9124,9 @@
   {
     "objectID": "week12/lab/reading.html",
     "href": "week12/lab/reading.html",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll use R to compute descriptive statistics. You don’t need any prior programming experience — we’ll use WebR, which runs directly in your browser.",
+    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8886,9 +9138,9 @@
   {
     "objectID": "week12/lab/reading.html#overview",
     "href": "week12/lab/reading.html#overview",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll use R to compute descriptive statistics. You don’t need any prior programming experience — we’ll use WebR, which runs directly in your browser.",
+    "text": "This reading prepares you for the lab session where you’ll explore descriptive statistics using the DataLab data. The goal is to understand what these statistics tell us about our data, not to master R syntax.\nBy the end of this reading, you’ll be able to:\n\nInterpret means, medians, and standard deviations\nUnderstand what the range and quartiles tell us\nRecognise when different measures are appropriate\nUse R to compute these statistics (with help)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8898,11 +9150,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#what-is-r",
-    "href": "week12/lab/reading.html#what-is-r",
-    "title": "Chapter 4: Introduction to R",
-    "section": "What Is R?",
-    "text": "What Is R?\nR is a programming language designed for statistical analysis. It’s:\n\nFree and open-source — anyone can use it\nPowerful — handles everything from simple means to complex models\nWidely used — the standard in psychology, biology, medicine, and data science\nReproducible — your analysis is documented in code\n\n\nWhy Learn R?\nExcel can calculate a mean. So why bother with R?\n\nReproducibility: R code documents exactly what you did. “I calculated the mean” becomes mean(data$reaction_time) — clear and precise.\nEfficiency: Once written, code can be reused. Analyse one dataset, apply the same analysis to another.\nCapabilities: R handles analyses that Excel simply cannot — bootstrapping, mixed models, complex visualisations.\nTransparency: Sharing code lets others check your work. This is increasingly required in psychology journals.",
+    "objectID": "week12/lab/reading.html#part-1-describing-the-centre",
+    "href": "week12/lab/reading.html#part-1-describing-the-centre",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 1: Describing the Centre",
+    "text": "Part 1: Describing the Centre\nWhen we collect data, the first question is usually: What’s typical?\n\nThe Mean: The Balancing Point\nThe mean is the arithmetic average. If we measured 5 people’s memory scores:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe mean is 7. This is the “balancing point” — if you put these scores on a seesaw, 7 is where it would balance.\n\n\nThe Median: The Middle Value\nThe median is the middle value when data are sorted. Half the values are above it, half below.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWith 5 values, the median is the 3rd value (when sorted). Here, both mean and median are 7.\n\n\nWhen Mean and Median Differ\nSometimes they tell different stories. Consider these scores:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe mean shoots up to 10, but the median stays at 7. The median is resistant to extreme values (outliers). The mean is pulled by them.\nWhen to use which?\n\nMean: When data are roughly symmetric, no extreme outliers\nMedian: When data are skewed or have outliers (like income data)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8912,11 +9164,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#webr-r-in-your-browser",
-    "href": "week12/lab/reading.html#webr-r-in-your-browser",
-    "title": "Chapter 4: Introduction to R",
-    "section": "WebR: R in Your Browser",
-    "text": "WebR: R in Your Browser\nWe use WebR — R that runs entirely in your browser. No installation needed.\n\nHow It Works\nWhen you see a code box like this:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can:\n\nClick in the box\nPress the “Run” button\nSee the output immediately\n\nThe code runs in your browser, not on a server. Your data stays on your machine.",
+    "objectID": "week12/lab/reading.html#part-2-describing-the-spread",
+    "href": "week12/lab/reading.html#part-2-describing-the-spread",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 2: Describing the Spread",
+    "text": "Part 2: Describing the Spread\nThe centre isn’t the whole story. Two groups can have the same mean but look completely different:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth means are 7, but the groups are very different. We need measures of spread.\n\nThe Range: Simplest Spread\nThe range is just the distance from lowest to highest:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGroup A spans 2 points (6 to 8). Group B spans 10 points (2 to 12). The range immediately shows Group B is more variable.\nLimitation: The range only uses two values, so it’s sensitive to outliers.\n\n\nThe Standard Deviation: The Gold Standard\nThe standard deviation (SD) measures how far scores typically fall from the mean.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nGroup A’s SD is about 0.7 — scores cluster tightly around 7. Group B’s SD is about 4.2 — scores are much more spread out.\nRule of thumb: In roughly normal data, about 68% of values fall within 1 SD of the mean.\nIf the mean is 7 and SD is 1:\n\n~68% of scores fall between 6 and 8\n\n\n\nThe summary() Function: Everything at Once\nR’s summary() function gives you a quick overview:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis shows:\n\nMin and Max (the range endpoints)\n1st and 3rd Quartile (the middle 50%)\nMedian (the middle value)\nMean",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8926,11 +9178,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#r-basics-for-today",
-    "href": "week12/lab/reading.html#r-basics-for-today",
-    "title": "Chapter 4: Introduction to R",
-    "section": "R Basics for Today",
-    "text": "R Basics for Today\nYou don’t need to master R today — just understand enough to follow along. Here are the essentials:\n\nAssigning Values\nUse &lt;- (less-than followed by dash) to assign values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe c() function combines values into a vector (a list of numbers).\n\n\nBasic Functions\nFunctions do things. They have a name followed by parentheses containing inputs:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nComputing Descriptives\nFor descriptive statistics, you’ll use:\n\n\n\nFunction\nWhat It Does\n\n\n\n\nmean(x)\nArithmetic mean\n\n\nmedian(x)\nMedian (middle value)\n\n\nsd(x)\nStandard deviation\n\n\nvar(x)\nVariance\n\n\nmin(x)\nMinimum value\n\n\nmax(x)\nMaximum value\n\n\nrange(x)\nReturns both min and max\n\n\nsummary(x)\nOverview (min, quartiles, mean, max)\n\n\n\n\n\nExample: Reaction Times\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "week12/lab/reading.html#part-3-seeing-descriptives-in-psychology-data",
+    "href": "week12/lab/reading.html#part-3-seeing-descriptives-in-psychology-data",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 3: Seeing Descriptives in Psychology Data",
+    "text": "Part 3: Seeing Descriptives in Psychology Data\nLet’s look at what descriptive statistics tell us with realistic psychology examples.\n\nExample 1: Reaction Times\nImagine we measured 10 participants’ reaction times (in milliseconds):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nMean reaction time is about 285ms\nThe median (284ms) is similar, suggesting roughly symmetric data\nSD of about 28ms tells us most people fall within ±28ms of the mean\nRange of 245 to 334ms shows the fastest and slowest participants\n\n\n\nExample 2: Memory Scores by Condition\nNow let’s compare two groups. Lab A saw abstract words, Lab B saw concrete words:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nLab A mean: ~5.3 words recalled\nLab B mean: ~7.3 words recalled\nThe difference is 2 words — but is that meaningful?\nBoth SDs are around 1, so 2 words is about 2 standard deviations — a substantial difference\n\n\n\nExample 3: Pre-Post Mood Ratings\nSame people rated their mood before and after the session:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nInterpretation:\n\nMean mood increased by 1.1 points on average\nThe SD of change (0.7) tells us most people improved by 0.4 to 1.8 points\nThis is a within-subjects comparison — same people before and after",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8940,11 +9192,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#understanding-output",
-    "href": "week12/lab/reading.html#understanding-output",
-    "title": "Chapter 4: Introduction to R",
-    "section": "Understanding Output",
-    "text": "Understanding Output\nWhen R gives you output, it includes some formatting. For example:\n[1] 280\nThe [1] just means “first element.” For a single number, you can ignore it.\nFor longer output:\n[1] 245 267 278 298 312\nThe numbers 245, 267, etc. are your data. The [1] tells you where the first element is.",
+    "objectID": "week12/lab/reading.html#part-4-what-the-numbers-mean",
+    "href": "week12/lab/reading.html#part-4-what-the-numbers-mean",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 4: What the Numbers Mean",
+    "text": "Part 4: What the Numbers Mean\n\nStandard Deviation in Context\nThe SD only makes sense relative to the mean and the scale.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nMemory: Mean = 6, SD = 0.77. An SD of 0.77 on a 10-point scale is fairly consistent.\nRT: Mean = 277ms, SD = 23ms. Is that a lot of variability? It’s about 8% of the mean — fairly typical for reaction times.\n\n\n\nWhen Means Can Mislead\nConsider these two possible DataLab results:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth means are 6, but Scenario B’s huge SD (3.7) signals that something interesting is happening — perhaps there are two distinct groups.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8954,11 +9206,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#working-with-data-frames",
-    "href": "week12/lab/reading.html#working-with-data-frames",
-    "title": "Chapter 4: Introduction to R",
-    "section": "Working with Data Frames",
-    "text": "Working with Data Frames\nReal datasets aren’t just vectors — they’re data frames (like a spreadsheet with rows and columns).\n\nAccessing Columns\nUse $ to access a column:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nSubsetting Data\nGet specific parts of your data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "week12/lab/reading.html#part-5-working-with-data-frames",
+    "href": "week12/lab/reading.html#part-5-working-with-data-frames",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 5: Working with Data Frames",
+    "text": "Part 5: Working with Data Frames\nReal datasets aren’t just vectors — they’re tables (data frames) with multiple variables.\n\nAccessing Columns\nUse the $ symbol to get a column from a data frame:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDescriptives by Group\nTo compare groups, we can subset the data:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8968,11 +9220,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#common-errors-and-how-to-fix-them",
-    "href": "week12/lab/reading.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 4: Introduction to R",
-    "section": "Common Errors (And How to Fix Them)",
-    "text": "Common Errors (And How to Fix Them)\n\nError: object ‘x’ not found\nMeaning: R doesn’t recognise that name.\nFixes:\n\nCheck spelling (R is case-sensitive: Data ≠ data)\nMake sure you created the object first\nRun all code chunks in order\n\n\n\nError: could not find function “x”\nMeaning: R doesn’t recognise that function.\nFixes:\n\nCheck spelling\nSome functions need packages (we’ll load these for you)\n\n\n\nUnexpected symbol error\nMeaning: R found something it didn’t expect.\nFixes:\n\nCheck for missing commas or parentheses\nMake sure quotes match (both \" or both ')",
+    "objectID": "week12/lab/reading.html#part-6-r-basics-youll-need",
+    "href": "week12/lab/reading.html#part-6-r-basics-youll-need",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 6: R Basics You’ll Need",
+    "text": "Part 6: R Basics You’ll Need\n\nAssigning Values\nUse &lt;- to store values:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nKey Functions Reference\n\n\n\nFunction\nWhat It Does\nExample\n\n\n\n\nmean(x)\nArithmetic mean\nmean(c(4,5,6)) → 5\n\n\nmedian(x)\nMiddle value\nmedian(c(4,5,6)) → 5\n\n\nsd(x)\nStandard deviation\nsd(c(4,5,6)) → 1\n\n\nmin(x)\nSmallest value\nmin(c(4,5,6)) → 4\n\n\nmax(x)\nLargest value\nmax(c(4,5,6)) → 6\n\n\nrange(x)\nMin and max\nrange(c(4,5,6)) → 4, 6\n\n\nsummary(x)\nAll key stats\nShows quartiles, mean, etc.\n\n\nlength(x)\nHow many values\nlength(c(4,5,6)) → 3\n\n\n\n\n\nCommon Errors\n“object not found”: You haven’t created that variable yet, or there’s a typo.\n“unexpected symbol”: Missing comma or parenthesis.\nR is case-sensitive: Mean() won’t work, but mean() will.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8982,11 +9234,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/reading.html#preparing-for-the-lab",
-    "href": "week12/lab/reading.html#preparing-for-the-lab",
-    "title": "Chapter 4: Introduction to R",
-    "section": "Preparing for the Lab",
-    "text": "Preparing for the Lab\n\nWhat You’ll Do\nIn the lab, you’ll:\n\nLoad the DataLab dataset\nExplore the variables (columns)\nCalculate means, medians, and SDs for different measures\nCompare Room A vs Room B\nVisualise distributions with histograms\n\n\n\nBefore You Arrive\n\nRead this page (you’re doing that now!)\nHave the Lecture Reading fresh in mind\nBring a laptop or phone (WebR runs in any modern browser)\n\n\n\nWhat to Focus On\nThe goal isn’t to memorise R syntax. Focus on:\n\nWhat each statistic tells you (meaning over mechanics)\nHow the statistics relate to your DataLab experience\nWhy we compute these particular measures",
+    "objectID": "week12/lab/reading.html#part-7-preparing-for-the-lab",
+    "href": "week12/lab/reading.html#part-7-preparing-for-the-lab",
+    "title": "Chapter 4: Descriptive Statistics in Action",
+    "section": "Part 7: Preparing for the Lab",
+    "text": "Part 7: Preparing for the Lab\n\nWhat You’ll Do\nIn the lab, you’ll:\n\nLoad the actual DataLab dataset (not example data)\nExplore variables using summary()\nCalculate means and SDs for different tasks\nCompare Room A vs Room B\nInterpret what the numbers tell us\n\n\n\nWhat to Focus On\nDon’t worry about memorising R syntax. Focus on:\n\nWhat does this statistic tell me?\nHow spread out is the data?\nIs this difference meaningful?\n\nThe code will be provided. Your job is to understand what it means.\n\n\nBefore You Arrive\n\nReview the lecture reading on descriptive statistics\nUnderstand mean vs median, and when each is appropriate\nKnow what standard deviation represents (spread from the mean)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -8998,9 +9250,9 @@
   {
     "objectID": "week12/lab/reading.html#key-terms",
     "href": "week12/lab/reading.html#key-terms",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "Key Terms",
-    "text": "Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nR\nProgramming language for statistical analysis\n\n\nWebR\nR running in a web browser\n\n\nVector\nA list of values of the same type\n\n\nData frame\nA table with rows and columns\n\n\nFunction\nCode that performs an action (like mean())",
+    "text": "Key Terms\n\n\n\nTerm\nDefinition\n\n\n\n\nMean\nArithmetic average (sum ÷ count)\n\n\nMedian\nMiddle value when sorted\n\n\nStandard Deviation\nAverage distance from the mean\n\n\nRange\nDifference between max and min\n\n\nQuartiles\nValues that divide data into four equal parts\n\n\nOutlier\nA value far from the others",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9012,9 +9264,9 @@
   {
     "objectID": "week12/lab/reading.html#summary",
     "href": "week12/lab/reading.html#summary",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "Summary",
-    "text": "Summary\n\n\n\nWhat\nHow in R\n\n\n\n\nMean\nmean(x)\n\n\nMedian\nmedian(x)\n\n\nSD\nsd(x)\n\n\nAccess column\ndata$column\n\n\nCreate vector\nc(1, 2, 3)",
+    "text": "Summary\n\n\n\nQuestion\nStatistic to Use\n\n\n\n\nWhat’s typical?\nMean or Median\n\n\nHow spread out?\nSD or Range\n\n\nAny extreme values?\nCompare Mean vs Median\n\n\nQuick overview?\nsummary()\n\n\nCompare groups?\nMean and SD for each",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9026,9 +9278,9 @@
   {
     "objectID": "week12/lab/reading.html#additional-resources",
     "href": "week12/lab/reading.html#additional-resources",
-    "title": "Chapter 4: Introduction to R",
+    "title": "Chapter 4: Descriptive Statistics in Action",
     "section": "Additional Resources",
-    "text": "Additional Resources\nIf you want to explore R further:\n\nR for Data Science — Free online textbook\nRStudio Primers — Interactive tutorials\nQuick-R — Syntax reference",
+    "text": "Additional Resources\nIf you want to explore further:\n\nR for Data Science — Free online textbook\nQuick-R Statistics — Syntax reference",
     "crumbs": [
       "Home",
       "Term 2",

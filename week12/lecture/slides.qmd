@@ -6,13 +6,16 @@ date: "2026-01-19"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
+    logo: ../../assets/foundations-26-logo.svg
     slide-number: c/t
+    show-slide-number: all
     progress: true
     transition: fade
     width: 1050
     height: 700
     center: false
     center-title-slide: true
+    smaller: true
 execute:
   echo: false
   warning: false
@@ -42,58 +45,53 @@ orange <- "#EA8439"
 
 # Welcome to Week 12 {background-color="#275882"}
 
-## Your data tells a story — let's learn how to read it
+## Your data tell a story — let's learn how to read it
 
----
+------------------------------------------------------------------------
 
 ## Today's Learning Objectives
 
-::: {.objectives-box}
+::: objectives-box
 By the end of this lecture, you will be able to:
 
-- Identify **Independent Variables (IV)** and **Dependent Variables (DV)** in any study
-- Distinguish between **between-subjects**, **within-subjects**, and **correlational** designs
-- Write **one-tailed** and **two-tailed** hypotheses
-- Calculate and interpret **mean** and **standard deviation**
+-   Identify **Independent Variables (IV)** and **Dependent Variables (DV)** in any study
+-   Distinguish between **between-subjects**, **within-subjects**, and **correlational** designs
+-   Write **one-tailed** and **two-tailed** hypotheses
+-   Calculate and interpret **mean** and **standard deviation**
 :::
 
----
+------------------------------------------------------------------------
 
 ## The Big Idea
 
-::: {.callout-important}
+::: callout-important
 ## Critical Week
+
 Today introduces **ALL** the terminology you need for your Research Plan.
 
 Everything connects: Research Question → Variables → Design → Hypothesis
 :::
 
----
+# Act 1: What Are Data? {background-color="#275882"}
 
-# Act 1: What Is Data? {background-color="#275882"}
-
-## You generated this data (15 min)
-
----
+## You generated these data (15 min)
 
 ## What Did You Actually Do Last Week?
 
 You completed **6 tasks** plus pre/post surveys:
 
-1. **Memory Test** (Mind Palace)
-2. **Reflex Test** (Ruler catch)
-3. **Time Warp** (60 second estimation)
-4. **Sixth Sense** (Staring detection)
-5. **Lady Luck** (Random numbers)
-6. **Frontal Lob** (Throwing accuracy)
+1.  **Memory Test** (Mind Palace)
+2.  **Reflex Test** (Ruler catch)
+3.  **Time Warp** (60 second estimation)
+4.  **Sixth Sense** (Staring detection)
+5.  **Lady Luck** (Random numbers)
+6.  **Frontal Lob** (Throwing accuracy)
 
 . . .
 
 **Each task generated NUMBERS** — and numbers are what we analyse!
 
----
-
-## You Are a Data Point
+## You Are a Data Point - a datum
 
 ```{r}
 #| label: you-are-here
@@ -110,17 +108,13 @@ ggplot(memory_plot, aes(x = "", y = mem_total_1)) +
         plot.title = element_text(hjust = 0.5, size = 22))
 ```
 
-::: {.fragment}
+::: fragment
 **Can you spot yourself?**
 :::
-
----
 
 # Act 2: What's Typical? {background-color="#275882"}
 
 ## The simplest question (20 min)
-
----
 
 ## When You Have Numbers, You Want to Know: What's Normal?
 
@@ -140,11 +134,9 @@ ggplot(memory_plot, aes(x = mem_total_1)) +
 
 The **histogram** shows how many people got each score.
 
----
-
 ## The Mean: What's Average?
 
-::: {.definition-box}
+::: definition-box
 **Mean** ($\bar{x}$) = Sum of all values ÷ Number of values
 
 $$\bar{x} = \frac{\sum x_i}{n}$$
@@ -155,11 +147,31 @@ $$\bar{x} = \frac{\sum x_i}{n}$$
 mean_mem <- round(mean(memory_plot$mem_total_1, na.rm = TRUE), 1)
 ```
 
+## That's what I mean!
+
+```{r}
+
+#| label: memory-histogram
+#| fig-height: 4.5
+#| fig-align: center
+
+memory_mean <- mean(memory_plot$mem_total_1, na.rm = TRUE)
+
+ggplot(memory_plot, aes(x = mem_total_1)) +
+  geom_histogram(binwidth = 1, fill = navy, color = "white", alpha = 0.8) +
+  geom_vline(xintercept = memory_mean, linetype = "dashed", color = "red", linewidth = 1.2) +
+  annotate("text", x = memory_mean + 0.3, y = Inf, vjust = 2, hjust = 0,
+           label = paste0("Mean = ", round(memory_mean, 1)), color = "red", fontface = "bold") +
+  labs(x = "Words Recalled (out of 10)", y = "Number of People",
+       title = "Distribution of Memory Scores") +
+  scale_x_continuous(breaks = 0:10) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
 . . .
 
 For your memory scores: **Mean = `r mean_mem` words**
-
----
 
 ## But Wait... Same Mean, Different Stories
 
@@ -187,12 +199,10 @@ ggplot(spread_data, aes(x = Group, y = Score, color = Group)) +
 
 **Same mean, but Group B is much more variable!**
 
----
-
 ## We Need to Measure Spread
 
-::: {.definition-box}
-**Standard Deviation (SD)** = How spread out the data is from the mean
+::: definition-box
+**Standard Deviation (SD)** = How spread out the data are from the mean
 :::
 
 ```{r}
@@ -200,33 +210,30 @@ ggplot(spread_data, aes(x = Group, y = Score, color = Group)) +
 sd_mem <- round(sd(memory_plot$mem_total_1, na.rm = TRUE), 2)
 ```
 
-- **Low SD** = Scores clustered together (consistent)
-- **High SD** = Scores spread out (variable)
+-   **Low SD** = Scores clustered together (consistent)
+-   **High SD** = Scores spread out (variable)
 
 . . .
 
 For your memory scores: **SD = `r sd_mem` words**
 
----
-
 ## The Key Insight
 
-::: {.callout-important}
+::: callout-important
 ## Remember This
+
 A **difference between means** only matters if it's **big relative to the spread**.
 
-- **Signal** = difference between means
-- **Noise** = variability within groups
-- The question: Is the signal **bigger** than the noise?
+-   **Signal** = difference between means
+-   **Noise** = variability within groups
+-   The question: Is the signal **bigger** than the noise?
 :::
 
----
+![](images/descriptives-apa.png){fig-align="center"}
 
 # Act 3: The Big Reveal {background-color="#275882"}
 
 ## Lab A vs Lab B (25 min)
-
----
 
 ## There Was a Hidden Manipulation
 
@@ -238,26 +245,25 @@ But here's what you didn't know...
 
 . . .
 
-::: {.callout-warning}
+::: callout-warning
 ## The Secret
+
 **Lab A** and **Lab B** saw **different words**!
 :::
 
----
-
 ## The Manipulation
 
-:::: {.columns}
+::::: columns
 ::: {.column width="50%"}
 **Lab A (Gordon)**
 
 Memorised **abstract** words:
 
-- Justice
-- Freedom
-- Wisdom
-- Courage
-- Truth
+-   Justice
+-   Freedom
+-   Wisdom
+-   Courage
+-   Truth
 :::
 
 ::: {.column width="50%"}
@@ -265,15 +271,13 @@ Memorised **abstract** words:
 
 Memorised **concrete** words:
 
-- Chair
-- River
-- Mountain
-- Apple
-- Hammer
+-   Chair
+-   River
+-   Mountain
+-   Apple
+-   Hammer
 :::
-::::
-
----
+:::::
 
 ## Let's See the Results!
 
@@ -297,8 +301,6 @@ ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
         plot.title = element_text(hjust = 0.5, size = 22))
 ```
 
----
-
 ## The Numbers
 
 ```{r}
@@ -312,10 +314,10 @@ lab_stats <- memory_labs |>
   )
 ```
 
-| Lab | Word Type | n | Mean | SD |
-|-----|-----------|---|------|-----|
-| Lab A | Abstract | `r lab_stats$n[1]` | `r lab_stats$Mean[1]` | `r lab_stats$SD[1]` |
-| Lab B | Concrete | `r lab_stats$n[2]` | `r lab_stats$Mean[2]` | `r lab_stats$SD[2]` |
+| Lab   | Word Type | n                  | Mean                  | SD                  |
+|---------------|---------------|---------------|---------------|---------------|
+| Lab A | Abstract  | `r lab_stats$n[1]` | `r lab_stats$Mean[1]` | `r lab_stats$SD[1]` |
+| Lab B | Concrete  | `r lab_stats$n[2]` | `r lab_stats$Mean[2]` | `r lab_stats$SD[2]` |
 
 . . .
 
@@ -325,46 +327,48 @@ lab_stats <- memory_labs |>
 
 Is this difference **real** or just **chance**?
 
----
+. . .
+
+Join us in week 14 and we will put that to the **t-test**!
 
 ## Now Let's Introduce the Terminology
 
-::: {.definition-box}
+::: definition-box
 **Independent Variable (IV)**: What the researcher **manipulates** or controls
 
 **Dependent Variable (DV)**: What the researcher **measures** — the outcome
 :::
 
+![](images/iv-dv-diagram.png){fig-align="center"}
+
 . . .
 
 In the memory experiment:
 
-- **IV** = Word type (abstract vs concrete)
-- **DV** = Number of words recalled (0-10)
-
----
+-   **IV** = Word type (abstract vs concrete)
+-   **DV** = Number of words recalled (0-10)
 
 ## Design Type: Between-Subjects
 
-::: {.definition-box}
+::: definition-box
 **Between-subjects design**: Different participants in each condition
 :::
 
+![](images/design-types.png){fig-align="center"}
+
 . . .
 
-- Lab A people **only** saw abstract words
-- Lab B people **only** saw concrete words
-- You couldn't be in **both** labs!
+-   Lab A people **only** saw abstract words
+-   Lab B people **only** saw concrete words
+-   You couldn't be in **both** labs!
 
 . . .
 
 Why? **Between** = different people in each group
 
----
-
 ## Writing a Hypothesis
 
-::: {.definition-box}
+::: definition-box
 **Experimental hypothesis (H₁)**: Predicts an effect or difference
 
 **Null hypothesis (H₀)**: Predicts no effect or no difference
@@ -374,14 +378,12 @@ Why? **Between** = different people in each group
 
 For the memory experiment:
 
-- **H₁**: Concrete words will be easier to remember than abstract words
-- **H₀**: There will be no difference in recall between word types
-
----
+-   **H₁**: Concrete words will be easier to remember than abstract words
+-   **H₀**: There will be no difference in recall between word types
 
 ## One-Tailed vs Two-Tailed
 
-::: {.definition-box}
+::: definition-box
 **One-tailed**: Predicts the **direction** of the effect
 
 **Two-tailed**: Predicts a difference but **not** which direction
@@ -389,16 +391,14 @@ For the memory experiment:
 
 . . .
 
-- **One-tailed**: "Concrete words will be **better** than abstract" (predicts direction)
-- **Two-tailed**: "Word type will **affect** memory" (no direction)
+-   **One-tailed**: "Concrete words will be **better** than abstract" (predicts direction)
+-   **Two-tailed**: "Word type will **affect** memory" (no direction)
 
----
+![](images/tails.png){fig-align="center" width="840"}
 
 # Act 4: Same Person, Different Conditions {background-color="#275882"}
 
 ## Within-subjects design (20 min)
-
----
 
 ## The Pre-Post Mood Survey
 
@@ -426,25 +426,22 @@ ggplot(mood_data, aes(x = Time, y = Mood, fill = Time)) +
         plot.title = element_text(hjust = 0.5))
 ```
 
----
-
 ## This Is Within-Subjects Design
 
-::: {.definition-box}
+::: definition-box
 **Within-subjects design**: The **same participants** measured in **all conditions**
 :::
 
 . . .
 
-- Pre-mood and post-mood came from **the same person**
-- You're being compared **to yourself**
-
----
+-   Pre-mood and post-mood came from **the same person**
+-   You're being compared **to yourself**
 
 ## Why Is This Powerful?
 
-::: {.callout-tip}
+::: callout-tip
 ## The Power of Within-Subjects
+
 Each person is their own **control**!
 :::
 
@@ -452,17 +449,13 @@ Each person is their own **control**!
 
 Individual differences are **controlled**:
 
-- If your pre-mood was 5 and post-mood was 7...
-- **You** improved by 2 points
-- We don't need to worry about other people's baseline moods
-
----
+-   If your pre-mood was 5 and post-mood was 7...
+-   **You** improved by 2 points
+-   We don't need to worry about other people's baseline moods
 
 # Act 5: Relationships, Not Differences {background-color="#275882"}
 
 ## Correlational design (15 min)
-
----
 
 ## Self-Rating vs Actual Performance
 
@@ -502,32 +495,30 @@ if(nrow(throw_data) > 3) {
 }
 ```
 
----
-
 ## This Is Correlational Design
 
-::: {.definition-box}
+::: definition-box
 **Correlational design**: Measuring the **relationship** between two variables — **no manipulation**
 :::
 
 . . .
 
-- **Variable 1**: Self-rating (1-10)
-- **Variable 2**: Actual accuracy (%)
+-   **Variable 1**: Self-rating (1-10)
+-   **Variable 2**: Actual accuracy (%)
 
 . . .
 
-::: {.callout-warning}
+::: callout-warning
 ## Key Point
+
 There is **no IV** in a correlational design!
 :::
 
----
-
 ## The Critical Warning
 
-::: {.callout-warning}
+::: callout-warning
 ## Say It With Me
+
 **Correlation ≠ Causation**
 
 Finding a relationship does NOT mean one variable **causes** the other.
@@ -537,26 +528,24 @@ Finding a relationship does NOT mean one variable **causes** the other.
 
 Even if self-ratings predict performance, we can't say self-ratings **cause** good performance.
 
----
+![](images/matched-correlational.png){fig-align="center" width="1008"}
 
 # Act 6: Was It Just Luck? {background-color="#275882"}
 
 ## The null hypothesis (20 min)
 
----
+![](images/hypotheses.png){fig-align="center" width="1200"}
 
 ## The Sixth Sense Task
 
 You tried to detect if someone was staring at you.
 
-- 6 trials
-- Guessed "staring" or "not staring"
+-   6 trials
+-   Guessed "staring" or "not staring"
 
 . . .
 
 **If you're just guessing**: You'd expect **3 out of 6** right (50%)
-
----
 
 ## Your Results
 
@@ -607,12 +596,11 @@ if(all(stare_cols %in% names(sixthsense))) {
 }
 ```
 
----
-
 ## Some People Got 5/6 or 6/6!
 
-::: {.callout-note}
+::: callout-note
 ## The Question
+
 Does getting 5 or 6 right mean you have a **sixth sense**?
 :::
 
@@ -624,11 +612,9 @@ Does getting 5 or 6 right mean you have a **sixth sense**?
 
 If you flip a coin 6 times, sometimes you get 5 or 6 heads **just by luck**.
 
----
-
 ## The Null Hypothesis
 
-::: {.definition-box}
+::: definition-box
 **Null hypothesis (H₀)**: The result is due to **chance**, not a real effect.
 :::
 
@@ -636,10 +622,8 @@ If you flip a coin 6 times, sometimes you get 5 or 6 heads **just by luck**.
 
 For the sixth sense:
 
-- **H₀**: People are just guessing (performance = 50%)
-- **H₁**: People can detect staring (performance ≠ 50%)
-
----
+-   **H₀**: People are just guessing (performance = 50%)
+-   **H₁**: People can detect staring (performance ≠ 50%)
 
 ## Your Dice Rolls
 
@@ -675,8 +659,6 @@ if(all(dice_cols %in% names(ladyluck))) {
     theme(plot.title = element_text(hjust = 0.5))
 }
 ```
-
----
 
 ## Your Coin Flips
 
@@ -714,50 +696,45 @@ if(all(coin_cols %in% names(ladyluck))) {
 }
 ```
 
----
-
 ## Why Statistics?
 
 With `r nrow(memory_plot)` people, **some will get lucky**:
 
-- A few might get 5/6 or 6/6 just by chance
-- Dice won't land perfectly evenly
-- Coins won't be exactly 50/50
+-   A few might get 5/6 or 6/6 just by chance
+-   Dice won't land perfectly evenly
+-   Coins won't be exactly 50/50
 
 . . .
 
-**Statistics helps us ask**: How surprising is this result?
-
----
+**Statistics helps us ask**: How surprising is this result? See week14!
 
 # The Framework {background-color="#275882"}
 
 ## Putting it all together (5 min)
 
----
-
 ## The Research Design Decision Tree
 
-:::: {.columns}
+::::: columns
 ::: {.column width="50%"}
 **Step 1: Is there manipulation?**
 
-- **Yes** → Experimental design
-- **No** → Correlational design
+-   **Yes** → Experimental design
+-   **No** → Correlational design
 :::
 
 ::: {.column width="50%"}
 **Step 2: If experimental, same or different people?**
 
-- **Same people** → Within-subjects
-- **Different people** → Between-subjects
+-   **Same people** → Within-subjects
+-   **Different people** → Between-subjects
 :::
-::::
+:::::
 
 . . .
 
-::: {.callout-tip}
+::: callout-tip
 ## The Quick Check
+
 **No IV?** → Correlational
 
 **IV + same people?** → Within-subjects
@@ -765,82 +742,79 @@ With `r nrow(memory_plot)` people, **some will get lucky**:
 **IV + different people?** → Between-subjects
 :::
 
----
-
 ## DataLab Summary {.smaller}
 
-| Task | Design | IV | DV |
-|:-----|:-------|:---|:---|
-| Memory | Between | Word type | Recall (0-10) |
-| Pre/Post Mood | Within | Time | Rating (1-10) |
-| Frontal Lob | Within | Hand | Accuracy (%) |
-| Sixth Sense | vs Chance | — | Hits (0-6) |
-| Self vs Actual | Correlational | — | — |
-
----
+| Task           | Design        | IV        | DV            |
+|:---------------|:--------------|:----------|:--------------|
+| Memory         | Between       | Word type | Recall (0-10) |
+| Pre/Post Mood  | Within        | Time      | Rating (1-10) |
+| Frontal Lob    | Within        | Hand      | Accuracy (%)  |
+| Sixth Sense    | vs Chance     | —         | Hits (0-6)    |
+| Self vs Actual | Correlational | —         | —             |
 
 ## The Vocabulary You Now Have
 
-::: {.callout-tip}
+::: callout-tip
 ## Check These Off
-- [x] Independent Variable (IV)
-- [x] Dependent Variable (DV)
-- [x] Between-subjects design
-- [x] Within-subjects design
-- [x] Correlational design
-- [x] One-tailed hypothesis
-- [x] Two-tailed hypothesis
-- [x] Null hypothesis (H₀)
-- [x] Mean and Standard Deviation
-:::
 
----
+-   [x] Independent Variable (IV)
+-   [x] Dependent Variable (DV)
+-   [x] Between-subjects design
+-   [x] Within-subjects design
+-   [x] Correlational design
+-   [x] One-tailed hypothesis
+-   [x] Two-tailed hypothesis
+-   [x] Null hypothesis (H₀)
+-   [x] Mean and Standard Deviation
+:::
 
 ## Connecting to Assessments
 
-| Assessment | What You Learned Today |
-|------------|------------------------|
-| **Research Plan** | ALL terminology — you can start planning! |
-| **MCQ Exam** | Design identification, IV/DV, hypothesis types |
-| **EDS Assignment** | Calculating means and SDs, identifying designs |
-| **Research Report** | Method section structure |
-
----
+| Assessment          | What You Learned Today                         |
+|---------------------|------------------------------------------------|
+| **Research Plan**   | ALL terminology — you can start planning!      |
+| **MCQ Exam**        | Design identification, IV/DV, hypothesis types |
+| **EDS Assignment**  | Calculating means and SDs, identifying designs |
+| **Research Report** | Method section structure                       |
 
 ## What's Next?
 
 **Thursday Lab**: Apply this framework to YOUR DataLab data
 
-- Identify designs, IVs, DVs
-- Calculate means and SDs
-- Practice writing hypotheses
+-   Identify designs, IVs, DVs
+-   Calculate means and SDs
+-   Practice writing hypotheses
 
 . . .
 
 **Focus on conceptual understanding!**
 
----
-
 # Questions? {background-color="#275882"}
 
-::: {.callout-tip}
+::: callout-tip
 ## Remember
-- You generated this data
-- Every number came from something **you** did
-- The framework helps you tell the story
-:::
 
----
+-   You generated this data
+-   Every number came from something **you** did
+-   The framework helps you tell the story
+:::
 
 # See You Thursday! {background-color="#275882"}
 
-::: {.notes}
-Lecture time: ~2 hours with pauses for discussion
+::: notes
+Lecture time: \~2 hours with pauses for discussion
 
 Key takeaways:
-1. IV = what's manipulated; DV = what's measured
-2. Between = different people; Within = same people
-3. Correlational = no manipulation, no IV
-4. The framework: Question → Variables → Design → Hypothesis
-5. All terminology needed for Research Plan introduced today
+
+1\. IV = what's manipulated; DV = what's measured
+
+2\. Between = different people; Within = same people
+
+3\. Correlational = no manipulation, no IV
+
+4\. The framework: Question → Variables → Design → Hypothesis
+
+5\. All terminology needed for Research Plan introduced today
 :::
+
+![](images/cheat-sheet.png){fig-align="center" width="1168"}

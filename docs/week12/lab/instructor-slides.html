@@ -6,12 +6,14 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.js"></script>
+<link href="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Gordon Wright">
-  <meta name="dcterms.date" content="2026-01-23">
-  <title>PS50008A Research Methods &amp; Experimental Design – Design Detectives</title>
+  <meta name="dcterms.date" content="2026-01-22">
+  <title>PS50008A Research Methods &amp; Experimental Design – Design Detectives: DataLab</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,72 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f36f5fe30060faea6bb463e8b9b845a3.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -188,14 +124,16 @@
       margin-right: 0; 
     }
   </style>
+  <!-- Countdown Global CSS -->
+  <style text="text/css">:root {}</style>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Design Detectives</h1>
-  <p class="subtitle">PS50008A Week 12 | Lab Walkthrough</p>
+  <h1 class="title">Design Detectives: DataLab</h1>
+  <p class="subtitle">PS50008A Week 12 Lab</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -205,116 +143,405 @@ Gordon Wright
 </div>
 </div>
 
-  <p class="date">23 January 2026</p>
+  <p class="date">22 January 2026</p>
 </section>
 <section>
-<section id="welcome-to-lab" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Welcome to Lab</h1>
+<section id="welcome" class="title-slide slide level1 center" data-background-color="#275882">
+<h1>Welcome</h1>
 
 </section>
-<section id="design-detectives" class="slide level2">
-<h2>Design Detectives</h2>
+<section id="your-data-your-discoveries" class="slide level2">
+<h2>Your Data, Your Discoveries</h2>
 </section>
-<section id="todays-focus" class="slide level2">
-<h2>Today’s Focus</h2>
-<div class="objectives-box">
-<p><strong>This is NOT asking you to perform any analysis.</strong> Today is about:</p>
+<section id="lab-overview" class="slide level2">
+<h2>Lab Overview</h2>
+<p>Today we work through your <strong>real DataLab results</strong> as a class.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Structure</strong></p>
+<ol type="1">
+<li>Task overview (me)</li>
+<li>Small group discussion (you)</li>
+<li>Whole-class debrief (together)</li>
+<li>Repeat for each task</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p><strong>Your Job</strong></p>
 <ul>
-<li>Seeing YOUR real DataLab data</li>
-<li>Identifying design types, IVs, and DVs</li>
-<li>Understanding what means and SDs tell us</li>
-<li>Writing hypotheses</li>
+<li>Form groups of 2-3</li>
+<li>Open the activity page</li>
+<li>Discuss the questions</li>
+<li>Be ready to share answers</li>
 </ul>
-</div>
+</div></div>
 </section>
-<section id="lab-structure-90-min" class="slide level2">
-<h2>Lab Structure (~90 min)</h2>
+<section id="timeline" class="slide level2">
+<h2>Timeline</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Time</th>
-<th>Activity</th>
+<th>Phase</th>
+<th>Task</th>
+<th>Duration</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>10:00-10:10</td>
-<td>These slides + setup</td>
+<td>1</td>
+<td>Reflex Test</td>
+<td>12 min</td>
 </tr>
 <tr class="even">
-<td>10:10-10:30</td>
-<td>Activity 1: Lab A vs Lab B</td>
+<td>2</td>
+<td>Time Warp</td>
+<td>10 min</td>
 </tr>
 <tr class="odd">
-<td>10:30-10:50</td>
-<td>Activity 2: Pre-Post Mood</td>
+<td>3</td>
+<td>Memory</td>
+<td>15 min</td>
 </tr>
 <tr class="even">
-<td>10:50-11:20</td>
-<td>Activity 3: Descriptive Stats</td>
+<td>4</td>
+<td>Frontal Lob</td>
+<td>12 min</td>
 </tr>
 <tr class="odd">
-<td>11:20-11:40</td>
-<td>Activity 4: Hypothesis Writing</td>
+<td>5</td>
+<td>Sleep &amp; Memory</td>
+<td>12 min</td>
 </tr>
 <tr class="even">
-<td>11:40-12:00</td>
-<td>Activity 5: MCQ Practice</td>
+<td>6</td>
+<td>Sixth Sense</td>
+<td>10 min</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Wrap-up</td>
+<td>10 min</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Total: ~80 minutes</strong></p>
 </section>
-<section id="open-the-activity" class="slide level2">
-<h2>Open the Activity</h2>
-
-<img data-src="images/Week12Activity.png" class="r-stretch"><p><em>Navigate to: Week 12 &gt; Lab &gt; Activity</em></p>
+<section id="open-the-activity-page" class="slide level2">
+<h2>Open the Activity Page</h2>
+<p>Navigate to <strong>Week 12 &gt; Lab &gt; Activity</strong></p>
+<p>You’ll see questions for each task.</p>
+<p>Work through them with your group.</p>
 </section>
 <section class="slide level2">
 
 </section></section>
 <section>
-<section id="activity-1-the-big-reveal" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Activity 1: The Big Reveal</h1>
+<section id="phase-1-reflex-test" class="title-slide slide level1 center" data-background-color="#E76F51">
+<h1>Phase 1: Reflex Test</h1>
 
 </section>
-<section id="lab-a-vs-lab-b-20-min" class="slide level2">
-<h2>Lab A vs Lab B (~20 min)</h2>
+<section id="how-fast-are-your-reactions" class="slide level2">
+<h2>How fast are your reactions?</h2>
 </section>
-<section id="the-hidden-manipulation" class="slide level2">
-<h2>The Hidden Manipulation</h2>
-<div class="definition-box">
-<p><strong>Lab A</strong> memorised <strong>abstract</strong> words (justice, freedom, wisdom…)</p>
-<p><strong>Lab B</strong> memorised <strong>concrete</strong> words (chair, river, mountain…)</p>
-<p>Did it make a difference?</p>
-</div>
+<section id="what-you-did" class="slide level2">
+<h2>What You Did</h2>
+<p>You caught a falling <strong>30cm ruler</strong> five times.</p>
+<p>The distance caught reflects <strong>reaction time</strong>:</p>
+<p><span class="math display">\[\text{RT (ms)} = \sqrt{\frac{2 \times \text{distance (cm)}}{980}} \times 1000\]</span></p>
+<p><strong>Shorter distance = faster reactions</strong></p>
 </section>
-<section id="your-data-lab-a-vs-lab-b" class="slide level2">
-<h2>Your Data: Lab A vs Lab B</h2>
+<section id="your-results" class="slide level2">
+<h2>Your Results</h2>
 
-<img data-src="instructor-slides_files/figure-revealjs/lab-comparison-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="key-questions-to-emphasise" class="slide level2">
-<h2>Key Questions to Emphasise</h2>
-<p>Ask students:</p>
+<img data-src="instructor-slides_files/figure-revealjs/reflex-boxplot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="group-discussion" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="true" blink-colon="false" start-immediately="true" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 1.1-1.6:</strong></p>
 <ol type="1">
-<li><strong>What did the researcher MANIPULATE?</strong> (Word type)</li>
-<li><strong>What did the researcher MEASURE?</strong> (Recall)</li>
-<li><strong>Same people or different people?</strong> (Different)</li>
-<li><strong>Design type?</strong> (Between-subjects)</li>
+<li>What pattern do you see from Trial 1 to Trial 5?</li>
+<li>What design type is this? (Between/Within/Correlational)</li>
+<li>What is the IV? What is the DV?</li>
+<li>Write a hypothesis for the learning effect.</li>
 </ol>
 </section>
-<section id="the-key-insight" class="slide level2">
-<h2>The Key Insight</h2>
-<div class="callout callout-important callout-titled callout-style-default">
+<section id="debrief-the-answers" class="slide level2">
+<h2>Debrief: The Answers</h2>
+<p><strong>Design</strong>: Within-subjects (same people, all trials)</p>
+<p><strong>IV</strong>: Trial number (1, 2, 3, 4, 5)</p>
+<p><strong>DV</strong>: Catch distance (cm) or reaction time (ms)</p>
+<p><strong>Hypothesis (one-tailed)</strong>: Reaction times will decrease from Trial 1 to Trial 5.</p>
+</section>
+<section id="the-learning-effect" class="slide level2">
+<h2>The Learning Effect</h2>
+
+<img data-src="instructor-slides_files/figure-revealjs/reflex-learning-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p><strong>Why does this matter?</strong> Practice effects are a confound we control for in experiments.</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="phase-2-time-warp" class="title-slide slide level1 center" data-background-color="#2A9D8F">
+<h1>Phase 2: Time Warp</h1>
+
+</section>
+<section id="how-well-do-you-perceive-time" class="slide level2">
+<h2>How well do you perceive time?</h2>
+</section>
+<section id="what-you-did-1" class="slide level2">
+<h2>What You Did</h2>
+<p>You estimated <strong>60 seconds</strong> without counting.</p>
+<p>Then you estimated the length of lines and strings.</p>
+</section>
+<section id="your-time-estimates" class="slide level2">
+<h2>Your Time Estimates</h2>
+
+<img data-src="instructor-slides_files/figure-revealjs/time-estimates-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="group-discussion-1" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="04" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 2.1-2.3:</strong></p>
+<ol type="1">
+<li>Did people over- or underestimate 60 seconds on average?</li>
+<li>What design is this? (Between/Within/Correlational)</li>
+<li>What would the null hypothesis be?</li>
+</ol>
+</section>
+<section id="debrief-time-perception" class="slide level2">
+<h2>Debrief: Time Perception</h2>
+<p><strong>Finding</strong>: Most people <strong>underestimate</strong> 60 seconds (say it’s up before it actually is).</p>
+<p><strong>Why?</strong> When engaged in a task, time seems to pass faster.</p>
+<p><strong>Design</strong>: This is testing against a known value (60 seconds) - a one-sample design.</p>
+<p><strong>Null hypothesis</strong>: Mean estimate will equal 60 seconds (no systematic bias).</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="phase-3-memory" class="title-slide slide level1 center" data-background-color="#275882">
+<h1>Phase 3: Memory</h1>
+
+</section>
+<section id="the-big-reveal" class="slide level2">
+<h2>The big reveal</h2>
+</section>
+<section id="what-you-did-2" class="slide level2">
+<h2>What You Did</h2>
+<p>You memorised <strong>10 words</strong> and tried to recall them.</p>
+<p>But here’s what you didn’t know…</p>
+</section>
+<section id="the-secret-manipulation" class="slide level2">
+<h2>The Secret Manipulation</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Lab A</strong> memorised:</p>
+<p>ABSTRACT words</p>
+<ul>
+<li>Justice</li>
+<li>Freedom</li>
+<li>Wisdom</li>
+<li>Courage</li>
+<li>Truth</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Lab B</strong> memorised:</p>
+<p>CONCRETE words</p>
+<ul>
+<li>Chair</li>
+<li>River</li>
+<li>Mountain</li>
+<li>Apple</li>
+<li>Hammer</li>
+</ul>
+</div></div>
+<p><strong>Question</strong>: Does word type affect memory?</p>
+</section>
+<section id="your-results-lab-a-vs-lab-b" class="slide level2">
+<h2>Your Results: Lab A vs Lab B</h2>
+
+<img data-src="instructor-slides_files/figure-revealjs/memory-labs-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="the-statistics" class="slide level2">
+<h2>The Statistics</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lab</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">SD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lab A</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(Abstract)</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">6.31</td>
+<td style="text-align: right;">1.89</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lab B</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(Concrete)</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">6.27</td>
+<td style="text-align: right;">1.98</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="group-discussion-2" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="06" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 3.1-3.7:</strong></p>
+<ol type="1">
+<li>What is the IV? What is the DV?</li>
+<li>What design type is this?</li>
+<li>Write an experimental hypothesis (one-tailed).</li>
+<li>Write a null hypothesis.</li>
+<li>Why might concrete words be easier to remember?</li>
+</ol>
+</section>
+<section id="debrief-memory-design" class="slide level2">
+<h2>Debrief: Memory Design</h2>
+<p><strong>IV</strong>: Word type (abstract vs concrete)</p>
+<p><strong>DV</strong>: Number of words recalled (0-10)</p>
+<p><strong>Design</strong>: Between-subjects (different people in each lab)</p>
+<p><strong>Hypotheses</strong>:</p>
+<ul>
+<li><strong>H1 (one-tailed)</strong>: Concrete words will be recalled better than abstract words.</li>
+<li><strong>H0</strong>: There will be no difference in recall between word types.</li>
+</ul>
+</section>
+<section id="why-concrete-words" class="slide level2">
+<h2>Why Concrete Words?</h2>
+<p><strong>Dual Coding Theory</strong> (Paivio, 1971)</p>
+<p>Concrete words can be stored TWO ways:</p>
+<ol type="1">
+<li><strong>Verbal code</strong> (the word itself)</li>
+<li><strong>Visual code</strong> (a mental image)</li>
+</ol>
+<p>Abstract words only have the verbal code.</p>
+<p><strong>Two codes &gt; One code = Better memory</strong></p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="phase-4-frontal-lob" class="title-slide slide level1 center" data-background-color="#EA8439">
+<h1>Phase 4: Frontal Lob</h1>
+
+</section>
+<section id="does-handedness-matter" class="slide level2">
+<h2>Does handedness matter?</h2>
+</section>
+<section id="what-you-did-3" class="slide level2">
+<h2>What You Did</h2>
+<p>You threw balls at a bucket:</p>
+<ul>
+<li><strong>10 throws</strong> with dominant hand</li>
+<li><strong>5 throws</strong> with non-dominant hand</li>
+</ul>
+</section>
+<section id="your-throwing-results" class="slide level2">
+<h2>Your Throwing Results</h2>
+
+<img data-src="instructor-slides_files/figure-revealjs/throwing-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="group-discussion-3" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 4.1-4.6:</strong></p>
+<ol type="1">
+<li>Same people or different people in each condition?</li>
+<li>What design type is this?</li>
+<li>Why is within-subjects “more powerful”?</li>
+<li>What is the IV? What is the DV?</li>
+</ol>
+</section>
+<section id="debrief-within-subjects-power" class="slide level2">
+<h2>Debrief: Within-Subjects Power</h2>
+<p><strong>Design</strong>: Within-subjects (same person, both hands)</p>
+<p><strong>IV</strong>: Hand used (dominant vs non-dominant)</p>
+<p><strong>DV</strong>: Throwing accuracy (%)</p>
+<p><strong>Why more powerful?</strong></p>
+<p>Each person is their own control. Individual differences (height, coordination, practice) are controlled because we compare YOU to YOU.</p>
+</section>
+<section id="the-statistical-test" class="slide level2">
+<h2>The Statistical Test</h2>
+<p>For within-subjects designs with two conditions, we use a <strong>paired t-test</strong>.</p>
+<p>It asks: Is the difference between conditions larger than we’d expect by chance?</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean difference: 13.7 percentage points</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="phase-5-sleep-memory" class="title-slide slide level1 center" data-background-color="#1abc9c">
+<h1>Phase 5: Sleep &amp; Memory</h1>
+
+</section>
+<section id="is-there-a-relationship" class="slide level2">
+<h2>Is there a relationship?</h2>
+</section>
+<section id="the-question" class="slide level2">
+<h2>The Question</h2>
+<p>You told us how much sleep you got last night.</p>
+<p>We measured how many words you recalled.</p>
+<p><strong>Is there a relationship between sleep and memory?</strong></p>
+</section>
+<section id="your-results-1" class="slide level2">
+<h2>Your Results</h2>
+
+<img data-src="instructor-slides_files/figure-revealjs/sleep-memory-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="group-discussion-4" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 5.1-5.5:</strong></p>
+<ol type="1">
+<li>Is there an IV in this study?</li>
+<li>What design type is this?</li>
+<li>What does the correlation tell us?</li>
+<li>Can we say sleep <strong>causes</strong> better memory?</li>
+<li>What’s the key limitation of correlational designs?</li>
+</ol>
+</section>
+<section id="debrief-correlational-design" class="slide level2">
+<h2>Debrief: Correlational Design</h2>
+<p><strong>Design</strong>: Correlational (no manipulation)</p>
+<p><strong>Variables</strong>: Sleep hours AND memory score (neither is the IV)</p>
+<p><strong>Key insight</strong>: We measured BOTH variables — we didn’t manipulate either.</p>
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Between-Subjects</strong></p>
+<p><strong>The Critical Point</strong></p>
 </div>
 <div class="callout-content">
-<p>Different people in Lab A vs Lab B.</p>
-<p>We’re comparing <strong>between</strong> groups.</p>
+<p><strong>Correlation ≠ Causation</strong></p>
+<p>Maybe sleep helps memory… OR maybe third variables (e.g., health, motivation) affect both!</p>
 </div>
 </div>
 </div>
@@ -323,148 +550,41 @@ Gordon Wright
 
 </section></section>
 <section>
-<section id="activity-2-pre-post-mood" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Activity 2: Pre-Post Mood</h1>
+<section id="phase-6-sixth-sense" class="title-slide slide level1 center" data-background-color="#9b59b6">
+<h1>Phase 6: Sixth Sense</h1>
 
 </section>
-<section id="same-person-different-conditions-20-min" class="slide level2">
-<h2>Same Person, Different Conditions (~20 min)</h2>
+<section id="can-you-feel-being-stared-at" class="slide level2">
+<h2>Can you feel being stared at?</h2>
 </section>
-<section id="your-data-mood-before-vs-after" class="slide level2">
-<h2>Your Data: Mood Before vs After</h2>
+<section id="what-you-did-4" class="slide level2">
+<h2>What You Did</h2>
+<p>6 trials: Someone either stared at you or didn’t.</p>
+<p>You guessed which it was.</p>
+<p><strong>If just guessing</strong>: You’d expect 50% correct (3 out of 6).</p>
+</section>
+<section id="your-detection-accuracy" class="slide level2">
+<h2>Your Detection Accuracy</h2>
 
-<img data-src="instructor-slides_files/figure-revealjs/mood-change-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="key-point" class="slide level2">
-<h2>Key Point</h2>
-<div class="definition-box">
-<p>The <strong>faint lines connect the same person</strong>.</p>
-<p>This is what makes it a within-subjects design!</p>
-</div>
-</section>
-<section id="questions-to-emphasise" class="slide level2">
-<h2>Questions to Emphasise</h2>
+<img data-src="instructor-slides_files/figure-revealjs/sixth-sense-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="group-discussion-5" class="slide level2">
+<h2>Group Discussion</h2>
+<countdown-timer id="timer_5bdbaf89e3423bf8588f24324b07b4126ee7dbbf" minutes="04" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<p><strong>In your groups, answer Questions 6.1-6.4:</strong></p>
 <ol type="1">
-<li><strong>Same people or different?</strong> (Same)</li>
-<li><strong>Design type?</strong> (Within-subjects)</li>
-<li><strong>Why is this powerful?</strong> (Each person is their own control)</li>
+<li>If someone got 5/6 correct, does that prove they have a sixth sense?</li>
+<li>What is the null hypothesis here?</li>
+<li>What would 50% accuracy suggest?</li>
 </ol>
 </section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="activity-3-descriptive-statistics" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Activity 3: Descriptive Statistics</h1>
-
-</section>
-<section id="understanding-mean-and-sd-30-min" class="slide level2">
-<h2>Understanding Mean and SD (~30 min)</h2>
-</section>
-<section id="same-mean-different-spread" class="slide level2">
-<h2>Same Mean, Different Spread</h2>
-
-<img data-src="instructor-slides_files/figure-revealjs/spread-demo-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>The mean alone doesn’t tell the whole story!</strong></p>
-</div>
-</div>
-</div>
-</section>
-<section id="reading-r-output" class="slide level2">
-<h2>Reading R Output</h2>
-<p>Students will see actual R code output:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">mean</span>(scores)</span>
-<span id="cb1-2"><a></a>[<span class="dv">1</span>] <span class="dv">7</span></span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="fu">sd</span>(scores)</span>
-<span id="cb1-5"><a></a>[<span class="dv">1</span>] <span class="fl">1.195229</span></span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a><span class="fu">summary</span>(scores)</span>
-<span id="cb1-8"><a></a>   Min. <span class="dv">1</span>st Qu.  Median    Mean <span class="dv">3</span>rd Qu.    Max.</span>
-<span id="cb1-9"><a></a>   <span class="fl">5.00</span>    <span class="fl">6.00</span>    <span class="fl">7.00</span>    <span class="fl">7.00</span>    <span class="fl">8.00</span>    <span class="fl">9.00</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Task</strong>: Identify what each number means.</p>
-</section>
-<section id="signal-vs-noise" class="slide level2">
-<h2>Signal vs Noise</h2>
-<div class="definition-box">
-<p><strong>Signal</strong> = difference between group means</p>
-<p><strong>Noise</strong> = variability within groups (SD)</p>
-<p>A difference only matters if it’s <strong>big relative to the SD</strong>!</p>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="activity-4-hypothesis-writing" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Activity 4: Hypothesis Writing</h1>
-
-</section>
-<section id="practice-20-min" class="slide level2">
-<h2>Practice (~20 min)</h2>
-</section>
-<section id="key-distinctions" class="slide level2">
-<h2>Key Distinctions</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Predicts</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Experimental (H₁)</td>
-<td>There WILL be an effect</td>
-</tr>
-<tr class="even">
-<td>Null (H₀)</td>
-<td>There will be NO effect</td>
-</tr>
-<tr class="odd">
-<td>One-tailed</td>
-<td>Direction of effect</td>
-</tr>
-<tr class="even">
-<td>Two-tailed</td>
-<td>Difference, not direction</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<div class="example-box">
-<p><strong>One-tailed</strong>: “Concrete words will be recalled <strong>better</strong> than abstract words”</p>
-<p><strong>Two-tailed</strong>: “Word type will <strong>affect</strong> memory”</p>
-</div>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="activity-5-mcq-practice" class="title-slide slide level1 center" data-background-color="#275882">
-<h1>Activity 5: MCQ Practice</h1>
-
-</section>
-<section id="putting-it-together-20-min" class="slide level2">
-<h2>Putting It Together (~20 min)</h2>
-</section>
-<section id="three-investigations" class="slide level2">
-<h2>Three Investigations</h2>
-<ol type="1">
-<li><strong>Throwing Accuracy</strong> (dominant vs non-dominant hand) — Within-subjects</li>
-<li><strong>Self-Rating vs Performance</strong> — Correlational (no IV!)</li>
-<li><strong>Sixth Sense</strong> — vs Chance</li>
-</ol>
-<p>Students apply what they’ve learned.</p>
+<section id="debrief-chance-and-the-null-hypothesis" class="slide level2">
+<h2>Debrief: Chance and the Null Hypothesis</h2>
+<p><strong>H0</strong>: Performance equals chance (50% - just guessing)</p>
+<p><strong>H1</strong>: Performance differs from chance</p>
+<p><strong>Key insight</strong>: Some people will get 5/6 or 6/6 just by luck, even with no real ability.</p>
+<p>With 28 people flipping coins, SOMEONE will get 5+ heads. That doesn’t mean the coin is biased.</p>
+<p><strong>This is why we need statistics</strong> - to separate signal from noise.</p>
 </section>
 <section class="slide level2">
 
@@ -474,31 +594,97 @@ Gordon Wright
 <h1>Wrap-Up</h1>
 
 </section>
-<section id="key-takeaways" class="slide level2">
-<h2>Key Takeaways</h2>
-<p><strong>Design Types:</strong></p>
-<ul>
-<li><strong>Between-subjects</strong> = Different people in each condition</li>
-<li><strong>Within-subjects</strong> = Same people in all conditions</li>
-<li><strong>Correlational</strong> = No manipulation, measuring relationships</li>
-</ul>
+<section id="what-have-we-learned" class="slide level2">
+<h2>What have we learned?</h2>
 </section>
-<section id="key-takeaways-1" class="slide level2">
-<h2>Key Takeaways</h2>
-<p><strong>Variables:</strong></p>
+<section id="design-types-summary" class="slide level2">
+<h2>Design Types Summary</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Design</th>
+<th>Same people?</th>
+<th>Example from today</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Between-subjects</td>
+<td>No</td>
+<td>Memory (Lab A vs Lab B)</td>
+</tr>
+<tr class="even">
+<td>Within-subjects</td>
+<td>Yes</td>
+<td>Throwing (Dom vs Non-dom)</td>
+</tr>
+<tr class="odd">
+<td>Correlational</td>
+<td>N/A</td>
+<td>Sleep &amp; Memory</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="key-vocabulary" class="slide level2">
+<h2>Key Vocabulary</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Variables</strong></p>
 <ul>
-<li><strong>IV</strong> = What the researcher manipulates</li>
-<li><strong>DV</strong> = What the researcher measures</li>
-<li>Correlational designs have <strong>NO IV</strong></li>
+<li><strong>IV</strong>: What’s manipulated</li>
+<li><strong>DV</strong>: What’s measured</li>
 </ul>
+<p><strong>Hypotheses</strong></p>
+<ul>
+<li><strong>H1</strong>: Predicts an effect</li>
+<li><strong>H0</strong>: Predicts no effect</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Direction</strong></p>
+<ul>
+<li><strong>One-tailed</strong>: Predicts direction</li>
+<li><strong>Two-tailed</strong>: Predicts difference only</li>
+</ul>
+<p><strong>Key Concept</strong></p>
+<ul>
+<li><strong>Chance</strong>: Random variation</li>
+<li><strong>Statistics</strong>: Separating signal from noise</li>
+</ul>
+</div></div>
+</section>
+<section id="your-assessments" class="slide level2">
+<h2>Your Assessments</h2>
+<p>Everything today connects to your assessments:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Assessment</th>
+<th>What you practiced today</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Research Plan</strong></td>
+<td>IV, DV, design types, hypotheses</td>
+</tr>
+<tr class="even">
+<td><strong>MCQ Exam</strong></td>
+<td>All terminology and concepts</td>
+</tr>
+<tr class="odd">
+<td><strong>EDS Assignment</strong></td>
+<td>Means, SDs, interpreting results</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="next-steps" class="slide level2">
 <h2>Next Steps</h2>
-<p>Direct students to:</p>
 <ol type="1">
-<li>Complete the <strong>Week 12 Self-Assessment Quiz</strong></li>
-<li>Review the <strong>Lecture Reading</strong></li>
-<li>Start thinking about <strong>Research Plan</strong> (due Week 16)</li>
+<li><p>Complete the <strong>Week 12 Self-Assessment Quiz</strong></p></li>
+<li><p>Review today’s activity page</p></li>
+<li><p>Start thinking about your <strong>Research Plan</strong> (due Week 16)</p></li>
 </ol>
 </section>
 <section class="slide level2">
@@ -509,10 +695,14 @@ Gordon Wright
 <h1>Questions?</h1>
 
 </section>
-<section id="then-lets-begin-the-activity" class="slide level2">
-<h2>Then let’s begin the activity!</h2>
+<section class="slide level2">
+
+</section></section>
+<section id="well-done" class="title-slide slide level1 center" data-background-color="#275882">
+<h1>Well done!</h1>
 <aside class="notes">
-<p>Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.</p>
+<p>Total time: approximately 80 minutes</p>
+<p>The slides provide structure but the real learning happens in the small group discussions and whole-class debriefs. Adjust timing as needed based on how discussions develop.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -526,9 +716,10 @@ Gordon Wright
       }</style></aside>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/foundations-26-logo.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -563,7 +754,7 @@ Gordon Wright
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,

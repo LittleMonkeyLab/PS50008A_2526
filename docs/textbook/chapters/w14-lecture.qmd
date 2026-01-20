@@ -1,22 +1,24 @@
 ---
-title: "Chapter 7: Inference & t-tests"
-subtitle: "Testing Hypotheses About Means"
+title: "Chapter 7: Is Your Effect Real?"
+subtitle: "Testing Hypotheses, Measuring Certainty, Quantifying Effects"
 ---
 
 ## Overview
 
 ::: {.callout-tip}
 ## Before You Begin
-This chapter introduces formal hypothesis testing. You will learn how to use data to make decisions about whether effects are "real" or could have happened by chance. This is one of the most important (and most misunderstood) topics in research methods.
+This chapter brings together everything you need to analyse and interpret your results: hypothesis testing to determine IF there's an effect, confidence intervals to show HOW CERTAIN you are, and effect sizes to show HOW BIG it is. This is one of the most important (and most misunderstood) topics in research methods.
 :::
 
 This chapter covers:
 
 - Null hypothesis significance testing (NHST)
 - What p-values mean (and don't mean)
-- Type I and Type II errors
+- Confidence intervals and what they tell us
+- Effect sizes (Cohen's d) and practical importance
 - Independent samples t-test (between-subjects)
 - Paired samples t-test (within-subjects)
+- Complete APA reporting with all components
 
 All concepts are illustrated using DataLab examples from your class.
 
@@ -34,6 +36,18 @@ Consider your DataLab memory data:
 - Lab B (concrete words): *M* = 6.8
 
 There's clearly a difference of 1.4 words. But is this difference meaningful, or could it have happened by chance? Maybe if you tested different students, the results would be reversed.
+
+### The Three Questions
+
+When analysing results, you need to answer three questions:
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+1. **Is the effect real?** — Hypothesis testing and p-values
+2. **How certain are we?** — Confidence intervals
+3. **How big is it?** — Effect sizes (Cohen's d)
+:::
+
+A complete analysis addresses all three. Let's examine each in turn.
 
 ### The Null Hypothesis
 
@@ -134,7 +148,7 @@ This distinction matters! The p-value is calculated *under the assumption* that 
 
 ---
 
-## Part 3: Errors in Hypothesis Testing
+## Part 3: Type I and Type II Errors
 
 ### Two Ways to Be Wrong
 
@@ -174,14 +188,130 @@ You can't minimise both errors simultaneously:
 - Setting a stricter α (e.g., .01 instead of .05) reduces Type I errors but increases Type II errors
 - Using larger samples reduces Type II errors without increasing Type I errors (this is why sample size matters!)
 
-::: {.callout-tip}
-## Practical Advice
-In most psychology research, we set α = .05 by convention. We increase power by using larger samples and more reliable measures, not by relaxing α.
+---
+
+## Part 4: Confidence Intervals — How Certain Are We?
+
+### Beyond Point Estimates
+
+A mean like 6.8 is a **point estimate** — our best single guess at the population value. But how confident are we in this estimate?
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Confidence Interval (CI)**: A range of values that is likely to contain the true population parameter. A 95% CI represents the range within which we're reasonably confident the true value lies.
 :::
+
+Instead of reporting: "Lab B mean = 6.8"
+
+Report: "Lab B mean = 6.8, 95% CI [6.07, 7.53]"
+
+This tells readers not just our estimate but how *precise* that estimate is.
+
+### Interpreting 95% Confidence Intervals
+
+::: {.callout-warning}
+## Common Misconception
+A 95% CI does NOT mean "there's a 95% probability the true value is in this interval."
+:::
+
+The correct interpretation:
+
+> If we repeated this study many times and calculated a 95% CI each time, **95% of those intervals would contain the true population value**.
+
+Once calculated, any specific CI either contains the true value or it doesn't — we just don't know which.
+
+### What CIs Tell Us
+
+1. **The range of plausible values**: The true population mean is probably somewhere in this range
+2. **Precision**: Narrower CI = more precise estimate (usually from larger samples)
+3. **Uncertainty**: Wider CI = more uncertainty about the true value
+
+### CIs and Statistical Significance
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Key rule**: If the 95% CI for a difference **does not include zero**, the difference is statistically significant at p < .05.
+:::
+
+For our memory study:
+
+- Difference between labs = 1.4 words
+- 95% CI for the difference = [0.42, 2.38]
+- The CI does NOT include zero
+- Therefore: p < .05 (significant difference)
+
+If the CI had been [-0.20, 3.00], it would include zero, suggesting the difference might not be real.
+
+### Why Report CIs?
+
+1. They provide more information than p-values alone
+2. They show the range of plausible effects
+3. Readers can judge whether the effect is practically meaningful
+4. They're becoming required in many journals
 
 ---
 
-## Part 4: The Independent Samples t-test
+## Part 5: Effect Sizes — How Big Is It?
+
+### Statistical Significance ≠ Practical Importance
+
+::: {.callout-warning}
+## Critical Distinction
+A statistically significant result can be trivially small. With a large enough sample, even a 0.1-point difference could be "significant" — but is that meaningful?
+:::
+
+This is why we need **effect sizes**.
+
+### Cohen's d
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Cohen's d**: A standardised measure of the difference between two means, expressed in standard deviation units.
+
+$$d = \frac{\bar{X}_1 - \bar{X}_2}{s_{pooled}}$$
+:::
+
+Effect sizes are independent of sample size. A d = 0.50 means the same thing whether you have 20 or 2,000 participants.
+
+### Interpreting Cohen's d
+
+Cohen (1988) provided benchmarks:
+
+| d value | Interpretation | What it looks like |
+|---------|----------------|-------------------|
+| 0.2 | Small | Means overlap 85% |
+| 0.5 | Medium | Means overlap 67% |
+| 0.8 | Large | Means overlap 53% |
+
+::: {.callout-note}
+## Context Matters
+These benchmarks are rough guidelines. In some fields (e.g., clinical interventions), d = 0.3 is impressive. In others (e.g., perceptual differences), d = 0.3 might be trivial.
+:::
+
+### Calculating Cohen's d: Example
+
+**DataLab Memory Data**:
+
+- Lab A: M = 5.4, SD = 1.8
+- Lab B: M = 6.8, SD = 2.0
+
+First, calculate pooled SD:
+
+$$s_{pooled} = \sqrt{\frac{(SD_1)^2 + (SD_2)^2}{2}} = \sqrt{\frac{1.8^2 + 2.0^2}{2}} = \sqrt{\frac{3.24 + 4.0}{2}} = \sqrt{3.62} = 1.90$$
+
+Then calculate d:
+
+$$d = \frac{6.8 - 5.4}{1.90} = \frac{1.4}{1.90} = 0.74$$
+
+This is a **medium-to-large effect** — the lab manipulation had a meaningful impact on memory.
+
+### Why Effect Sizes Matter
+
+1. **Practical importance**: Tells you if the effect is big enough to care about
+2. **Comparability**: Allows comparison across different studies and measures
+3. **Meta-analysis**: Effect sizes are combined across studies to estimate true effects
+4. **Complete picture**: p-values tell you IF there's an effect; d tells you HOW BIG
+
+---
+
+## Part 6: The Independent Samples t-test
 
 ### When to Use It
 
@@ -217,34 +347,31 @@ In words: **signal ÷ noise**
 
 **Step 1**: Calculate the pooled standard error
 
-$$SE_{diff} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{1.8^2}{30} + \frac{2.0^2}{30}} = \sqrt{0.108 + 0.133} = \sqrt{0.241} = 0.49$$
+$$SE_{diff} = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} = \sqrt{\frac{1.8^2}{30} + \frac{2.0^2}{30}} = \sqrt{0.108 + 0.133} = 0.49$$
 
 **Step 2**: Calculate t
 
 $$t = \frac{\bar{x}_2 - \bar{x}_1}{SE_{diff}} = \frac{6.8 - 5.4}{0.49} = \frac{1.4}{0.49} = 2.86$$
 
-**Step 3**: Look up p-value
+**Step 3**: Degrees of freedom
 
-With df = 58 (approximately n₁ + n₂ - 2), t = 2.86 gives p = .006
+df = n₁ + n₂ - 2 = 30 + 30 - 2 = 58
 
-**Step 4**: Make a decision
+**Step 4**: Look up p-value
 
-Since p = .006 < .05, we reject H₀. The difference is statistically significant.
+With df = 58, t = 2.86 gives p = .006
 
-### Reporting an Independent t-test (APA Format)
+**Step 5**: Calculate effect size
 
-> An independent samples t-test revealed that participants who saw concrete words (*M* = 6.8, *SD* = 2.0) recalled significantly more words than those who saw abstract words (*M* = 5.4, *SD* = 1.8), *t*(58) = 2.86, *p* = .006, *d* = 0.74.
+d = (6.8 - 5.4) / 1.90 = 0.74
 
-Notice this includes:
+**Step 6**: Make a decision
 
-- Descriptive statistics for both groups
-- The t-statistic with degrees of freedom
-- The exact p-value
-- The effect size (Cohen's d)
+Since p = .006 < .05, we reject H₀. The difference is statistically significant, with a medium-to-large effect.
 
 ---
 
-## Part 5: The Paired Samples t-test
+## Part 7: The Paired Samples t-test
 
 ### When to Use It
 
@@ -279,18 +406,10 @@ Instead of comparing two separate groups, we:
 
 **DataLab Data (Mood pre-post)**:
 
-| Participant | Pre-mood | Post-mood | Difference |
-|-------------|----------|-----------|------------|
-| 1 | 5 | 7 | +2 |
-| 2 | 6 | 6 | 0 |
-| 3 | 4 | 6 | +2 |
-| 4 | 7 | 8 | +1 |
-| 5 | 5 | 7 | +2 |
-| 6 | 6 | 5 | -1 |
-| ... | ... | ... | ... |
+For 30 participants:
 
-Suppose for 30 participants:
-
+- Mean pre-mood: 5.3
+- Mean post-mood: 6.5
 - Mean difference: *M*_diff = 1.2
 - SD of differences: *SD*_diff = 1.8
 
@@ -302,30 +421,65 @@ $$SE_{diff} = \frac{SD_{diff}}{\sqrt{n}} = \frac{1.8}{\sqrt{30}} = \frac{1.8}{5.
 
 $$t = \frac{\bar{d}}{SE_{diff}} = \frac{1.2}{0.33} = 3.64$$
 
-**Step 3**: Look up p-value
+**Step 3**: Degrees of freedom
 
-With df = n - 1 = 29, t = 3.64 gives p = .001
+df = n - 1 = 30 - 1 = 29
 
-**Step 4**: Make a decision
+**Step 4**: Look up p-value
 
-Since p = .001 < .05, we reject H₀. Mood significantly changed after the session.
+With df = 29, t = 3.64 gives p = .001
 
-### Reporting a Paired t-test (APA Format)
+**Step 5**: Calculate effect size
 
-> A paired samples t-test showed that participants' mood ratings were significantly higher after the DataLab session (*M* = 6.5, *SD* = 1.4) compared to before (*M* = 5.3, *SD* = 1.6), *t*(29) = 3.64, *p* = .001, *d* = 0.67.
+$$d = \frac{\bar{d}}{SD_{diff}} = \frac{1.2}{1.8} = 0.67$$
+
+**Step 6**: Make a decision
+
+Since p = .001 < .05, we reject H₀. Mood significantly improved after the session.
 
 ### Why Paired Tests Are More Powerful
 
 Paired tests control for individual differences. Some people are naturally happier; some have better memories. By comparing each person to themselves, we remove this "noise," making it easier to detect true effects.
 
-::: {.callout-note}
-## The Trade-off
-Paired designs are more powerful but require measuring the same people twice, which isn't always practical (and introduces potential order effects).
+---
+
+## Part 8: Complete APA Reporting
+
+### The Formula
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA format for t-tests:**
+
+*t*(df) = X.XX, *p* = .XXX, *d* = X.XX, 95% CI [X.XX, X.XX]
 :::
+
+All five components:
+
+1. **t** = test statistic
+2. **df** = degrees of freedom (in parentheses)
+3. **p** = exact p-value (or p < .001 if very small)
+4. **d** = Cohen's d effect size
+5. **95% CI** = confidence interval for the difference
+
+### Complete Example: Independent t-test
+
+> An independent samples t-test revealed that participants who studied concrete words (*M* = 6.8, *SD* = 2.0) recalled significantly more words than those who studied abstract words (*M* = 5.4, *SD* = 1.8), *t*(58) = 2.86, *p* = .006, *d* = 0.74, 95% CI [0.42, 2.38].
+
+Notice this includes:
+
+- Descriptive statistics for both groups
+- The t-statistic with degrees of freedom
+- The exact p-value
+- The effect size (Cohen's d)
+- The 95% confidence interval for the difference
+
+### Complete Example: Paired t-test
+
+> A paired samples t-test showed that participants' mood ratings were significantly higher after the DataLab session (*M* = 6.5, *SD* = 1.4) compared to before (*M* = 5.3, *SD* = 1.6), *t*(29) = 3.64, *p* = .001, *d* = 0.67, 95% CI [0.54, 1.86].
 
 ---
 
-## Part 6: Choosing the Right t-test
+## Part 9: Choosing the Right t-test
 
 ### Decision Guide
 
@@ -347,37 +501,7 @@ Are the two groups of scores from the same people?
 | Dominant vs Non-dominant hand | Within-subjects | Paired t-test |
 | Males vs Females on any task | Between-subjects | Independent t-test |
 
----
-
-## Part 7: Common Misinterpretations
-
-### "Not Significant" Doesn't Mean "No Effect"
-
-::: {.callout-warning}
-## Critical Point
-A non-significant result (p > .05) does **NOT** prove there's no effect. It only means we don't have enough evidence to conclude there is one.
-:::
-
-Possible reasons for non-significance:
-
-1. There really is no effect
-2. There is an effect, but your sample was too small to detect it
-3. There is an effect, but your measure was too noisy
-4. There is an effect, but it's very small
-
-### "Significant" Doesn't Mean "Important"
-
-A statistically significant result can be trivially small. With a large enough sample, even a 0.1-point difference in mood ratings could be significant — but is that meaningful?
-
-[Always report effect sizes!]{style="background-color: #FFF3CD; font-weight: bold"} Statistical significance tells you an effect probably exists; effect size tells you whether it matters.
-
-### p = .049 vs p = .051
-
-There's no meaningful difference between these values. The .05 cutoff is arbitrary — a convention, not a law of nature.
-
-::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Good practice**: Report exact p-values and focus on effect sizes and confidence intervals, not just whether p crossed .05.
-:::
+This connects directly to Week 13: your **design choice** determines your **test choice**.
 
 ---
 
@@ -391,9 +515,24 @@ There's no meaningful difference between these values. The .05 cutoff is arbitra
 | **α (alpha)** | Significance threshold (typically .05) |
 | **Type I error** | False positive — claiming an effect that doesn't exist |
 | **Type II error** | False negative — missing a real effect |
+| **Confidence interval** | Range of plausible values for the true parameter |
+| **Effect size (d)** | Standardised measure of how big the effect is |
 | **Independent t-test** | Compares means from different groups |
 | **Paired t-test** | Compares means from the same people |
-| **t-statistic** | Signal ÷ noise ratio |
+
+---
+
+## The Complete Analysis Checklist
+
+When reporting results, ensure you include:
+
+- [ ] Descriptive statistics (M, SD) for each group/condition
+- [ ] The appropriate test (independent or paired t-test)
+- [ ] Test statistic (t) with degrees of freedom
+- [ ] Exact p-value
+- [ ] Effect size (Cohen's d)
+- [ ] 95% confidence interval
+- [ ] Interpretation in words
 
 ---
 
@@ -404,10 +543,11 @@ Before the lecture, make sure you can answer these questions:
 1. What is the null hypothesis and why do we test against it?
 2. In your own words, what does a p-value of 0.02 mean?
 3. What's the difference between a Type I and Type II error?
-4. When would you use an independent t-test vs a paired t-test?
-5. Why is it important to report effect sizes alongside p-values?
-6. What does it mean if a result is "not statistically significant"?
-7. For the mood pre-post data, what are H₀ and H₁?
+4. How do you interpret a 95% confidence interval?
+5. What does Cohen's d tell us that p-values don't?
+6. When would you use an independent t-test vs a paired t-test?
+7. What does it mean if a result is "not statistically significant"?
+8. What are the five components of complete APA reporting for t-tests?
 
 ---
 
@@ -415,6 +555,6 @@ Before the lecture, make sure you can answer these questions:
 
 For additional depth:
 
-- Cumming, G. (2012). *Understanding the New Statistics*. Chapters on NHST and effect sizes.
+- Cumming, G. (2012). *Understanding the New Statistics*. Chapters on NHST, CIs, and effect sizes.
 - Coolican, H. (2017). Chapters 17-18: Significance testing and t-tests. [VLeBooks](https://www.vlebooks.com/Product/Index/1994423?page=0&startBookmarkId=-1)
 - Lakens, D. (2013). Calculating and reporting effect sizes. *Frontiers in Psychology, 4*, 863.

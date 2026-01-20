@@ -29,8 +29,8 @@ format-links:
 |:----:|-------|-------|:-------:|:---:|:----------:|
 | 11 | 12-16 Jan | [DataLab](week11/index.qmd) | None | DataLab |  |
 | 12 | 19-23 Jan | Distributions & Variability | Yes | Descriptives in R | |
-| 13 | 26-30 Jan | Estimation & CIs| Yes | Bootstrap CIs | |
-| 14 | 2-6 Feb | Inference & t-tests | Yes | t-tests in R | |
+| 13 | 26-30 Jan | Building Your Research | Yes | Research Plan Workshop | |
+| 14 | 2-6 Feb | Is Your Effect Real? | Yes | t-tests in R | |
 | 15 | 9-13 Feb | Correlation | Yes | Correlation in R | |
 | — | 16-20 Feb | **Reading Week** | — | — | Work on Research Plan |
 | 16 | 23-27 Feb | Regression | Yes | Project groups | **Research Plan due Fri 27 Feb** |
@@ -78,20 +78,22 @@ There is no lecture in Week 11 due to employability events.
 - Introduction to R for descriptives
 - *Report writing: Descriptive statistics*
 
-**Week 13: Estimation & Confidence Intervals**
+**Week 13: Building Your Research**
 
-- Point estimates vs interval estimates
-- Bootstrap confidence intervals
-- Effect sizes (Cohen's d)
-- *Report writing: CIs and effect sizes*
+- Operationalising variables (with real paper examples)
+- Writing hypotheses (one-tailed vs two-tailed)
+- Design decisions and trade-offs
+- Connecting design to statistical tests
+- *Assessment focus: Research Plan preparation*
 
-**Week 14: Inference & t-tests**
+**Week 14: Is Your Effect Real?**
 
-- Null hypothesis logic
+- Null hypothesis significance testing
 - p-values and significance
-- Between vs within designs
-- t-tests and their nonparametric alternatives
-- *Report writing: t-test results*
+- Confidence intervals and effect sizes (Cohen's d)
+- Independent vs paired t-tests
+- Complete APA reporting
+- *Report writing: t-test results with CIs and effect sizes*
 
 **Week 15: Correlation**
 

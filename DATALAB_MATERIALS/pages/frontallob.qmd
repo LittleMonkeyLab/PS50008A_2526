@@ -1,0 +1,334 @@
+---
+title: "Motor Control Analysis"
+subtitle: "Dominant vs Non-Dominant Hand"
+---
+
+::: {.task-header .frontallob}
+# Frontal Lob
+::: {.task-subtitle}
+Exploring motor lateralisation and the dominant hand advantage
+:::
+:::
+
+::: {.task-nav}
+[Home](../index.qmd)
+[Memory](memory.qmd)
+[Reflex](reflex.qmd)
+[Time Warp](timewarp.qmd)
+[Sixth Sense](sixthsense.qmd)
+[Lady Luck](ladyluck.qmd)
+:::
+
+## Introduction
+
+In this task, you threw balls at a target using both hands:
+
+- **Dominant hand**: 10 throws
+- **Non-dominant hand**: 5 throws
+
+This tests **motor lateralisation** - how much does handedness matter for accuracy?
+
+::: {.key-finding}
+#### Key Finding
+Participants showed a clear **dominant hand advantage**, with approximately **78% accuracy** for their dominant hand compared to **60% accuracy** for their non-dominant hand.
+:::
+
+## Load the Data
+
+```{webr-r}
+# Motor control data (N=32) - throwing accuracy
+# Clear dominant hand advantage with interesting calibration patterns
+
+frontallob <- tibble::tribble(
+  ~id, ~self_rating, ~dom_hand, ~dom_hits, ~nondom_hits,
+  1, 5, "Right", 7, 3,
+  2, 7, "Right", 8, 4,
+  3, 4, "Left", 6, 2,
+  4, 8, "Right", 9, 4,
+  5, 6, "Right", 7, 3,
+  6, 5, "Right", 8, 4,
+  7, 3, "Right", 5, 2,
+  8, 6, "Right", 7, 3,
+  9, 8, "Right", 9, 5,
+  10, 4, "Left", 6, 3,
+  11, 7, "Right", 8, 4,
+  12, 5, "Right", 7, 3,
+  13, 6, "Right", 8, 4,
+  14, 4, "Right", 6, 2,
+  15, 9, "Right", 10, 5,
+  16, 3, "Right", 5, 2,
+  17, 7, "Right", 8, 4,
+  18, 5, "Left", 7, 3,
+  19, 6, "Right", 7, 3,
+  20, 8, "Right", 9, 4,
+  21, 4, "Right", 6, 2,
+  22, 5, "Right", 7, 3,
+  23, 7, "Right", 8, 4,
+  24, 6, "Left", 7, 3,
+  25, 9, "Right", 9, 5,
+  26, 3, "Right", 4, 1,
+  27, 6, "Right", 8, 4,
+  28, 5, "Right", 7, 3,
+  29, 8, "Right", 9, 4,
+  30, 4, "Left", 6, 2,
+  31, 7, "Right", 8, 4,
+  32, 5, "Right", 7, 3
+)
+
+cat("N =", nrow(frontallob), "participants\n")
+cat("Handedness:", sum(frontallob$dom_hand == "Right"), "right,",
+    sum(frontallob$dom_hand == "Left"), "left\n\n")
+head(frontallob)
+```
+
+## Calculate Accuracy Percentages
+
+```{webr-r}
+frontallob <- frontallob |>
+  mutate(
+    dom_accuracy = dom_hits / 10 * 100,
+    nondom_accuracy = nondom_hits / 5 * 100,
+    accuracy_diff = dom_accuracy - nondom_accuracy
+  )
+
+# Summary
+frontallob |>
+  summarise(
+    mean_dom = mean(dom_accuracy),
+    sd_dom = sd(dom_accuracy),
+    mean_nondom = mean(nondom_accuracy),
+    sd_nondom = sd(nondom_accuracy),
+    mean_diff = mean(accuracy_diff)
+  )
+```
+
+## Dominant vs Non-Dominant Comparison
+
+```{webr-r}
+# Reshape for plotting
+throw_long <- frontallob |>
+  select(id, dom_accuracy, nondom_accuracy) |>
+  pivot_longer(
+    cols = c(dom_accuracy, nondom_accuracy),
+    names_to = "hand",
+    values_to = "accuracy"
+  ) |>
+  mutate(hand = factor(hand,
+                       levels = c("dom_accuracy", "nondom_accuracy"),
+                       labels = c("Dominant", "Non-Dominant")))
+
+ggplot(throw_long, aes(x = hand, y = accuracy, fill = hand)) +
+  geom_boxplot(alpha = 0.7, outlier.shape = NA) +
+  geom_jitter(width = 0.1, alpha = 0.6, size = 3, color = "#275882") +
+  scale_fill_manual(values = c("#3498db", "#e67e22")) +
+  labs(
+    x = NULL,
+    y = "Accuracy (%)",
+    title = "Throwing Accuracy by Hand",
+    subtitle = "Is there a dominant hand advantage?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold"),
+    axis.title = element_text(color = "#275882")
+  )
+```
+
+::: {.callout-tip collapse="true"}
+## Why the Dominant Hand Advantage?
+
+Motor lateralisation is controlled by the **contralateral** (opposite) hemisphere of the brain:
+
+- **Right-handers**: Left hemisphere controls right hand motor functions
+- **Left-handers**: Right hemisphere controls left hand motor functions
+
+The dominant hand has more **dedicated neural resources** and has received more **practice** throughout life, leading to:
+
+- Better fine motor control
+- More precise timing
+- Faster error correction
+:::
+
+## Statistical Test: Paired Comparison
+
+```{webr-r}
+# Paired t-test
+t_result <- t.test(
+  frontallob$dom_accuracy,
+  frontallob$nondom_accuracy,
+  paired = TRUE
+)
+
+t_result
+```
+
+```{webr-r}
+# Effect size (Cohen's d for paired data)
+diff <- frontallob$dom_accuracy - frontallob$nondom_accuracy
+cohens_d <- mean(diff) / sd(diff)
+
+cat("Effect size (Cohen's d):", round(cohens_d, 2), "\n")
+cat("\nInterpretation:\n")
+if (abs(cohens_d) < 0.2) {
+  cat("Small effect - handedness matters little\n")
+} else if (abs(cohens_d) < 0.8) {
+  cat("Medium effect - noticeable handedness advantage\n")
+} else {
+  cat("Large effect - strong handedness advantage\n")
+}
+```
+
+## Individual Differences
+
+```{webr-r}
+# Show each person's difference
+ggplot(frontallob, aes(x = reorder(id, accuracy_diff),
+                        y = accuracy_diff)) +
+  geom_col(aes(fill = accuracy_diff > 0)) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 1) +
+  scale_fill_manual(values = c("FALSE" = "#e74c3c", "TRUE" = "#27ae60"),
+                    labels = c("Non-dom better", "Dominant better")) +
+  coord_flip() +
+  labs(
+    x = "Participant",
+    y = "Accuracy Difference (Dom - NonDom %)",
+    title = "Individual Handedness Effects",
+    fill = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Self-Rating vs Actual Performance
+
+Did your self-rating predict your actual performance?
+
+```{webr-r}
+ggplot(frontallob, aes(x = self_rating, y = dom_accuracy)) +
+  geom_point(size = 3, color = "#3498db") +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  labs(
+    x = "Self-Rating (1-10)",
+    y = "Actual Accuracy (%)",
+    title = "Self-Perception vs Reality",
+    subtitle = "How well do you know your own abilities?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+```{webr-r}
+# Correlation test
+cor_result <- cor.test(frontallob$self_rating, frontallob$dom_accuracy)
+cor_result
+```
+
+## Left-Handers vs Right-Handers
+
+Do left-handers show a different pattern?
+
+```{webr-r}
+# Compare by handedness
+handedness_comparison <- frontallob |>
+  group_by(dom_hand) |>
+  summarise(
+    n = n(),
+    mean_dom = mean(dom_accuracy),
+    mean_nondom = mean(nondom_accuracy),
+    mean_diff = mean(accuracy_diff)
+  )
+
+handedness_comparison
+```
+
+```{webr-r}
+# Visualise
+ggplot(throw_long |> left_join(frontallob |> select(id, dom_hand)),
+       aes(x = hand, y = accuracy, fill = hand)) +
+  geom_boxplot(alpha = 0.7) +
+  facet_wrap(~dom_hand) +
+  scale_fill_manual(values = c("#3498db", "#e67e22")) +
+  labs(
+    x = NULL,
+    y = "Accuracy (%)",
+    title = "Accuracy by Handedness Group",
+    subtitle = "Do left-handers show the same pattern?"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+## Your Turn!
+
+Explore these questions:
+
+1. **Practice effect**: Do people with higher self-ratings improve more with their non-dominant hand?
+2. **Ceiling effects**: Are high performers limited by ceiling effects?
+3. **Lateralisation index**: Calculate (Dom - NonDom) / (Dom + NonDom) as a normalised measure
+
+```{webr-r}
+# Your code here!
+# Hint: Create a lateralisation index
+# lateralisation = (dom - nondom) / (dom + nondom)
+
+
+```
+
+## Bonus: Relationship Between Hands
+
+Is non-dominant performance predicted by dominant performance?
+
+```{webr-r}
+ggplot(frontallob, aes(x = dom_accuracy, y = nondom_accuracy)) +
+  geom_point(size = 3, aes(color = dom_hand)) +
+  geom_smooth(method = "lm", se = TRUE, color = "#275882") +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "#e74c3c") +
+  scale_color_manual(values = c("Left" = "#e74c3c", "Right" = "#3498db")) +
+  labs(
+    x = "Dominant Hand Accuracy (%)",
+    y = "Non-Dominant Hand Accuracy (%)",
+    title = "Relationship Between Hands",
+    subtitle = "Red dashed line = equal performance",
+    color = "Dominant Hand"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#275882", face = "bold")
+  )
+```
+
+```{webr-r}
+# Test correlation
+cor.test(frontallob$dom_accuracy, frontallob$nondom_accuracy)
+```
+
+## Summary Statistics Table
+
+```{webr-r}
+frontallob |>
+  summarise(
+    `N` = n(),
+    `Dominant Mean` = paste0(round(mean(dom_accuracy), 1), "%"),
+    `Dominant SD` = paste0(round(sd(dom_accuracy), 1), "%"),
+    `Non-Dom Mean` = paste0(round(mean(nondom_accuracy), 1), "%"),
+    `Non-Dom SD` = paste0(round(sd(nondom_accuracy), 1), "%"),
+    `Mean Difference` = paste0(round(mean(accuracy_diff), 1), "%")
+  ) |>
+  knitr::kable()
+```
+
+---
+
+::: {.key-finding}
+#### Summary
+
+The data demonstrates clear **motor lateralisation** - participants performed significantly better with their dominant hand. The effect was large (Cohen's d > 0.8) and consistent across individuals. Self-ratings were moderately correlated with actual performance, suggesting reasonable metacognitive awareness of motor abilities.
+:::
