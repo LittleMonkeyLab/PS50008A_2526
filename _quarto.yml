@@ -160,7 +160,7 @@ website:
             href: week12/lab/reading.qmd
           - text: Self-Assessment
             href: week12/lab/self-assessment.qmd
-      - section: 'Week 13: Estimation & CIs'
+      - section: 'Week 13: Building your Research (Plan)'
         contents:
         - text: Overview
           href: week13/index.qmd
