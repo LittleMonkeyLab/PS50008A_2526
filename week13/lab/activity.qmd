@@ -51,24 +51,56 @@ The Research Plan requires you to investigate ONE of these three questions:
 Write down which topic you've chosen (or are leaning towards) before continuing.
 :::
 
-### Operationalising Your Independent Variable
+### Understanding Operationalisation
 
-The IV is what you manipulate. You need to specify EXACTLY how your two conditions will differ.
-
-**1. For your chosen topic, what is the independent variable?**
-
-`r mcq(c("Font difficulty / Hydration level / Eye contact", answer = "Depends on topic chosen", "Memory / Cognition / Trustworthiness"))`
-
-::: {.callout-tip collapse="true"}
-## Answer
-The IV depends on your topic:
-
-- Font study: Font type (fluent vs disfluent)
-- Hydration study: Hydration condition (water vs no water)
-- Eye contact study: Gaze direction (direct vs averted)
+::: {.callout-tip}
+## What is Operationalisation?
+Turning an abstract concept into a **concrete, measurable variable**. Your description must be specific enough that another researcher could replicate your study exactly.
 :::
 
-**2. Now, specify your IV operationally. Complete this template:**
+**1. Which of these is a well-operationalised IV?**
+
+`r mcq(c("Stress level", "Amount of exercise", answer = "20 minutes of moderate cycling (heart rate 120-140 bpm) vs 20 minutes of seated rest", "High vs low anxiety"))`
+
+**2. Which of these is a well-operationalised DV?**
+
+`r mcq(c("Memory performance", "How well they did on the test", answer = "Number of words correctly recalled from a 20-word list (range: 0-20)", "Whether they remembered things"))`
+
+### Learning from Examples
+
+Here's how operationalisation works with topics **different from your assessment**:
+
+**Example: Caffeine → Alertness**
+
+> **IV**: Caffeine consumption with two levels:
+>
+> - Condition 1: 200mg caffeine capsule (equivalent to ~2 cups of coffee)
+> - Condition 2: Placebo capsule (identical appearance, no caffeine)
+>
+> **DV**: Alertness measured by:
+>
+> - Task: Psychomotor Vigilance Test (10-minute sustained attention task)
+> - Scoring: Mean reaction time to stimuli (milliseconds)
+> - Range: Continuous, typically 200-500ms
+
+Notice the specificity: exact dosage, how conditions are matched, what task, what metric.
+
+**Example: Background Music → Concentration**
+
+> **IV**: Audio condition with two levels:
+>
+> - Condition 1: Instrumental background music (60-70 dB, classical piano)
+> - Condition 2: Silence (ambient noise only, <30 dB)
+>
+> **DV**: Concentration measured by:
+>
+> - Task: Proofreading task — identify spelling errors in a 500-word passage
+> - Scoring: Number of errors correctly identified
+> - Range: 0-15 (15 errors embedded)
+
+### Apply to Your Topic
+
+**3. For your chosen topic, complete this IV template:**
 
 > "The independent variable is _____________ with two levels:
 >
@@ -76,58 +108,7 @@ The IV depends on your topic:
 >
 > **Condition 2**: _____________________________________________"
 
-### Examples of Good Operationalisation
-
-**Font study example:**
-
-> "The independent variable is font type with two levels:
->
-> Condition 1 (Fluent): Arial, 16-point, black text on white background
->
-> Condition 2 (Disfluent): Comic Sans MS, 12-point, 75% grey text on white background"
-
-**Hydration study example:**
-
-> "The independent variable is water consumption with two levels:
->
-> Condition 1 (Water): Participants drink 300ml of still water
->
-> Condition 2 (Control): Participants do not drink anything"
-
-**Eye contact study example:**
-
-> "The independent variable is gaze direction with two levels:
->
-> Condition 1 (Direct): Photograph shows person looking directly at camera
->
-> Condition 2 (Averted): Photograph shows same person looking 30° to the left"
-
-### Check Your IV Operationalisation
-
-**3. Could another researcher replicate your manipulation exactly from your description?**
-
-`r mcq(c(answer = "Yes - I've specified all details needed", "Maybe - I could add more detail", "No - it's too vague"))`
-
-If you answered "Maybe" or "No", revise your operationalisation to add missing details.
-
-### Operationalising Your Dependent Variable
-
-The DV is what you measure. You need to specify the exact measurement procedure.
-
-**4. For your chosen topic, what is the dependent variable?**
-
-`r mcq(c("Memory performance / Cognitive performance / Trustworthiness rating", answer = "Depends on topic chosen", "The same as the IV"))`
-
-::: {.callout-tip collapse="true"}
-## Answer
-The DV depends on your topic:
-
-- Font study: Memory performance (e.g., number of words recalled)
-- Hydration study: Cognitive performance (e.g., reaction time, accuracy)
-- Eye contact study: Perceived trustworthiness (e.g., rating on 1-7 scale)
-:::
-
-**5. Complete this template for your DV:**
+**4. For your chosen topic, complete this DV template:**
 
 > "The dependent variable is _____________ measured by:
 >
@@ -137,37 +118,16 @@ The DV depends on your topic:
 >
 > **Range**: ________________________________________________"
 
-### Examples of Good DV Operationalisation
+### Check Your Operationalisation
 
-**Font study example:**
+**5. The "replicability test" asks whether:**
 
-> "The dependent variable is memory performance measured by:
->
-> Task: Free recall test — participants write down all words they remember
->
-> Scoring: Count of correctly recalled words
->
-> Range: 0-20 (20 words presented)"
+`r mcq(c("Your study is interesting enough to replicate", answer = "Another researcher could run the exact same study from your description", "The results would be the same if repeated", "Your participants could do the task again"))`
 
-**Hydration study example:**
-
-> "The dependent variable is cognitive performance measured by:
->
-> Task: Simple reaction time test — press spacebar when stimulus appears
->
-> Scoring: Mean reaction time in milliseconds across 30 trials
->
-> Range: Continuous, typically 150-400ms"
-
-**Eye contact study example:**
-
-> "The dependent variable is perceived trustworthiness measured by:
->
-> Task: Single-item rating scale: "How trustworthy does this person seem?"
->
-> Scoring: 1 = Not at all trustworthy, 7 = Extremely trustworthy
->
-> Range: 1-7"
+::: {.callout-warning}
+## Self-Check
+Read your operationalisation aloud. Could a stranger run your exact study from this description alone? If not, add the missing details.
+:::
 
 ---
 
@@ -175,83 +135,67 @@ The DV depends on your topic:
 
 ### Writing Your Null Hypothesis
 
-The null hypothesis (H₀) states there is NO effect.
+The null hypothesis (H₀) states there is NO effect or NO difference.
 
-**1. For your topic, write a null hypothesis:**
+**1. A null hypothesis predicts:**
+
+`r mcq(c("The effect you expect to find", answer = "No difference or no effect between conditions", "The direction of the effect", "What you hope will happen"))`
+
+**2. Write a null hypothesis for YOUR topic:**
 
 H₀: _________________________________________________
 
-**Example null hypotheses:**
+### One-Tailed vs Two-Tailed
 
-- Font: "There is no difference in recall scores between participants who read words in fluent vs disfluent fonts."
-- Hydration: "Drinking water has no effect on reaction time performance."
-- Eye contact: "Gaze direction does not affect trustworthiness ratings."
+**3. A one-tailed hypothesis:**
 
-### Writing Your Alternative Hypothesis
+`r mcq(c("Tests for any difference", answer = "Predicts a specific direction of effect", "Is always more appropriate", "Requires no justification"))`
 
-Now you must decide: **one-tailed or two-tailed?**
+**4. A two-tailed hypothesis:**
 
-**2. Should your alternative hypothesis be one-tailed (directional) or two-tailed (non-directional)?**
-
-`r mcq(c("One-tailed - I'm predicting a specific direction", "Two-tailed - I'm not sure which direction", answer = "I need to consider the evidence before deciding"))`
+`r mcq(c(answer = "Predicts a difference without specifying direction", "Predicts no effect", "Is never appropriate in psychology", "Is only used for correlations"))`
 
 ### Making the Decision
 
-**3. Which of these is TRUE about choosing hypothesis direction?**
+**5. When should you use a one-tailed hypothesis?**
 
-`r mcq(c("Always use two-tailed because it's safer", answer = "Choose based on prior research and theory", "One-tailed is always more powerful so use it", "It doesn't really matter"))`
+`r mcq(c("Whenever you want more statistical power", "When you're not sure what will happen", answer = "When prior research consistently supports a specific direction", "Always - it's better practice"))`
 
-**4. If prior research consistently shows an effect in one direction, which should you use?**
+**Example justification for direction:**
 
-`r mcq(c("Two-tailed, because you never know", answer = "One-tailed, because you can cite evidence for the direction", "Either - it's personal preference"))`
+> "I have chosen a **one-tailed** hypothesis predicting that caffeine will **decrease** reaction times because:
+>
+> - McLellan et al. (2016) meta-analysis found caffeine consistently improved reaction time across 21 studies
+> - The adenosine-blocking mechanism provides theoretical basis for increased alertness
+> - No studies have found caffeine impairs reaction time in healthy adults"
 
-### Write Your Alternative Hypothesis
+> "I have chosen a **two-tailed** hypothesis because:
+>
+> - While some studies show music improves concentration (Rauscher et al., 1993), others show it impairs performance (Perham & Vizard, 2011)
+> - The effect may depend on task type, music type, and individual differences
+> - I cannot confidently predict which direction the effect will go"
+
+### Write Your Hypotheses
 
 **Two-tailed version:**
 
 H₁: _________________________________________________
 
-**One-tailed version (if appropriate):**
+**One-tailed version (if you can justify it):**
 
 H₁: _________________________________________________
 
-### Justifying Your Choice
-
-**5. Complete this justification template:**
+**Your justification:**
 
 > "I have chosen a [one-tailed / two-tailed] hypothesis because:
 >
-> _________________________________________________________
->
-> Prior research suggests: __________________________________
->
-> Therefore: ______________________________________________"
+> _________________________________________________________"
 
-### Example Justifications
-
-**One-tailed (font study):**
-
-> "I have chosen a one-tailed hypothesis predicting better recall in the disfluent font condition because:
->
-> Prior research by Diemand-Yauman et al. (2011) found that disfluent fonts increased recall scores by 14%.
->
-> The desirable difficulties framework (Bjork & Bjork, 2011) provides a theoretical mechanism: harder processing leads to deeper encoding.
->
-> Therefore, I predict recall will be higher in the disfluent condition."
-
-**Two-tailed (font study alternative):**
-
-> "I have chosen a two-tailed hypothesis because:
->
-> While Diemand-Yauman et al. (2011) found memory benefits, several replication attempts have failed (Rummer et al., 2016).
->
-> There's also reason to think disfluent fonts could HARM memory by causing frustration or reduced reading time.
->
-> Therefore, I predict there will be a difference but do not specify direction."
+### Quick Checks
 
 True or False: A one-tailed hypothesis gives you more statistical power to detect an effect in the predicted direction. `r torf(TRUE)`
 
-True or False: If your effect goes in the opposite direction to your one-tailed prediction, you can still claim significance. `r torf(FALSE)`
+True or False: If your effect goes in the opposite direction to your one-tailed prediction, you can still claim statistical significance. `r torf(FALSE)`
 
 ---
 
@@ -259,133 +203,107 @@ True or False: If your effect goes in the opposite direction to your one-tailed 
 
 ### Choosing Your Design
 
-You need to decide: **between-subjects or within-subjects?**
+**1. In a between-subjects design, participants:**
 
-**1. In a between-subjects design:**
+`r mcq(c(answer = "Experience only ONE condition each", "Experience ALL conditions", "Are matched in pairs across conditions", "Drop out before completing the study"))`
 
-`r mcq(c(answer = "Different participants are in each condition", "Same participants are in all conditions", "Participants are matched in pairs", "There is no control group"))`
+**2. In a within-subjects design, participants:**
 
-**2. In a within-subjects design:**
+`r mcq(c("Experience only one condition each", answer = "Experience ALL conditions", "Are tested only once", "Cannot be counterbalanced"))`
 
-`r mcq(c("Different participants are in each condition", answer = "Same participants are in all conditions", "Only between-group variance is analysed", "Randomisation is not needed"))`
+### Evaluating Trade-offs
 
-### Evaluating Your Options
+**3. The main advantage of between-subjects designs is:**
 
-**3. For YOUR topic, what would a between-subjects design look like?**
+`r mcq(c("More statistical power", "Fewer participants needed", answer = "No order effects, practice effects, or carryover", "Simpler randomisation"))`
 
-Write it out:
+**4. The main advantage of within-subjects designs is:**
 
-> "In a between-subjects design:
+`r mcq(c(answer = "Each participant serves as their own control, increasing power", "No need for counterbalancing", "Participants prefer them", "Faster data collection"))`
+
+**5. The main disadvantage of within-subjects designs is:**
+
+`r mcq(c("Less statistical power", "More participants needed", answer = "Order effects, practice effects, and demand characteristics", "Cannot use t-tests"))`
+
+### Apply to Your Topic
+
+**6. Describe what a between-subjects version of YOUR study would look like:**
+
+> "Group A (n = ___): _________________________________________
 >
-> Group A (n = ___): ________________________________________
+> Group B (n = ___): _________________________________________"
+
+**7. Describe what a within-subjects version of YOUR study would look like:**
+
+> "All participants (n = ___) would: ____________________________
 >
-> Group B (n = ___): ________________________________________"
+> Order would be counterbalanced by: __________________________"
 
-**4. For YOUR topic, what would a within-subjects design look like?**
+**8. For YOUR topic, identify one specific trade-off:**
 
-Write it out:
-
-> "In a within-subjects design:
+> "A key consideration for my study is: _________________________
 >
-> All participants (n = ___): _________________________________
->
-> Then: ___________________________________________________"
-
-### Identifying Trade-offs
-
-**5. The main ADVANTAGE of between-subjects is:**
-
-`r mcq(c(answer = "No order effects or practice effects", "More statistical power", "Fewer participants needed", "More ecologically valid"))`
-
-**6. The main ADVANTAGE of within-subjects is:**
-
-`r mcq(c("No individual differences", answer = "Controls for individual differences, more power", "Simpler to analyse", "No counterbalancing needed"))`
-
-**7. The main DISADVANTAGE of between-subjects is:**
-
-`r mcq(c("Order effects", answer = "Individual differences add noise, need more participants", "Too statistically powerful", "Participants get bored"))`
-
-**8. The main DISADVANTAGE of within-subjects is:**
-
-`r mcq(c(answer = "Order effects, practice effects, demand characteristics", "Not enough statistical power", "Individual differences", "Can't use t-tests"))`
-
-### Make Your Decision
-
-**9. For your study, which design will you use?**
-
-`r mcq(c("Between-subjects", "Within-subjects", answer = "I need to weigh the specific trade-offs for my topic"))`
-
-**10. Write your justification:**
-
-> "I have chosen a [between-subjects / within-subjects] design because:
->
-> Advantages for my study: _________________________________
->
-> How I'll address disadvantages: ___________________________"
+> This makes [between / within] subjects more appropriate because: ___"
 
 ### Matching Design to Test
 
-**11. If you use a between-subjects design, you will use:**
+**9. A between-subjects design with two groups requires:**
 
-`r mcq(c("Paired samples t-test", answer = "Independent samples t-test", "One-sample t-test", "ANOVA"))`
+`r mcq(c("Paired samples t-test", answer = "Independent samples t-test", "One-sample t-test", "Correlation"))`
 
-**12. If you use a within-subjects design, you will use:**
+**10. A within-subjects design with two conditions requires:**
 
 `r mcq(c(answer = "Paired samples t-test", "Independent samples t-test", "One-sample t-test", "Chi-square test"))`
 
-**13. WHY does design determine test?**
+**11. Why does design determine the statistical test?**
 
-`r mcq(c("It doesn't - you can use either", "Tradition requires it", answer = "Different designs produce different data structures requiring different analyses", "R only allows one test per design"))`
+`r mcq(c("Statistical software requires you to specify", "It's a tradition in psychology", answer = "Different designs produce different data structures that require different analyses", "Both tests give the same answer anyway"))`
 
 ### Write Your Complete Justification
 
-**Complete this template for your Research Plan:**
-
-> "This study will use a [between-subjects / within-subjects] design because [advantages for your specific study] and [how you'll manage disadvantages].
+> "This study will use a [between-subjects / within-subjects] design because:
 >
-> Given this design, the data will consist of [two independent groups / paired scores from the same participants].
+> [Specific advantage for your topic]: _________________________
 >
-> An [independent samples / paired samples] t-test is therefore appropriate because [explain how the test matches your data structure]."
+> [How you'll address the main disadvantage]: __________________
+>
+> Given this design, I will use a [independent / paired] samples t-test because [how the data structure matches the test]: _______________"
 
 ---
 
 ## Activity 4: Method Section Draft (30 min)
 
-### Begin Your Method Section
-
-Use the templates below to draft each subsection. These will form the basis of your Research Plan submission.
+Use these templates to draft each subsection for YOUR chosen topic.
 
 ### Design Subsection
-
-**Write yours:**
 
 > "This study employs a [between-subjects / within-subjects] experimental design. The independent variable is _____________ with two levels: _____________ and _____________. The dependent variable is _____________ measured by _____________."
 
 ### Participants Subsection
 
-**Write yours:**
-
-> "[Number] participants will be recruited from [recruitment source]. Participants will be [randomly assigned to conditions / complete all conditions with counterbalanced order]."
-
-For between-subjects: "Participants will be randomly assigned to either the ______ condition (n = __) or the ______ condition (n = __)."
-
-For within-subjects: "Order of conditions will be counterbalanced, with half of participants completing ______ first and half completing ______ first."
+> "[Number] participants will be recruited from [source].
+>
+> [For between-subjects]: Participants will be randomly assigned to either the ______ condition (n = __) or the ______ condition (n = __).
+>
+> [For within-subjects]: All participants will complete both conditions, with order counterbalanced."
 
 ### Materials Subsection
 
-**Write yours:**
-
-> "Materials include: [describe stimuli, measures, and equipment with enough detail to replicate]."
-
-Be specific: What exactly will participants see? What will they respond with? What software/equipment is needed?
+> "Materials include: [Be specific enough to replicate]
+>
+> - Stimuli: ________________________________________________
+> - Measures: ______________________________________________
+> - Equipment: _____________________________________________"
 
 ### Procedure Subsection
 
-**Write yours:**
-
-> "Participants will be tested [individually / in groups] in [location]. After providing informed consent, [step-by-step description of what happens]. The session will last approximately __ minutes."
-
-Include: Instructions given, timing for each phase, any delays or filler tasks.
+> "Participants will be tested [individually / in groups]. After providing informed consent:
+>
+> 1. [First step with timing]: _________________________________
+> 2. [Second step]: _________________________________________
+> 3. [Continue...]: __________________________________________
+>
+> The session will last approximately __ minutes."
 
 ---
 
@@ -398,7 +316,7 @@ If time permits, exchange your draft Method with a neighbour.
 1. Could you replicate this study from the description alone?
 2. Are all variables clearly operationalised?
 3. Is the design-to-test justification clear?
-4. What details are missing?
+4. What specific details are missing?
 
 ---
 
@@ -407,20 +325,24 @@ If time permits, exchange your draft Method with a neighbour.
 ::: {.callout-important}
 ## Key Takeaways
 
-**Operationalisation:**
+**Operationalisation**
+
 - IV: Specify EXACTLY how conditions differ
 - DV: Specify EXACTLY how you'll measure the outcome
 
-**Hypotheses:**
+**Hypotheses**
+
 - One-tailed: Requires justification from prior research
 - Two-tailed: Safe choice when direction uncertain
 
-**Design:**
+**Design**
+
 - Between-subjects → Independent t-test
 - Within-subjects → Paired t-test
 - Choice depends on specific trade-offs for your topic
 
-**Method Section:**
+**Method Section**
+
 - Design: Type, IV with levels, DV with measurement
 - Participants: N, recruitment, assignment
 - Materials: Everything needed to replicate
@@ -433,7 +355,7 @@ If time permits, exchange your draft Method with a neighbour.
 
 1. Complete your Method section draft before Reading Week
 2. Seek feedback from your tutorial group
-3. Use the [Research Plan template] to structure your submission
+3. Use the Research Plan template to structure your submission
 4. Submit by Friday 27 February (Week 16)
 
 ::: {.callout-warning}

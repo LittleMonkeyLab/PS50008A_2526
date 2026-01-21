@@ -12,7 +12,7 @@ project:
   - resources.qmd
   - week11/
   - week12/
-  # - week13/
+  - week13/
   # - week14/
   # - week15/
   # - week16/
@@ -25,8 +25,8 @@ project:
   - textbook/chapters/w11-lab.qmd
   - textbook/chapters/w12-lecture.qmd
   - textbook/chapters/w12-lab.qmd
-  # - textbook/chapters/w13-lecture.qmd
-  # - textbook/chapters/w13-lab.qmd
+  - textbook/chapters/w13-lecture.qmd
+  - textbook/chapters/w13-lab.qmd
   # - textbook/chapters/w14-lecture.qmd
   # - textbook/chapters/w14-lab.qmd
   # - textbook/chapters/w15-lecture.qmd
@@ -43,7 +43,7 @@ project:
   # - textbook/chapters/w20-lab.qmd
   - textbook/quizzes/w11-quiz.qmd
   - textbook/quizzes/w12-quiz.qmd
-  # - textbook/quizzes/w13-quiz.qmd
+  - textbook/quizzes/w13-quiz.qmd
   # - textbook/quizzes/w14-quiz.qmd
   # - textbook/quizzes/w15-quiz.qmd
   # - textbook/quizzes/w16-quiz.qmd
@@ -160,26 +160,26 @@ website:
             href: week12/lab/reading.qmd
           - text: Self-Assessment
             href: week12/lab/self-assessment.qmd
-      # - section: 'Week 13: Estimation & CIs'
-      #   contents:
-      #   - text: Overview
-      #     href: week13/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week13/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week13/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week13/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week13/lab/activity.qmd
-      #     - text: Reading
-      #       href: week13/lab/reading.qmd
+      - section: 'Week 13: Estimation & CIs'
+        contents:
+        - text: Overview
+          href: week13/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week13/lecture/reading.qmd
+          - text: Slides
+            href: week13/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week13/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week13/lab/activity.qmd
+          - text: Reading
+            href: week13/lab/reading.qmd
       # - section: 'Week 14: Inference & t-tests'
       #   contents:
       #   - text: Overview
@@ -333,12 +333,12 @@ website:
           href: textbook/chapters/w12-lecture.qmd
         - text: 'Lab: Design Detectives'
           href: textbook/chapters/w12-lab.qmd
-      # - section: Week 13
-      #   contents:
-      #   - text: 'Lecture: Estimation & CIs'
-      #     href: textbook/chapters/w13-lecture.qmd
-      #   - text: 'Lab: Bootstrap CIs in R'
-      #     href: textbook/chapters/w13-lab.qmd
+      - section: Week 13
+        contents:
+        - text: 'Lecture: Design Decisions'
+          href: textbook/chapters/w13-lecture.qmd
+        - text: 'Lab: Research Plan Work'
+          href: textbook/chapters/w13-lab.qmd
       # - section: Week 14
       #   contents:
       #   - text: 'Lecture: Inference & t-tests'
@@ -387,8 +387,8 @@ website:
           href: textbook/quizzes/w11-quiz.qmd
         - text: Week 12 Quiz
           href: textbook/quizzes/w12-quiz.qmd
-        # - text: Week 13 Quiz
-        #   href: textbook/quizzes/w13-quiz.qmd
+        - text: Week 13 Quiz
+          href: textbook/quizzes/w13-quiz.qmd
         # - text: Week 14 Quiz
         #   href: textbook/quizzes/w14-quiz.qmd
         # - text: Week 15 Quiz

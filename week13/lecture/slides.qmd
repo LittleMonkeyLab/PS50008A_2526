@@ -9,6 +9,7 @@ format:
     slide-number: c/t
     progress: true
     transition: fade
+    scrollable: true
     width: 1050
     height: 700
     center: false
@@ -17,6 +18,9 @@ execute:
   echo: false
   warning: false
   message: false
+countdown:
+  start_immediately: true
+  play_sound: true
 ---
 
 ## Learning Outcomes
@@ -375,11 +379,10 @@ Would you choose one-tailed or two-tailed? Why?
 *Discuss with your neighbour (2 minutes)*
 :::
 
-# BREAK {background-color="#EA8439"}
+## BREAK {background-color="#EA8439"}
 
-## 10 minutes
+{{< countdown "10:00" play_sound=true start_immediately=true >}}
 
----
 
 # Act 3: Design Decisions {background-color="#275882"}
 

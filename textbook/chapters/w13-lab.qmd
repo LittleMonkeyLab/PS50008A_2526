@@ -89,13 +89,15 @@ Your Research Plan will address ONE of these questions:
 >
 > **Condition 2**: [Specific details including exact parameters]"
 
-**Good example (font study)**:
+**Good example (caffeine study)**:
 
-> "The independent variable is font type with two levels:
+> "The independent variable is caffeine consumption with two levels:
 >
-> Condition 1 (Fluent): Arial, 16-point, black text on white background
+> Condition 1 (Caffeine): 200mg caffeine capsule (equivalent to ~2 cups of coffee)
 >
-> Condition 2 (Disfluent): Comic Sans MS, 12-point, 75% grey text on white background"
+> Condition 2 (Placebo): Identical-looking capsule containing no caffeine"
+
+Notice the specificity: exact dosage, matched appearance between conditions.
 
 ### DV Operationalisation Template
 
@@ -107,15 +109,15 @@ Your Research Plan will address ONE of these questions:
 >
 > **Range**: [Possible values]"
 
-**Good example (font study)**:
+**Good example (caffeine study)**:
 
-> "The dependent variable is memory performance measured by:
+> "The dependent variable is alertness measured by:
 >
-> Task: Free recall — participants write all words they remember
+> Task: Psychomotor Vigilance Test — respond to visual stimuli as quickly as possible
 >
-> Scoring: Count of correctly recalled words
+> Scoring: Mean reaction time across 30 trials (milliseconds)
 >
-> Range: 0-20 (20 words presented)"
+> Range: Continuous, typically 200-500ms"
 
 ### Hypothesis Template
 

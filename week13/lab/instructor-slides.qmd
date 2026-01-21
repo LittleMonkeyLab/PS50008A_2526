@@ -9,10 +9,14 @@ format:
     slide-number: c/t
     progress: true
     transition: fade
+    scrollable: true
     width: 1050
     height: 700
     center: false
     center-title-slide: true
+countdown:
+  start_immediately: true
+  play_sound: true
 ---
 
 # Welcome to Lab {background-color="#275882"}
@@ -24,13 +28,13 @@ format:
 ## Today's Focus
 
 ::: {.objectives-box}
-**Building on Wednesday's lecture.** Today students will:
+**Building on Wednesday's lecture.** Today you will:
 
-- Operationalise their IV and DV for their chosen topic
+- Operationalise your IV and DV for your chosen topic
 - Write and justify hypotheses (one-tailed vs two-tailed)
 - Decide on experimental design (between vs within)
 - Match design to appropriate statistical test
-- Begin drafting their Method section
+- Begin drafting your Method section
 :::
 
 ---
@@ -52,13 +56,14 @@ format:
 
 ::: {.callout-important}
 ## Workshop Format
-Today is NOT a WebR coding lab. It's a structured **writing workshop**.
+Today is a structured **writing workshop**. Time for you to make progress with your research plans.
 
-Students should have:
+Instructors are available to help, and happy to do so. 
 
-- Paper/document for writing drafts
-- Access to the lab activity page for MCQs
-- Their lecture notes from Wednesday
+Remember, to get the advantage of their advice, you have to have a go! 
+
+We want you to start confidently and in plenty of time!
+
 :::
 
 ---
@@ -71,7 +76,7 @@ Students should have:
 
 ## The Three Topics
 
-Remind students of the Research Plan topics:
+The Research Plan topics:
 
 1. **Font difficulty → Memory**
    - Does harder-to-read text improve retention?
@@ -84,10 +89,10 @@ Remind students of the Research Plan topics:
 
 ---
 
-## Guide the IV Discussion
+## Key Question for Your IV
 
 ::: {.definition-box}
-**Key question**: How EXACTLY will the conditions differ?
+**How EXACTLY will your conditions differ?**
 :::
 
 **Font study**: What fonts? What sizes? What colours?
@@ -98,7 +103,7 @@ Remind students of the Research Plan topics:
 
 ---
 
-## Common Student Errors
+## Common Errors to Avoid
 
 Watch for these issues in IV operationalisation:
 
@@ -111,13 +116,13 @@ Watch for these issues in IV operationalisation:
 
 ---
 
-## Guide the DV Discussion
+## Key Question for Your DV
 
 ::: {.definition-box}
-**Key question**: How EXACTLY will you measure the outcome?
+**How EXACTLY will you measure the outcome?**
 :::
 
-Students need to specify:
+You need to specify:
 
 - The task/measure used
 - The scoring method
@@ -125,13 +130,23 @@ Students need to specify:
 
 ---
 
-## Check: The Replicability Test
+## The Replicability Test
 
-Ask students:
+Ask yourself:
 
-> "Could a stranger run your study EXACTLY from your description?"
+> "Could a stranger run my study EXACTLY from my description?"
 
 If the answer is "maybe" or "no" — more detail is needed.
+
+---
+
+## Activity 1: Work Time
+
+{{< countdown "20:00" play_sound=true start_immediately=true >}}
+
+Complete questions 1-5 on the Activity page.
+
+Write out your IV and DV operationalisations in full.
 
 ---
 
@@ -147,7 +162,7 @@ If the answer is "maybe" or "no" — more detail is needed.
 **One-tailed vs Two-tailed**: Not about preference, but about evidence
 :::
 
-Students must understand:
+You must understand:
 
 - One-tailed = strong prior evidence for direction
 - Two-tailed = uncertainty about direction
@@ -155,17 +170,15 @@ Students must understand:
 
 ---
 
-## Facilitation Questions
+## Questions to Ask Yourself
 
-Ask groups:
-
-1. "What does prior research say about your topic?"
+1. "What does prior research say about my topic?"
 2. "Is there strong evidence for a specific direction?"
-3. "What would you conclude if the effect went the OTHER way?"
+3. "What would I conclude if the effect went the OTHER way?"
 
 ---
 
-## Watch for These Misconceptions
+## Common Misconceptions
 
 ::: {.incremental}
 - "One-tailed is better because it's more powerful"
@@ -174,11 +187,11 @@ Ask groups:
 - "It doesn't really matter"
 :::
 
-All of these are problematic! Discuss why.
+All of these are problematic! Do you know why?
 
 ---
 
-## Example Justifications to Share
+## Example Justifications
 
 **One-tailed (appropriate)**:
 
@@ -190,9 +203,19 @@ All of these are problematic! Discuss why.
 
 ---
 
-# BREAK {background-color="#EA8439"}
+## Activity 2: Work Time
 
-## 10 minutes
+{{< countdown "15:00" play_sound=true start_immediately=true >}}
+
+Complete the hypothesis section on the Activity page.
+
+Write both H₀ and H₁, then justify your choice of direction.
+
+---
+
+## BREAK {background-color="#EA8439"}
+
+{{< countdown "10:00" play_sound=true start_immediately=true >}}
 
 ---
 
@@ -207,16 +230,16 @@ All of these are problematic! Discuss why.
 ::: {.definition-box}
 **Design → Data Structure → Statistical Test**
 
-This chain of logic is REQUIRED in the Research Plan.
+This chain of logic is REQUIRED in your Research Plan.
 :::
 
-Students must explain WHY their design leads to their test choice.
+You must explain WHY your design leads to your test choice.
 
 ---
 
-## Work Through Each Topic
+## What Would Each Design Look Like?
 
-For each topic, have students articulate:
+For each topic, articulate:
 
 | Topic | Between-Subjects | Within-Subjects |
 |-------|-----------------|-----------------|
@@ -226,7 +249,7 @@ For each topic, have students articulate:
 
 ---
 
-## Design Trade-offs Discussion
+## Design Trade-offs
 
 | Design | Pro | Con |
 |--------|-----|-----|
@@ -255,12 +278,22 @@ For each topic, have students articulate:
 
 ::: {.callout-warning}
 ## Watch for this mistake
-Students stating the test WITHOUT justifying why.
+Stating the test WITHOUT justifying why.
 
 **Wrong**: "I will use an independent t-test."
 
 **Right**: "Because different participants are in each condition, the data will consist of two independent groups. An independent samples t-test is therefore appropriate."
 :::
+
+---
+
+## Activity 3: Work Time
+
+{{< countdown "15:00" play_sound=true start_immediately=true >}}
+
+Complete Activity 3 on the Activity page.
+
+Write out BOTH designs for your topic, identify trade-offs, then make your choice with justification.
 
 ---
 
@@ -272,7 +305,7 @@ Students stating the test WITHOUT justifying why.
 
 ## Method Section Structure
 
-Students should draft these subsections:
+You should draft these subsections:
 
 1. **Design**: Type, IV with levels, DV with measurement
 2. **Participants**: N, recruitment, assignment
@@ -281,9 +314,9 @@ Students should draft these subsections:
 
 ---
 
-## Circulate and Provide Feedback
+## What to Check in Your Draft
 
-As students write, check for:
+As you write, make sure you have:
 
 ::: {.incremental}
 - Sufficient operationalisation detail
@@ -294,9 +327,17 @@ As students write, check for:
 
 ---
 
+## Activity 4: Work Time
+
+{{< countdown "15:00" play_sound=true start_immediately=true >}}
+
+Draft your Method section using the templates on the Activity page.
+
+---
+
 ## Peer Feedback (if time permits)
 
-Have students swap drafts and answer:
+Swap drafts with a partner and answer:
 
 1. Could you replicate this study?
 2. What details are missing?
@@ -308,12 +349,12 @@ Have students swap drafts and answer:
 
 ---
 
-## Key Messages for Students
+## Key Messages
 
 ::: {.callout-important}
-## Before they leave, emphasise:
+## Before you leave:
 
-1. **Reading Week** = Time to write the Research Plan draft
+1. **Reading Week** = Time to write your Research Plan draft
 2. **Operationalisation** = The foundation of a good plan
 3. **Justification** = Required for hypotheses AND test choice
 4. **Due date** = Friday 27 February, Week 16
@@ -334,8 +375,4 @@ Have students swap drafts and answer:
 
 # Questions? {background-color="#275882"}
 
-## Then let's begin the workshop!
 
-::: {.notes}
-This is a workshop lab, not a coding lab. Move around the room, check student work, and provide formative feedback on their operationalisations and justifications. The goal is that every student leaves with a solid draft of their Research Plan Method section.
-:::
