@@ -5416,7 +5416,7 @@
     "href": "assessments/eds-assignment.html#task-structure",
     "title": "EDS Assignment",
     "section": "Task Structure",
-    "text": "Task Structure\nYou will receive a research scenario with actual raw data.\n\nSection A: Statistical Mechanics\n\nState the researcher’s hypothesis\nIdentify design type, IV, DV, data type\nCalculate means and SDs\nRun appropriate statistical tests\nInterpret results and write up in APA format\n\n\n\nSection B: Methods and Theory\n\nSuggest TWO methodological improvements\nDiscuss individual differences / extensions\nPropose a more ecologically valid alternative (minimum half page)",
+    "text": "Task Structure\nYou will receive a research scenario with pre-generated R output. Your task is to interpret the output and demonstrate your understanding of the statistical analysis - no coding or hand calculations required.\n\nSection A: Statistical Mechanics (50 marks)\n\nState the researcher’s hypothesis (5 marks)\nIdentify design type, IV, DV, data type (16-20 marks)\nInterpret R descriptive output and report in APA format (10 marks)\nInterpret R t.test() output and justify test choice (15 marks)\nFull APA results paragraph from R output (5 marks)\nNEW: Error detection - identify what’s wrong with a given analysis (5 marks)\n\n\n\nSection B: Methods and Theory (50 marks)\n\nSuggest TWO methodological improvements\nDiscuss individual differences / extensions\nPropose a more ecologically valid alternative (minimum half page)",
     "crumbs": [
       "Home",
       "Overview",
@@ -5442,7 +5442,7 @@
     "href": "assessments/eds-assignment.html#what-demonstrate-understanding-means",
     "title": "EDS Assignment",
     "section": "What “Demonstrate Understanding” Means",
-    "text": "What “Demonstrate Understanding” Means\n\n\n\nAspect\nWhat we’re looking for\n\n\n\n\nTest selection\nWhy this test? Link to design and data type\n\n\nHypothesis\nClear statement with direction justified\n\n\nInterpretation\nWhat does the result mean in context?\n\n\nImprovements\nThoughtful, specific, feasible suggestions",
+    "text": "What “Demonstrate Understanding” Means\n\n\n\n\n\n\n\nAspect\nWhat we’re looking for\n\n\n\n\nTest selection\nWhy this test? Link to design and data type\n\n\nHypothesis\nClear statement with direction justified\n\n\nReading output\nCorrectly identify key values (t, df, p, CI)\n\n\nInterpretation\nWhat does the result mean in context?\n\n\nError detection\nIdentify when an analysis doesn’t match the design\n\n\nImprovements\nThoughtful, specific, feasible suggestions",
     "crumbs": [
       "Home",
       "Overview",
@@ -5455,7 +5455,20 @@
     "href": "assessments/eds-assignment.html#preparation",
     "title": "EDS Assignment",
     "section": "Preparation",
-    "text": "Preparation\n\nPractice with worked examples from labs\nReview APA reporting format for statistics\nUnderstand the logic behind test selection\nBe comfortable calculating means and SDs by hand",
+    "text": "Preparation\n\nPractice interpreting R output from lab exercises (weeks 12-16)\nReview APA reporting format for statistics\nUnderstand the logic behind test selection\nBe comfortable reading and interpreting R output\nPractice error detection exercises (what’s wrong with this analysis?)",
+    "crumbs": [
+      "Home",
+      "Overview",
+      "Assessments",
+      "EDS Assignment"
+    ]
+  },
+  {
+    "objectID": "assessments/eds-assignment.html#example-r-output-youll-encounter",
+    "href": "assessments/eds-assignment.html#example-r-output-youll-encounter",
+    "title": "EDS Assignment",
+    "section": "Example R Output You’ll Encounter",
+    "text": "Example R Output You’ll Encounter\n\nDescriptive Statistics\n&gt; data %&gt;%\n+   group_by(condition) %&gt;%\n+   summarise(Mean = mean(RT), SD = sd(RT), n = n())\n\n# A tibble: 2 x 4\n  condition      Mean    SD     n\n  &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1 30_degree      285.  42.3    10\n2 150_degree     312.  51.1    10\n\n\nT-Test Output\n&gt; t.test(data$RT_30, data$RT_150, paired = TRUE)\n\n    Paired t-test\n\ndata:  data$RT_30 and data$RT_150\nt = -2.847, df = 9, p-value = 0.0192\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -49.82 -5.38\nsample estimates:\nmean of the differences\n                  -27.6\nYou will NOT need to write R code. Your task is to:\n\nRead the output correctly\nExplain what the numbers mean\nReport findings in APA format\nDetect when an analysis contains errors",
     "crumbs": [
       "Home",
       "Overview",
@@ -9199,7 +9212,7 @@
     "href": "week12/lab/self-assessment.html",
     "title": "Week 12 Self-Assessment",
     "section": "",
-    "text": "This self-assessment consolidates your learning from Week 12. Complete these exercises before next Monday’s lecture.\n\n\n\n\n\n\nNoteFormative Assessment\n\n\n\nThis self-assessment is not graded but completing it will prepare you for: - The MCQ Exam (identifying distributions and statistics) - The EDS Assignment (calculating by hand) - The Research Report (reporting descriptives)",
+    "text": "This self-assessment consolidates your learning from Week 12 and introduces you to reading R output - a key skill for the EDS Assignment.\n\n\n\n\n\n\nNoteFormative Assessment\n\n\n\nThis self-assessment is not graded but completing it will prepare you for: - The MCQ Exam (identifying distributions and statistics) - The EDS Assignment (interpreting R output) - The Research Report (reporting descriptives)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9213,7 +9226,7 @@
     "href": "week12/lab/self-assessment.html#overview",
     "title": "Week 12 Self-Assessment",
     "section": "",
-    "text": "This self-assessment consolidates your learning from Week 12. Complete these exercises before next Monday’s lecture.\n\n\n\n\n\n\nNoteFormative Assessment\n\n\n\nThis self-assessment is not graded but completing it will prepare you for: - The MCQ Exam (identifying distributions and statistics) - The EDS Assignment (calculating by hand) - The Research Report (reporting descriptives)",
+    "text": "This self-assessment consolidates your learning from Week 12 and introduces you to reading R output - a key skill for the EDS Assignment.\n\n\n\n\n\n\nNoteFormative Assessment\n\n\n\nThis self-assessment is not graded but completing it will prepare you for: - The MCQ Exam (identifying distributions and statistics) - The EDS Assignment (interpreting R output) - The Research Report (reporting descriptives)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9223,11 +9236,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/self-assessment.html#part-1-calculating-by-hand",
-    "href": "week12/lab/self-assessment.html#part-1-calculating-by-hand",
+    "objectID": "week12/lab/self-assessment.html#part-1-reading-r-descriptive-output",
+    "href": "week12/lab/self-assessment.html#part-1-reading-r-descriptive-output",
     "title": "Week 12 Self-Assessment",
-    "section": "Part 1: Calculating by Hand",
-    "text": "Part 1: Calculating by Hand\nFor the EDS Assignment, you’ll need to calculate statistics by hand. Practice now!\n\nExercise 1: Mean and Median\nA researcher measured the number of words recalled by 8 participants:\nData: 5, 7, 6, 8, 6, 9, 6, 5\na) Calculate the mean.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nSum = 5 + 7 + 6 + 8 + 6 + 9 + 6 + 5 = 52\nMean = 52 / 8 = 6.5 words\n\n\n\nb) Calculate the median.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nSorted data: 5, 5, 6, 6, 6, 7, 8, 9\nMiddle positions: 4th and 5th values (since n = 8)\n4th value = 6, 5th value = 6\nMedian = (6 + 6) / 2 = 6 words\n\n\n\nc) What does the comparison of mean and median suggest about the distribution?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nMean (6.5) is slightly higher than median (6), suggesting a very slight positive skew. However, they’re close enough that the distribution is approximately symmetric.\n\n\n\n\n\nExercise 2: Standard Deviation\nUsing the same data: 5, 7, 6, 8, 6, 9, 6, 5 (Mean = 6.5)\nComplete the variance calculation:\n\n\n\nValue\nDeviation (x - mean)\nSquared\n\n\n\n\n5\n?\n?\n\n\n7\n?\n?\n\n\n6\n?\n?\n\n\n8\n?\n?\n\n\n6\n?\n?\n\n\n9\n?\n?\n\n\n6\n?\n?\n\n\n5\n?\n?\n\n\nSum\n\n?\n\n\n\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\n\n\nValue\nDeviation\nSquared\n\n\n\n\n5\n-1.5\n2.25\n\n\n7\n+0.5\n0.25\n\n\n6\n-0.5\n0.25\n\n\n8\n+1.5\n2.25\n\n\n6\n-0.5\n0.25\n\n\n9\n+2.5\n6.25\n\n\n6\n-0.5\n0.25\n\n\n5\n-1.5\n2.25\n\n\nSum\n0\n14.00\n\n\n\nVariance = 14.00 / (8-1) = 14 / 7 = 2.0\nSD = √2.0 = 1.41 words",
+    "section": "Part 1: Reading R Descriptive Output",
+    "text": "Part 1: Reading R Descriptive Output\nFor the EDS Assignment, you’ll receive R output and need to interpret it. Let’s practice!\n\nExercise 1: Basic Descriptive Output\nA researcher measured the number of words recalled by 8 participants. Here’s the R output:\n&gt; summary_stats &lt;- data %&gt;%\n+   summarise(\n+     Mean = mean(words_recalled),\n+     SD = sd(words_recalled),\n+     Median = median(words_recalled),\n+     n = n()\n+   )\n&gt; summary_stats\n\n# A tibble: 1 x 4\n   Mean    SD Median     n\n  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;\n1   6.5  1.41      6     8\na) What is the mean number of words recalled?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe mean is 6.5 words (shown in the Mean column).\n\n\n\nb) What is the standard deviation?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe standard deviation is 1.41 words (shown in the SD column).\n\n\n\nc) What does the comparison of mean (6.5) and median (6) suggest about the distribution?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe mean (6.5) is slightly higher than the median (6), suggesting a very slight positive skew. However, they’re close enough that the distribution is approximately symmetric.\n\n\n\n\n\n\nExercise 2: Group Comparison Output\nA study compared reaction times between two conditions. Here’s the R output:\n&gt; data %&gt;%\n+   group_by(condition) %&gt;%\n+   summarise(Mean = mean(RT), SD = sd(RT), n = n())\n\n# A tibble: 2 x 4\n  condition  Mean    SD     n\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1 caffeine   285.  42.3    15\n2 placebo    312.  51.1    15\na) How many participants were in each condition?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n15 participants in each condition (shown in the n column).\n\n\n\nb) Which condition had faster reaction times?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe caffeine condition had faster reaction times (lower mean: 285ms vs 312ms).\n\n\n\nc) Write a sentence describing these results in APA format.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\nParticipants in the caffeine condition responded faster (M = 285ms, SD = 42.3ms) than those in the placebo condition (M = 312ms, SD = 51.1ms).",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9241,7 +9254,7 @@
     "href": "week12/lab/self-assessment.html#part-2-interpreting-distributions",
     "title": "Week 12 Self-Assessment",
     "section": "Part 2: Interpreting Distributions",
-    "text": "Part 2: Interpreting Distributions\n\nExercise 3: Distribution Shapes\nFor each scenario, predict the distribution shape:\na) Exam scores on an easy test (most students score 80-100%)\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nNegatively skewed (ceiling effect). Most scores cluster near the top, with a tail toward lower scores.\n\n\n\nb) Reaction times to a visual stimulus\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nPositively skewed. There’s a lower bound (can’t be negative or below ~150ms), but no upper bound. Occasional slow responses create a right tail.\n\n\n\nc) Heights of adult women\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nApproximately normal (symmetric, bell-shaped). Heights tend to cluster around the average with fewer very short or very tall individuals.\n\n\n\n\n\nExercise 4: Mean vs Median\nA researcher reports: Mean salary = £52,000; Median salary = £38,000\na) What does this tell you about the distribution?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe mean is much higher than the median, indicating positive skew. A few very high salaries pull the mean up.\n\n\n\nb) Which measure (mean or median) better represents the “typical” salary? Why?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe median (£38,000) better represents the typical salary because it’s not affected by the extreme high values. More than half of workers earn less than the mean.",
+    "text": "Part 2: Interpreting Distributions\n\nExercise 3: Distribution Shapes\nFor each scenario, predict the distribution shape:\na) Exam scores on an easy test (most students score 80-100%)\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nNegatively skewed (ceiling effect). Most scores cluster near the top, with a tail toward lower scores.\n\n\n\nb) Reaction times to a visual stimulus\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nPositively skewed. There’s a lower bound (can’t be negative or below ~150ms), but no upper bound. Occasional slow responses create a right tail.\n\n\n\nc) Heights of adult women\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nApproximately normal (symmetric, bell-shaped). Heights tend to cluster around the average with fewer very short or very tall individuals.\n\n\n\n\n\nExercise 4: Mean vs Median in R Output\nA researcher reports this R output:\n&gt; salary_stats\n# A tibble: 1 x 2\n     Mean Median\n    &lt;dbl&gt;  &lt;dbl&gt;\n1  52000  38000\na) What does this tell you about the distribution?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe mean (£52,000) is much higher than the median (£38,000), indicating positive skew. A few very high salaries pull the mean up.\n\n\n\nb) Which measure (mean or median) better represents the “typical” salary? Why?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nThe median (£38,000) better represents the typical salary because it’s not affected by the extreme high values. More than half of workers earn less than the mean.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9251,11 +9264,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/self-assessment.html#part-3-apa-reporting",
-    "href": "week12/lab/self-assessment.html#part-3-apa-reporting",
+    "objectID": "week12/lab/self-assessment.html#part-3-apa-reporting-from-r-output",
+    "href": "week12/lab/self-assessment.html#part-3-apa-reporting-from-r-output",
     "title": "Week 12 Self-Assessment",
-    "section": "Part 3: APA Reporting",
-    "text": "Part 3: APA Reporting\n\nExercise 5: Write the Results\nA study compared reaction times between caffeine and placebo conditions:\n\n\n\nGroup\nMean RT (ms)\nSD\n\n\n\n\nCaffeine\n285\n42\n\n\nPlacebo\n312\n51\n\n\n\nWrite a sentence reporting these results in APA format.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\nParticipants in the caffeine condition responded faster (M = 285ms, SD = 42ms) than those in the placebo condition (M = 312ms, SD = 51ms).\n\n\n\n\n\n\nExercise 6: Complete the Report\nFill in the blanks using these statistics: - Memory task: Mean = 6.8 words, SD = 1.4 words, Median = 7 words\n\nParticipants recalled an average of _____ words (M = _____, SD = _____). The median was _____, suggesting the distribution was approximately _____.\n\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\nParticipants recalled an average of 6.8 words (M = 6.8, SD = 1.4). The median was 7, suggesting the distribution was approximately symmetric (since mean ≈ median).",
+    "section": "Part 3: APA Reporting from R Output",
+    "text": "Part 3: APA Reporting from R Output\n\nExercise 5: Complete the Report\nUse this R output to answer the questions:\n&gt; memory_stats\n# A tibble: 1 x 3\n   Mean    SD Median\n  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1   6.8   1.4      7\nFill in the blanks:\n\nParticipants recalled an average of _____ words (M = _____, SD = _____). The median was _____, suggesting the distribution was approximately _____.\n\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\nParticipants recalled an average of 6.8 words (M = 6.8, SD = 1.4). The median was 7, suggesting the distribution was approximately symmetric (since mean ≈ median).\n\n\n\n\n\n\nExercise 6: Write Full APA Description\nUse this R output:\n&gt; data %&gt;%\n+   group_by(time_of_day) %&gt;%\n+   summarise(Mean = mean(accuracy), SD = sd(accuracy), n = n())\n\n# A tibble: 2 x 4\n  time_of_day  Mean    SD     n\n  &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1 morning      78.2  12.4    20\n2 evening      71.5  14.1    20\nWrite a complete sentence reporting these descriptives in APA format.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n\nParticipants showed higher accuracy in the morning (M = 78.2%, SD = 12.4%) compared to the evening (M = 71.5%, SD = 14.1%).\n\nOr:\n\nMean accuracy was higher in the morning condition (M = 78.2, SD = 12.4) than in the evening condition (M = 71.5, SD = 14.1).",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9269,7 +9282,7 @@
     "href": "week12/lab/self-assessment.html#part-4-conceptual-questions",
     "title": "Week 12 Self-Assessment",
     "section": "Part 4: Conceptual Questions",
-    "text": "Part 4: Conceptual Questions\n\nExercise 7: True or False\nMark each statement True or False:\na) The mean is always the best measure of central tendency.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nFalse. The median is better for skewed data or when outliers are present.\n\n\n\nb) Standard deviation tells you about the shape of the distribution.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nFalse. SD tells you about spread/variability, not shape. You need to compare mean and median (or look at a histogram) to assess shape.\n\n\n\nc) If the mean is greater than the median, the distribution is positively skewed.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nTrue. In a positively skewed distribution, extreme high values pull the mean above the median.\n\n\n\nd) Variance is always larger than standard deviation.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nFalse. When variance &lt; 1, taking the square root gives a larger SD. For example: Variance = 0.25, SD = 0.5. (However, for most psychological data with variance &gt; 1, this statement would be true.)\n\n\n\n\n\nExercise 8: The 68-95-99.7 Rule\nReaction times are normally distributed with Mean = 300ms and SD = 40ms.\na) What range contains approximately 68% of reaction times?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nMean ± 1 SD = 300 ± 40 = 260ms to 340ms\n\n\n\nb) What range contains approximately 95% of reaction times?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nMean ± 2 SD = 300 ± 80 = 220ms to 380ms\n\n\n\nc) A participant has a reaction time of 200ms. Is this unusual? Why?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nYes, this is unusual. 200ms is (300-200)/40 = 2.5 SDs below the mean. Only about 0.6% of values fall this far from the mean in a normal distribution.",
+    "text": "Part 4: Conceptual Questions\n\nExercise 7: True or False\nMark each statement True or False:\na) The mean is always the best measure of central tendency.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nFalse. The median is better for skewed data or when outliers are present.\n\n\n\nb) Standard deviation tells you about the shape of the distribution.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nFalse. SD tells you about spread/variability, not shape. You need to compare mean and median (or look at a histogram) to assess shape.\n\n\n\nc) If the mean is greater than the median, the distribution is positively skewed.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nTrue. In a positively skewed distribution, extreme high values pull the mean above the median.\n\n\n\nd) In R output, n typically refers to the sample size.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nTrue. The n column shows the number of observations (participants/data points) in each group.\n\n\n\n\n\nExercise 8: The 68-95-99.7 Rule\nReaction times are normally distributed with Mean = 300ms and SD = 40ms.\na) What range contains approximately 68% of reaction times?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nMean ± 1 SD = 300 ± 40 = 260ms to 340ms\n\n\n\nb) What range contains approximately 95% of reaction times?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nMean ± 2 SD = 300 ± 80 = 220ms to 380ms\n\n\n\nc) A participant has a reaction time of 200ms. Is this unusual? Why?\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nYes, this is unusual. 200ms is (300-200)/40 = 2.5 SDs below the mean. Only about 0.6% of values fall this far from the mean in a normal distribution.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9283,7 +9296,7 @@
     "href": "week12/lab/self-assessment.html#summary",
     "title": "Week 12 Self-Assessment",
     "section": "Summary",
-    "text": "Summary\nAfter completing this self-assessment, you should be able to:\n\nCalculate mean, median, and SD by hand\nPredict and identify distribution shapes\nReport descriptives in APA format\nApply the 68-95-99.7 rule",
+    "text": "Summary\nAfter completing this self-assessment, you should be able to:\n\nRead and interpret R descriptive output\nExtract key statistics (Mean, SD, Median, n) from R tables\nPredict and identify distribution shapes\nReport descriptives in APA format\nUnderstand the relationship between mean and median for skewness",
     "crumbs": [
       "Home",
       "Term 2",
@@ -9297,7 +9310,7 @@
     "href": "week12/lab/self-assessment.html#preparation-for-week-13",
     "title": "Week 12 Self-Assessment",
     "section": "Preparation for Week 13",
-    "text": "Preparation for Week 13\nNext week we move from describing our sample to making inferences about the population. Review:\n\nWhat is the difference between a sample and a population?\nWhy might our sample mean differ from the true population mean?",
+    "text": "Preparation for Week 13\nNext week we continue building your R output interpretation skills with correlation output. You’ll learn to read:\n\nCorrelation coefficients\nScatterplots generated by R\nStatistical significance of correlations",
     "crumbs": [
       "Home",
       "Term 2",
