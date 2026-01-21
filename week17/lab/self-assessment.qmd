@@ -1,55 +1,379 @@
 ---
 title: "Week 17 Self-Assessment"
-subtitle: "Practice MCQ Test & Project Groups: Methodology"
+subtitle: "Error Detection Practice"
 author: "Gordon Wright"
 date: "2026-03-04"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w17-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-03-08"
-  labels: ['assessment', 'project', 'methodology', 'self-assessment']
-  depends_on:
-    - rm0-w17-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-03-08"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 17.
+This self-assessment focuses on **error detection** - a key skill for Question 6 of the EDS Assignment. You'll practice identifying common mistakes in statistical analyses and explaining their consequences.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-03-08.
+::: {.callout-note}
+## Formative Assessment
+This self-assessment directly prepares you for the error detection question on the EDS Assignment.
 :::
 
-## Part 1: Conceptual Questions
+---
 
-TBC
+## Part 1: Wrong Test Type Errors
 
-## Part 2: Practical Exercises
+### Exercise 1: Paired vs Independent
 
-TBC
+A researcher studied whether caffeine improves memory. They gave Group A (n = 20) caffeine and Group B (n = 20) a placebo, then tested memory. The researcher ran:
 
-## Part 3: Reflection
+```
+> t.test(group_a_scores, group_b_scores, paired = TRUE)
 
-TBC
+    Paired t-test
 
-## Submission
+data:  group_a_scores and group_b_scores
+t = 2.14, df = 19, p-value = 0.045
+```
 
-TBC - Submission instructions
+**a)** What error did the researcher make?
 
-## Marking Criteria
+::: {.callout-tip collapse="true"}
+## Show Answer
+The researcher used `paired = TRUE` when they should have used `paired = FALSE` (independent samples t-test). Group A and Group B are **different people** - this is a between-subjects design.
+:::
 
-This is a **formative** assignment.
+**b)** Why is this wrong?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- A paired test assumes each score in Group A is meaningfully matched to a score in Group B
+- With different participants, there's no logical pairing
+- The test is treating unrelated scores as if they come from the same person measured twice
+- The degrees of freedom are wrong (should be ~38, not 19)
+:::
+
+**c)** How might this affect the conclusions?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- The test creates arbitrary pairings between unrelated participants
+- This can inflate or deflate the t-value depending on the random pairing
+- The p-value may be incorrect (could be a false positive or false negative)
+- The researcher might conclude there IS an effect when there isn't, or miss a real effect
+:::
+
+---
+
+### Exercise 2: Independent When Should Be Paired
+
+A researcher measured participants' anxiety before AND after a relaxation intervention:
+
+```
+> t.test(pre_anxiety, post_anxiety, paired = FALSE)
+
+    Welch Two Sample t-test
+
+data:  pre_anxiety and post_anxiety
+t = 1.67, df = 37.4, p-value = 0.103
+```
+
+**a)** What error did the researcher make?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The researcher used an independent t-test (`paired = FALSE`) when they should have used a paired t-test (`paired = TRUE`). The **same participants** were measured before and after.
+:::
+
+**b)** What is the consequence of this error?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- The paired test is usually more powerful because it controls for individual differences
+- By using an independent test, the researcher is treating pre and post scores as if they came from different people
+- This adds variance (individual differences) that the paired test would remove
+- Result: The test is less sensitive - may fail to detect a real effect (Type II error)
+- The df is also wrong (should be n-1 = ~19, not ~38)
+:::
+
+---
+
+## Part 2: Misinterpreting Output
+
+### Exercise 3: Confidence Interval Misinterpretation
+
+A student reports: "The 95% CI was [-3.2, 8.7], so the result was statistically significant at p < .05."
+
+**a)** What is wrong with this interpretation?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The student's interpretation is **incorrect**. The CI [-3.2, 8.7] **includes zero**, which means:
+- The true difference could be negative, zero, or positive
+- We cannot be confident there's a real difference
+- The result is NOT significant at p < .05
+- When CI includes zero, p > .05
+:::
+
+**b)** What should the correct interpretation be?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+"The 95% CI [-3.2, 8.7] includes zero, indicating the result is NOT statistically significant at α = .05. We cannot be confident that there is a genuine difference between the conditions."
+:::
+
+---
+
+### Exercise 4: Direction Error
+
+A researcher reports: "The t-test showed that Group A scored significantly higher than Group B, t(28) = -2.45, p = .021."
+
+**a)** What potential error might be in this report?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The **negative t-value** (-2.45) suggests that the first group (A) actually had a **lower** mean than the second group (B), not higher. The researcher may have misinterpreted the direction of the effect.
+
+Note: Whether this is an error depends on how the test was set up. If Group A was entered first and Group B second, t = -2.45 means A < B.
+:::
+
+**b)** How should the researcher verify the direction?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- Check the descriptive statistics (means) for each group
+- Look at the "sample estimates" section of the R output
+- The sign of the t-value indicates which group is higher
+- t = negative → first group has lower mean
+- t = positive → first group has higher mean
+:::
+
+---
+
+### Exercise 5: P-Value Misreport
+
+A student sees this output and reports "p < .001":
+
+```
+t = 2.34, df = 18, p-value = 0.031
+```
+
+**a)** What error did the student make?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The student reported p < .001 when the actual p-value is **.031** (much larger). This is a misreading of the output or confusing significant with highly significant.
+
+The correct report should be: p = .031 (or p < .05)
+:::
+
+**b)** Why does accuracy matter here?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- p = .031 and p < .001 represent very different levels of evidence
+- p = .031 is just barely significant at .05 level
+- p < .001 suggests very strong evidence against the null
+- Misreporting could mislead readers about the strength of findings
+- Accurate reporting is essential for scientific integrity
+:::
+
+---
+
+## Part 3: Degrees of Freedom Errors
+
+### Exercise 6: Wrong DF
+
+A researcher ran a paired t-test with 15 participants but reported df = 15.
+
+**a)** What is the error?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+For a paired t-test, df = n - 1. With 15 participants, df should be **14**, not 15.
+
+If df = 15 is reported, either:
+- There were actually 16 participants, or
+- The wrong test was run, or
+- The df was misread/misreported
+:::
+
+**b)** How can you verify the correct df from the output?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- Paired t-test: df = number of pairs - 1
+- Independent t-test (Welch): df is adjusted based on sample sizes and variances
+- Standard independent t-test: df = n₁ + n₂ - 2
+
+Cross-check against sample size in descriptives (n column).
+:::
+
+---
+
+### Exercise 7: DF Suggests Wrong Test
+
+A student reports running an independent t-test comparing 20 participants per group, with df = 19.
+
+**a)** What does this suggest?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+df = 19 suggests a **paired test** was actually run (20 - 1 = 19), not an independent test.
+
+For an independent test with 20 per group, df should be approximately 38 (or similar with Welch's correction).
+
+The student either:
+- Ran a paired test by mistake
+- Misread the output
+- Has confused terminology
+:::
+
+---
+
+## Part 4: Complex Error Scenarios
+
+### Exercise 8: Multiple Errors
+
+Review this analysis report and identify ALL errors:
+
+> "We conducted an independent t-test to compare reaction times before and after training for the same 12 participants. Results showed t(12) = 3.45, p = .005. The 95% CI [2.1, 15.8] includes zero, indicating a non-significant result."
+
+**List all errors:**
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error 1: Wrong test type**
+- Same participants measured before and after = should use PAIRED t-test
+- "Independent t-test" is wrong
+
+**Error 2: Wrong degrees of freedom**
+- If it were a paired test with 12 participants, df should be 11
+- df = 12 is wrong for either test type
+
+**Error 3: CI interpretation contradicts p-value**
+- p = .005 indicates significant result
+- CI [2.1, 15.8] does NOT include zero (both values positive)
+- Student claims CI includes zero and result is non-significant - both wrong
+- Actually: CI doesn't include zero, which is consistent with p < .05
+
+**Error 4: Contradictory conclusion**
+- Says "non-significant" but p = .005 is clearly significant
+:::
+
+---
+
+### Exercise 9: Spot the Error
+
+A researcher reports: "A paired samples t-test compared memory scores between patients with depression (n = 25) and healthy controls (n = 25)."
+
+**What's wrong?**
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error: Wrong test for the design**
+
+This is comparing **different groups of people** (patients vs controls), which requires an **independent samples t-test**, not a paired test.
+
+A paired test would only be appropriate if:
+- The same people were measured under both conditions, OR
+- Participants were individually matched (e.g., each patient paired with a control of same age/gender)
+
+Unless matching was done (and not mentioned), this should be an independent t-test.
+:::
+
+---
+
+### Exercise 10: Comprehensive Error Detection
+
+Review this complete analysis:
+
+> "Hypothesis: Stress levels would be higher in exam week than in regular week.
+>
+> Method: 30 students completed a stress questionnaire during exam week. A different group of 30 students completed it during a regular week.
+>
+> Analysis:
+> ```
+> t.test(exam_stress, regular_stress, paired = TRUE)
+>     Paired t-test
+> t = 2.89, df = 29, p-value = 0.007
+> 95% percent confidence interval: 1.23, 8.77
+> ```
+>
+> Results: The paired t-test revealed stress was significantly higher in the exam condition (p < .05). However, since the 95% CI of [1.23, 8.77] could include zero, we cannot be fully confident in this finding."
+
+**Identify all errors and explain the correct interpretations:**
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error 1: Wrong test (Major)**
+- Two DIFFERENT groups of students = between-subjects design
+- Should use independent t-test (`paired = FALSE`)
+- Paired test is completely inappropriate here
+
+**Error 2: CI misinterpretation**
+- The CI [1.23, 8.77] does NOT include zero
+- Both bounds are positive
+- This is consistent with, not contradictory to, the significant p-value
+
+**Error 3: Contradictory reasoning**
+- States p < .05 (significant) then expresses doubt based on CI
+- The CI actually supports the significant finding
+- Student seems confused about how CI and p-value relate
+
+**Correct interpretation would be:**
+"An independent samples t-test should be conducted. Results would show whether exam-week students reported significantly higher stress than regular-week students. If p < .05 and CI excludes zero, we can be confident of a real difference."
+:::
+
+---
+
+## Part 5: Quick Quiz
+
+For each scenario, identify the error type:
+
+| Scenario | Error Type |
+|----------|------------|
+| Same participants, used independent t-test | ? |
+| Different groups, used paired t-test | ? |
+| CI includes zero, reported as significant | ? |
+| CI excludes zero, reported as non-significant | ? |
+| Negative t, described as Group A > Group B | ? |
+| df = 24 with 25 pairs in paired test | ? |
+
+::: {.callout-tip collapse="true"}
+## Show Answers
+| Scenario | Error Type |
+|----------|------------|
+| Same participants, used independent t-test | **Wrong test (should be paired)** |
+| Different groups, used paired t-test | **Wrong test (should be independent)** |
+| CI includes zero, reported as significant | **CI misinterpretation** |
+| CI excludes zero, reported as non-significant | **CI misinterpretation** |
+| Negative t, described as Group A > Group B | **Direction error** |
+| df = 24 with 25 pairs in paired test | **Correct! (25-1=24)** |
+:::
+
+---
+
+## Summary
+
+After completing this self-assessment, you should be able to:
+
+- Identify when paired vs independent t-tests are misapplied
+- Recognize misinterpretations of confidence intervals
+- Detect direction errors in result reporting
+- Verify degrees of freedom match the analysis
+- Spot contradictions between statistics and interpretations
+
+---
+
+## Final Preparation for EDS
+
+::: {.callout-important}
+## Before the Assessment
+1. Review all self-assessments from Weeks 12-17
+2. Practice reading R output quickly and accurately
+3. Memorize APA format for reporting t-tests
+4. Know when to use paired vs independent tests
+5. Understand what CIs mean and how they relate to significance
+:::
+
+Good luck on your EDS Assignment!

@@ -1,55 +1,364 @@
 ---
 title: "Week 14 Self-Assessment"
-subtitle: "Probabilities & Distributions & Plotting Data with R"
+subtitle: "Reading Independent T-Test Output"
 author: "Gordon Wright"
 date: "2026-02-04"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w14-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-02-08"
-  labels: ['statistics', 'probability', 'r-programming', 'visualisation', 'self-assessment']
-  depends_on:
-    - rm0-w14-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-02-08"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 14.
+This self-assessment builds on your R output interpretation skills by focusing on **independent samples t-tests** - used when comparing two different groups of participants.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-02-08.
+::: {.callout-note}
+## Formative Assessment
+This self-assessment is **not graded** but completing it will prepare you for:
+- The EDS Assignment (interpreting t-test output)
+- The Research Report (comparing groups)
 :::
 
-## Part 1: Conceptual Questions
+---
 
-TBC
+## Part 1: Reading Independent T-Test Output
 
-## Part 2: Practical Exercises
+### Exercise 1: Basic Independent T-Test
 
-TBC
+A researcher compared anxiety scores between students who exercise regularly (n = 20) and those who don't (n = 20). Here's the R output:
 
-## Part 3: Reflection
+```
+> # Descriptive statistics
+> data %>%
++   group_by(exercise) %>%
++   summarise(Mean = mean(anxiety), SD = sd(anxiety), n = n())
 
-TBC
+# A tibble: 2 x 4
+  exercise       Mean    SD     n
+  <chr>         <dbl> <dbl> <int>
+1 no_exercise    48.2  12.4    20
+2 regular        39.5  10.8    20
 
-## Submission
+> # Independent t-test
+> t.test(anxiety ~ exercise, data = data, paired = FALSE)
 
-TBC - Submission instructions
+    Welch Two Sample t-test
 
-## Marking Criteria
+data:  anxiety by exercise
+t = 2.36, df = 37.2, p-value = 0.0236
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 1.21 16.19
+sample estimates:
+mean in group no_exercise   mean in group regular
+                     48.2                    39.5
+```
 
-This is a **formative** assignment.
+**a)** What type of t-test is this?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+This is a **Welch Two Sample t-test** (independent samples t-test). It compares two different groups of participants.
+:::
+
+**b)** What are the key statistics from this output?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- t-statistic: **t = 2.36**
+- Degrees of freedom: **df = 37.2** (Welch's adjustment)
+- p-value: **p = 0.0236**
+- 95% CI for the difference: **[1.21, 16.19]**
+- Mean difference: 48.2 - 39.5 = **8.7 points**
+:::
+
+**c)** Is this result statistically significant at α = .05?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Yes**, because p = .0236 < .05. We reject the null hypothesis.
+:::
+
+**d)** Report this result in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> An independent samples t-test revealed that students who did not exercise regularly reported significantly higher anxiety (*M* = 48.2, *SD* = 12.4) than those who exercised regularly (*M* = 39.5, *SD* = 10.8), *t*(37.2) = 2.36, *p* = .024, 95% CI [1.21, 16.19].
+:::
+
+---
+
+### Exercise 2: Why Independent?
+
+**a)** In Exercise 1, why was an independent t-test appropriate?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+An independent t-test was appropriate because:
+- Two **different groups** of participants
+- Each person is in only one condition (exercise OR no exercise)
+- The groups are **independent** - scores in one group don't affect scores in the other
+- This is a **between-subjects design**
+:::
+
+**b)** What would make a paired t-test appropriate instead?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+A paired t-test would be appropriate if:
+- The **same participants** were measured twice
+- For example: measuring anxiety BEFORE and AFTER an exercise program
+- Each data point in condition 1 is linked to a data point in condition 2
+- This is a **within-subjects design**
+:::
+
+---
+
+### Exercise 3: Interpreting the Confidence Interval
+
+From Exercise 1:
+
+```
+95 percent confidence interval:
+ 1.21 16.19
+```
+
+**a)** What does this confidence interval represent?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+We are 95% confident that the true population difference in anxiety scores between non-exercisers and regular exercisers is between **1.21 and 16.19 points**.
+:::
+
+**b)** Why does it matter that the interval doesn't include zero?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+If the interval included zero, the true difference might be zero (no real difference). Since it doesn't include zero:
+- We can be confident there IS a real difference
+- This is consistent with the significant p-value
+- The groups genuinely differ in the population
+:::
+
+---
+
+## Part 2: Design Recognition
+
+### Exercise 4: Independent or Paired?
+
+For each study, identify whether an independent or paired t-test would be appropriate:
+
+**a)** Comparing memory test scores between males and females.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Independent t-test** - Different participants in each group (you can't be both male and female in this study).
+:::
+
+**b)** Measuring reaction time before and after drinking coffee.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Paired t-test** - Same participants measured twice (before and after).
+:::
+
+**c)** Comparing exam scores between students taught with Method A vs Method B.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Independent t-test** - Different students in each teaching method (assuming random assignment to methods).
+:::
+
+**d)** Rating the same 30 products for attractiveness and then for quality.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Paired t-test** - Same products rated twice (on two different dimensions).
+:::
+
+---
+
+### Exercise 5: Design Components
+
+A study compares problem-solving ability between people who slept 8 hours vs 4 hours.
+
+**a)** What is the independent variable?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Sleep duration** (8 hours vs 4 hours) - the grouping variable.
+:::
+
+**b)** What is the dependent variable?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Problem-solving ability** (score on the problem-solving task).
+:::
+
+**c)** What type of experimental design is this?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Between-subjects** (independent groups) design - different people in each sleep condition.
+:::
+
+**d)** What type of data is the DV?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+Likely **interval or ratio** data (numerical scores on a problem-solving test).
+:::
+
+---
+
+## Part 3: Reading and Reporting Practice
+
+### Exercise 6: Full Interpretation
+
+A researcher investigated whether background music affects concentration. Participants completed a concentration task in silence (n = 25) or with background music (n = 25).
+
+```
+> data %>%
++   group_by(condition) %>%
++   summarise(Mean = mean(score), SD = sd(score), n = n())
+
+# A tibble: 2 x 4
+  condition  Mean    SD     n
+  <chr>     <dbl> <dbl> <int>
+1 music      72.4  11.2    25
+2 silence    78.8   9.6    25
+
+> t.test(score ~ condition, data = data)
+
+    Welch Two Sample t-test
+
+data:  score by condition
+t = -2.17, df = 46.8, p-value = 0.0352
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -12.33  -0.47
+sample estimates:
+mean in group music mean in group silence
+               72.4                  78.8
+```
+
+**a)** State the hypothesis that this study was testing.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The researcher hypothesized that background music would affect concentration task performance. (More specifically, they may have predicted that music would either help or hinder concentration.)
+:::
+
+**b)** What do the results show?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+Participants who worked in silence scored higher (*M* = 78.8) than those with background music (*M* = 72.4). The difference of 6.4 points was statistically significant (*p* = .035).
+:::
+
+**c)** Write a complete APA results paragraph.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> An independent samples t-test was conducted to examine the effect of background music on concentration. Participants who completed the task in silence (*M* = 78.8, *SD* = 9.6) scored significantly higher than those who listened to background music (*M* = 72.4, *SD* = 11.2), *t*(46.8) = -2.17, *p* = .035, 95% CI [-12.33, -0.47]. These results suggest that background music may impair concentration on cognitive tasks.
+:::
+
+---
+
+### Exercise 7: Non-Significant Results
+
+A researcher compared creativity scores between morning people (n = 30) and evening people (n = 30).
+
+```
+> t.test(creativity ~ chronotype, data = data)
+
+    Welch Two Sample t-test
+
+data:  creativity by chronotype
+t = 0.84, df = 57.1, p-value = 0.405
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.81  6.89
+sample estimates:
+mean in group evening mean in group morning
+                 52.3                  50.2
+```
+
+**a)** Is this result statistically significant?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**No**, the result is not significant because p = .405 > .05. We fail to reject the null hypothesis.
+:::
+
+**b)** What does the confidence interval tell us?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The 95% CI [-2.81, 6.89] **includes zero**, which is consistent with a non-significant result. The true difference could be negative, zero, or positive - we can't be confident about the direction of any difference.
+:::
+
+**c)** How would you report this result?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> An independent samples t-test revealed no significant difference in creativity scores between evening people (*M* = 52.3) and morning people (*M* = 50.2), *t*(57.1) = 0.84, *p* = .405, 95% CI [-2.81, 6.89].
+:::
+
+---
+
+## Part 4: Conceptual Questions
+
+### Exercise 8: True or False
+
+**a)** An independent t-test requires the same participants to be in both conditions.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**False**. An independent t-test compares **different** participants in each condition. If the same participants are in both conditions, you use a paired t-test.
+:::
+
+**b)** If p > .05, we can conclude there is no difference between groups.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**False**. A non-significant result means we **failed to find evidence** of a difference. It doesn't prove there is no difference - we may have lacked statistical power (e.g., small sample size).
+:::
+
+**c)** The degrees of freedom in a Welch t-test can be a decimal number.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**True**. Welch's correction adjusts the degrees of freedom based on the variances in each group, often resulting in non-integer df values.
+:::
+
+**d)** A confidence interval that doesn't include zero indicates a significant result.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**True** (at the corresponding alpha level). If the 95% CI doesn't include zero, the p-value will be < .05.
+:::
+
+---
+
+## Summary
+
+After completing this self-assessment, you should be able to:
+
+- Read and interpret R independent t-test output
+- Extract t, df, p-value, and CI from t.test() output
+- Distinguish between independent and paired t-test situations
+- Report independent t-test results in APA format
+- Interpret confidence intervals for mean differences
+
+---
+
+## Preparation for Week 15
+
+Next week we focus on **paired t-tests** and comparing the two types. You'll learn:
+
+- When to use paired vs independent tests
+- How paired t-test output differs
+- The EDS assignment uses paired t-tests for the mental rotation study

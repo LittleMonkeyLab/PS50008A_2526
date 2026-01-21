@@ -1,55 +1,366 @@
 ---
 title: "Week 15 Self-Assessment"
-subtitle: "Significance Testing & Research Plan Briefing & Running T-Tests with R"
+subtitle: "Reading Paired T-Test Output & Comparing Test Types"
 author: "Gordon Wright"
 date: "2026-02-11"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w15-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-02-15"
-  labels: ['statistics', 't-test', 't-test', 'r-programming', 'self-assessment']
-  depends_on:
-    - rm0-w15-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-02-15"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 15.
+This self-assessment focuses on **paired t-tests** and comparing them with independent t-tests. This is crucial for the EDS Assignment, which uses a within-subjects design requiring a paired t-test.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-02-15.
+::: {.callout-note}
+## Formative Assessment
+This self-assessment is **not graded** but completing it will directly prepare you for the EDS Assignment.
 :::
 
-## Part 1: Conceptual Questions
+---
 
-TBC
+## Part 1: Reading Paired T-Test Output
 
-## Part 2: Practical Exercises
+### Exercise 1: Basic Paired T-Test (EDS-Style)
 
-TBC
+A mental rotation study measured response times for 10 participants at two rotation angles. Here's the R output:
 
-## Part 3: Reflection
+```
+> # Descriptive statistics
+> data %>%
++   group_by(condition) %>%
++   summarise(Mean = mean(RT), SD = sd(RT), n = n())
 
-TBC
+# A tibble: 2 x 4
+  condition      Mean    SD     n
+  <chr>         <dbl> <dbl> <int>
+1 30_degree      285.  42.3    10
+2 150_degree     312.  51.1    10
 
-## Submission
+> # Paired t-test
+> t.test(data$RT_30, data$RT_150, paired = TRUE)
 
-TBC - Submission instructions
+    Paired t-test
 
-## Marking Criteria
+data:  data$RT_30 and data$RT_150
+t = -2.847, df = 9, p-value = 0.0192
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -49.82 -5.38
+sample estimates:
+mean of the differences
+                  -27.6
+```
 
-This is a **formative** assignment.
+**a)** Why is `paired = TRUE` appropriate for this study?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+`paired = TRUE` is appropriate because:
+- The **same 10 participants** completed both conditions
+- Each participant provided data for BOTH 30° and 150° rotations
+- This is a **within-subjects (repeated measures)** design
+- Each score in the 30° condition has a matched score in the 150° condition
+:::
+
+**b)** What are the key statistics from this output?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- t-statistic: **t = -2.847**
+- Degrees of freedom: **df = 9** (number of pairs - 1 = 10 - 1)
+- p-value: **p = 0.0192**
+- 95% CI for the difference: **[-49.82, -5.38]**
+- Mean difference: **-27.6ms** (30° was faster than 150° by ~28ms)
+:::
+
+**c)** Is this result statistically significant?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Yes**, because p = .0192 < .05. We reject the null hypothesis that there is no difference between conditions.
+:::
+
+**d)** Write a complete APA results paragraph.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> A paired-samples t-test revealed that participants responded significantly faster to 30° rotations (*M* = 285ms, *SD* = 42.3ms) than to 150° rotations (*M* = 312ms, *SD* = 51.1ms), *t*(9) = -2.85, *p* = .019, 95% CI [-49.82, -5.38]. This supports the hypothesis that mental rotation time increases with greater rotation angles.
+:::
+
+---
+
+### Exercise 2: Interpreting the Mean Difference
+
+From Exercise 1:
+```
+sample estimates:
+mean of the differences
+                  -27.6
+```
+
+**a)** What does -27.6 mean?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+On average, the 30° condition was **27.6ms faster** than the 150° condition. The negative sign indicates the first condition (30°) had lower values than the second (150°).
+:::
+
+**b)** How does the sign relate to the direction of the effect?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- Negative difference = First variable is LOWER than second
+- Here: RT_30 - RT_150 = -27.6, so RT_30 < RT_150
+- 30° rotations are faster (lower RT) than 150° rotations
+:::
+
+---
+
+### Exercise 3: The Confidence Interval
+
+From Exercise 1:
+```
+95 percent confidence interval:
+ -49.82 -5.38
+```
+
+**a)** What does this interval tell us?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+We are 95% confident that the true population difference between the 30° and 150° conditions is between **-49.82ms and -5.38ms**.
+
+In other words: In the population, 30° rotations are between 5.38ms and 49.82ms faster than 150° rotations.
+:::
+
+**b)** Why is it significant that the entire interval is negative?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- The interval doesn't include zero
+- This means the difference is unlikely to be zero in the population
+- We can be confident there IS a real difference
+- The interval being entirely negative tells us the direction: 30° is consistently faster
+:::
+
+---
+
+## Part 2: Independent vs Paired - Key Differences
+
+### Exercise 4: Comparing Output
+
+**Independent t-test output:**
+```
+    Welch Two Sample t-test
+t = 2.36, df = 37.2, p-value = 0.0236
+```
+
+**Paired t-test output:**
+```
+    Paired t-test
+t = -2.847, df = 9, p-value = 0.0192
+```
+
+**a)** How do the degrees of freedom differ?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- **Independent**: df is based on total sample size (~n₁ + n₂ - 2, or Welch's adjusted df)
+- **Paired**: df = number of pairs - 1 (e.g., 10 pairs → df = 9)
+
+The paired test has fewer df because it's based on the number of matched pairs, not individual data points.
+:::
+
+**b)** Why might a paired test be more powerful?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+Paired tests control for individual differences:
+- Each person serves as their own control
+- Reduces variability due to person-to-person differences
+- This "removes" the variance between participants
+- Results in a more sensitive test (more likely to detect a real effect)
+:::
+
+---
+
+### Exercise 5: Choosing the Right Test
+
+For each scenario, state whether you would use a paired or independent t-test, and why:
+
+**a)** Comparing anxiety before and after a therapy session.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Paired t-test** - Same participants measured at two time points (before and after).
+:::
+
+**b)** Comparing test scores between a treatment group and control group.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Independent t-test** - Different participants in each group (treatment vs control).
+:::
+
+**c)** Measuring response time to faces vs houses (same participants see both).
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Paired t-test** - Same participants in both conditions (within-subjects design).
+:::
+
+**d)** Comparing memory performance between young adults and older adults.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Independent t-test** - Different participants (you can't be both young and old).
+:::
+
+**e)** Participants rate two brands of coffee for taste.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Paired t-test** - Same participants rating both brands.
+:::
+
+---
+
+## Part 3: EDS Practice Questions
+
+### Exercise 6: Mental Rotation Scenario
+
+This mirrors the EDS Assignment format:
+
+**Scenario:** Researcher investigated mental rotation. 10 participants viewed pairs of 3D shapes rotated by either 30° or 150° and judged if they were the same or different. Response time (ms) was recorded.
+
+```
+> # Descriptive statistics
+> data %>%
++   group_by(rotation) %>%
++   summarise(Mean = mean(RT), SD = sd(RT), n = n())
+
+# A tibble: 2 x 4
+  rotation    Mean    SD     n
+  <chr>      <dbl> <dbl> <int>
+1 30_degree   289.  38.7    10
+2 150_degree  318.  45.2    10
+
+> # Statistical test
+> t.test(data$RT_30, data$RT_150, paired = TRUE)
+
+    Paired t-test
+
+data:  data$RT_30 and data$RT_150
+t = -3.12, df = 9, p-value = 0.0124
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -50.13 -7.87
+sample estimates:
+mean of the differences
+                    -29
+```
+
+**Question 1 (5 marks):** State the researcher's hypothesis.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+The researcher hypothesized that response times would be longer for 150° rotations compared to 30° rotations. More specifically, greater rotation angles require more mental rotation, leading to longer processing times.
+:::
+
+**Question 2 (16-20 marks):** Identify the design components.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- **Design type:** Within-subjects / repeated measures
+- **Independent variable:** Rotation angle (30° vs 150°)
+- **Dependent variable:** Response time (in milliseconds)
+- **Data type:** Ratio data (continuous, has a true zero)
+:::
+
+**Question 3 (10 marks):** Report the descriptive statistics in APA format and interpret the pattern.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**APA format:**
+> Participants responded faster in the 30° condition (*M* = 289ms, *SD* = 38.7ms) than in the 150° condition (*M* = 318ms, *SD* = 45.2ms).
+
+**Interpretation:**
+> The descriptives show that response times were approximately 29ms slower when shapes were rotated 150° compared to 30°. This pattern is consistent with the hypothesis that greater rotation angles require more mental processing.
+:::
+
+**Question 4 (15 marks):** Interpret the t-test output.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**a) Why paired = TRUE? (3 marks)**
+The paired test is appropriate because the same 10 participants completed both conditions (within-subjects design).
+
+**b) State t, df, p (3 marks)**
+*t*(9) = -3.12, *p* = .012
+
+**c) Is this significant? (4 marks)**
+Yes, the result is statistically significant because p = .012 < .05. We reject the null hypothesis of no difference.
+
+**d) Interpret the CI (5 marks)**
+The 95% CI [-50.13, -7.87] indicates we are 95% confident the true difference lies between -50.13ms and -7.87ms. Since this interval doesn't include zero, we can be confident there is a genuine difference. The entirely negative interval confirms that 30° rotations are faster than 150° rotations.
+:::
+
+**Question 5 (5 marks):** Write a complete APA results paragraph.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> A paired-samples t-test was conducted to examine the effect of rotation angle on response time. Participants responded significantly faster to shapes rotated 30° (*M* = 289ms, *SD* = 38.7ms) than shapes rotated 150° (*M* = 318ms, *SD* = 45.2ms), *t*(9) = -3.12, *p* = .012, 95% CI [-50.13, -7.87]. These findings support the hypothesis that mental rotation time increases with greater rotation angles.
+:::
+
+---
+
+## Part 4: Common Mistakes to Avoid
+
+### Exercise 7: Error Identification
+
+What's wrong with each statement?
+
+**a)** "The paired t-test showed t = 2.5, df = 19, so there were 19 participants."
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error:** In a paired t-test, df = n - 1. So df = 19 means there were **20 participants** (or 20 pairs), not 19.
+:::
+
+**b)** "The confidence interval was [-8.2, 4.5], so the result was significant."
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error:** This CI includes zero, so the result is **NOT significant**. When CI includes zero, we cannot rule out no difference.
+:::
+
+**c)** "We used an independent t-test because each participant was tested twice."
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Error:** If each participant was tested twice, you need a **paired t-test**, not independent. Independent tests are for different participants in each condition.
+:::
+
+---
+
+## Summary
+
+After completing this self-assessment, you should be able to:
+
+- Read and interpret R paired t-test output
+- Understand the meaning of the mean difference and its sign
+- Interpret confidence intervals for paired differences
+- Choose between paired and independent t-tests based on design
+- Apply these skills to EDS-style questions
+
+---
+
+## Preparation for Week 16
+
+Next week is a **full mock EDS** in the new format. You'll practice:
+
+- All question types with R output
+- Complete APA write-ups
+- Time management under assessment conditions

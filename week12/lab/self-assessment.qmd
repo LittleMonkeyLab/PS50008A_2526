@@ -1,98 +1,106 @@
 ---
 title: "Week 12 Self-Assessment"
-subtitle: "Distributions & Variability Practice"
+subtitle: "Introduction to Reading R Output"
 author: "Gordon Wright"
 date: "2026-01-23"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 12. Complete these exercises before next Monday's lecture.
+This self-assessment consolidates your learning from Week 12 and introduces you to reading R output - a key skill for the EDS Assignment.
 
 ::: {.callout-note}
 ## Formative Assessment
 This self-assessment is **not graded** but completing it will prepare you for:
 - The MCQ Exam (identifying distributions and statistics)
-- The EDS Assignment (calculating by hand)
+- The EDS Assignment (interpreting R output)
 - The Research Report (reporting descriptives)
 :::
 
 ---
 
-## Part 1: Calculating by Hand
+## Part 1: Reading R Descriptive Output
 
-For the EDS Assignment, you'll need to calculate statistics **by hand**. Practice now!
+For the EDS Assignment, you'll receive R output and need to interpret it. Let's practice!
 
-### Exercise 1: Mean and Median
+### Exercise 1: Basic Descriptive Output
 
-A researcher measured the number of words recalled by 8 participants:
+A researcher measured the number of words recalled by 8 participants. Here's the R output:
 
-**Data**: 5, 7, 6, 8, 6, 9, 6, 5
+```
+> summary_stats <- data %>%
++   summarise(
++     Mean = mean(words_recalled),
++     SD = sd(words_recalled),
++     Median = median(words_recalled),
++     n = n()
++   )
+> summary_stats
 
-**a)** Calculate the mean.
+# A tibble: 1 x 4
+   Mean    SD Median     n
+  <dbl> <dbl>  <dbl> <int>
+1   6.5  1.41      6     8
+```
+
+**a)** What is the mean number of words recalled?
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-Sum = 5 + 7 + 6 + 8 + 6 + 9 + 6 + 5 = 52
-
-Mean = 52 / 8 = **6.5 words**
+The mean is **6.5 words** (shown in the Mean column).
 :::
 
-**b)** Calculate the median.
+**b)** What is the standard deviation?
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-Sorted data: 5, 5, 6, 6, 6, 7, 8, 9
-
-Middle positions: 4th and 5th values (since n = 8)
-
-4th value = 6, 5th value = 6
-
-Median = (6 + 6) / 2 = **6 words**
+The standard deviation is **1.41 words** (shown in the SD column).
 :::
 
-**c)** What does the comparison of mean and median suggest about the distribution?
+**c)** What does the comparison of mean (6.5) and median (6) suggest about the distribution?
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-Mean (6.5) is slightly higher than median (6), suggesting a very slight positive skew. However, they're close enough that the distribution is approximately symmetric.
+The mean (6.5) is slightly higher than the median (6), suggesting a very slight positive skew. However, they're close enough that the distribution is approximately symmetric.
 :::
 
-### Exercise 2: Standard Deviation
+---
 
-Using the same data: 5, 7, 6, 8, 6, 9, 6, 5 (Mean = 6.5)
+### Exercise 2: Group Comparison Output
 
-Complete the variance calculation:
+A study compared reaction times between two conditions. Here's the R output:
 
-| Value | Deviation (x - mean) | Squared |
-|-------|---------------------|---------|
-| 5 | ? | ? |
-| 7 | ? | ? |
-| 6 | ? | ? |
-| 8 | ? | ? |
-| 6 | ? | ? |
-| 9 | ? | ? |
-| 6 | ? | ? |
-| 5 | ? | ? |
-| **Sum** | | **?** |
+```
+> data %>%
++   group_by(condition) %>%
++   summarise(Mean = mean(RT), SD = sd(RT), n = n())
+
+# A tibble: 2 x 4
+  condition  Mean    SD     n
+  <chr>     <dbl> <dbl> <int>
+1 caffeine   285.  42.3    15
+2 placebo    312.  51.1    15
+```
+
+**a)** How many participants were in each condition?
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-| Value | Deviation | Squared |
-|-------|-----------|---------|
-| 5 | -1.5 | 2.25 |
-| 7 | +0.5 | 0.25 |
-| 6 | -0.5 | 0.25 |
-| 8 | +1.5 | 2.25 |
-| 6 | -0.5 | 0.25 |
-| 9 | +2.5 | 6.25 |
-| 6 | -0.5 | 0.25 |
-| 5 | -1.5 | 2.25 |
-| **Sum** | 0 | **14.00** |
+**15 participants** in each condition (shown in the n column).
+:::
 
-Variance = 14.00 / (8-1) = 14 / 7 = **2.0**
+**b)** Which condition had faster reaction times?
 
-SD = √2.0 = **1.41 words**
+::: {.callout-tip collapse="true"}
+## Show Answer
+The **caffeine condition** had faster reaction times (lower mean: 285ms vs 312ms).
+:::
+
+**c)** Write a sentence describing these results in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> Participants in the caffeine condition responded faster (*M* = 285ms, *SD* = 42.3ms) than those in the placebo condition (*M* = 312ms, *SD* = 51.1ms).
 :::
 
 ---
@@ -124,15 +132,23 @@ For each scenario, predict the distribution shape:
 **Approximately normal** (symmetric, bell-shaped). Heights tend to cluster around the average with fewer very short or very tall individuals.
 :::
 
-### Exercise 4: Mean vs Median
+### Exercise 4: Mean vs Median in R Output
 
-A researcher reports: Mean salary = £52,000; Median salary = £38,000
+A researcher reports this R output:
+
+```
+> salary_stats
+# A tibble: 1 x 2
+     Mean Median
+    <dbl>  <dbl>
+1  52000  38000
+```
 
 **a)** What does this tell you about the distribution?
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-The mean is much higher than the median, indicating **positive skew**. A few very high salaries pull the mean up.
+The mean (£52,000) is much higher than the median (£38,000), indicating **positive skew**. A few very high salaries pull the mean up.
 :::
 
 **b)** Which measure (mean or median) better represents the "typical" salary? Why?
@@ -144,34 +160,54 @@ The **median** (£38,000) better represents the typical salary because it's not 
 
 ---
 
-## Part 3: APA Reporting
+## Part 3: APA Reporting from R Output
 
-### Exercise 5: Write the Results
+### Exercise 5: Complete the Report
 
-A study compared reaction times between caffeine and placebo conditions:
+Use this R output to answer the questions:
 
-| Group | Mean RT (ms) | SD |
-|-------|--------------|-----|
-| Caffeine | 285 | 42 |
-| Placebo | 312 | 51 |
+```
+> memory_stats
+# A tibble: 1 x 3
+   Mean    SD Median
+  <dbl> <dbl>  <dbl>
+1   6.8   1.4      7
+```
 
-Write a sentence reporting these results in APA format.
-
-::: {.callout-tip collapse="true"}
-## Show Answer
-> Participants in the caffeine condition responded faster (*M* = 285ms, *SD* = 42ms) than those in the placebo condition (*M* = 312ms, *SD* = 51ms).
-:::
-
-### Exercise 6: Complete the Report
-
-Fill in the blanks using these statistics:
-- Memory task: Mean = 6.8 words, SD = 1.4 words, Median = 7 words
+Fill in the blanks:
 
 > Participants recalled an average of _____ words (*M* = _____, *SD* = _____). The median was _____, suggesting the distribution was approximately _____.
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
 > Participants recalled an average of **6.8** words (*M* = **6.8**, *SD* = **1.4**). The median was **7**, suggesting the distribution was approximately **symmetric** (since mean ≈ median).
+:::
+
+### Exercise 6: Write Full APA Description
+
+Use this R output:
+
+```
+> data %>%
++   group_by(time_of_day) %>%
++   summarise(Mean = mean(accuracy), SD = sd(accuracy), n = n())
+
+# A tibble: 2 x 4
+  time_of_day  Mean    SD     n
+  <chr>       <dbl> <dbl> <int>
+1 morning      78.2  12.4    20
+2 evening      71.5  14.1    20
+```
+
+Write a complete sentence reporting these descriptives in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> Participants showed higher accuracy in the morning (*M* = 78.2%, *SD* = 12.4%) compared to the evening (*M* = 71.5%, *SD* = 14.1%).
+
+Or:
+
+> Mean accuracy was higher in the morning condition (*M* = 78.2, *SD* = 12.4) than in the evening condition (*M* = 71.5, *SD* = 14.1).
 :::
 
 ---
@@ -203,11 +239,11 @@ Mark each statement True or False:
 **True**. In a positively skewed distribution, extreme high values pull the mean above the median.
 :::
 
-**d)** Variance is always larger than standard deviation.
+**d)** In R output, `n` typically refers to the sample size.
 
 ::: {.callout-tip collapse="true"}
 ## Show Answer
-**False**. When variance < 1, taking the square root gives a larger SD. For example: Variance = 0.25, SD = 0.5. (However, for most psychological data with variance > 1, this statement would be true.)
+**True**. The `n` column shows the number of observations (participants/data points) in each group.
 :::
 
 ### Exercise 8: The 68-95-99.7 Rule
@@ -241,16 +277,18 @@ Yes, this is unusual. 200ms is (300-200)/40 = 2.5 SDs below the mean. Only about
 
 After completing this self-assessment, you should be able to:
 
-- Calculate mean, median, and SD by hand
+- Read and interpret R descriptive output
+- Extract key statistics (Mean, SD, Median, n) from R tables
 - Predict and identify distribution shapes
 - Report descriptives in APA format
-- Apply the 68-95-99.7 rule
+- Understand the relationship between mean and median for skewness
 
 ---
 
 ## Preparation for Week 13
 
-Next week we move from describing our sample to making inferences about the population. Review:
+Next week we continue building your R output interpretation skills with correlation output. You'll learn to read:
 
-- What is the difference between a sample and a population?
-- Why might our sample mean differ from the true population mean?
+- Correlation coefficients
+- Scatterplots generated by R
+- Statistical significance of correlations

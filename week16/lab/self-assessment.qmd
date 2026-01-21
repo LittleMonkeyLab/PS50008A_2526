@@ -1,55 +1,369 @@
 ---
 title: "Week 16 Self-Assessment"
-subtitle: "Practice Assignment & Project Groups: Literature Review"
+subtitle: "Mock EDS Assignment"
 author: "Gordon Wright"
 date: "2026-02-25"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w16-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-03-01"
-  labels: ['assessment', 'project', 'literature-review', 'self-assessment']
-  depends_on:
-    - rm0-w16-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-03-01"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 16.
+This is a **full mock EDS Assignment** in the new R output interpretation format. Complete this under timed conditions to prepare for the real assessment.
 
 ::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-03-01.
+## Assessment Practice
+- Recommended time: 90 minutes
+- This mirrors the actual EDS Assignment format
+- Practice writing complete answers without looking at hints first
 :::
 
-## Part 1: Conceptual Questions
+---
 
-TBC
+# Mock EDS Assignment: Mental Rotation Study
 
-## Part 2: Practical Exercises
+## Study Description
 
-TBC
+A cognitive psychologist conducted a study to investigate the mental rotation effect. According to mental rotation theory, people mentally rotate mental images of objects to compare them, and this rotation takes time proportional to the angle of rotation.
 
-## Part 3: Reflection
+**Participants:** 10 undergraduate students participated in the study.
 
-TBC
+**Procedure:** Each participant viewed 50 pairs of 3D block shapes. For each pair, they judged whether the shapes were the same or mirror-reversed. The shapes in each pair were rotated by either 30° or 150°. Response time (in milliseconds) was recorded for correct responses only.
 
-## Submission
+**Design:** Each participant completed trials at both rotation angles.
 
-TBC - Submission instructions
+---
 
-## Marking Criteria
+## Section A: Statistical Mechanics (50 marks)
 
-This is a **formative** assignment.
+### R Output Provided
+
+```
+> # Descriptive Statistics
+> data %>%
++   group_by(rotation_angle) %>%
++   summarise(Mean = mean(RT), SD = sd(RT), n = n())
+
+# A tibble: 2 x 4
+  rotation_angle  Mean    SD     n
+  <chr>          <dbl> <dbl> <int>
+1 30_degree       278.  39.4    10
+2 150_degree      305.  47.8    10
+
+> # Statistical Test
+> t.test(data$RT_30, data$RT_150, paired = TRUE)
+
+    Paired t-test
+
+data:  data$RT_30 and data$RT_150
+t = -2.94, df = 9, p-value = 0.0165
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -47.43  -6.57
+sample estimates:
+mean of the differences
+                    -27
+```
+
+---
+
+### Question 1: Experimental Hypothesis (5 marks)
+
+State the researcher's hypothesis for this study.
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+The researcher hypothesized that response times would be significantly longer for shapes rotated 150° compared to shapes rotated 30°. Based on mental rotation theory, greater rotation angles require more mental rotation, which takes additional time.
+
+**Marking notes:** Award full marks for stating the expected direction (150° slower than 30°) with brief justification linking to the theory.
+:::
+
+---
+
+### Question 2: Design Components (16-20 marks)
+
+Identify the following:
+
+**a)** Type of experimental design (4-5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Within-subjects (repeated measures) design** - each participant completed trials at both rotation angles.
+
+**Marking notes:** Must identify within-subjects/repeated measures. Accept "related design" but not just "experimental design."
+:::
+
+**b)** Independent variable (4-5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Rotation angle** with two levels: 30° and 150°
+
+**Marking notes:** Must identify the IV (rotation angle) AND the levels (30° vs 150°).
+:::
+
+**c)** Dependent variable (4-5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Response time** measured in milliseconds (ms)
+
+**Marking notes:** Must identify RT/response time. Include units for full marks.
+:::
+
+**d)** Type of data (4-5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Ratio data** - response time is continuous with a true zero point (0ms would mean no time elapsed).
+
+**Marking notes:** Accept "continuous," "interval/ratio," or "ratio" with brief justification.
+:::
+
+---
+
+### Question 3: Descriptive Statistics (10 marks)
+
+**a)** Report the descriptive statistics in APA format. (5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+Participants responded faster in the 30° condition (*M* = 278ms, *SD* = 39.4ms) than in the 150° condition (*M* = 305ms, *SD* = 47.8ms).
+
+**Marking notes:** Must include M and SD for both conditions in correct APA format (italicized M and SD).
+:::
+
+**b)** Based on these descriptives alone, what pattern do you observe? What might this suggest about the hypothesis? (5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+The descriptive statistics show that mean response time was approximately 27ms slower for 150° rotations compared to 30° rotations. This pattern is consistent with the hypothesis - participants took longer to respond when shapes required more mental rotation.
+
+**Marking notes:** Must describe the pattern (150° slower) and link to the hypothesis prediction.
+:::
+
+---
+
+### Question 4: Inferential Statistics (15 marks)
+
+**a)** Why is `paired = TRUE` appropriate for this design? (3 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+`paired = TRUE` is appropriate because:
+- The same participants completed both conditions
+- This is a within-subjects design where each participant's 30° score is matched with their 150° score
+- Each data point in one condition has a corresponding data point in the other
+
+**Marking notes:** Must reference same participants in both conditions or matched/paired data.
+:::
+
+**b)** State the t-value, degrees of freedom, and p-value. (3 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+- t = -2.94
+- df = 9
+- p = .0165 (or .017)
+
+**Marking notes:** 1 mark each. Accept reasonable rounding of p-value.
+:::
+
+**c)** At α = .05, is the result statistically significant? Explain your reasoning. (4 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+Yes, the result is statistically significant because p = .0165, which is less than the alpha level of .05. We therefore reject the null hypothesis that there is no difference between conditions.
+
+**Marking notes:** Must state significant, give p-value, compare to alpha, and mention rejecting null.
+:::
+
+**d)** What does the 95% CI [-47.43, -6.57] tell us? Why does it matter that this interval doesn't include zero? (5 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+The 95% confidence interval tells us we are 95% confident that the true population difference in response times between the two conditions lies between -47.43ms and -6.57ms.
+
+The fact that this interval doesn't include zero is important because:
+- Zero would represent no difference between conditions
+- Since zero is not in the interval, we can be confident there IS a genuine difference
+- The entirely negative interval confirms that 30° rotations are faster than 150° rotations
+
+**Marking notes:** Must explain what CI represents (2 marks) and why excluding zero matters (3 marks).
+:::
+
+---
+
+### Question 5: APA Results Paragraph (5 marks)
+
+Write a complete APA-style results paragraph reporting these findings.
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+A paired-samples t-test was conducted to examine the effect of rotation angle on response time in a mental rotation task. Participants responded significantly faster to shapes rotated 30° (*M* = 278ms, *SD* = 39.4ms) than shapes rotated 150° (*M* = 305ms, *SD* = 47.8ms), *t*(9) = -2.94, *p* = .017, 95% CI [-47.43, -6.57]. These findings support the hypothesis that mental rotation time increases with greater rotation angles.
+
+**Marking notes:** Must include:
+- Type of test used
+- Descriptives for both conditions (M and SD)
+- Test statistics (t, df, p)
+- Confidence interval
+- Interpretation linking to hypothesis
+:::
+
+---
+
+### Question 6: Error Detection (5 marks)
+
+A student analyzed data from a study comparing anxiety levels between psychology students (n = 25) and biology students (n = 25). The student ran the following analysis:
+
+```
+> t.test(psych_anxiety, bio_anxiety, paired = TRUE)
+
+    Paired t-test
+
+data:  psych_anxiety and bio_anxiety
+t = 1.82, df = 24, p-value = 0.081
+```
+
+**a)** What error did the student make? (2 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+The student used `paired = TRUE` when they should have used `paired = FALSE` (independent samples t-test). Psychology students and biology students are **different people** - this is a between-subjects design, not within-subjects.
+
+**Marking notes:** Must identify wrong test type (paired instead of independent).
+:::
+
+**b)** How might this error affect their conclusions? (3 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+Using a paired test on independent data creates problems:
+- The test treats unrelated scores as if they were matched pairs
+- This can distort the t-value and p-value
+- The degrees of freedom are wrong (should be ~48 for independent test, not 24)
+- Could lead to incorrect conclusions about significance (Type I or Type II error)
+
+**Marking notes:** Must explain consequence for statistical validity. Accept discussion of wrong df, invalid pairing, or incorrect significance decisions.
+:::
+
+---
+
+## Section B: Methods and Theory (50 marks)
+
+### Question 7: Methodological Improvements (10 marks)
+
+Suggest TWO methodological improvements for this study. For each improvement, explain why it would strengthen the study.
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Improvement 1: Increase sample size** (5 marks)
+With only 10 participants, the study has limited statistical power. A larger sample (e.g., 30-50 participants) would provide more reliable estimates of the population effect and increase confidence in the findings.
+
+**Improvement 2: Include additional rotation angles** (5 marks)
+Testing only 30° and 150° limits what we can conclude about mental rotation. Including intermediate angles (e.g., 60°, 90°, 120°) would allow examination of whether the relationship is linear, providing stronger evidence for mental rotation theory.
+
+**Alternative improvements:**
+- Counterbalancing trial order
+- Including practice trials
+- Recording accuracy as well as RT
+- Using a larger stimulus set
+- Testing different types of stimuli
+
+**Marking notes:** 5 marks each. Must include the improvement AND a clear justification for why it would strengthen the study.
+:::
+
+---
+
+### Question 8: Individual Differences (20 marks)
+
+**a)** Do you think males and females would show different patterns of performance on this task? Explain your reasoning. (10 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+Research suggests males may show a small advantage on spatial tasks including mental rotation. Possible explanations include:
+- Evolutionary pressures for navigation and tool use
+- Differences in spatial experience during development
+- Hormonal influences on spatial processing
+
+However, the effect size is typically small and there is considerable overlap between groups. Environmental factors (practice, encouragement, stereotypes) may also play a role.
+
+**Marking notes:** Award marks for discussing research evidence, possible explanations, and acknowledging complexity/overlap.
+:::
+
+**b)** Would you expect architects to perform differently from journalists on this task? Explain your reasoning. (10 marks)
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+Architects would likely show faster response times (better performance) than journalists because:
+- Architects regularly engage with spatial reasoning and 3D visualization in their work
+- Practice with spatial tasks improves mental rotation ability
+- Self-selection: people with good spatial skills may be more likely to pursue architecture
+
+This suggests expertise and practice can modify mental rotation ability, rather than it being a fixed trait.
+
+**Marking notes:** Award marks for predicting architects would be faster, explaining role of practice/expertise, and discussing self-selection or nature vs nurture.
+:::
+
+---
+
+### Question 9: Ecological Validity (20 marks)
+
+Propose a more ecologically valid way to study mental rotation in everyday life. Your proposal should be at least half a page and include:
+- A clear research question
+- A naturalistic setting or real-world task
+- How you would measure the dependent variable
+- Why this approach is more ecologically valid
+
+::: {.callout-tip collapse="true"}
+## Model Answer
+**Research Question:** Does expertise in video gaming improve real-world spatial navigation performance?
+
+**Proposed Study:**
+I would investigate mental rotation in a naturalistic navigation context. Participants would be asked to navigate an unfamiliar university building to find specific rooms, using only a rotated map (the map would be oriented with North facing different directions at different checkpoints).
+
+**Participants:** 40 participants would be recruited - 20 regular video game players (10+ hours/week) and 20 non-gamers. Both groups would be matched for familiarity with the building.
+
+**Procedure:** Participants would navigate through 10 checkpoints in the building. At each checkpoint, they would receive a map rotated by varying degrees (0°, 90°, 180°, 270°) and need to identify the correct direction to the next checkpoint.
+
+**Dependent Variables:**
+1. Time to make each navigation decision
+2. Number of wrong turns
+3. Total navigation time
+4. Self-reported difficulty
+
+**Why More Ecologically Valid:**
+This approach is more ecologically valid because:
+1. **Real-world context:** Navigation with rotated maps is a genuine everyday task (using phone GPS, reading building directories)
+2. **Meaningful consequences:** Errors result in getting lost, not just "wrong answer" feedback
+3. **Complex environment:** Real spatial reasoning involves integrating visual, proprioceptive, and memory processes
+4. **Practical applications:** Findings could inform GPS design, wayfinding signage, and training programs
+
+The lab-based mental rotation task uses abstract stimuli in an artificial context. While highly controlled, it may not capture how people actually use mental rotation in daily life.
+
+**Marking notes:**
+- Clear research question (4 marks)
+- Naturalistic setting/task (5 marks)
+- Clear DV measurement (5 marks)
+- Explanation of ecological validity (6 marks)
+Must be approximately half a page or more.
+:::
+
+---
+
+## Reflection
+
+After completing this mock EDS, consider:
+
+1. Which questions were most challenging?
+2. Did you manage your time effectively?
+3. What areas need more practice before the real assessment?
+
+::: {.callout-note}
+## Next Steps
+- Review any areas where you struggled
+- Practice APA formatting for statistics
+- Complete the Week 17 error detection exercises
+:::

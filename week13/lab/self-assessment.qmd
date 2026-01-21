@@ -1,55 +1,317 @@
 ---
 title: "Week 13 Self-Assessment"
-subtitle: "Correlational Designs & Correlational Analysis"
+subtitle: "Reading R Correlation Output"
 author: "Gordon Wright"
 date: "2026-01-28"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w13-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-02-01"
-  labels: ['correlation', 'research-design', 'correlation', 'r-programming', 'self-assessment']
-  depends_on:
-    - rm0-w13-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-02-01"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 13.
+This self-assessment consolidates your learning from Week 13 and builds on your R output interpretation skills by focusing on correlation output.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-02-01.
+::: {.callout-note}
+## Formative Assessment
+This self-assessment is **not graded** but completing it will prepare you for:
+- The EDS Assignment (interpreting R output)
+- The Research Report (correlation analysis)
 :::
 
-## Part 1: Conceptual Questions
+---
 
-TBC
+## Part 1: Reading Correlation Output
 
-## Part 2: Practical Exercises
+### Exercise 1: Basic Correlation Output
 
-TBC
+A researcher examined the relationship between study hours and exam scores. Here's the R output:
 
-## Part 3: Reflection
+```
+> cor.test(data$study_hours, data$exam_score)
 
-TBC
+    Pearson's product-moment correlation
 
-## Submission
+data:  data$study_hours and data$exam_score
+t = 4.23, df = 28, p-value = 0.0002
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.36 0.79
+sample estimates:
+      cor
+0.624
+```
 
-TBC - Submission instructions
+**a)** What is the correlation coefficient?
 
-## Marking Criteria
+::: {.callout-tip collapse="true"}
+## Show Answer
+**r = 0.624** (shown in the "sample estimates" section as "cor").
+:::
 
-This is a **formative** assignment.
+**b)** Is this correlation statistically significant at α = .05?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Yes**, it is statistically significant because *p* = 0.0002, which is less than .05.
+:::
+
+**c)** How would you describe the strength and direction of this relationship?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+This is a **moderate to strong positive correlation**. As study hours increase, exam scores tend to increase.
+
+- Direction: Positive (both variables move in the same direction)
+- Strength: Moderate-strong (r = 0.624 is between 0.5 and 0.7)
+:::
+
+**d)** Report this correlation in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> There was a significant positive correlation between study hours and exam scores, *r*(28) = .62, *p* < .001, 95% CI [.36, .79].
+
+Or:
+
+> Study hours were significantly positively correlated with exam scores, *r* = .62, *p* < .001.
+:::
+
+---
+
+### Exercise 2: Interpreting the Confidence Interval
+
+Using the output from Exercise 1:
+
+```
+95 percent confidence interval:
+ 0.36 0.79
+```
+
+**a)** What does this confidence interval tell us?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+We are 95% confident that the true population correlation falls between 0.36 and 0.79. The interval is entirely positive, confirming the positive relationship.
+:::
+
+**b)** Why is it important that this interval doesn't include zero?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+If the interval included zero, we couldn't rule out the possibility of no relationship. Since it doesn't include zero, we have evidence of a genuine correlation in the population.
+:::
+
+---
+
+### Exercise 3: Different Correlation Strengths
+
+Match each correlation coefficient to its description:
+
+| Coefficient | Options |
+|-------------|---------|
+| r = -0.89 | A. Weak positive |
+| r = 0.23 | B. Strong negative |
+| r = 0.52 | C. Moderate positive |
+| r = -0.15 | D. Weak negative |
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- r = -0.89 → **B. Strong negative**
+- r = 0.23 → **A. Weak positive**
+- r = 0.52 → **C. Moderate positive**
+- r = -0.15 → **D. Weak negative**
+:::
+
+---
+
+## Part 2: Descriptive Statistics for Correlational Studies
+
+### Exercise 4: Reading Paired Descriptives
+
+A study measured anxiety and sleep quality in 50 participants:
+
+```
+> data %>%
++   summarise(
++     mean_anxiety = mean(anxiety),
++     sd_anxiety = sd(anxiety),
++     mean_sleep = mean(sleep_quality),
++     sd_sleep = sd(sleep_quality)
++   )
+
+# A tibble: 1 x 4
+  mean_anxiety sd_anxiety mean_sleep sd_sleep
+         <dbl>      <dbl>      <dbl>    <dbl>
+1         42.3       12.1       5.8      1.9
+```
+
+**a)** Report the descriptive statistics for anxiety in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> Anxiety scores ranged from... (*M* = 42.3, *SD* = 12.1)
+
+Or simply: Mean anxiety was 42.3 (*SD* = 12.1).
+:::
+
+**b)** What additional information would you need to fully interpret these descriptives?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+You would benefit from knowing:
+- The range of the anxiety scale (e.g., 0-100)
+- What higher/lower scores mean (is high anxiety bad?)
+- The range of the sleep quality scale
+- Sample size (n)
+:::
+
+---
+
+### Exercise 5: Correlation with Full Descriptives
+
+Here's complete output for a study on age and memory performance:
+
+```
+> # Descriptive statistics
+> data %>%
++   summarise(
++     n = n(),
++     mean_age = mean(age),
++     sd_age = sd(age),
++     mean_memory = mean(memory_score),
++     sd_memory = sd(memory_score)
++   )
+
+# A tibble: 1 x 5
+      n mean_age sd_age mean_memory sd_memory
+  <int>    <dbl>  <dbl>       <dbl>     <dbl>
+1    45     52.4   15.3        68.2      18.7
+
+> # Correlation test
+> cor.test(data$age, data$memory_score)
+
+    Pearson's product-moment correlation
+
+data:  data$age and data$memory_score
+t = -3.87, df = 43, p-value = 0.0004
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.68 -0.24
+sample estimates:
+       cor
+-0.508
+```
+
+**a)** Write a complete results paragraph in APA format.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+> A total of 45 participants (mean age = 52.4 years, *SD* = 15.3) completed a memory task (*M* = 68.2, *SD* = 18.7). There was a significant negative correlation between age and memory performance, *r*(43) = -.51, *p* < .001, 95% CI [-.68, -.24], indicating that older participants tended to show lower memory scores.
+:::
+
+**b)** What is the coefficient of determination (r²) and what does it tell us?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+r² = (-0.508)² = 0.258 = **25.8%**
+
+This tells us that approximately 26% of the variance in memory scores can be explained by (or is shared with) age. The remaining 74% is due to other factors.
+:::
+
+---
+
+## Part 3: Correlation vs Causation
+
+### Exercise 6: Critical Thinking
+
+A researcher finds a significant correlation (*r* = .65) between ice cream sales and drowning deaths.
+
+**a)** Can we conclude that ice cream causes drowning? Why or why not?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**No**, correlation does not imply causation. Both variables are likely influenced by a **third variable** (confound): hot weather. Hot weather increases both ice cream sales AND swimming (which increases drowning risk).
+:::
+
+**b)** What type of variable is "hot weather" in this example?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+Hot weather is a **confounding variable** (or third variable). It affects both the IV and DV, creating a spurious correlation.
+:::
+
+### Exercise 7: Identifying Confounds
+
+For each correlation, identify a potential confounding variable:
+
+**a)** Shoe size correlates with reading ability in children.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Age** is the confound. Older children have bigger feet AND better reading ability.
+:::
+
+**b)** Number of firefighters at a scene correlates with property damage.
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+**Fire size/severity** is the confound. Larger fires require more firefighters AND cause more damage.
+:::
+
+---
+
+## Part 4: Design Recognition
+
+### Exercise 8: Study Design
+
+A researcher wants to know if there's a relationship between hours of sleep and exam performance among university students. They survey 100 students, asking about their typical sleep duration and collecting their most recent exam grade.
+
+**a)** What type of design is this?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+This is a **correlational design** (also called observational or non-experimental). The researcher is not manipulating any variables, just measuring the natural relationship between two variables.
+:::
+
+**b)** What are two variables being measured?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+1. Hours of sleep (typical/habitual)
+2. Exam performance/grade
+:::
+
+**c)** Why can't we conclude that sleep *causes* better exam performance?
+
+::: {.callout-tip collapse="true"}
+## Show Answer
+- Variables are not manipulated (no random assignment)
+- Cannot rule out confounding variables (e.g., conscientiousness affects both sleep habits and studying)
+- Direction of causality unclear (maybe good grades reduce stress → better sleep)
+- Would need an experiment to establish causation
+:::
+
+---
+
+## Summary
+
+After completing this self-assessment, you should be able to:
+
+- Read and interpret R correlation output
+- Extract r, df, p-value, and confidence interval from cor.test() output
+- Report correlations in APA format
+- Calculate and interpret r²
+- Identify confounding variables
+- Explain why correlation ≠ causation
+
+---
+
+## Preparation for Week 14
+
+Next week we focus on independent samples t-tests. You'll learn to read and interpret:
+
+- Independent t-test output from R
+- When to use independent vs paired tests
+- Confidence intervals for mean differences
