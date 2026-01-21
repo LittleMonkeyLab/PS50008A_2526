@@ -58,8 +58,6 @@ theme_set(theme_minimal(base_size = 16))
 
 ## Your Data, Your Discoveries
 
----
-
 ## Lab Overview
 
 Today we work through your **real DataLab results** as a class.
@@ -84,8 +82,6 @@ Today we work through your **real DataLab results** as a class.
 :::
 ::::
 
----
-
 ## Timeline
 
 | Phase | Task | Duration |
@@ -100,8 +96,6 @@ Today we work through your **real DataLab results** as a class.
 
 **Total: ~80 minutes**
 
----
-
 ## Open the Activity Page
 
 Navigate to **Week 12 > Lab > Activity**
@@ -110,14 +104,10 @@ You'll see questions for each task.
 
 Work through them with your group.
 
----
-
 # Phase 1: Reflex Test {background-color="#E76F51"}
 
 ## How fast are your reactions?
 
----
-  
 ## What You Did
 
 You caught a falling **30cm ruler** five times.
@@ -127,8 +117,6 @@ The distance caught reflects **reaction time**:
 $$\text{RT (ms)} = \sqrt{\frac{2 \times \text{distance (cm)}}{980}} \times 1000$$
 
 **Shorter distance = faster reactions**
-
----
 
 ## Your Results
 
@@ -168,8 +156,6 @@ if(length(reflex_cols) >= 5) {
 }
 ```
 
----
-
 ## Group Discussion
 
 {{< countdown "5:00" play_sound=true start_immediately=true >}}
@@ -193,7 +179,6 @@ if(length(reflex_cols) >= 5) {
 
 **Hypothesis (one-tailed)**: Reaction times will decrease from Trial 1 to Trial 5.
 
----
 
 ## The Learning Effect
 
@@ -227,13 +212,13 @@ if(exists("reflex_long") && nrow(reflex_long) > 0) {
 
 **Why does this matter?** Practice effects are a confound we control for in experiments.
 
----
+
 
 # Phase 2: Time Warp {background-color="#2A9D8F"}
 
 ## How well do you perceive time?
 
----
+
 
 ## What You Did
 
@@ -241,7 +226,7 @@ You estimated **60 seconds** without counting.
 
 Then you estimated the length of lines and strings.
 
----
+
 
 ## Your Time Estimates
 
@@ -283,7 +268,7 @@ if(length(time_col) > 0) {
 }
 ```
 
----
+
 
 ## Group Discussion
 
@@ -295,7 +280,7 @@ if(length(time_col) > 0) {
 2. What design is this? (Between/Within/Correlational)
 3. What would the null hypothesis be?
 
----
+
 
 ## Debrief: Time Perception
 
@@ -307,13 +292,13 @@ if(length(time_col) > 0) {
 
 **Null hypothesis**: Mean estimate will equal 60 seconds (no systematic bias).
 
----
+
 
 # Phase 3: Memory {background-color="#275882"}
 
-## The big reveal
+## MindPalace
 
----
+
 
 ## What You Did
 
@@ -321,7 +306,7 @@ You memorised **10 words** and tried to recall them.
 
 But here's what you didn't know...
 
----
+
 
 ## The Secret Manipulation
 
@@ -353,7 +338,7 @@ CONCRETE words
 
 **Question**: Does word type affect memory?
 
----
+
 
 ## Your Results: Lab A vs Lab B
 
@@ -397,7 +382,7 @@ if(length(lab_col) > 0 && length(total_col) > 0) {
 }
 ```
 
----
+
 
 ## The Statistics
 
@@ -419,7 +404,7 @@ if(exists("memory_labs") && nrow(memory_labs) > 0) {
 }
 ```
 
----
+
 
 ## Group Discussion
 
@@ -433,7 +418,7 @@ if(exists("memory_labs") && nrow(memory_labs) > 0) {
 4. Write a null hypothesis.
 5. Why might concrete words be easier to remember?
 
----
+
 
 ## Debrief: Memory Design
 
@@ -448,7 +433,7 @@ if(exists("memory_labs") && nrow(memory_labs) > 0) {
 - **H1 (one-tailed)**: Concrete words will be recalled better than abstract words.
 - **H0**: There will be no difference in recall between word types.
 
----
+
 
 ## Why Concrete Words?
 
@@ -463,13 +448,13 @@ Abstract words only have the verbal code.
 
 **Two codes > One code = Better memory**
 
----
+
 
 # Phase 4: Frontal Lob {background-color="#EA8439"}
 
 ## Does handedness matter?
 
----
+
 
 ## What You Did
 
@@ -478,7 +463,7 @@ You threw balls at a bucket:
 - **10 throws** with dominant hand
 - **5 throws** with non-dominant hand
 
----
+
 
 ## Your Throwing Results
 
@@ -531,7 +516,7 @@ if(length(dom_col) > 0 && length(nondom_col) > 0) {
 }
 ```
 
----
+
 
 ## Group Discussion
 
@@ -544,7 +529,7 @@ if(length(dom_col) > 0 && length(nondom_col) > 0) {
 3. Why is within-subjects "more powerful"?
 4. What is the IV? What is the DV?
 
----
+
 
 ## Debrief: Within-Subjects Power
 
@@ -558,29 +543,13 @@ if(length(dom_col) > 0 && length(nondom_col) > 0) {
 
 Each person is their own control. Individual differences (height, coordination, practice) are controlled because we compare YOU to YOU.
 
----
 
-## The Statistical Test
-
-For within-subjects designs with two conditions, we use a **paired t-test**.
-
-It asks: Is the difference between conditions larger than we'd expect by chance?
-
-```{r}
-#| label: throw-stats
-if(exists("throw_data") && nrow(throw_data) > 0) {
-  mean_diff <- mean(throw_data$dom_pct - throw_data$nondom_pct, na.rm = TRUE)
-  cat(paste0("Mean difference: ", round(mean_diff, 1), " percentage points"))
-}
-```
-
----
 
 # Phase 5: Sleep & Memory {background-color="#1abc9c"}
 
 ## Is there a relationship?
 
----
+
 
 ## The Question
 
@@ -590,7 +559,7 @@ We measured how many words you recalled.
 
 **Is there a relationship between sleep and memory?**
 
----
+
 
 ## Your Results
 
@@ -631,7 +600,7 @@ if(nrow(sleep_mem) > 5) {
 }
 ```
 
----
+
 
 ## Group Discussion
 
@@ -645,7 +614,7 @@ if(nrow(sleep_mem) > 5) {
 4. Can we say sleep **causes** better memory?
 5. What's the key limitation of correlational designs?
 
----
+
 
 ## Debrief: Correlational Design
 
@@ -662,13 +631,13 @@ if(nrow(sleep_mem) > 5) {
 Maybe sleep helps memory... OR maybe third variables (e.g., health, motivation) affect both!
 :::
 
----
+
 
 # Phase 6: Sixth Sense {background-color="#9b59b6"}
 
 ## Can you feel being stared at?
 
----
+
 
 ## What You Did
 
@@ -678,7 +647,7 @@ You guessed which it was.
 
 **If just guessing**: You'd expect 50% correct (3 out of 6).
 
----
+
 
 ## Your Detection Accuracy
 
@@ -727,7 +696,7 @@ if(nrow(acc_data) > 0) {
 }
 ```
 
----
+
 
 ## Group Discussion
 
@@ -739,7 +708,7 @@ if(nrow(acc_data) > 0) {
 2. What is the null hypothesis here?
 3. What would 50% accuracy suggest?
 
----
+
 
 ## Debrief: Chance and the Null Hypothesis
 
@@ -753,13 +722,13 @@ With 28 people flipping coins, SOMEONE will get 5+ heads. That doesn't mean the 
 
 **This is why we need statistics** - to separate signal from noise.
 
----
+
 
 # Wrap-Up {background-color="#275882"}
 
 ## What have we learned?
 
----
+
 
 ## Design Types Summary
 
@@ -769,7 +738,7 @@ With 28 people flipping coins, SOMEONE will get 5+ heads. That doesn't mean the 
 | Within-subjects | Yes | Throwing (Dom vs Non-dom) |
 | Correlational | N/A | Sleep & Memory |
 
----
+
 
 ## Key Vocabulary
 
@@ -799,7 +768,7 @@ With 28 people flipping coins, SOMEONE will get 5+ heads. That doesn't mean the 
 :::
 ::::
 
----
+
 
 ## Your Assessments
 
@@ -811,7 +780,7 @@ Everything today connects to your assessments:
 | **MCQ Exam** | All terminology and concepts |
 | **EDS Assignment** | Means, SDs, interpreting results |
 
----
+
 
 ## Next Steps
 
@@ -821,11 +790,11 @@ Everything today connects to your assessments:
 
 3. Read about the **Research Plan** (due Week 16)
 
----
+
 
 # Questions? {background-color="#275882"}
 
----
+
 
 # Well done! {background-color="#275882"}
 

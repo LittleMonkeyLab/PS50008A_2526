@@ -772,11 +772,11 @@
     ]
   },
   {
-    "objectID": "week12/lab/instructor-slides.html#the-big-reveal",
-    "href": "week12/lab/instructor-slides.html#the-big-reveal",
+    "objectID": "week12/lab/instructor-slides.html#mindpalace",
+    "href": "week12/lab/instructor-slides.html#mindpalace",
     "title": "Design Detectives: DataLab",
-    "section": "The big reveal",
-    "text": "The big reveal",
+    "section": "MindPalace",
+    "text": "MindPalace",
     "crumbs": [
       "Home",
       "Term 2",
@@ -945,20 +945,6 @@
     "title": "Design Detectives: DataLab",
     "section": "Debrief: Within-Subjects Power",
     "text": "Debrief: Within-Subjects Power\nDesign: Within-subjects (same person, both hands)\nIV: Hand used (dominant vs non-dominant)\nDV: Throwing accuracy (%)\nWhy more powerful?\nEach person is their own control. Individual differences (height, coordination, practice) are controlled because we compare YOU to YOU.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 12: Research Design Framework",
-      "Lab",
-      "Instructor Slides"
-    ]
-  },
-  {
-    "objectID": "week12/lab/instructor-slides.html#the-statistical-test",
-    "href": "week12/lab/instructor-slides.html#the-statistical-test",
-    "title": "Design Detectives: DataLab",
-    "section": "The Statistical Test",
-    "text": "The Statistical Test\nFor within-subjects designs with two conditions, we use a paired t-test.\nIt asks: Is the difference between conditions larger than we’d expect by chance?\n\n\nMean difference: 13.7 percentage points",
     "crumbs": [
       "Home",
       "Term 2",

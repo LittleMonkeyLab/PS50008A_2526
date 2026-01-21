@@ -28,21 +28,22 @@ format-links:
 
 ## Task Structure
 
-You will receive a research scenario with actual raw data.
+You will receive a research scenario with **pre-generated R output**. Your task is to interpret the output and demonstrate your understanding of the statistical analysis - no coding or hand calculations required.
 
-### Section A: Statistical Mechanics
+### Section A: Statistical Mechanics (50 marks)
 
-1. State the researcher's hypothesis
-2. Identify design type, IV, DV, data type
-3. Calculate means and SDs
-4. Run appropriate statistical tests
-5. Interpret results and write up in APA format
+1. State the researcher's hypothesis (5 marks)
+2. Identify design type, IV, DV, data type (16-20 marks)
+3. **Interpret R descriptive output** and report in APA format (10 marks)
+4. **Interpret R t.test() output** and justify test choice (15 marks)
+5. Full APA results paragraph from R output (5 marks)
+6. **NEW: Error detection** - identify what's wrong with a given analysis (5 marks)
 
-### Section B: Methods and Theory
+### Section B: Methods and Theory (50 marks)
 
-6. Suggest TWO methodological improvements
-7. Discuss individual differences / extensions
-8. Propose a more ecologically valid alternative (minimum half page)
+7. Suggest TWO methodological improvements
+8. Discuss individual differences / extensions
+9. Propose a more ecologically valid alternative (minimum half page)
 
 ---
 
@@ -67,14 +68,57 @@ You MUST demonstrate your understanding - not just get the right answer.
 |--------|----------------------|
 | **Test selection** | Why this test? Link to design and data type |
 | **Hypothesis** | Clear statement with direction justified |
+| **Reading output** | Correctly identify key values (t, df, p, CI) |
 | **Interpretation** | What does the result mean in context? |
+| **Error detection** | Identify when an analysis doesn't match the design |
 | **Improvements** | Thoughtful, specific, feasible suggestions |
 
 ---
 
 ## Preparation
 
-- Practice with worked examples from labs
+- Practice interpreting R output from lab exercises (weeks 12-16)
 - Review APA reporting format for statistics
 - Understand the logic behind test selection
-- Be comfortable calculating means and SDs by hand
+- Be comfortable reading and interpreting R output
+- Practice error detection exercises (what's wrong with this analysis?)
+
+---
+
+## Example R Output You'll Encounter
+
+### Descriptive Statistics
+```
+> data %>%
++   group_by(condition) %>%
++   summarise(Mean = mean(RT), SD = sd(RT), n = n())
+
+# A tibble: 2 x 4
+  condition      Mean    SD     n
+  <chr>         <dbl> <dbl> <int>
+1 30_degree      285.  42.3    10
+2 150_degree     312.  51.1    10
+```
+
+### T-Test Output
+```
+> t.test(data$RT_30, data$RT_150, paired = TRUE)
+
+    Paired t-test
+
+data:  data$RT_30 and data$RT_150
+t = -2.847, df = 9, p-value = 0.0192
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -49.82 -5.38
+sample estimates:
+mean of the differences
+                  -27.6
+```
+
+You will NOT need to write R code. Your task is to:
+
+1. Read the output correctly
+2. Explain what the numbers mean
+3. Report findings in APA format
+4. Detect when an analysis contains errors
