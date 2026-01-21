@@ -9,6 +9,7 @@ format:
     slide-number: c/t
     show-slide-number: all
     progress: true
+    embed-resources: true
     transition: fade
     width: 1050
     height: 700
