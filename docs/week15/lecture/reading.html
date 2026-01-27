@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 9: Correlation – PS50008A Research Methods &amp; Experimental Design</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-114842380e7e43a303b24dc40bbf8511.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/custom.css">
+<link rel="stylesheet" href="../../include/webex.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/foundations-26-logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../assets/foundations-26-logo.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">PS50008A Research Methods &amp; Experimental Design</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-assessments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Assessments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-assessments">    
+        <li>
+    <a class="dropdown-item" href="../../assessments.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../assessments/research-plan.html">
+ <span class="dropdown-text">Research Plan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../assessments/mcq-exam.html">
+ <span class="dropdown-text">MCQ Exam</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../assessments/eds-assignment.html">
+ <span class="dropdown-text">EDS Assignment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../assessments/research-report.html">
+ <span class="dropdown-text">Research Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../textbook/index.html"> 
+<span class="menu-text">Textbook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../glossary/index.html"> 
+<span class="menu-text">Glossary</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LittleMonkeyLab/PS50008A_2526"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 9: Correlation</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PS50008A Research Methods &amp; Experimental Design</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/research-plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/mcq-exam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MCQ Exam</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/eds-assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EDS Assignment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/research-report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Report</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Term 2</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 11: DataLab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lecture</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lecture/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lecture/slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lab/instructor-slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Instructor Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lab/activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lab/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week11/lab/data-dictionary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Dictionary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 12: Research Design Framework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lecture</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lecture/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lecture/slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lab/instructor-slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Instructor Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lab/activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lab/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week12/lab/self-assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Self-Assessment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 13: Building your Research (Plan)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lecture</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/lecture/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/lecture/slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/lab/instructor-slides.html" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Instructor Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/lab/activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week13/lab/reading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">Textbook</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 11</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w11-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture: Introduction to Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w11-lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab: DataLab Foundations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 12</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w12-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture: Research Design Framework</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w12-lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab: Design Detectives</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">Week 13</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w13-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture: Design Decisions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/chapters/w13-lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab: Research Plan Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">Self-Assessment Quizzes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/quizzes/w11-quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11 Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/quizzes/w12-quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12 Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../textbook/quizzes/w13-quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13 Quiz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-1-thinking-about-relationships" id="toc-part-1-thinking-about-relationships" class="nav-link" data-scroll-target="#part-1-thinking-about-relationships">Part 1: Thinking About Relationships</a>
+  <ul class="collapse">
+  <li><a href="#a-new-question" id="toc-a-new-question" class="nav-link" data-scroll-target="#a-new-question">A New Question</a></li>
+  <li><a href="#what-is-a-correlation" id="toc-what-is-a-correlation" class="nav-link" data-scroll-target="#what-is-a-correlation">What Is a Correlation?</a></li>
+  <li><a href="#positive-vs-negative-relationships" id="toc-positive-vs-negative-relationships" class="nav-link" data-scroll-target="#positive-vs-negative-relationships">Positive vs Negative Relationships</a></li>
+  </ul></li>
+  <li><a href="#part-2-scatterplots-seeing-relationships" id="toc-part-2-scatterplots-seeing-relationships" class="nav-link" data-scroll-target="#part-2-scatterplots-seeing-relationships">Part 2: Scatterplots — Seeing Relationships</a>
+  <ul class="collapse">
+  <li><a href="#why-visualise-first" id="toc-why-visualise-first" class="nav-link" data-scroll-target="#why-visualise-first">Why Visualise First?</a></li>
+  <li><a href="#anatomy-of-a-scatterplot" id="toc-anatomy-of-a-scatterplot" class="nav-link" data-scroll-target="#anatomy-of-a-scatterplot">Anatomy of a Scatterplot</a></li>
+  <li><a href="#reading-scatterplots" id="toc-reading-scatterplots" class="nav-link" data-scroll-target="#reading-scatterplots">Reading Scatterplots</a></li>
+  <li><a href="#example-patterns" id="toc-example-patterns" class="nav-link" data-scroll-target="#example-patterns">Example Patterns</a></li>
+  </ul></li>
+  <li><a href="#part-3-pearsons-r" id="toc-part-3-pearsons-r" class="nav-link" data-scroll-target="#part-3-pearsons-r">Part 3: Pearson’s r</a>
+  <ul class="collapse">
+  <li><a href="#the-correlation-coefficient" id="toc-the-correlation-coefficient" class="nav-link" data-scroll-target="#the-correlation-coefficient">The Correlation Coefficient</a></li>
+  <li><a href="#interpreting-r" id="toc-interpreting-r" class="nav-link" data-scroll-target="#interpreting-r">Interpreting r</a></li>
+  <li><a href="#strength-guidelines" id="toc-strength-guidelines" class="nav-link" data-scroll-target="#strength-guidelines">Strength Guidelines</a></li>
+  <li><a href="#what-r-actually-measures" id="toc-what-r-actually-measures" class="nav-link" data-scroll-target="#what-r-actually-measures">What r Actually Measures</a></li>
+  <li><a href="#the-formula-for-reference" id="toc-the-formula-for-reference" class="nav-link" data-scroll-target="#the-formula-for-reference">The Formula (For Reference)</a></li>
+  </ul></li>
+  <li><a href="#part-4-worked-example-self-rating-vs-performance" id="toc-part-4-worked-example-self-rating-vs-performance" class="nav-link" data-scroll-target="#part-4-worked-example-self-rating-vs-performance">Part 4: Worked Example — Self-Rating vs Performance</a>
+  <ul class="collapse">
+  <li><a href="#datalab-context" id="toc-datalab-context" class="nav-link" data-scroll-target="#datalab-context">DataLab Context</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#visualising-r-0.42" id="toc-visualising-r-0.42" class="nav-link" data-scroll-target="#visualising-r-0.42">Visualising r = 0.42</a></li>
+  <li><a href="#statistical-significance-of-r" id="toc-statistical-significance-of-r" class="nav-link" data-scroll-target="#statistical-significance-of-r">Statistical Significance of r</a></li>
+  <li><a href="#reporting-correlations-apa-format" id="toc-reporting-correlations-apa-format" class="nav-link" data-scroll-target="#reporting-correlations-apa-format">Reporting Correlations (APA Format)</a></li>
+  </ul></li>
+  <li><a href="#part-5-spearmans-rho-ρ" id="toc-part-5-spearmans-rho-ρ" class="nav-link" data-scroll-target="#part-5-spearmans-rho-ρ">Part 5: Spearman’s Rho (ρ)</a>
+  <ul class="collapse">
+  <li><a href="#when-to-use-spearman" id="toc-when-to-use-spearman" class="nav-link" data-scroll-target="#when-to-use-spearman">When to Use Spearman</a></li>
+  <li><a href="#ranked-data" id="toc-ranked-data" class="nav-link" data-scroll-target="#ranked-data">Ranked Data</a></li>
+  <li><a href="#when-to-choose-which" id="toc-when-to-choose-which" class="nav-link" data-scroll-target="#when-to-choose-which">When to Choose Which</a></li>
+  <li><a href="#datalab-example" id="toc-datalab-example" class="nav-link" data-scroll-target="#datalab-example">DataLab Example</a></li>
+  <li><a href="#interpretation-is-the-same" id="toc-interpretation-is-the-same" class="nav-link" data-scroll-target="#interpretation-is-the-same">Interpretation Is the Same</a></li>
+  </ul></li>
+  <li><a href="#part-6-understanding-what-correlation-tells-you" id="toc-part-6-understanding-what-correlation-tells-you" class="nav-link" data-scroll-target="#part-6-understanding-what-correlation-tells-you">Part 6: Understanding What Correlation Tells You</a>
+  <ul class="collapse">
+  <li><a href="#what-r-squared-tells-you" id="toc-what-r-squared-tells-you" class="nav-link" data-scroll-target="#what-r-squared-tells-you">What r Squared Tells You</a></li>
+  <li><a href="#the-importance-of-r-squared" id="toc-the-importance-of-r-squared" class="nav-link" data-scroll-target="#the-importance-of-r-squared">The importance of R-squared</a></li>
+  </ul></li>
+  <li><a href="#part-7-correlation-does-not-mean-causation" id="toc-part-7-correlation-does-not-mean-causation" class="nav-link" data-scroll-target="#part-7-correlation-does-not-mean-causation">Part 7: Correlation Does NOT Mean Causation</a>
+  <ul class="collapse">
+  <li><a href="#the-most-important-lesson" id="toc-the-most-important-lesson" class="nav-link" data-scroll-target="#the-most-important-lesson">The Most Important Lesson</a></li>
+  <li><a href="#why-not" id="toc-why-not" class="nav-link" data-scroll-target="#why-not">Why Not?</a></li>
+  <li><a href="#classic-examples" id="toc-classic-examples" class="nav-link" data-scroll-target="#classic-examples">Classic Examples</a></li>
+  <li><a href="#the-datalab-example" id="toc-the-datalab-example" class="nav-link" data-scroll-target="#the-datalab-example">The DataLab Example</a></li>
+  <li><a href="#when-can-we-infer-causation" id="toc-when-can-we-infer-causation" class="nav-link" data-scroll-target="#when-can-we-infer-causation">When Can We Infer Causation?</a></li>
+  </ul></li>
+  <li><a href="#part-8-common-mistakes-with-correlation" id="toc-part-8-common-mistakes-with-correlation" class="nav-link" data-scroll-target="#part-8-common-mistakes-with-correlation">Part 8: Common Mistakes with Correlation</a>
+  <ul class="collapse">
+  <li><a href="#mistake-1-assuming-linearity" id="toc-mistake-1-assuming-linearity" class="nav-link" data-scroll-target="#mistake-1-assuming-linearity">Mistake 1: Assuming Linearity</a></li>
+  <li><a href="#mistake-2-restricted-range" id="toc-mistake-2-restricted-range" class="nav-link" data-scroll-target="#mistake-2-restricted-range">Mistake 2: Restricted Range</a></li>
+  <li><a href="#mistake-3-outliers" id="toc-mistake-3-outliers" class="nav-link" data-scroll-target="#mistake-3-outliers">Mistake 3: Outliers</a></li>
+  <li><a href="#mistake-4-confusing-significance-with-strength" id="toc-mistake-4-confusing-significance-with-strength" class="nav-link" data-scroll-target="#mistake-4-confusing-significance-with-strength">Mistake 4: Confusing Significance with Strength</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#correlation-strength-quick-reference" id="toc-correlation-strength-quick-reference" class="nav-link" data-scroll-target="#correlation-strength-quick-reference">Correlation Strength Quick Reference</a></li>
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check Your Understanding</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/edit/main/week15/lecture/reading.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Chapter 9: Correlation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Measuring Relationships Between Variables</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Before You Begin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter introduces correlation — a fundamental tool for understanding relationships between variables. Unlike t-tests, which compare groups, correlation asks whether two continuous variables tend to move together.</p>
+</div>
+</div>
+<p>This chapter covers:</p>
+<ul>
+<li>Relationships between variables</li>
+<li>Scatterplots and visual patterns</li>
+<li>Pearson’s r (for linear relationships)</li>
+<li>Spearman’s rho (for ranked data)</li>
+<li>Interpreting correlation strength</li>
+<li>Why correlation does not imply causation</li>
+</ul>
+<p>All concepts are illustrated using DataLab examples from your class.</p>
+<hr>
+</section>
+<section id="part-1-thinking-about-relationships" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-thinking-about-relationships">Part 1: Thinking About Relationships</h2>
+<section id="a-new-question" class="level3">
+<h3 class="anchored" data-anchor-id="a-new-question">A New Question</h3>
+<p>So far, we’ve focused on comparing groups:</p>
+<ul>
+<li>Do concrete words lead to better memory than abstract words?</li>
+<li>Does mood improve after the DataLab session?</li>
+</ul>
+<p>But many research questions ask about <strong>relationships</strong>:</p>
+<ul>
+<li>Do people who sleep more perform better on cognitive tasks?</li>
+<li>Is self-confidence related to actual performance?</li>
+<li>Do extraverts report higher mood?</li>
+</ul>
+<p>These questions aren’t about group differences. They’re about whether two variables <strong>co-vary</strong> — when one goes up, does the other tend to go up (or down)?</p>
+</section>
+<section id="what-is-a-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-correlation">What Is a Correlation?</h3>
+<div style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+<p><strong>Correlation</strong>: A statistical measure of the strength and direction of the relationship between two variables.</p>
+</div>
+<p>Correlation answers: When one variable changes, does the other variable tend to change in a predictable way?</p>
+</section>
+<section id="positive-vs-negative-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="positive-vs-negative-relationships">Positive vs Negative Relationships</h3>
+<p><strong>Positive correlation</strong>: As one variable increases, the other tends to increase.</p>
+<ul>
+<li>Sleep hours ↑ → Performance ↑</li>
+<li>Study time ↑ → Exam scores ↑</li>
+<li>Age ↑ → Vocabulary ↑</li>
+</ul>
+<p><strong>Negative correlation</strong>: As one variable increases, the other tends to decrease.</p>
+<ul>
+<li>Stress ↑ → Sleep quality ↓</li>
+<li>TV time ↑ → Exercise ↓</li>
+<li>Anxiety ↑ → Performance ↓</li>
+</ul>
+<p><strong>No correlation</strong>: No predictable relationship between variables.</p>
+<hr>
+</section>
+</section>
+<section id="part-2-scatterplots-seeing-relationships" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-scatterplots-seeing-relationships">Part 2: Scatterplots — Seeing Relationships</h2>
+<section id="why-visualise-first" class="level3">
+<h3 class="anchored" data-anchor-id="why-visualise-first">Why Visualise First?</h3>
+<p>Before calculating any numbers, you should <strong>always</strong> plot your data. A scatterplot reveals:</p>
+<ul>
+<li>The direction of the relationship (positive, negative, or none)</li>
+<li>The strength of the relationship (tight cluster vs spread out)</li>
+<li>The shape (linear vs curved)</li>
+<li>Any unusual patterns or outliers</li>
+</ul>
+</section>
+<section id="anatomy-of-a-scatterplot" class="level3">
+<h3 class="anchored" data-anchor-id="anatomy-of-a-scatterplot">Anatomy of a Scatterplot</h3>
+<p>Each point represents one participant:</p>
+<ul>
+<li><strong>X-axis</strong>: One variable (often the predictor or independent variable)</li>
+<li><strong>Y-axis</strong>: The other variable (often the outcome or dependent variable)</li>
+</ul>
+<p><strong>DataLab Example</strong>: Self-rating vs actual throwing performance</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Participant</th>
+<th>Self-rating (1-10)</th>
+<th>Actual accuracy (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>7</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>4</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>8</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5</td>
+<td>55</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>6</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>On the scatterplot:</p>
+<ul>
+<li>X-axis: Self-rating</li>
+<li>Y-axis: Actual accuracy</li>
+<li>Each dot is one person</li>
+</ul>
+</section>
+<section id="reading-scatterplots" class="level3">
+<h3 class="anchored" data-anchor-id="reading-scatterplots">Reading Scatterplots</h3>
+<div style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+<p><strong>Pattern Guide</strong>:</p>
+<ul>
+<li><strong>Upward slope</strong> = positive relationship</li>
+<li><strong>Downward slope</strong> = negative relationship</li>
+<li><strong>No slope</strong> = no relationship</li>
+<li><strong>Tight cluster</strong> = strong relationship</li>
+<li><strong>Wide scatter</strong> = weak relationship</li>
+</ul>
+</div>
+</section>
+<section id="example-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="example-patterns">Example Patterns</h3>
+<pre><code>Strong Positive        Weak Positive         No Relationship
+    •                      •  •                  •   •
+   • •                   •    •  •            •     •
+  •  ••                 •  •   •             •  •    •
+ •    •                  •  •                  • •  •
+•                       •                    •    •</code></pre>
+<hr>
+</section>
+</section>
+<section id="part-3-pearsons-r" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-pearsons-r">Part 3: Pearson’s r</h2>
+<section id="the-correlation-coefficient" class="level3">
+<h3 class="anchored" data-anchor-id="the-correlation-coefficient">The Correlation Coefficient</h3>
+<p>Pearson’s r is the most common measure of correlation. It quantifies what you see in a scatterplot as a single number.</p>
+<div style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+<p><strong>Pearson’s r</strong>: A measure of the <strong>linear</strong> relationship between two continuous variables, ranging from -1 to +1.</p>
+</div>
+</section>
+<section id="interpreting-r" class="level3">
+<h3 class="anchored" data-anchor-id="interpreting-r">Interpreting r</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Value of r</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>r = +1</td>
+<td>Perfect positive correlation</td>
+</tr>
+<tr class="even">
+<td>r = 0</td>
+<td>No linear correlation</td>
+</tr>
+<tr class="odd">
+<td>r = -1</td>
+<td>Perfect negative correlation</td>
+</tr>
+</tbody>
+</table>
+<p>The sign tells you the direction; the magnitude tells you the strength.</p>
+</section>
+<section id="strength-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="strength-guidelines">Strength Guidelines</h3>
+<p>Cohen (1988) suggested these benchmarks:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10</td>
+<td>Small</td>
+</tr>
+<tr class="even">
+<td>.30</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td>.50</td>
+<td>Large</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Context Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are rough guidelines. In some fields (e.g., personality psychology), r = .30 is typical. In others (e.g., physics), r = .90 might be expected.</p>
+</div>
+</div>
+</section>
+<section id="what-r-actually-measures" class="level3">
+<h3 class="anchored" data-anchor-id="what-r-actually-measures">What r Actually Measures</h3>
+<p>Pearson’s r measures how well the data points cluster around a straight line.</p>
+<ul>
+<li><strong>r = 1</strong>: All points fall exactly on an upward-sloping line</li>
+<li><strong>r = 0</strong>: Points are scattered with no linear pattern</li>
+<li><strong>r = -1</strong>: All points fall exactly on a downward-sloping line</li>
+</ul>
+<p>In practice, you’ll rarely see r = 1 or r = -1 in psychology. Real data is messy!</p>
+</section>
+<section id="the-formula-for-reference" class="level3">
+<h3 class="anchored" data-anchor-id="the-formula-for-reference">The Formula (For Reference)</h3>
+<p><span class="math display">\[r = \frac{\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sqrt{\sum{(x_i - \bar{x})^2} \sum{(y_i - \bar{y})^2}}}\]</span></p>
+<p>You won’t need to calculate this by hand — software does it instantly. But the key idea is:</p>
+<ul>
+<li>The numerator measures how much x and y <strong>co-vary</strong> (move together)</li>
+<li>The denominator standardises this to fall between -1 and +1</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-4-worked-example-self-rating-vs-performance" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-worked-example-self-rating-vs-performance">Part 4: Worked Example — Self-Rating vs Performance</h2>
+<section id="datalab-context" class="level3">
+<h3 class="anchored" data-anchor-id="datalab-context">DataLab Context</h3>
+<p>In the Frontal Lob task, participants rated how good they thought they’d be at throwing (1-10 scale), then we measured their actual accuracy.</p>
+<p><strong>Research question</strong>: Do people who rate themselves higher actually perform better?</p>
+</section>
+<section id="the-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-data">The Data</h3>
+<p>Suppose we have these results from 20 participants:</p>
+<ul>
+<li>Mean self-rating: 5.8</li>
+<li>Mean accuracy: 52%</li>
+<li>Pearson’s r = 0.42</li>
+</ul>
+</section>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>r = 0.42 suggests a <strong>medium positive correlation</strong> between self-rating and actual performance.</p>
+<p>In words: People who rated themselves as better throwers tended to be somewhat better — but the relationship isn’t perfect. There’s substantial individual variation.</p>
+</section>
+<section id="visualising-r-0.42" class="level3">
+<h3 class="anchored" data-anchor-id="visualising-r-0.42">Visualising r = 0.42</h3>
+<pre><code>Accuracy (%)
+    |
+70  |        •     •
+    |      •   •  •
+60  |    •  •   •
+    |   • •    •
+50  |  •  •
+    | •
+40  |•
+    +------------------
+       4    6    8    10
+         Self-rating</code></pre>
+<p>The upward trend is visible, but points don’t fall tightly on a line.</p>
+</section>
+<section id="statistical-significance-of-r" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-significance-of-r">Statistical Significance of r</h3>
+<p>We can test whether r is significantly different from zero (i.e., whether there’s evidence of a relationship in the population).</p>
+<p>With n = 20 and r = 0.42:</p>
+<ul>
+<li>t-statistic: 1.95</li>
+<li>df = 18</li>
+<li>p = .067</li>
+</ul>
+<p>Since p &gt; .05, we would say: “The correlation was not statistically significant, r(18) = .42, p = .067.”</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sample Size Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With larger samples, the same r would be significant. Small samples lack the power to detect moderate correlations.</p>
+</div>
+</div>
+</section>
+<section id="reporting-correlations-apa-format" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-correlations-apa-format">Reporting Correlations (APA Format)</h3>
+<blockquote class="blockquote">
+<p>There was a positive correlation between self-rated ability and actual throwing accuracy, although this did not reach statistical significance, <em>r</em>(18) = .42, <em>p</em> = .067.</p>
+</blockquote>
+<p>Or, if significant:</p>
+<blockquote class="blockquote">
+<p>Self-rated ability was significantly positively correlated with actual throwing accuracy, <em>r</em>(58) = .42, <em>p</em> = .001.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="part-5-spearmans-rho-ρ" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-spearmans-rho-ρ">Part 5: Spearman’s Rho (ρ)</h2>
+<section id="when-to-use-spearman" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-use-spearman">When to Use Spearman</h3>
+<p>Pearson’s r assumes:</p>
+<ol type="1">
+<li>Both variables are continuous</li>
+<li>The relationship is linear</li>
+</ol>
+<p>When these assumptions are violated, use <strong>Spearman’s rho</strong> (ρ or rs).</p>
+<div style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+<p><strong>Spearman’s rho</strong>: A correlation based on <strong>ranked</strong> data. It measures monotonic relationships (consistently increasing or decreasing, not necessarily linear).</p>
+</div>
+</section>
+<section id="ranked-data" class="level3">
+<h3 class="anchored" data-anchor-id="ranked-data">Ranked Data</h3>
+<p>Spearman works by:</p>
+<ol type="1">
+<li>Converting each variable to ranks (1st, 2nd, 3rd, etc.)</li>
+<li>Calculating the correlation between the ranks</li>
+</ol>
+<p>This makes it robust to outliers and non-linear patterns.</p>
+</section>
+<section id="when-to-choose-which" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-choose-which">When to Choose Which</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 68%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Both variables are continuous and normally distributed</td>
+<td>Pearson’s r</td>
+</tr>
+<tr class="even">
+<td>One or both variables are ordinal (e.g., Likert scales)</td>
+<td>Spearman’s ρ</td>
+</tr>
+<tr class="odd">
+<td>Relationship appears non-linear but monotonic</td>
+<td>Spearman’s ρ</td>
+</tr>
+<tr class="even">
+<td>Data has outliers</td>
+<td>Spearman’s ρ</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="datalab-example" class="level3">
+<h3 class="anchored" data-anchor-id="datalab-example">DataLab Example</h3>
+<p>Rating scales (1-10) are technically ordinal — we can’t be sure the difference between 3 and 4 equals the difference between 7 and 8. For the mood ratings in DataLab, Spearman’s rho might be more appropriate than Pearson’s r.</p>
+</section>
+<section id="interpretation-is-the-same" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation-is-the-same">Interpretation Is the Same</h3>
+<p>Spearman’s ρ is interpreted identically to Pearson’s r:</p>
+<ul>
+<li>Ranges from -1 to +1</li>
+<li>Same strength guidelines (.10 small, .30 medium, .50 large)</li>
+<li>Same APA reporting format</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-6-understanding-what-correlation-tells-you" class="level2">
+<h2 class="anchored" data-anchor-id="part-6-understanding-what-correlation-tells-you">Part 6: Understanding What Correlation Tells You</h2>
+<section id="what-r-squared-tells-you" class="level3">
+<h3 class="anchored" data-anchor-id="what-r-squared-tells-you">What r Squared Tells You</h3>
+<p>A useful way to understand correlation strength is <strong>r²</strong> (r squared).</p>
+<div style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+<p><strong>r²</strong> (coefficient of determination): The proportion of variance in one variable that is “explained by” or “shared with” the other variable.</p>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>r</th>
+<th>r²</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10</td>
+<td>.01</td>
+<td>1% shared variance</td>
+</tr>
+<tr class="even">
+<td>.30</td>
+<td>.09</td>
+<td>9% shared variance</td>
+</tr>
+<tr class="odd">
+<td>.50</td>
+<td>.25</td>
+<td>25% shared variance</td>
+</tr>
+<tr class="even">
+<td>.70</td>
+<td>.49</td>
+<td>49% shared variance</td>
+</tr>
+</tbody>
+</table>
+<p>Even a “medium” correlation of r = .30 means the two variables share only 9% of their variance. That leaves 91% unexplained!</p>
+</section>
+<section id="the-importance-of-r-squared" class="level3">
+<h3 class="anchored" data-anchor-id="the-importance-of-r-squared">The importance of R-squared</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Reality Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A correlation of r = .42 sounds reasonable. But r² = .18 means self-rating explains only 18% of the variance in performance. The other 82% is due to other factors — practice, natural ability, luck, measurement error, etc.</p>
+</div>
+</div>
+<p>This is why psychology is hard. Human behaviour is influenced by many factors, and any single variable rarely explains more than a small portion.</p>
+<hr>
+</section>
+</section>
+<section id="part-7-correlation-does-not-mean-causation" class="level2">
+<h2 class="anchored" data-anchor-id="part-7-correlation-does-not-mean-causation">Part 7: Correlation Does NOT Mean Causation</h2>
+<section id="the-most-important-lesson" class="level3">
+<h3 class="anchored" data-anchor-id="the-most-important-lesson">The Most Important Lesson</h3>
+<div style="background-color: #FFF3CD; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #FFC107;">
+<p><strong>CRITICAL POINT</strong>: A correlation between X and Y does <strong>NOT</strong> mean X causes Y. This is possibly the most important thing you’ll learn in research methods.</p>
+</div>
+</section>
+<section id="why-not" class="level3">
+<h3 class="anchored" data-anchor-id="why-not">Why Not?</h3>
+<p>Three possible explanations for any correlation:</p>
+<ol type="1">
+<li><strong>X causes Y</strong>: More sleep → better performance</li>
+<li><strong>Y causes X</strong>: Better performance → more sleep (less stress)</li>
+<li><strong>Z causes both</strong>: Good health → more sleep AND better performance</li>
+</ol>
+<p>Without experimental manipulation, we cannot determine which explanation is correct.</p>
+</section>
+<section id="classic-examples" class="level3">
+<h3 class="anchored" data-anchor-id="classic-examples">Classic Examples</h3>
+<p><strong>Ice cream sales and drowning deaths are correlated.</strong></p>
+<p>Does ice cream cause drowning? No! A third variable (hot weather) causes both:</p>
+<ul>
+<li>Hot weather → more ice cream sales</li>
+<li>Hot weather → more swimming → more drowning</li>
+</ul>
+<p><strong>Countries with more Nobel Prize winners consume more chocolate.</strong></p>
+<p>Does chocolate make you smarter? More likely: - Wealthier countries → more chocolate consumption - Wealthier countries → better education → more Nobel Prizes</p>
+</section>
+<section id="the-datalab-example" class="level3">
+<h3 class="anchored" data-anchor-id="the-datalab-example">The DataLab Example</h3>
+<p>Self-rating and throwing performance are correlated (r = .42).</p>
+<p>Does thinking you’re good make you perform better? Maybe — but there are alternatives:</p>
+<ul>
+<li>Past experience → higher self-rating AND better performance</li>
+<li>Natural ability → higher self-rating AND better performance</li>
+<li>Overconfidence → high self-rating but NOT better performance</li>
+</ul>
+<p>We can’t determine causation from correlation alone.</p>
+</section>
+<section id="when-can-we-infer-causation" class="level3">
+<h3 class="anchored" data-anchor-id="when-can-we-infer-causation">When Can We Infer Causation?</h3>
+<p>Only with <strong>experimental manipulation</strong>:</p>
+<ol type="1">
+<li>Randomly assign participants to conditions</li>
+<li>Manipulate one variable</li>
+<li>Measure the effect on another variable</li>
+</ol>
+<p>Because random assignment controls for confounding variables, differences between groups can be attributed to the manipulation.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Memory Experiment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The memory study (abstract vs concrete words) WAS an experiment. Random assignment to conditions allows causal inference: word type <strong>caused</strong> the difference in recall.</p>
+<p>The self-rating vs performance study was correlational — no causal inference possible.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="part-8-common-mistakes-with-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="part-8-common-mistakes-with-correlation">Part 8: Common Mistakes with Correlation</h2>
+<section id="mistake-1-assuming-linearity" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-1-assuming-linearity">Mistake 1: Assuming Linearity</h3>
+<p>Pearson’s r only measures <strong>linear</strong> relationships. Data can have a perfect curvilinear relationship with r = 0.</p>
+<pre><code>    Y |      •
+      |    •   •
+      |  •       •
+      | •         •
+      |•           •
+      +-------------
+              X</code></pre>
+<p>This U-shaped pattern has no <em>linear</em> correlation, but there’s clearly a relationship!</p>
+<p><strong>Solution</strong>: Always plot your data first.</p>
+</section>
+<section id="mistake-2-restricted-range" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-2-restricted-range">Mistake 2: Restricted Range</h3>
+<p>If you only measure people who are similar on one variable, correlations appear weaker than they really are.</p>
+<p><strong>Example</strong>: If you only study university students (high ability), you might find no correlation between IQ and grades — but in the general population, there is one.</p>
+</section>
+<section id="mistake-3-outliers" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-3-outliers">Mistake 3: Outliers</h3>
+<p>A single extreme point can dramatically inflate or deflate r.</p>
+<pre><code>Without outlier: r = .20      With outlier: r = .75
+
+    •   •                         •   •           •
+  •   •                         •   •
+    • •                           • •
+  •   •                         •   •</code></pre>
+<p><strong>Solution</strong>: Check for outliers; consider Spearman’s ρ.</p>
+</section>
+<section id="mistake-4-confusing-significance-with-strength" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-4-confusing-significance-with-strength">Mistake 4: Confusing Significance with Strength</h3>
+<p>With large samples, even tiny correlations become “significant”:</p>
+<ul>
+<li>n = 1000, r = .08 → p &lt; .05 (significant!)</li>
+<li>But r² = .006 → explains 0.6% of variance (meaningless!)</li>
+</ul>
+<p><span style="background-color: #FFF3CD; font-weight: bold">Always report and interpret the effect size (r), not just p.</span></p>
+<hr>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key Point</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Correlation</strong></td>
+<td>Measures relationship between two variables</td>
+</tr>
+<tr class="even">
+<td><strong>Scatterplot</strong></td>
+<td>Visual display of relationship</td>
+</tr>
+<tr class="odd">
+<td><strong>Pearson’s r</strong></td>
+<td>Correlation for linear, continuous data</td>
+</tr>
+<tr class="even">
+<td><strong>Spearman’s ρ</strong></td>
+<td>Correlation for ranked/ordinal data</td>
+</tr>
+<tr class="odd">
+<td><strong>r = +1</strong></td>
+<td>Perfect positive correlation</td>
+</tr>
+<tr class="even">
+<td><strong>r = 0</strong></td>
+<td>No linear correlation</td>
+</tr>
+<tr class="odd">
+<td><strong>r = -1</strong></td>
+<td>Perfect negative correlation</td>
+</tr>
+<tr class="even">
+<td><strong>r²</strong></td>
+<td>Proportion of shared variance</td>
+</tr>
+<tr class="odd">
+<td><strong>Causation</strong></td>
+<td>Cannot be inferred from correlation alone</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="correlation-strength-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-strength-quick-reference">Correlation Strength Quick Reference</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>r</th>
+<th></th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10</td>
+<td>Small</td>
+<td>.01</td>
+<td>1%</td>
+</tr>
+<tr class="even">
+<td>.20</td>
+<td>Small-medium</td>
+<td>.04</td>
+<td>4%</td>
+</tr>
+<tr class="odd">
+<td>.30</td>
+<td>Medium</td>
+<td>.09</td>
+<td>9%</td>
+</tr>
+<tr class="even">
+<td>.40</td>
+<td>Medium-large</td>
+<td>.16</td>
+<td>16%</td>
+</tr>
+<tr class="odd">
+<td>.50</td>
+<td>Large</td>
+<td>.25</td>
+<td>25%</td>
+</tr>
+<tr class="even">
+<td>.70</td>
+<td>Very large</td>
+<td>.49</td>
+<td>49%</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="check-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="check-your-understanding">Check Your Understanding</h2>
+<p>Before the lecture, make sure you can answer these questions:</p>
+<ol type="1">
+<li>What’s the difference between a positive and negative correlation?</li>
+<li>What does r = .40 tell you about the relationship between two variables?</li>
+<li>When would you use Spearman’s ρ instead of Pearson’s r?</li>
+<li>If r = .50, what is r² and what does it mean?</li>
+<li>Why doesn’t correlation prove causation? Give an example.</li>
+<li>Why should you always plot your data before calculating r?</li>
+<li>In the DataLab, self-rating correlated with performance. What alternative explanations exist besides “confidence causes better performance”?</li>
+</ol>
+<hr>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<p>For additional depth:</p>
+<ul>
+<li>Coolican, H. (2017). Chapter 16: Correlation. <a href="https://www.vlebooks.com/Product/Index/1994423?page=0&amp;startBookmarkId=-1">VLeBooks</a></li>
+<li>Vigen, T. (2015). <em>Spurious Correlations</em>. <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a> — Entertaining examples of correlation without causation.</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/littlemonkeylab\.github\.io\/PS50008A_2526\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 15 Lecture Reading"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Correlation"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w15-lecture.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>PS50008A Research Methods &amp; Experimental Design | Goldsmiths, University of London</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/edit/main/week15/lecture/reading.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Term 2 Spring 2026</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

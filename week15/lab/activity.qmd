@@ -20,8 +20,8 @@ library(tidyverse)
 library(knitr)
 
 # Load DataLab data
-memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
-merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
+memory <- read_csv("memory_clean.csv", show_col_types = FALSE)
+merged <- read_csv("foundations_merged.csv", show_col_types = FALSE)
 
 navy <- "#275882"
 orange <- "#EA8439"
@@ -50,17 +50,17 @@ Before calculating correlations, we should always visualise the relationship wit
 
 ```{r}
 #| label: frontallob-data
-frontallob <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/task5_frontallob_clean.csv", show_col_types = FALSE)
+frontallob <- read_csv("task5_frontallob_clean.csv", show_col_types = FALSE)
 
 frontallob_clean <- frontallob |>
-  filter(!is.na(fl_rating_1) & !is.na(fl_hits_1))
+  filter(!is.na(self_rating) & !is.na(dom_success))
 ```
 
 ```{r}
 #| label: scatterplot-example
 #| fig-height: 5
 #| fig-align: center
-ggplot(frontallob_clean, aes(x = fl_rating_1, y = fl_hits_1)) +
+ggplot(frontallob_clean, aes(x = self_rating, y = dom_success)) +
   geom_point(size = 3, colour = navy, alpha = 0.7) +
   geom_smooth(method = "lm", se = TRUE, colour = orange, fill = orange, alpha = 0.2) +
   labs(x = "Self-Rating (1-10)",

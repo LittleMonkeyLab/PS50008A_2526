@@ -1,0 +1,77 @@
+# DRAFT - Rename to publish.yml when ready to enable
+#
+# This workflow renders the Quarto site and deploys to GitHub Pages
+# automatically whenever you push to main.
+#
+# BEFORE ENABLING:
+# 1. Go to repo Settings > Pages
+# 2. Under "Build and deployment" > Source, select "GitHub Actions"
+# 3. Rename this file to publish.yml
+# 4. Push to main
+#
+# OPTIONAL CLEANUP (after confirming it works):
+# - Add docs/ to .gitignore
+# - Delete the docs/ folder from the repo
+
+name: Quarto Publish
+
+on:
+  workflow_dispatch:  # Manual trigger from GitHub UI
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'  # Don't rebuild if only docs/ changes
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4'
+          use-public-rspm: true
+
+      - name: Setup R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::knitr
+            any::rmarkdown
+            any::tidyverse
+            any::webexercises
+            any::scales
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        # Uncomment to pin Quarto version:
+        # with:
+        #   version: '1.5.57'
+
+      - name: Render site
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs  # Must match output-dir in _quarto.yml
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

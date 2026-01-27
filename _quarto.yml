@@ -1,5 +1,7 @@
 project:
   type: website
+  resources: 
+    - "files/**"
   output-dir: docs
   render:
   - index.qmd
@@ -13,8 +15,8 @@ project:
   - week11/
   - week12/
   - week13/
-  # - week14/
-  # - week15/
+  - week14/
+  - week15/
   # - week16/
   # - week17/
   # - week18/
@@ -27,10 +29,10 @@ project:
   - textbook/chapters/w12-lab.qmd
   - textbook/chapters/w13-lecture.qmd
   - textbook/chapters/w13-lab.qmd
-  # - textbook/chapters/w14-lecture.qmd
-  # - textbook/chapters/w14-lab.qmd
-  # - textbook/chapters/w15-lecture.qmd
-  # - textbook/chapters/w15-lab.qmd
+  - textbook/chapters/w14-lecture.qmd
+  - textbook/chapters/w14-lab.qmd
+  - textbook/chapters/w15-lecture.qmd
+  - textbook/chapters/w15-lab.qmd
   # - textbook/chapters/w16-lecture.qmd
   # - textbook/chapters/w16-lab.qmd
   # - textbook/chapters/w17-lecture.qmd
@@ -44,8 +46,8 @@ project:
   - textbook/quizzes/w11-quiz.qmd
   - textbook/quizzes/w12-quiz.qmd
   - textbook/quizzes/w13-quiz.qmd
-  # - textbook/quizzes/w14-quiz.qmd
-  # - textbook/quizzes/w15-quiz.qmd
+  - textbook/quizzes/w14-quiz.qmd
+  - textbook/quizzes/w15-quiz.qmd
   # - textbook/quizzes/w16-quiz.qmd
   # - textbook/quizzes/w17-quiz.qmd
   # - textbook/quizzes/w18-quiz.qmd

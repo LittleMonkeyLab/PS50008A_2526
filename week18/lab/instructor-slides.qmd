@@ -11,6 +11,7 @@ format:
     transition: fade
     width: 1050
     height: 700
+    embed-resources: true
     center: false
     center-title-slide: true
 ---

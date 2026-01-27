@@ -316,7 +316,7 @@ A useful way to understand correlation strength is **r²** (r squared).
 
 Even a "medium" correlation of r = .30 means the two variables share only 9% of their variance. That leaves 91% unexplained!
 
-### The Importance of r²
+### The importance of R-squared
 
 ::: {.callout-important}
 ## Reality Check

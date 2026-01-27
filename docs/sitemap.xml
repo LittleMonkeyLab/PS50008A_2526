@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/quizzes/w15-quiz.html</loc>
+    <lastmod>2026-01-19T21:11:09.922Z</lastmod>
+  </url>
+  <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/quizzes/w13-quiz.html</loc>
     <lastmod>2026-01-19T21:14:08.870Z</lastmod>
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/quizzes/w11-quiz.html</loc>
     <lastmod>2026-01-19T15:54:57.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w15-lecture.html</loc>
+    <lastmod>2026-01-27T19:06:25.265Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w14-lecture.html</loc>
+    <lastmod>2026-01-20T18:32:15.507Z</lastmod>
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w13-lecture.html</loc>
@@ -19,6 +31,38 @@
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w11-lecture.html</loc>
     <lastmod>2026-01-19T11:38:31.184Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/index.html</loc>
+    <lastmod>2026-01-19T21:07:19.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lab/reading.html</loc>
+    <lastmod>2026-01-19T21:07:59.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lab/self-assessment.html</loc>
+    <lastmod>2026-01-21T19:45:48.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lecture/reading.html</loc>
+    <lastmod>2026-01-19T21:08:00.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/index.html</loc>
+    <lastmod>2026-01-20T18:26:41.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lab/reading.html</loc>
+    <lastmod>2026-01-19T21:07:59.663Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lab/self-assessment.html</loc>
+    <lastmod>2026-01-21T19:44:33.247Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lecture/reading.html</loc>
+    <lastmod>2026-01-19T21:08:00.524Z</lastmod>
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/week13/index.html</loc>
@@ -366,7 +410,7 @@
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/week13/lecture/slides.html</loc>
-    <lastmod>2026-01-21T20:18:14.610Z</lastmod>
+    <lastmod>2026-01-27T18:06:48.906Z</lastmod>
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/week13/lecture/video.html</loc>
@@ -379,6 +423,38 @@
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/week13/lab/activity.html</loc>
     <lastmod>2026-01-21T20:30:08.688Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lecture/slides.html</loc>
+    <lastmod>2026-01-27T18:35:55.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lecture/video.html</loc>
+    <lastmod>2026-01-03T14:49:27.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lab/instructor-slides.html</loc>
+    <lastmod>2026-01-27T18:35:58.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week14/lab/activity.html</loc>
+    <lastmod>2026-01-19T21:09:28.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lecture/slides.html</loc>
+    <lastmod>2026-01-27T18:36:16.331Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lecture/video.html</loc>
+    <lastmod>2026-01-03T14:49:27.408Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lab/instructor-slides.html</loc>
+    <lastmod>2026-01-27T18:36:10.973Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/week15/lab/activity.html</loc>
+    <lastmod>2026-01-27T19:01:23.801Z</lastmod>
   </url>
   <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/index.html</loc>
@@ -397,7 +473,19 @@
     <lastmod>2026-01-21T20:39:23.132Z</lastmod>
   </url>
   <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w14-lab.html</loc>
+    <lastmod>2026-01-19T21:09:15.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/chapters/w15-lab.html</loc>
+    <lastmod>2026-01-19T21:10:06.823Z</lastmod>
+  </url>
+  <url>
     <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/quizzes/w12-quiz.html</loc>
     <lastmod>2026-01-19T15:55:46.386Z</lastmod>
+  </url>
+  <url>
+    <loc>https://littlemonkeylab.github.io/PS50008A_2526/textbook/quizzes/w14-quiz.html</loc>
+    <lastmod>2026-01-19T21:14:08.929Z</lastmod>
   </url>
 </urlset>

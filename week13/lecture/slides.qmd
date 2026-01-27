@@ -719,7 +719,7 @@ You're showing you know WHAT to measure and HOW to organise it — not making up
 :::
 
 ::: {.fragment}
-Start early. Get feedback from TAs and tutors.
+Start early. Get feedback from your lab instructor.
 :::
 
 ## Key Takeaways

@@ -10,6 +10,7 @@ format:
     progress: true
     transition: fade
     width: 1050
+    embed-resources: true
     height: 700
     center: false
     center-title-slide: true
