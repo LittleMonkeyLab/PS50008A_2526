@@ -18,210 +18,516 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## t-Tests in R
+## Today's Lab
 
----
-
-## Today's Focus
-
-::: {.objectives-box}
-**Putting NHST into practice.** Today you will:
-
-- Run independent samples t-tests in R
-- Run paired samples t-tests in R
-- Interpret t-test output correctly
-- Report results in APA format
+::: {.incremental}
+- Use an interactive app to explore t-tests
+- Understand the difference between **independent** and **paired** t-tests
+- See how means, SDs, and sample size affect your results
+- Learn why we report **both** p-values and effect sizes
 :::
 
 ---
 
-## Lab Structure (~90 min)
+## The App
 
-| Time | Activity |
-|------|----------|
-| 10:00-10:10 | These slides + setup |
-| 10:10-10:35 | Part 1: Independent samples t-test |
-| 10:35-11:00 | Part 2: Paired samples t-test |
-| 11:00-11:30 | Part 3: APA reporting |
-| 11:30-11:50 | Part 4: Putting it all together |
-| 11:50-12:00 | Wrap-up + self-assessment |
+::: {.callout-tip}
+## Launch the t-test Explorer
 
----
+Open the app now: [Choose your own t-test adventure!](https://oybc0p-gordon-wright.shinyapps.io/ttest_adventure/){target="_blank"}
 
-## Open the Activity
+Keep it open throughout the lab!
+:::
 
-Navigate to: **Week 14 > Lab > Activity**
+You'll see:
 
-Make sure WebR loads before proceeding.
+- **Left panel**: Controls for your experiment
+- **Right panel**: Data, distribution, and results
 
 ---
 
-# Part 1: Independent Samples t-Test {background-color="#275882"}
+# Part 1: Two Types of Design {background-color="#275882"}
 
-## Between-Subjects Comparison (~25 min)
+## Which t-test do you need?
 
 ---
 
-## When to Use
+## The Key Question
 
-::: {.definition-box}
-**Independent samples t-test** when:
+::: {.callout-important}
+## Before choosing a test, ask:
 
-- Comparing TWO groups
-- Different people in each group
-- Between-subjects design
+**Are the SAME people or DIFFERENT people in each condition?**
+:::
 
-**Example**: Lab A vs Lab B memory scores
+::: {.fragment}
+- Different people → **Independent samples t-test**
+- Same people → **Paired samples t-test**
 :::
 
 ---
 
-## The R Code
+## Between-Subjects Design
 
-```r
-t.test(group1, group2)
-# OR
-t.test(DV ~ IV, data = mydata)
-```
+**Different people** in each group
 
-Students will use both approaches.
+::::: columns
+::: {.column width="50%"}
+**Characteristics:**
 
----
+- Two separate groups
+- Each person in ONE condition only
+- Compare Group A vs Group B
+:::
 
-## Reading the Output
+::: {.column width="50%"}
+**Examples:**
 
-Key elements to identify:
+- Treatment vs Control
+- Lab A vs Lab B
+- Method A vs Method B
+:::
+:::::
 
-| Output | Meaning |
-|--------|---------|
-| t | Test statistic |
-| df | Degrees of freedom |
-| p-value | Probability under H0 |
-| mean of x, mean of y | Group means |
-| 95% CI | For the mean DIFFERENCE |
-
----
-
-## Common Errors
-
-Watch for:
-
-- Forgetting to remove NAs
-- Confusing which group is which
-- Misinterpreting the CI (it's for the difference, not individual means)
-
----
-
-# Part 2: Paired Samples t-Test {background-color="#275882"}
-
-## Within-Subjects Comparison (~25 min)
-
----
-
-## When to Use
-
-::: {.definition-box}
-**Paired samples t-test** when:
-
-- Comparing TWO conditions
-- SAME people in both conditions
-- Within-subjects design
-
-**Example**: Pre vs Post mood scores
+::: {.fragment}
+→ Use **Independent samples t-test**
 :::
 
 ---
 
-## The R Code
+## Within-Subjects Design
 
-```r
-t.test(time1, time2, paired = TRUE)
-```
+**Same people** measured twice
 
-::: {.callout-warning}
-## Critical Parameter
-`paired = TRUE` is essential! Without it, R treats the data as independent samples.
+::::: columns
+::: {.column width="50%"}
+**Characteristics:**
+
+- One group of participants
+- Each person in BOTH conditions
+- Compare Time 1 vs Time 2
+:::
+
+::: {.column width="50%"}
+**Examples:**
+
+- Before vs After treatment
+- Monday vs Friday performance
+- With vs Without distraction
+:::
+:::::
+
+::: {.fragment}
+→ Use **Paired samples t-test**
 :::
 
 ---
 
-## Why Paired is More Powerful
+## Quick Check
 
-Emphasise:
+::: poll-box
+**A researcher measures stress before AND after a meditation session (same people).**
 
-1. Each person serves as their own control
-2. Individual differences are removed
-3. Smaller error term = more power to detect effects
-4. Requires matched data (same n in both conditions)
+Which design?
 
----
+A. Between-subjects
 
-# Part 3: APA Reporting {background-color="#275882"}
-
-## Writing Up Results (~30 min)
-
----
-
-## APA Format Template
-
-::: {.definition-box}
-**Template:**
-t(df) = X.XX, p = .XXX, d = X.XX, 95% CI [X.XX, X.XX]
-
-**Example:**
-t(48) = 2.34, p = .023, d = 0.67, 95% CI [0.12, 1.22]
+B. Within-subjects
 :::
 
 ---
 
-## What to Include
+## Activity: Part 1
 
-Students should report:
+Open the activity page and complete **Part 1: Understanding the Two Designs**
 
-1. **Test statistic** (t-value)
-2. **Degrees of freedom** (in parentheses)
-3. **p-value** (exact, to 3 decimal places)
-4. **Effect size** (Cohen's d from Week 13)
-5. **Confidence interval** (for the difference)
+Answer questions 1-4
+
+{{< countdown "05:00" start_immediately="true" >}}
 
 ---
 
-## Example Write-Up
+# Part 2: Your First Experiment {background-color="#275882"}
 
-> "An independent samples t-test revealed that participants in Lab B (M = 7.2, SD = 1.8) recalled significantly more words than participants in Lab A (M = 5.9, SD = 2.1), t(78) = 3.12, p = .002, d = 0.70, 95% CI [0.47, 2.13]."
-
----
-
-# Part 4: Putting It Together {background-color="#275882"}
-
-## Complete Analysis (~20 min)
+## Between-subjects design
 
 ---
 
-## The Full Picture
+## Setting Up the Experiment
 
-Students will run a complete analysis:
+In the app, set:
 
-1. Check assumptions
-2. Run the appropriate t-test
-3. Calculate effect size
-4. Write APA results paragraph
+| Setting | Value |
+|---------|-------|
+| Design | Between-groups |
+| DV name | Memory Score |
+| IV name | Word Type |
+| Level A | Abstract |
+| Level B | Concrete |
+| Level A mean | 50 |
+| Level B mean | 58 |
+| Both SDs | 10 |
+| N participants | 30 |
 
-This mirrors what they'll do in their Research Report.
-
----
-
-## Decision Flowchart
-
-| Question | Answer |
-|----------|--------|
-| Same or different people? | Same = paired; Different = independent |
-| p < .05? | Yes = significant; No = not significant |
-| CI includes 0? | Yes = not significant; No = significant |
+Then click **Run analysis**
 
 ---
 
-# Wrap-Up {background-color="#275882"}
+## What to Look For
+
+**Distribution tab:**
+
+- Two overlapping curves
+- Blue = Abstract, Orange = Concrete
+- How much overlap?
+
+**t-test Results tab:**
+
+- t-value and p-value
+- Cohen's d (effect size)
+- SIGNIFICANT or NOT SIGNIFICANT?
+
+---
+
+## Demo
+
+Let me show you...
+
+[Live demo in the app]
+
+---
+
+## Activity: Part 2
+
+Complete **Part 2: Your First Experiment**
+
+- Set up the experiment as shown
+- Run the analysis
+- Answer questions 5-8
+
+{{< countdown "07:00" start_immediately="true" >}}
+
+---
+
+# Part 3: Changing the Means {background-color="#275882"}
+
+## What happens when groups differ more or less?
+
+---
+
+## Experiment: Means Far Apart
+
+Change Level B mean from **58** to **70**
+
+::: {.fragment}
+**What happens?**
+
+- Curves separate more
+- p-value gets smaller
+- Cohen's d gets larger
+:::
+
+---
+
+## Experiment: Means Close Together
+
+Change Level B mean to **51** (close to Level A's 50)
+
+::: {.fragment}
+**What happens?**
+
+- Curves overlap almost completely
+- p-value likely > 0.05 (not significant)
+- Cohen's d is tiny
+:::
+
+---
+
+## Activity: Part 3
+
+Complete **Part 3: Experiment - Changing the Means**
+
+- Try means = 70 (far apart)
+- Try means = 51 (close together)
+- Answer questions 9-11
+
+{{< countdown "07:00" start_immediately="true" >}}
+
+---
+
+# Part 4: Changing Variability {background-color="#275882"}
+
+## What happens when data is more or less spread out?
+
+---
+
+## Reset First!
+
+Set means back to: **50** and **58**
+
+---
+
+## Experiment: High Variability
+
+Change both SDs from **10** to **25**
+
+::: {.fragment}
+**What happens?**
+
+- Curves are wider
+- More overlap
+- Harder to detect the difference
+- Cohen's d is smaller
+:::
+
+---
+
+## Experiment: Low Variability
+
+Change both SDs to **5**
+
+::: {.fragment}
+**What happens?**
+
+- Curves are narrow
+- Barely overlap
+- Difference is very clear
+- Cohen's d is large
+:::
+
+---
+
+## The Insight
+
+::: {.callout-important}
+## Signal vs Noise
+
+- **Signal** = difference between means
+- **Noise** = variability (SD)
+
+More noise makes the signal harder to detect!
+:::
+
+---
+
+## Activity: Part 4
+
+Complete **Part 4: Experiment - Changing the Variability**
+
+- Try SD = 25 (more noise)
+- Try SD = 5 (less noise)
+- Answer questions 12-14
+
+{{< countdown "07:00" start_immediately="true" >}}
+
+---
+
+# Part 5: Changing Sample Size {background-color="#275882"}
+
+## The crucial difference between p and d
+
+---
+
+## Reset First!
+
+Set back to: means = **50** and **58**, SDs = **10**
+
+---
+
+## Experiment: Small Sample
+
+Change N from **30** to **10**
+
+::: {.fragment}
+**What happens?**
+
+- p-value gets larger (harder to reach significance)
+- Cohen's d stays about the same!
+:::
+
+---
+
+## Experiment: Large Sample
+
+Change N from **10** to **100**
+
+::: {.fragment}
+**What happens?**
+
+- p-value gets smaller (easier to reach significance)
+- Cohen's d stays about the same!
+:::
+
+---
+
+## The Key Insight
+
+::: {.callout-important}
+## Why This Matters
+
+**p-value** depends on sample size
+
+**Cohen's d** does NOT depend on sample size
+
+With enough participants, even a TINY effect becomes "significant"!
+:::
+
+::: {.fragment}
+This is why we ALWAYS report effect sizes.
+:::
+
+---
+
+## Activity: Part 5
+
+Complete **Part 5: Experiment - Changing Sample Size**
+
+- Try N = 10 (small)
+- Try N = 100 (large)
+- Answer questions 15-17
+
+{{< countdown "07:00" start_immediately="true" >}}
+
+---
+
+# Part 6: Within-Subjects Design {background-color="#275882"}
+
+## Same people, measured twice
+
+---
+
+## Setting Up a Within-Subjects Study
+
+In the app, set:
+
+| Setting | Value |
+|---------|-------|
+| Design | Within-groups |
+| DV name | Mood Rating |
+| IV name | Time |
+| Level A | Before |
+| Level B | After |
+| Level A mean | 5 |
+| Level B mean | 7 |
+| Both SDs | 2 |
+| N participants | 30 |
+
+Then click **Run analysis**
+
+---
+
+## What's Different?
+
+Look at the results:
+
+::: {.incremental}
+- Test is now **Paired samples t-test**
+- Effect size is **dz** (for paired data)
+- Interpretation talks about "change" not "group difference"
+- Story hook says "twice for each participant"
+:::
+
+---
+
+## Activity: Part 6
+
+Complete **Part 6: Within-Subjects Design**
+
+- Set up the within-subjects experiment
+- Run the analysis
+- Answer questions 18-20
+
+{{< countdown "07:00" start_immediately="true" >}}
+
+---
+
+# Part 7: Design Your Own {background-color="#275882"}
+
+## Get creative!
+
+---
+
+## Your Challenge
+
+Design TWO studies:
+
+**Study 1 (Between-subjects):**
+
+- Think of two groups to compare
+- Name your variables
+- Set realistic parameters
+- Run it!
+
+**Study 2 (Within-subjects):**
+
+- Think of a before/after scenario
+- Name your variables
+- Set realistic parameters
+- Run it!
+
+---
+
+## Activity: Part 7
+
+Complete **Part 7: Design Your Own Study**
+
+Be creative with your study ideas!
+
+{{< countdown "10:00" start_immediately="true" >}}
+
+---
+
+# Summary {background-color="#275882"}
+
+---
+
+## Choosing the Right Test
+
+| Design | People | Test |
+|--------|--------|------|
+| Between-subjects | Different in each group | Independent t-test |
+| Within-subjects | Same, measured twice | Paired t-test |
+
+---
+
+## What Affects Significance?
+
+| Factor | Effect on p-value |
+|--------|-------------------|
+| Larger mean difference | Smaller p (easier) |
+| Smaller SDs | Smaller p (easier) |
+| Larger sample | Smaller p (easier) |
+
+---
+
+## What Affects Effect Size?
+
+| Factor | Effect on Cohen's d |
+|--------|---------------------|
+| Larger mean difference | Larger d |
+| Smaller SDs | Larger d |
+| Sample size | **NO EFFECT** |
+
+---
+
+## Why Report Both?
+
+::: {.callout-important}
+## The Complete Picture
+
+- **p-value** tells us IF the effect is real
+- **Effect size** tells us HOW BIG it is
+
+A significant result isn't always a meaningful result!
+:::
+
+---
+
+## Final Activity
+
+Complete the **Final Knowledge Check** (questions 21-25)
+
+{{< countdown "05:00" start_immediately="true" >}}
 
 ---
 
@@ -240,8 +546,6 @@ This mirrors what they'll do in their Research Report.
 
 ## Next Steps
 
-Direct students to:
-
 1. Complete the **Week 14 Self-Assessment Quiz**
 2. Review **APA reporting format** for assessments
 3. Prepare for **Week 15: Correlation** - relationships between variables
@@ -259,8 +563,4 @@ Start thinking about your hypotheses and planned analyses. t-tests are likely re
 
 # Questions? {background-color="#275882"}
 
-## Then let's begin the activity!
 
-::: {.notes}
-Instructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.
-:::

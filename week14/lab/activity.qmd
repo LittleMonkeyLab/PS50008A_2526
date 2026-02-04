@@ -14,326 +14,426 @@ execute:
 ---
 
 ```{r}
-#| label: setup
+#| echo: false
+#| message: false
 library(webexercises)
-library(tidyverse)
-library(knitr)
-
-# Load DataLab data
-memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
-merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
-
-navy <- "#275882"
-orange <- "#EA8439"
-theme_set(theme_minimal(base_size = 14))
 ```
 
-## Overview
+## Welcome to the Choose your Own t-test Adventure!
+
+In this activity, you'll use an interactive tool to explore how t-tests work. You'll create your own experiments, adjust the data, and see how different choices affect your results.
+
+::: {.callout-tip}
+## What You'll Learn
+
+By the end of this activity, you will be able to:
+
+- Choose the correct t-test for different research designs
+- Understand how means, SDs, and sample size affect significance
+- Interpret t-test output including p-values and effect sizes
+- See why we report both p-values AND effect sizes
+:::
+
+---
+
+## Open the App
 
 ::: {.callout-important}
-## Focus for Today
-This lab introduces the **t-test** - the workhorse of psychological research for comparing means:
+## Launch the Choose your own t-test Explorer
 
-- Running independent samples t-tests (between-subjects)
-- Running paired samples t-tests (within-subjects)
-- Interpreting R output from t.test()
-- Choosing the right test for your design
+**Click here to open the app:** [t-test Explorer](https://oybc0p-gordon-wright.shinyapps.io/ttest_adventure/){target="_blank"}
+
+Keep the app open in a separate tab/window as you work through this activity.
+:::
+
+Take a moment to look at the app. You'll see:
+
+- **Left panel**: Controls for setting up your experiment
+- **Right panel**: Three tabs showing your data, distribution, and results
+
+---
+
+## Part 1: Understanding the Two Designs
+
+The first choice you make is crucial: **What type of design is your study?**
+
+### Between-Subjects Design
+
+In a **between-subjects** (or "between-groups") design:
+
+- Different people are in each condition
+- Each participant only experiences ONE level of the IV
+- We compare Group A to Group B
+
+**Examples:**
+
+- Comparing test scores between students who used Method A vs Method B
+- Comparing anxiety levels in people who received therapy vs a control group
+- Comparing memory for abstract words (Lab A) vs concrete words (Lab B)
+
+### Within-Subjects Design
+
+In a **within-subjects** (or "repeated measures") design:
+
+- The SAME people are in both conditions
+- Each participant experiences BOTH levels of the IV
+- We compare each person's score at Time 1 to their score at Time 2
+
+**Examples:**
+
+- Measuring mood before AND after a relaxation exercise
+- Testing reaction time with AND without distractions
+- Comparing performance on Monday vs Friday (same students)
+
+---
+
+### Self-Check: Design Types
+
+::: {.webex-check .webex-box}
+
+**1. A researcher randomly assigns 30 students to learn with flashcards and 30 different students to learn with practice tests, then compares their exam scores.**
+
+`r mcq(c(answer = "Between-subjects", "Within-subjects"))`
+
+**2. A researcher measures participants' stress levels before a meditation session, then measures the SAME participants' stress levels after the session.**
+
+`r mcq(c("Between-subjects", answer = "Within-subjects"))`
+
+**3. In Lab A, students memorised abstract words. In Lab B, different students memorised concrete words. This is:**
+
+`r mcq(c(answer = "Between-subjects", "Within-subjects"))`
+
+**4. The same participants rate how attractive faces look when smiling vs when neutral.**
+
+`r mcq(c("Between-subjects", answer = "Within-subjects"))`
+
 :::
 
 ---
 
-## Activity 1: Independent t-test (Lab A vs Lab B Memory) (20 min)
+## Part 2: Your First Experiment (Between-Subjects)
 
-### When to Use an Independent t-test
+Let's run your first simulated experiment!
 
-An **independent samples t-test** compares means from **two different groups** of participants.
+### Step-by-Step Instructions
 
-```{r}
-#| label: lab-data-prep
-memory_labs <- memory |>
-  filter(!is.na(Q11) & !is.na(mem_total_1)) |>
-  mutate(Lab = factor(Q11, levels = c(1, 2), labels = c("Lab A (Abstract)", "Lab B (Concrete)")))
+::: {.callout-note}
+## Do This Now
 
-lab_stats <- memory_labs |>
-  group_by(Lab) |>
-  summarise(
-    n = n(),
-    Mean = mean(mem_total_1, na.rm = TRUE),
-    SD = sd(mem_total_1, na.rm = TRUE)
-  )
-```
+In the app:
 
-```{r}
-#| label: lab-comparison-plot
-#| fig-height: 4
-#| fig-align: center
-ggplot(memory_labs, aes(x = Lab, y = mem_total_1, fill = Lab)) +
-  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
-  geom_jitter(aes(colour = Lab), width = 0.15, size = 3, alpha = 0.7) +
-  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
-  scale_fill_manual(values = c(navy, orange)) +
-  scale_colour_manual(values = c(navy, orange)) +
-  labs(x = NULL, y = "Words Recalled (out of 10)",
-       title = "Memory Performance: Lab A vs Lab B",
-       subtitle = "Black diamonds = group means") +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, face = "bold"))
-```
+1. **Step 0**: Select "Between-groups (different people in each group)"
 
-### Conceptual Questions
+2. **Step 1**: Name your study:
+   - DV name: `Memory Score`
+   - IV name: `Word Type`
+   - Level A name: `Abstract`
+   - Level B name: `Concrete`
 
-**1. This comparison (Lab A vs Lab B) uses an independent t-test because:**
+3. **Step 2**: Set the parameters:
+   - Level A mean: `50`
+   - Level A SD: `10`
+   - Level B mean: `58`
+   - Level B SD: `10`
+   - N participants: `30`
 
-`r mcq(c("The same participants are in both groups", answer = "Different participants are in each group", "We are comparing more than two groups", "There is no control group"))`
+4. Click **Run analysis**
 
-**2. What are the two groups being compared?**
+5. Look at all three tabs: Raw data, Distribution, and t-test Results
+:::
 
-`r mcq(c(answer = "Lab A (abstract words) vs Lab B (concrete words)", "Before vs After", "High vs Low performers", "Morning vs Afternoon sessions"))`
+### What to Notice
 
-**3. What is the dependent variable in this analysis?**
+**Distribution tab:**
 
-`r mcq(c("Word type (abstract/concrete)", "Lab group", answer = "Number of words recalled", "Participant ID"))`
+- Can you see two overlapping curves?
+- The blue curve shows Abstract words, orange shows Concrete words
+- How much do they overlap?
 
-### Understanding the R Output
+**t-test Results tab:**
 
-Here's what R output from `t.test()` looks like:
-
-```
-	Welch Two Sample t-test
-
-data:  mem_total_1 by Lab
-t = -2.45, df = 38.2, p-value = 0.019
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -2.15  -0.21
-sample estimates:
-mean in group Lab A  mean in group Lab B
-               5.40                6.58
-```
-
-**4. Looking at the output above, what is the t-statistic?**
-
-`r mcq(c("38.2", "0.019", answer = "-2.45", "-2.15"))`
-
-**5. What is the p-value?**
-
-`r mcq(c("-2.45", "38.2", answer = "0.019", "6.58"))`
-
-**6. At alpha = 0.05, would we reject the null hypothesis?**
-
-`r mcq(c(answer = "Yes, because p < 0.05", "No, because p > 0.05", "Can't tell from this output", "Yes, because t is negative"))`
-
-**7. The 95% CI for the difference is [-2.15, -0.21]. What does this tell us?**
-
-`r mcq(c(answer = "The CI doesn't include 0, supporting a real difference", "The CI includes 0, so there's no difference", "Lab B scored lower than Lab A", "The difference is not significant"))`
-
-True or False: A negative t-value means the first group has a lower mean than the second. `r torf(TRUE)`
+- Find the **t-value** and **p-value**
+- Find **Cohen's d** - is it small, medium, or large?
+- Is the result SIGNIFICANT or NOT SIGNIFICANT?
 
 ---
 
-## Activity 2: Paired t-test (Pre vs Post Mood) (20 min)
+### Self-Check: Reading the Output
 
-### When to Use a Paired t-test
+::: {.webex-check .webex-box}
 
-A **paired samples t-test** compares means from the **same participants** measured twice.
+**5. In your results, the test used is called:**
 
-```{r}
-#| label: mood-data-prep
-mood_data <- merged |>
-  select(participant_id, mood_pre_1, post_mood_post_1) |>
-  filter(!is.na(mood_pre_1) & !is.na(post_mood_post_1)) |>
-  mutate(change = post_mood_post_1 - mood_pre_1)
+`r mcq(c(answer = "Independent samples t-test", "Paired samples t-test"))`
 
-mood_long <- mood_data |>
-  pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
-               names_to = "Time", values_to = "Mood") |>
-  mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
-                       labels = c("Before", "After")))
-```
+**6. If your p-value is less than 0.05, this means:**
 
-```{r}
-#| label: mood-comparison-plot
-#| fig-height: 4
-#| fig-align: center
-ggplot(mood_long, aes(x = Time, y = Mood, fill = Time)) +
-  geom_boxplot(alpha = 0.4, outlier.shape = NA, width = 0.5) +
-  geom_line(data = mood_data |>
-              pivot_longer(cols = c(mood_pre_1, post_mood_post_1),
-                          names_to = "Time", values_to = "Mood") |>
-              mutate(Time = factor(Time, levels = c("mood_pre_1", "post_mood_post_1"),
-                                  labels = c("Before", "After"))),
-            aes(group = participant_id), alpha = 0.3, colour = "gray40") +
-  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, colour = "black") +
-  scale_fill_manual(values = c(navy, orange)) +
-  labs(x = NULL, y = "Mood Rating (1-10)",
-       title = "Mood Before vs After DataLab",
-       subtitle = "Lines connect the same person") +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, face = "bold"))
-```
+`r mcq(c(answer = "The difference is statistically significant", "The difference is not significant", "The effect is large"))`
 
-### Conceptual Questions
+**7. Cohen's d tells us:**
 
-**1. This comparison uses a paired t-test because:**
+`r mcq(c("Whether the result is significant", answer = "How big the effect is", "The sample size needed"))`
 
-`r mcq(c(answer = "The same participants are measured at both time points", "Different participants are in each group", "We are comparing more than two groups", "The data is paired with another dataset"))`
+**8. A Cohen's d of 0.75 would be considered:**
 
-**2. What is the advantage of a paired design over an independent design?**
+`r mcq(c("Small", answer = "Medium to large", "Tiny"))`
 
-`r mcq(c("Easier to recruit participants", "Faster to run", answer = "Each person is their own control, reducing individual differences", "No assumptions required"))`
-
-**3. In R, how do we specify a paired t-test?**
-
-`r mcq(c("t.test(x, y, type = 'paired')", answer = "t.test(x, y, paired = TRUE)", "paired.t.test(x, y)", "t.test.paired(x, y)"))`
-
-### Understanding Paired Output
-
-```
-	Paired t-test
-
-data:  mood_pre and mood_post
-t = -3.12, df = 42, p-value = 0.003
-alternative hypothesis: true mean difference is not equal to 0
-95 percent confidence interval:
- -1.52  -0.32
-sample estimates:
-mean difference
-          -0.92
-```
-
-**4. The mean difference of -0.92 means:**
-
-`r mcq(c("Pre scores were 0.92 higher than post", answer = "Post scores were 0.92 higher than pre", "The groups are 0.92 apart on average", "92% of people improved"))`
-
-**5. Is this difference statistically significant at alpha = 0.05?**
-
-`r mcq(c(answer = "Yes, p = 0.003 < 0.05", "No, p = 0.003 > 0.05", "Can't tell", "Only marginally significant"))`
-
-**6. The degrees of freedom (df) for a paired t-test equals:**
-
-`r mcq(c("n", answer = "n - 1 (number of pairs minus 1)", "n - 2", "n1 + n2 - 2"))`
-
-True or False: In a paired t-test, we analyse the difference scores, not the raw scores. `r torf(TRUE)`
+:::
 
 ---
 
-## Activity 3: Interpreting Output (20 min)
+## Part 3: Experiment - Changing the Means
 
-### Reading and Reporting t-test Results
+Now let's see what happens when we change how different the groups are.
 
-Psychologists report t-test results in a specific format. Let's practice!
+### Experiment 3a: Make the Groups More Different
 
-**Standard format:** t(df) = value, p = value
+::: {.callout-note}
+## Do This Now
 
-### Practice Examples
+Change Level B mean from `58` to `70` (keep everything else the same).
 
-**Example 1:**
-```
-t = 2.34, df = 28, p-value = 0.027
-```
+Click **Run analysis** and observe:
 
-**1. How would you report this result?**
+- How does the distribution change?
+- What happens to the p-value?
+- What happens to Cohen's d?
+:::
 
-`r mcq(c("t = 2.34, p = 0.027", answer = "t(28) = 2.34, p = .027", "t(2.34) = 28, p = 0.027", "df = 28, t = 2.34"))`
+**What you should see:** The curves separate more. The p-value gets smaller. Cohen's d gets larger.
 
-**2. Is this result significant at alpha = 0.05?**
+### Experiment 3b: Make the Groups Almost Identical
 
-`r mcq(c(answer = "Yes", "No", "Can't tell", "Marginally significant"))`
+::: {.callout-note}
+## Do This Now
 
-**Example 2:**
-```
-t = 1.52, df = 45, p-value = 0.136
-```
+Change Level B mean from `70` to `51` (very close to Level A's 50).
 
-**3. Is this result significant at alpha = 0.05?**
+Click **Run analysis** and observe:
 
-`r mcq(c("Yes", answer = "No", "Can't tell", "Marginally significant"))`
+- How much do the distributions overlap now?
+- Is the result still significant?
+- What is Cohen's d?
+:::
 
-**4. What should you conclude?**
-
-`r mcq(c("The groups are definitely the same", answer = "We cannot reject the null hypothesis - insufficient evidence of a difference", "The experiment failed", "We need to use a different test"))`
-
-### Assumptions of the t-test
-
-**5. Which assumption is about the shape of the data distribution?**
-
-`r mcq(c(answer = "Normality assumption", "Independence assumption", "Homogeneity of variance", "Randomness assumption"))`
-
-**6. Welch's t-test is preferred when:**
-
-`r mcq(c("Sample sizes are equal", "Data is normally distributed", answer = "Variances may be unequal between groups", "We want a paired test"))`
-
-**7. Independence means:**
-
-`r mcq(c(answer = "One person's score doesn't influence another's", "The groups are completely separate", "Variables are uncorrelated", "The test is unbiased"))`
-
-True or False: t-tests are robust to mild violations of normality, especially with larger samples. `r torf(TRUE)`
-
-True or False: If p = 0.06, the result is "almost significant" and we should report it as meaningful. `r torf(FALSE)`
+**What you should see:** The curves overlap almost completely. The p-value is likely > 0.05 (not significant). Cohen's d is tiny.
 
 ---
 
-## Activity 4: Choosing the Right Test (20 min)
-
-### Decision Tree Practice
-
-For each scenario, identify whether to use an **independent** or **paired** t-test.
+### Self-Check: Effect of Means
 
 ::: {.webex-check .webex-box}
 
-### Scenario 1
-A researcher measures anxiety levels in 30 participants before and after a relaxation intervention.
+**9. When the means are further apart, the p-value tends to be:**
 
-**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+`r mcq(c(answer = "Smaller (more significant)", "Larger (less significant)", "Unchanged"))`
 
-**Why?** `r mcq(c("Different people in each condition", answer = "Same people measured twice"))`
+**10. When the means are further apart, Cohen's d tends to be:**
+
+`r mcq(c(answer = "Larger", "Smaller", "Unchanged"))`
+
+**11. If two groups have almost identical means, you would expect:**
+
+`r mcq(c("A significant result", answer = "A non-significant result", "A large effect size"))`
+
 :::
+
+---
+
+## Part 4: Experiment - Changing the Variability (SD)
+
+Reset your means to: Level A = 50, Level B = 58
+
+Now let's see what happens when we change how spread out the scores are within each group.
+
+### Experiment 4a: Increase the Variability
+
+::: {.callout-note}
+## Do This Now
+
+Change both SDs from `10` to `25`.
+
+Click **Run analysis** and observe:
+
+- How does the distribution change?
+- What happens to significance?
+- What happens to Cohen's d?
+:::
+
+**What you should see:** The curves are wider and overlap more. It's harder to detect the difference. Cohen's d is smaller.
+
+### Experiment 4b: Decrease the Variability
+
+::: {.callout-note}
+## Do This Now
+
+Change both SDs from `25` to `5`.
+
+Click **Run analysis** and observe:
+
+- How do the distributions look now?
+- Is the result significant?
+- What is Cohen's d?
+:::
+
+**What you should see:** The curves are narrow and barely overlap. The difference is very clear. Cohen's d is large.
+
+---
+
+### Self-Check: Effect of Variability
 
 ::: {.webex-check .webex-box}
 
-### Scenario 2
-Comparing exam scores between students who used Method A vs Method B to study.
+**12. When SDs are larger (more variability), it becomes:**
 
-**Which t-test?** `r mcq(c(answer = "Independent t-test", "Paired t-test"))`
+`r mcq(c("Easier to detect a difference", answer = "Harder to detect a difference"))`
 
-**Why?** `r mcq(c(answer = "Different people in each condition", "Same people measured twice"))`
+**13. Larger SDs make Cohen's d:**
+
+`r mcq(c("Larger", answer = "Smaller"))`
+
+**14. If your data has very little variability (small SDs), the distributions will:**
+
+`r mcq(c("Overlap a lot", answer = "Overlap very little"))`
+
 :::
+
+---
+
+## Part 5: Experiment - Changing Sample Size
+
+Reset your settings to: Means = 50 and 58, SDs = 10 and 10
+
+Now let's explore the effect of sample size.
+
+### Experiment 5a: Small Sample
+
+::: {.callout-note}
+## Do This Now
+
+Change N participants from `30` to `10`.
+
+Click **Run analysis** and observe:
+
+- What happens to the p-value?
+- What happens to Cohen's d?
+:::
+
+### Experiment 5b: Large Sample
+
+::: {.callout-note}
+## Do This Now
+
+Change N participants from `10` to `100`.
+
+Click **Run analysis** and observe:
+
+- What happens to the p-value?
+- What happens to Cohen's d?
+:::
+
+---
+
+### Self-Check: Effect of Sample Size
 
 ::: {.webex-check .webex-box}
 
-### Scenario 3
-Testing whether people rate faces as more attractive when the same faces are presented smiling vs neutral.
+**15. Increasing sample size makes it:**
 
-**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+`r mcq(c(answer = "Easier to detect a real difference", "Harder to detect a difference", "No effect"))`
 
-**Why?** `r mcq(c("Different people rate different faces", answer = "Same people rate both versions of faces"))`
+**16. When you increase sample size, Cohen's d:**
+
+`r mcq(c("Increases", "Decreases", answer = "Stays about the same"))`
+
+**17. This is why we report effect sizes - because:**
+
+`r mcq(c(answer = "A tiny effect can be 'significant' with a large enough sample", "Effect sizes are easier to calculate", "P-values are unreliable"))`
+
 :::
+
+---
+
+## Part 6: Within-Subjects Design
+
+Now let's try a different type of experiment!
+
+### Setting Up a Within-Subjects Study
+
+::: {.callout-note}
+## Do This Now
+
+1. **Step 0**: Select "Within-groups (same people measured twice)"
+
+2. **Step 1**: Name your study:
+   - DV name: `Mood Rating`
+   - IV name: `Time`
+   - Level A name: `Before`
+   - Level B name: `After`
+
+3. **Step 2**: Set the parameters:
+   - Level A mean: `5` (mood before)
+   - Level A SD: `2`
+   - Level B mean: `7` (mood after)
+   - Level B SD: `2`
+   - N participants: `30`
+
+4. Click **Run analysis**
+:::
+
+### What's Different?
+
+Look at the **t-test Results** tab. Notice:
+
+- The test is now called a **Paired samples t-test**
+- The effect size is called **dz** (for paired/dependent data)
+- The interpretation talks about "change" rather than "group difference"
+
+---
+
+### Self-Check: Within-Subjects
 
 ::: {.webex-check .webex-box}
 
-### Scenario 4
-Comparing reaction times between left-handed and right-handed participants.
+**18. For within-subjects designs, we use:**
 
-**Which t-test?** `r mcq(c(answer = "Independent t-test", "Paired t-test"))`
+`r mcq(c("Independent samples t-test", answer = "Paired samples t-test"))`
 
-**Why?** `r mcq(c(answer = "Handedness is a between-subjects variable", "People switch hands during the experiment"))`
+**19. In a within-subjects design, the same participants are:**
+
+`r mcq(c("In only one condition", answer = "In both conditions"))`
+
+**20. The story hook in the app now says the measurement happened:**
+
+`r mcq(c("In different groups", answer = "Twice for each participant"))`
+
 :::
 
-::: {.webex-check .webex-box}
+---
 
-### Scenario 5
-Each participant completes a task under quiet conditions and under noisy conditions.
+## Part 7: Design Your Own Study
 
-**Which t-test?** `r mcq(c("Independent t-test", answer = "Paired t-test"))`
+Now it's your turn to be creative!
 
-**Why?** `r mcq(c("Different people in each condition", answer = "Same people tested in both conditions"))`
+::: {.callout-note}
+## Challenge
+
+Design TWO studies - one between-subjects and one within-subjects:
+
+**Study 1 (Between-subjects):**
+
+- Think of two different groups you could compare
+- Name your DV and IV appropriately
+- Set realistic means and SDs
+- Run the analysis
+
+**Study 2 (Within-subjects):**
+
+- Think of something you could measure before and after
+- Name your DV and IV appropriately
+- Set realistic means and SDs
+- Run the analysis
 :::
-
-### The Key Question
-
-**To decide which t-test to use, ask yourself:**
-
-`r mcq(c("How many variables are there?", "Is the data normally distributed?", answer = "Are the SAME or DIFFERENT people in each condition?", "What is the sample size?"))`
 
 ---
 
@@ -342,24 +442,56 @@ Each participant completes a task under quiet conditions and under noisy conditi
 ::: {.callout-important}
 ## Key Takeaways
 
-**Independent t-test:**
-- Compares means from TWO DIFFERENT groups
-- Use for between-subjects designs
-- df = n1 + n2 - 2
+**Choosing the right test:**
 
-**Paired t-test:**
-- Compares means from the SAME people measured twice
-- Use for within-subjects designs
-- df = n - 1 (number of pairs minus 1)
-- More powerful (controls for individual differences)
+- Different people in each group → Independent samples t-test
+- Same people measured twice → Paired samples t-test
 
-**Reporting:**
-- Format: t(df) = value, p = value
-- Include effect size (Cohen's d) when possible
-- Report 95% CI for the difference
+**What affects significance (p-value):**
 
-**Choosing:**
-- Ask: "Same people or different people?"
+- Larger difference between means → easier to detect
+- Smaller SDs (less noise) → easier to detect
+- Larger sample size → easier to detect
+
+**What affects effect size (Cohen's d):**
+
+- Larger difference between means → larger d
+- Smaller SDs → larger d
+- Sample size does NOT affect d
+
+**Why we report both:**
+
+- p-value tells us IF the effect is real
+- Effect size tells us HOW BIG the effect is
+- A significant result isn't always a meaningful result!
+:::
+
+---
+
+## Final Knowledge Check
+
+::: {.webex-check .webex-box}
+
+**21. A study comparing anxiety in nurses vs teachers would use:**
+
+`r mcq(c(answer = "Independent samples t-test", "Paired samples t-test"))`
+
+**22. A study measuring confidence before and after training would use:**
+
+`r mcq(c("Independent samples t-test", answer = "Paired samples t-test"))`
+
+**23. If p = 0.02 and d = 0.15, the effect is:**
+
+`r mcq(c(answer = "Significant but tiny", "Significant and large", "Not significant"))`
+
+**24. If p = 0.08 and d = 0.90, the effect is:**
+
+`r mcq(c("Significant and large", answer = "Not significant but potentially large", "Not significant and small"))`
+
+**25. To make a non-significant result significant, you could:**
+
+`r mcq(c("Decrease sample size", answer = "Increase sample size", "Increase the SDs"))`
+
 :::
 
 ---

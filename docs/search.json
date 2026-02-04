@@ -13126,6 +13126,20 @@
     ]
   },
   {
+    "objectID": "week14/lecture/slides.html#summary",
+    "href": "week14/lecture/slides.html#summary",
+    "title": "Is Your Effect Real?",
+    "section": "Summary",
+    "text": "Summary",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "week14/lecture/slides.html#the-logic-proof-by-contradiction",
     "href": "week14/lecture/slides.html#the-logic-proof-by-contradiction",
     "title": "Is Your Effect Real?",
@@ -13187,6 +13201,20 @@
     "title": "Is Your Effect Real?",
     "section": "The Significance Threshold (α)",
     "text": "The Significance Threshold (α)\n\nAlpha (α): The predetermined threshold for rejecting H₀. Conventionally set at 0.05 (5%).\n\n\n\n\n\np-value\nDecision\n\n\n\n\np &lt; .05\nReject H₀ (“significant”)\n\n\np ≥ .05\nFail to reject H₀ (“not significant”)",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lecture/slides.html#a-visual-demonstration",
+    "href": "week14/lecture/slides.html#a-visual-demonstration",
+    "title": "Is Your Effect Real?",
+    "section": "A visual demonstration",
+    "text": "A visual demonstration",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13406,6 +13434,20 @@
     ]
   },
   {
+    "objectID": "week14/lecture/slides.html#one-or-two-tailed",
+    "href": "week14/lecture/slides.html#one-or-two-tailed",
+    "title": "Is Your Effect Real?",
+    "section": "One or Two Tailed",
+    "text": "One or Two Tailed",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "week14/lecture/slides.html#independent-t-test-when",
     "href": "week14/lecture/slides.html#independent-t-test-when",
     "title": "Is Your Effect Real?",
@@ -13490,6 +13532,34 @@
     ]
   },
   {
+    "objectID": "week14/lecture/slides.html#in-short",
+    "href": "week14/lecture/slides.html#in-short",
+    "title": "Is Your Effect Real?",
+    "section": "In short",
+    "text": "In short",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lecture/slides.html#signal-wins",
+    "href": "week14/lecture/slides.html#signal-wins",
+    "title": "Is Your Effect Real?",
+    "section": "Signal wins",
+    "text": "Signal wins",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "week14/lecture/slides.html#apa-reporting-15-min",
     "href": "week14/lecture/slides.html#apa-reporting-15-min",
     "title": "Is Your Effect Real?",
@@ -13537,6 +13607,34 @@
     "title": "Is Your Effect Real?",
     "section": "Example: Paired t-test",
     "text": "Example: Paired t-test\n\n“A paired samples t-test showed that participants’ mood ratings were significantly higher after the DataLab session (M = 6.5, SD = 1.4) compared to before (M = 5.3, SD = 1.6), t(29) = 3.64, p = .001, d = 0.67, 95% CI [0.54, 1.86].”",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lecture/slides.html#another-view",
+    "href": "week14/lecture/slides.html#another-view",
+    "title": "Is Your Effect Real?",
+    "section": "Another view",
+    "text": "Another view",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lecture/slides.html#in-future",
+    "href": "week14/lecture/slides.html#in-future",
+    "title": "Is Your Effect Real?",
+    "section": "In future",
+    "text": "In future\nYou will discuss assumptions…",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13630,11 +13728,11 @@
     "text": "Key Points Covered\n\nTBC\nTBC\nTBC"
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#t-tests-in-r",
-    "href": "week14/lab/instructor-slides.html#t-tests-in-r",
+    "objectID": "week14/lab/instructor-slides.html#todays-lab",
+    "href": "week14/lab/instructor-slides.html#todays-lab",
     "title": "t-Tests in R",
-    "section": "t-Tests in R",
-    "text": "t-Tests in R",
+    "section": "Today’s Lab",
+    "text": "Today’s Lab\n\nUse an interactive app to explore t-tests\nUnderstand the difference between independent and paired t-tests\nSee how means, SDs, and sample size affect your results\nLearn why we report both p-values and effect sizes",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13644,11 +13742,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#todays-focus",
-    "href": "week14/lab/instructor-slides.html#todays-focus",
+    "objectID": "week14/lab/instructor-slides.html#the-app",
+    "href": "week14/lab/instructor-slides.html#the-app",
     "title": "t-Tests in R",
-    "section": "Today’s Focus",
-    "text": "Today’s Focus\n\nPutting NHST into practice. Today you will:\n\nRun independent samples t-tests in R\nRun paired samples t-tests in R\nInterpret t-test output correctly\nReport results in APA format",
+    "section": "The App",
+    "text": "The App\n\n\n\n\n\n\nLaunch the t-test Explorer\n\n\nOpen the app now: Choose your own t-test adventure!\nKeep it open throughout the lab!\n\n\n\nYou’ll see:\n\nLeft panel: Controls for your experiment\nRight panel: Data, distribution, and results",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13658,11 +13756,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#lab-structure-90-min",
-    "href": "week14/lab/instructor-slides.html#lab-structure-90-min",
+    "objectID": "week14/lab/instructor-slides.html#which-t-test-do-you-need",
+    "href": "week14/lab/instructor-slides.html#which-t-test-do-you-need",
     "title": "t-Tests in R",
-    "section": "Lab Structure (~90 min)",
-    "text": "Lab Structure (~90 min)\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:10\nThese slides + setup\n\n\n10:10-10:35\nPart 1: Independent samples t-test\n\n\n10:35-11:00\nPart 2: Paired samples t-test\n\n\n11:00-11:30\nPart 3: APA reporting\n\n\n11:30-11:50\nPart 4: Putting it all together\n\n\n11:50-12:00\nWrap-up + self-assessment",
+    "section": "Which t-test do you need?",
+    "text": "Which t-test do you need?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13672,11 +13770,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#open-the-activity",
-    "href": "week14/lab/instructor-slides.html#open-the-activity",
+    "objectID": "week14/lab/instructor-slides.html#the-key-question",
+    "href": "week14/lab/instructor-slides.html#the-key-question",
     "title": "t-Tests in R",
-    "section": "Open the Activity",
-    "text": "Open the Activity\nNavigate to: Week 14 &gt; Lab &gt; Activity\nMake sure WebR loads before proceeding.",
+    "section": "The Key Question",
+    "text": "The Key Question\n\n\n\n\n\n\nBefore choosing a test, ask:\n\n\nAre the SAME people or DIFFERENT people in each condition?\n\n\n\n\n\nDifferent people → Independent samples t-test\nSame people → Paired samples t-test",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13686,11 +13784,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#between-subjects-comparison-25-min",
-    "href": "week14/lab/instructor-slides.html#between-subjects-comparison-25-min",
+    "objectID": "week14/lab/instructor-slides.html#between-subjects-design",
+    "href": "week14/lab/instructor-slides.html#between-subjects-design",
     "title": "t-Tests in R",
-    "section": "Between-Subjects Comparison (~25 min)",
-    "text": "Between-Subjects Comparison (~25 min)",
+    "section": "Between-Subjects Design",
+    "text": "Between-Subjects Design\nDifferent people in each group\n\n\nCharacteristics:\n\nTwo separate groups\nEach person in ONE condition only\nCompare Group A vs Group B\n\n\nExamples:\n\nTreatment vs Control\nLab A vs Lab B\nMethod A vs Method B\n\n\n\n→ Use Independent samples t-test",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13700,11 +13798,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#when-to-use",
-    "href": "week14/lab/instructor-slides.html#when-to-use",
+    "objectID": "week14/lab/instructor-slides.html#within-subjects-design",
+    "href": "week14/lab/instructor-slides.html#within-subjects-design",
     "title": "t-Tests in R",
-    "section": "When to Use",
-    "text": "When to Use\n\nIndependent samples t-test when:\n\nComparing TWO groups\nDifferent people in each group\nBetween-subjects design\n\nExample: Lab A vs Lab B memory scores",
+    "section": "Within-Subjects Design",
+    "text": "Within-Subjects Design\nSame people measured twice\n\n\nCharacteristics:\n\nOne group of participants\nEach person in BOTH conditions\nCompare Time 1 vs Time 2\n\n\nExamples:\n\nBefore vs After treatment\nMonday vs Friday performance\nWith vs Without distraction\n\n\n\n→ Use Paired samples t-test",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13714,11 +13812,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#the-r-code",
-    "href": "week14/lab/instructor-slides.html#the-r-code",
+    "objectID": "week14/lab/instructor-slides.html#quick-check",
+    "href": "week14/lab/instructor-slides.html#quick-check",
     "title": "t-Tests in R",
-    "section": "The R Code",
-    "text": "The R Code\nt.test(group1, group2)\n# OR\nt.test(DV ~ IV, data = mydata)\nStudents will use both approaches.",
+    "section": "Quick Check",
+    "text": "Quick Check\n\nA researcher measures stress before AND after a meditation session (same people).\nWhich design?\nA. Between-subjects\nB. Within-subjects",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13728,11 +13826,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#reading-the-output",
-    "href": "week14/lab/instructor-slides.html#reading-the-output",
+    "objectID": "week14/lab/instructor-slides.html#activity-part-1",
+    "href": "week14/lab/instructor-slides.html#activity-part-1",
     "title": "t-Tests in R",
-    "section": "Reading the Output",
-    "text": "Reading the Output\nKey elements to identify:\n\n\n\nOutput\nMeaning\n\n\n\n\nt\nTest statistic\n\n\ndf\nDegrees of freedom\n\n\np-value\nProbability under H0\n\n\nmean of x, mean of y\nGroup means\n\n\n95% CI\nFor the mean DIFFERENCE",
+    "section": "Activity: Part 1",
+    "text": "Activity: Part 1\nOpen the activity page and complete Part 1: Understanding the Two Designs\nAnswer questions 1-4",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13742,11 +13840,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#common-errors",
-    "href": "week14/lab/instructor-slides.html#common-errors",
+    "objectID": "week14/lab/instructor-slides.html#between-subjects-design-1",
+    "href": "week14/lab/instructor-slides.html#between-subjects-design-1",
     "title": "t-Tests in R",
-    "section": "Common Errors",
-    "text": "Common Errors\nWatch for:\n\nForgetting to remove NAs\nConfusing which group is which\nMisinterpreting the CI (it’s for the difference, not individual means)",
+    "section": "Between-subjects design",
+    "text": "Between-subjects design",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13756,11 +13854,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#within-subjects-comparison-25-min",
-    "href": "week14/lab/instructor-slides.html#within-subjects-comparison-25-min",
+    "objectID": "week14/lab/instructor-slides.html#setting-up-the-experiment",
+    "href": "week14/lab/instructor-slides.html#setting-up-the-experiment",
     "title": "t-Tests in R",
-    "section": "Within-Subjects Comparison (~25 min)",
-    "text": "Within-Subjects Comparison (~25 min)",
+    "section": "Setting Up the Experiment",
+    "text": "Setting Up the Experiment\nIn the app, set:\n\n\n\nSetting\nValue\n\n\n\n\nDesign\nBetween-groups\n\n\nDV name\nMemory Score\n\n\nIV name\nWord Type\n\n\nLevel A\nAbstract\n\n\nLevel B\nConcrete\n\n\nLevel A mean\n50\n\n\nLevel B mean\n58\n\n\nBoth SDs\n10\n\n\nN participants\n30\n\n\n\nThen click Run analysis",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13770,11 +13868,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#when-to-use-1",
-    "href": "week14/lab/instructor-slides.html#when-to-use-1",
+    "objectID": "week14/lab/instructor-slides.html#what-to-look-for",
+    "href": "week14/lab/instructor-slides.html#what-to-look-for",
     "title": "t-Tests in R",
-    "section": "When to Use",
-    "text": "When to Use\n\nPaired samples t-test when:\n\nComparing TWO conditions\nSAME people in both conditions\nWithin-subjects design\n\nExample: Pre vs Post mood scores",
+    "section": "What to Look For",
+    "text": "What to Look For\nDistribution tab:\n\nTwo overlapping curves\nBlue = Abstract, Orange = Concrete\nHow much overlap?\n\nt-test Results tab:\n\nt-value and p-value\nCohen’s d (effect size)\nSIGNIFICANT or NOT SIGNIFICANT?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13784,11 +13882,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#the-r-code-1",
-    "href": "week14/lab/instructor-slides.html#the-r-code-1",
+    "objectID": "week14/lab/instructor-slides.html#demo",
+    "href": "week14/lab/instructor-slides.html#demo",
     "title": "t-Tests in R",
-    "section": "The R Code",
-    "text": "The R Code\nt.test(time1, time2, paired = TRUE)\n\n\n\n\n\n\nCritical Parameter\n\n\npaired = TRUE is essential! Without it, R treats the data as independent samples.",
+    "section": "Demo",
+    "text": "Demo\nLet me show you…\n[Live demo in the app]",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13798,11 +13896,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#why-paired-is-more-powerful",
-    "href": "week14/lab/instructor-slides.html#why-paired-is-more-powerful",
+    "objectID": "week14/lab/instructor-slides.html#activity-part-2",
+    "href": "week14/lab/instructor-slides.html#activity-part-2",
     "title": "t-Tests in R",
-    "section": "Why Paired is More Powerful",
-    "text": "Why Paired is More Powerful\nEmphasise:\n\nEach person serves as their own control\nIndividual differences are removed\nSmaller error term = more power to detect effects\nRequires matched data (same n in both conditions)",
+    "section": "Activity: Part 2",
+    "text": "Activity: Part 2\nComplete Part 2: Your First Experiment\n\nSet up the experiment as shown\nRun the analysis\nAnswer questions 5-8",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13812,11 +13910,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#writing-up-results-30-min",
-    "href": "week14/lab/instructor-slides.html#writing-up-results-30-min",
+    "objectID": "week14/lab/instructor-slides.html#what-happens-when-groups-differ-more-or-less",
+    "href": "week14/lab/instructor-slides.html#what-happens-when-groups-differ-more-or-less",
     "title": "t-Tests in R",
-    "section": "Writing Up Results (~30 min)",
-    "text": "Writing Up Results (~30 min)",
+    "section": "What happens when groups differ more or less?",
+    "text": "What happens when groups differ more or less?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13826,11 +13924,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#apa-format-template",
-    "href": "week14/lab/instructor-slides.html#apa-format-template",
+    "objectID": "week14/lab/instructor-slides.html#experiment-means-far-apart",
+    "href": "week14/lab/instructor-slides.html#experiment-means-far-apart",
     "title": "t-Tests in R",
-    "section": "APA Format Template",
-    "text": "APA Format Template\n\nTemplate: t(df) = X.XX, p = .XXX, d = X.XX, 95% CI [X.XX, X.XX]\nExample: t(48) = 2.34, p = .023, d = 0.67, 95% CI [0.12, 1.22]",
+    "section": "Experiment: Means Far Apart",
+    "text": "Experiment: Means Far Apart\nChange Level B mean from 58 to 70\n\nWhat happens?\n\nCurves separate more\np-value gets smaller\nCohen’s d gets larger",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13840,11 +13938,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#what-to-include",
-    "href": "week14/lab/instructor-slides.html#what-to-include",
+    "objectID": "week14/lab/instructor-slides.html#experiment-means-close-together",
+    "href": "week14/lab/instructor-slides.html#experiment-means-close-together",
     "title": "t-Tests in R",
-    "section": "What to Include",
-    "text": "What to Include\nStudents should report:\n\nTest statistic (t-value)\nDegrees of freedom (in parentheses)\np-value (exact, to 3 decimal places)\nEffect size (Cohen’s d from Week 13)\nConfidence interval (for the difference)",
+    "section": "Experiment: Means Close Together",
+    "text": "Experiment: Means Close Together\nChange Level B mean to 51 (close to Level A’s 50)\n\nWhat happens?\n\nCurves overlap almost completely\np-value likely &gt; 0.05 (not significant)\nCohen’s d is tiny",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13854,11 +13952,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#example-write-up",
-    "href": "week14/lab/instructor-slides.html#example-write-up",
+    "objectID": "week14/lab/instructor-slides.html#activity-part-3",
+    "href": "week14/lab/instructor-slides.html#activity-part-3",
     "title": "t-Tests in R",
-    "section": "Example Write-Up",
-    "text": "Example Write-Up\n\n“An independent samples t-test revealed that participants in Lab B (M = 7.2, SD = 1.8) recalled significantly more words than participants in Lab A (M = 5.9, SD = 2.1), t(78) = 3.12, p = .002, d = 0.70, 95% CI [0.47, 2.13].”",
+    "section": "Activity: Part 3",
+    "text": "Activity: Part 3\nComplete Part 3: Experiment - Changing the Means\n\nTry means = 70 (far apart)\nTry means = 51 (close together)\nAnswer questions 9-11",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13868,11 +13966,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#complete-analysis-20-min",
-    "href": "week14/lab/instructor-slides.html#complete-analysis-20-min",
+    "objectID": "week14/lab/instructor-slides.html#what-happens-when-data-is-more-or-less-spread-out",
+    "href": "week14/lab/instructor-slides.html#what-happens-when-data-is-more-or-less-spread-out",
     "title": "t-Tests in R",
-    "section": "Complete Analysis (~20 min)",
-    "text": "Complete Analysis (~20 min)",
+    "section": "What happens when data is more or less spread out?",
+    "text": "What happens when data is more or less spread out?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13882,11 +13980,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#the-full-picture",
-    "href": "week14/lab/instructor-slides.html#the-full-picture",
+    "objectID": "week14/lab/instructor-slides.html#reset-first",
+    "href": "week14/lab/instructor-slides.html#reset-first",
     "title": "t-Tests in R",
-    "section": "The Full Picture",
-    "text": "The Full Picture\nStudents will run a complete analysis:\n\nCheck assumptions\nRun the appropriate t-test\nCalculate effect size\nWrite APA results paragraph\n\nThis mirrors what they’ll do in their Research Report.",
+    "section": "Reset First!",
+    "text": "Reset First!\nSet means back to: 50 and 58",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13896,11 +13994,305 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#decision-flowchart",
-    "href": "week14/lab/instructor-slides.html#decision-flowchart",
+    "objectID": "week14/lab/instructor-slides.html#experiment-high-variability",
+    "href": "week14/lab/instructor-slides.html#experiment-high-variability",
     "title": "t-Tests in R",
-    "section": "Decision Flowchart",
-    "text": "Decision Flowchart\n\n\n\nQuestion\nAnswer\n\n\n\n\nSame or different people?\nSame = paired; Different = independent\n\n\np &lt; .05?\nYes = significant; No = not significant\n\n\nCI includes 0?\nYes = not significant; No = significant",
+    "section": "Experiment: High Variability",
+    "text": "Experiment: High Variability\nChange both SDs from 10 to 25\n\nWhat happens?\n\nCurves are wider\nMore overlap\nHarder to detect the difference\nCohen’s d is smaller",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#experiment-low-variability",
+    "href": "week14/lab/instructor-slides.html#experiment-low-variability",
+    "title": "t-Tests in R",
+    "section": "Experiment: Low Variability",
+    "text": "Experiment: Low Variability\nChange both SDs to 5\n\nWhat happens?\n\nCurves are narrow\nBarely overlap\nDifference is very clear\nCohen’s d is large",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#the-insight",
+    "href": "week14/lab/instructor-slides.html#the-insight",
+    "title": "t-Tests in R",
+    "section": "The Insight",
+    "text": "The Insight\n\n\n\n\n\n\nSignal vs Noise\n\n\n\nSignal = difference between means\nNoise = variability (SD)\n\nMore noise makes the signal harder to detect!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#activity-part-4",
+    "href": "week14/lab/instructor-slides.html#activity-part-4",
+    "title": "t-Tests in R",
+    "section": "Activity: Part 4",
+    "text": "Activity: Part 4\nComplete Part 4: Experiment - Changing the Variability\n\nTry SD = 25 (more noise)\nTry SD = 5 (less noise)\nAnswer questions 12-14",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#the-crucial-difference-between-p-and-d",
+    "href": "week14/lab/instructor-slides.html#the-crucial-difference-between-p-and-d",
+    "title": "t-Tests in R",
+    "section": "The crucial difference between p and d",
+    "text": "The crucial difference between p and d",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#reset-first-1",
+    "href": "week14/lab/instructor-slides.html#reset-first-1",
+    "title": "t-Tests in R",
+    "section": "Reset First!",
+    "text": "Reset First!\nSet back to: means = 50 and 58, SDs = 10",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#experiment-small-sample",
+    "href": "week14/lab/instructor-slides.html#experiment-small-sample",
+    "title": "t-Tests in R",
+    "section": "Experiment: Small Sample",
+    "text": "Experiment: Small Sample\nChange N from 30 to 10\n\nWhat happens?\n\np-value gets larger (harder to reach significance)\nCohen’s d stays about the same!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#experiment-large-sample",
+    "href": "week14/lab/instructor-slides.html#experiment-large-sample",
+    "title": "t-Tests in R",
+    "section": "Experiment: Large Sample",
+    "text": "Experiment: Large Sample\nChange N from 10 to 100\n\nWhat happens?\n\np-value gets smaller (easier to reach significance)\nCohen’s d stays about the same!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#the-key-insight",
+    "href": "week14/lab/instructor-slides.html#the-key-insight",
+    "title": "t-Tests in R",
+    "section": "The Key Insight",
+    "text": "The Key Insight\n\n\n\n\n\n\nWhy This Matters\n\n\np-value depends on sample size\nCohen’s d does NOT depend on sample size\nWith enough participants, even a TINY effect becomes “significant”!\n\n\n\n\nThis is why we ALWAYS report effect sizes.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#activity-part-5",
+    "href": "week14/lab/instructor-slides.html#activity-part-5",
+    "title": "t-Tests in R",
+    "section": "Activity: Part 5",
+    "text": "Activity: Part 5\nComplete Part 5: Experiment - Changing Sample Size\n\nTry N = 10 (small)\nTry N = 100 (large)\nAnswer questions 15-17",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#same-people-measured-twice",
+    "href": "week14/lab/instructor-slides.html#same-people-measured-twice",
+    "title": "t-Tests in R",
+    "section": "Same people, measured twice",
+    "text": "Same people, measured twice",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#setting-up-a-within-subjects-study",
+    "href": "week14/lab/instructor-slides.html#setting-up-a-within-subjects-study",
+    "title": "t-Tests in R",
+    "section": "Setting Up a Within-Subjects Study",
+    "text": "Setting Up a Within-Subjects Study\nIn the app, set:\n\n\n\nSetting\nValue\n\n\n\n\nDesign\nWithin-groups\n\n\nDV name\nMood Rating\n\n\nIV name\nTime\n\n\nLevel A\nBefore\n\n\nLevel B\nAfter\n\n\nLevel A mean\n5\n\n\nLevel B mean\n7\n\n\nBoth SDs\n2\n\n\nN participants\n30\n\n\n\nThen click Run analysis",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#whats-different",
+    "href": "week14/lab/instructor-slides.html#whats-different",
+    "title": "t-Tests in R",
+    "section": "What’s Different?",
+    "text": "What’s Different?\nLook at the results:\n\nTest is now Paired samples t-test\nEffect size is dz (for paired data)\nInterpretation talks about “change” not “group difference”\nStory hook says “twice for each participant”",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#activity-part-6",
+    "href": "week14/lab/instructor-slides.html#activity-part-6",
+    "title": "t-Tests in R",
+    "section": "Activity: Part 6",
+    "text": "Activity: Part 6\nComplete Part 6: Within-Subjects Design\n\nSet up the within-subjects experiment\nRun the analysis\nAnswer questions 18-20",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#get-creative",
+    "href": "week14/lab/instructor-slides.html#get-creative",
+    "title": "t-Tests in R",
+    "section": "Get creative!",
+    "text": "Get creative!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#your-challenge",
+    "href": "week14/lab/instructor-slides.html#your-challenge",
+    "title": "t-Tests in R",
+    "section": "Your Challenge",
+    "text": "Your Challenge\nDesign TWO studies:\nStudy 1 (Between-subjects):\n\nThink of two groups to compare\nName your variables\nSet realistic parameters\nRun it!\n\nStudy 2 (Within-subjects):\n\nThink of a before/after scenario\nName your variables\nSet realistic parameters\nRun it!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#activity-part-7",
+    "href": "week14/lab/instructor-slides.html#activity-part-7",
+    "title": "t-Tests in R",
+    "section": "Activity: Part 7",
+    "text": "Activity: Part 7\nComplete Part 7: Design Your Own Study\nBe creative with your study ideas!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#choosing-the-right-test",
+    "href": "week14/lab/instructor-slides.html#choosing-the-right-test",
+    "title": "t-Tests in R",
+    "section": "Choosing the Right Test",
+    "text": "Choosing the Right Test\n\n\n\nDesign\nPeople\nTest\n\n\n\n\nBetween-subjects\nDifferent in each group\nIndependent t-test\n\n\nWithin-subjects\nSame, measured twice\nPaired t-test",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#what-affects-significance",
+    "href": "week14/lab/instructor-slides.html#what-affects-significance",
+    "title": "t-Tests in R",
+    "section": "What Affects Significance?",
+    "text": "What Affects Significance?\n\n\n\nFactor\nEffect on p-value\n\n\n\n\nLarger mean difference\nSmaller p (easier)\n\n\nSmaller SDs\nSmaller p (easier)\n\n\nLarger sample\nSmaller p (easier)",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#what-affects-effect-size",
+    "href": "week14/lab/instructor-slides.html#what-affects-effect-size",
+    "title": "t-Tests in R",
+    "section": "What Affects Effect Size?",
+    "text": "What Affects Effect Size?\n\n\n\nFactor\nEffect on Cohen’s d\n\n\n\n\nLarger mean difference\nLarger d\n\n\nSmaller SDs\nLarger d\n\n\nSample size\nNO EFFECT",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#why-report-both",
+    "href": "week14/lab/instructor-slides.html#why-report-both",
+    "title": "t-Tests in R",
+    "section": "Why Report Both?",
+    "text": "Why Report Both?\n\n\n\n\n\n\nThe Complete Picture\n\n\n\np-value tells us IF the effect is real\nEffect size tells us HOW BIG it is\n\nA significant result isn’t always a meaningful result!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week14/lab/instructor-slides.html#final-activity",
+    "href": "week14/lab/instructor-slides.html#final-activity",
+    "title": "t-Tests in R",
+    "section": "Final Activity",
+    "text": "Final Activity\nComplete the Final Knowledge Check (questions 21-25)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13928,7 +14320,7 @@
     "href": "week14/lab/instructor-slides.html#next-steps",
     "title": "t-Tests in R",
     "section": "Next Steps",
-    "text": "Next Steps\nDirect students to:\n\nComplete the Week 14 Self-Assessment Quiz\nReview APA reporting format for assessments\nPrepare for Week 15: Correlation - relationships between variables",
+    "text": "Next Steps\n\nComplete the Week 14 Self-Assessment Quiz\nReview APA reporting format for assessments\nPrepare for Week 15: Correlation - relationships between variables",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13952,25 +14344,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/instructor-slides.html#then-lets-begin-the-activity",
-    "href": "week14/lab/instructor-slides.html#then-lets-begin-the-activity",
-    "title": "t-Tests in R",
-    "section": "Then let’s begin the activity!",
-    "text": "Then let’s begin the activity!\n\nInstructor slides complete. Approximately 10 minutes of introduction before moving to hands-on activity. Walk around and help students as they work through each section.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lab",
-      "Instructor Slides"
-    ]
-  },
-  {
     "objectID": "week14/lab/activity.html",
     "href": "week14/lab/activity.html",
     "title": "t-tests in R",
     "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis lab introduces the t-test - the workhorse of psychological research for comparing means:\n\nRunning independent samples t-tests (between-subjects)\nRunning paired samples t-tests (within-subjects)\nInterpreting R output from t.test()\nChoosing the right test for your design",
+    "text": "In this activity, you’ll use an interactive tool to explore how t-tests work. You’ll create your own experiments, adjust the data, and see how different choices affect your results.\n\n\n\n\n\n\nTipWhat You’ll Learn\n\n\n\nBy the end of this activity, you will be able to:\n\nChoose the correct t-test for different research designs\nUnderstand how means, SDs, and sample size affect significance\nInterpret t-test output including p-values and effect sizes\nSee why we report both p-values AND effect sizes",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13980,11 +14358,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/activity.html#overview",
-    "href": "week14/lab/activity.html#overview",
+    "objectID": "week14/lab/activity.html#welcome-to-the-choose-your-own-t-test-adventure",
+    "href": "week14/lab/activity.html#welcome-to-the-choose-your-own-t-test-adventure",
     "title": "t-tests in R",
     "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis lab introduces the t-test - the workhorse of psychological research for comparing means:\n\nRunning independent samples t-tests (between-subjects)\nRunning paired samples t-tests (within-subjects)\nInterpreting R output from t.test()\nChoosing the right test for your design",
+    "text": "In this activity, you’ll use an interactive tool to explore how t-tests work. You’ll create your own experiments, adjust the data, and see how different choices affect your results.\n\n\n\n\n\n\nTipWhat You’ll Learn\n\n\n\nBy the end of this activity, you will be able to:\n\nChoose the correct t-test for different research designs\nUnderstand how means, SDs, and sample size affect significance\nInterpret t-test output including p-values and effect sizes\nSee why we report both p-values AND effect sizes",
     "crumbs": [
       "Home",
       "Term 2",
@@ -13994,11 +14372,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/activity.html#activity-1-independent-t-test-lab-a-vs-lab-b-memory-20-min",
-    "href": "week14/lab/activity.html#activity-1-independent-t-test-lab-a-vs-lab-b-memory-20-min",
+    "objectID": "week14/lab/activity.html#open-the-app",
+    "href": "week14/lab/activity.html#open-the-app",
     "title": "t-tests in R",
-    "section": "Activity 1: Independent t-test (Lab A vs Lab B Memory) (20 min)",
-    "text": "Activity 1: Independent t-test (Lab A vs Lab B Memory) (20 min)\n\nWhen to Use an Independent t-test\nAn independent samples t-test compares means from two different groups of participants.\n\n\n\n\n\n\n\n\n\n\n\nConceptual Questions\n1. This comparison (Lab A vs Lab B) uses an independent t-test because:\nThe same participants are in both groupsDifferent participants are in each groupWe are comparing more than two groupsThere is no control group\n2. What are the two groups being compared?\nLab A (abstract words) vs Lab B (concrete words)Before vs AfterHigh vs Low performersMorning vs Afternoon sessions\n3. What is the dependent variable in this analysis?\nWord type (abstract/concrete)Lab groupNumber of words recalledParticipant ID\n\n\nUnderstanding the R Output\nHere’s what R output from t.test() looks like:\n    Welch Two Sample t-test\n\ndata:  mem_total_1 by Lab\nt = -2.45, df = 38.2, p-value = 0.019\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -2.15  -0.21\nsample estimates:\nmean in group Lab A  mean in group Lab B\n               5.40                6.58\n4. Looking at the output above, what is the t-statistic?\n38.20.019-2.45-2.15\n5. What is the p-value?\n-2.4538.20.0196.58\n6. At alpha = 0.05, would we reject the null hypothesis?\nYes, because p &lt; 0.05No, because p &gt; 0.05Can’t tell from this outputYes, because t is negative\n7. The 95% CI for the difference is [-2.15, -0.21]. What does this tell us?\nThe CI doesn’t include 0, supporting a real differenceThe CI includes 0, so there’s no differenceLab B scored lower than Lab AThe difference is not significant\nTrue or False: A negative t-value means the first group has a lower mean than the second. TRUEFALSE",
+    "section": "Open the App",
+    "text": "Open the App\n\n\n\n\n\n\nImportantLaunch the Choose your own t-test Explorer\n\n\n\nClick here to open the app: t-test Explorer\nKeep the app open in a separate tab/window as you work through this activity.\n\n\nTake a moment to look at the app. You’ll see:\n\nLeft panel: Controls for setting up your experiment\nRight panel: Three tabs showing your data, distribution, and results",
     "crumbs": [
       "Home",
       "Term 2",
@@ -14008,11 +14386,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/activity.html#activity-2-paired-t-test-pre-vs-post-mood-20-min",
-    "href": "week14/lab/activity.html#activity-2-paired-t-test-pre-vs-post-mood-20-min",
+    "objectID": "week14/lab/activity.html#part-1-understanding-the-two-designs",
+    "href": "week14/lab/activity.html#part-1-understanding-the-two-designs",
     "title": "t-tests in R",
-    "section": "Activity 2: Paired t-test (Pre vs Post Mood) (20 min)",
-    "text": "Activity 2: Paired t-test (Pre vs Post Mood) (20 min)\n\nWhen to Use a Paired t-test\nA paired samples t-test compares means from the same participants measured twice.\n\n\n\n\n\n\n\n\n\n\n\nConceptual Questions\n1. This comparison uses a paired t-test because:\nThe same participants are measured at both time pointsDifferent participants are in each groupWe are comparing more than two groupsThe data is paired with another dataset\n2. What is the advantage of a paired design over an independent design?\nEasier to recruit participantsFaster to runEach person is their own control, reducing individual differencesNo assumptions required\n3. In R, how do we specify a paired t-test?\nt.test(x, y, type = ‘paired’)t.test(x, y, paired = TRUE)paired.t.test(x, y)t.test.paired(x, y)\n\n\nUnderstanding Paired Output\n    Paired t-test\n\ndata:  mood_pre and mood_post\nt = -3.12, df = 42, p-value = 0.003\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n -1.52  -0.32\nsample estimates:\nmean difference\n          -0.92\n4. The mean difference of -0.92 means:\nPre scores were 0.92 higher than postPost scores were 0.92 higher than preThe groups are 0.92 apart on average92% of people improved\n5. Is this difference statistically significant at alpha = 0.05?\nYes, p = 0.003 &lt; 0.05No, p = 0.003 &gt; 0.05Can’t tellOnly marginally significant\n6. The degrees of freedom (df) for a paired t-test equals:\nnn - 1 (number of pairs minus 1)n - 2n1 + n2 - 2\nTrue or False: In a paired t-test, we analyse the difference scores, not the raw scores. TRUEFALSE",
+    "section": "Part 1: Understanding the Two Designs",
+    "text": "Part 1: Understanding the Two Designs\nThe first choice you make is crucial: What type of design is your study?\n\nBetween-Subjects Design\nIn a between-subjects (or “between-groups”) design:\n\nDifferent people are in each condition\nEach participant only experiences ONE level of the IV\nWe compare Group A to Group B\n\nExamples:\n\nComparing test scores between students who used Method A vs Method B\nComparing anxiety levels in people who received therapy vs a control group\nComparing memory for abstract words (Lab A) vs concrete words (Lab B)\n\n\n\nWithin-Subjects Design\nIn a within-subjects (or “repeated measures”) design:\n\nThe SAME people are in both conditions\nEach participant experiences BOTH levels of the IV\nWe compare each person’s score at Time 1 to their score at Time 2\n\nExamples:\n\nMeasuring mood before AND after a relaxation exercise\nTesting reaction time with AND without distractions\nComparing performance on Monday vs Friday (same students)\n\n\n\n\nSelf-Check: Design Types\n\n1. A researcher randomly assigns 30 students to learn with flashcards and 30 different students to learn with practice tests, then compares their exam scores.\nBetween-subjectsWithin-subjects\n2. A researcher measures participants’ stress levels before a meditation session, then measures the SAME participants’ stress levels after the session.\nBetween-subjectsWithin-subjects\n3. In Lab A, students memorised abstract words. In Lab B, different students memorised concrete words. This is:\nBetween-subjectsWithin-subjects\n4. The same participants rate how attractive faces look when smiling vs when neutral.\nBetween-subjectsWithin-subjects",
     "crumbs": [
       "Home",
       "Term 2",
@@ -14022,11 +14400,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/activity.html#activity-3-interpreting-output-20-min",
-    "href": "week14/lab/activity.html#activity-3-interpreting-output-20-min",
+    "objectID": "week14/lab/activity.html#part-2-your-first-experiment-between-subjects",
+    "href": "week14/lab/activity.html#part-2-your-first-experiment-between-subjects",
     "title": "t-tests in R",
-    "section": "Activity 3: Interpreting Output (20 min)",
-    "text": "Activity 3: Interpreting Output (20 min)\n\nReading and Reporting t-test Results\nPsychologists report t-test results in a specific format. Let’s practice!\nStandard format: t(df) = value, p = value\n\n\nPractice Examples\nExample 1:\nt = 2.34, df = 28, p-value = 0.027\n1. How would you report this result?\nt = 2.34, p = 0.027t(28) = 2.34, p = .027t(2.34) = 28, p = 0.027df = 28, t = 2.34\n2. Is this result significant at alpha = 0.05?\nYesNoCan’t tellMarginally significant\nExample 2:\nt = 1.52, df = 45, p-value = 0.136\n3. Is this result significant at alpha = 0.05?\nYesNoCan’t tellMarginally significant\n4. What should you conclude?\nThe groups are definitely the sameWe cannot reject the null hypothesis - insufficient evidence of a differenceThe experiment failedWe need to use a different test\n\n\nAssumptions of the t-test\n5. Which assumption is about the shape of the data distribution?\nNormality assumptionIndependence assumptionHomogeneity of varianceRandomness assumption\n6. Welch’s t-test is preferred when:\nSample sizes are equalData is normally distributedVariances may be unequal between groupsWe want a paired test\n7. Independence means:\nOne person’s score doesn’t influence another’sThe groups are completely separateVariables are uncorrelatedThe test is unbiased\nTrue or False: t-tests are robust to mild violations of normality, especially with larger samples. TRUEFALSE\nTrue or False: If p = 0.06, the result is “almost significant” and we should report it as meaningful. TRUEFALSE",
+    "section": "Part 2: Your First Experiment (Between-Subjects)",
+    "text": "Part 2: Your First Experiment (Between-Subjects)\nLet’s run your first simulated experiment!\n\nStep-by-Step Instructions\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nIn the app:\n\nStep 0: Select “Between-groups (different people in each group)”\nStep 1: Name your study:\n\nDV name: Memory Score\nIV name: Word Type\nLevel A name: Abstract\nLevel B name: Concrete\n\nStep 2: Set the parameters:\n\nLevel A mean: 50\nLevel A SD: 10\nLevel B mean: 58\nLevel B SD: 10\nN participants: 30\n\nClick Run analysis\nLook at all three tabs: Raw data, Distribution, and t-test Results\n\n\n\n\n\nWhat to Notice\nDistribution tab:\n\nCan you see two overlapping curves?\nThe blue curve shows Abstract words, orange shows Concrete words\nHow much do they overlap?\n\nt-test Results tab:\n\nFind the t-value and p-value\nFind Cohen’s d - is it small, medium, or large?\nIs the result SIGNIFICANT or NOT SIGNIFICANT?\n\n\n\n\nSelf-Check: Reading the Output\n\n5. In your results, the test used is called:\nIndependent samples t-testPaired samples t-test\n6. If your p-value is less than 0.05, this means:\nThe difference is statistically significantThe difference is not significantThe effect is large\n7. Cohen’s d tells us:\nWhether the result is significantHow big the effect isThe sample size needed\n8. A Cohen’s d of 0.75 would be considered:\nSmallMedium to largeTiny",
     "crumbs": [
       "Home",
       "Term 2",
@@ -14036,11 +14414,67 @@
     ]
   },
   {
-    "objectID": "week14/lab/activity.html#activity-4-choosing-the-right-test-20-min",
-    "href": "week14/lab/activity.html#activity-4-choosing-the-right-test-20-min",
+    "objectID": "week14/lab/activity.html#part-3-experiment---changing-the-means",
+    "href": "week14/lab/activity.html#part-3-experiment---changing-the-means",
     "title": "t-tests in R",
-    "section": "Activity 4: Choosing the Right Test (20 min)",
-    "text": "Activity 4: Choosing the Right Test (20 min)\n\nDecision Tree Practice\nFor each scenario, identify whether to use an independent or paired t-test.\n\n\nScenario 1\nA researcher measures anxiety levels in 30 participants before and after a relaxation intervention.\nWhich t-test? Independent t-testPaired t-test\nWhy? Different people in each conditionSame people measured twice\n\n\nScenario 2\nComparing exam scores between students who used Method A vs Method B to study.\nWhich t-test? Independent t-testPaired t-test\nWhy? Different people in each conditionSame people measured twice\n\n\nScenario 3\nTesting whether people rate faces as more attractive when the same faces are presented smiling vs neutral.\nWhich t-test? Independent t-testPaired t-test\nWhy? Different people rate different facesSame people rate both versions of faces\n\n\nScenario 4\nComparing reaction times between left-handed and right-handed participants.\nWhich t-test? Independent t-testPaired t-test\nWhy? Handedness is a between-subjects variablePeople switch hands during the experiment\n\n\nScenario 5\nEach participant completes a task under quiet conditions and under noisy conditions.\nWhich t-test? Independent t-testPaired t-test\nWhy? Different people in each conditionSame people tested in both conditions\n\n\nThe Key Question\nTo decide which t-test to use, ask yourself:\nHow many variables are there?Is the data normally distributed?Are the SAME or DIFFERENT people in each condition?What is the sample size?",
+    "section": "Part 3: Experiment - Changing the Means",
+    "text": "Part 3: Experiment - Changing the Means\nNow let’s see what happens when we change how different the groups are.\n\nExperiment 3a: Make the Groups More Different\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange Level B mean from 58 to 70 (keep everything else the same).\nClick Run analysis and observe:\n\nHow does the distribution change?\nWhat happens to the p-value?\nWhat happens to Cohen’s d?\n\n\n\nWhat you should see: The curves separate more. The p-value gets smaller. Cohen’s d gets larger.\n\n\nExperiment 3b: Make the Groups Almost Identical\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange Level B mean from 70 to 51 (very close to Level A’s 50).\nClick Run analysis and observe:\n\nHow much do the distributions overlap now?\nIs the result still significant?\nWhat is Cohen’s d?\n\n\n\nWhat you should see: The curves overlap almost completely. The p-value is likely &gt; 0.05 (not significant). Cohen’s d is tiny.\n\n\n\nSelf-Check: Effect of Means\n\n9. When the means are further apart, the p-value tends to be:\nSmaller (more significant)Larger (less significant)Unchanged\n10. When the means are further apart, Cohen’s d tends to be:\nLargerSmallerUnchanged\n11. If two groups have almost identical means, you would expect:\nA significant resultA non-significant resultA large effect size",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week14/lab/activity.html#part-4-experiment---changing-the-variability-sd",
+    "href": "week14/lab/activity.html#part-4-experiment---changing-the-variability-sd",
+    "title": "t-tests in R",
+    "section": "Part 4: Experiment - Changing the Variability (SD)",
+    "text": "Part 4: Experiment - Changing the Variability (SD)\nReset your means to: Level A = 50, Level B = 58\nNow let’s see what happens when we change how spread out the scores are within each group.\n\nExperiment 4a: Increase the Variability\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange both SDs from 10 to 25.\nClick Run analysis and observe:\n\nHow does the distribution change?\nWhat happens to significance?\nWhat happens to Cohen’s d?\n\n\n\nWhat you should see: The curves are wider and overlap more. It’s harder to detect the difference. Cohen’s d is smaller.\n\n\nExperiment 4b: Decrease the Variability\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange both SDs from 25 to 5.\nClick Run analysis and observe:\n\nHow do the distributions look now?\nIs the result significant?\nWhat is Cohen’s d?\n\n\n\nWhat you should see: The curves are narrow and barely overlap. The difference is very clear. Cohen’s d is large.\n\n\n\nSelf-Check: Effect of Variability\n\n12. When SDs are larger (more variability), it becomes:\nEasier to detect a differenceHarder to detect a difference\n13. Larger SDs make Cohen’s d:\nLargerSmaller\n14. If your data has very little variability (small SDs), the distributions will:\nOverlap a lotOverlap very little",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week14/lab/activity.html#part-5-experiment---changing-sample-size",
+    "href": "week14/lab/activity.html#part-5-experiment---changing-sample-size",
+    "title": "t-tests in R",
+    "section": "Part 5: Experiment - Changing Sample Size",
+    "text": "Part 5: Experiment - Changing Sample Size\nReset your settings to: Means = 50 and 58, SDs = 10 and 10\nNow let’s explore the effect of sample size.\n\nExperiment 5a: Small Sample\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange N participants from 30 to 10.\nClick Run analysis and observe:\n\nWhat happens to the p-value?\nWhat happens to Cohen’s d?\n\n\n\n\n\nExperiment 5b: Large Sample\n\n\n\n\n\n\nNoteDo This Now\n\n\n\nChange N participants from 10 to 100.\nClick Run analysis and observe:\n\nWhat happens to the p-value?\nWhat happens to Cohen’s d?\n\n\n\n\n\n\nSelf-Check: Effect of Sample Size\n\n15. Increasing sample size makes it:\nEasier to detect a real differenceHarder to detect a differenceNo effect\n16. When you increase sample size, Cohen’s d:\nIncreasesDecreasesStays about the same\n17. This is why we report effect sizes - because:\nA tiny effect can be ‘significant’ with a large enough sampleEffect sizes are easier to calculateP-values are unreliable",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week14/lab/activity.html#part-6-within-subjects-design",
+    "href": "week14/lab/activity.html#part-6-within-subjects-design",
+    "title": "t-tests in R",
+    "section": "Part 6: Within-Subjects Design",
+    "text": "Part 6: Within-Subjects Design\nNow let’s try a different type of experiment!\n\nSetting Up a Within-Subjects Study\n\n\n\n\n\n\nNoteDo This Now\n\n\n\n\nStep 0: Select “Within-groups (same people measured twice)”\nStep 1: Name your study:\n\nDV name: Mood Rating\nIV name: Time\nLevel A name: Before\nLevel B name: After\n\nStep 2: Set the parameters:\n\nLevel A mean: 5 (mood before)\nLevel A SD: 2\nLevel B mean: 7 (mood after)\nLevel B SD: 2\nN participants: 30\n\nClick Run analysis\n\n\n\n\n\nWhat’s Different?\nLook at the t-test Results tab. Notice:\n\nThe test is now called a Paired samples t-test\nThe effect size is called dz (for paired/dependent data)\nThe interpretation talks about “change” rather than “group difference”\n\n\n\n\nSelf-Check: Within-Subjects\n\n18. For within-subjects designs, we use:\nIndependent samples t-testPaired samples t-test\n19. In a within-subjects design, the same participants are:\nIn only one conditionIn both conditions\n20. The story hook in the app now says the measurement happened:\nIn different groupsTwice for each participant",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week14/lab/activity.html#part-7-design-your-own-study",
+    "href": "week14/lab/activity.html#part-7-design-your-own-study",
+    "title": "t-tests in R",
+    "section": "Part 7: Design Your Own Study",
+    "text": "Part 7: Design Your Own Study\nNow it’s your turn to be creative!\n\n\n\n\n\n\nNoteChallenge\n\n\n\nDesign TWO studies - one between-subjects and one within-subjects:\nStudy 1 (Between-subjects):\n\nThink of two different groups you could compare\nName your DV and IV appropriately\nSet realistic means and SDs\nRun the analysis\n\nStudy 2 (Within-subjects):\n\nThink of something you could measure before and after\nName your DV and IV appropriately\nSet realistic means and SDs\nRun the analysis",
     "crumbs": [
       "Home",
       "Term 2",
@@ -14054,7 +14488,21 @@
     "href": "week14/lab/activity.html#summary",
     "title": "t-tests in R",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nImportantKey Takeaways\n\n\n\nIndependent t-test: - Compares means from TWO DIFFERENT groups - Use for between-subjects designs - df = n1 + n2 - 2\nPaired t-test: - Compares means from the SAME people measured twice - Use for within-subjects designs - df = n - 1 (number of pairs minus 1) - More powerful (controls for individual differences)\nReporting: - Format: t(df) = value, p = value - Include effect size (Cohen’s d) when possible - Report 95% CI for the difference\nChoosing: - Ask: “Same people or different people?”",
+    "text": "Summary\n\n\n\n\n\n\nImportantKey Takeaways\n\n\n\nChoosing the right test:\n\nDifferent people in each group → Independent samples t-test\nSame people measured twice → Paired samples t-test\n\nWhat affects significance (p-value):\n\nLarger difference between means → easier to detect\nSmaller SDs (less noise) → easier to detect\nLarger sample size → easier to detect\n\nWhat affects effect size (Cohen’s d):\n\nLarger difference between means → larger d\nSmaller SDs → larger d\nSample size does NOT affect d\n\nWhy we report both:\n\np-value tells us IF the effect is real\nEffect size tells us HOW BIG the effect is\nA significant result isn’t always a meaningful result!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week14/lab/activity.html#final-knowledge-check",
+    "href": "week14/lab/activity.html#final-knowledge-check",
+    "title": "t-tests in R",
+    "section": "Final Knowledge Check",
+    "text": "Final Knowledge Check\n\n21. A study comparing anxiety in nurses vs teachers would use:\nIndependent samples t-testPaired samples t-test\n22. A study measuring confidence before and after training would use:\nIndependent samples t-testPaired samples t-test\n23. If p = 0.02 and d = 0.15, the effect is:\nSignificant but tinySignificant and largeNot significant\n24. If p = 0.08 and d = 0.90, the effect is:\nSignificant and largeNot significant but potentially largeNot significant and small\n25. To make a non-significant result significant, you could:\nDecrease sample sizeIncrease sample sizeIncrease the SDs",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15500,104 +15948,6 @@
       "Textbook",
       "Self-Assessment Quizzes",
       "Week 14 Quiz"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#summary",
-    "href": "week14/lecture/slides.html#summary",
-    "title": "Is Your Effect Real?",
-    "section": "Summary",
-    "text": "Summary",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#a-visual-demonstration",
-    "href": "week14/lecture/slides.html#a-visual-demonstration",
-    "title": "Is Your Effect Real?",
-    "section": "A visual demonstration",
-    "text": "A visual demonstration",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#one-or-two-tailed",
-    "href": "week14/lecture/slides.html#one-or-two-tailed",
-    "title": "Is Your Effect Real?",
-    "section": "One or Two Tailed",
-    "text": "One or Two Tailed",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#in-short",
-    "href": "week14/lecture/slides.html#in-short",
-    "title": "Is Your Effect Real?",
-    "section": "In short",
-    "text": "In short",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#signal-wins",
-    "href": "week14/lecture/slides.html#signal-wins",
-    "title": "Is Your Effect Real?",
-    "section": "Signal wins",
-    "text": "Signal wins",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#another-view",
-    "href": "week14/lecture/slides.html#another-view",
-    "title": "Is Your Effect Real?",
-    "section": "Another view",
-    "text": "Another view",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "week14/lecture/slides.html#in-future",
-    "href": "week14/lecture/slides.html#in-future",
-    "title": "Is Your Effect Real?",
-    "section": "In future",
-    "text": "In future\nYou will discuss assumptions…",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lecture",
-      "Slides"
     ]
   }
 ]
