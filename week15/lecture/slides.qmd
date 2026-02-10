@@ -33,7 +33,7 @@ By the end of this lecture you will be able to:
 
 ## Beyond Group Differences
 
-<!-- TODO: Introduce correlational thinking -->
+<!-- Introduce correlational thinking -->
 
 ::: {.incremental}
 - So far: comparing groups (t-tests)
@@ -49,7 +49,7 @@ By the end of this lecture you will be able to:
 
 ## What is Correlation?
 
-<!-- TODO: Define correlation -->
+<!-- Define correlation -->
 
 ::: {.definition-box}
 **Correlation**: A statistical measure that quantifies the strength and direction of the linear relationship between two continuous variables.
@@ -57,26 +57,50 @@ By the end of this lecture you will be able to:
 
 ## Direction of Relationships
 
-<!-- TODO: Explain positive vs negative -->
+```{r}
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+set.seed(42)
+n <- 50
+
+pos_data <- data.frame(
+  x = rnorm(n, 50, 10),
+  type = "Positive"
+)
+pos_data$y <- 0.8 * pos_data$x + rnorm(n, 0, 5)
+
+neg_data <- data.frame(
+  x = rnorm(n, 50, 10),
+  type = "Negative"
+)
+neg_data$y <- 100 - 0.8 * neg_data$x + rnorm(n, 0, 5)
+
+plot_data <- rbind(pos_data, neg_data)
+plot_data$type <- factor(plot_data$type, levels = c("Positive", "Negative"))
+
+ggplot(plot_data, aes(x = x, y = y)) +
+  geom_point(colour = "#275882", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, colour = "#EA8439", linewidth = 1.5) +
+  facet_wrap(~type, scales = "free_y") +
+  theme_minimal(base_size = 18) +
+  labs(x = "Variable X", y = "Variable Y") +
+  theme(
+    strip.text = element_text(face = "bold", size = 20),
+    panel.grid.minor = element_blank()
+  )
+```
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Positive Correlation**
-
-- As X increases, Y increases
-- Variables move together
-- Upward slope
+**Positive**: As X ↑, Y ↑
 
 *Example: Height and weight*
 :::
 
 ::: {.column width="50%"}
-**Negative Correlation**
-
-- As X increases, Y decreases
-- Variables move opposite
-- Downward slope
+**Negative**: As X ↑, Y ↓
 
 *Example: Stress and sleep quality*
 :::
@@ -85,34 +109,81 @@ By the end of this lecture you will be able to:
 
 ## Strength of Relationships
 
-<!-- TODO: Explain strength -->
+```{r}
+#| fig-width: 10
+#| fig-height: 5
+set.seed(123)
+n <- 40
 
-::: {.incremental}
-- **Perfect**: All points on a line (r = +/- 1.0)
-- **Strong**: Points cluster tightly around line
-- **Weak**: Points scattered loosely
-- **Zero**: No linear pattern (r = 0)
-:::
+make_corr_data <- function(r, label) {
+  x <- rnorm(n, 50, 10)
+  y <- r * scale(x) + sqrt(1 - r^2) * rnorm(n)
+  data.frame(x = x, y = y * 10 + 50, strength = label)
+}
+
+strength_data <- rbind(
+  make_corr_data(0.95, "Strong (r = 0.95)"),
+  make_corr_data(0.50, "Moderate (r = 0.50)"),
+  make_corr_data(0.15, "Weak (r = 0.15)")
+)
+strength_data$strength <- factor(strength_data$strength,
+  levels = c("Strong (r = 0.95)", "Moderate (r = 0.50)", "Weak (r = 0.15)"))
+
+ggplot(strength_data, aes(x = x, y = y)) +
+  geom_point(colour = "#275882", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, colour = "#EA8439", linewidth = 1.5) +
+  facet_wrap(~strength) +
+  theme_minimal(base_size = 18) +
+  labs(x = "Variable X", y = "Variable Y") +
+  theme(
+    strip.text = element_text(face = "bold", size = 16),
+    panel.grid.minor = element_blank()
+  )
+```
 
 ## Types of Relationships
 
-<!-- TODO: Add visual examples -->
+```{r}
+#| fig-width: 10
+#| fig-height: 5
+set.seed(456)
+n <- 50
 
-::: {.example-box}
-**Linear vs Non-linear:**
+x_lin <- seq(20, 80, length.out = n)
+y_lin <- 0.8 * x_lin + rnorm(n, 0, 5)
 
-Correlation measures LINEAR relationships only. A strong curved relationship might show r near 0!
-:::
+x_curve <- seq(20, 80, length.out = n)
+y_curve <- -0.03 * (x_curve - 50)^2 + 60 + rnorm(n, 0, 3)
 
-::: {.fragment}
-<!-- TODO: Add plot showing linear, curvilinear, and no relationship -->
+x_none <- rnorm(n, 50, 12)
+y_none <- rnorm(n, 50, 12)
+
+type_data <- rbind(
+  data.frame(x = x_lin, y = y_lin, type = paste0("Linear (r = ", round(cor(x_lin, y_lin), 2), ")")),
+  data.frame(x = x_curve, y = y_curve, type = paste0("Curvilinear (r = ", round(cor(x_curve, y_curve), 2), ")")),
+  data.frame(x = x_none, y = y_none, type = paste0("No Relationship (r = ", round(cor(x_none, y_none), 2), ")"))
+)
+type_data$type <- factor(type_data$type, levels = unique(type_data$type))
+
+ggplot(type_data, aes(x = x, y = y)) +
+  geom_point(colour = "#275882", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, colour = "#EA8439", linewidth = 1.5) +
+  facet_wrap(~type) +
+  theme_minimal(base_size = 18) +
+  labs(x = "Variable X", y = "Variable Y") +
+  theme(
+    strip.text = element_text(face = "bold", size = 14),
+    panel.grid.minor = element_blank()
+  )
+```
+
+::: {.callout-warning}
+Correlation measures LINEAR relationships only. The curvilinear data has a strong pattern but r ≈ 0!
 :::
 
 # Scatterplots {background-color="#275882"}
 
 ## Visualising Relationships
-
-<!-- TODO: Introduce scatterplots -->
 
 ::: {.definition-box}
 **Scatterplot**: A graph displaying the relationship between two continuous variables, with each observation represented as a point.
@@ -126,8 +197,6 @@ Correlation measures LINEAR relationships only. A strong curved relationship mig
 
 ## Creating Good Scatterplots
 
-<!-- TODO: Best practices -->
-
 ::: {.incremental}
 - Label axes clearly (with units)
 - Use appropriate scales
@@ -135,19 +204,39 @@ Correlation measures LINEAR relationships only. A strong curved relationship mig
 - Look for patterns, outliers, clusters
 :::
 
-## Example Scatterplots
-
-<!-- TODO: Add example plots -->
+## Example: Study Hours vs Exam Scores
 
 ```{r}
-#| eval: false
-# TODO: Add R code creating scatterplots showing
-# positive, negative, strong, weak correlations
+#| fig-width: 8
+#| fig-height: 5
+set.seed(789)
+n <- 60
+
+study_data <- data.frame(
+  study_hours = pmax(1, rnorm(n, 15, 6)),
+  noise = rnorm(n, 0, 8)
+)
+study_data$exam_score <- pmin(100, pmax(30, 35 + 3.2 * study_data$study_hours + study_data$noise))
+
+r_val <- round(cor(study_data$study_hours, study_data$exam_score), 2)
+
+ggplot(study_data, aes(x = study_hours, y = exam_score)) +
+  geom_point(colour = "#275882", size = 4, alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, colour = "#EA8439", fill = "#EA8439", alpha = 0.2, linewidth = 1.5) +
+  theme_minimal(base_size = 20) +
+  labs(
+    x = "Study Hours per Week",
+    y = "Exam Score (%)",
+    title = paste0("r = ", r_val)
+  ) +
+  theme(
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", hjust = 0.5)
+  ) +
+  scale_y_continuous(limits = c(30, 100))
 ```
 
 ## What to Look For
-
-<!-- TODO: Pattern recognition guide -->
 
 ::: {.example-box}
 **When examining a scatterplot, ask:**
@@ -161,22 +250,53 @@ Correlation measures LINEAR relationships only. A strong curved relationship mig
 
 ## The Impact of Outliers
 
-<!-- TODO: Discuss outlier effects -->
+```{r}
+#| fig-width: 10
+#| fig-height: 4.5
+set.seed(321)
+n <- 30
+
+base_x <- rnorm(n, 50, 8)
+base_y <- 0.7 * scale(base_x) * 8 + 50 + rnorm(n, 0, 4)
+
+no_outlier <- data.frame(x = base_x, y = base_y)
+with_outlier <- rbind(no_outlier, data.frame(x = 80, y = 25))
+
+r_without <- round(cor(no_outlier$x, no_outlier$y), 2)
+r_with <- round(cor(with_outlier$x, with_outlier$y), 2)
+
+no_outlier$group <- paste0("Without Outlier (r = ", r_without, ")")
+with_outlier$group <- paste0("With Outlier (r = ", r_with, ")")
+with_outlier$is_outlier <- c(rep(FALSE, n), TRUE)
+no_outlier$is_outlier <- FALSE
+
+outlier_data <- rbind(no_outlier, with_outlier)
+outlier_data$group <- factor(outlier_data$group, levels = unique(outlier_data$group))
+
+ggplot(outlier_data, aes(x = x, y = y)) +
+  geom_point(aes(colour = is_outlier, size = is_outlier), alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, colour = "#EA8439", linewidth = 1.5) +
+  facet_wrap(~group) +
+  scale_colour_manual(values = c("FALSE" = "#275882", "TRUE" = "red")) +
+  scale_size_manual(values = c("FALSE" = 3, "TRUE" = 5)) +
+  theme_minimal(base_size = 18) +
+  labs(x = "Variable X", y = "Variable Y") +
+  theme(
+    strip.text = element_text(face = "bold", size = 16),
+    panel.grid.minor = element_blank(),
+    legend.position = "none"
+  )
+```
 
 ::: {.callout-warning}
-## Warning
-A single outlier can dramatically change a correlation coefficient. Always visualise your data first!
-:::
-
-::: {.fragment}
-<!-- TODO: Add plot showing outlier impact -->
+A single outlier dramatically changed r from 0.70 to 0.35! Always visualise first.
 :::
 
 # Pearson's r and Spearman's rho {background-color="#275882"}
 
 ## Pearson's Correlation Coefficient
 
-<!-- TODO: Define Pearson's r -->
+<!-- Define Pearson's r -->
 
 ::: {.definition-box}
 **Pearson's r**: A measure of the linear relationship between two continuous variables. Ranges from -1 to +1.
@@ -186,7 +306,7 @@ $$r = \frac{\sum(X - \bar{X})(Y - \bar{Y})}{(n-1)s_X s_Y}$$
 
 ## Interpreting Pearson's r
 
-<!-- TODO: Add interpretation guide -->
+<!-- Add interpretation guide -->
 
 | r value | Interpretation |
 |---------|----------------|
@@ -204,7 +324,7 @@ These are rough guidelines. Context and field norms matter!
 
 ## Coefficient of Determination (r^2)
 
-<!-- TODO: Explain r-squared -->
+<!-- Explain r-squared -->
 
 ::: {.definition-box}
 **r^2 (r-squared)**: The proportion of variance in Y that is explained by X. Found by squaring r.
@@ -220,7 +340,7 @@ If r = 0.6, then r^2 = 0.36
 
 ## Assumptions of Pearson's r
 
-<!-- TODO: List assumptions -->
+<!-- List assumptions -->
 
 ::: {.incremental}
 - Both variables are continuous
@@ -232,7 +352,7 @@ If r = 0.6, then r^2 = 0.36
 
 ## When Pearson's r Fails
 
-<!-- TODO: Introduce need for alternatives -->
+<!-- Introduce need for alternatives -->
 
 ::: {.callout-warning}
 Pearson's r is inappropriate when:
@@ -245,7 +365,7 @@ Pearson's r is inappropriate when:
 
 ## Spearman's Rho (rho)
 
-<!-- TODO: Define Spearman's rho -->
+<!-- Define Spearman's rho -->
 
 ::: {.definition-box}
 **Spearman's rho**: A non-parametric correlation based on ranks rather than raw values. More robust to outliers and non-linearity.
@@ -259,7 +379,7 @@ Pearson's r is inappropriate when:
 
 ## Pearson vs Spearman
 
-<!-- TODO: Comparison table -->
+<!-- Comparison table -->
 
 :::: {.columns}
 
@@ -285,7 +405,7 @@ Pearson's r is inappropriate when:
 
 ## Testing Significance
 
-<!-- TODO: Add significance testing -->
+<!-- Add significance testing -->
 
 ::: {.example-box}
 **Null hypothesis:** r = 0 (no correlation in population)
@@ -299,7 +419,7 @@ Pearson's r is inappropriate when:
 
 ## The Third Variable Problem
 
-<!-- TODO: Explain confounds -->
+<!-- Explain confounds -->
 
 ::: {.definition-box}
 **Third Variable (Confound)**: An unmeasured variable that causes both X and Y, creating a spurious correlation between them.
@@ -315,7 +435,7 @@ Third variable: Hot weather causes both!
 
 ## Directionality Problem
 
-<!-- TODO: Explain directionality -->
+<!-- Explain directionality -->
 
 ::: {.incremental}
 - Correlation shows X and Y are related
@@ -335,7 +455,7 @@ Does depression cause isolation, or isolation cause depression, or both?
 
 ## Famous Spurious Correlations
 
-<!-- TODO: Add entertaining examples -->
+<!-- Add entertaining examples -->
 
 ::: {.example-box}
 **Real correlations that aren't causal:**
@@ -351,7 +471,7 @@ Does depression cause isolation, or isolation cause depression, or both?
 
 ## When CAN We Infer Causation?
 
-<!-- TODO: Discuss causal inference criteria -->
+<!-- Discuss causal inference criteria -->
 
 ::: {.incremental}
 - **Temporal precedence**: Cause before effect
@@ -367,7 +487,7 @@ Experimental designs (with random assignment) can establish causation. Correlati
 
 ## Reporting Correlations
 
-<!-- TODO: APA format guide -->
+<!-- APA format guide -->
 
 ::: {.example-box}
 **APA format:**
@@ -389,14 +509,9 @@ Experimental designs (with random assignment) can establish causation. Correlati
 
 ## Next Week
 
-<!-- TODO: Update with next week's topic -->
+<!-- Update with next week's topic -->
+**Reading Week**
 
-**Week 16: Regression**
-
-- From correlation to prediction
-- Line of best fit
-- R^2 and explained variance
-- Making predictions from data
 
 ## Questions?
 

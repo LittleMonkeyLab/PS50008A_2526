@@ -14973,7 +14973,7 @@
     "href": "week15/lecture/slides.html#direction-of-relationships",
     "title": "Correlation",
     "section": "Direction of Relationships",
-    "text": "Direction of Relationships\n\n\n\nPositive Correlation\n\nAs X increases, Y increases\nVariables move together\nUpward slope\n\nExample: Height and weight\n\nNegative Correlation\n\nAs X increases, Y decreases\nVariables move opposite\nDownward slope\n\nExample: Stress and sleep quality",
+    "text": "Direction of Relationships\n\n\n\nPositive: As X ↑, Y ↑\nExample: Height and weight\n\nNegative: As X ↑, Y ↓\nExample: Stress and sleep quality",
     "crumbs": [
       "Home",
       "Term 2",
@@ -14987,7 +14987,7 @@
     "href": "week15/lecture/slides.html#strength-of-relationships",
     "title": "Correlation",
     "section": "Strength of Relationships",
-    "text": "Strength of Relationships\n\n\nPerfect: All points on a line (r = +/- 1.0)\nStrong: Points cluster tightly around line\nWeak: Points scattered loosely\nZero: No linear pattern (r = 0)",
+    "text": "Strength of Relationships",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15001,7 +15001,7 @@
     "href": "week15/lecture/slides.html#types-of-relationships",
     "title": "Correlation",
     "section": "Types of Relationships",
-    "text": "Types of Relationships\n\n\nLinear vs Non-linear:\nCorrelation measures LINEAR relationships only. A strong curved relationship might show r near 0!",
+    "text": "Types of Relationships\n\n\n\n\n\n\n\nWarning\n\n\nCorrelation measures LINEAR relationships only. The curvilinear data has a strong pattern but r ≈ 0!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15015,7 +15015,7 @@
     "href": "week15/lecture/slides.html#visualising-relationships",
     "title": "Correlation",
     "section": "Visualising Relationships",
-    "text": "Visualising Relationships\n\n\nScatterplot: A graph displaying the relationship between two continuous variables, with each observation represented as a point.\n\n\n\nX-axis: One variable (often predictor)\nY-axis: Other variable (often outcome)\nEach point: One observation",
+    "text": "Visualising Relationships\n\nScatterplot: A graph displaying the relationship between two continuous variables, with each observation represented as a point.\n\n\n\nX-axis: One variable (often predictor)\nY-axis: Other variable (often outcome)\nEach point: One observation",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15029,7 +15029,7 @@
     "href": "week15/lecture/slides.html#creating-good-scatterplots",
     "title": "Correlation",
     "section": "Creating Good Scatterplots",
-    "text": "Creating Good Scatterplots\n\n\nLabel axes clearly (with units)\nUse appropriate scales\nInclude a trend line (with caution)\nLook for patterns, outliers, clusters",
+    "text": "Creating Good Scatterplots\n\nLabel axes clearly (with units)\nUse appropriate scales\nInclude a trend line (with caution)\nLook for patterns, outliers, clusters",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15039,11 +15039,11 @@
     ]
   },
   {
-    "objectID": "week15/lecture/slides.html#example-scatterplots",
-    "href": "week15/lecture/slides.html#example-scatterplots",
+    "objectID": "week15/lecture/slides.html#example-study-hours-vs-exam-scores",
+    "href": "week15/lecture/slides.html#example-study-hours-vs-exam-scores",
     "title": "Correlation",
-    "section": "Example Scatterplots",
-    "text": "Example Scatterplots",
+    "section": "Example: Study Hours vs Exam Scores",
+    "text": "Example: Study Hours vs Exam Scores",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15057,7 +15057,7 @@
     "href": "week15/lecture/slides.html#what-to-look-for",
     "title": "Correlation",
     "section": "What to Look For",
-    "text": "What to Look For\n\n\nWhen examining a scatterplot, ask:\n\nIs there a relationship? (or random scatter?)\nWhat direction? (positive/negative)\nHow strong? (tight/loose clustering)\nIs it linear? (or curved?)\nAny outliers? (unusual points)",
+    "text": "What to Look For\n\nWhen examining a scatterplot, ask:\n\nIs there a relationship? (or random scatter?)\nWhat direction? (positive/negative)\nHow strong? (tight/loose clustering)\nIs it linear? (or curved?)\nAny outliers? (unusual points)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15071,7 +15071,7 @@
     "href": "week15/lecture/slides.html#the-impact-of-outliers",
     "title": "Correlation",
     "section": "The Impact of Outliers",
-    "text": "The Impact of Outliers\n\n\n\n\n\n\n\nWarning\n\n\nA single outlier can dramatically change a correlation coefficient. Always visualise your data first!",
+    "text": "The Impact of Outliers\n\n\n\n\n\n\n\nWarning\n\n\nA single outlier dramatically changed r from 0.70 to 0.35! Always visualise first.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15281,7 +15281,7 @@
     "href": "week15/lecture/slides.html#next-week",
     "title": "Correlation",
     "section": "Next Week",
-    "text": "Next Week\n\nWeek 16: Regression\n\nFrom correlation to prediction\nLine of best fit\nR^2 and explained variance\nMaking predictions from data",
+    "text": "Next Week\n\nReading Week",
     "crumbs": [
       "Home",
       "Term 2",
