@@ -202,26 +202,26 @@ website:
             href: week14/lab/activity.qmd
           - text: Reading
             href: week14/lab/reading.qmd
-      # - section: 'Week 15: Correlation'
-      #   contents:
-      #   - text: Overview
-      #     href: week15/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week15/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week15/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week15/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week15/lab/activity.qmd
-      #     - text: Reading
-      #       href: week15/lab/reading.qmd
+      - section: 'Week 15: Correlation'
+        contents:
+        - text: Overview
+          href: week15/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week15/lecture/reading.qmd
+          - text: Slides
+            href: week15/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week15/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week15/lab/activity.qmd
+          - text: Reading
+            href: week15/lab/reading.qmd
       # - section: 'Week 16: Regression'
       #   contents:
       #   - text: Overview
@@ -347,12 +347,12 @@ website:
           href: textbook/chapters/w14-lecture.qmd
         - text: 'Lab: t-tests in R'
           href: textbook/chapters/w14-lab.qmd
-      # - section: Week 15
-      #   contents:
-      #   - text: 'Lecture: Correlation'
-      #     href: textbook/chapters/w15-lecture.qmd
-      #   - text: 'Lab: Correlation in R'
-      #     href: textbook/chapters/w15-lab.qmd
+      - section: Week 15
+        contents:
+        - text: 'Lecture: Correlation'
+          href: textbook/chapters/w15-lecture.qmd
+        - text: 'Lab: Correlation in R'
+          href: textbook/chapters/w15-lab.qmd
       # - section: Week 16
       #   contents:
       #   - text: 'Lecture: Regression'
@@ -393,8 +393,8 @@ website:
           href: textbook/quizzes/w13-quiz.qmd
         - text: Week 14 Quiz
           href: textbook/quizzes/w14-quiz.qmd
-        # - text: Week 15 Quiz
-        #   href: textbook/quizzes/w15-quiz.qmd
+        - text: Week 15 Quiz
+          href: textbook/quizzes/w15-quiz.qmd
         # - text: Week 16 Quiz
         #   href: textbook/quizzes/w16-quiz.qmd
         # - text: Week 17 Quiz
