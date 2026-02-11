@@ -60,6 +60,24 @@ Make sure WebR loads before proceeding.
 
 ---
 
+## NEW: Correlation Playground
+
+::: {.callout-tip}
+**Interactive Shiny App** for exploring correlation
+
+[littlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/](https://littlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/){target="_blank"}
+:::
+
+Students can:
+
+- Adjust correlation strength with sliders
+- See how r values translate to scatterplot patterns
+- Build intuition before calculating
+
+**Recommend using this during Part 1 & 2!**
+
+---
+
 ## Last Week Before Reading Week
 
 ::: {.callout-note}

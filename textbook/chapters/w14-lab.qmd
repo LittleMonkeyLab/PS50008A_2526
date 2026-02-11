@@ -1,21 +1,23 @@
 ---
-title: "Chapter 8: t-tests in R"
-subtitle: "Comparing Group Means with Confidence"
+title: "Chapter 8: Understanding t-test Output"
+subtitle: "Interpreting Group Comparisons"
 ---
 
 ## Overview
 
-This reading prepares you for the lab session where you'll conduct **t-tests** in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.
+This reading prepares you for the lab session where you'll interpret **t-test** output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.
 
 ::: {.callout-note}
 ## What You'll Learn
 By the end of this lab, you'll be able to:
 
-- Use `t.test()` to compare two groups (independent samples)
-- Use `t.test()` to compare paired measurements (paired samples)
 - Interpret t-test output including t-values, p-values, and confidence intervals
+- Understand the difference between independent and paired samples t-tests
 - Choose the appropriate type of t-test for your research question
+- Report t-test results in APA format
 :::
+
+---
 
 ## When to Use a t-test
 
@@ -33,21 +35,9 @@ Use a t-test when you have:
 |------|-------------|---------|
 | **Independent samples** | Different people in each group | Room A vs Room B |
 | **Paired samples** | Same people measured twice | Pre vs Post mood |
-| **One sample** | Compare to a known value | Sample mean vs population mean |
+| **One sample** | Compare to a known value | Sample mean vs 50% |
 
-## The `t.test()` Function
-
-R's built-in `t.test()` function handles all three types. The basic syntax is:
-
-```r
-t.test(outcome ~ group, data = mydata)
-```
-
-Or for paired data:
-
-```r
-t.test(x, y, paired = TRUE)
-```
+---
 
 ## Independent Samples t-test
 
@@ -57,40 +47,45 @@ Use this when comparing **different people** in two groups.
 
 Did Room A and Room B differ in reaction time?
 
-```r
-# Compare reaction times between rooms
-t.test(reaction_time ~ room, data = datalab)
-```
-
 ### Understanding the Output
 
 ```
-	Welch Two Sample t-test
+    Welch Two Sample t-test
 
-data:  reaction_time by room
-t = -2.34, df = 45.2, p-value = 0.024
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -42.5  -3.2
-sample estimates:
-mean in group A   mean in group B
-          265.3             288.1
+    data:  reaction_time by room
+    t = -2.34, df = 45.2, p-value = 0.024
+    alternative hypothesis: true difference in means is not equal to 0
+    95 percent confidence interval:
+     -42.5  -3.2
+    sample estimates:
+    mean in group A   mean in group B
+              265.3             288.1
 ```
 
-Let's decode each part:
+### What Each Part Means
 
 | Output | Meaning |
 |--------|---------|
-| `t = -2.34` | The t-statistic; how many standard errors the difference is from 0 |
-| `df = 45.2` | Degrees of freedom (Welch's adjustment for unequal variances) |
+| `t = -2.34` | The t-statistic: how many standard errors the difference is from 0 |
+| `df = 45.2` | Degrees of freedom |
 | `p-value = 0.024` | Probability of this difference (or larger) if null hypothesis is true |
 | `95 percent confidence interval` | Range of plausible values for the true difference |
 | `sample estimates` | The actual group means |
 
+### Key Questions to Answer
+
+1. **What are the means?** → Room A: 265.3 ms, Room B: 288.1 ms
+2. **What is t?** → -2.34
+3. **Is it significant?** → Yes, p = 0.024 < 0.05
+4. **What's the CI?** → [-42.5, -3.2] - the true difference is likely in this range
+5. **What does it mean?** → Room A was faster than Room B
+
 ::: {.callout-important}
 ## Interpreting the p-value
-A p-value of 0.024 means: **if there were truly no difference between rooms**, we'd see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we'd typically conclude the difference is statistically significant.
+A p-value of 0.024 means: **if there were truly no difference between rooms**, we'd see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we conclude the difference is statistically significant.
 :::
+
+---
 
 ## Paired Samples t-test
 
@@ -100,16 +95,27 @@ Use this when comparing **the same people** measured at two time points.
 
 Did mood change after DataLab?
 
-```r
-# Compare mood before and after
-t.test(datalab$mood_pre, datalab$mood_post, paired = TRUE)
+### Understanding the Output
+
+```
+    Paired t-test
+
+    data:  mood_pre and mood_post
+    t = -3.45, df = 29, p-value = 0.002
+    alternative hypothesis: true mean difference is not equal to 0
+    95 percent confidence interval:
+     -1.82  -0.45
+    sample estimates:
+    mean difference
+              -1.13
 ```
 
-Or using formula notation with long-format data:
+### Key Questions to Answer
 
-```r
-t.test(mood ~ time, data = datalab_long, paired = TRUE)
-```
+1. **What is the mean difference?** → -1.13 (mood increased by 1.13 points)
+2. **Is it significant?** → Yes, p = 0.002 < 0.05
+3. **What's the CI?** → [-1.82, -0.45] - the true change is likely in this range
+4. **What does it mean?** → Mood significantly improved after DataLab
 
 ### Why Paired Tests Are More Powerful
 
@@ -125,6 +131,8 @@ Both people increased by 2 points, even though their baseline scores differ. The
 If the same individuals provide both measurements, use a paired test. It's more sensitive because it removes between-person variability.
 :::
 
+---
+
 ## One Sample t-test
 
 Use this to compare your sample mean to a specific value.
@@ -133,54 +141,28 @@ Use this to compare your sample mean to a specific value.
 
 Is staring detection accuracy different from 50% (chance)?
 
-```r
-# Compare mean accuracy to 0.5 (50%)
-t.test(datalab$staring_accuracy, mu = 0.5)
+### Understanding the Output
+
+```
+    One Sample t-test
+
+    data:  staring_accuracy
+    t = 1.87, df = 29, p-value = 0.072
+    alternative hypothesis: true mean is not equal to 0.5
+    95 percent confidence interval:
+     0.48  0.61
+    sample estimates:
+    mean of x
+        0.545
 ```
 
-The `mu` argument specifies the value you're testing against.
+### Key Questions to Answer
 
-## Key Arguments for `t.test()`
+1. **What is the sample mean?** → 54.5%
+2. **Is it significantly different from 50%?** → No, p = 0.072 > 0.05
+3. **What does it mean?** → Performance is not significantly better than chance
 
-| Argument | Purpose | Default |
-|----------|---------|---------|
-| `paired = TRUE/FALSE` | Paired or independent test | `FALSE` |
-| `var.equal = TRUE/FALSE` | Assume equal variances? | `FALSE` (Welch's test) |
-| `alternative` | Direction: `"two.sided"`, `"less"`, `"greater"` | `"two.sided"` |
-| `mu` | Value to test against (one-sample) | `0` |
-| `conf.level` | Confidence level | `0.95` |
-
-### About Welch's t-test
-
-By default, R uses **Welch's t-test**, which doesn't assume equal variances in the two groups. This is generally recommended as it's more robust.
-
-If you have good reason to assume equal variances:
-
-```r
-t.test(reaction_time ~ room, data = datalab, var.equal = TRUE)
-```
-
-## Extracting Specific Results
-
-Sometimes you want to pull out specific values for reporting:
-
-```r
-# Run the test and save results
-result <- t.test(reaction_time ~ room, data = datalab)
-
-# Extract specific values
-result$statistic    # t-value
-result$parameter    # degrees of freedom
-result$p.value      # p-value
-result$conf.int     # confidence interval
-result$estimate     # group means
-```
-
-### Reporting Format (APA Style)
-
-For your report, you might write:
-
-> Participants in Room A (M = 265.3 ms) had significantly faster reaction times than those in Room B (M = 288.1 ms), t(45.2) = -2.34, p = .024, 95% CI [-42.5, -3.2].
+---
 
 ## Effect Size: Cohen's d
 
@@ -194,86 +176,52 @@ The p-value tells you whether a difference is **statistically significant**, but
 | 0.5 | Medium effect |
 | 0.8 | Large effect |
 
-You can calculate Cohen's d using the `effectsize` package:
+### Example Output
 
-```r
-library(effectsize)
+```
+    Cohen's d
 
-# For independent samples
-cohens_d(reaction_time ~ room, data = datalab)
+    d estimate: 0.62
+    95% CI: [0.15, 1.09]
 
-# For paired samples
-cohens_d(datalab$mood_pre, datalab$mood_post, paired = TRUE)
+    Interpretation: medium
 ```
 
-## Common Errors and How to Fix Them
+::: {.callout-important}
+## Why Effect Size Matters
+A study with n = 1000 might find p < .001 for a tiny effect (d = 0.1). The effect is "real" but practically meaningless. Always report and interpret effect sizes alongside p-values.
+:::
 
-### Error: grouping factor must have exactly 2 levels
+---
 
-```r
-# Wrong: variable has more than 2 groups
-t.test(score ~ condition, data = mydata)
-# Error if condition has levels: A, B, C
-```
+## Choosing the Right Test
 
-**Fix**: Filter to only two groups:
+| Research Question | Design | Test |
+|-------------------|--------|------|
+| Do two different groups differ? | Between-subjects | Independent t-test |
+| Does the same group change over time? | Within-subjects | Paired t-test |
+| Does a sample differ from a known value? | One-sample | One-sample t-test |
 
-```r
-# Right: compare only A and B
-filtered <- mydata |> filter(condition %in% c("A", "B"))
-t.test(score ~ condition, data = filtered)
-```
+### DataLab Examples
 
-### Error: not enough 'x' observations
+| Question | Test Type |
+|----------|-----------|
+| Did Room A and B differ on reaction time? | Independent |
+| Did mood change from pre to post? | Paired |
+| Was throwing accuracy above 50%? | One-sample |
+| Did word type (abstract/concrete) affect memory? | Independent |
 
-**Fix**: Your data might have too many missing values. Check with:
-
-```r
-sum(is.na(datalab$reaction_time))
-```
-
-### Error: object 'datalab' not found
-
-**Fix**: Make sure you've loaded your data first. In WebR, run the data loading code before analysis.
-
-### Paired test gives strange results
-
-**Fix**: Make sure:
-
-1. The two vectors have the same length
-2. The observations are in the same order (person 1's pre matches person 1's post)
-3. You included `paired = TRUE`
-
-```r
-# Check lengths match
-length(datalab$mood_pre)
-length(datalab$mood_post)
-```
-
-### Warning: data are essentially constant
-
-**Fix**: One or both groups have no variability (all values are the same). A t-test isn't appropriate here.
+---
 
 ## Assumptions of the t-test
 
 ### 1. Independence
 
-Observations should be independent (one person's score doesn't influence another's). This is about study design, not something you can test in R.
+Observations should be independent (one person's score doesn't influence another's). This is about study design.
 
 ### 2. Normality
 
-The data should be approximately normally distributed, especially for small samples. Check with:
-
-```r
-# Visual check
-hist(datalab$reaction_time)
-
-# Or by group
-library(ggplot2)
-ggplot(datalab, aes(x = reaction_time)) +
-  geom_histogram(bins = 15) +
-  facet_wrap(~room)
-```
+The data should be approximately normally distributed, especially for small samples.
 
 ::: {.callout-tip}
 ## Robustness
@@ -282,7 +230,53 @@ The t-test is quite robust to violations of normality, especially with larger sa
 
 ### 3. Homogeneity of Variance (for independent samples)
 
-Groups should have similar variability. Welch's t-test (the default) handles unequal variances, so this is less of a concern.
+Groups should have similar variability. The Welch's t-test (default in most software) handles unequal variances automatically.
+
+---
+
+## Reporting t-tests (APA Style)
+
+### Template
+
+> [Group 1] (M = XX.X, SD = X.X) [were/was] [significantly/not significantly] [higher/lower/different] than [Group 2] (M = XX.X, SD = X.X), t(df) = X.XX, p = .XXX, d = X.XX.
+
+### Independent Samples Example
+
+> Participants in Room A (M = 265.3 ms, SD = 45.2) had significantly faster reaction times than those in Room B (M = 288.1 ms, SD = 52.1), t(45.2) = -2.34, p = .024, d = 0.47.
+
+### Paired Samples Example
+
+> Mood significantly increased from pre-session (M = 5.2, SD = 1.8) to post-session (M = 6.3, SD = 1.6), t(29) = 3.45, p = .002, d = 0.62.
+
+### Elements to Include
+
+- Group means and SDs
+- The t-value and df
+- The p-value
+- Effect size (Cohen's d)
+- Direction of the difference
+
+---
+
+## Common Interpretation Errors
+
+### Error 1: "p > .05 means no difference"
+
+**Wrong!** A non-significant result means we can't rule out chance — not that there's definitely no effect. The study might lack power.
+
+### Error 2: "p < .001 means a huge effect"
+
+**Wrong!** Statistical significance depends on sample size. Large samples can detect tiny effects. Always check effect size.
+
+### Error 3: "t = 2.34 is bigger than t = 1.98, so it's more significant"
+
+**Misleading!** t-values depend on sample size and variability. Compare p-values and effect sizes instead.
+
+### Error 4: Confusing paired and independent tests
+
+**Check:** Are the same people in both conditions? If yes → paired. If no → independent.
+
+---
 
 ## Preparation Checklist
 
@@ -294,21 +288,17 @@ Before arriving at the lab:
 - [ ] Read this chapter carefully
 - [ ] Review the lecture material on hypothesis testing
 - [ ] Understand the difference between paired and independent samples
-- [ ] Be able to interpret a p-value correctly
-- [ ] Have a device with a web browser ready (for WebR)
+- [ ] Be able to interpret p-values correctly
+- [ ] Know what Cohen's d means
 :::
 
-### Key Questions to Consider
+### Questions to Consider
 
 - What research questions from DataLab can we answer with t-tests?
 - Which comparisons require paired tests vs independent tests?
 - What would a significant result mean in practical terms?
 
-### What to Bring
-
-- Laptop, tablet, or phone with a modern browser
-- Notes on which DataLab variables you want to compare
-- Questions about interpreting output
+---
 
 ## Summary
 
@@ -319,27 +309,28 @@ Before arriving at the lab:
 | **Paired samples** | Same people measured twice |
 | **p-value** | Probability of data if null hypothesis is true |
 | **Effect size (d)** | Practical magnitude of the difference |
+| **APA format** | Include M, SD, t, df, p, and d |
 
-## Quick Reference
+---
 
-```r
-# Independent samples (different people)
-t.test(outcome ~ group, data = mydata)
+## Quick Reference: Interpreting Output
 
-# Paired samples (same people, two times)
-t.test(pre, post, paired = TRUE)
+### Independent Samples
 
-# One sample (compare to known value)
-t.test(scores, mu = 50)
+| Look for | Tells you |
+|----------|-----------|
+| Group means | Which group scored higher |
+| t-value | Direction and magnitude of difference |
+| p-value | Whether difference is significant |
+| CI | Range of plausible true differences |
+| d | Practical size of effect |
 
-# Extract results
-result <- t.test(...)
-result$p.value
-result$conf.int
-```
+### Paired Samples
 
-## Additional Resources
-
-- [R Documentation for t.test](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html) --- Official documentation
-- [ModernDive: Hypothesis Testing](https://moderndive.com/9-hypothesis-testing.html) --- Conceptual explanations
-- [Datanovia: t-test in R](https://www.datanovia.com/en/lessons/t-test-in-r/) --- Step-by-step tutorials with examples
+| Look for | Tells you |
+|----------|-----------|
+| Mean difference | Average change |
+| t-value | Direction and magnitude of change |
+| p-value | Whether change is significant |
+| CI | Range of plausible true change |
+| d | Practical size of effect |

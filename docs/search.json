@@ -1315,9 +1315,9 @@
   {
     "objectID": "week15/lab/reading.html",
     "href": "week15/lab/reading.html",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll analyse correlations in R. Correlation is fundamental to psychology research — it tells us whether two variables are related and how strongly. You’ll learn to compute correlation coefficients, test their significance, and create informative scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nCalculate correlation coefficients using cor() and cor.test()\nInterpret correlation strength, direction, and significance\nCreate scatterplots with ggplot2 to visualise relationships\nUnderstand the difference between correlation and causation",
+    "text": "This reading prepares you for the lab session where you’ll explore correlations. Correlation tells us whether two variables are related and how strongly. You’ll learn to interpret correlation output and create meaningful scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret correlation coefficients (r values)\nUnderstand what scatterplots reveal about relationships\nRead and interpret correlation test output\nUnderstand why correlation does not imply causation\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively:\n🎮 Launch Correlation Playground\nAdjust correlation strength with sliders and see how scatterplots change in real-time. Build your intuition for what different r values look like.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1329,9 +1329,9 @@
   {
     "objectID": "week15/lab/reading.html#overview",
     "href": "week15/lab/reading.html#overview",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll analyse correlations in R. Correlation is fundamental to psychology research — it tells us whether two variables are related and how strongly. You’ll learn to compute correlation coefficients, test their significance, and create informative scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nCalculate correlation coefficients using cor() and cor.test()\nInterpret correlation strength, direction, and significance\nCreate scatterplots with ggplot2 to visualise relationships\nUnderstand the difference between correlation and causation",
+    "text": "This reading prepares you for the lab session where you’ll explore correlations. Correlation tells us whether two variables are related and how strongly. You’ll learn to interpret correlation output and create meaningful scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret correlation coefficients (r values)\nUnderstand what scatterplots reveal about relationships\nRead and interpret correlation test output\nUnderstand why correlation does not imply causation\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively:\n🎮 Launch Correlation Playground\nAdjust correlation strength with sliders and see how scatterplots change in real-time. Build your intuition for what different r values look like.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1343,9 +1343,9 @@
   {
     "objectID": "week15/lab/reading.html#what-is-correlation",
     "href": "week15/lab/reading.html#what-is-correlation",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "What Is Correlation?",
-    "text": "What Is Correlation?\nCorrelation measures the strength and direction of the linear relationship between two continuous variables.\n\nStrength: How tightly the data points cluster around a line (from weak to strong)\nDirection: Whether variables increase together (positive) or one increases as the other decreases (negative)\n\n\nCorrelation Coefficient (r)\nThe correlation coefficient r ranges from -1 to +1:\n\n\n\nValue\nInterpretation\n\n\n\n\nr = +1\nPerfect positive relationship\n\n\nr = +0.7\nStrong positive relationship\n\n\nr = +0.3\nWeak positive relationship\n\n\nr = 0\nNo linear relationship\n\n\nr = -0.3\nWeak negative relationship\n\n\nr = -0.7\nStrong negative relationship\n\n\nr = -1\nPerfect negative relationship\n\n\n\n\n\n\n\n\n\nImportantDirection vs Strength\n\n\n\nThe sign tells you direction; the absolute value tells you strength. r = -0.8 is a stronger relationship than r = +0.3.",
+    "text": "What Is Correlation?\nCorrelation measures the strength and direction of the linear relationship between two continuous variables.\n\nStrength: How tightly the data points cluster around a line (from weak to strong)\nDirection: Whether variables increase together (positive) or one increases as the other decreases (negative)\n\n\nThe Correlation Coefficient (r)\nThe correlation coefficient r ranges from -1 to +1:\n\n\n\nValue\nInterpretation\n\n\n\n\nr = +1\nPerfect positive relationship\n\n\nr = +0.7\nStrong positive relationship\n\n\nr = +0.3\nWeak positive relationship\n\n\nr = 0\nNo linear relationship\n\n\nr = -0.3\nWeak negative relationship\n\n\nr = -0.7\nStrong negative relationship\n\n\nr = -1\nPerfect negative relationship\n\n\n\n\n\n\n\n\n\nImportantDirection vs Strength\n\n\n\nThe sign tells you direction; the absolute value tells you strength. r = -0.8 is a stronger relationship than r = +0.3.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1355,11 +1355,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#computing-correlations-in-r",
-    "href": "week15/lab/reading.html#computing-correlations-in-r",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Computing Correlations in R",
-    "text": "Computing Correlations in R\n\nThe cor() Function\nFor a quick correlation coefficient:\n# Correlation between two variables\ncor(datalab$reaction_time, datalab$time_estimate)\nThis returns just the correlation coefficient (e.g., 0.42).\n\n\nThe cor.test() Function\nFor a complete analysis including significance testing:\n# Full correlation test\ncor.test(datalab$reaction_time, datalab$time_estimate)\n\n\nUnderstanding cor.test() Output\n    Pearson's product-moment correlation\n\ndata:  datalab$reaction_time and datalab$time_estimate\nt = 3.12, df = 48, p-value = 0.003\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.15  0.63\nsample estimates:\n      cor\n0.42\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = 3.12\nThe t-statistic for testing if r differs from 0\n\n\ndf = 48\nDegrees of freedom (n - 2)\n\n\np-value = 0.003\nProbability of this r (or stronger) if true r = 0\n\n\n95 percent confidence interval\nPlausible range for the true correlation\n\n\ncor = 0.42\nThe sample correlation coefficient\n\n\n\n\n\n\n\n\n\nTipInterpreting the CI\n\n\n\nA 95% CI of [0.15, 0.63] means we’re fairly confident the true population correlation is somewhere in this range. Since it doesn’t include 0, the correlation is statistically significant.",
+    "objectID": "week15/lab/reading.html#reading-scatterplots",
+    "href": "week15/lab/reading.html#reading-scatterplots",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Reading Scatterplots",
+    "text": "Reading Scatterplots\n\nWhy Visualise?\nBefore looking at numbers, always examine a scatterplot. It reveals:\n\nThe direction of the relationship (positive, negative, or none)\nThe strength of the relationship (tight cluster vs spread out)\nThe shape (linear vs curved)\nAny unusual patterns or outliers\n\n\n\nWhat to Look For\nEach point represents one participant:\n\nX-axis: One variable\nY-axis: The other variable\n\nPattern Guide:\n\n\n\nPattern\nMeaning\n\n\n\n\nUpward slope\nPositive relationship\n\n\nDownward slope\nNegative relationship\n\n\nNo clear slope\nNo relationship\n\n\nTight cluster around line\nStrong relationship\n\n\nWide scatter\nWeak relationship\n\n\n\n\n\nVisual Examples\nStrong Positive (r ≈ 0.8)    Weak Positive (r ≈ 0.3)    No Relationship (r ≈ 0)\n        •                           •  •                      •   •\n       • •                        •    •  •                 •     •\n      •  ••                      •  •   •                  •  •    •\n     •    •                       •  •                       • •  •\n    •                            •                         •    •",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1369,11 +1369,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#correlation-matrix",
-    "href": "week15/lab/reading.html#correlation-matrix",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Correlation Matrix",
-    "text": "Correlation Matrix\nWhen you have multiple variables, you can compute all pairwise correlations at once:\n# Select numeric columns\nnumeric_vars &lt;- datalab[, c(\"reaction_time\", \"time_estimate\", \"mood_pre\", \"mood_post\")]\n\n# Correlation matrix\ncor(numeric_vars)\nThis produces a matrix showing all correlations:\n               reaction_time time_estimate mood_pre mood_post\nreaction_time           1.00          0.42     0.15     0.18\ntime_estimate           0.42          1.00     0.08     0.12\nmood_pre                0.15          0.08     1.00     0.65\nmood_post               0.18          0.12     0.65     1.00\n\nHandling Missing Values\nIf your data has missing values, add use = \"complete.obs\":\ncor(numeric_vars, use = \"complete.obs\")",
+    "objectID": "week15/lab/reading.html#interpreting-correlation-output",
+    "href": "week15/lab/reading.html#interpreting-correlation-output",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Interpreting Correlation Output",
+    "text": "Interpreting Correlation Output\nWhen you run a correlation test, you’ll see output like this:\n    Pearson's product-moment correlation\n\n    data:  reaction_time and time_estimate\n    t = 3.12, df = 48, p-value = 0.003\n    95 percent confidence interval:\n     0.15  0.63\n    sample estimates:\n          cor\n         0.42\n\nWhat Each Part Means\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = 3.12\nThe test statistic\n\n\ndf = 48\nDegrees of freedom (sample size - 2)\n\n\np-value = 0.003\nProbability of this r if there’s truly no relationship\n\n\n95 percent confidence interval\nPlausible range for the true correlation\n\n\ncor = 0.42\nThe sample correlation coefficient\n\n\n\n\n\nKey Questions to Answer\n\nWhat is r? → 0.42 (medium positive correlation)\nIs it significant? → Yes, p = 0.003 &lt; 0.05\nWhat’s the CI? → [0.15, 0.63] - the true r is likely in this range\nWhat does it mean? → Higher reaction times are associated with higher time estimates\n\n\n\n\n\n\n\nTipInterpreting the Confidence Interval\n\n\n\nA 95% CI of [0.15, 0.63] means we’re fairly confident the true population correlation is somewhere in this range. Since it doesn’t include 0, the correlation is statistically significant.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1383,11 +1383,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#visualising-correlations-with-ggplot2",
-    "href": "week15/lab/reading.html#visualising-correlations-with-ggplot2",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Visualising Correlations with ggplot2",
-    "text": "Visualising Correlations with ggplot2\n\nBasic Scatterplot\nlibrary(ggplot2)\n\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point()\n\n\nAdding a Trend Line\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = TRUE)\n\nmethod = \"lm\" adds a linear regression line\nse = TRUE shows the confidence band around the line\n\n\n\nImproved Scatterplot\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point(alpha = 0.6, size = 3) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"#275882\") +\n  labs(\n    x = \"Reaction Time (ms)\",\n    y = \"Time Estimate (seconds)\",\n    title = \"Relationship Between Reaction Time and Time Perception\"\n  ) +\n  theme_minimal()\n\n\nScatterplot with Groups\nTo show different groups with different colours:\nggplot(datalab, aes(x = reaction_time, y = time_estimate, color = room)) +\n  geom_point(alpha = 0.6, size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"Reaction Time (ms)\",\n    y = \"Time Estimate (seconds)\",\n    color = \"Room\"\n  ) +\n  theme_minimal()",
+    "objectID": "week15/lab/reading.html#correlation-strength-guidelines",
+    "href": "week15/lab/reading.html#correlation-strength-guidelines",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Correlation Strength Guidelines",
+    "text": "Correlation Strength Guidelines\nCohen (1988) suggested these benchmarks:\n\n\n\n\nr\n\n\n\n\n.10 - .29\nSmall/weak\n\n\n.30 - .49\nMedium/moderate\n\n\n.50+\nLarge/strong\n\n\n\n\n\n\n\n\n\nWarningContext Matters\n\n\n\nThese are rough guidelines. In some research areas, r = .30 is typical and meaningful. In others, r = .50 might be expected.\n\n\n\nUnderstanding r-squared\nSquaring r tells you the proportion of variance explained:\n\n\n\nr\nr²\nInterpretation\n\n\n\n\n.10\n.01\n1% shared variance\n\n\n.30\n.09\n9% shared variance\n\n\n.50\n.25\n25% shared variance\n\n\n.70\n.49\n49% shared variance\n\n\n\n\n\n\n\n\n\nImportantReality Check\n\n\n\nA correlation of r = .42 sounds reasonable. But r² = .18 means one variable explains only 18% of the variance in the other. The remaining 82% is due to other factors!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1397,11 +1397,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#types-of-correlation",
-    "href": "week15/lab/reading.html#types-of-correlation",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Types of Correlation",
-    "text": "Types of Correlation\n\nPearson’s r (default)\nAssumes:\n\nBoth variables are continuous\nRelationship is linear\nData are approximately normally distributed\n\ncor.test(x, y, method = \"pearson\")  # default\n\n\nSpearman’s rho\nUse when:\n\nData are ordinal (ranked)\nRelationship is monotonic but not linear\nData have outliers or are skewed\n\ncor.test(x, y, method = \"spearman\")\n\n\nKendall’s tau\nMore robust alternative to Spearman’s, good for small samples:\ncor.test(x, y, method = \"kendall\")",
+    "objectID": "week15/lab/reading.html#pearson-vs-spearman",
+    "href": "week15/lab/reading.html#pearson-vs-spearman",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Pearson vs Spearman",
+    "text": "Pearson vs Spearman\n\nPearson’s r (Most Common)\nUse when:\n\nBoth variables are continuous\nRelationship is approximately linear\nData are roughly normally distributed\n\n\n\nSpearman’s rho (ρ)\nUse when:\n\nData are ordinal (ranked)\nRelationship is monotonic but not linear\nData have outliers or are skewed\n\nBoth are interpreted the same way — they range from -1 to +1 with the same strength guidelines.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1411,39 +1411,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#key-functions-reference",
-    "href": "week15/lab/reading.html#key-functions-reference",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Key Functions Reference",
-    "text": "Key Functions Reference\n\n\n\nFunction\nPurpose\nExample\n\n\n\n\ncor()\nQuick correlation coefficient\ncor(x, y)\n\n\ncor.test()\nFull test with p-value and CI\ncor.test(x, y)\n\n\ncor(matrix)\nCorrelation matrix\ncor(data[, vars])\n\n\ngeom_point()\nAdd points to ggplot\n+ geom_point()\n\n\ngeom_smooth()\nAdd trend line\n+ geom_smooth(method = \"lm\")\n\n\n\n\nUseful ggplot2 Arguments\n\n\n\nArgument\nPurpose\nExample\n\n\n\n\nalpha\nPoint transparency\ngeom_point(alpha = 0.5)\n\n\nsize\nPoint size\ngeom_point(size = 3)\n\n\ncolor\nPoint/line colour\ngeom_point(color = \"blue\")\n\n\nse\nShow confidence band\ngeom_smooth(se = TRUE)\n\n\nmethod\nSmoothing method\ngeom_smooth(method = \"lm\")",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 15: Correlation",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week15/lab/reading.html#common-errors-and-how-to-fix-them",
-    "href": "week15/lab/reading.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Common Errors and How to Fix Them",
-    "text": "Common Errors and How to Fix Them\n\nError: ‘x’ and ‘y’ must have the same length\n# Wrong: different lengths\ncor(datalab$reaction_time[1:40], datalab$time_estimate)\nFix: Ensure both variables have the same number of observations. This usually happens with missing values:\n# Create complete cases\ncomplete_data &lt;- datalab[complete.cases(datalab$reaction_time, datalab$time_estimate), ]\ncor(complete_data$reaction_time, complete_data$time_estimate)\n\n\nError: ‘x’ must be numeric\nFix: Convert to numeric if needed:\n# Check variable type\nclass(datalab$reaction_time)\n\n# Convert if needed\ndatalab$reaction_time &lt;- as.numeric(datalab$reaction_time)\n\n\nWarning: Cannot compute exact p-value with ties\nThis happens with Spearman’s correlation when there are tied ranks.\nFix: This is usually fine — R provides an approximation. For small samples, consider Kendall’s tau instead.\n\n\nThe scatterplot looks empty\nFix: Check for issues with your data:\n# Check for NAs\nsum(is.na(datalab$reaction_time))\n\n# Check for extreme values\nsummary(datalab$reaction_time)\n\n\nPoints are overplotting (too many on top of each other)\nFix: Use transparency or jitter:\n# Transparency\ngeom_point(alpha = 0.3)\n\n# Or jitter (adds small random noise)\ngeom_jitter(width = 0.5, height = 0.5)",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 15: Correlation",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week15/lab/reading.html#correlation-is-not-causation",
-    "href": "week15/lab/reading.html#correlation-is-not-causation",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Correlation is NOT Causation",
-    "text": "Correlation is NOT Causation\n\n\n\n\n\n\nWarningCritical Point\n\n\n\nA correlation between X and Y does NOT mean X causes Y (or Y causes X). There are several possibilities:\n\nX causes Y\nY causes X\nA third variable (Z) causes both\nThe relationship is coincidental\n\nOnly controlled experiments can establish causation.\n\n\n\nClassic Example\nThere’s a strong correlation between ice cream sales and drowning deaths. Does ice cream cause drowning? No — a third variable (hot weather) increases both ice cream consumption and swimming.",
+    "objectID": "week15/lab/reading.html#correlation-does-not-mean-causation",
+    "href": "week15/lab/reading.html#correlation-does-not-mean-causation",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Correlation Does NOT Mean Causation",
+    "text": "Correlation Does NOT Mean Causation\n\n\n\n\n\n\nWarningCritical Point\n\n\n\nA correlation between X and Y does NOT mean X causes Y. This is possibly the most important lesson in research methods.\n\n\n\nWhy Not?\nThree possible explanations for any correlation:\n\nX causes Y: More sleep → better performance\nY causes X: Better performance → more sleep (less stress)\nZ causes both: Good health → more sleep AND better performance\n\nWithout experimental manipulation, we cannot determine which explanation is correct.\n\n\nClassic Example\nIce cream sales and drowning deaths are correlated.\nDoes ice cream cause drowning? No! A third variable (hot weather) causes both:\n\nHot weather → more ice cream sales\nHot weather → more swimming → more drowning\n\n\n\nDataLab Example\nSelf-rating and throwing performance might be correlated.\nDoes thinking you’re good make you perform better? Possible alternatives:\n\nPast experience → higher self-rating AND better performance\nNatural ability → higher self-rating AND better performance\n\nWe can’t determine causation from correlation alone.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1455,9 +1427,9 @@
   {
     "objectID": "week15/lab/reading.html#reporting-correlations-apa-style",
     "href": "week15/lab/reading.html#reporting-correlations-apa-style",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "Reporting Correlations (APA Style)",
-    "text": "Reporting Correlations (APA Style)\n\nReaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].\n\nElements to include:\n\nThe variables being correlated\nDirection (positive/negative)\nDegrees of freedom in parentheses\nThe r value\nThe p-value\nThe 95% CI",
+    "text": "Reporting Correlations (APA Style)\n\nTemplate\n\nVariable X and Variable Y were [significantly/not significantly] [positively/negatively] correlated, r(df) = .XX, p = .XXX, 95% CI [.XX, .XX].\n\n\n\nExample\n\nReaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].\n\n\n\nElements to Include\n\nThe variables being correlated\nDirection (positive/negative)\nDegrees of freedom in parentheses\nThe r value\nThe p-value\nThe 95% CI",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1469,9 +1441,9 @@
   {
     "objectID": "week15/lab/reading.html#preparation-checklist",
     "href": "week15/lab/reading.html#preparation-checklist",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "Preparation Checklist",
-    "text": "Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on correlation\nUnderstand what r values mean (strength and direction)\nFamiliarise yourself with ggplot2 basics\nHave a device with a web browser ready (for WebR)\n\n\n\n\nQuestions to Consider\n\nWhich DataLab variables might be correlated?\nWhat would a positive correlation between reaction time and time estimate mean?\nHow would you check if a correlation is “real” versus due to chance?\n\n\n\nWhat to Bring\n\nLaptop, tablet, or phone with a modern browser\nIdeas about relationships to test in the data\nQuestions about interpreting correlations",
+    "text": "Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nTry the Correlation Playground app\nReview the lecture material on correlation\nUnderstand what r values mean (strength and direction)\nBe able to interpret example output\n\n\n\n\nQuestions to Consider\n\nWhich DataLab variables might be correlated?\nWhat would a positive correlation between reaction time and time estimate mean?\nHow would you explain correlation vs causation to a friend?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1483,9 +1455,9 @@
   {
     "objectID": "week15/lab/reading.html#summary",
     "href": "week15/lab/reading.html#summary",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCorrelation (r)\nMeasures strength and direction of linear relationship\n\n\nRange\n-1 (perfect negative) to +1 (perfect positive)\n\n\ncor()\nQuick coefficient only\n\n\ncor.test()\nFull test with p-value and CI\n\n\nScatterplot\nEssential for visualising relationships\n\n\nCausation\nCorrelation does NOT imply causation",
+    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCorrelation (r)\nMeasures strength and direction of linear relationship\n\n\nRange\n-1 (perfect negative) to +1 (perfect positive)\n\n\nScatterplot\nAlways visualise before interpreting numbers\n\n\nr²\nProportion of shared variance\n\n\nSignificance\np &lt; .05 suggests relationship exists in population\n\n\nCausation\nCorrelation does NOT imply causation",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1495,25 +1467,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/reading.html#quick-reference",
-    "href": "week15/lab/reading.html#quick-reference",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Quick Reference",
-    "text": "Quick Reference\n# Basic correlation\ncor(x, y)\n\n# With significance test\ncor.test(x, y)\n\n# Spearman (for non-normal data)\ncor.test(x, y, method = \"spearman\")\n\n# Correlation matrix\ncor(data[, c(\"var1\", \"var2\", \"var3\")])\n\n# Scatterplot with trend line\nggplot(data, aes(x = var1, y = var2)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 15: Correlation",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week15/lab/reading.html#additional-resources",
-    "href": "week15/lab/reading.html#additional-resources",
-    "title": "Chapter 10: Correlation in R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nR Documentation for cor.test — Official documentation\nggplot2 Reference: geom_point — Scatterplot options\nCorrelation in R: Comprehensive Guide — Detailed tutorial",
+    "objectID": "week15/lab/reading.html#correlation-strength-quick-reference",
+    "href": "week15/lab/reading.html#correlation-strength-quick-reference",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "Correlation Strength Quick Reference",
+    "text": "Correlation Strength Quick Reference\n\n\n\n\nr\n\nInterpretation\n\n\n\n\n.10\nSmall\n.01\n1%\n\n\n.20\nSmall-medium\n.04\n4%\n\n\n.30\nMedium\n.09\n9%\n\n\n.40\nMedium-large\n.16\n16%\n\n\n.50\nLarge\n.25\n25%\n\n\n.70\nVery large\n.49\n49%",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1907,9 +1865,9 @@
   {
     "objectID": "week14/lab/reading.html",
     "href": "week14/lab/reading.html",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll conduct t-tests in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nUse t.test() to compare two groups (independent samples)\nUse t.test() to compare paired measurements (paired samples)\nInterpret t-test output including t-values, p-values, and confidence intervals\nChoose the appropriate type of t-test for your research question",
+    "text": "This reading prepares you for the lab session where you’ll interpret t-test output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret t-test output including t-values, p-values, and confidence intervals\nUnderstand the difference between independent and paired samples t-tests\nChoose the appropriate type of t-test for your research question\nReport t-test results in APA format",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1921,9 +1879,9 @@
   {
     "objectID": "week14/lab/reading.html#overview",
     "href": "week14/lab/reading.html#overview",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll conduct t-tests in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nUse t.test() to compare two groups (independent samples)\nUse t.test() to compare paired measurements (paired samples)\nInterpret t-test output including t-values, p-values, and confidence intervals\nChoose the appropriate type of t-test for your research question",
+    "text": "This reading prepares you for the lab session where you’ll interpret t-test output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret t-test output including t-values, p-values, and confidence intervals\nUnderstand the difference between independent and paired samples t-tests\nChoose the appropriate type of t-test for your research question\nReport t-test results in APA format",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1935,23 +1893,9 @@
   {
     "objectID": "week14/lab/reading.html#when-to-use-a-t-test",
     "href": "week14/lab/reading.html#when-to-use-a-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "When to Use a t-test",
-    "text": "When to Use a t-test\nThe t-test answers the question: Is the difference between two means larger than we’d expect by chance?\nUse a t-test when you have:\n\nA continuous outcome variable (e.g., reaction time, mood score)\nTwo groups to compare OR two measurements from the same people\nReasonably normally distributed data (or a large enough sample)\n\n\nTypes of t-tests\n\n\n\n\n\n\n\n\nType\nWhen to Use\nExample\n\n\n\n\nIndependent samples\nDifferent people in each group\nRoom A vs Room B\n\n\nPaired samples\nSame people measured twice\nPre vs Post mood\n\n\nOne sample\nCompare to a known value\nSample mean vs population mean",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week14/lab/reading.html#the-t.test-function",
-    "href": "week14/lab/reading.html#the-t.test-function",
-    "title": "Chapter 8: t-tests in R",
-    "section": "The t.test() Function",
-    "text": "The t.test() Function\nR’s built-in t.test() function handles all three types. The basic syntax is:\nt.test(outcome ~ group, data = mydata)\nOr for paired data:\nt.test(x, y, paired = TRUE)",
+    "text": "When to Use a t-test\nThe t-test answers the question: Is the difference between two means larger than we’d expect by chance?\nUse a t-test when you have:\n\nA continuous outcome variable (e.g., reaction time, mood score)\nTwo groups to compare OR two measurements from the same people\nReasonably normally distributed data (or a large enough sample)\n\n\nTypes of t-tests\n\n\n\n\n\n\n\n\nType\nWhen to Use\nExample\n\n\n\n\nIndependent samples\nDifferent people in each group\nRoom A vs Room B\n\n\nPaired samples\nSame people measured twice\nPre vs Post mood\n\n\nOne sample\nCompare to a known value\nSample mean vs 50%",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1963,9 +1907,9 @@
   {
     "objectID": "week14/lab/reading.html#independent-samples-t-test",
     "href": "week14/lab/reading.html#independent-samples-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Independent Samples t-test",
-    "text": "Independent Samples t-test\nUse this when comparing different people in two groups.\n\nExample: Comparing Rooms\nDid Room A and Room B differ in reaction time?\n# Compare reaction times between rooms\nt.test(reaction_time ~ room, data = datalab)\n\n\nUnderstanding the Output\n    Welch Two Sample t-test\n\ndata:  reaction_time by room\nt = -2.34, df = 45.2, p-value = 0.024\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -42.5  -3.2\nsample estimates:\nmean in group A   mean in group B\n          265.3             288.1\nLet’s decode each part:\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = -2.34\nThe t-statistic; how many standard errors the difference is from 0\n\n\ndf = 45.2\nDegrees of freedom (Welch’s adjustment for unequal variances)\n\n\np-value = 0.024\nProbability of this difference (or larger) if null hypothesis is true\n\n\n95 percent confidence interval\nRange of plausible values for the true difference\n\n\nsample estimates\nThe actual group means\n\n\n\n\n\n\n\n\n\nImportantInterpreting the p-value\n\n\n\nA p-value of 0.024 means: if there were truly no difference between rooms, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we’d typically conclude the difference is statistically significant.",
+    "text": "Independent Samples t-test\nUse this when comparing different people in two groups.\n\nExample: Comparing Rooms\nDid Room A and Room B differ in reaction time?\n\n\nUnderstanding the Output\n    Welch Two Sample t-test\n\n    data:  reaction_time by room\n    t = -2.34, df = 45.2, p-value = 0.024\n    alternative hypothesis: true difference in means is not equal to 0\n    95 percent confidence interval:\n     -42.5  -3.2\n    sample estimates:\n    mean in group A   mean in group B\n              265.3             288.1\n\n\nWhat Each Part Means\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = -2.34\nThe t-statistic: how many standard errors the difference is from 0\n\n\ndf = 45.2\nDegrees of freedom\n\n\np-value = 0.024\nProbability of this difference (or larger) if null hypothesis is true\n\n\n95 percent confidence interval\nRange of plausible values for the true difference\n\n\nsample estimates\nThe actual group means\n\n\n\n\n\nKey Questions to Answer\n\nWhat are the means? → Room A: 265.3 ms, Room B: 288.1 ms\nWhat is t? → -2.34\nIs it significant? → Yes, p = 0.024 &lt; 0.05\nWhat’s the CI? → [-42.5, -3.2] - the true difference is likely in this range\nWhat does it mean? → Room A was faster than Room B\n\n\n\n\n\n\n\nImportantInterpreting the p-value\n\n\n\nA p-value of 0.024 means: if there were truly no difference between rooms, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we conclude the difference is statistically significant.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1977,9 +1921,9 @@
   {
     "objectID": "week14/lab/reading.html#paired-samples-t-test",
     "href": "week14/lab/reading.html#paired-samples-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Paired Samples t-test",
-    "text": "Paired Samples t-test\nUse this when comparing the same people measured at two time points.\n\nExample: Pre-Post Mood\nDid mood change after DataLab?\n# Compare mood before and after\nt.test(datalab$mood_pre, datalab$mood_post, paired = TRUE)\nOr using formula notation with long-format data:\nt.test(mood ~ time, data = datalab_long, paired = TRUE)\n\n\nWhy Paired Tests Are More Powerful\nPaired tests account for individual differences. Consider:\n\nPerson A: Pre = 5, Post = 7 (change = +2)\nPerson B: Pre = 8, Post = 10 (change = +2)\n\nBoth people increased by 2 points, even though their baseline scores differ. The paired test focuses on the change within each person, not the raw scores.\n\n\n\n\n\n\nTipRule of Thumb\n\n\n\nIf the same individuals provide both measurements, use a paired test. It’s more sensitive because it removes between-person variability.",
+    "text": "Paired Samples t-test\nUse this when comparing the same people measured at two time points.\n\nExample: Pre-Post Mood\nDid mood change after DataLab?\n\n\nUnderstanding the Output\n    Paired t-test\n\n    data:  mood_pre and mood_post\n    t = -3.45, df = 29, p-value = 0.002\n    alternative hypothesis: true mean difference is not equal to 0\n    95 percent confidence interval:\n     -1.82  -0.45\n    sample estimates:\n    mean difference\n              -1.13\n\n\nKey Questions to Answer\n\nWhat is the mean difference? → -1.13 (mood increased by 1.13 points)\nIs it significant? → Yes, p = 0.002 &lt; 0.05\nWhat’s the CI? → [-1.82, -0.45] - the true change is likely in this range\nWhat does it mean? → Mood significantly improved after DataLab\n\n\n\nWhy Paired Tests Are More Powerful\nPaired tests account for individual differences. Consider:\n\nPerson A: Pre = 5, Post = 7 (change = +2)\nPerson B: Pre = 8, Post = 10 (change = +2)\n\nBoth people increased by 2 points, even though their baseline scores differ. The paired test focuses on the change within each person, not the raw scores.\n\n\n\n\n\n\nTipRule of Thumb\n\n\n\nIf the same individuals provide both measurements, use a paired test. It’s more sensitive because it removes between-person variability.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1991,37 +1935,9 @@
   {
     "objectID": "week14/lab/reading.html#one-sample-t-test",
     "href": "week14/lab/reading.html#one-sample-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "One Sample t-test",
-    "text": "One Sample t-test\nUse this to compare your sample mean to a specific value.\n\nExample: Comparing to Chance\nIs staring detection accuracy different from 50% (chance)?\n# Compare mean accuracy to 0.5 (50%)\nt.test(datalab$staring_accuracy, mu = 0.5)\nThe mu argument specifies the value you’re testing against.",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week14/lab/reading.html#key-arguments-for-t.test",
-    "href": "week14/lab/reading.html#key-arguments-for-t.test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "Key Arguments for t.test()",
-    "text": "Key Arguments for t.test()\n\n\n\n\n\n\n\n\nArgument\nPurpose\nDefault\n\n\n\n\npaired = TRUE/FALSE\nPaired or independent test\nFALSE\n\n\nvar.equal = TRUE/FALSE\nAssume equal variances?\nFALSE (Welch’s test)\n\n\nalternative\nDirection: \"two.sided\", \"less\", \"greater\"\n\"two.sided\"\n\n\nmu\nValue to test against (one-sample)\n0\n\n\nconf.level\nConfidence level\n0.95\n\n\n\n\nAbout Welch’s t-test\nBy default, R uses Welch’s t-test, which doesn’t assume equal variances in the two groups. This is generally recommended as it’s more robust.\nIf you have good reason to assume equal variances:\nt.test(reaction_time ~ room, data = datalab, var.equal = TRUE)",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week14/lab/reading.html#extracting-specific-results",
-    "href": "week14/lab/reading.html#extracting-specific-results",
-    "title": "Chapter 8: t-tests in R",
-    "section": "Extracting Specific Results",
-    "text": "Extracting Specific Results\nSometimes you want to pull out specific values for reporting:\n# Run the test and save results\nresult &lt;- t.test(reaction_time ~ room, data = datalab)\n\n# Extract specific values\nresult$statistic    # t-value\nresult$parameter    # degrees of freedom\nresult$p.value      # p-value\nresult$conf.int     # confidence interval\nresult$estimate     # group means\n\nReporting Format (APA Style)\nFor your report, you might write:\n\nParticipants in Room A (M = 265.3 ms) had significantly faster reaction times than those in Room B (M = 288.1 ms), t(45.2) = -2.34, p = .024, 95% CI [-42.5, -3.2].",
+    "text": "One Sample t-test\nUse this to compare your sample mean to a specific value.\n\nExample: Comparing to Chance\nIs staring detection accuracy different from 50% (chance)?\n\n\nUnderstanding the Output\n    One Sample t-test\n\n    data:  staring_accuracy\n    t = 1.87, df = 29, p-value = 0.072\n    alternative hypothesis: true mean is not equal to 0.5\n    95 percent confidence interval:\n     0.48  0.61\n    sample estimates:\n    mean of x\n        0.545\n\n\nKey Questions to Answer\n\nWhat is the sample mean? → 54.5%\nIs it significantly different from 50%? → No, p = 0.072 &gt; 0.05\nWhat does it mean? → Performance is not significantly better than chance",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2033,9 +1949,9 @@
   {
     "objectID": "week14/lab/reading.html#effect-size-cohens-d",
     "href": "week14/lab/reading.html#effect-size-cohens-d",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Effect Size: Cohen’s d",
-    "text": "Effect Size: Cohen’s d\nThe p-value tells you whether a difference is statistically significant, but not whether it’s practically meaningful. For that, we use effect sizes.\nCohen’s d expresses the difference in standard deviation units:\n\n\n\nd value\nInterpretation\n\n\n\n\n0.2\nSmall effect\n\n\n0.5\nMedium effect\n\n\n0.8\nLarge effect\n\n\n\nYou can calculate Cohen’s d using the effectsize package:\nlibrary(effectsize)\n\n# For independent samples\ncohens_d(reaction_time ~ room, data = datalab)\n\n# For paired samples\ncohens_d(datalab$mood_pre, datalab$mood_post, paired = TRUE)",
+    "text": "Effect Size: Cohen’s d\nThe p-value tells you whether a difference is statistically significant, but not whether it’s practically meaningful. For that, we use effect sizes.\nCohen’s d expresses the difference in standard deviation units:\n\n\n\nd value\nInterpretation\n\n\n\n\n0.2\nSmall effect\n\n\n0.5\nMedium effect\n\n\n0.8\nLarge effect\n\n\n\n\nExample Output\n    Cohen's d\n\n    d estimate: 0.62\n    95% CI: [0.15, 1.09]\n\n    Interpretation: medium\n\n\n\n\n\n\nImportantWhy Effect Size Matters\n\n\n\nA study with n = 1000 might find p &lt; .001 for a tiny effect (d = 0.1). The effect is “real” but practically meaningless. Always report and interpret effect sizes alongside p-values.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2045,11 +1961,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/reading.html#common-errors-and-how-to-fix-them",
-    "href": "week14/lab/reading.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 8: t-tests in R",
-    "section": "Common Errors and How to Fix Them",
-    "text": "Common Errors and How to Fix Them\n\nError: grouping factor must have exactly 2 levels\n# Wrong: variable has more than 2 groups\nt.test(score ~ condition, data = mydata)\n# Error if condition has levels: A, B, C\nFix: Filter to only two groups:\n# Right: compare only A and B\nfiltered &lt;- mydata |&gt; filter(condition %in% c(\"A\", \"B\"))\nt.test(score ~ condition, data = filtered)\n\n\nError: not enough ‘x’ observations\nFix: Your data might have too many missing values. Check with:\nsum(is.na(datalab$reaction_time))\n\n\nError: object ‘datalab’ not found\nFix: Make sure you’ve loaded your data first. In WebR, run the data loading code before analysis.\n\n\nPaired test gives strange results\nFix: Make sure:\n\nThe two vectors have the same length\nThe observations are in the same order (person 1’s pre matches person 1’s post)\nYou included paired = TRUE\n\n# Check lengths match\nlength(datalab$mood_pre)\nlength(datalab$mood_post)\n\n\nWarning: data are essentially constant\nFix: One or both groups have no variability (all values are the same). A t-test isn’t appropriate here.",
+    "objectID": "week14/lab/reading.html#choosing-the-right-test",
+    "href": "week14/lab/reading.html#choosing-the-right-test",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "Choosing the Right Test",
+    "text": "Choosing the Right Test\n\n\n\n\n\n\n\n\nResearch Question\nDesign\nTest\n\n\n\n\nDo two different groups differ?\nBetween-subjects\nIndependent t-test\n\n\nDoes the same group change over time?\nWithin-subjects\nPaired t-test\n\n\nDoes a sample differ from a known value?\nOne-sample\nOne-sample t-test\n\n\n\n\nDataLab Examples\n\n\n\nQuestion\nTest Type\n\n\n\n\nDid Room A and B differ on reaction time?\nIndependent\n\n\nDid mood change from pre to post?\nPaired\n\n\nWas throwing accuracy above 50%?\nOne-sample\n\n\nDid word type (abstract/concrete) affect memory?\nIndependent",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2061,9 +1977,37 @@
   {
     "objectID": "week14/lab/reading.html#assumptions-of-the-t-test",
     "href": "week14/lab/reading.html#assumptions-of-the-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Assumptions of the t-test",
-    "text": "Assumptions of the t-test\n\n1. Independence\nObservations should be independent (one person’s score doesn’t influence another’s). This is about study design, not something you can test in R.\n\n\n2. Normality\nThe data should be approximately normally distributed, especially for small samples. Check with:\n# Visual check\nhist(datalab$reaction_time)\n\n# Or by group\nlibrary(ggplot2)\nggplot(datalab, aes(x = reaction_time)) +\n  geom_histogram(bins = 15) +\n  facet_wrap(~room)\n\n\n\n\n\n\nTipRobustness\n\n\n\nThe t-test is quite robust to violations of normality, especially with larger samples (n &gt; 30 per group). Don’t worry too much unless your data are severely skewed.\n\n\n\n\n3. Homogeneity of Variance (for independent samples)\nGroups should have similar variability. Welch’s t-test (the default) handles unequal variances, so this is less of a concern.",
+    "text": "Assumptions of the t-test\n\n1. Independence\nObservations should be independent (one person’s score doesn’t influence another’s). This is about study design.\n\n\n2. Normality\nThe data should be approximately normally distributed, especially for small samples.\n\n\n\n\n\n\nTipRobustness\n\n\n\nThe t-test is quite robust to violations of normality, especially with larger samples (n &gt; 30 per group). Don’t worry too much unless your data are severely skewed.\n\n\n\n\n3. Homogeneity of Variance (for independent samples)\nGroups should have similar variability. The Welch’s t-test (default in most software) handles unequal variances automatically.",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Reading"
+    ]
+  },
+  {
+    "objectID": "week14/lab/reading.html#reporting-t-tests-apa-style",
+    "href": "week14/lab/reading.html#reporting-t-tests-apa-style",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "Reporting t-tests (APA Style)",
+    "text": "Reporting t-tests (APA Style)\n\nTemplate\n\n[Group 1] (M = XX.X, SD = X.X) [were/was] [significantly/not significantly] [higher/lower/different] than [Group 2] (M = XX.X, SD = X.X), t(df) = X.XX, p = .XXX, d = X.XX.\n\n\n\nIndependent Samples Example\n\nParticipants in Room A (M = 265.3 ms, SD = 45.2) had significantly faster reaction times than those in Room B (M = 288.1 ms, SD = 52.1), t(45.2) = -2.34, p = .024, d = 0.47.\n\n\n\nPaired Samples Example\n\nMood significantly increased from pre-session (M = 5.2, SD = 1.8) to post-session (M = 6.3, SD = 1.6), t(29) = 3.45, p = .002, d = 0.62.\n\n\n\nElements to Include\n\nGroup means and SDs\nThe t-value and df\nThe p-value\nEffect size (Cohen’s d)\nDirection of the difference",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 14: Inference & t-tests",
+      "Lab",
+      "Reading"
+    ]
+  },
+  {
+    "objectID": "week14/lab/reading.html#common-interpretation-errors",
+    "href": "week14/lab/reading.html#common-interpretation-errors",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "Common Interpretation Errors",
+    "text": "Common Interpretation Errors\n\nError 1: “p &gt; .05 means no difference”\nWrong! A non-significant result means we can’t rule out chance — not that there’s definitely no effect. The study might lack power.\n\n\nError 2: “p &lt; .001 means a huge effect”\nWrong! Statistical significance depends on sample size. Large samples can detect tiny effects. Always check effect size.\n\n\nError 3: “t = 2.34 is bigger than t = 1.98, so it’s more significant”\nMisleading! t-values depend on sample size and variability. Compare p-values and effect sizes instead.\n\n\nError 4: Confusing paired and independent tests\nCheck: Are the same people in both conditions? If yes → paired. If no → independent.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2075,9 +2019,9 @@
   {
     "objectID": "week14/lab/reading.html#preparation-checklist",
     "href": "week14/lab/reading.html#preparation-checklist",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Preparation Checklist",
-    "text": "Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on hypothesis testing\nUnderstand the difference between paired and independent samples\nBe able to interpret a p-value correctly\nHave a device with a web browser ready (for WebR)\n\n\n\n\nKey Questions to Consider\n\nWhat research questions from DataLab can we answer with t-tests?\nWhich comparisons require paired tests vs independent tests?\nWhat would a significant result mean in practical terms?\n\n\n\nWhat to Bring\n\nLaptop, tablet, or phone with a modern browser\nNotes on which DataLab variables you want to compare\nQuestions about interpreting output",
+    "text": "Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on hypothesis testing\nUnderstand the difference between paired and independent samples\nBe able to interpret p-values correctly\nKnow what Cohen’s d means\n\n\n\n\nQuestions to Consider\n\nWhat research questions from DataLab can we answer with t-tests?\nWhich comparisons require paired tests vs independent tests?\nWhat would a significant result mean in practical terms?",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2089,9 +2033,9 @@
   {
     "objectID": "week14/lab/reading.html#summary",
     "href": "week14/lab/reading.html#summary",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nt-test purpose\nCompare means to see if difference is beyond chance\n\n\nIndependent samples\nDifferent people in each group\n\n\nPaired samples\nSame people measured twice\n\n\np-value\nProbability of data if null hypothesis is true\n\n\nEffect size (d)\nPractical magnitude of the difference",
+    "text": "Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nt-test purpose\nCompare means to see if difference is beyond chance\n\n\nIndependent samples\nDifferent people in each group\n\n\nPaired samples\nSame people measured twice\n\n\np-value\nProbability of data if null hypothesis is true\n\n\nEffect size (d)\nPractical magnitude of the difference\n\n\nAPA format\nInclude M, SD, t, df, p, and d",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2101,25 +2045,11 @@
     ]
   },
   {
-    "objectID": "week14/lab/reading.html#quick-reference",
-    "href": "week14/lab/reading.html#quick-reference",
-    "title": "Chapter 8: t-tests in R",
-    "section": "Quick Reference",
-    "text": "Quick Reference\n# Independent samples (different people)\nt.test(outcome ~ group, data = mydata)\n\n# Paired samples (same people, two times)\nt.test(pre, post, paired = TRUE)\n\n# One sample (compare to known value)\nt.test(scores, mu = 50)\n\n# Extract results\nresult &lt;- t.test(...)\nresult$p.value\nresult$conf.int",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 14: Inference & t-tests",
-      "Lab",
-      "Reading"
-    ]
-  },
-  {
-    "objectID": "week14/lab/reading.html#additional-resources",
-    "href": "week14/lab/reading.html#additional-resources",
-    "title": "Chapter 8: t-tests in R",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\nR Documentation for t.test — Official documentation\nModernDive: Hypothesis Testing — Conceptual explanations\nDatanovia: t-test in R — Step-by-step tutorials with examples",
+    "objectID": "week14/lab/reading.html#quick-reference-interpreting-output",
+    "href": "week14/lab/reading.html#quick-reference-interpreting-output",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "Quick Reference: Interpreting Output",
+    "text": "Quick Reference: Interpreting Output\n\nIndependent Samples\n\n\n\nLook for\nTells you\n\n\n\n\nGroup means\nWhich group scored higher\n\n\nt-value\nDirection and magnitude of difference\n\n\np-value\nWhether difference is significant\n\n\nCI\nRange of plausible true differences\n\n\nd\nPractical size of effect\n\n\n\n\n\nPaired Samples\n\n\n\nLook for\nTells you\n\n\n\n\nMean difference\nAverage change\n\n\nt-value\nDirection and magnitude of change\n\n\np-value\nWhether change is significant\n\n\nCI\nRange of plausible true change\n\n\nd\nPractical size of effect",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15389,6 +15319,20 @@
     ]
   },
   {
+    "objectID": "week15/lab/instructor-slides.html#new-correlation-playground",
+    "href": "week15/lab/instructor-slides.html#new-correlation-playground",
+    "title": "Correlation in R",
+    "section": "NEW: Correlation Playground",
+    "text": "NEW: Correlation Playground\n\n\n\n\n\n\nTip\n\n\nInteractive Shiny App for exploring correlation\nlittlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/\n\n\n\nStudents can:\n\nAdjust correlation strength with sliders\nSee how r values translate to scatterplot patterns\nBuild intuition before calculating\n\nRecommend using this during Part 1 & 2!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
     "objectID": "week15/lab/instructor-slides.html#last-week-before-reading-week",
     "href": "week15/lab/instructor-slides.html#last-week-before-reading-week",
     "title": "Correlation in R",
@@ -15771,7 +15715,7 @@
     "href": "week15/lab/activity.html",
     "title": "Correlation in R",
     "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis lab explores correlation - measuring the relationship between two continuous variables:\n\nCreating effective scatterplots\nCalculating Pearson’s r in R\nInterpreting correlation coefficients\nApplying correlation to your own data",
+    "text": "ImportantFocus for Today\n\n\n\nThis lab explores correlation - measuring the relationship between two continuous variables:\n\nCreating effective scatterplots\nCalculating Pearson’s r in R\nInterpreting correlation coefficients\nApplying correlation to your own data\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively with the Correlation Playground app:\n🎮 Launch Correlation Playground\nThis tool lets you:\n\nAdjust correlation strength and see how scatterplots change\nExplore the relationship between r values and visual patterns\nBuild intuition for interpreting correlations",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15785,7 +15729,7 @@
     "href": "week15/lab/activity.html#overview",
     "title": "Correlation in R",
     "section": "",
-    "text": "ImportantFocus for Today\n\n\n\nThis lab explores correlation - measuring the relationship between two continuous variables:\n\nCreating effective scatterplots\nCalculating Pearson’s r in R\nInterpreting correlation coefficients\nApplying correlation to your own data",
+    "text": "ImportantFocus for Today\n\n\n\nThis lab explores correlation - measuring the relationship between two continuous variables:\n\nCreating effective scatterplots\nCalculating Pearson’s r in R\nInterpreting correlation coefficients\nApplying correlation to your own data\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively with the Correlation Playground app:\n🎮 Launch Correlation Playground\nThis tool lets you:\n\nAdjust correlation strength and see how scatterplots change\nExplore the relationship between r values and visual patterns\nBuild intuition for interpreting correlations",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16358,9 +16302,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html",
     "href": "textbook/chapters/w14-lab.html",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll conduct t-tests in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nUse t.test() to compare two groups (independent samples)\nUse t.test() to compare paired measurements (paired samples)\nInterpret t-test output including t-values, p-values, and confidence intervals\nChoose the appropriate type of t-test for your research question",
+    "text": "This reading prepares you for the lab session where you’ll interpret t-test output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret t-test output including t-values, p-values, and confidence intervals\nUnderstand the difference between independent and paired samples t-tests\nChoose the appropriate type of t-test for your research question\nReport t-test results in APA format",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16371,9 +16315,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#overview",
     "href": "textbook/chapters/w14-lab.html#overview",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll conduct t-tests in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nUse t.test() to compare two groups (independent samples)\nUse t.test() to compare paired measurements (paired samples)\nInterpret t-test output including t-values, p-values, and confidence intervals\nChoose the appropriate type of t-test for your research question",
+    "text": "This reading prepares you for the lab session where you’ll interpret t-test output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret t-test output including t-values, p-values, and confidence intervals\nUnderstand the difference between independent and paired samples t-tests\nChoose the appropriate type of t-test for your research question\nReport t-test results in APA format",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16384,22 +16328,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#when-to-use-a-t-test",
     "href": "textbook/chapters/w14-lab.html#when-to-use-a-t-test",
-    "title": "Chapter 8: t-tests in R",
+    "title": "Chapter 8: Understanding t-test Output",
     "section": "2 When to Use a t-test",
-    "text": "2 When to Use a t-test\nThe t-test answers the question: Is the difference between two means larger than we’d expect by chance?\nUse a t-test when you have:\n\nA continuous outcome variable (e.g., reaction time, mood score)\nTwo groups to compare OR two measurements from the same people\nReasonably normally distributed data (or a large enough sample)\n\n\n2.1 Types of t-tests\n\n\n\n\n\n\n\n\nType\nWhen to Use\nExample\n\n\n\n\nIndependent samples\nDifferent people in each group\nRoom A vs Room B\n\n\nPaired samples\nSame people measured twice\nPre vs Post mood\n\n\nOne sample\nCompare to a known value\nSample mean vs population mean",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 14",
-      "Lab: t-tests in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w14-lab.html#the-t.test-function",
-    "href": "textbook/chapters/w14-lab.html#the-t.test-function",
-    "title": "Chapter 8: t-tests in R",
-    "section": "3 The t.test() Function",
-    "text": "3 The t.test() Function\nR’s built-in t.test() function handles all three types. The basic syntax is:\nt.test(outcome ~ group, data = mydata)\nOr for paired data:\nt.test(x, y, paired = TRUE)",
+    "text": "2 When to Use a t-test\nThe t-test answers the question: Is the difference between two means larger than we’d expect by chance?\nUse a t-test when you have:\n\nA continuous outcome variable (e.g., reaction time, mood score)\nTwo groups to compare OR two measurements from the same people\nReasonably normally distributed data (or a large enough sample)\n\n\n2.1 Types of t-tests\n\n\n\n\n\n\n\n\nType\nWhen to Use\nExample\n\n\n\n\nIndependent samples\nDifferent people in each group\nRoom A vs Room B\n\n\nPaired samples\nSame people measured twice\nPre vs Post mood\n\n\nOne sample\nCompare to a known value\nSample mean vs 50%",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16410,9 +16341,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#independent-samples-t-test",
     "href": "textbook/chapters/w14-lab.html#independent-samples-t-test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "4 Independent Samples t-test",
-    "text": "4 Independent Samples t-test\nUse this when comparing different people in two groups.\n\n4.1 Example: Comparing Rooms\nDid Room A and Room B differ in reaction time?\n# Compare reaction times between rooms\nt.test(reaction_time ~ room, data = datalab)\n\n\n4.2 Understanding the Output\n    Welch Two Sample t-test\n\ndata:  reaction_time by room\nt = -2.34, df = 45.2, p-value = 0.024\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -42.5  -3.2\nsample estimates:\nmean in group A   mean in group B\n          265.3             288.1\nLet’s decode each part:\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = -2.34\nThe t-statistic; how many standard errors the difference is from 0\n\n\ndf = 45.2\nDegrees of freedom (Welch’s adjustment for unequal variances)\n\n\np-value = 0.024\nProbability of this difference (or larger) if null hypothesis is true\n\n\n95 percent confidence interval\nRange of plausible values for the true difference\n\n\nsample estimates\nThe actual group means\n\n\n\n\n\n\n\n\n\nImportantInterpreting the p-value\n\n\n\nA p-value of 0.024 means: if there were truly no difference between rooms, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we’d typically conclude the difference is statistically significant.",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "3 Independent Samples t-test",
+    "text": "3 Independent Samples t-test\nUse this when comparing different people in two groups.\n\n3.1 Example: Comparing Rooms\nDid Room A and Room B differ in reaction time?\n\n\n3.2 Understanding the Output\n    Welch Two Sample t-test\n\n    data:  reaction_time by room\n    t = -2.34, df = 45.2, p-value = 0.024\n    alternative hypothesis: true difference in means is not equal to 0\n    95 percent confidence interval:\n     -42.5  -3.2\n    sample estimates:\n    mean in group A   mean in group B\n              265.3             288.1\n\n\n3.3 What Each Part Means\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = -2.34\nThe t-statistic: how many standard errors the difference is from 0\n\n\ndf = 45.2\nDegrees of freedom\n\n\np-value = 0.024\nProbability of this difference (or larger) if null hypothesis is true\n\n\n95 percent confidence interval\nRange of plausible values for the true difference\n\n\nsample estimates\nThe actual group means\n\n\n\n\n\n3.4 Key Questions to Answer\n\nWhat are the means? → Room A: 265.3 ms, Room B: 288.1 ms\nWhat is t? → -2.34\nIs it significant? → Yes, p = 0.024 &lt; 0.05\nWhat’s the CI? → [-42.5, -3.2] - the true difference is likely in this range\nWhat does it mean? → Room A was faster than Room B\n\n\n\n\n\n\n\nImportantInterpreting the p-value\n\n\n\nA p-value of 0.024 means: if there were truly no difference between rooms, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we conclude the difference is statistically significant.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16423,9 +16354,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#paired-samples-t-test",
     "href": "textbook/chapters/w14-lab.html#paired-samples-t-test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "5 Paired Samples t-test",
-    "text": "5 Paired Samples t-test\nUse this when comparing the same people measured at two time points.\n\n5.1 Example: Pre-Post Mood\nDid mood change after DataLab?\n# Compare mood before and after\nt.test(datalab$mood_pre, datalab$mood_post, paired = TRUE)\nOr using formula notation with long-format data:\nt.test(mood ~ time, data = datalab_long, paired = TRUE)\n\n\n5.2 Why Paired Tests Are More Powerful\nPaired tests account for individual differences. Consider:\n\nPerson A: Pre = 5, Post = 7 (change = +2)\nPerson B: Pre = 8, Post = 10 (change = +2)\n\nBoth people increased by 2 points, even though their baseline scores differ. The paired test focuses on the change within each person, not the raw scores.\n\n\n\n\n\n\nTipRule of Thumb\n\n\n\nIf the same individuals provide both measurements, use a paired test. It’s more sensitive because it removes between-person variability.",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "4 Paired Samples t-test",
+    "text": "4 Paired Samples t-test\nUse this when comparing the same people measured at two time points.\n\n4.1 Example: Pre-Post Mood\nDid mood change after DataLab?\n\n\n4.2 Understanding the Output\n    Paired t-test\n\n    data:  mood_pre and mood_post\n    t = -3.45, df = 29, p-value = 0.002\n    alternative hypothesis: true mean difference is not equal to 0\n    95 percent confidence interval:\n     -1.82  -0.45\n    sample estimates:\n    mean difference\n              -1.13\n\n\n4.3 Key Questions to Answer\n\nWhat is the mean difference? → -1.13 (mood increased by 1.13 points)\nIs it significant? → Yes, p = 0.002 &lt; 0.05\nWhat’s the CI? → [-1.82, -0.45] - the true change is likely in this range\nWhat does it mean? → Mood significantly improved after DataLab\n\n\n\n4.4 Why Paired Tests Are More Powerful\nPaired tests account for individual differences. Consider:\n\nPerson A: Pre = 5, Post = 7 (change = +2)\nPerson B: Pre = 8, Post = 10 (change = +2)\n\nBoth people increased by 2 points, even though their baseline scores differ. The paired test focuses on the change within each person, not the raw scores.\n\n\n\n\n\n\nTipRule of Thumb\n\n\n\nIf the same individuals provide both measurements, use a paired test. It’s more sensitive because it removes between-person variability.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16436,35 +16367,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#one-sample-t-test",
     "href": "textbook/chapters/w14-lab.html#one-sample-t-test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "6 One Sample t-test",
-    "text": "6 One Sample t-test\nUse this to compare your sample mean to a specific value.\n\n6.1 Example: Comparing to Chance\nIs staring detection accuracy different from 50% (chance)?\n# Compare mean accuracy to 0.5 (50%)\nt.test(datalab$staring_accuracy, mu = 0.5)\nThe mu argument specifies the value you’re testing against.",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 14",
-      "Lab: t-tests in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w14-lab.html#key-arguments-for-t.test",
-    "href": "textbook/chapters/w14-lab.html#key-arguments-for-t.test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "7 Key Arguments for t.test()",
-    "text": "7 Key Arguments for t.test()\n\n\n\n\n\n\n\n\nArgument\nPurpose\nDefault\n\n\n\n\npaired = TRUE/FALSE\nPaired or independent test\nFALSE\n\n\nvar.equal = TRUE/FALSE\nAssume equal variances?\nFALSE (Welch’s test)\n\n\nalternative\nDirection: \"two.sided\", \"less\", \"greater\"\n\"two.sided\"\n\n\nmu\nValue to test against (one-sample)\n0\n\n\nconf.level\nConfidence level\n0.95\n\n\n\n\n7.1 About Welch’s t-test\nBy default, R uses Welch’s t-test, which doesn’t assume equal variances in the two groups. This is generally recommended as it’s more robust.\nIf you have good reason to assume equal variances:\nt.test(reaction_time ~ room, data = datalab, var.equal = TRUE)",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 14",
-      "Lab: t-tests in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w14-lab.html#extracting-specific-results",
-    "href": "textbook/chapters/w14-lab.html#extracting-specific-results",
-    "title": "Chapter 8: t-tests in R",
-    "section": "8 Extracting Specific Results",
-    "text": "8 Extracting Specific Results\nSometimes you want to pull out specific values for reporting:\n# Run the test and save results\nresult &lt;- t.test(reaction_time ~ room, data = datalab)\n\n# Extract specific values\nresult$statistic    # t-value\nresult$parameter    # degrees of freedom\nresult$p.value      # p-value\nresult$conf.int     # confidence interval\nresult$estimate     # group means\n\n8.1 Reporting Format (APA Style)\nFor your report, you might write:\n\nParticipants in Room A (M = 265.3 ms) had significantly faster reaction times than those in Room B (M = 288.1 ms), t(45.2) = -2.34, p = .024, 95% CI [-42.5, -3.2].",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "5 One Sample t-test",
+    "text": "5 One Sample t-test\nUse this to compare your sample mean to a specific value.\n\n5.1 Example: Comparing to Chance\nIs staring detection accuracy different from 50% (chance)?\n\n\n5.2 Understanding the Output\n    One Sample t-test\n\n    data:  staring_accuracy\n    t = 1.87, df = 29, p-value = 0.072\n    alternative hypothesis: true mean is not equal to 0.5\n    95 percent confidence interval:\n     0.48  0.61\n    sample estimates:\n    mean of x\n        0.545\n\n\n5.3 Key Questions to Answer\n\nWhat is the sample mean? → 54.5%\nIs it significantly different from 50%? → No, p = 0.072 &gt; 0.05\nWhat does it mean? → Performance is not significantly better than chance",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16475,9 +16380,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#effect-size-cohens-d",
     "href": "textbook/chapters/w14-lab.html#effect-size-cohens-d",
-    "title": "Chapter 8: t-tests in R",
-    "section": "9 Effect Size: Cohen’s d",
-    "text": "9 Effect Size: Cohen’s d\nThe p-value tells you whether a difference is statistically significant, but not whether it’s practically meaningful. For that, we use effect sizes.\nCohen’s d expresses the difference in standard deviation units:\n\n\n\nd value\nInterpretation\n\n\n\n\n0.2\nSmall effect\n\n\n0.5\nMedium effect\n\n\n0.8\nLarge effect\n\n\n\nYou can calculate Cohen’s d using the effectsize package:\nlibrary(effectsize)\n\n# For independent samples\ncohens_d(reaction_time ~ room, data = datalab)\n\n# For paired samples\ncohens_d(datalab$mood_pre, datalab$mood_post, paired = TRUE)",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "6 Effect Size: Cohen’s d",
+    "text": "6 Effect Size: Cohen’s d\nThe p-value tells you whether a difference is statistically significant, but not whether it’s practically meaningful. For that, we use effect sizes.\nCohen’s d expresses the difference in standard deviation units:\n\n\n\nd value\nInterpretation\n\n\n\n\n0.2\nSmall effect\n\n\n0.5\nMedium effect\n\n\n0.8\nLarge effect\n\n\n\n\n6.1 Example Output\n    Cohen's d\n\n    d estimate: 0.62\n    95% CI: [0.15, 1.09]\n\n    Interpretation: medium\n\n\n\n\n\n\nImportantWhy Effect Size Matters\n\n\n\nA study with n = 1000 might find p &lt; .001 for a tiny effect (d = 0.1). The effect is “real” but practically meaningless. Always report and interpret effect sizes alongside p-values.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16486,11 +16391,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w14-lab.html#common-errors-and-how-to-fix-them",
-    "href": "textbook/chapters/w14-lab.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 8: t-tests in R",
-    "section": "10 Common Errors and How to Fix Them",
-    "text": "10 Common Errors and How to Fix Them\n\n10.1 Error: grouping factor must have exactly 2 levels\n# Wrong: variable has more than 2 groups\nt.test(score ~ condition, data = mydata)\n# Error if condition has levels: A, B, C\nFix: Filter to only two groups:\n# Right: compare only A and B\nfiltered &lt;- mydata |&gt; filter(condition %in% c(\"A\", \"B\"))\nt.test(score ~ condition, data = filtered)\n\n\n10.2 Error: not enough ‘x’ observations\nFix: Your data might have too many missing values. Check with:\nsum(is.na(datalab$reaction_time))\n\n\n10.3 Error: object ‘datalab’ not found\nFix: Make sure you’ve loaded your data first. In WebR, run the data loading code before analysis.\n\n\n10.4 Paired test gives strange results\nFix: Make sure:\n\nThe two vectors have the same length\nThe observations are in the same order (person 1’s pre matches person 1’s post)\nYou included paired = TRUE\n\n# Check lengths match\nlength(datalab$mood_pre)\nlength(datalab$mood_post)\n\n\n10.5 Warning: data are essentially constant\nFix: One or both groups have no variability (all values are the same). A t-test isn’t appropriate here.",
+    "objectID": "textbook/chapters/w14-lab.html#choosing-the-right-test",
+    "href": "textbook/chapters/w14-lab.html#choosing-the-right-test",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "7 Choosing the Right Test",
+    "text": "7 Choosing the Right Test\n\n\n\n\n\n\n\n\nResearch Question\nDesign\nTest\n\n\n\n\nDo two different groups differ?\nBetween-subjects\nIndependent t-test\n\n\nDoes the same group change over time?\nWithin-subjects\nPaired t-test\n\n\nDoes a sample differ from a known value?\nOne-sample\nOne-sample t-test\n\n\n\n\n7.1 DataLab Examples\n\n\n\nQuestion\nTest Type\n\n\n\n\nDid Room A and B differ on reaction time?\nIndependent\n\n\nDid mood change from pre to post?\nPaired\n\n\nWas throwing accuracy above 50%?\nOne-sample\n\n\nDid word type (abstract/concrete) affect memory?\nIndependent",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16501,9 +16406,35 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#assumptions-of-the-t-test",
     "href": "textbook/chapters/w14-lab.html#assumptions-of-the-t-test",
-    "title": "Chapter 8: t-tests in R",
-    "section": "11 Assumptions of the t-test",
-    "text": "11 Assumptions of the t-test\n\n11.1 1. Independence\nObservations should be independent (one person’s score doesn’t influence another’s). This is about study design, not something you can test in R.\n\n\n11.2 2. Normality\nThe data should be approximately normally distributed, especially for small samples. Check with:\n# Visual check\nhist(datalab$reaction_time)\n\n# Or by group\nlibrary(ggplot2)\nggplot(datalab, aes(x = reaction_time)) +\n  geom_histogram(bins = 15) +\n  facet_wrap(~room)\n\n\n\n\n\n\nTipRobustness\n\n\n\nThe t-test is quite robust to violations of normality, especially with larger samples (n &gt; 30 per group). Don’t worry too much unless your data are severely skewed.\n\n\n\n\n11.3 3. Homogeneity of Variance (for independent samples)\nGroups should have similar variability. Welch’s t-test (the default) handles unequal variances, so this is less of a concern.",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "8 Assumptions of the t-test",
+    "text": "8 Assumptions of the t-test\n\n8.1 1. Independence\nObservations should be independent (one person’s score doesn’t influence another’s). This is about study design.\n\n\n8.2 2. Normality\nThe data should be approximately normally distributed, especially for small samples.\n\n\n\n\n\n\nTipRobustness\n\n\n\nThe t-test is quite robust to violations of normality, especially with larger samples (n &gt; 30 per group). Don’t worry too much unless your data are severely skewed.\n\n\n\n\n8.3 3. Homogeneity of Variance (for independent samples)\nGroups should have similar variability. The Welch’s t-test (default in most software) handles unequal variances automatically.",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 14",
+      "Lab: t-tests in R"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w14-lab.html#reporting-t-tests-apa-style",
+    "href": "textbook/chapters/w14-lab.html#reporting-t-tests-apa-style",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "9 Reporting t-tests (APA Style)",
+    "text": "9 Reporting t-tests (APA Style)\n\n9.1 Template\n\n[Group 1] (M = XX.X, SD = X.X) [were/was] [significantly/not significantly] [higher/lower/different] than [Group 2] (M = XX.X, SD = X.X), t(df) = X.XX, p = .XXX, d = X.XX.\n\n\n\n9.2 Independent Samples Example\n\nParticipants in Room A (M = 265.3 ms, SD = 45.2) had significantly faster reaction times than those in Room B (M = 288.1 ms, SD = 52.1), t(45.2) = -2.34, p = .024, d = 0.47.\n\n\n\n9.3 Paired Samples Example\n\nMood significantly increased from pre-session (M = 5.2, SD = 1.8) to post-session (M = 6.3, SD = 1.6), t(29) = 3.45, p = .002, d = 0.62.\n\n\n\n9.4 Elements to Include\n\nGroup means and SDs\nThe t-value and df\nThe p-value\nEffect size (Cohen’s d)\nDirection of the difference",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 14",
+      "Lab: t-tests in R"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w14-lab.html#common-interpretation-errors",
+    "href": "textbook/chapters/w14-lab.html#common-interpretation-errors",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "10 Common Interpretation Errors",
+    "text": "10 Common Interpretation Errors\n\n10.1 Error 1: “p &gt; .05 means no difference”\nWrong! A non-significant result means we can’t rule out chance — not that there’s definitely no effect. The study might lack power.\n\n\n10.2 Error 2: “p &lt; .001 means a huge effect”\nWrong! Statistical significance depends on sample size. Large samples can detect tiny effects. Always check effect size.\n\n\n10.3 Error 3: “t = 2.34 is bigger than t = 1.98, so it’s more significant”\nMisleading! t-values depend on sample size and variability. Compare p-values and effect sizes instead.\n\n\n10.4 Error 4: Confusing paired and independent tests\nCheck: Are the same people in both conditions? If yes → paired. If no → independent.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16514,9 +16445,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#preparation-checklist",
     "href": "textbook/chapters/w14-lab.html#preparation-checklist",
-    "title": "Chapter 8: t-tests in R",
-    "section": "12 Preparation Checklist",
-    "text": "12 Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on hypothesis testing\nUnderstand the difference between paired and independent samples\nBe able to interpret a p-value correctly\nHave a device with a web browser ready (for WebR)\n\n\n\n\n12.1 Key Questions to Consider\n\nWhat research questions from DataLab can we answer with t-tests?\nWhich comparisons require paired tests vs independent tests?\nWhat would a significant result mean in practical terms?\n\n\n\n12.2 What to Bring\n\nLaptop, tablet, or phone with a modern browser\nNotes on which DataLab variables you want to compare\nQuestions about interpreting output",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "11 Preparation Checklist",
+    "text": "11 Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on hypothesis testing\nUnderstand the difference between paired and independent samples\nBe able to interpret p-values correctly\nKnow what Cohen’s d means\n\n\n\n\n11.1 Questions to Consider\n\nWhat research questions from DataLab can we answer with t-tests?\nWhich comparisons require paired tests vs independent tests?\nWhat would a significant result mean in practical terms?",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16527,9 +16458,9 @@
   {
     "objectID": "textbook/chapters/w14-lab.html#summary",
     "href": "textbook/chapters/w14-lab.html#summary",
-    "title": "Chapter 8: t-tests in R",
-    "section": "13 Summary",
-    "text": "13 Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nt-test purpose\nCompare means to see if difference is beyond chance\n\n\nIndependent samples\nDifferent people in each group\n\n\nPaired samples\nSame people measured twice\n\n\np-value\nProbability of data if null hypothesis is true\n\n\nEffect size (d)\nPractical magnitude of the difference",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "12 Summary",
+    "text": "12 Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nt-test purpose\nCompare means to see if difference is beyond chance\n\n\nIndependent samples\nDifferent people in each group\n\n\nPaired samples\nSame people measured twice\n\n\np-value\nProbability of data if null hypothesis is true\n\n\nEffect size (d)\nPractical magnitude of the difference\n\n\nAPA format\nInclude M, SD, t, df, p, and d",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16538,24 +16469,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w14-lab.html#quick-reference",
-    "href": "textbook/chapters/w14-lab.html#quick-reference",
-    "title": "Chapter 8: t-tests in R",
-    "section": "14 Quick Reference",
-    "text": "14 Quick Reference\n# Independent samples (different people)\nt.test(outcome ~ group, data = mydata)\n\n# Paired samples (same people, two times)\nt.test(pre, post, paired = TRUE)\n\n# One sample (compare to known value)\nt.test(scores, mu = 50)\n\n# Extract results\nresult &lt;- t.test(...)\nresult$p.value\nresult$conf.int",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 14",
-      "Lab: t-tests in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w14-lab.html#additional-resources",
-    "href": "textbook/chapters/w14-lab.html#additional-resources",
-    "title": "Chapter 8: t-tests in R",
-    "section": "15 Additional Resources",
-    "text": "15 Additional Resources\n\nR Documentation for t.test — Official documentation\nModernDive: Hypothesis Testing — Conceptual explanations\nDatanovia: t-test in R — Step-by-step tutorials with examples",
+    "objectID": "textbook/chapters/w14-lab.html#quick-reference-interpreting-output",
+    "href": "textbook/chapters/w14-lab.html#quick-reference-interpreting-output",
+    "title": "Chapter 8: Understanding t-test Output",
+    "section": "13 Quick Reference: Interpreting Output",
+    "text": "13 Quick Reference: Interpreting Output\n\n13.1 Independent Samples\n\n\n\nLook for\nTells you\n\n\n\n\nGroup means\nWhich group scored higher\n\n\nt-value\nDirection and magnitude of difference\n\n\np-value\nWhether difference is significant\n\n\nCI\nRange of plausible true differences\n\n\nd\nPractical size of effect\n\n\n\n\n\n13.2 Paired Samples\n\n\n\nLook for\nTells you\n\n\n\n\nMean difference\nAverage change\n\n\nt-value\nDirection and magnitude of change\n\n\np-value\nWhether change is significant\n\n\nCI\nRange of plausible true change\n\n\nd\nPractical size of effect",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16566,9 +16484,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html",
     "href": "textbook/chapters/w15-lab.html",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll analyse correlations in R. Correlation is fundamental to psychology research — it tells us whether two variables are related and how strongly. You’ll learn to compute correlation coefficients, test their significance, and create informative scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nCalculate correlation coefficients using cor() and cor.test()\nInterpret correlation strength, direction, and significance\nCreate scatterplots with ggplot2 to visualise relationships\nUnderstand the difference between correlation and causation",
+    "text": "This reading prepares you for the lab session where you’ll explore correlations. Correlation tells us whether two variables are related and how strongly. You’ll learn to interpret correlation output and create meaningful scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret correlation coefficients (r values)\nUnderstand what scatterplots reveal about relationships\nRead and interpret correlation test output\nUnderstand why correlation does not imply causation\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively:\n🎮 Launch Correlation Playground\nAdjust correlation strength with sliders and see how scatterplots change in real-time. Build your intuition for what different r values look like.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16579,9 +16497,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html#overview",
     "href": "textbook/chapters/w15-lab.html#overview",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "",
-    "text": "This reading prepares you for the lab session where you’ll analyse correlations in R. Correlation is fundamental to psychology research — it tells us whether two variables are related and how strongly. You’ll learn to compute correlation coefficients, test their significance, and create informative scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nCalculate correlation coefficients using cor() and cor.test()\nInterpret correlation strength, direction, and significance\nCreate scatterplots with ggplot2 to visualise relationships\nUnderstand the difference between correlation and causation",
+    "text": "This reading prepares you for the lab session where you’ll explore correlations. Correlation tells us whether two variables are related and how strongly. You’ll learn to interpret correlation output and create meaningful scatterplots.\n\n\n\n\n\n\nNoteWhat You’ll Learn\n\n\n\nBy the end of this lab, you’ll be able to:\n\nInterpret correlation coefficients (r values)\nUnderstand what scatterplots reveal about relationships\nRead and interpret correlation test output\nUnderstand why correlation does not imply causation\n\n\n\n\n\n\n\n\n\nTipInteractive Tool: Correlation Playground\n\n\n\nExplore correlation interactively:\n🎮 Launch Correlation Playground\nAdjust correlation strength with sliders and see how scatterplots change in real-time. Build your intuition for what different r values look like.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16592,9 +16510,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html#what-is-correlation",
     "href": "textbook/chapters/w15-lab.html#what-is-correlation",
-    "title": "Chapter 10: Correlation in R",
+    "title": "Chapter 10: Understanding Correlation Output",
     "section": "2 What Is Correlation?",
-    "text": "2 What Is Correlation?\nCorrelation measures the strength and direction of the linear relationship between two continuous variables.\n\nStrength: How tightly the data points cluster around a line (from weak to strong)\nDirection: Whether variables increase together (positive) or one increases as the other decreases (negative)\n\n\n2.1 Correlation Coefficient (r)\nThe correlation coefficient r ranges from -1 to +1:\n\n\n\nValue\nInterpretation\n\n\n\n\nr = +1\nPerfect positive relationship\n\n\nr = +0.7\nStrong positive relationship\n\n\nr = +0.3\nWeak positive relationship\n\n\nr = 0\nNo linear relationship\n\n\nr = -0.3\nWeak negative relationship\n\n\nr = -0.7\nStrong negative relationship\n\n\nr = -1\nPerfect negative relationship\n\n\n\n\n\n\n\n\n\nImportantDirection vs Strength\n\n\n\nThe sign tells you direction; the absolute value tells you strength. r = -0.8 is a stronger relationship than r = +0.3.",
+    "text": "2 What Is Correlation?\nCorrelation measures the strength and direction of the linear relationship between two continuous variables.\n\nStrength: How tightly the data points cluster around a line (from weak to strong)\nDirection: Whether variables increase together (positive) or one increases as the other decreases (negative)\n\n\n2.1 The Correlation Coefficient (r)\nThe correlation coefficient r ranges from -1 to +1:\n\n\n\nValue\nInterpretation\n\n\n\n\nr = +1\nPerfect positive relationship\n\n\nr = +0.7\nStrong positive relationship\n\n\nr = +0.3\nWeak positive relationship\n\n\nr = 0\nNo linear relationship\n\n\nr = -0.3\nWeak negative relationship\n\n\nr = -0.7\nStrong negative relationship\n\n\nr = -1\nPerfect negative relationship\n\n\n\n\n\n\n\n\n\nImportantDirection vs Strength\n\n\n\nThe sign tells you direction; the absolute value tells you strength. r = -0.8 is a stronger relationship than r = +0.3.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16603,11 +16521,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#computing-correlations-in-r",
-    "href": "textbook/chapters/w15-lab.html#computing-correlations-in-r",
-    "title": "Chapter 10: Correlation in R",
-    "section": "3 Computing Correlations in R",
-    "text": "3 Computing Correlations in R\n\n3.1 The cor() Function\nFor a quick correlation coefficient:\n# Correlation between two variables\ncor(datalab$reaction_time, datalab$time_estimate)\nThis returns just the correlation coefficient (e.g., 0.42).\n\n\n3.2 The cor.test() Function\nFor a complete analysis including significance testing:\n# Full correlation test\ncor.test(datalab$reaction_time, datalab$time_estimate)\n\n\n3.3 Understanding cor.test() Output\n    Pearson's product-moment correlation\n\ndata:  datalab$reaction_time and datalab$time_estimate\nt = 3.12, df = 48, p-value = 0.003\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.15  0.63\nsample estimates:\n      cor\n0.42\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = 3.12\nThe t-statistic for testing if r differs from 0\n\n\ndf = 48\nDegrees of freedom (n - 2)\n\n\np-value = 0.003\nProbability of this r (or stronger) if true r = 0\n\n\n95 percent confidence interval\nPlausible range for the true correlation\n\n\ncor = 0.42\nThe sample correlation coefficient\n\n\n\n\n\n\n\n\n\nTipInterpreting the CI\n\n\n\nA 95% CI of [0.15, 0.63] means we’re fairly confident the true population correlation is somewhere in this range. Since it doesn’t include 0, the correlation is statistically significant.",
+    "objectID": "textbook/chapters/w15-lab.html#reading-scatterplots",
+    "href": "textbook/chapters/w15-lab.html#reading-scatterplots",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "3 Reading Scatterplots",
+    "text": "3 Reading Scatterplots\n\n3.1 Why Visualise?\nBefore looking at numbers, always examine a scatterplot. It reveals:\n\nThe direction of the relationship (positive, negative, or none)\nThe strength of the relationship (tight cluster vs spread out)\nThe shape (linear vs curved)\nAny unusual patterns or outliers\n\n\n\n3.2 What to Look For\nEach point represents one participant:\n\nX-axis: One variable\nY-axis: The other variable\n\nPattern Guide:\n\n\n\nPattern\nMeaning\n\n\n\n\nUpward slope\nPositive relationship\n\n\nDownward slope\nNegative relationship\n\n\nNo clear slope\nNo relationship\n\n\nTight cluster around line\nStrong relationship\n\n\nWide scatter\nWeak relationship\n\n\n\n\n\n3.3 Visual Examples\nStrong Positive (r ≈ 0.8)    Weak Positive (r ≈ 0.3)    No Relationship (r ≈ 0)\n        •                           •  •                      •   •\n       • •                        •    •  •                 •     •\n      •  ••                      •  •   •                  •  •    •\n     •    •                       •  •                       • •  •\n    •                            •                         •    •",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16616,11 +16534,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#correlation-matrix",
-    "href": "textbook/chapters/w15-lab.html#correlation-matrix",
-    "title": "Chapter 10: Correlation in R",
-    "section": "4 Correlation Matrix",
-    "text": "4 Correlation Matrix\nWhen you have multiple variables, you can compute all pairwise correlations at once:\n# Select numeric columns\nnumeric_vars &lt;- datalab[, c(\"reaction_time\", \"time_estimate\", \"mood_pre\", \"mood_post\")]\n\n# Correlation matrix\ncor(numeric_vars)\nThis produces a matrix showing all correlations:\n               reaction_time time_estimate mood_pre mood_post\nreaction_time           1.00          0.42     0.15     0.18\ntime_estimate           0.42          1.00     0.08     0.12\nmood_pre                0.15          0.08     1.00     0.65\nmood_post               0.18          0.12     0.65     1.00\n\n4.1 Handling Missing Values\nIf your data has missing values, add use = \"complete.obs\":\ncor(numeric_vars, use = \"complete.obs\")",
+    "objectID": "textbook/chapters/w15-lab.html#interpreting-correlation-output",
+    "href": "textbook/chapters/w15-lab.html#interpreting-correlation-output",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "4 Interpreting Correlation Output",
+    "text": "4 Interpreting Correlation Output\nWhen you run a correlation test, you’ll see output like this:\n    Pearson's product-moment correlation\n\n    data:  reaction_time and time_estimate\n    t = 3.12, df = 48, p-value = 0.003\n    95 percent confidence interval:\n     0.15  0.63\n    sample estimates:\n          cor\n         0.42\n\n4.1 What Each Part Means\n\n\n\n\n\n\n\nOutput\nMeaning\n\n\n\n\nt = 3.12\nThe test statistic\n\n\ndf = 48\nDegrees of freedom (sample size - 2)\n\n\np-value = 0.003\nProbability of this r if there’s truly no relationship\n\n\n95 percent confidence interval\nPlausible range for the true correlation\n\n\ncor = 0.42\nThe sample correlation coefficient\n\n\n\n\n\n4.2 Key Questions to Answer\n\nWhat is r? → 0.42 (medium positive correlation)\nIs it significant? → Yes, p = 0.003 &lt; 0.05\nWhat’s the CI? → [0.15, 0.63] - the true r is likely in this range\nWhat does it mean? → Higher reaction times are associated with higher time estimates\n\n\n\n\n\n\n\nTipInterpreting the Confidence Interval\n\n\n\nA 95% CI of [0.15, 0.63] means we’re fairly confident the true population correlation is somewhere in this range. Since it doesn’t include 0, the correlation is statistically significant.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16629,11 +16547,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#visualising-correlations-with-ggplot2",
-    "href": "textbook/chapters/w15-lab.html#visualising-correlations-with-ggplot2",
-    "title": "Chapter 10: Correlation in R",
-    "section": "5 Visualising Correlations with ggplot2",
-    "text": "5 Visualising Correlations with ggplot2\n\n5.1 Basic Scatterplot\nlibrary(ggplot2)\n\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point()\n\n\n5.2 Adding a Trend Line\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = TRUE)\n\nmethod = \"lm\" adds a linear regression line\nse = TRUE shows the confidence band around the line\n\n\n\n5.3 Improved Scatterplot\nggplot(datalab, aes(x = reaction_time, y = time_estimate)) +\n  geom_point(alpha = 0.6, size = 3) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"#275882\") +\n  labs(\n    x = \"Reaction Time (ms)\",\n    y = \"Time Estimate (seconds)\",\n    title = \"Relationship Between Reaction Time and Time Perception\"\n  ) +\n  theme_minimal()\n\n\n5.4 Scatterplot with Groups\nTo show different groups with different colours:\nggplot(datalab, aes(x = reaction_time, y = time_estimate, color = room)) +\n  geom_point(alpha = 0.6, size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"Reaction Time (ms)\",\n    y = \"Time Estimate (seconds)\",\n    color = \"Room\"\n  ) +\n  theme_minimal()",
+    "objectID": "textbook/chapters/w15-lab.html#correlation-strength-guidelines",
+    "href": "textbook/chapters/w15-lab.html#correlation-strength-guidelines",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "5 Correlation Strength Guidelines",
+    "text": "5 Correlation Strength Guidelines\nCohen (1988) suggested these benchmarks:\n\n\n\n\nr\n\n\n\n\n.10 - .29\nSmall/weak\n\n\n.30 - .49\nMedium/moderate\n\n\n.50+\nLarge/strong\n\n\n\n\n\n\n\n\n\nWarningContext Matters\n\n\n\nThese are rough guidelines. In some research areas, r = .30 is typical and meaningful. In others, r = .50 might be expected.\n\n\n\n5.1 Understanding r-squared\nSquaring r tells you the proportion of variance explained:\n\n\n\nr\nr²\nInterpretation\n\n\n\n\n.10\n.01\n1% shared variance\n\n\n.30\n.09\n9% shared variance\n\n\n.50\n.25\n25% shared variance\n\n\n.70\n.49\n49% shared variance\n\n\n\n\n\n\n\n\n\nImportantReality Check\n\n\n\nA correlation of r = .42 sounds reasonable. But r² = .18 means one variable explains only 18% of the variance in the other. The remaining 82% is due to other factors!",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16642,11 +16560,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#types-of-correlation",
-    "href": "textbook/chapters/w15-lab.html#types-of-correlation",
-    "title": "Chapter 10: Correlation in R",
-    "section": "6 Types of Correlation",
-    "text": "6 Types of Correlation\n\n6.1 Pearson’s r (default)\nAssumes:\n\nBoth variables are continuous\nRelationship is linear\nData are approximately normally distributed\n\ncor.test(x, y, method = \"pearson\")  # default\n\n\n6.2 Spearman’s rho\nUse when:\n\nData are ordinal (ranked)\nRelationship is monotonic but not linear\nData have outliers or are skewed\n\ncor.test(x, y, method = \"spearman\")\n\n\n6.3 Kendall’s tau\nMore robust alternative to Spearman’s, good for small samples:\ncor.test(x, y, method = \"kendall\")",
+    "objectID": "textbook/chapters/w15-lab.html#pearson-vs-spearman",
+    "href": "textbook/chapters/w15-lab.html#pearson-vs-spearman",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "6 Pearson vs Spearman",
+    "text": "6 Pearson vs Spearman\n\n6.1 Pearson’s r (Most Common)\nUse when:\n\nBoth variables are continuous\nRelationship is approximately linear\nData are roughly normally distributed\n\n\n\n6.2 Spearman’s rho (ρ)\nUse when:\n\nData are ordinal (ranked)\nRelationship is monotonic but not linear\nData have outliers or are skewed\n\nBoth are interpreted the same way — they range from -1 to +1 with the same strength guidelines.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16655,37 +16573,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#key-functions-reference",
-    "href": "textbook/chapters/w15-lab.html#key-functions-reference",
-    "title": "Chapter 10: Correlation in R",
-    "section": "7 Key Functions Reference",
-    "text": "7 Key Functions Reference\n\n\n\nFunction\nPurpose\nExample\n\n\n\n\ncor()\nQuick correlation coefficient\ncor(x, y)\n\n\ncor.test()\nFull test with p-value and CI\ncor.test(x, y)\n\n\ncor(matrix)\nCorrelation matrix\ncor(data[, vars])\n\n\ngeom_point()\nAdd points to ggplot\n+ geom_point()\n\n\ngeom_smooth()\nAdd trend line\n+ geom_smooth(method = \"lm\")\n\n\n\n\n7.1 Useful ggplot2 Arguments\n\n\n\nArgument\nPurpose\nExample\n\n\n\n\nalpha\nPoint transparency\ngeom_point(alpha = 0.5)\n\n\nsize\nPoint size\ngeom_point(size = 3)\n\n\ncolor\nPoint/line colour\ngeom_point(color = \"blue\")\n\n\nse\nShow confidence band\ngeom_smooth(se = TRUE)\n\n\nmethod\nSmoothing method\ngeom_smooth(method = \"lm\")",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 15",
-      "Lab: Correlation in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w15-lab.html#common-errors-and-how-to-fix-them",
-    "href": "textbook/chapters/w15-lab.html#common-errors-and-how-to-fix-them",
-    "title": "Chapter 10: Correlation in R",
-    "section": "8 Common Errors and How to Fix Them",
-    "text": "8 Common Errors and How to Fix Them\n\n8.1 Error: ‘x’ and ‘y’ must have the same length\n# Wrong: different lengths\ncor(datalab$reaction_time[1:40], datalab$time_estimate)\nFix: Ensure both variables have the same number of observations. This usually happens with missing values:\n# Create complete cases\ncomplete_data &lt;- datalab[complete.cases(datalab$reaction_time, datalab$time_estimate), ]\ncor(complete_data$reaction_time, complete_data$time_estimate)\n\n\n8.2 Error: ‘x’ must be numeric\nFix: Convert to numeric if needed:\n# Check variable type\nclass(datalab$reaction_time)\n\n# Convert if needed\ndatalab$reaction_time &lt;- as.numeric(datalab$reaction_time)\n\n\n8.3 Warning: Cannot compute exact p-value with ties\nThis happens with Spearman’s correlation when there are tied ranks.\nFix: This is usually fine — R provides an approximation. For small samples, consider Kendall’s tau instead.\n\n\n8.4 The scatterplot looks empty\nFix: Check for issues with your data:\n# Check for NAs\nsum(is.na(datalab$reaction_time))\n\n# Check for extreme values\nsummary(datalab$reaction_time)\n\n\n8.5 Points are overplotting (too many on top of each other)\nFix: Use transparency or jitter:\n# Transparency\ngeom_point(alpha = 0.3)\n\n# Or jitter (adds small random noise)\ngeom_jitter(width = 0.5, height = 0.5)",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 15",
-      "Lab: Correlation in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w15-lab.html#correlation-is-not-causation",
-    "href": "textbook/chapters/w15-lab.html#correlation-is-not-causation",
-    "title": "Chapter 10: Correlation in R",
-    "section": "9 Correlation is NOT Causation",
-    "text": "9 Correlation is NOT Causation\n\n\n\n\n\n\nWarningCritical Point\n\n\n\nA correlation between X and Y does NOT mean X causes Y (or Y causes X). There are several possibilities:\n\nX causes Y\nY causes X\nA third variable (Z) causes both\nThe relationship is coincidental\n\nOnly controlled experiments can establish causation.\n\n\n\n9.1 Classic Example\nThere’s a strong correlation between ice cream sales and drowning deaths. Does ice cream cause drowning? No — a third variable (hot weather) increases both ice cream consumption and swimming.",
+    "objectID": "textbook/chapters/w15-lab.html#correlation-does-not-mean-causation",
+    "href": "textbook/chapters/w15-lab.html#correlation-does-not-mean-causation",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "7 Correlation Does NOT Mean Causation",
+    "text": "7 Correlation Does NOT Mean Causation\n\n\n\n\n\n\nWarningCritical Point\n\n\n\nA correlation between X and Y does NOT mean X causes Y. This is possibly the most important lesson in research methods.\n\n\n\n7.1 Why Not?\nThree possible explanations for any correlation:\n\nX causes Y: More sleep → better performance\nY causes X: Better performance → more sleep (less stress)\nZ causes both: Good health → more sleep AND better performance\n\nWithout experimental manipulation, we cannot determine which explanation is correct.\n\n\n7.2 Classic Example\nIce cream sales and drowning deaths are correlated.\nDoes ice cream cause drowning? No! A third variable (hot weather) causes both:\n\nHot weather → more ice cream sales\nHot weather → more swimming → more drowning\n\n\n\n7.3 DataLab Example\nSelf-rating and throwing performance might be correlated.\nDoes thinking you’re good make you perform better? Possible alternatives:\n\nPast experience → higher self-rating AND better performance\nNatural ability → higher self-rating AND better performance\n\nWe can’t determine causation from correlation alone.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16696,9 +16588,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html#reporting-correlations-apa-style",
     "href": "textbook/chapters/w15-lab.html#reporting-correlations-apa-style",
-    "title": "Chapter 10: Correlation in R",
-    "section": "10 Reporting Correlations (APA Style)",
-    "text": "10 Reporting Correlations (APA Style)\n\nReaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].\n\nElements to include:\n\nThe variables being correlated\nDirection (positive/negative)\nDegrees of freedom in parentheses\nThe r value\nThe p-value\nThe 95% CI",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "8 Reporting Correlations (APA Style)",
+    "text": "8 Reporting Correlations (APA Style)\n\n8.1 Template\n\nVariable X and Variable Y were [significantly/not significantly] [positively/negatively] correlated, r(df) = .XX, p = .XXX, 95% CI [.XX, .XX].\n\n\n\n8.2 Example\n\nReaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].\n\n\n\n8.3 Elements to Include\n\nThe variables being correlated\nDirection (positive/negative)\nDegrees of freedom in parentheses\nThe r value\nThe p-value\nThe 95% CI",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16709,9 +16601,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html#preparation-checklist",
     "href": "textbook/chapters/w15-lab.html#preparation-checklist",
-    "title": "Chapter 10: Correlation in R",
-    "section": "11 Preparation Checklist",
-    "text": "11 Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nReview the lecture material on correlation\nUnderstand what r values mean (strength and direction)\nFamiliarise yourself with ggplot2 basics\nHave a device with a web browser ready (for WebR)\n\n\n\n\n11.1 Questions to Consider\n\nWhich DataLab variables might be correlated?\nWhat would a positive correlation between reaction time and time estimate mean?\nHow would you check if a correlation is “real” versus due to chance?\n\n\n\n11.2 What to Bring\n\nLaptop, tablet, or phone with a modern browser\nIdeas about relationships to test in the data\nQuestions about interpreting correlations",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "9 Preparation Checklist",
+    "text": "9 Preparation Checklist\nBefore arriving at the lab:\n\n\n\n\n\n\nWarningBefore You Arrive\n\n\n\n\nRead this chapter carefully\nTry the Correlation Playground app\nReview the lecture material on correlation\nUnderstand what r values mean (strength and direction)\nBe able to interpret example output\n\n\n\n\n9.1 Questions to Consider\n\nWhich DataLab variables might be correlated?\nWhat would a positive correlation between reaction time and time estimate mean?\nHow would you explain correlation vs causation to a friend?",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16722,9 +16614,9 @@
   {
     "objectID": "textbook/chapters/w15-lab.html#summary",
     "href": "textbook/chapters/w15-lab.html#summary",
-    "title": "Chapter 10: Correlation in R",
-    "section": "12 Summary",
-    "text": "12 Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCorrelation (r)\nMeasures strength and direction of linear relationship\n\n\nRange\n-1 (perfect negative) to +1 (perfect positive)\n\n\ncor()\nQuick coefficient only\n\n\ncor.test()\nFull test with p-value and CI\n\n\nScatterplot\nEssential for visualising relationships\n\n\nCausation\nCorrelation does NOT imply causation",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "10 Summary",
+    "text": "10 Summary\n\n\n\n\n\n\n\nConcept\nKey Point\n\n\n\n\nCorrelation (r)\nMeasures strength and direction of linear relationship\n\n\nRange\n-1 (perfect negative) to +1 (perfect positive)\n\n\nScatterplot\nAlways visualise before interpreting numbers\n\n\nr²\nProportion of shared variance\n\n\nSignificance\np &lt; .05 suggests relationship exists in population\n\n\nCausation\nCorrelation does NOT imply causation",
     "crumbs": [
       "Home",
       "Textbook",
@@ -16733,24 +16625,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w15-lab.html#quick-reference",
-    "href": "textbook/chapters/w15-lab.html#quick-reference",
-    "title": "Chapter 10: Correlation in R",
-    "section": "13 Quick Reference",
-    "text": "13 Quick Reference\n# Basic correlation\ncor(x, y)\n\n# With significance test\ncor.test(x, y)\n\n# Spearman (for non-normal data)\ncor.test(x, y, method = \"spearman\")\n\n# Correlation matrix\ncor(data[, c(\"var1\", \"var2\", \"var3\")])\n\n# Scatterplot with trend line\nggplot(data, aes(x = var1, y = var2)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")",
-    "crumbs": [
-      "Home",
-      "Textbook",
-      "Week 15",
-      "Lab: Correlation in R"
-    ]
-  },
-  {
-    "objectID": "textbook/chapters/w15-lab.html#additional-resources",
-    "href": "textbook/chapters/w15-lab.html#additional-resources",
-    "title": "Chapter 10: Correlation in R",
-    "section": "14 Additional Resources",
-    "text": "14 Additional Resources\n\nR Documentation for cor.test — Official documentation\nggplot2 Reference: geom_point — Scatterplot options\nCorrelation in R: Comprehensive Guide — Detailed tutorial",
+    "objectID": "textbook/chapters/w15-lab.html#correlation-strength-quick-reference",
+    "href": "textbook/chapters/w15-lab.html#correlation-strength-quick-reference",
+    "title": "Chapter 10: Understanding Correlation Output",
+    "section": "11 Correlation Strength Quick Reference",
+    "text": "11 Correlation Strength Quick Reference\n\n\n\n\nr\n\nInterpretation\n\n\n\n\n.10\nSmall\n.01\n1%\n\n\n.20\nSmall-medium\n.04\n4%\n\n\n.30\nMedium\n.09\n9%\n\n\n.40\nMedium-large\n.16\n16%\n\n\n.50\nLarge\n.25\n25%\n\n\n.70\nVery large\n.49\n49%",
     "crumbs": [
       "Home",
       "Textbook",

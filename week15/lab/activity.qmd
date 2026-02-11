@@ -41,6 +41,20 @@ This lab explores **correlation** - measuring the relationship between two conti
 - Applying correlation to your own data
 :::
 
+::: {.callout-tip}
+## Interactive Tool: Correlation Playground
+
+Explore correlation interactively with the **Correlation Playground** app:
+
+<a href="https://littlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/" target="_blank" class="btn btn-primary">🎮 Launch Correlation Playground</a>
+
+This tool lets you:
+
+- Adjust correlation strength and see how scatterplots change
+- Explore the relationship between r values and visual patterns
+- Build intuition for interpreting correlations
+:::
+
 ---
 
 ## Activity 1: Creating Scatterplots (15 min)

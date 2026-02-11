@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 8: t-tests in R – PS50008A Research Methods &amp; Experimental Design</title>
+<title>Chapter 8: Understanding t-test Output – PS50008A Research Methods &amp; Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -868,37 +868,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#types-of-t-tests" id="toc-types-of-t-tests" class="nav-link" data-scroll-target="#types-of-t-tests">Types of t-tests</a></li>
   </ul></li>
-  <li><a href="#the-t.test-function" id="toc-the-t.test-function" class="nav-link" data-scroll-target="#the-t.test-function">The <code>t.test()</code> Function</a></li>
   <li><a href="#independent-samples-t-test" id="toc-independent-samples-t-test" class="nav-link" data-scroll-target="#independent-samples-t-test">Independent Samples t-test</a>
   <ul class="collapse">
   <li><a href="#example-comparing-rooms" id="toc-example-comparing-rooms" class="nav-link" data-scroll-target="#example-comparing-rooms">Example: Comparing Rooms</a></li>
   <li><a href="#understanding-the-output" id="toc-understanding-the-output" class="nav-link" data-scroll-target="#understanding-the-output">Understanding the Output</a></li>
+  <li><a href="#what-each-part-means" id="toc-what-each-part-means" class="nav-link" data-scroll-target="#what-each-part-means">What Each Part Means</a></li>
+  <li><a href="#key-questions-to-answer" id="toc-key-questions-to-answer" class="nav-link" data-scroll-target="#key-questions-to-answer">Key Questions to Answer</a></li>
   </ul></li>
   <li><a href="#paired-samples-t-test" id="toc-paired-samples-t-test" class="nav-link" data-scroll-target="#paired-samples-t-test">Paired Samples t-test</a>
   <ul class="collapse">
   <li><a href="#example-pre-post-mood" id="toc-example-pre-post-mood" class="nav-link" data-scroll-target="#example-pre-post-mood">Example: Pre-Post Mood</a></li>
+  <li><a href="#understanding-the-output-1" id="toc-understanding-the-output-1" class="nav-link" data-scroll-target="#understanding-the-output-1">Understanding the Output</a></li>
+  <li><a href="#key-questions-to-answer-1" id="toc-key-questions-to-answer-1" class="nav-link" data-scroll-target="#key-questions-to-answer-1">Key Questions to Answer</a></li>
   <li><a href="#why-paired-tests-are-more-powerful" id="toc-why-paired-tests-are-more-powerful" class="nav-link" data-scroll-target="#why-paired-tests-are-more-powerful">Why Paired Tests Are More Powerful</a></li>
   </ul></li>
   <li><a href="#one-sample-t-test" id="toc-one-sample-t-test" class="nav-link" data-scroll-target="#one-sample-t-test">One Sample t-test</a>
   <ul class="collapse">
   <li><a href="#example-comparing-to-chance" id="toc-example-comparing-to-chance" class="nav-link" data-scroll-target="#example-comparing-to-chance">Example: Comparing to Chance</a></li>
+  <li><a href="#understanding-the-output-2" id="toc-understanding-the-output-2" class="nav-link" data-scroll-target="#understanding-the-output-2">Understanding the Output</a></li>
+  <li><a href="#key-questions-to-answer-2" id="toc-key-questions-to-answer-2" class="nav-link" data-scroll-target="#key-questions-to-answer-2">Key Questions to Answer</a></li>
   </ul></li>
-  <li><a href="#key-arguments-for-t.test" id="toc-key-arguments-for-t.test" class="nav-link" data-scroll-target="#key-arguments-for-t.test">Key Arguments for <code>t.test()</code></a>
+  <li><a href="#effect-size-cohens-d" id="toc-effect-size-cohens-d" class="nav-link" data-scroll-target="#effect-size-cohens-d">Effect Size: Cohen’s d</a>
   <ul class="collapse">
-  <li><a href="#about-welchs-t-test" id="toc-about-welchs-t-test" class="nav-link" data-scroll-target="#about-welchs-t-test">About Welch’s t-test</a></li>
+  <li><a href="#example-output" id="toc-example-output" class="nav-link" data-scroll-target="#example-output">Example Output</a></li>
   </ul></li>
-  <li><a href="#extracting-specific-results" id="toc-extracting-specific-results" class="nav-link" data-scroll-target="#extracting-specific-results">Extracting Specific Results</a>
+  <li><a href="#choosing-the-right-test" id="toc-choosing-the-right-test" class="nav-link" data-scroll-target="#choosing-the-right-test">Choosing the Right Test</a>
   <ul class="collapse">
-  <li><a href="#reporting-format-apa-style" id="toc-reporting-format-apa-style" class="nav-link" data-scroll-target="#reporting-format-apa-style">Reporting Format (APA Style)</a></li>
-  </ul></li>
-  <li><a href="#effect-size-cohens-d" id="toc-effect-size-cohens-d" class="nav-link" data-scroll-target="#effect-size-cohens-d">Effect Size: Cohen’s d</a></li>
-  <li><a href="#common-errors-and-how-to-fix-them" id="toc-common-errors-and-how-to-fix-them" class="nav-link" data-scroll-target="#common-errors-and-how-to-fix-them">Common Errors and How to Fix Them</a>
-  <ul class="collapse">
-  <li><a href="#error-grouping-factor-must-have-exactly-2-levels" id="toc-error-grouping-factor-must-have-exactly-2-levels" class="nav-link" data-scroll-target="#error-grouping-factor-must-have-exactly-2-levels">Error: grouping factor must have exactly 2 levels</a></li>
-  <li><a href="#error-not-enough-x-observations" id="toc-error-not-enough-x-observations" class="nav-link" data-scroll-target="#error-not-enough-x-observations">Error: not enough ‘x’ observations</a></li>
-  <li><a href="#error-object-datalab-not-found" id="toc-error-object-datalab-not-found" class="nav-link" data-scroll-target="#error-object-datalab-not-found">Error: object ‘datalab’ not found</a></li>
-  <li><a href="#paired-test-gives-strange-results" id="toc-paired-test-gives-strange-results" class="nav-link" data-scroll-target="#paired-test-gives-strange-results">Paired test gives strange results</a></li>
-  <li><a href="#warning-data-are-essentially-constant" id="toc-warning-data-are-essentially-constant" class="nav-link" data-scroll-target="#warning-data-are-essentially-constant">Warning: data are essentially constant</a></li>
+  <li><a href="#datalab-examples" id="toc-datalab-examples" class="nav-link" data-scroll-target="#datalab-examples">DataLab Examples</a></li>
   </ul></li>
   <li><a href="#assumptions-of-the-t-test" id="toc-assumptions-of-the-t-test" class="nav-link" data-scroll-target="#assumptions-of-the-t-test">Assumptions of the t-test</a>
   <ul class="collapse">
@@ -906,14 +902,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#normality" id="toc-normality" class="nav-link" data-scroll-target="#normality">2. Normality</a></li>
   <li><a href="#homogeneity-of-variance-for-independent-samples" id="toc-homogeneity-of-variance-for-independent-samples" class="nav-link" data-scroll-target="#homogeneity-of-variance-for-independent-samples">3. Homogeneity of Variance (for independent samples)</a></li>
   </ul></li>
+  <li><a href="#reporting-t-tests-apa-style" id="toc-reporting-t-tests-apa-style" class="nav-link" data-scroll-target="#reporting-t-tests-apa-style">Reporting t-tests (APA Style)</a>
+  <ul class="collapse">
+  <li><a href="#template" id="toc-template" class="nav-link" data-scroll-target="#template">Template</a></li>
+  <li><a href="#independent-samples-example" id="toc-independent-samples-example" class="nav-link" data-scroll-target="#independent-samples-example">Independent Samples Example</a></li>
+  <li><a href="#paired-samples-example" id="toc-paired-samples-example" class="nav-link" data-scroll-target="#paired-samples-example">Paired Samples Example</a></li>
+  <li><a href="#elements-to-include" id="toc-elements-to-include" class="nav-link" data-scroll-target="#elements-to-include">Elements to Include</a></li>
+  </ul></li>
+  <li><a href="#common-interpretation-errors" id="toc-common-interpretation-errors" class="nav-link" data-scroll-target="#common-interpretation-errors">Common Interpretation Errors</a>
+  <ul class="collapse">
+  <li><a href="#error-1-p-.05-means-no-difference" id="toc-error-1-p-.05-means-no-difference" class="nav-link" data-scroll-target="#error-1-p-.05-means-no-difference">Error 1: “p &gt; .05 means no difference”</a></li>
+  <li><a href="#error-2-p-.001-means-a-huge-effect" id="toc-error-2-p-.001-means-a-huge-effect" class="nav-link" data-scroll-target="#error-2-p-.001-means-a-huge-effect">Error 2: “p &lt; .001 means a huge effect”</a></li>
+  <li><a href="#error-3-t-2.34-is-bigger-than-t-1.98-so-its-more-significant" id="toc-error-3-t-2.34-is-bigger-than-t-1.98-so-its-more-significant" class="nav-link" data-scroll-target="#error-3-t-2.34-is-bigger-than-t-1.98-so-its-more-significant">Error 3: “t = 2.34 is bigger than t = 1.98, so it’s more significant”</a></li>
+  <li><a href="#error-4-confusing-paired-and-independent-tests" id="toc-error-4-confusing-paired-and-independent-tests" class="nav-link" data-scroll-target="#error-4-confusing-paired-and-independent-tests">Error 4: Confusing paired and independent tests</a></li>
+  </ul></li>
   <li><a href="#preparation-checklist" id="toc-preparation-checklist" class="nav-link" data-scroll-target="#preparation-checklist">Preparation Checklist</a>
   <ul class="collapse">
-  <li><a href="#key-questions-to-consider" id="toc-key-questions-to-consider" class="nav-link" data-scroll-target="#key-questions-to-consider">Key Questions to Consider</a></li>
-  <li><a href="#what-to-bring" id="toc-what-to-bring" class="nav-link" data-scroll-target="#what-to-bring">What to Bring</a></li>
+  <li><a href="#questions-to-consider" id="toc-questions-to-consider" class="nav-link" data-scroll-target="#questions-to-consider">Questions to Consider</a></li>
   </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference">Quick Reference</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  <li><a href="#quick-reference-interpreting-output" id="toc-quick-reference-interpreting-output" class="nav-link" data-scroll-target="#quick-reference-interpreting-output">Quick Reference: Interpreting Output</a>
+  <ul class="collapse">
+  <li><a href="#independent-samples" id="toc-independent-samples" class="nav-link" data-scroll-target="#independent-samples">Independent Samples</a></li>
+  <li><a href="#paired-samples" id="toc-paired-samples" class="nav-link" data-scroll-target="#paired-samples">Paired Samples</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/edit/main/week14/lab/reading.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -922,8 +934,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Term 2</li><li class="breadcrumb-item"><a href="../../week14/index.html">Week 14: Inference &amp; t-tests</a></li><li class="breadcrumb-item"><a href="../../week14/lab/instructor-slides.html">Lab</a></li><li class="breadcrumb-item"><a href="../../week14/lab/reading.html">Reading</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Chapter 8: t-tests in R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Comparing Group Means with Confidence</p>
+<div class="quarto-title-block"><div><h1 class="title">Chapter 8: Understanding t-test Output</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Interpreting Group Comparisons</p>
 </div>
 
 
@@ -942,7 +954,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This reading prepares you for the lab session where you’ll conduct <strong>t-tests</strong> in R. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.</p>
+<p>This reading prepares you for the lab session where you’ll interpret <strong>t-test</strong> output. The t-test is one of the most widely used statistical tests in psychology, allowing us to compare means and determine whether observed differences are likely to reflect real effects or just random variation.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -955,13 +967,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p>By the end of this lab, you’ll be able to:</p>
 <ul>
-<li>Use <code>t.test()</code> to compare two groups (independent samples)</li>
-<li>Use <code>t.test()</code> to compare paired measurements (paired samples)</li>
 <li>Interpret t-test output including t-values, p-values, and confidence intervals</li>
+<li>Understand the difference between independent and paired samples t-tests</li>
 <li>Choose the appropriate type of t-test for your research question</li>
+<li>Report t-test results in APA format</li>
 </ul>
 </div>
 </div>
+<hr>
 </section>
 <section id="when-to-use-a-t-test" class="level2">
 <h2 class="anchored" data-anchor-id="when-to-use-a-t-test">When to Use a t-test</h2>
@@ -1001,18 +1014,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>One sample</strong></td>
 <td>Compare to a known value</td>
-<td>Sample mean vs population mean</td>
+<td>Sample mean vs 50%</td>
 </tr>
 </tbody>
 </table>
+<hr>
 </section>
-</section>
-<section id="the-t.test-function" class="level2">
-<h2 class="anchored" data-anchor-id="the-t.test-function">The <code>t.test()</code> Function</h2>
-<p>R’s built-in <code>t.test()</code> function handles all three types. The basic syntax is:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(outcome <span class="sc">~</span> group, <span class="at">data =</span> mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or for paired data:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x, y, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="independent-samples-t-test" class="level2">
 <h2 class="anchored" data-anchor-id="independent-samples-t-test">Independent Samples t-test</h2>
@@ -1020,22 +1027,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="example-comparing-rooms" class="level3">
 <h3 class="anchored" data-anchor-id="example-comparing-rooms">Example: Comparing Rooms</h3>
 <p>Did Room A and Room B differ in reaction time?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare reaction times between rooms</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(reaction_time <span class="sc">~</span> room, <span class="at">data =</span> datalab)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="understanding-the-output" class="level3">
 <h3 class="anchored" data-anchor-id="understanding-the-output">Understanding the Output</h3>
 <pre><code>    Welch Two Sample t-test
 
-data:  reaction_time by room
-t = -2.34, df = 45.2, p-value = 0.024
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -42.5  -3.2
-sample estimates:
-mean in group A   mean in group B
-          265.3             288.1</code></pre>
-<p>Let’s decode each part:</p>
+    data:  reaction_time by room
+    t = -2.34, df = 45.2, p-value = 0.024
+    alternative hypothesis: true difference in means is not equal to 0
+    95 percent confidence interval:
+     -42.5  -3.2
+    sample estimates:
+    mean in group A   mean in group B
+              265.3             288.1</code></pre>
+</section>
+<section id="what-each-part-means" class="level3">
+<h3 class="anchored" data-anchor-id="what-each-part-means">What Each Part Means</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 47%">
@@ -1050,11 +1057,11 @@ mean in group A   mean in group B
 <tbody>
 <tr class="odd">
 <td><code>t = -2.34</code></td>
-<td>The t-statistic; how many standard errors the difference is from 0</td>
+<td>The t-statistic: how many standard errors the difference is from 0</td>
 </tr>
 <tr class="even">
 <td><code>df = 45.2</code></td>
-<td>Degrees of freedom (Welch’s adjustment for unequal variances)</td>
+<td>Degrees of freedom</td>
 </tr>
 <tr class="odd">
 <td><code>p-value = 0.024</code></td>
@@ -1070,6 +1077,16 @@ mean in group A   mean in group B
 </tr>
 </tbody>
 </table>
+</section>
+<section id="key-questions-to-answer" class="level3">
+<h3 class="anchored" data-anchor-id="key-questions-to-answer">Key Questions to Answer</h3>
+<ol type="1">
+<li><strong>What are the means?</strong> → Room A: 265.3 ms, Room B: 288.1 ms</li>
+<li><strong>What is t?</strong> → -2.34</li>
+<li><strong>Is it significant?</strong> → Yes, p = 0.024 &lt; 0.05</li>
+<li><strong>What’s the CI?</strong> → [-42.5, -3.2] - the true difference is likely in this range</li>
+<li><strong>What does it mean?</strong> → Room A was faster than Room B</li>
+</ol>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1080,9 +1097,10 @@ mean in group A   mean in group B
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A p-value of 0.024 means: <strong>if there were truly no difference between rooms</strong>, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we’d typically conclude the difference is statistically significant.</p>
+<p>A p-value of 0.024 means: <strong>if there were truly no difference between rooms</strong>, we’d see a difference this large (or larger) about 2.4% of the time. Since this is less than 0.05, we conclude the difference is statistically significant.</p>
 </div>
 </div>
+<hr>
 </section>
 </section>
 <section id="paired-samples-t-test" class="level2">
@@ -1091,10 +1109,28 @@ mean in group A   mean in group B
 <section id="example-pre-post-mood" class="level3">
 <h3 class="anchored" data-anchor-id="example-pre-post-mood">Example: Pre-Post Mood</h3>
 <p>Did mood change after DataLab?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare mood before and after</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(datalab<span class="sc">$</span>mood_pre, datalab<span class="sc">$</span>mood_post, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or using formula notation with long-format data:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(mood <span class="sc">~</span> time, <span class="at">data =</span> datalab_long, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="understanding-the-output-1" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-the-output-1">Understanding the Output</h3>
+<pre><code>    Paired t-test
+
+    data:  mood_pre and mood_post
+    t = -3.45, df = 29, p-value = 0.002
+    alternative hypothesis: true mean difference is not equal to 0
+    95 percent confidence interval:
+     -1.82  -0.45
+    sample estimates:
+    mean difference
+              -1.13</code></pre>
+</section>
+<section id="key-questions-to-answer-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-questions-to-answer-1">Key Questions to Answer</h3>
+<ol type="1">
+<li><strong>What is the mean difference?</strong> → -1.13 (mood increased by 1.13 points)</li>
+<li><strong>Is it significant?</strong> → Yes, p = 0.002 &lt; 0.05</li>
+<li><strong>What’s the CI?</strong> → [-1.82, -0.45] - the true change is likely in this range</li>
+<li><strong>What does it mean?</strong> → Mood significantly improved after DataLab</li>
+</ol>
 </section>
 <section id="why-paired-tests-are-more-powerful" class="level3">
 <h3 class="anchored" data-anchor-id="why-paired-tests-are-more-powerful">Why Paired Tests Are More Powerful</h3>
@@ -1117,6 +1153,7 @@ mean in group A   mean in group B
 <p>If the same individuals provide both measurements, use a paired test. It’s more sensitive because it removes between-person variability.</p>
 </div>
 </div>
+<hr>
 </section>
 </section>
 <section id="one-sample-t-test" class="level2">
@@ -1125,79 +1162,28 @@ mean in group A   mean in group B
 <section id="example-comparing-to-chance" class="level3">
 <h3 class="anchored" data-anchor-id="example-comparing-to-chance">Example: Comparing to Chance</h3>
 <p>Is staring detection accuracy different from 50% (chance)?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare mean accuracy to 0.5 (50%)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(datalab<span class="sc">$</span>staring_accuracy, <span class="at">mu =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>mu</code> argument specifies the value you’re testing against.</p>
 </section>
+<section id="understanding-the-output-2" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-the-output-2">Understanding the Output</h3>
+<pre><code>    One Sample t-test
+
+    data:  staring_accuracy
+    t = 1.87, df = 29, p-value = 0.072
+    alternative hypothesis: true mean is not equal to 0.5
+    95 percent confidence interval:
+     0.48  0.61
+    sample estimates:
+    mean of x
+        0.545</code></pre>
 </section>
-<section id="key-arguments-for-t.test" class="level2">
-<h2 class="anchored" data-anchor-id="key-arguments-for-t.test">Key Arguments for <code>t.test()</code></h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 32%">
-<col style="width: 32%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Argument</th>
-<th>Purpose</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>paired = TRUE/FALSE</code></td>
-<td>Paired or independent test</td>
-<td><code>FALSE</code></td>
-</tr>
-<tr class="even">
-<td><code>var.equal = TRUE/FALSE</code></td>
-<td>Assume equal variances?</td>
-<td><code>FALSE</code> (Welch’s test)</td>
-</tr>
-<tr class="odd">
-<td><code>alternative</code></td>
-<td>Direction: <code>"two.sided"</code>, <code>"less"</code>, <code>"greater"</code></td>
-<td><code>"two.sided"</code></td>
-</tr>
-<tr class="even">
-<td><code>mu</code></td>
-<td>Value to test against (one-sample)</td>
-<td><code>0</code></td>
-</tr>
-<tr class="odd">
-<td><code>conf.level</code></td>
-<td>Confidence level</td>
-<td><code>0.95</code></td>
-</tr>
-</tbody>
-</table>
-<section id="about-welchs-t-test" class="level3">
-<h3 class="anchored" data-anchor-id="about-welchs-t-test">About Welch’s t-test</h3>
-<p>By default, R uses <strong>Welch’s t-test</strong>, which doesn’t assume equal variances in the two groups. This is generally recommended as it’s more robust.</p>
-<p>If you have good reason to assume equal variances:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(reaction_time <span class="sc">~</span> room, <span class="at">data =</span> datalab, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="extracting-specific-results" class="level2">
-<h2 class="anchored" data-anchor-id="extracting-specific-results">Extracting Specific Results</h2>
-<p>Sometimes you want to pull out specific values for reporting:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the test and save results</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(reaction_time <span class="sc">~</span> room, <span class="at">data =</span> datalab)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract specific values</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>statistic    <span class="co"># t-value</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>parameter    <span class="co"># degrees of freedom</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>p.value      <span class="co"># p-value</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>conf.int     <span class="co"># confidence interval</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>estimate     <span class="co"># group means</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="reporting-format-apa-style" class="level3">
-<h3 class="anchored" data-anchor-id="reporting-format-apa-style">Reporting Format (APA Style)</h3>
-<p>For your report, you might write:</p>
-<blockquote class="blockquote">
-<p>Participants in Room A (M = 265.3 ms) had significantly faster reaction times than those in Room B (M = 288.1 ms), t(45.2) = -2.34, p = .024, 95% CI [-42.5, -3.2].</p>
-</blockquote>
+<section id="key-questions-to-answer-2" class="level3">
+<h3 class="anchored" data-anchor-id="key-questions-to-answer-2">Key Questions to Answer</h3>
+<ol type="1">
+<li><strong>What is the sample mean?</strong> → 54.5%</li>
+<li><strong>Is it significantly different from 50%?</strong> → No, p = 0.072 &gt; 0.05</li>
+<li><strong>What does it mean?</strong> → Performance is not significantly better than chance</li>
+</ol>
+<hr>
 </section>
 </section>
 <section id="effect-size-cohens-d" class="level2">
@@ -1226,70 +1212,103 @@ mean in group A   mean in group B
 </tr>
 </tbody>
 </table>
-<p>You can calculate Cohen’s d using the <code>effectsize</code> package:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effectsize)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For independent samples</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(reaction_time <span class="sc">~</span> room, <span class="at">data =</span> datalab)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For paired samples</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(datalab<span class="sc">$</span>mood_pre, datalab<span class="sc">$</span>mood_post, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="example-output" class="level3">
+<h3 class="anchored" data-anchor-id="example-output">Example Output</h3>
+<pre><code>    Cohen's d
+
+    d estimate: 0.62
+    95% CI: [0.15, 1.09]
+
+    Interpretation: medium</code></pre>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why Effect Size Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A study with n = 1000 might find p &lt; .001 for a tiny effect (d = 0.1). The effect is “real” but practically meaningless. Always report and interpret effect sizes alongside p-values.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="common-errors-and-how-to-fix-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-errors-and-how-to-fix-them">Common Errors and How to Fix Them</h2>
-<section id="error-grouping-factor-must-have-exactly-2-levels" class="level3">
-<h3 class="anchored" data-anchor-id="error-grouping-factor-must-have-exactly-2-levels">Error: grouping factor must have exactly 2 levels</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong: variable has more than 2 groups</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(score <span class="sc">~</span> condition, <span class="at">data =</span> mydata)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Error if condition has levels: A, B, C</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Fix</strong>: Filter to only two groups:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Right: compare only A and B</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>filtered <span class="ot">&lt;-</span> mydata <span class="sc">|&gt;</span> <span class="fu">filter</span>(condition <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>))</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(score <span class="sc">~</span> condition, <span class="at">data =</span> filtered)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="error-not-enough-x-observations" class="level3">
-<h3 class="anchored" data-anchor-id="error-not-enough-x-observations">Error: not enough ‘x’ observations</h3>
-<p><strong>Fix</strong>: Your data might have too many missing values. Check with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(datalab<span class="sc">$</span>reaction_time))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="error-object-datalab-not-found" class="level3">
-<h3 class="anchored" data-anchor-id="error-object-datalab-not-found">Error: object ‘datalab’ not found</h3>
-<p><strong>Fix</strong>: Make sure you’ve loaded your data first. In WebR, run the data loading code before analysis.</p>
-</section>
-<section id="paired-test-gives-strange-results" class="level3">
-<h3 class="anchored" data-anchor-id="paired-test-gives-strange-results">Paired test gives strange results</h3>
-<p><strong>Fix</strong>: Make sure:</p>
-<ol type="1">
-<li>The two vectors have the same length</li>
-<li>The observations are in the same order (person 1’s pre matches person 1’s post)</li>
-<li>You included <code>paired = TRUE</code></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check lengths match</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(datalab<span class="sc">$</span>mood_pre)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(datalab<span class="sc">$</span>mood_post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="warning-data-are-essentially-constant" class="level3">
-<h3 class="anchored" data-anchor-id="warning-data-are-essentially-constant">Warning: data are essentially constant</h3>
-<p><strong>Fix</strong>: One or both groups have no variability (all values are the same). A t-test isn’t appropriate here.</p>
+<section id="choosing-the-right-test" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-right-test">Choosing the Right Test</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 24%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Research Question</th>
+<th>Design</th>
+<th>Test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Do two different groups differ?</td>
+<td>Between-subjects</td>
+<td>Independent t-test</td>
+</tr>
+<tr class="even">
+<td>Does the same group change over time?</td>
+<td>Within-subjects</td>
+<td>Paired t-test</td>
+</tr>
+<tr class="odd">
+<td>Does a sample differ from a known value?</td>
+<td>One-sample</td>
+<td>One-sample t-test</td>
+</tr>
+</tbody>
+</table>
+<section id="datalab-examples" class="level3">
+<h3 class="anchored" data-anchor-id="datalab-examples">DataLab Examples</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Test Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Did Room A and B differ on reaction time?</td>
+<td>Independent</td>
+</tr>
+<tr class="even">
+<td>Did mood change from pre to post?</td>
+<td>Paired</td>
+</tr>
+<tr class="odd">
+<td>Was throwing accuracy above 50%?</td>
+<td>One-sample</td>
+</tr>
+<tr class="even">
+<td>Did word type (abstract/concrete) affect memory?</td>
+<td>Independent</td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
 </section>
 <section id="assumptions-of-the-t-test" class="level2">
 <h2 class="anchored" data-anchor-id="assumptions-of-the-t-test">Assumptions of the t-test</h2>
 <section id="independence" class="level3">
 <h3 class="anchored" data-anchor-id="independence">1. Independence</h3>
-<p>Observations should be independent (one person’s score doesn’t influence another’s). This is about study design, not something you can test in R.</p>
+<p>Observations should be independent (one person’s score doesn’t influence another’s). This is about study design.</p>
 </section>
 <section id="normality" class="level3">
 <h3 class="anchored" data-anchor-id="normality">2. Normality</h3>
-<p>The data should be approximately normally distributed, especially for small samples. Check with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(datalab<span class="sc">$</span>reaction_time)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or by group</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datalab, <span class="fu">aes</span>(<span class="at">x =</span> reaction_time)) <span class="sc">+</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>room)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The data should be approximately normally distributed, especially for small samples.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1306,7 +1325,60 @@ mean in group A   mean in group B
 </section>
 <section id="homogeneity-of-variance-for-independent-samples" class="level3">
 <h3 class="anchored" data-anchor-id="homogeneity-of-variance-for-independent-samples">3. Homogeneity of Variance (for independent samples)</h3>
-<p>Groups should have similar variability. Welch’s t-test (the default) handles unequal variances, so this is less of a concern.</p>
+<p>Groups should have similar variability. The Welch’s t-test (default in most software) handles unequal variances automatically.</p>
+<hr>
+</section>
+</section>
+<section id="reporting-t-tests-apa-style" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-t-tests-apa-style">Reporting t-tests (APA Style)</h2>
+<section id="template" class="level3">
+<h3 class="anchored" data-anchor-id="template">Template</h3>
+<blockquote class="blockquote">
+<p>[Group 1] (M = XX.X, SD = X.X) [were/was] [significantly/not significantly] [higher/lower/different] than [Group 2] (M = XX.X, SD = X.X), t(df) = X.XX, p = .XXX, d = X.XX.</p>
+</blockquote>
+</section>
+<section id="independent-samples-example" class="level3">
+<h3 class="anchored" data-anchor-id="independent-samples-example">Independent Samples Example</h3>
+<blockquote class="blockquote">
+<p>Participants in Room A (M = 265.3 ms, SD = 45.2) had significantly faster reaction times than those in Room B (M = 288.1 ms, SD = 52.1), t(45.2) = -2.34, p = .024, d = 0.47.</p>
+</blockquote>
+</section>
+<section id="paired-samples-example" class="level3">
+<h3 class="anchored" data-anchor-id="paired-samples-example">Paired Samples Example</h3>
+<blockquote class="blockquote">
+<p>Mood significantly increased from pre-session (M = 5.2, SD = 1.8) to post-session (M = 6.3, SD = 1.6), t(29) = 3.45, p = .002, d = 0.62.</p>
+</blockquote>
+</section>
+<section id="elements-to-include" class="level3">
+<h3 class="anchored" data-anchor-id="elements-to-include">Elements to Include</h3>
+<ul>
+<li>Group means and SDs</li>
+<li>The t-value and df</li>
+<li>The p-value</li>
+<li>Effect size (Cohen’s d)</li>
+<li>Direction of the difference</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="common-interpretation-errors" class="level2">
+<h2 class="anchored" data-anchor-id="common-interpretation-errors">Common Interpretation Errors</h2>
+<section id="error-1-p-.05-means-no-difference" class="level3">
+<h3 class="anchored" data-anchor-id="error-1-p-.05-means-no-difference">Error 1: “p &gt; .05 means no difference”</h3>
+<p><strong>Wrong!</strong> A non-significant result means we can’t rule out chance — not that there’s definitely no effect. The study might lack power.</p>
+</section>
+<section id="error-2-p-.001-means-a-huge-effect" class="level3">
+<h3 class="anchored" data-anchor-id="error-2-p-.001-means-a-huge-effect">Error 2: “p &lt; .001 means a huge effect”</h3>
+<p><strong>Wrong!</strong> Statistical significance depends on sample size. Large samples can detect tiny effects. Always check effect size.</p>
+</section>
+<section id="error-3-t-2.34-is-bigger-than-t-1.98-so-its-more-significant" class="level3">
+<h3 class="anchored" data-anchor-id="error-3-t-2.34-is-bigger-than-t-1.98-so-its-more-significant">Error 3: “t = 2.34 is bigger than t = 1.98, so it’s more significant”</h3>
+<p><strong>Misleading!</strong> t-values depend on sample size and variability. Compare p-values and effect sizes instead.</p>
+</section>
+<section id="error-4-confusing-paired-and-independent-tests" class="level3">
+<h3 class="anchored" data-anchor-id="error-4-confusing-paired-and-independent-tests">Error 4: Confusing paired and independent tests</h3>
+<p><strong>Check:</strong> Are the same people in both conditions? If yes → paired. If no → independent.</p>
+<hr>
 </section>
 </section>
 <section id="preparation-checklist" class="level2">
@@ -1326,26 +1398,19 @@ mean in group A   mean in group B
 <li><label><input type="checkbox">Read this chapter carefully</label></li>
 <li><label><input type="checkbox">Review the lecture material on hypothesis testing</label></li>
 <li><label><input type="checkbox">Understand the difference between paired and independent samples</label></li>
-<li><label><input type="checkbox">Be able to interpret a p-value correctly</label></li>
-<li><label><input type="checkbox">Have a device with a web browser ready (for WebR)</label></li>
+<li><label><input type="checkbox">Be able to interpret p-values correctly</label></li>
+<li><label><input type="checkbox">Know what Cohen’s d means</label></li>
 </ul>
 </div>
 </div>
-<section id="key-questions-to-consider" class="level3">
-<h3 class="anchored" data-anchor-id="key-questions-to-consider">Key Questions to Consider</h3>
+<section id="questions-to-consider" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-consider">Questions to Consider</h3>
 <ul>
 <li>What research questions from DataLab can we answer with t-tests?</li>
 <li>Which comparisons require paired tests vs independent tests?</li>
 <li>What would a significant result mean in practical terms?</li>
 </ul>
-</section>
-<section id="what-to-bring" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-bring">What to Bring</h3>
-<ul>
-<li>Laptop, tablet, or phone with a modern browser</li>
-<li>Notes on which DataLab variables you want to compare</li>
-<li>Questions about interpreting output</li>
-</ul>
+<hr>
 </section>
 </section>
 <section id="summary" class="level2">
@@ -1382,36 +1447,86 @@ mean in group A   mean in group B
 <td><strong>Effect size (d)</strong></td>
 <td>Practical magnitude of the difference</td>
 </tr>
+<tr class="even">
+<td><strong>APA format</strong></td>
+<td>Include M, SD, t, df, p, and d</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="quick-reference-interpreting-output" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reference-interpreting-output">Quick Reference: Interpreting Output</h2>
+<section id="independent-samples" class="level3">
+<h3 class="anchored" data-anchor-id="independent-samples">Independent Samples</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Look for</th>
+<th>Tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Group means</td>
+<td>Which group scored higher</td>
+</tr>
+<tr class="even">
+<td>t-value</td>
+<td>Direction and magnitude of difference</td>
+</tr>
+<tr class="odd">
+<td>p-value</td>
+<td>Whether difference is significant</td>
+</tr>
+<tr class="even">
+<td>CI</td>
+<td>Range of plausible true differences</td>
+</tr>
+<tr class="odd">
+<td>d</td>
+<td>Practical size of effect</td>
+</tr>
 </tbody>
 </table>
 </section>
-<section id="quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="quick-reference">Quick Reference</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Independent samples (different people)</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(outcome <span class="sc">~</span> group, <span class="at">data =</span> mydata)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Paired samples (same people, two times)</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(pre, post, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># One sample (compare to known value)</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(scores, <span class="at">mu =</span> <span class="dv">50</span>)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract results</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(...)</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>p.value</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>conf.int</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<ul>
-<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/t.test.html">R Documentation for t.test</a> — Official documentation</li>
-<li><a href="https://moderndive.com/9-hypothesis-testing.html">ModernDive: Hypothesis Testing</a> — Conceptual explanations</li>
-<li><a href="https://www.datanovia.com/en/lessons/t-test-in-r/">Datanovia: t-test in R</a> — Step-by-step tutorials with examples</li>
-</ul>
+<section id="paired-samples" class="level3">
+<h3 class="anchored" data-anchor-id="paired-samples">Paired Samples</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Look for</th>
+<th>Tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean difference</td>
+<td>Average change</td>
+</tr>
+<tr class="even">
+<td>t-value</td>
+<td>Direction and magnitude of change</td>
+</tr>
+<tr class="odd">
+<td>p-value</td>
+<td>Whether change is significant</td>
+</tr>
+<tr class="even">
+<td>CI</td>
+<td>Range of plausible true change</td>
+</tr>
+<tr class="odd">
+<td>d</td>
+<td>Practical size of effect</td>
+</tr>
+</tbody>
+</table>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -2077,12 +2192,12 @@ window.onload = function() {
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 14 Lab Reading"</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "t-tests in R"</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w14-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 14 Lab Reading"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "t-tests in R"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w14-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

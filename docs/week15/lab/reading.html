@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 10: Correlation in R – PS50008A Research Methods &amp; Experimental Design</title>
+<title>Chapter 10: Understanding Correlation Output – PS50008A Research Methods &amp; Experimental Design</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -866,56 +866,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#what-is-correlation" id="toc-what-is-correlation" class="nav-link" data-scroll-target="#what-is-correlation">What Is Correlation?</a>
   <ul class="collapse">
-  <li><a href="#correlation-coefficient-r" id="toc-correlation-coefficient-r" class="nav-link" data-scroll-target="#correlation-coefficient-r">Correlation Coefficient (r)</a></li>
+  <li><a href="#the-correlation-coefficient-r" id="toc-the-correlation-coefficient-r" class="nav-link" data-scroll-target="#the-correlation-coefficient-r">The Correlation Coefficient (r)</a></li>
   </ul></li>
-  <li><a href="#computing-correlations-in-r" id="toc-computing-correlations-in-r" class="nav-link" data-scroll-target="#computing-correlations-in-r">Computing Correlations in R</a>
+  <li><a href="#reading-scatterplots" id="toc-reading-scatterplots" class="nav-link" data-scroll-target="#reading-scatterplots">Reading Scatterplots</a>
   <ul class="collapse">
-  <li><a href="#the-cor-function" id="toc-the-cor-function" class="nav-link" data-scroll-target="#the-cor-function">The <code>cor()</code> Function</a></li>
-  <li><a href="#the-cor.test-function" id="toc-the-cor.test-function" class="nav-link" data-scroll-target="#the-cor.test-function">The <code>cor.test()</code> Function</a></li>
-  <li><a href="#understanding-cor.test-output" id="toc-understanding-cor.test-output" class="nav-link" data-scroll-target="#understanding-cor.test-output">Understanding <code>cor.test()</code> Output</a></li>
+  <li><a href="#why-visualise" id="toc-why-visualise" class="nav-link" data-scroll-target="#why-visualise">Why Visualise?</a></li>
+  <li><a href="#what-to-look-for" id="toc-what-to-look-for" class="nav-link" data-scroll-target="#what-to-look-for">What to Look For</a></li>
+  <li><a href="#visual-examples" id="toc-visual-examples" class="nav-link" data-scroll-target="#visual-examples">Visual Examples</a></li>
   </ul></li>
-  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix">Correlation Matrix</a>
+  <li><a href="#interpreting-correlation-output" id="toc-interpreting-correlation-output" class="nav-link" data-scroll-target="#interpreting-correlation-output">Interpreting Correlation Output</a>
   <ul class="collapse">
-  <li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values">Handling Missing Values</a></li>
+  <li><a href="#what-each-part-means" id="toc-what-each-part-means" class="nav-link" data-scroll-target="#what-each-part-means">What Each Part Means</a></li>
+  <li><a href="#key-questions-to-answer" id="toc-key-questions-to-answer" class="nav-link" data-scroll-target="#key-questions-to-answer">Key Questions to Answer</a></li>
   </ul></li>
-  <li><a href="#visualising-correlations-with-ggplot2" id="toc-visualising-correlations-with-ggplot2" class="nav-link" data-scroll-target="#visualising-correlations-with-ggplot2">Visualising Correlations with ggplot2</a>
+  <li><a href="#correlation-strength-guidelines" id="toc-correlation-strength-guidelines" class="nav-link" data-scroll-target="#correlation-strength-guidelines">Correlation Strength Guidelines</a>
   <ul class="collapse">
-  <li><a href="#basic-scatterplot" id="toc-basic-scatterplot" class="nav-link" data-scroll-target="#basic-scatterplot">Basic Scatterplot</a></li>
-  <li><a href="#adding-a-trend-line" id="toc-adding-a-trend-line" class="nav-link" data-scroll-target="#adding-a-trend-line">Adding a Trend Line</a></li>
-  <li><a href="#improved-scatterplot" id="toc-improved-scatterplot" class="nav-link" data-scroll-target="#improved-scatterplot">Improved Scatterplot</a></li>
-  <li><a href="#scatterplot-with-groups" id="toc-scatterplot-with-groups" class="nav-link" data-scroll-target="#scatterplot-with-groups">Scatterplot with Groups</a></li>
+  <li><a href="#understanding-r-squared" id="toc-understanding-r-squared" class="nav-link" data-scroll-target="#understanding-r-squared">Understanding r-squared</a></li>
   </ul></li>
-  <li><a href="#types-of-correlation" id="toc-types-of-correlation" class="nav-link" data-scroll-target="#types-of-correlation">Types of Correlation</a>
+  <li><a href="#pearson-vs-spearman" id="toc-pearson-vs-spearman" class="nav-link" data-scroll-target="#pearson-vs-spearman">Pearson vs Spearman</a>
   <ul class="collapse">
-  <li><a href="#pearsons-r-default" id="toc-pearsons-r-default" class="nav-link" data-scroll-target="#pearsons-r-default">Pearson’s r (default)</a></li>
-  <li><a href="#spearmans-rho" id="toc-spearmans-rho" class="nav-link" data-scroll-target="#spearmans-rho">Spearman’s rho</a></li>
-  <li><a href="#kendalls-tau" id="toc-kendalls-tau" class="nav-link" data-scroll-target="#kendalls-tau">Kendall’s tau</a></li>
+  <li><a href="#pearsons-r-most-common" id="toc-pearsons-r-most-common" class="nav-link" data-scroll-target="#pearsons-r-most-common">Pearson’s r (Most Common)</a></li>
+  <li><a href="#spearmans-rho-ρ" id="toc-spearmans-rho-ρ" class="nav-link" data-scroll-target="#spearmans-rho-ρ">Spearman’s rho (ρ)</a></li>
   </ul></li>
-  <li><a href="#key-functions-reference" id="toc-key-functions-reference" class="nav-link" data-scroll-target="#key-functions-reference">Key Functions Reference</a>
+  <li><a href="#correlation-does-not-mean-causation" id="toc-correlation-does-not-mean-causation" class="nav-link" data-scroll-target="#correlation-does-not-mean-causation">Correlation Does NOT Mean Causation</a>
   <ul class="collapse">
-  <li><a href="#useful-ggplot2-arguments" id="toc-useful-ggplot2-arguments" class="nav-link" data-scroll-target="#useful-ggplot2-arguments">Useful ggplot2 Arguments</a></li>
-  </ul></li>
-  <li><a href="#common-errors-and-how-to-fix-them" id="toc-common-errors-and-how-to-fix-them" class="nav-link" data-scroll-target="#common-errors-and-how-to-fix-them">Common Errors and How to Fix Them</a>
-  <ul class="collapse">
-  <li><a href="#error-x-and-y-must-have-the-same-length" id="toc-error-x-and-y-must-have-the-same-length" class="nav-link" data-scroll-target="#error-x-and-y-must-have-the-same-length">Error: ‘x’ and ‘y’ must have the same length</a></li>
-  <li><a href="#error-x-must-be-numeric" id="toc-error-x-must-be-numeric" class="nav-link" data-scroll-target="#error-x-must-be-numeric">Error: ‘x’ must be numeric</a></li>
-  <li><a href="#warning-cannot-compute-exact-p-value-with-ties" id="toc-warning-cannot-compute-exact-p-value-with-ties" class="nav-link" data-scroll-target="#warning-cannot-compute-exact-p-value-with-ties">Warning: Cannot compute exact p-value with ties</a></li>
-  <li><a href="#the-scatterplot-looks-empty" id="toc-the-scatterplot-looks-empty" class="nav-link" data-scroll-target="#the-scatterplot-looks-empty">The scatterplot looks empty</a></li>
-  <li><a href="#points-are-overplotting-too-many-on-top-of-each-other" id="toc-points-are-overplotting-too-many-on-top-of-each-other" class="nav-link" data-scroll-target="#points-are-overplotting-too-many-on-top-of-each-other">Points are overplotting (too many on top of each other)</a></li>
-  </ul></li>
-  <li><a href="#correlation-is-not-causation" id="toc-correlation-is-not-causation" class="nav-link" data-scroll-target="#correlation-is-not-causation">Correlation is NOT Causation</a>
-  <ul class="collapse">
+  <li><a href="#why-not" id="toc-why-not" class="nav-link" data-scroll-target="#why-not">Why Not?</a></li>
   <li><a href="#classic-example" id="toc-classic-example" class="nav-link" data-scroll-target="#classic-example">Classic Example</a></li>
+  <li><a href="#datalab-example" id="toc-datalab-example" class="nav-link" data-scroll-target="#datalab-example">DataLab Example</a></li>
   </ul></li>
-  <li><a href="#reporting-correlations-apa-style" id="toc-reporting-correlations-apa-style" class="nav-link" data-scroll-target="#reporting-correlations-apa-style">Reporting Correlations (APA Style)</a></li>
+  <li><a href="#reporting-correlations-apa-style" id="toc-reporting-correlations-apa-style" class="nav-link" data-scroll-target="#reporting-correlations-apa-style">Reporting Correlations (APA Style)</a>
+  <ul class="collapse">
+  <li><a href="#template" id="toc-template" class="nav-link" data-scroll-target="#template">Template</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#elements-to-include" id="toc-elements-to-include" class="nav-link" data-scroll-target="#elements-to-include">Elements to Include</a></li>
+  </ul></li>
   <li><a href="#preparation-checklist" id="toc-preparation-checklist" class="nav-link" data-scroll-target="#preparation-checklist">Preparation Checklist</a>
   <ul class="collapse">
   <li><a href="#questions-to-consider" id="toc-questions-to-consider" class="nav-link" data-scroll-target="#questions-to-consider">Questions to Consider</a></li>
-  <li><a href="#what-to-bring" id="toc-what-to-bring" class="nav-link" data-scroll-target="#what-to-bring">What to Bring</a></li>
   </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference">Quick Reference</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  <li><a href="#correlation-strength-quick-reference" id="toc-correlation-strength-quick-reference" class="nav-link" data-scroll-target="#correlation-strength-quick-reference">Correlation Strength Quick Reference</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/edit/main/week15/lab/reading.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/LittleMonkeyLab/PS50008A_2526/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -924,8 +914,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Term 2</li><li class="breadcrumb-item"><a href="../../week15/index.html">Week 15: Correlation</a></li><li class="breadcrumb-item"><a href="../../week15/lab/instructor-slides.html">Lab</a></li><li class="breadcrumb-item"><a href="../../week15/lab/reading.html">Reading</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Chapter 10: Correlation in R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Measuring Relationships Between Variables</p>
+<div class="quarto-title-block"><div><h1 class="title">Chapter 10: Understanding Correlation Output</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Interpreting Relationships Between Variables</p>
 </div>
 
 
@@ -944,7 +934,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This reading prepares you for the lab session where you’ll analyse <strong>correlations</strong> in R. Correlation is fundamental to psychology research — it tells us whether two variables are related and how strongly. You’ll learn to compute correlation coefficients, test their significance, and create informative scatterplots.</p>
+<p>This reading prepares you for the lab session where you’ll explore <strong>correlations</strong>. Correlation tells us whether two variables are related and how strongly. You’ll learn to interpret correlation output and create meaningful scatterplots.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -957,13 +947,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p>By the end of this lab, you’ll be able to:</p>
 <ul>
-<li>Calculate correlation coefficients using <code>cor()</code> and <code>cor.test()</code></li>
-<li>Interpret correlation strength, direction, and significance</li>
-<li>Create scatterplots with ggplot2 to visualise relationships</li>
-<li>Understand the difference between correlation and causation</li>
+<li>Interpret correlation coefficients (r values)</li>
+<li>Understand what scatterplots reveal about relationships</li>
+<li>Read and interpret correlation test output</li>
+<li>Understand why correlation does not imply causation</li>
 </ul>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Interactive Tool: Correlation Playground
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Explore correlation interactively:</p>
+<p><strong><a href="https://littlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/" target="_blank">🎮 Launch Correlation Playground</a></strong></p>
+<p>Adjust correlation strength with sliders and see how scatterplots change in real-time. Build your intuition for what different r values look like.</p>
+</div>
+</div>
+<hr>
 </section>
 <section id="what-is-correlation" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-correlation">What Is Correlation?</h2>
@@ -972,8 +978,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Strength</strong>: How tightly the data points cluster around a line (from weak to strong)</li>
 <li><strong>Direction</strong>: Whether variables increase together (positive) or one increases as the other decreases (negative)</li>
 </ul>
-<section id="correlation-coefficient-r" class="level3">
-<h3 class="anchored" data-anchor-id="correlation-coefficient-r">Correlation Coefficient (r)</h3>
+<section id="the-correlation-coefficient-r" class="level3">
+<h3 class="anchored" data-anchor-id="the-correlation-coefficient-r">The Correlation Coefficient (r)</h3>
 <p>The correlation coefficient <strong>r</strong> ranges from -1 to +1:</p>
 <table class="caption-top table">
 <thead>
@@ -1026,35 +1032,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <strong>sign</strong> tells you direction; the <strong>absolute value</strong> tells you strength. r = -0.8 is a stronger relationship than r = +0.3.</p>
 </div>
 </div>
+<hr>
 </section>
 </section>
-<section id="computing-correlations-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="computing-correlations-in-r">Computing Correlations in R</h2>
-<section id="the-cor-function" class="level3">
-<h3 class="anchored" data-anchor-id="the-cor-function">The <code>cor()</code> Function</h3>
-<p>For a quick correlation coefficient:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation between two variables</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(datalab<span class="sc">$</span>reaction_time, datalab<span class="sc">$</span>time_estimate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This returns just the correlation coefficient (e.g., 0.42).</p>
+<section id="reading-scatterplots" class="level2">
+<h2 class="anchored" data-anchor-id="reading-scatterplots">Reading Scatterplots</h2>
+<section id="why-visualise" class="level3">
+<h3 class="anchored" data-anchor-id="why-visualise">Why Visualise?</h3>
+<p>Before looking at numbers, <strong>always</strong> examine a scatterplot. It reveals:</p>
+<ul>
+<li>The direction of the relationship (positive, negative, or none)</li>
+<li>The strength of the relationship (tight cluster vs spread out)</li>
+<li>The shape (linear vs curved)</li>
+<li>Any unusual patterns or outliers</li>
+</ul>
 </section>
-<section id="the-cor.test-function" class="level3">
-<h3 class="anchored" data-anchor-id="the-cor.test-function">The <code>cor.test()</code> Function</h3>
-<p>For a complete analysis including significance testing:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Full correlation test</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(datalab<span class="sc">$</span>reaction_time, datalab<span class="sc">$</span>time_estimate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-to-look-for" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-look-for">What to Look For</h3>
+<p>Each point represents one participant:</p>
+<ul>
+<li><strong>X-axis</strong>: One variable</li>
+<li><strong>Y-axis</strong>: The other variable</li>
+</ul>
+<p><strong>Pattern Guide:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pattern</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Upward slope</td>
+<td>Positive relationship</td>
+</tr>
+<tr class="even">
+<td>Downward slope</td>
+<td>Negative relationship</td>
+</tr>
+<tr class="odd">
+<td>No clear slope</td>
+<td>No relationship</td>
+</tr>
+<tr class="even">
+<td>Tight cluster around line</td>
+<td>Strong relationship</td>
+</tr>
+<tr class="odd">
+<td>Wide scatter</td>
+<td>Weak relationship</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="understanding-cor.test-output" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-cor.test-output">Understanding <code>cor.test()</code> Output</h3>
+<section id="visual-examples" class="level3">
+<h3 class="anchored" data-anchor-id="visual-examples">Visual Examples</h3>
+<pre><code>Strong Positive (r ≈ 0.8)    Weak Positive (r ≈ 0.3)    No Relationship (r ≈ 0)
+        •                           •  •                      •   •
+       • •                        •    •  •                 •     •
+      •  ••                      •  •   •                  •  •    •
+     •    •                       •  •                       • •  •
+    •                            •                         •    •</code></pre>
+<hr>
+</section>
+</section>
+<section id="interpreting-correlation-output" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-correlation-output">Interpreting Correlation Output</h2>
+<p>When you run a correlation test, you’ll see output like this:</p>
 <pre><code>    Pearson's product-moment correlation
 
-data:  datalab$reaction_time and datalab$time_estimate
-t = 3.12, df = 48, p-value = 0.003
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.15  0.63
-sample estimates:
-      cor
-0.42</code></pre>
+    data:  reaction_time and time_estimate
+    t = 3.12, df = 48, p-value = 0.003
+    95 percent confidence interval:
+     0.15  0.63
+    sample estimates:
+          cor
+         0.42</code></pre>
+<section id="what-each-part-means" class="level3">
+<h3 class="anchored" data-anchor-id="what-each-part-means">What Each Part Means</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 47%">
@@ -1069,15 +1125,15 @@ sample estimates:
 <tbody>
 <tr class="odd">
 <td><code>t = 3.12</code></td>
-<td>The t-statistic for testing if r differs from 0</td>
+<td>The test statistic</td>
 </tr>
 <tr class="even">
 <td><code>df = 48</code></td>
-<td>Degrees of freedom (n - 2)</td>
+<td>Degrees of freedom (sample size - 2)</td>
 </tr>
 <tr class="odd">
 <td><code>p-value = 0.003</code></td>
-<td>Probability of this r (or stronger) if true r = 0</td>
+<td>Probability of this r if there’s truly no relationship</td>
 </tr>
 <tr class="even">
 <td><code>95 percent confidence interval</code></td>
@@ -1089,238 +1145,144 @@ sample estimates:
 </tr>
 </tbody>
 </table>
+</section>
+<section id="key-questions-to-answer" class="level3">
+<h3 class="anchored" data-anchor-id="key-questions-to-answer">Key Questions to Answer</h3>
+<ol type="1">
+<li><strong>What is r?</strong> → 0.42 (medium positive correlation)</li>
+<li><strong>Is it significant?</strong> → Yes, p = 0.003 &lt; 0.05</li>
+<li><strong>What’s the CI?</strong> → [0.15, 0.63] - the true r is likely in this range</li>
+<li><strong>What does it mean?</strong> → Higher reaction times are associated with higher time estimates</li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Interpreting the CI
+<span class="screen-reader-only">Tip</span>Interpreting the Confidence Interval
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>A 95% CI of [0.15, 0.63] means we’re fairly confident the true population correlation is somewhere in this range. Since it doesn’t include 0, the correlation is statistically significant.</p>
 </div>
 </div>
+<hr>
 </section>
 </section>
-<section id="correlation-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="correlation-matrix">Correlation Matrix</h2>
-<p>When you have multiple variables, you can compute all pairwise correlations at once:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select numeric columns</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>numeric_vars <span class="ot">&lt;-</span> datalab[, <span class="fu">c</span>(<span class="st">"reaction_time"</span>, <span class="st">"time_estimate"</span>, <span class="st">"mood_pre"</span>, <span class="st">"mood_post"</span>)]</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(numeric_vars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This produces a matrix showing all correlations:</p>
-<pre><code>               reaction_time time_estimate mood_pre mood_post
-reaction_time           1.00          0.42     0.15     0.18
-time_estimate           0.42          1.00     0.08     0.12
-mood_pre                0.15          0.08     1.00     0.65
-mood_post               0.18          0.12     0.65     1.00</code></pre>
-<section id="handling-missing-values" class="level3">
-<h3 class="anchored" data-anchor-id="handling-missing-values">Handling Missing Values</h3>
-<p>If your data has missing values, add <code>use = "complete.obs"</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(numeric_vars, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="correlation-strength-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-strength-guidelines">Correlation Strength Guidelines</h2>
+<p>Cohen (1988) suggested these benchmarks:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10 - .29</td>
+<td>Small/weak</td>
+</tr>
+<tr class="even">
+<td>.30 - .49</td>
+<td>Medium/moderate</td>
+</tr>
+<tr class="odd">
+<td>.50+</td>
+<td>Large/strong</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Context Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are rough guidelines. In some research areas, r = .30 is typical and meaningful. In others, r = .50 might be expected.</p>
+</div>
+</div>
+<section id="understanding-r-squared" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-r-squared">Understanding r-squared</h3>
+<p>Squaring r tells you the <strong>proportion of variance explained</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>r</th>
+<th>r²</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10</td>
+<td>.01</td>
+<td>1% shared variance</td>
+</tr>
+<tr class="even">
+<td>.30</td>
+<td>.09</td>
+<td>9% shared variance</td>
+</tr>
+<tr class="odd">
+<td>.50</td>
+<td>.25</td>
+<td>25% shared variance</td>
+</tr>
+<tr class="even">
+<td>.70</td>
+<td>.49</td>
+<td>49% shared variance</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Reality Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A correlation of r = .42 sounds reasonable. But r² = .18 means one variable explains only 18% of the variance in the other. The remaining 82% is due to other factors!</p>
+</div>
+</div>
+<hr>
 </section>
 </section>
-<section id="visualising-correlations-with-ggplot2" class="level2">
-<h2 class="anchored" data-anchor-id="visualising-correlations-with-ggplot2">Visualising Correlations with ggplot2</h2>
-<section id="basic-scatterplot" class="level3">
-<h3 class="anchored" data-anchor-id="basic-scatterplot">Basic Scatterplot</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datalab, <span class="fu">aes</span>(<span class="at">x =</span> reaction_time, <span class="at">y =</span> time_estimate)) <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="adding-a-trend-line" class="level3">
-<h3 class="anchored" data-anchor-id="adding-a-trend-line">Adding a Trend Line</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datalab, <span class="fu">aes</span>(<span class="at">x =</span> reaction_time, <span class="at">y =</span> time_estimate)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>method = "lm"</code> adds a linear regression line</li>
-<li><code>se = TRUE</code> shows the confidence band around the line</li>
-</ul>
-</section>
-<section id="improved-scatterplot" class="level3">
-<h3 class="anchored" data-anchor-id="improved-scatterplot">Improved Scatterplot</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datalab, <span class="fu">aes</span>(<span class="at">x =</span> reaction_time, <span class="at">y =</span> time_estimate)) <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"#275882"</span>) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Reaction Time (ms)"</span>,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Time Estimate (seconds)"</span>,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relationship Between Reaction Time and Time Perception"</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="scatterplot-with-groups" class="level3">
-<h3 class="anchored" data-anchor-id="scatterplot-with-groups">Scatterplot with Groups</h3>
-<p>To show different groups with different colours:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datalab, <span class="fu">aes</span>(<span class="at">x =</span> reaction_time, <span class="at">y =</span> time_estimate, <span class="at">color =</span> room)) <span class="sc">+</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Reaction Time (ms)"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Time Estimate (seconds)"</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Room"</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="types-of-correlation" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-correlation">Types of Correlation</h2>
-<section id="pearsons-r-default" class="level3">
-<h3 class="anchored" data-anchor-id="pearsons-r-default">Pearson’s r (default)</h3>
-<p>Assumes:</p>
+<section id="pearson-vs-spearman" class="level2">
+<h2 class="anchored" data-anchor-id="pearson-vs-spearman">Pearson vs Spearman</h2>
+<section id="pearsons-r-most-common" class="level3">
+<h3 class="anchored" data-anchor-id="pearsons-r-most-common">Pearson’s r (Most Common)</h3>
+<p>Use when:</p>
 <ul>
 <li>Both variables are continuous</li>
-<li>Relationship is linear</li>
-<li>Data are approximately normally distributed</li>
+<li>Relationship is approximately linear</li>
+<li>Data are roughly normally distributed</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(x, y, <span class="at">method =</span> <span class="st">"pearson"</span>)  <span class="co"># default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="spearmans-rho" class="level3">
-<h3 class="anchored" data-anchor-id="spearmans-rho">Spearman’s rho</h3>
+<section id="spearmans-rho-ρ" class="level3">
+<h3 class="anchored" data-anchor-id="spearmans-rho-ρ">Spearman’s rho (ρ)</h3>
 <p>Use when:</p>
 <ul>
 <li>Data are ordinal (ranked)</li>
 <li>Relationship is monotonic but not linear</li>
 <li>Data have outliers or are skewed</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(x, y, <span class="at">method =</span> <span class="st">"spearman"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="kendalls-tau" class="level3">
-<h3 class="anchored" data-anchor-id="kendalls-tau">Kendall’s tau</h3>
-<p>More robust alternative to Spearman’s, good for small samples:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(x, y, <span class="at">method =</span> <span class="st">"kendall"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Both are interpreted the same way — they range from -1 to +1 with the same strength guidelines.</p>
+<hr>
 </section>
 </section>
-<section id="key-functions-reference" class="level2">
-<h2 class="anchored" data-anchor-id="key-functions-reference">Key Functions Reference</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>Purpose</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>cor()</code></td>
-<td>Quick correlation coefficient</td>
-<td><code>cor(x, y)</code></td>
-</tr>
-<tr class="even">
-<td><code>cor.test()</code></td>
-<td>Full test with p-value and CI</td>
-<td><code>cor.test(x, y)</code></td>
-</tr>
-<tr class="odd">
-<td><code>cor(matrix)</code></td>
-<td>Correlation matrix</td>
-<td><code>cor(data[, vars])</code></td>
-</tr>
-<tr class="even">
-<td><code>geom_point()</code></td>
-<td>Add points to ggplot</td>
-<td><code>+ geom_point()</code></td>
-</tr>
-<tr class="odd">
-<td><code>geom_smooth()</code></td>
-<td>Add trend line</td>
-<td><code>+ geom_smooth(method = "lm")</code></td>
-</tr>
-</tbody>
-</table>
-<section id="useful-ggplot2-arguments" class="level3">
-<h3 class="anchored" data-anchor-id="useful-ggplot2-arguments">Useful ggplot2 Arguments</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Argument</th>
-<th>Purpose</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>alpha</code></td>
-<td>Point transparency</td>
-<td><code>geom_point(alpha = 0.5)</code></td>
-</tr>
-<tr class="even">
-<td><code>size</code></td>
-<td>Point size</td>
-<td><code>geom_point(size = 3)</code></td>
-</tr>
-<tr class="odd">
-<td><code>color</code></td>
-<td>Point/line colour</td>
-<td><code>geom_point(color = "blue")</code></td>
-</tr>
-<tr class="even">
-<td><code>se</code></td>
-<td>Show confidence band</td>
-<td><code>geom_smooth(se = TRUE)</code></td>
-</tr>
-<tr class="odd">
-<td><code>method</code></td>
-<td>Smoothing method</td>
-<td><code>geom_smooth(method = "lm")</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="common-errors-and-how-to-fix-them" class="level2">
-<h2 class="anchored" data-anchor-id="common-errors-and-how-to-fix-them">Common Errors and How to Fix Them</h2>
-<section id="error-x-and-y-must-have-the-same-length" class="level3">
-<h3 class="anchored" data-anchor-id="error-x-and-y-must-have-the-same-length">Error: ‘x’ and ‘y’ must have the same length</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong: different lengths</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(datalab<span class="sc">$</span>reaction_time[<span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>], datalab<span class="sc">$</span>time_estimate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Fix</strong>: Ensure both variables have the same number of observations. This usually happens with missing values:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create complete cases</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>complete_data <span class="ot">&lt;-</span> datalab[<span class="fu">complete.cases</span>(datalab<span class="sc">$</span>reaction_time, datalab<span class="sc">$</span>time_estimate), ]</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(complete_data<span class="sc">$</span>reaction_time, complete_data<span class="sc">$</span>time_estimate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="error-x-must-be-numeric" class="level3">
-<h3 class="anchored" data-anchor-id="error-x-must-be-numeric">Error: ‘x’ must be numeric</h3>
-<p><strong>Fix</strong>: Convert to numeric if needed:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check variable type</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(datalab<span class="sc">$</span>reaction_time)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert if needed</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>datalab<span class="sc">$</span>reaction_time <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(datalab<span class="sc">$</span>reaction_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="warning-cannot-compute-exact-p-value-with-ties" class="level3">
-<h3 class="anchored" data-anchor-id="warning-cannot-compute-exact-p-value-with-ties">Warning: Cannot compute exact p-value with ties</h3>
-<p>This happens with Spearman’s correlation when there are tied ranks.</p>
-<p><strong>Fix</strong>: This is usually fine — R provides an approximation. For small samples, consider Kendall’s tau instead.</p>
-</section>
-<section id="the-scatterplot-looks-empty" class="level3">
-<h3 class="anchored" data-anchor-id="the-scatterplot-looks-empty">The scatterplot looks empty</h3>
-<p><strong>Fix</strong>: Check for issues with your data:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for NAs</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(datalab<span class="sc">$</span>reaction_time))</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for extreme values</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datalab<span class="sc">$</span>reaction_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="points-are-overplotting-too-many-on-top-of-each-other" class="level3">
-<h3 class="anchored" data-anchor-id="points-are-overplotting-too-many-on-top-of-each-other">Points are overplotting (too many on top of each other)</h3>
-<p><strong>Fix</strong>: Use transparency or jitter:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transparency</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or jitter (adds small random noise)</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">height =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="correlation-is-not-causation" class="level2">
-<h2 class="anchored" data-anchor-id="correlation-is-not-causation">Correlation is NOT Causation</h2>
+<section id="correlation-does-not-mean-causation" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-does-not-mean-causation">Correlation Does NOT Mean Causation</h2>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1331,27 +1293,56 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A correlation between X and Y does NOT mean X causes Y (or Y causes X). There are several possibilities:</p>
+<p>A correlation between X and Y does <strong>NOT</strong> mean X causes Y. This is possibly the most important lesson in research methods.</p>
+</div>
+</div>
+<section id="why-not" class="level3">
+<h3 class="anchored" data-anchor-id="why-not">Why Not?</h3>
+<p>Three possible explanations for any correlation:</p>
 <ol type="1">
-<li>X causes Y</li>
-<li>Y causes X</li>
-<li>A third variable (Z) causes both</li>
-<li>The relationship is coincidental</li>
+<li><strong>X causes Y</strong>: More sleep → better performance</li>
+<li><strong>Y causes X</strong>: Better performance → more sleep (less stress)</li>
+<li><strong>Z causes both</strong>: Good health → more sleep AND better performance</li>
 </ol>
-<p>Only controlled experiments can establish causation.</p>
-</div>
-</div>
+<p>Without experimental manipulation, we cannot determine which explanation is correct.</p>
+</section>
 <section id="classic-example" class="level3">
 <h3 class="anchored" data-anchor-id="classic-example">Classic Example</h3>
-<p>There’s a strong correlation between ice cream sales and drowning deaths. Does ice cream cause drowning? No — a third variable (hot weather) increases both ice cream consumption and swimming.</p>
+<p><strong>Ice cream sales and drowning deaths are correlated.</strong></p>
+<p>Does ice cream cause drowning? No! A third variable (hot weather) causes both:</p>
+<ul>
+<li>Hot weather → more ice cream sales</li>
+<li>Hot weather → more swimming → more drowning</li>
+</ul>
+</section>
+<section id="datalab-example" class="level3">
+<h3 class="anchored" data-anchor-id="datalab-example">DataLab Example</h3>
+<p>Self-rating and throwing performance might be correlated.</p>
+<p>Does thinking you’re good make you perform better? Possible alternatives:</p>
+<ul>
+<li>Past experience → higher self-rating AND better performance</li>
+<li>Natural ability → higher self-rating AND better performance</li>
+</ul>
+<p>We can’t determine causation from correlation alone.</p>
+<hr>
 </section>
 </section>
 <section id="reporting-correlations-apa-style" class="level2">
 <h2 class="anchored" data-anchor-id="reporting-correlations-apa-style">Reporting Correlations (APA Style)</h2>
+<section id="template" class="level3">
+<h3 class="anchored" data-anchor-id="template">Template</h3>
+<blockquote class="blockquote">
+<p>Variable X and Variable Y were [significantly/not significantly] [positively/negatively] correlated, r(df) = .XX, p = .XXX, 95% CI [.XX, .XX].</p>
+</blockquote>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
 <blockquote class="blockquote">
 <p>Reaction time and time estimation were significantly positively correlated, r(48) = .42, p = .003, 95% CI [.15, .63].</p>
 </blockquote>
-<p>Elements to include:</p>
+</section>
+<section id="elements-to-include" class="level3">
+<h3 class="anchored" data-anchor-id="elements-to-include">Elements to Include</h3>
 <ul>
 <li>The variables being correlated</li>
 <li>Direction (positive/negative)</li>
@@ -1360,6 +1351,8 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 <li>The p-value</li>
 <li>The 95% CI</li>
 </ul>
+<hr>
+</section>
 </section>
 <section id="preparation-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="preparation-checklist">Preparation Checklist</h2>
@@ -1376,10 +1369,10 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
 <li><label><input type="checkbox">Read this chapter carefully</label></li>
+<li><label><input type="checkbox">Try the <a href="https://littlemonkeylab.github.io/GS_shinyapps/apps/correlation-playground/">Correlation Playground</a> app</label></li>
 <li><label><input type="checkbox">Review the lecture material on correlation</label></li>
 <li><label><input type="checkbox">Understand what r values mean (strength and direction)</label></li>
-<li><label><input type="checkbox">Familiarise yourself with ggplot2 basics</label></li>
-<li><label><input type="checkbox">Have a device with a web browser ready (for WebR)</label></li>
+<li><label><input type="checkbox">Be able to interpret example output</label></li>
 </ul>
 </div>
 </div>
@@ -1388,16 +1381,9 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 <ul>
 <li>Which DataLab variables might be correlated?</li>
 <li>What would a positive correlation between reaction time and time estimate mean?</li>
-<li>How would you check if a correlation is “real” versus due to chance?</li>
+<li>How would you explain correlation vs causation to a friend?</li>
 </ul>
-</section>
-<section id="what-to-bring" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-bring">What to Bring</h3>
-<ul>
-<li>Laptop, tablet, or phone with a modern browser</li>
-<li>Ideas about relationships to test in the data</li>
-<li>Questions about interpreting correlations</li>
-</ul>
+<hr>
 </section>
 </section>
 <section id="summary" class="level2">
@@ -1423,16 +1409,16 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 <td>-1 (perfect negative) to +1 (perfect positive)</td>
 </tr>
 <tr class="odd">
-<td><strong><code>cor()</code></strong></td>
-<td>Quick coefficient only</td>
+<td><strong>Scatterplot</strong></td>
+<td>Always visualise before interpreting numbers</td>
 </tr>
 <tr class="even">
-<td><strong><code>cor.test()</code></strong></td>
-<td>Full test with p-value and CI</td>
+<td><strong>r²</strong></td>
+<td>Proportion of shared variance</td>
 </tr>
 <tr class="odd">
-<td><strong>Scatterplot</strong></td>
-<td>Essential for visualising relationships</td>
+<td><strong>Significance</strong></td>
+<td>p &lt; .05 suggests relationship exists in population</td>
 </tr>
 <tr class="even">
 <td><strong>Causation</strong></td>
@@ -1440,33 +1426,58 @@ mood_post               0.18          0.12     0.65     1.00</code></pre>
 </tr>
 </tbody>
 </table>
+<hr>
 </section>
-<section id="quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="quick-reference">Quick Reference</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic correlation</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># With significance test</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(x, y)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Spearman (for non-normal data)</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(x, y, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data[, <span class="fu">c</span>(<span class="st">"var1"</span>, <span class="st">"var2"</span>, <span class="st">"var3"</span>)])</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot with trend line</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> var1, <span class="at">y =</span> var2)) <span class="sc">+</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<ul>
-<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.test.html">R Documentation for cor.test</a> — Official documentation</li>
-<li><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">ggplot2 Reference: geom_point</a> — Scatterplot options</li>
-<li><a href="https://www.datanovia.com/en/lessons/correlation-test-between-two-variables-in-r/">Correlation in R: Comprehensive Guide</a> — Detailed tutorial</li>
-</ul>
+<section id="correlation-strength-quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-strength-quick-reference">Correlation Strength Quick Reference</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>r</th>
+<th></th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.10</td>
+<td>Small</td>
+<td>.01</td>
+<td>1%</td>
+</tr>
+<tr class="even">
+<td>.20</td>
+<td>Small-medium</td>
+<td>.04</td>
+<td>4%</td>
+</tr>
+<tr class="odd">
+<td>.30</td>
+<td>Medium</td>
+<td>.09</td>
+<td>9%</td>
+</tr>
+<tr class="even">
+<td>.40</td>
+<td>Medium-large</td>
+<td>.16</td>
+<td>16%</td>
+</tr>
+<tr class="odd">
+<td>.50</td>
+<td>Large</td>
+<td>.25</td>
+<td>25%</td>
+</tr>
+<tr class="even">
+<td>.70</td>
+<td>Very large</td>
+<td>.49</td>
+<td>49%</td>
+</tr>
+</tbody>
+</table>
 
 
 <!-- -->
@@ -2136,12 +2147,12 @@ window.onload = function() {
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 15 Lab Reading"</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Correlation in R"</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w15-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 15 Lab Reading"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Correlation in R"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>{{&lt; include ../../textbook/chapters/w15-lab.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
