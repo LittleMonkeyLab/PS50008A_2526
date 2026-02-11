@@ -370,24 +370,6 @@ Sleep quality might be related to both coffee consumption AND memory performance
 `r mcq(c(answer = "Create a spurious correlation between sleep and memory", "Prove that coffee causes poor sleep", "Have no effect on the correlation", "Make the correlation negative"))`
 :::
 
-### Thinking About Your Project
-
-**Think about your group project research question:**
-
-**1. Is your research question correlational or experimental?**
-
-`r mcq(c(answer = "Correlational - looking at relationships between variables", "Experimental - manipulating an IV to see effects on a DV", "Descriptive - just describing one variable", "I'm not sure yet"))`
-
-**2. If correlational, what two variables would you correlate?**
-
-(Think about this for your own project - no MCQ here!)
-
-**3. What would a positive correlation mean for your research question?**
-
-`r mcq(c(answer = "Higher scores on variable 1 are associated with higher scores on variable 2", "The variables cause each other", "The relationship is strong", "The p-value is significant"))`
-
----
-
 ## Remaining Time: Research Plan Work (20+ min)
 
 ::: {.callout-warning}
@@ -436,17 +418,20 @@ This is your last lab before Reading Week. Instructors can give feedback on:
 - Look for patterns, linearity, and outliers
 
 **Pearson's r:**
+
 - Ranges from -1 to +1
 - Sign indicates direction (positive/negative)
 - Magnitude indicates strength
 
 **Interpretation:**
+
 - Small: |r| = 0.10 - 0.29
 - Medium: |r| = 0.30 - 0.49
 - Large: |r| = 0.50+
 - r^2 = proportion of variance explained
 
 **Cautions:**
+
 - Correlation does NOT equal causation
 - Watch for third variables
 - Statistical significance does not equal practical importance
