@@ -426,10 +426,4 @@ format:
 date-format: D MMMM YYYY
 execute:
   freeze: auto
-taskmistress:
-  module_id: rm0
-  module_code: PS50008A
-  module_name: Research Methods & Experimental Design
-  level: 0
-  term: 2
-  academic_year: 2025-26
+

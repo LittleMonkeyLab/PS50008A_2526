@@ -15365,7 +15365,7 @@
     "href": "week15/lab/instructor-slides.html#lab-structure-90-min",
     "title": "Correlation in R",
     "section": "Lab Structure (~90 min)",
-    "text": "Lab Structure (~90 min)\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:10\nThese slides + setup\n\n\n10:10-10:35\nPart 1: Scatterplots\n\n\n10:35-11:05\nPart 2: Calculating correlations\n\n\n11:05-11:30\nPart 3: Correlation matrices\n\n\n11:30-11:50\nPart 4: APA reporting\n\n\n11:50-12:00\nWrap-up + self-assessment",
+    "text": "Lab Structure (~90 min)\n\n\n\nTime\nActivity\n\n\n\n\n10:00-10:10\nThese slides + setup\n\n\n10:10-10:30\nPart 1: Scatterplots\n\n\n10:30-10:50\nPart 2: Interpreting correlations\n\n\n10:50-11:10\nPart 3: Calculating r in R\n\n\n11:10-11:30\nResearch Plan work time\n\n\n11:30-12:00\nResearch Plan Q&A + wrap-up\n\n\n\n\n\n\n\n\n\nWarning\n\n\nImportant: Reserve at least 30 min for Research Plan work!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15641,6 +15641,76 @@
     ]
   },
   {
+    "objectID": "week15/lab/instructor-slides.html#use-remaining-lab-time-productively",
+    "href": "week15/lab/instructor-slides.html#use-remaining-lab-time-productively",
+    "title": "Correlation in R",
+    "section": "Use Remaining Lab Time Productively",
+    "text": "Use Remaining Lab Time Productively",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week15/lab/instructor-slides.html#research-plan-reminder",
+    "href": "week15/lab/instructor-slides.html#research-plan-reminder",
+    "title": "Correlation in R",
+    "section": "Research Plan Reminder",
+    "text": "Research Plan Reminder\n\n\n\n\n\n\nDue Friday 27 February, 4pm via Learn\n\n\nThis is the last lab before Reading Week - encourage students to use this time wisely!",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week15/lab/instructor-slides.html#what-students-should-work-on",
+    "href": "week15/lab/instructor-slides.html#what-students-should-work-on",
+    "title": "Correlation in R",
+    "section": "What Students Should Work On",
+    "text": "What Students Should Work On\nIf they haven’t started:\n\nChoose research question from approved topics\nIdentify IV and DV clearly\nDecide between/within-subjects design\n\nIf already started:\n\nRefine hypotheses (H1 and H0)\nCheck operationalisation is measurable\nReview marking criteria",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week15/lab/instructor-slides.html#circulate-and-offer-help",
+    "href": "week15/lab/instructor-slides.html#circulate-and-offer-help",
+    "title": "Correlation in R",
+    "section": "Circulate and Offer Help",
+    "text": "Circulate and Offer Help\n\nGood questions to ask students:\n\n“What’s your IV? How will you manipulate/measure it?”\n“Is your hypothesis specific and testable?”\n“What design are you using? Why?”\n“Have you thought about confounding variables?”",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
+    "objectID": "week15/lab/instructor-slides.html#common-issues-to-watch-for",
+    "href": "week15/lab/instructor-slides.html#common-issues-to-watch-for",
+    "title": "Correlation in R",
+    "section": "Common Issues to Watch For",
+    "text": "Common Issues to Watch For\n\n\n\nProblem\nGuidance\n\n\n\n\nVague hypothesis\nMust be specific and directional\n\n\nUnmeasurable DV\nHow exactly will you measure it?\n\n\nWrong design\nCheck if same or different participants\n\n\nCausal language\nRemind: only experiments show causation",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Instructor Slides"
+    ]
+  },
+  {
     "objectID": "week15/lab/instructor-slides.html#key-takeaways",
     "href": "week15/lab/instructor-slides.html#key-takeaways",
     "title": "Correlation in R",
@@ -15725,11 +15795,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/activity.html#activity-1-creating-scatterplots-20-min",
-    "href": "week15/lab/activity.html#activity-1-creating-scatterplots-20-min",
+    "objectID": "week15/lab/activity.html#activity-1-creating-scatterplots-15-min",
+    "href": "week15/lab/activity.html#activity-1-creating-scatterplots-15-min",
     "title": "Correlation in R",
-    "section": "Activity 1: Creating Scatterplots (20 min)",
-    "text": "Activity 1: Creating Scatterplots (20 min)\n\nVisualising Relationships\nBefore calculating correlations, we should always visualise the relationship with a scatterplot.\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Scatterplots\n1. In a scatterplot, each point represents:\nA variableA groupOne participantAn average\n2. The x-axis typically shows:\nThe predictor or first variableThe outcome variableThe sample sizeThe correlation coefficient\n3. What does the line of best fit show?\nThe average of all pointsThe predicted relationship between the variablesWhere most points should fallThe maximum possible score\n\n\nReading Scatterplot Patterns\n4. If points cluster tightly around an upward-sloping line, this suggests:\nA strong positive correlationA strong negative correlationNo correlationA weak relationship\n5. If points are scattered randomly with no clear pattern, this suggests:\nA strong positive correlationA strong negative correlationNo correlation (r close to 0)A curvilinear relationship\n6. If points cluster around a downward-sloping line, this suggests:\nA strong positive correlationA strong negative correlationNo correlationThe data is wrong\nTrue or False: We should always create a scatterplot before calculating a correlation. TRUEFALSE\nTrue or False: Scatterplots can reveal non-linear relationships that correlation coefficients might miss. TRUEFALSE",
+    "section": "Activity 1: Creating Scatterplots (15 min)",
+    "text": "Activity 1: Creating Scatterplots (15 min)\n\nVisualising Relationships\nBefore calculating correlations, we should always visualise the relationship with a scatterplot.\n\n\n\n\n\n\n\n\n\n\n\nUnderstanding Scatterplots\n1. In a scatterplot, each point represents:\nA variableA groupOne participantAn average\n2. The x-axis typically shows:\nThe predictor or first variableThe outcome variableThe sample sizeThe correlation coefficient\n3. What does the line of best fit show?\nThe average of all pointsThe predicted relationship between the variablesWhere most points should fallThe maximum possible score\n\n\nReading Scatterplot Patterns\n4. If points cluster tightly around an upward-sloping line, this suggests:\nA strong positive correlationA strong negative correlationNo correlationA weak relationship\n5. If points are scattered randomly with no clear pattern, this suggests:\nA strong positive correlationA strong negative correlationNo correlation (r close to 0)A curvilinear relationship\n6. If points cluster around a downward-sloping line, this suggests:\nA strong positive correlationA strong negative correlationNo correlationThe data is wrong\nTrue or False: We should always create a scatterplot before calculating a correlation. TRUEFALSE\nTrue or False: Scatterplots can reveal non-linear relationships that correlation coefficients might miss. TRUEFALSE",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15739,11 +15809,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/activity.html#activity-2-calculating-correlations-20-min",
-    "href": "week15/lab/activity.html#activity-2-calculating-correlations-20-min",
+    "objectID": "week15/lab/activity.html#activity-2-calculating-correlations-15-min",
+    "href": "week15/lab/activity.html#activity-2-calculating-correlations-15-min",
     "title": "Correlation in R",
-    "section": "Activity 2: Calculating Correlations (20 min)",
-    "text": "Activity 2: Calculating Correlations (20 min)\n\nPearson’s r\nThe Pearson correlation coefficient (r) measures the strength and direction of a linear relationship between two continuous variables.\n\n\nProperties of r\n1. Pearson’s r ranges from:\n0 to 1-1 to 0-1 to +10 to 100\n2. An r value of 0 means:\nA perfect positive relationshipA perfect negative relationshipNo linear relationshipThe calculation failed\n3. An r value of -0.8 indicates:\nA weak positive relationshipA strong negative relationshipA weak negative relationshipNo relationship\n\n\nR Syntax\nIn R, we calculate correlation using cor() or cor.test():\n# Simple correlation\ncor(variable1, variable2)\n\n# Correlation with p-value and CI\ncor.test(variable1, variable2)\n4. What is the key difference between cor() and cor.test()?\ncor() is fastercor.test() provides a p-value and confidence intervalcor() gives more decimal placesThey calculate different types of correlation\n\n\nReading R Output\nHere’s example output from cor.test():\n    Pearson's product-moment correlation\n\ndata:  self_rating and accuracy\nt = 3.45, df = 28, p-value = 0.002\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.24  0.75\nsample estimates:\n      cor\n0.55\n5. What is the correlation coefficient (r)?\n3.450.002280.55\n6. Is this correlation statistically significant at alpha = 0.05?\nYes, because p = 0.002 &lt; 0.05No, because the correlation is positiveCan’t tellNo, because df = 28\n7. The 95% CI is [0.24, 0.75]. What does this tell us?\nThe correlation is exactly 0.55We’re 95% confident the true r is between 0.24 and 0.75The p-value is between 0.24 and 0.75The sample size should be 24 to 75",
+    "section": "Activity 2: Calculating Correlations (15 min)",
+    "text": "Activity 2: Calculating Correlations (15 min)\n\nPearson’s r\nThe Pearson correlation coefficient (r) measures the strength and direction of a linear relationship between two continuous variables.\n\n\nProperties of r\n1. Pearson’s r ranges from:\n0 to 1-1 to 0-1 to +10 to 100\n2. An r value of 0 means:\nA perfect positive relationshipA perfect negative relationshipNo linear relationshipThe calculation failed\n3. An r value of -0.8 indicates:\nA weak positive relationshipA strong negative relationshipA weak negative relationshipNo relationship\n\n\nR Syntax\nIn R, we calculate correlation using cor() or cor.test():\n# Simple correlation\ncor(variable1, variable2)\n\n# Correlation with p-value and CI\ncor.test(variable1, variable2)\n4. What is the key difference between cor() and cor.test()?\ncor() is fastercor.test() provides a p-value and confidence intervalcor() gives more decimal placesThey calculate different types of correlation\n\n\nReading R Output\nHere’s example output from cor.test():\n    Pearson's product-moment correlation\n\ndata:  self_rating and accuracy\nt = 3.45, df = 28, p-value = 0.002\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.24  0.75\nsample estimates:\n      cor\n0.55\n5. What is the correlation coefficient (r)?\n3.450.002280.55\n6. Is this correlation statistically significant at alpha = 0.05?\nYes, because p = 0.002 &lt; 0.05No, because the correlation is positiveCan’t tellNo, because df = 28\n7. The 95% CI is [0.24, 0.75]. What does this tell us?\nThe correlation is exactly 0.55We’re 95% confident the true r is between 0.24 and 0.75The p-value is between 0.24 and 0.75The sample size should be 24 to 75",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15753,11 +15823,11 @@
     ]
   },
   {
-    "objectID": "week15/lab/activity.html#activity-3-interpreting-r-values-20-min",
-    "href": "week15/lab/activity.html#activity-3-interpreting-r-values-20-min",
+    "objectID": "week15/lab/activity.html#activity-2b-interpreting-scatterplots-10-min",
+    "href": "week15/lab/activity.html#activity-2b-interpreting-scatterplots-10-min",
     "title": "Correlation in R",
-    "section": "Activity 3: Interpreting r Values (20 min)",
-    "text": "Activity 3: Interpreting r Values (20 min)\n\nCohen’s Guidelines\nJacob Cohen provided rough guidelines for interpreting correlation strength:\n\n\n\n\nr\n\n\n\n\n0.10 - 0.29\nSmall/weak\n\n\n0.30 - 0.49\nMedium/moderate\n\n\n0.50 - 1.00\nLarge/strong\n\n\n\n\n\nPractice Interpretation\n1. r = 0.25 would be considered:\nSmall/weakMedium/moderateLarge/strongNegligible\n2. r = -0.65 would be considered:\nSmall/weakMedium/moderateLarge/strongNot applicable - it’s negative\n3. r = 0.42 would be considered:\nSmall/weakMedium/moderateLarge/strongNegligible\n\n\nCoefficient of Determination (r-squared)\nSquaring r tells us the proportion of variance explained.\n4. If r = 0.50, then r-squared (r^2) equals:\n0.500.250.752.5\n5. r^2 = 0.25 means:\n25% of the variance in Y is explained by XThe correlation is 25%75% of participants show the relationshipThe effect is 25% larger than expected\n6. If r = 0.70, what percentage of variance is explained?\n70%49%30%100%\n\n\nCritical Thinking\n7. A statistically significant correlation of r = 0.15 suggests:\nA strong, important relationshipA real but very weak relationship - likely not practically meaningfulThe data is unreliableWe need to use a different test\nTrue or False: A significant p-value tells us the correlation is strong. TRUEFALSE\nTrue or False: Correlation does not imply causation. TRUEFALSE\nTrue or False: A negative correlation is weaker than a positive correlation of the same magnitude. TRUEFALSE",
+    "section": "Activity 2b: Interpreting Scatterplots (10 min)",
+    "text": "Activity 2b: Interpreting Scatterplots (10 min)\nLook at each scatterplot below and estimate the correlation.\n\n\n\n\n\n\n\n\n\n\nMatch the Correlations\nThe six scatterplots above have these r values (in random order): -0.75, -0.48, 0.03, 0.28, 0.47, 0.85\n1. Study Hours vs Exam Score:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n2. Screen Time vs Sleep Hours:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n3. Shoe Size vs IQ Score:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n4. Stress Level vs Wellbeing:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n5. Coffees per Day vs Alertness:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n6. Exercise vs Mood:\nr = -0.75r = -0.48r = 0.03r = 0.28r = 0.47r = 0.85\n\n\n\n\n\n\nTipInterpretation Tips\n\n\n\n\n\n\nStrong correlations (|r| &gt; 0.5): Points cluster tightly around the line\nModerate correlations (|r| = 0.3-0.5): Clear trend but more scatter\nWeak correlations (|r| &lt; 0.3): Trend barely visible, lots of scatter\nNear-zero correlations: No discernible pattern at all\nNegative correlations: Line slopes downward (one goes up, other goes down)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15767,11 +15837,39 @@
     ]
   },
   {
-    "objectID": "week15/lab/activity.html#activity-4-correlation-in-your-data-20-min",
-    "href": "week15/lab/activity.html#activity-4-correlation-in-your-data-20-min",
+    "objectID": "week15/lab/activity.html#activity-3-interpreting-r-values-15-min",
+    "href": "week15/lab/activity.html#activity-3-interpreting-r-values-15-min",
     "title": "Correlation in R",
-    "section": "Activity 4: Correlation in YOUR Data (20 min)",
-    "text": "Activity 4: Correlation in YOUR Data (20 min)\n\nApplying to DataLab\nLet’s think about correlational questions we could ask with the DataLab data.\n\n\nQuestion 1: Self-Rating and Performance\nIn the Frontal Lob task, participants rated their throwing ability before throwing.\nIf high self-ratings are associated with better performance, what type of correlation would we expect?\nPositive correlationNegative correlationNo correlationCannot determine\nIs there an IV and DV in this analysis?\nYes - self-rating is IV, performance is DVYes - performance is IV, self-rating is DVNo - correlational designs have no IV/DV, just two variablesDepends on the hypothesis\n\n\nQuestion 2: Sleep and Memory\nImagine we correlate hours of sleep the night before with memory test performance.\nWhat would a negative correlation (r = -0.30) mean?\nMore sleep = better memoryMore sleep = worse memoryNo relationshipSleep causes memory problems\nCould we conclude that lack of sleep causes poor memory?\nYes, the correlation proves itNo, correlation doesn’t establish causationOnly if p &lt; 0.05Yes, if r is negative\n\n\nQuestion 3: Third Variables\nSleep quality might be related to both coffee consumption AND memory performance.\nThis illustrates:\nA direct causal relationshipA potential third variable (confound)That coffee improves memoryThat the correlation is invalid\nIf coffee consumption is related to both variables, it could:\nCreate a spurious correlation between sleep and memoryProve that coffee causes poor sleepHave no effect on the correlationMake the correlation negative\n\n\nThinking About Your Project\nThink about your group project research question:\n1. Is your research question correlational or experimental?\nCorrelational - looking at relationships between variablesExperimental - manipulating an IV to see effects on a DVDescriptive - just describing one variableI’m not sure yet\n2. If correlational, what two variables would you correlate?\n(Think about this for your own project - no MCQ here!)\n3. What would a positive correlation mean for your research question?\nHigher scores on variable 1 are associated with higher scores on variable 2The variables cause each otherThe relationship is strongThe p-value is significant",
+    "section": "Activity 3: Interpreting r Values (15 min)",
+    "text": "Activity 3: Interpreting r Values (15 min)\n\nCohen’s Guidelines\nJacob Cohen provided rough guidelines for interpreting correlation strength:\n\n\n\n\nr\n\n\n\n\n0.10 - 0.29\nSmall/weak\n\n\n0.30 - 0.49\nMedium/moderate\n\n\n0.50 - 1.00\nLarge/strong\n\n\n\n\n\nPractice Interpretation\n1. r = 0.25 would be considered:\nSmall/weakMedium/moderateLarge/strongNegligible\n2. r = -0.65 would be considered:\nSmall/weakMedium/moderateLarge/strongNot applicable - it’s negative\n3. r = 0.42 would be considered:\nSmall/weakMedium/moderateLarge/strongNegligible\n\n\nCoefficient of Determination (r-squared)\nSquaring r tells us the proportion of variance explained.\n4. If r = 0.50, then r-squared (r^2) equals:\n0.500.250.752.5\n5. r^2 = 0.25 means:\n25% of the variance in Y is explained by XThe correlation is 25%75% of participants show the relationshipThe effect is 25% larger than expected\n6. If r = 0.70, what percentage of variance is explained?\n70%49%30%100%\n\n\nCritical Thinking\n7. A statistically significant correlation of r = 0.15 suggests:\nA strong, important relationshipA real but very weak relationship - likely not practically meaningfulThe data is unreliableWe need to use a different test\nTrue or False: A significant p-value tells us the correlation is strong. TRUEFALSE\nTrue or False: Correlation does not imply causation. TRUEFALSE\nTrue or False: A negative correlation is weaker than a positive correlation of the same magnitude. TRUEFALSE",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week15/lab/activity.html#activity-4-correlation-in-your-data-10-min",
+    "href": "week15/lab/activity.html#activity-4-correlation-in-your-data-10-min",
+    "title": "Correlation in R",
+    "section": "Activity 4: Correlation in YOUR Data (10 min)",
+    "text": "Activity 4: Correlation in YOUR Data (10 min)\n\nApplying to DataLab\nLet’s think about correlational questions we could ask with the DataLab data.\n\n\nQuestion 1: Self-Rating and Performance\nIn the Frontal Lob task, participants rated their throwing ability before throwing.\nIf high self-ratings are associated with better performance, what type of correlation would we expect?\nPositive correlationNegative correlationNo correlationCannot determine\nIs there an IV and DV in this analysis?\nYes - self-rating is IV, performance is DVYes - performance is IV, self-rating is DVNo - correlational designs have no IV/DV, just two variablesDepends on the hypothesis\n\n\nQuestion 2: Sleep and Memory\nImagine we correlate hours of sleep the night before with memory test performance.\nWhat would a negative correlation (r = -0.30) mean?\nMore sleep = better memoryMore sleep = worse memoryNo relationshipSleep causes memory problems\nCould we conclude that lack of sleep causes poor memory?\nYes, the correlation proves itNo, correlation doesn’t establish causationOnly if p &lt; 0.05Yes, if r is negative\n\n\nQuestion 3: Third Variables\nSleep quality might be related to both coffee consumption AND memory performance.\nThis illustrates:\nA direct causal relationshipA potential third variable (confound)That coffee improves memoryThat the correlation is invalid\nIf coffee consumption is related to both variables, it could:\nCreate a spurious correlation between sleep and memoryProve that coffee causes poor sleepHave no effect on the correlationMake the correlation negative\n\n\nThinking About Your Project\nThink about your group project research question:\n1. Is your research question correlational or experimental?\nCorrelational - looking at relationships between variablesExperimental - manipulating an IV to see effects on a DVDescriptive - just describing one variableI’m not sure yet\n2. If correlational, what two variables would you correlate?\n(Think about this for your own project - no MCQ here!)\n3. What would a positive correlation mean for your research question?\nHigher scores on variable 1 are associated with higher scores on variable 2The variables cause each otherThe relationship is strongThe p-value is significant",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 15: Correlation",
+      "Lab",
+      "Activity"
+    ]
+  },
+  {
+    "objectID": "week15/lab/activity.html#remaining-time-research-plan-work-20-min",
+    "href": "week15/lab/activity.html#remaining-time-research-plan-work-20-min",
+    "title": "Correlation in R",
+    "section": "Remaining Time: Research Plan Work (20+ min)",
+    "text": "Remaining Time: Research Plan Work (20+ min)\n\n\n\n\n\n\nWarningResearch Plan Due Friday 27 February\n\n\n\nUse the remaining lab time to work on your Research Plan submission. Your instructor is available to help!\n\n\n\nWhat to Work On\nIf you haven’t started:\n\nChoose your research question from the approved topics\nIdentify your IV and DV\nDecide on your design (between/within-subjects)\n\nIf you’ve already started:\n\nRefine your hypotheses (H1 and H0)\nCheck your operationalisation is clear and measurable\nReview the marking criteria on Learn\n\n\n\nGet Feedback Now\n\n\n\n\n\n\nTipAsk Questions Today!\n\n\n\nThis is your last lab before Reading Week. Instructors can give feedback on:\n\nWhether your hypothesis is testable\nIf your IV/DV are properly operationalised\nWhether your design makes sense for your question",
     "crumbs": [
       "Home",
       "Term 2",
@@ -15785,7 +15883,7 @@
     "href": "week15/lab/activity.html#summary",
     "title": "Correlation in R",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\nImportantKey Takeaways\n\n\n\nScatterplots: - Always visualise before calculating - Each point = one participant - Look for patterns, linearity, and outliers\nPearson’s r: - Ranges from -1 to +1 - Sign indicates direction (positive/negative) - Magnitude indicates strength\nInterpretation: - Small: |r| = 0.10 - 0.29 - Medium: |r| = 0.30 - 0.49 - Large: |r| = 0.50+ - r^2 = proportion of variance explained\nCautions: - Correlation does NOT equal causation - Watch for third variables - Statistical significance does not equal practical importance",
+    "text": "Summary\n\n\n\n\n\n\nImportantKey Takeaways\n\n\n\nScatterplots:\n\nAlways visualise before calculating\nEach point = one participant\nLook for patterns, linearity, and outliers\n\nPearson’s r: - Ranges from -1 to +1 - Sign indicates direction (positive/negative) - Magnitude indicates strength\nInterpretation: - Small: |r| = 0.10 - 0.29 - Medium: |r| = 0.30 - 0.49 - Large: |r| = 0.50+ - r^2 = proportion of variance explained\nCautions: - Correlation does NOT equal causation - Watch for third variables - Statistical significance does not equal practical importance",
     "crumbs": [
       "Home",
       "Term 2",

@@ -40,11 +40,15 @@ format:
 | Time | Activity |
 |------|----------|
 | 10:00-10:10 | These slides + setup |
-| 10:10-10:35 | Part 1: Scatterplots |
-| 10:35-11:05 | Part 2: Calculating correlations |
-| 11:05-11:30 | Part 3: Correlation matrices |
-| 11:30-11:50 | Part 4: APA reporting |
-| 11:50-12:00 | Wrap-up + self-assessment |
+| 10:10-10:30 | Part 1: Scatterplots |
+| 10:30-10:50 | Part 2: Interpreting correlations |
+| 10:50-11:10 | Part 3: Calculating r in R |
+| 11:10-11:30 | **Research Plan work time** |
+| 11:30-12:00 | Research Plan Q&A + wrap-up |
+
+::: {.callout-warning}
+**Important:** Reserve at least 30 min for Research Plan work!
+:::
 
 ---
 
@@ -244,6 +248,62 @@ Students must avoid causal language:
 - NO: "Confidence causes better performance"
 - YES: "Confidence was associated with better performance"
 :::
+
+---
+
+# Research Plan Work Time {background-color="#275882"}
+
+## Use Remaining Lab Time Productively
+
+---
+
+## Research Plan Reminder
+
+::: {.callout-warning}
+## Due Friday 27 February, 4pm via Learn
+
+This is the **last lab before Reading Week** - encourage students to use this time wisely!
+:::
+
+---
+
+## What Students Should Work On
+
+**If they haven't started:**
+
+- Choose research question from approved topics
+- Identify IV and DV clearly
+- Decide between/within-subjects design
+
+**If already started:**
+
+- Refine hypotheses (H1 and H0)
+- Check operationalisation is measurable
+- Review marking criteria
+
+---
+
+## Circulate and Offer Help
+
+::: {.objectives-box}
+**Good questions to ask students:**
+
+- "What's your IV? How will you manipulate/measure it?"
+- "Is your hypothesis specific and testable?"
+- "What design are you using? Why?"
+- "Have you thought about confounding variables?"
+:::
+
+---
+
+## Common Issues to Watch For
+
+| Problem | Guidance |
+|---------|----------|
+| Vague hypothesis | Must be specific and directional |
+| Unmeasurable DV | How exactly will you measure it? |
+| Wrong design | Check if same or different participants |
+| Causal language | Remind: only experiments show causation |
 
 ---
 

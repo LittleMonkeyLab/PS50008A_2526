@@ -43,7 +43,7 @@ This lab explores **correlation** - measuring the relationship between two conti
 
 ---
 
-## Activity 1: Creating Scatterplots (20 min)
+## Activity 1: Creating Scatterplots (15 min)
 
 ### Visualising Relationships
 
@@ -105,7 +105,7 @@ True or False: Scatterplots can reveal non-linear relationships that correlation
 
 ---
 
-## Activity 2: Calculating Correlations (20 min)
+## Activity 2: Calculating Correlations (15 min)
 
 ### Pearson's r
 
@@ -172,7 +172,98 @@ sample estimates:
 
 ---
 
-## Activity 3: Interpreting r Values (20 min)
+## Activity 2b: Interpreting Scatterplots (10 min)
+
+Look at each scatterplot below and estimate the correlation.
+
+```{r}
+#| label: correlation-examples
+#| fig-height: 8
+#| fig-width: 10
+#| fig-align: center
+
+set.seed(42)
+n <- 50
+
+study_hours <- runif(n, 1, 10)
+exam_scores <- 40 + 5 * study_hours + rnorm(n, 0, 5)
+
+screen_time <- runif(n, 1, 8)
+sleep_hours <- 9 - 0.5 * screen_time + rnorm(n, 0, 1.2)
+
+shoe_size <- rnorm(n, 9, 1.5)
+iq_score <- rnorm(n, 100, 15)
+
+stress <- runif(n, 1, 10)
+wellbeing <- 95 - 7 * stress + rnorm(n, 0, 8)
+
+coffee <- rpois(n, 2.5)
+alertness <- 50 + 3 * coffee + rnorm(n, 0, 15)
+
+exercise <- runif(n, 0, 7)
+mood <- 40 + 5 * exercise + rnorm(n, 0, 12)
+
+examples <- tibble(
+  panel = rep(LETTERS[1:6], each = n),
+  x = c(study_hours, screen_time, shoe_size, stress, coffee, exercise),
+  y = c(exam_scores, sleep_hours, iq_score, wellbeing, alertness, mood),
+  scenario = rep(c("Study Hours vs Exam Score",
+                   "Screen Time vs Sleep Hours",
+                   "Shoe Size vs IQ Score",
+                   "Stress Level vs Wellbeing",
+                   "Coffees per Day vs Alertness",
+                   "Exercise (hrs/wk) vs Mood"), each = n)
+)
+
+ggplot(examples, aes(x = x, y = y)) +
+  geom_point(colour = navy, alpha = 0.6, size = 2) +
+  geom_smooth(method = "lm", se = FALSE, colour = orange, linewidth = 1) +
+  facet_wrap(~scenario, scales = "free", ncol = 3) +
+  labs(x = NULL, y = NULL) +
+  theme(strip.text = element_text(face = "bold", size = 11))
+```
+
+### Match the Correlations
+
+The six scatterplots above have these r values (in random order): **-0.75, -0.48, 0.03, 0.28, 0.47, 0.85**
+
+**1. Study Hours vs Exam Score:**
+
+`r mcq(c("r = -0.75", "r = -0.48", "r = 0.03", "r = 0.28", "r = 0.47", answer = "r = 0.85"))`
+
+**2. Screen Time vs Sleep Hours:**
+
+`r mcq(c("r = -0.75", answer = "r = -0.48", "r = 0.03", "r = 0.28", "r = 0.47", "r = 0.85"))`
+
+**3. Shoe Size vs IQ Score:**
+
+`r mcq(c("r = -0.75", "r = -0.48", answer = "r = 0.03", "r = 0.28", "r = 0.47", "r = 0.85"))`
+
+**4. Stress Level vs Wellbeing:**
+
+`r mcq(c(answer = "r = -0.75", "r = -0.48", "r = 0.03", "r = 0.28", "r = 0.47", "r = 0.85"))`
+
+**5. Coffees per Day vs Alertness:**
+
+`r mcq(c("r = -0.75", "r = -0.48", "r = 0.03", answer = "r = 0.28", "r = 0.47", "r = 0.85"))`
+
+**6. Exercise vs Mood:**
+
+`r mcq(c("r = -0.75", "r = -0.48", "r = 0.03", "r = 0.28", answer = "r = 0.47", "r = 0.85"))`
+
+::: {.callout-tip collapse="true"}
+## Interpretation Tips
+
+- **Strong correlations** (|r| > 0.5): Points cluster tightly around the line
+- **Moderate correlations** (|r| = 0.3-0.5): Clear trend but more scatter
+- **Weak correlations** (|r| < 0.3): Trend barely visible, lots of scatter
+- **Near-zero correlations**: No discernible pattern at all
+- **Negative correlations**: Line slopes downward (one goes up, other goes down)
+:::
+
+---
+
+## Activity 3: Interpreting r Values (15 min)
 
 ### Cohen's Guidelines
 
@@ -228,7 +319,7 @@ True or False: A negative correlation is weaker than a positive correlation of t
 
 ---
 
-## Activity 4: Correlation in YOUR Data (20 min)
+## Activity 4: Correlation in YOUR Data (10 min)
 
 ### Applying to DataLab
 
@@ -297,12 +388,49 @@ Sleep quality might be related to both coffee consumption AND memory performance
 
 ---
 
+## Remaining Time: Research Plan Work (20+ min)
+
+::: {.callout-warning}
+## Research Plan Due Friday 27 February
+
+Use the remaining lab time to work on your **Research Plan submission**. Your instructor is available to help!
+:::
+
+### What to Work On
+
+If you haven't started:
+
+1. Choose your research question from the approved topics
+2. Identify your IV and DV
+3. Decide on your design (between/within-subjects)
+
+If you've already started:
+
+1. Refine your hypotheses (H1 and H0)
+2. Check your operationalisation is clear and measurable
+3. Review the marking criteria on Learn
+
+### Get Feedback Now
+
+::: {.callout-tip}
+## Ask Questions Today!
+
+This is your last lab before Reading Week. Instructors can give feedback on:
+
+- Whether your hypothesis is testable
+- If your IV/DV are properly operationalised
+- Whether your design makes sense for your question
+:::
+
+---
+
 ## Summary
 
 ::: {.callout-important}
 ## Key Takeaways
 
 **Scatterplots:**
+
 - Always visualise before calculating
 - Each point = one participant
 - Look for patterns, linearity, and outliers
