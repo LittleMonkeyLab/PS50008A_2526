@@ -1,369 +1,309 @@
 ---
-title: "Week 16 Self-Assessment"
-subtitle: "Mock EDS Assignment"
+title: "Research Plan Self-Assessment"
+subtitle: "PS50008A Week 16 — Check Before You Submit"
 author: "Gordon Wright"
-date: "2026-02-25"
+date: "2026-02-26"
 format:
   html:
     toc: true
     toc-depth: 2
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup
+library(webexercises)
+library(knitr)
+```
 
 ## Overview
 
-This is a **full mock EDS Assignment** in the new R output interpretation format. Complete this under timed conditions to prepare for the real assessment.
+::: {.callout-important}
+## Research Plan Due Friday 27 February, 12 noon
+Use this self-assessment **before you submit**. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it's a tool to help you submit your best work.
+:::
+
+Your Research Plan (1,000–1,200 words) is essentially your Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification.
+
+---
+
+## Section 1: Hypothesis
+
+A clear, testable hypothesis is the foundation of your Research Plan.
+
+**1. Does your hypothesis name the independent variable?**
+
+`r mcq(c(answer = "Yes — the IV is clearly stated", "No — I need to add this", "I'm not sure what the IV is"))`
+
+**2. Does your hypothesis name the dependent variable?**
+
+`r mcq(c(answer = "Yes — the DV is clearly stated", "No — I need to add this", "I'm not sure what the DV is"))`
+
+**3. Is your hypothesis directional (one-tailed) or non-directional (two-tailed)?**
+
+`r mcq(c("One-tailed — I predict a specific direction", "Two-tailed — I predict a difference but not the direction", answer = "I have stated which it is and explained why"))`
+
+**4. Is your hypothesis testable with the statistical test you've chosen?**
+
+`r mcq(c(answer = "Yes — my hypothesis maps onto my test", "I think so but I'm not certain", "No — I need to revise"))`
+
+### Self-Check
+
+::: {.webex-check .webex-box}
+
+**A good hypothesis should:**
+
+Name both the IV and DV: `r torf(TRUE)`
+
+Include the word "significant": `r torf(FALSE)`
+
+State a predicted direction (if one-tailed): `r torf(TRUE)`
+
+Be based on previous research or theory: `r torf(TRUE)`
+
+Include statistical values: `r torf(FALSE)`
+:::
+
+---
+
+## Section 2: Design
+
+Your design section should tell the reader exactly how the study is structured.
+
+**1. Have you stated the type of design?**
+
+`r mcq(c(answer = "Yes — between-subjects or within-subjects is clearly stated", "I've mentioned the design but not the type", "I haven't included this yet"))`
+
+**2. Have you justified your design choice?**
+
+`r mcq(c(answer = "Yes — I've explained WHY this design was chosen", "I've stated the design but not explained why", "I haven't thought about justification"))`
+
+**3. Have you identified the IV with its levels?**
+
+`r mcq(c(answer = "Yes — IV named with both/all levels specified", "I've named the IV but not the levels", "I need to add this"))`
+
+**4. Have you identified the DV and how it's measured?**
+
+`r mcq(c(answer = "Yes — DV named with measurement method", "I've named the DV but not how it's measured", "I need to add this"))`
+
+### Common Design Mistakes
+
+**Which of these is a problem?**
+
+`r mcq(c("Stating that a between-subjects design avoids order effects", answer = "Stating the design type without explaining why it was chosen", "Mentioning potential confounding variables", "Including both IV and DV"))`
+
+**"A between-subjects design was used" is:**
+
+`r mcq(c("A complete design section", answer = "Missing justification, IV, DV, and levels", "Too detailed", "Only missing the DV"))`
+
+True or False: You should explain why your design is appropriate, not just name it. `r torf(TRUE)`
+
+True or False: A within-subjects design always requires counterbalancing. `r torf(TRUE)`
+
+---
+
+## Section 3: Participants
+
+Your participants section tells the reader who would take part and how they'd be recruited.
+
+**1. Have you stated the total number of participants?**
+
+`r mcq(c(answer = "Yes — with numbers per condition if between-subjects", "I've given a total but not per condition", "I haven't specified a number"))`
+
+**2. Have you described the recruitment method?**
+
+`r mcq(c(answer = "Yes — e.g., opportunity sampling from the student population", "I've mentioned sampling but not the method", "I haven't included this"))`
+
+**3. Have you included demographic information?**
+
+`r mcq(c(answer = "Yes — age range, mean age, gender breakdown", "I've included some demographics", "I haven't included demographics"))`
+
+**4. Have you mentioned inclusion/exclusion criteria?**
+
+`r mcq(c(answer = "Yes — e.g., native English speakers, aged 18+", "I've thought about it but not written it", "I haven't considered this"))`
+
+### Self-Check
+
+**A Participants subsection should be written in:**
+
+`r mcq(c("Present tense", answer = "Past tense (or future tense for a plan)", "First person", "Bullet points"))`
+
+**Which is better?**
+
+`r mcq(c("20 people took part", answer = "Twenty participants (12 female, 8 male; M_age = 20.5, SD = 1.8) were recruited via opportunity sampling from the student population at Goldsmiths, University of London", "We tested some students from our class"))`
+
+True or False: You should justify your sample size if possible. `r torf(TRUE)`
+
+True or False: "Some people" is an acceptable description of participants. `r torf(FALSE)`
+
+---
+
+## Section 4: Materials
+
+Your materials section describes everything you need to run the study.
+
+**1. Have you described your stimuli (e.g., word lists, images, questionnaires)?**
+
+`r mcq(c(answer = "Yes — with examples of specific items", "I've mentioned materials but without examples", "I haven't described materials yet"))`
+
+**2. Have you explained how materials were created or selected?**
+
+`r mcq(c(answer = "Yes — I've explained the source or construction method", "I've listed materials but not their origin", "I haven't included this"))`
+
+**3. Have you mentioned any key properties of your materials?**
+
+`r mcq(c(answer = "Yes — e.g., number of items, matching for word frequency/length", "Some properties are mentioned", "I haven't included properties"))`
+
+### Self-Check
+
+**Which materials description is stronger?**
+
+`r mcq(c("We used a word list", "A list of words was prepared for the experiment", answer = "Two word lists were constructed, each containing 15 words. The concrete list contained words referring to physical objects (e.g., hammer, bicycle). Lists were matched for word frequency using the MRC Psycholinguistic Database."))`
+
+True or False: You should give examples of your stimuli (e.g., sample words from a list). `r torf(TRUE)`
+
+True or False: "We used some materials" is sufficient for this section. `r torf(FALSE)`
+
+---
+
+## Section 5: Procedure
+
+Your procedure is a chronological account of what participants would experience.
+
+**1. Is your procedure written in chronological order?**
+
+`r mcq(c(answer = "Yes — step by step from start to finish", "Mostly, but some steps are out of order", "I need to reorganise"))`
+
+**2. Have you included timing for each phase?**
+
+`r mcq(c(answer = "Yes — e.g., '2 minutes to study', '1 minute distractor task'", "Some timings are mentioned", "I haven't included timings"))`
+
+**3. Have you mentioned informed consent?**
+
+`r mcq(c(answer = "Yes — participants provide consent before the study begins", "I've implied it but not stated it", "I haven't mentioned consent"))`
+
+**4. Have you mentioned debriefing?**
+
+`r mcq(c(answer = "Yes — participants are debriefed at the end", "I've implied it", "I haven't mentioned debriefing"))`
+
+**5. Is there enough detail for someone to replicate your study?**
+
+`r mcq(c(answer = "Yes — another researcher could follow my procedure", "Mostly, but some details are vague", "Probably not — I need more detail"))`
+
+### Common Procedure Mistakes
+
+**Which of these is a problem in a Procedure section?**
+
+`r mcq(c("Including the timing of each phase", answer = "Including the results of the study", "Mentioning the distractor task", "Describing how consent was obtained"))`
+
+**"Participants did the experiment and then we collected the data" is:**
+
+`r mcq(c("Adequate", answer = "Far too vague — needs step-by-step detail", "Appropriate for a Research Plan", "Only missing one detail"))`
+
+True or False: The Procedure should mention ethical safeguards (consent and debrief). `r torf(TRUE)`
+
+True or False: You should include your actual results in the Procedure section. `r torf(FALSE)`
+
+---
+
+## Section 6: Statistical Test
+
+Your Research Plan should name and justify the statistical test you plan to use.
+
+**1. Have you named the specific statistical test?**
+
+`r mcq(c(answer = "Yes — e.g., independent-samples t-test or paired-samples t-test", "I've said 't-test' but not which type", "I haven't named a test"))`
+
+**2. Have you justified why this test is appropriate?**
+
+`r mcq(c(answer = "Yes — I've linked it to my design, IV levels, and DV measurement", "I've named the test but not justified it", "I haven't thought about justification"))`
+
+**3. Does your test match your design?**
+
+`r mcq(c(answer = "Yes — between-subjects → independent t-test, within-subjects → paired t-test", "I think so", "I'm not sure which test matches which design"))`
+
+### Self-Check
+
+**An independent-samples t-test is used when:**
+
+`r mcq(c("The same participants are in both conditions", answer = "Different participants are in each condition", "There are more than two conditions", "The data is categorical"))`
+
+**A paired-samples t-test is used when:**
+
+`r mcq(c(answer = "The same participants are in both conditions", "Different participants are in each condition", "You want to compare three groups", "The DV is nominal"))`
+
+True or False: You should explain why your chosen test is appropriate for your design. `r torf(TRUE)`
+
+True or False: A t-test can compare more than two groups. `r torf(FALSE)`
+
+---
+
+## Section 7: Writing Quality
+
+Finally, check the quality of your writing.
+
+**1. Is your Research Plan written in past tense (or planned future tense)?**
+
+`r mcq(c(answer = "Yes — consistent tense throughout", "Mostly, but some present tense slips in", "I'm not sure about tense"))`
+
+**2. Is it written in third person?**
+
+`r mcq(c(answer = "Yes — 'Participants were asked...' not 'I asked...'", "Mostly, but I've used 'I' or 'we' in places", "I've written in first person throughout"))`
+
+**3. Is it within the word count (1,000–1,200 words)?**
+
+`r mcq(c(answer = "Yes — I've checked", "I'm close but haven't checked exactly", "I'm over or under"))`
+
+**4. Have you proofread for spelling and grammar?**
+
+`r mcq(c(answer = "Yes — I've read through it carefully", "I've done a quick check", "Not yet"))`
+
+### Final Check
+
+True or False: "I will ask participants to..." should be "Participants will be asked to..." `r torf(TRUE)`
+
+True or False: Statistical symbols like *t*, *p*, and *M* should be italicised. `r torf(TRUE)`
+
+True or False: You should include a reference list if you cite any sources. `r torf(TRUE)`
+
+---
+
+## Final Checklist
 
 ::: {.callout-important}
-## Assessment Practice
-- Recommended time: 90 minutes
-- This mirrors the actual EDS Assignment format
-- Practice writing complete answers without looking at hints first
+## Before You Submit — Check Every Box
+
+- [ ] **Hypothesis**: Specific, testable, names IV and DV, states direction
+- [ ] **Design**: Type stated and justified, IV with levels, DV with measurement
+- [ ] **Participants**: Number, recruitment method, demographics, criteria
+- [ ] **Materials**: Described with examples, source/construction explained
+- [ ] **Procedure**: Chronological, timed, detailed enough to replicate
+- [ ] **Ethics**: Informed consent and debriefing mentioned
+- [ ] **Statistical test**: Named and justified, matches design
+- [ ] **Writing**: Past/future tense, third person, academic tone
+- [ ] **Word count**: 1,000–1,200 words
+- [ ] **Proofread**: Spelling, grammar, APA conventions
+
+**Submit via Learn by Friday 27 February, 12 noon.**
 :::
 
 ---
 
-# Mock EDS Assignment: Mental Rotation Study
-
-## Study Description
-
-A cognitive psychologist conducted a study to investigate the mental rotation effect. According to mental rotation theory, people mentally rotate mental images of objects to compare them, and this rotation takes time proportional to the angle of rotation.
-
-**Participants:** 10 undergraduate students participated in the study.
-
-**Procedure:** Each participant viewed 50 pairs of 3D block shapes. For each pair, they judged whether the shapes were the same or mirror-reversed. The shapes in each pair were rotated by either 30° or 150°. Response time (in milliseconds) was recorded for correct responses only.
-
-**Design:** Each participant completed trials at both rotation angles.
-
----
-
-## Section A: Statistical Mechanics (50 marks)
-
-### R Output Provided
-
-```
-> # Descriptive Statistics
-> data %>%
-+   group_by(rotation_angle) %>%
-+   summarise(Mean = mean(RT), SD = sd(RT), n = n())
-
-# A tibble: 2 x 4
-  rotation_angle  Mean    SD     n
-  <chr>          <dbl> <dbl> <int>
-1 30_degree       278.  39.4    10
-2 150_degree      305.  47.8    10
-
-> # Statistical Test
-> t.test(data$RT_30, data$RT_150, paired = TRUE)
-
-    Paired t-test
-
-data:  data$RT_30 and data$RT_150
-t = -2.94, df = 9, p-value = 0.0165
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -47.43  -6.57
-sample estimates:
-mean of the differences
-                    -27
-```
-
----
-
-### Question 1: Experimental Hypothesis (5 marks)
-
-State the researcher's hypothesis for this study.
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-The researcher hypothesized that response times would be significantly longer for shapes rotated 150° compared to shapes rotated 30°. Based on mental rotation theory, greater rotation angles require more mental rotation, which takes additional time.
-
-**Marking notes:** Award full marks for stating the expected direction (150° slower than 30°) with brief justification linking to the theory.
-:::
-
----
-
-### Question 2: Design Components (16-20 marks)
-
-Identify the following:
-
-**a)** Type of experimental design (4-5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Within-subjects (repeated measures) design** - each participant completed trials at both rotation angles.
-
-**Marking notes:** Must identify within-subjects/repeated measures. Accept "related design" but not just "experimental design."
-:::
-
-**b)** Independent variable (4-5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Rotation angle** with two levels: 30° and 150°
-
-**Marking notes:** Must identify the IV (rotation angle) AND the levels (30° vs 150°).
-:::
-
-**c)** Dependent variable (4-5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Response time** measured in milliseconds (ms)
-
-**Marking notes:** Must identify RT/response time. Include units for full marks.
-:::
-
-**d)** Type of data (4-5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Ratio data** - response time is continuous with a true zero point (0ms would mean no time elapsed).
-
-**Marking notes:** Accept "continuous," "interval/ratio," or "ratio" with brief justification.
-:::
-
----
-
-### Question 3: Descriptive Statistics (10 marks)
-
-**a)** Report the descriptive statistics in APA format. (5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-Participants responded faster in the 30° condition (*M* = 278ms, *SD* = 39.4ms) than in the 150° condition (*M* = 305ms, *SD* = 47.8ms).
-
-**Marking notes:** Must include M and SD for both conditions in correct APA format (italicized M and SD).
-:::
-
-**b)** Based on these descriptives alone, what pattern do you observe? What might this suggest about the hypothesis? (5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-The descriptive statistics show that mean response time was approximately 27ms slower for 150° rotations compared to 30° rotations. This pattern is consistent with the hypothesis - participants took longer to respond when shapes required more mental rotation.
-
-**Marking notes:** Must describe the pattern (150° slower) and link to the hypothesis prediction.
-:::
-
----
-
-### Question 4: Inferential Statistics (15 marks)
-
-**a)** Why is `paired = TRUE` appropriate for this design? (3 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-`paired = TRUE` is appropriate because:
-- The same participants completed both conditions
-- This is a within-subjects design where each participant's 30° score is matched with their 150° score
-- Each data point in one condition has a corresponding data point in the other
-
-**Marking notes:** Must reference same participants in both conditions or matched/paired data.
-:::
-
-**b)** State the t-value, degrees of freedom, and p-value. (3 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-- t = -2.94
-- df = 9
-- p = .0165 (or .017)
-
-**Marking notes:** 1 mark each. Accept reasonable rounding of p-value.
-:::
-
-**c)** At α = .05, is the result statistically significant? Explain your reasoning. (4 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-Yes, the result is statistically significant because p = .0165, which is less than the alpha level of .05. We therefore reject the null hypothesis that there is no difference between conditions.
-
-**Marking notes:** Must state significant, give p-value, compare to alpha, and mention rejecting null.
-:::
-
-**d)** What does the 95% CI [-47.43, -6.57] tell us? Why does it matter that this interval doesn't include zero? (5 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-The 95% confidence interval tells us we are 95% confident that the true population difference in response times between the two conditions lies between -47.43ms and -6.57ms.
-
-The fact that this interval doesn't include zero is important because:
-- Zero would represent no difference between conditions
-- Since zero is not in the interval, we can be confident there IS a genuine difference
-- The entirely negative interval confirms that 30° rotations are faster than 150° rotations
-
-**Marking notes:** Must explain what CI represents (2 marks) and why excluding zero matters (3 marks).
-:::
-
----
-
-### Question 5: APA Results Paragraph (5 marks)
-
-Write a complete APA-style results paragraph reporting these findings.
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-A paired-samples t-test was conducted to examine the effect of rotation angle on response time in a mental rotation task. Participants responded significantly faster to shapes rotated 30° (*M* = 278ms, *SD* = 39.4ms) than shapes rotated 150° (*M* = 305ms, *SD* = 47.8ms), *t*(9) = -2.94, *p* = .017, 95% CI [-47.43, -6.57]. These findings support the hypothesis that mental rotation time increases with greater rotation angles.
-
-**Marking notes:** Must include:
-- Type of test used
-- Descriptives for both conditions (M and SD)
-- Test statistics (t, df, p)
-- Confidence interval
-- Interpretation linking to hypothesis
-:::
-
----
-
-### Question 6: Error Detection (5 marks)
-
-A student analyzed data from a study comparing anxiety levels between psychology students (n = 25) and biology students (n = 25). The student ran the following analysis:
-
-```
-> t.test(psych_anxiety, bio_anxiety, paired = TRUE)
-
-    Paired t-test
-
-data:  psych_anxiety and bio_anxiety
-t = 1.82, df = 24, p-value = 0.081
-```
-
-**a)** What error did the student make? (2 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-The student used `paired = TRUE` when they should have used `paired = FALSE` (independent samples t-test). Psychology students and biology students are **different people** - this is a between-subjects design, not within-subjects.
-
-**Marking notes:** Must identify wrong test type (paired instead of independent).
-:::
-
-**b)** How might this error affect their conclusions? (3 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-Using a paired test on independent data creates problems:
-- The test treats unrelated scores as if they were matched pairs
-- This can distort the t-value and p-value
-- The degrees of freedom are wrong (should be ~48 for independent test, not 24)
-- Could lead to incorrect conclusions about significance (Type I or Type II error)
-
-**Marking notes:** Must explain consequence for statistical validity. Accept discussion of wrong df, invalid pairing, or incorrect significance decisions.
-:::
-
----
-
-## Section B: Methods and Theory (50 marks)
-
-### Question 7: Methodological Improvements (10 marks)
-
-Suggest TWO methodological improvements for this study. For each improvement, explain why it would strengthen the study.
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Improvement 1: Increase sample size** (5 marks)
-With only 10 participants, the study has limited statistical power. A larger sample (e.g., 30-50 participants) would provide more reliable estimates of the population effect and increase confidence in the findings.
-
-**Improvement 2: Include additional rotation angles** (5 marks)
-Testing only 30° and 150° limits what we can conclude about mental rotation. Including intermediate angles (e.g., 60°, 90°, 120°) would allow examination of whether the relationship is linear, providing stronger evidence for mental rotation theory.
-
-**Alternative improvements:**
-- Counterbalancing trial order
-- Including practice trials
-- Recording accuracy as well as RT
-- Using a larger stimulus set
-- Testing different types of stimuli
-
-**Marking notes:** 5 marks each. Must include the improvement AND a clear justification for why it would strengthen the study.
-:::
-
----
-
-### Question 8: Individual Differences (20 marks)
-
-**a)** Do you think males and females would show different patterns of performance on this task? Explain your reasoning. (10 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-Research suggests males may show a small advantage on spatial tasks including mental rotation. Possible explanations include:
-- Evolutionary pressures for navigation and tool use
-- Differences in spatial experience during development
-- Hormonal influences on spatial processing
-
-However, the effect size is typically small and there is considerable overlap between groups. Environmental factors (practice, encouragement, stereotypes) may also play a role.
-
-**Marking notes:** Award marks for discussing research evidence, possible explanations, and acknowledging complexity/overlap.
-:::
-
-**b)** Would you expect architects to perform differently from journalists on this task? Explain your reasoning. (10 marks)
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-Architects would likely show faster response times (better performance) than journalists because:
-- Architects regularly engage with spatial reasoning and 3D visualization in their work
-- Practice with spatial tasks improves mental rotation ability
-- Self-selection: people with good spatial skills may be more likely to pursue architecture
-
-This suggests expertise and practice can modify mental rotation ability, rather than it being a fixed trait.
-
-**Marking notes:** Award marks for predicting architects would be faster, explaining role of practice/expertise, and discussing self-selection or nature vs nurture.
-:::
-
----
-
-### Question 9: Ecological Validity (20 marks)
-
-Propose a more ecologically valid way to study mental rotation in everyday life. Your proposal should be at least half a page and include:
-- A clear research question
-- A naturalistic setting or real-world task
-- How you would measure the dependent variable
-- Why this approach is more ecologically valid
-
-::: {.callout-tip collapse="true"}
-## Model Answer
-**Research Question:** Does expertise in video gaming improve real-world spatial navigation performance?
-
-**Proposed Study:**
-I would investigate mental rotation in a naturalistic navigation context. Participants would be asked to navigate an unfamiliar university building to find specific rooms, using only a rotated map (the map would be oriented with North facing different directions at different checkpoints).
-
-**Participants:** 40 participants would be recruited - 20 regular video game players (10+ hours/week) and 20 non-gamers. Both groups would be matched for familiarity with the building.
-
-**Procedure:** Participants would navigate through 10 checkpoints in the building. At each checkpoint, they would receive a map rotated by varying degrees (0°, 90°, 180°, 270°) and need to identify the correct direction to the next checkpoint.
-
-**Dependent Variables:**
-1. Time to make each navigation decision
-2. Number of wrong turns
-3. Total navigation time
-4. Self-reported difficulty
-
-**Why More Ecologically Valid:**
-This approach is more ecologically valid because:
-1. **Real-world context:** Navigation with rotated maps is a genuine everyday task (using phone GPS, reading building directories)
-2. **Meaningful consequences:** Errors result in getting lost, not just "wrong answer" feedback
-3. **Complex environment:** Real spatial reasoning involves integrating visual, proprioceptive, and memory processes
-4. **Practical applications:** Findings could inform GPS design, wayfinding signage, and training programs
-
-The lab-based mental rotation task uses abstract stimuli in an artificial context. While highly controlled, it may not capture how people actually use mental rotation in daily life.
-
-**Marking notes:**
-- Clear research question (4 marks)
-- Naturalistic setting/task (5 marks)
-- Clear DV measurement (5 marks)
-- Explanation of ecological validity (6 marks)
-Must be approximately half a page or more.
-:::
-
----
-
-## Reflection
-
-After completing this mock EDS, consider:
-
-1. Which questions were most challenging?
-2. Did you manage your time effectively?
-3. What areas need more practice before the real assessment?
-
-::: {.callout-note}
-## Next Steps
-- Review any areas where you struggled
-- Practice APA formatting for statistics
-- Complete the Week 17 error detection exercises
+## Common Mistakes to Avoid
+
+::: {.callout-warning}
+## Don't Do These
+
+1. **No justification** — "A between-subjects design was used" without explaining why
+2. **Too vague** — "Some people did a test" instead of precise details
+3. **Wrong tense** — "Participants will sit down and I give them the words"
+4. **Including results** — the Method describes what you *plan to do*, not what you *found*
+5. **Missing ethics** — forgetting to mention consent and debriefing
+6. **No examples** — "A word list was used" without saying what kind of words
+7. **Wrong test** — choosing an independent t-test for a within-subjects design
+8. **First person** — "I decided to use..." instead of "An X design was employed because..."
 :::

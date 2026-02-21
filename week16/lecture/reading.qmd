@@ -1,6 +1,323 @@
 ---
 title: "Week 16 Lecture Reading"
-subtitle: "Regression"
+subtitle: "APA Report Writing & Your Research Project"
 ---
 
-{{< include ../../textbook/chapters/w16-lecture.qmd >}}
+::: {.callout-tip}
+## What This Chapter Covers
+This reading accompanies the Week 16 lecture on APA report writing. It explains the structure of an APA-style lab report, how your Research Plan maps onto the Method section, and the writing conventions you'll need for the Research Report due 1 April.
+
+- The sections of an APA lab report and what goes in each
+- How your Research Plan IS your Method section
+- APA writing conventions (tense, person, statistical notation)
+- Common mistakes and how to avoid them
+:::
+
+This chapter is your reference guide for writing in psychology. You'll come back to it repeatedly over the coming weeks as you build your Research Report section by section.
+
+---
+
+## The APA Lab Report
+
+Psychology uses a standardised format for reporting research — the APA (American Psychological Association) style. Every lab report follows the same structure, which means readers always know where to find the information they need.
+
+Your Research Report (due Friday 1 April, 2,000 words) will follow this format exactly.
+
+### The Seven Sections
+
+| Section | Purpose | Approximate proportion |
+|---------|---------|----------------------|
+| **Title Page** | Identifies the study, author, and institution | — |
+| **Abstract** | ~150-word summary of the entire study | ~5% |
+| **Introduction** | Background literature, rationale, and hypothesis | ~25-30% |
+| **Method** | What you did — design, participants, materials, procedure | ~25-30% |
+| **Results** | What you found — descriptive and inferential statistics | ~15-20% |
+| **Discussion** | What it means — interpretation, limitations, future directions | ~20-25% |
+| **References** | Full APA-formatted reference list | — |
+
+### The Hourglass Shape
+
+APA reports follow an hourglass shape:
+
+- **Introduction** moves from broad to narrow — starting with the general topic, reviewing specific research, and ending with your hypothesis
+- **Method and Results** are the narrow middle — precise, detailed, specific
+- **Discussion** moves from narrow to broad — starting with your findings, interpreting them, and ending with wider implications
+
+This shape means you tell a story: here's what we know, here's what we did, here's what we found, and here's what it means.
+
+---
+
+## Section by Section
+
+### Title Page
+
+Your title should be concise and informative. It should include your key variables.
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good title**: "The Effect of Word Concreteness on Free Recall Performance"
+:::
+
+::: {style="background-color: #F8D7DA; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Poor title**: "My Psychology Experiment" or "Memory Study"
+:::
+
+Include your name, student number, and the module code (PS50008A).
+
+### Abstract
+
+The abstract is a brief summary of the entire study, typically around 150 words. It should cover:
+
+1. One or two sentences of **background and rationale**
+2. One sentence on **method** (design, participants, key task)
+3. One or two sentences on **key results** (with statistics)
+4. One sentence on **conclusion and implications**
+
+::: {.callout-tip}
+## When to Write the Abstract
+Write the abstract **last** — after every other section is complete. It's a summary, not a preview. You can't summarise something you haven't written yet.
+:::
+
+### Introduction
+
+The Introduction builds a logical argument from existing literature to your specific research question. Think of it as a funnel:
+
+1. **General topic area** — What is the broad field? (e.g., memory research)
+2. **Key research findings** — What have other researchers found? (cite specific studies)
+3. **Gap or question** — What hasn't been addressed or needs further investigation?
+4. **Your study** — What are you investigating and why?
+5. **Hypothesis** — Your specific, testable prediction
+
+::: {style="background-color: #F8D7DA; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Common mistakes in Introductions:**
+
+- Starting with a dictionary definition ("The Oxford Dictionary defines memory as...")
+- Listing studies without connecting them ("Smith found X. Jones found Y. Brown found Z.")
+- Including your results
+- Making claims without citing evidence
+:::
+
+### Method
+
+The Method section describes what you did in enough detail that another researcher could replicate your study. It has four standard subsections.
+
+::: {.callout-important}
+## Your Research Plan IS Your Method Section
+The Research Plan you're submitting this week covers the same four subsections. Everything you write for the Research Plan feeds directly into your Research Report.
+:::
+
+#### Design
+
+State your experimental design and justify it. Include:
+
+- Type of design (between-subjects or within-subjects)
+- Independent variable and its levels
+- Dependent variable and how it's measured
+
+::: {style="background-color: #F8D7DA; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Weak**: "We used a between-subjects design."
+:::
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Strong**: "A between-subjects design was used. The independent variable was word type with two levels: concrete words and abstract words. The dependent variable was the number of words correctly recalled out of 15. A between-subjects design was chosen to avoid practice and fatigue effects that could confound recall performance."
+:::
+
+Notice the strong version includes **justification** — it explains *why* this design was chosen, not just *what* it is.
+
+#### Participants
+
+Describe who took part and how they were recruited:
+
+- Total number of participants (and per condition if between-subjects)
+- Recruitment method (e.g., opportunity sampling)
+- Key demographics (age range, mean age, gender breakdown)
+- Any inclusion or exclusion criteria
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good example**: "Twenty participants (15 female, 5 male; *M*~age~ = 21.3, *SD* = 2.1) were recruited via opportunity sampling from the student population at Goldsmiths, University of London. All were native English speakers aged 18 or over. Ten participants were randomly allocated to each condition."
+:::
+
+#### Materials
+
+Describe everything you used to run the study:
+
+- Stimuli (word lists, images, questionnaires — with examples)
+- How materials were created or sourced
+- Key properties (e.g., word frequency, number of items)
+- Equipment (if relevant)
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good example**: "Two word lists were constructed, each containing 15 words. The concrete list contained words referring to physical objects (e.g., *hammer*, *bicycle*, *elephant*). The abstract list contained words referring to concepts or qualities (e.g., *freedom*, *honesty*, *courage*). Lists were matched for word frequency and syllable count using the MRC Psycholinguistic Database."
+:::
+
+#### Procedure
+
+Describe what happened, step by step, in chronological order:
+
+- What participants experienced from start to finish
+- Timing of each phase
+- Standardised instructions (summarised, not verbatim)
+- Ethical safeguards — informed consent and debriefing
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good example**: "Participants were tested individually in a quiet room. After providing written informed consent, they were presented with their assigned word list displayed on a computer screen and given two minutes to study the words. The list was then removed and participants counted backwards from 100 for one minute as a distractor task. They were then given two minutes to write down as many words as they could recall, in any order. Finally, participants were fully debriefed about the purpose of the study and thanked for their participation."
+:::
+
+::: {style="background-color: #F8D7DA; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Common mistakes in Method sections:**
+
+- Too vague — "Participants did a memory test" (What kind? How long? How scored?)
+- Including results — Method describes what you *did*, not what you *found*
+- Missing justification — State your design AND explain *why*
+- Wrong tense — Method uses **past tense**
+- Forgetting ethics — Always mention consent and debriefing
+:::
+
+### Results
+
+The Results section reports what you found using both descriptive and inferential statistics. A standard results paragraph for a t-test includes:
+
+1. **Descriptive statistics** — means and standard deviations for each condition
+2. **Inferential test** — the t-test result with full APA notation
+3. **Effect size** — Cohen's *d* with 95% confidence interval
+4. **Brief interpretation** — what the numbers mean in words
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Complete results paragraph**: "Participants in the concrete word condition recalled significantly more words (*M* = 11.2, *SD* = 2.4) than those in the abstract word condition (*M* = 8.7, *SD* = 2.1). An independent-samples t-test confirmed this difference was statistically significant, *t*(18) = 2.48, *p* = .023, *d* = 1.11, 95% CI [0.17, 2.03]. This represents a large effect, suggesting that word concreteness has a substantial influence on free recall performance."
+:::
+
+We'll cover Results reporting in full detail in Week 19.
+
+### Discussion
+
+The Discussion interprets your findings and places them in context:
+
+1. **Restate key findings** (in words, not statistics)
+2. **Interpret** — what do the results mean? Were your hypotheses supported?
+3. **Relate to literature** — do your findings support or contradict previous research?
+4. **Limitations** — what could have affected the results? What would you do differently?
+5. **Future directions** — what should researchers investigate next?
+6. **Conclusion** — a brief take-home message
+
+We'll cover Discussion writing in Week 20.
+
+### References
+
+Every source you cite in-text must appear in the reference list, and vice versa. Use APA 7th edition format.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Journal article format:**
+
+Walker, I., & Hulme, C. (1999). Concrete words are easier to recall than abstract words: Evidence for a semantic contribution to short-term serial recall. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *25*(5), 1256–1271. https://doi.org/10.1037/0278-7393.25.5.1256
+:::
+
+::: {.callout-tip}
+## Use a Reference Manager
+Zotero (free) or Mendeley (free) will format your references automatically and save you hours of manual formatting. Install one now if you haven't already.
+:::
+
+---
+
+## APA Writing Conventions
+
+### Tense
+
+| Section | Tense | Example |
+|---------|-------|---------|
+| Introduction (established findings) | Present | "Research *suggests* that..." |
+| Introduction (specific past studies) | Past | "Walker and Hulme (1999) *found* that..." |
+| Method | Past | "Participants *were* randomly allocated..." |
+| Results | Past | "The difference *was* statistically significant..." |
+| Discussion (your findings) | Past | "The results *showed* that..." |
+| Discussion (implications) | Present | "These findings *suggest* that..." |
+
+### Person and Voice
+
+- **Third person** is preferred throughout
+  - "Participants were asked to..." (not "I asked participants to...")
+  - "The study aimed to..." (not "We aimed to...")
+- **Passive voice** is acceptable in Method and Results
+  - "Words were presented for two minutes"
+- **Active voice** for describing others' research
+  - "Walker and Hulme (1999) demonstrated that..."
+
+### Statistical Notation
+
+Key rules:
+
+- **Italicise** all statistical symbols: *t*, *F*, *r*, *p*, *M*, *SD*, *d*, *n*, *N*
+- **No leading zero** for statistics bounded by ±1: *p* = .023, *r* = .72
+- **Leading zero** for statistics that can exceed ±1: *M* = 0.45
+- **Exact p-values** to three decimal places: *p* = .023 (not *p* < .05)
+- **Exception**: when *p* < .001, report as *p* < .001 (never *p* = .000)
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA t-test format**: *t*(18) = 2.48, *p* = .023, *d* = 1.11, 95% CI [0.17, 2.03]
+:::
+
+---
+
+## Your Research Plan → Your Research Report
+
+Your Research Plan (due Friday 27 February) is the first building block of your Research Report (due Friday 1 April). Here's how each component maps:
+
+| Research Plan component | Becomes this in the Report |
+|------------------------|---------------------------|
+| Hypothesis | End of Introduction + referenced in Design |
+| Design choice + justification | **Design** subsection of Method |
+| Participant plan | **Participants** subsection |
+| Materials description | **Materials** subsection |
+| Step-by-step procedure | **Procedure** subsection |
+| Statistical test choice | Referenced in Design, used in Results |
+
+Over the remaining weeks, you'll add the other sections:
+
+| Week | What you'll write |
+|------|-------------------|
+| **16 (this week)** | Method section (= Research Plan) |
+| **17** | Begin Introduction (literature review) |
+| **18-19** | Results (after data collection) |
+| **20** | Discussion |
+| **Easter** | Abstract, Title, References, polish |
+| **1 April** | Submit Research Report (2,000 words) |
+
+---
+
+## Checklist Before Submitting Your Research Plan
+
+Use this checklist before submitting on Friday:
+
+- [ ] **Hypothesis**: Clear, specific, and testable? One-tailed or two-tailed stated?
+- [ ] **Design**: Type stated AND justified? IV and DV clearly identified?
+- [ ] **Participants**: Number, recruitment method, and demographics included?
+- [ ] **Materials**: All stimuli/measures described with examples?
+- [ ] **Procedure**: Chronological, step-by-step? Includes timing?
+- [ ] **Ethics**: Informed consent and debriefing mentioned?
+- [ ] **Statistical test**: Named AND justified?
+- [ ] **Writing**: Past tense? Third person? Appropriate academic tone?
+- [ ] **Word count**: Within 1,000–1,200 words?
+
+---
+
+## Key Terms
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**APA format** — The standardised style for writing and formatting psychology research reports, set by the American Psychological Association.
+
+**Replication** — The ability of another researcher to repeat a study using the same method. A good Method section enables replication.
+
+**Operationalisation** — Defining a variable in terms of how it is measured. For example, "memory" operationalised as "number of words correctly recalled out of 15."
+
+**Effect size** — A standardised measure of the magnitude of a difference or relationship, independent of sample size. Cohen's *d* is used for comparing two means.
+:::
+
+---
+
+## Summary
+
+- APA lab reports follow a **standard seven-section structure**: Title, Abstract, Introduction, Method, Results, Discussion, References
+- The report has an **hourglass shape** — broad to narrow to broad
+- Your **Research Plan is your Method section** — hypothesis, design, participants, materials, procedure
+- Use **past tense** for Method and Results, **present tense** for established findings
+- **Italicise** statistical symbols; no leading zero for *p* and *r*
+- **Justify** every decision — don't just say *what*, explain *why*
+- The Research Report builds **week by week** from now until 1 April

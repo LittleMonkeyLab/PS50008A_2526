@@ -1,5 +1,5 @@
 ---
-title: "Week 16: Regression"
+title: "Week 16: APA Report Writing & Research Project"
 subtitle: "PS50008A Research Methods | 23-27 February 2026"
 author: "Gordon Wright"
 date: "2026-02-23"
@@ -9,10 +9,10 @@ date: "2026-02-23"
 
 ::: {.callout-important}
 ## Research Plan Due This Week
-Your **Research Plan** is due **Friday 27 February 2026**. Submit via Learn by 4pm. This is your first major assessment for the module.
+Your **[Research Plan](../assessments/research-plan.qmd)** is due **Friday 27 February 2026, 12 noon**. Submit via Learn. This is your first assessed piece of coursework for the module.
 :::
 
-**This week**: Move from describing relationships (correlation) to predicting outcomes (regression). Learn how to fit a line to data, interpret R-squared, and make predictions.
+**This week**: Learn how to structure an APA-style research report and see how the Research Plan you're submitting this week is the foundation of your Method section. We'll walk through the full report structure that you'll need for your [Research Report](../assessments/research-report.qmd) (due 1 April).
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
 **Lab**: Thursday 10:00-12:00 WB304A and WB304B
@@ -21,139 +21,151 @@ Your **Research Plan** is due **Friday 27 February 2026**. Submit via Learn by 4
 
 By the end of this week, you will be able to:
 
-### Line of Best Fit
-- Understand the concept of least squares regression
-- Interpret the regression equation (y = a + bx)
-- Explain slope (b) and intercept (a) in context
-- Visualise the regression line on a scatterplot
+### APA Report Structure
+- Identify the sections of an APA-style lab report (Title, Abstract, Introduction, Method, Results, Discussion, References)
+- Understand the purpose and content of each section
+- Recognise how sections connect to tell a coherent research story
 
-### R-Squared (Coefficient of Determination)
-- Calculate and interpret R-squared
-- Explain variance explained by the model
-- Distinguish between r and R-squared
-- Understand limitations of R-squared
+### The Research Plan as a Method Section
+- See how your Research Plan maps directly onto the Method section of a lab report
+- Understand what makes a good Design, Participants, Materials, and Procedure subsection
+- Identify common mistakes in method writing and how to avoid them
 
-### Making Predictions
-- Use a regression equation to predict values
-- Understand interpolation vs extrapolation
-- Recognise the dangers of predicting beyond your data
-- Calculate predicted values and residuals
+### Writing for Psychology
+- Use appropriate academic tone and APA conventions
+- Report statistical information correctly (notation, formatting)
+- Structure paragraphs effectively in scientific writing
 
-### Reporting Regression
-- Report simple regression results in APA format
-- Create regression tables
-- Describe findings in written text
+### Looking Ahead to the Research Report
+- Understand the full timeline from Research Plan to Research Report
+- See how group project work feeds into an individual write-up
+- Plan your approach to the Research Report (due Friday 1 April)
 
 ## Before the Lecture
 
 ::: {.callout-important}
 ## Required Preparation
-1. **Read the lecture reading** - covers regression theory, R-squared, and prediction
-2. **Review Week 15 correlation content** - regression builds directly on correlation
-3. **Finalise your Research Plan** - due Friday this week!
+1. **Review your Research Plan draft** — bring it to the lecture for reference
+2. **Read the [Research Plan assessment brief](../assessments/research-plan.qmd)** — make sure you understand what's required
+3. **Look at the [Research Report assessment brief](../assessments/research-report.qmd)** — see where this is all heading
 :::
 
 ## The Big Picture
 
-This week answers the question: **How can we use one variable to predict another?**
+This week answers the question: **How do psychologists communicate their research?**
 
 ::: {.callout-tip}
-## From Correlation to Prediction
-Last week we measured the strength of relationships. This week we go further - using those relationships to make predictions. If confidence and accuracy are correlated, can we predict someone's accuracy from their confidence score?
+## Your Research Plan IS Your Method Section
+The Research Plan you're submitting this week — hypothesis, design, participants, materials, procedure — is essentially the Method section of your final Research Report. Everything you write now will feed directly into your 2,000-word report due after Easter.
 :::
 
-We'll continue using YOUR DataLab data to explore:
-
-- **Predicting accuracy from confidence** - Using the regression equation
-- **How much variance is explained?** - Interpreting R-squared
-- **Making and evaluating predictions** - Calculating predicted values
-
-By the end of this week, you'll understand how to build and interpret simple regression models.
+The lecture walks through the full anatomy of an APA lab report, using your Research Plan as a worked example of the Method section. By the end of the lecture, you'll understand not just what to submit this Friday, but how it fits into the bigger picture of the Research Report.
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
-| [Lecture Slides](lecture/slides.html){target="_blank"} | Line of best fit, R-squared, prediction |
-| [Lecture Reading](lecture/reading.qmd) | Regression theory and interpretation |
+| [Lecture Slides](lecture/slides.html){target="_blank"} | APA report structure, Method section writing, Research Plan guidance |
+| [Lecture Reading](lecture/reading.qmd) | Guide to APA report sections |
+| [Research Plan Brief](../assessments/research-plan.qmd) | Full assessment brief — due this Friday |
+| [Research Report Brief](../assessments/research-report.qmd) | Final assessment brief — due 1 April |
 | [Lab Reading](lab/reading.qmd) | Introduction to project literature review |
-| [Instructor Slides](lab/instructor-slides.html){target="_blank"} | Lab walkthrough for instructors |
-| [Lab Activity](lab/activity.qmd) | Project Groups - Literature Review |
-| [Self-Assessment](lab/self-assessment.qmd) | Practice exercises (formative) |
+| [Lab Activity](lab/activity.qmd) | Group formation and literature review |
 
 ## Week at a Glance
 
 | Day | Session | Focus |
 |-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | Line of best fit, R-squared, prediction, regression assumptions |
-| Thursday | Lab (2 hrs) | Project Groups - Literature Review for Research Report |
-| **Friday** | **Deadline** | **Research Plan due 4pm via Learn** |
+| Wednesday | Lecture (2 hrs) | APA report structure, Research Plan as Method section, Research Project briefing |
+| Thursday | Lab (2 hrs) | Group formation + Literature Review for Research Project |
+| **Friday** | **Deadline** | **Research Plan due 12 noon via Learn** |
 
 ## Key Concepts
 
-### The Regression Equation
-- **y = a + bx**: The equation of the line of best fit
-- **a (intercept)**: The predicted value of y when x = 0
-- **b (slope)**: How much y changes for each unit increase in x
-- **Least squares**: Method that minimises the sum of squared residuals
+### The APA Lab Report
 
-### R-Squared
-- **R-squared (R2)**: The proportion of variance in y explained by x
-- **Range**: 0 to 1 (often expressed as percentage)
-- **Interpretation**: R2 = .25 means 25% of variance in y is explained by x
-- **Relationship to r**: R2 = r2 (correlation coefficient squared)
+| Section | What it does | When you'll write it |
+|---------|-------------|---------------------|
+| **Title Page** | Informative title, your name, student number | Week 20 onwards |
+| **Abstract** | ~150-word summary of the whole study | Write last |
+| **Introduction** | Background literature, rationale, hypothesis | Weeks 17-18 |
+| **Method** | Design, Participants, Materials, Procedure | **This week (= your Research Plan)** |
+| **Results** | Descriptive and inferential statistics | Week 19-20 |
+| **Discussion** | Interpretation, limitations, future directions | Week 20 onwards |
+| **References** | APA-formatted reference list | Throughout |
 
-### Interpreting R-Squared
-| R-squared | Interpretation |
-|-----------|----------------|
-| .01 - .09 | Small effect |
-| .09 - .25 | Medium effect |
-| > .25 | Large effect |
+### Your Research Plan → Your Method Section
 
-*Note: Cohen's conventions; context matters for interpretation.*
+| Research Plan component | Method subsection |
+|------------------------|-------------------|
+| Your hypothesis (one-tailed/two-tailed) | Stated at end of Introduction (and referenced in Design) |
+| Design choice and justification | **Design** — between/within, IV, DV |
+| Who you would test and how many | **Participants** — sample, recruitment, demographics |
+| What you would need | **Materials** — stimuli, measures, equipment |
+| Step-by-step what happens | **Procedure** — chronological account of what participants experience |
+| Statistical test selection | Referenced in Design, detailed in Results |
 
-### Prediction
-- **Predicted value (y-hat)**: The value of y predicted by the regression equation
-- **Residual**: The difference between observed and predicted values (y - y-hat)
-- **Interpolation**: Predicting within the range of your data (safer)
-- **Extrapolation**: Predicting beyond your data (dangerous!)
-
-### APA Reporting
-- Report the regression equation, R-squared, and significance
-- Example: "A simple linear regression showed that confidence significantly predicted accuracy, R2 = .18, F(1, 48) = 10.54, p = .002. Higher confidence was associated with better accuracy (b = 0.45)."
+### APA Writing Conventions
+- **Past tense** for Method and Results (describing what was done)
+- **Present tense** for established findings in Introduction
+- **Third person** — avoid "I" and "we" where possible
+- **Statistical notation** — italicise test statistics (*t*, *r*, *F*, *p*)
+- **Exact p-values** — report to three decimal places (e.g., *p* = .023)
 
 ## Connecting to Assessments
 
 ::: {.callout-warning}
-## Research Plan Due Friday 27 February
-This is your first major assessment. Make sure to:
+## Research Plan Due Friday 27 February, 12 noon
+This is your first assessed submission. Make sure to:
 
-- Submit via Learn by 4pm
-- Include all required sections (research question, hypotheses, method)
-- Use the terminology from Weeks 12-15
+- Submit via Learn by **12 noon**
+- Include all required sections: hypothesis, method (design, participants, materials, procedure), draft results
+- Justify your choices throughout — show you understand *why*, not just *what*
+- Use terminology from Weeks 12-15
+- See the [full assessment brief](../assessments/research-plan.qmd) for details
 :::
 
 This week's content directly supports your assessments:
 
 | Assessment | Connection |
 |------------|------------|
-| **Research Plan** | Due this week! Uses all concepts from Weeks 12-15 |
-| **MCQ Exam** | Interpreting regression output, R-squared |
-| **EDS Assignment** | Understanding prediction and model fit |
-| **Research Report** | Results section, regression analyses |
+| **[Research Plan](../assessments/research-plan.qmd)** | Due this week! The lecture shows you exactly how to structure it |
+| **MCQ Exam** | APA conventions, research design terminology |
+| **EDS Assignment** | Method section understanding, APA reporting |
+| **[Research Report](../assessments/research-report.qmd)** | Your Research Plan becomes your Method section; this week's lecture covers the full report structure |
 
-## Lab Focus: Literature Review
+## Lab Focus: Group Formation & Literature Review
+
+::: {.callout-important}
+## You MUST Attend This Lab
+This is where you form your project groups (3-4 students). If you do not attend and have not signalled your intent to participate, you will be **allocated to a group on Monday of Week 17**.
+:::
 
 ::: {.callout-note}
 ## Project Groups Session
-This week's lab focuses on your Research Report project. You'll work in your project groups to:
+This week's lab focuses on launching your Research Report project. You will:
 
-- Identify relevant literature for your research question
-- Learn to search PsycINFO and Google Scholar effectively
-- Begin building your reference list
-- Discuss how to synthesise sources for your introduction
+- **Form your project groups** (3-4 students)
+- Receive your **project topic** (one per group)
+- Begin a **literature review** — searching PsycINFO and Google Scholar
+- Start generating an **experimental hypothesis** based on previous findings
+- Begin thinking about your **research design**
 :::
+
+## Research Report Timeline
+
+Your Research Plan this week is step one of a journey toward the Research Report:
+
+| When | What |
+|------|------|
+| **Week 16 (now)** | Research Plan due — your Method section draft |
+| Week 17 | Methodology development in project groups |
+| Week 18 | MCQ Exam + Procedure development |
+| Week 19 | Data collection |
+| Week 20 | Report writing workshop |
+| Easter break | Individual write-up |
+| **Friday 1 April** | **Research Report due (2,000 words, 12 noon)** |
 
 ## What's Next?
 
-**Week 17**: T-Tests - Moving from relationships to differences. Learn to compare two groups using independent and paired t-tests.
+**Week 17**: Interpretation & Credibility — p-hacking, HARKing, and the replication crisis. Plus MCQ exam preparation. Your project groups will finalise methodology.

@@ -1,6 +1,252 @@
 ---
 title: "Week 16 Lab Reading"
-subtitle: "Project Groups - Literature Review"
+subtitle: "Group Formation & Literature Review"
 ---
 
-{{< include ../../textbook/chapters/w16-lab.qmd >}}
+::: {.callout-tip}
+## What This Reading Covers
+This reading prepares you for Thursday's lab, where you'll form your Research Report project groups and begin your literature review. It covers:
+
+- How to form effective project groups
+- Searching for psychology literature (PsycINFO and Google Scholar)
+- Evaluating and selecting sources
+- Building a literature review argument
+- APA referencing basics
+:::
+
+---
+
+## Forming Your Project Group
+
+In Thursday's lab, you'll form groups of 3–4 students. Each group will work together on a research project, collecting data that every member will then use to write their own individual Research Report (due 1 April).
+
+### How Groups Work
+
+- **Group data, individual reports** — you collect data together, but every person writes their own Research Report independently
+- **Same data, different reports** — do not share written drafts or copy from group members
+- **3–4 students per group** — form your own group in the lab
+
+::: {.callout-important}
+## You Must Attend Thursday's Lab
+If you do not attend the Week 16 lab and have not signalled your intent to participate, you will be **allocated to a group on Monday of Week 17**. It is much better to choose your own group.
+:::
+
+### What Makes an Effective Group?
+
+Research on group work consistently shows that effective groups share a few characteristics:
+
+- **Reliability** — members who show up and do what they say they will
+- **Communication** — agreeing early on how you'll stay in touch (WhatsApp group, email, etc.)
+- **Shared expectations** — discussing how much effort you each plan to put in
+- **Complementary schedules** — being able to find times to meet and collect data together
+
+You don't need to be best friends. You need to be dependable.
+
+---
+
+## Literature Searching
+
+Once your group has a project topic, you'll need to find relevant published research. This is the foundation of your Introduction section.
+
+### Where to Search
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**PsycINFO** (via Goldsmiths Library)
+
+- Psychology-specific database
+- Only peer-reviewed sources
+- Allows filtering by methodology, age group, population
+- Best for targeted psychological research
+
+**Google Scholar** (scholar.google.com)
+
+- Broader coverage across disciplines
+- Good for finding highly cited papers
+- "Cited by" feature helps you find related work
+- Set up Library Links to Goldsmiths for full-text access
+:::
+
+### How to Search Effectively
+
+**Start with your key variables.** If your project is about the effect of word type on memory, your initial search terms might be:
+
+- `"concrete words" AND "abstract words" AND recall`
+- `"word concreteness" AND memory`
+- `imageability AND "free recall"`
+
+**Use Boolean operators:**
+
+| Operator | What it does | Example |
+|----------|-------------|---------|
+| **AND** | Both terms must appear | `memory AND emotion` |
+| **OR** | Either term can appear | `recall OR recognition` |
+| **NOT** | Excludes a term | `memory NOT "working memory"` |
+| **" "** | Exact phrase | `"dual coding theory"` |
+
+**Narrow your search** if you get too many results:
+
+- Add more specific terms
+- Filter by date (e.g., last 15 years)
+- Filter by peer-reviewed only
+- Look within a specific journal
+
+**Broaden your search** if you get too few results:
+
+- Use synonyms or related terms
+- Remove one search term
+- Try Google Scholar as well as PsycINFO
+
+### What to Look For
+
+Prioritise these types of sources:
+
+1. **Peer-reviewed journal articles** — the gold standard in psychology
+2. **Recent publications** (last 10–15 years) — for current evidence
+3. **Highly cited foundational papers** — classic studies everyone references
+4. **Review articles or meta-analyses** — for broad overviews of a topic
+
+Avoid: Wikipedia, blog posts, newspaper articles, non-peer-reviewed sources. These are fine for initial background reading but should not appear in your reference list.
+
+---
+
+## Evaluating Sources
+
+Not every paper you find will be useful. Read strategically.
+
+### The Quick Evaluation
+
+When you find a paper, read in this order:
+
+1. **Title** — Is it clearly relevant to your research question?
+2. **Abstract** — What did they do and find? Is it related to your study?
+3. **Introduction** — What's their argument? Do they cite papers you should read too?
+4. **Method** — Is their design similar to yours? (This helps with your own Method section)
+5. **Discussion** — What do they conclude? What limitations do they note?
+
+You do **not** need to read every paper from start to finish. Strategic reading saves time and helps you find the most relevant information quickly.
+
+### Assessing Quality
+
+Ask yourself:
+
+- **Is it peer-reviewed?** (Published in an academic journal?)
+- **Is it relevant?** (Does it address your specific variables or topic?)
+- **Is it recent enough?** (Or is it a classic that's still widely cited?)
+- **Is the sample appropriate?** (Similar population to your study?)
+- **Are the findings clear?** (Can you summarise what they found?)
+
+### How Many Sources?
+
+For your Research Report introduction, aim for **5–8 quality sources**. A mix of:
+
+- 1–2 foundational/classic papers
+- 3–4 recent studies directly relevant to your topic
+- 1–2 broader theoretical or review papers
+
+Quality matters more than quantity. Five well-chosen, well-integrated sources are better than ten papers listed without connection.
+
+---
+
+## Building a Literature Review
+
+A literature review is not a list of summaries. It builds an **argument** that leads logically to your research question and hypothesis.
+
+### Structure Your Argument
+
+Think of your literature review as answering a sequence of questions:
+
+1. **What is the general area?** (1–2 sentences introducing the broad topic)
+2. **What do we know?** (Key findings from existing research, with citations)
+3. **What don't we know?** (Gaps, inconsistencies, or unanswered questions)
+4. **What are we going to do about it?** (Your study and hypothesis)
+
+### Synthesise, Don't Summarise
+
+::: {style="background-color: #F8D7DA; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Poor (list of summaries):**
+"Smith (2020) found that concrete words were recalled better. Jones (2021) found that imagery helped memory. Brown (2019) found that abstract words were harder to recall."
+:::
+
+::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Good (synthesised argument):**
+"Research has consistently demonstrated that concrete words are recalled more easily than abstract words (Brown, 2019; Smith, 2020). This advantage may be explained by dual coding theory, which proposes that concrete words are encoded both verbally and visually (Paivio, 1971). Supporting this, Jones (2021) found that imagery instructions specifically benefited recall of abstract words, suggesting that the availability of visual encoding is the key mechanism."
+:::
+
+The second version connects findings, identifies a mechanism, and builds toward a coherent argument.
+
+### Handling Conflicting Findings
+
+Research doesn't always agree. When you find conflicting results:
+
+- **Acknowledge the disagreement** — don't ignore inconvenient findings
+- **Consider possible explanations** — different methods? Different populations? Different measures?
+- **Use it to motivate your study** — conflicting findings create a gap your research can address
+
+---
+
+## APA Referencing Basics
+
+### In-Text Citations
+
+| Situation | Format | Example |
+|-----------|--------|---------|
+| One author | Author (Year) | Walker (1999) found... |
+| Two authors | Author & Author (Year) | Walker and Hulme (1999) demonstrated... |
+| Three or more | First Author et al. (Year) | Smith et al. (2022) reported... |
+| Parenthetical | (Author, Year) | ...in free recall tasks (Walker & Hulme, 1999). |
+| Multiple sources | (Author, Year; Author, Year) | ...is well-established (Brown, 2019; Smith, 2020). |
+
+### Reference List
+
+Every source cited in-text must appear in the reference list, and vice versa. References are listed alphabetically by first author surname.
+
+::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
+**Journal article:**
+Walker, I., & Hulme, C. (1999). Concrete words are easier to recall than abstract words: Evidence for a semantic contribution to short-term serial recall. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, *25*(5), 1256–1271. https://doi.org/10.1037/0278-7393.25.5.1256
+
+**Book:**
+Paivio, A. (1971). *Imagery and verbal processes*. Holt, Rinehart and Winston.
+:::
+
+### Reference Managers
+
+A reference manager saves you hours of manual formatting. Install one now:
+
+- **Zotero** (free) — integrates with Word and Google Docs, browser extension captures references directly from journal websites
+- **Mendeley** (free) — good PDF organiser
+- **EndNote** (available via Goldsmiths) — powerful but steeper learning curve
+
+::: {.callout-tip}
+## Start Now
+Create a shared folder in Zotero or Mendeley for your project group. Add papers as you find them. When you write your Research Report, the reference list will be generated automatically.
+:::
+
+---
+
+## Preparing for Thursday's Lab
+
+Before the lab, think about:
+
+1. **Who you'd like to work with** — groups of 3–4
+2. **Your project topic** — you'll receive your specific topic in the lab
+3. **What databases you'll use** — bookmark PsycINFO via the Goldsmiths Library and Google Scholar
+
+In the lab, you'll:
+
+- Form your project group
+- Receive your project topic and materials
+- Begin searching for relevant literature
+- Start developing your research question and hypothesis
+
+---
+
+## Summary
+
+- **Form groups of 3–4** in Thursday's lab — attendance is mandatory
+- **Group data, individual reports** — you share data collection but write independently
+- **Search PsycINFO and Google Scholar** using Boolean operators and specific terms
+- **Evaluate sources** strategically — read abstracts first, prioritise peer-reviewed articles
+- **Synthesise, don't summarise** — connect findings to build an argument
+- **Aim for 5–8 quality sources** for your Introduction
+- **Use a reference manager** (Zotero recommended) from the start
+- **APA 7th edition** for all citations and references

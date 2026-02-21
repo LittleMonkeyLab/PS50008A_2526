@@ -1,8 +1,8 @@
 ---
-title: "Project Groups: Literature Review"
+title: "Group Formation & Literature Review"
 subtitle: "PS50008A Week 16 Lab Activity"
 author: "Gordon Wright"
-date: "2026-02-25"
+date: "2026-02-26"
 format:
   html:
     toc: true
@@ -17,290 +17,285 @@ execute:
 ```{r}
 #| label: setup
 library(webexercises)
-library(tidyverse)
 library(knitr)
-
-# Load DataLab data
-memory <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/memory_clean.csv", show_col_types = FALSE)
-merged <- read_csv("../../_planning/DATALAB_MATERIALS/data/processed/foundations_merged.csv", show_col_types = FALSE)
-
-navy <- "#275882"
-orange <- "#EA8439"
-theme_set(theme_minimal(base_size = 14))
 ```
 
 ## Overview
 
 ::: {.callout-important}
-## Focus for Today
-This lab focuses on developing your **literature review skills** for your group project:
+## Two Key Tasks Today
 
-- Defining a clear, testable research question
-- Finding relevant peer-reviewed papers
-- Summarizing key findings effectively
-- Building a coherent argument from multiple sources
+1. **Form your project group** (3–4 students) — this is your group for the Research Report
+2. **Begin your literature review** — searching for papers related to your project topic
+
+You **must** attend this lab. If you don't attend and haven't signalled your intent to participate, you will be allocated to a group on Monday of Week 17.
+:::
+
+::: {.callout-warning}
+## Research Plan Due Tomorrow
+Your **Research Plan** is due **Friday 27 February, 12 noon** via Learn. This is your first assessed submission. See the [assessment brief](../../assessments/research-plan.qmd) for details.
 :::
 
 ---
 
-## Activity 1: Defining Your Research Question (20 min)
+## Part 1: Group Formation (20 min)
 
-### What Makes a Good Research Question?
+### Forming Your Group
 
-A good research question for your project should be:
+Your group will work together for the rest of the term to design and run a study. Each member will then write their own individual Research Report (due 1 April) using the group's shared data.
 
-- **Specific** - not too broad
-- **Testable** - can be answered with data
-- **Relevant** - connected to existing research
-- **Feasible** - achievable with available resources
+**Group size:** 3–4 students
 
-### Evaluating Research Questions
+**What your group will do together:**
 
-**1. "Does personality affect behaviour?" is a POOR research question because:**
+- Develop your research methodology (Week 17)
+- Create your procedure and materials (Week 18)
+- Collect data (Week 19)
+- Analyse data (Week 20)
 
-`r mcq(c(answer = "It is too broad and vague", "Personality can't be measured", "It's not relevant to psychology", "It's already been answered"))`
+**What you do individually:**
 
-**2. Which is a BETTER research question?**
+- Write your own Research Report (2,000 words, due 1 April)
 
-`r mcq(c("Why do people differ?", answer = "Is extraversion associated with social media use frequency?", "What makes someone happy?", "Are introverts better than extraverts?"))`
+### Self-Check: Understanding Group Work
 
-**3. A testable research question must:**
+**1. The Research Report is:**
 
-`r mcq(c("Be about a controversial topic", answer = "Have variables that can be measured or observed", "Already have a known answer", "Be very broad in scope"))`
+`r mcq(c("A group submission", answer = "An individual submission using group data", "Optional", "Due before Easter"))`
 
-### Your Project
+**2. You should share with your group members:**
+
+`r mcq(c("Your written report draft", answer = "Data collection responsibilities and raw data", "Your introduction paragraphs", "Your reference list only"))`
+
+**3. If two group members submit very similar reports, this is:**
+
+`r mcq(c("Expected since they used the same data", "Fine as long as the data is the same", answer = "An academic misconduct concern — reports must be independently written", "Only a problem if they have the same hypothesis"))`
+
+True or False: Every group member must write their own report, even though the data is shared. `r torf(TRUE)`
+
+True or False: You can copy your group member's Introduction as long as you change a few words. `r torf(FALSE)`
+
+---
+
+### Group Agreement
+
+Once you've formed your group, discuss and agree on:
+
+::: {.callout-note}
+## Group Setup Checklist
+- [ ] Exchange contact details (email, phone, WhatsApp)
+- [ ] Set up a group communication channel
+- [ ] Agree on when you can meet outside of labs
+- [ ] Discuss expectations — how will you divide the work?
+- [ ] Note each member's name and student number
+:::
+
+---
+
+## Part 2: Your Project Topic (15 min)
+
+Your group will receive a project topic from your lab tutor. Each topic involves a simple experiment that can be analysed with an independent-samples or paired-samples t-test.
+
+### Understanding Your Topic
+
+Once you have your topic, work through these questions with your group:
+
+**1. An independent variable (IV) is:**
+
+`r mcq(c("What you measure", answer = "What you manipulate or compare", "The result of the study", "The participant's age"))`
+
+**2. A dependent variable (DV) is:**
+
+`r mcq(c("What you manipulate", answer = "What you measure as the outcome", "The number of participants", "The type of design"))`
+
+**3. In a between-subjects design:**
+
+`r mcq(c("Each participant does all conditions", answer = "Different participants are in each condition", "There is no control group", "The IV is measured, not manipulated"))`
+
+**4. In a within-subjects design:**
+
+`r mcq(c(answer = "Each participant does all conditions", "Different participants are in each condition", "Only one condition is used", "The DV changes between groups"))`
+
+### Your Project Variables
 
 ::: {.webex-check .webex-box}
 
-**Consider your group's research question. Is it:**
+**For your project topic, identify:**
 
-**Specific enough?**
-`r mcq(c(answer = "Yes - it focuses on specific variables", "No - it needs to be narrowed down", "I'm not sure yet"))`
+**What is the independent variable?**
+`r mcq(c(answer = "I can identify my IV and its levels", "I think I know but I'm not sure", "I need to ask my tutor"))`
 
-**Testable?**
-`r mcq(c(answer = "Yes - the variables can be measured", "No - it's too abstract", "I'm not sure yet"))`
+**What is the dependent variable?**
+`r mcq(c(answer = "I can identify my DV and how it's measured", "I think I know but I'm not sure", "I need to ask my tutor"))`
 
-**Relevant to existing literature?**
-`r mcq(c(answer = "Yes - related studies exist", "No - it's completely novel", "I'm not sure yet"))`
+**What type of design will you use?**
+`r mcq(c("Between-subjects", "Within-subjects", answer = "My project documents specify the design"))`
 :::
 
-True or False: A good research question should be answerable with a simple yes or no. `r torf(FALSE)`
-
-True or False: Your research question should be related to the DataLab data you collected. `r torf(TRUE)`
-
 ---
 
-## Activity 2: Finding Relevant Papers (20 min)
+## Part 3: Literature Searching (25 min)
 
-### Search Strategies
+Now that you have your topic, it's time to find relevant published research. This will form the basis of your Introduction section.
 
-Finding good sources is a skill that improves with practice.
+### Where to Search
 
-**1. The best databases for finding psychology research are:**
+**1. The best starting point for psychology-specific research is:**
 
-`r mcq(c("Google", answer = "PsycINFO, Web of Science, or Google Scholar", "Wikipedia", "Social media"))`
+`r mcq(c("Google", answer = "PsycINFO via the Goldsmiths Library", "Wikipedia", "ChatGPT"))`
 
-**2. What makes a source "peer-reviewed"?**
+**2. Google Scholar is useful because:**
 
-`r mcq(c("It's available online", "It has many citations", answer = "Experts evaluated it before publication", "It's written by a professor"))`
+`r mcq(c("It only shows peer-reviewed papers", answer = "It covers many disciplines and shows citation counts", "It's the same as PsycINFO", "It writes summaries for you"))`
 
-**3. Using specific search terms helps you find:**
+**3. To access full-text articles through Goldsmiths, you should:**
 
-`r mcq(c("More results", answer = "More relevant results", "Newer articles", "Longer articles"))`
+`r mcq(c("Pay for each article", answer = "Use the library's database access or set up Google Scholar Library Links", "Only read abstracts", "Search on general Google instead"))`
 
-### Search Term Strategies
+### Search Strategy Practice
 
-**4. If you're researching "memory and word type", which Boolean search would be MOST effective?**
+Your group should now search for papers on your topic. Try the following:
 
-`r mcq(c("memory", "word type", answer = "memory AND (concrete OR abstract) AND words", "memory NOT word type"))`
+**4. Boolean AND is used to:**
 
-**5. Adding quotation marks around "working memory" will:**
+`r mcq(c("Find either term", answer = "Require both terms to appear", "Exclude a term", "Search for an exact phrase"))`
 
-`r mcq(c("Exclude those words", answer = "Search for that exact phrase", "Find more results", "Search titles only"))`
+**5. Putting quotation marks around a phrase (e.g., "free recall") means:**
 
-**6. When your search returns too many results, you should:**
+`r mcq(c("The words can appear separately", answer = "The exact phrase must appear together", "The phrase is excluded", "It searches titles only"))`
 
-`r mcq(c("Give up", answer = "Add more specific search terms", "Remove all search terms", "Only read the first page"))`
+**6. If your initial search returns 5,000+ results, you should:**
 
-### Evaluating Sources
+`r mcq(c("Read them all", "Give up on that topic", answer = "Add more specific terms or apply filters", "Only look at the first page"))`
 
-**7. A paper from 2005 on your topic is:**
+**7. If your search returns very few results, you should:**
 
-`r mcq(c("Too old to be useful", answer = "Potentially useful - depends on whether newer evidence exists", "The best source to cite", "Only useful if highly cited"))`
+`r mcq(c("Conclude there's no research on the topic", answer = "Try broader or alternative search terms", "Submit your report without references", "Only use textbook citations"))`
 
-**8. The introduction section of a paper is useful for:**
+### Practice Search
 
-`r mcq(c("Finding statistical results", answer = "Understanding background and context", "Learning the methods used", "Finding sample sizes"))`
-
-True or False: Primary sources (original research articles) are preferred over secondary sources (textbooks). `r torf(TRUE)`
-
-True or False: The number of citations a paper has tells you if its findings are correct. `r torf(FALSE)`
-
----
-
-## Activity 3: Summarizing Key Findings (20 min)
-
-### Reading Strategically
-
-You don't need to read every word of every paper!
-
-**1. When first evaluating a paper, you should read:**
-
-`r mcq(c("The entire paper word-by-word", answer = "The abstract, introduction, and discussion first", "Only the results section", "Only the title"))`
-
-**2. The abstract tells you:**
-
-`r mcq(c("The detailed methodology", answer = "The main research question, methods, and key findings", "The theoretical framework in depth", "References to other papers"))`
-
-**3. For your literature review, the MOST important sections are usually:**
-
-`r mcq(c("Methods and Materials", answer = "Introduction and Discussion", "References and Acknowledgments", "Figures and Tables only"))`
-
-### Writing Effective Summaries
-
-**4. A good summary of a research finding should include:**
-
-`r mcq(c(answer = "Who did what, with whom, and what they found", "Every statistical value reported", "The researcher's personal opinions", "Direct quotes from the paper"))`
-
-**5. When summarizing, you should:**
-
-`r mcq(c("Copy sentences directly", answer = "Paraphrase in your own words", "Use as many direct quotes as possible", "Only mention positive findings"))`
-
-### Practice Summary
-
-Here's an example finding:
-
-> "Smith et al. (2022) conducted an experiment with 120 university students, finding that participants who memorised concrete words (M = 7.2, SD = 1.5) recalled significantly more words than those who memorised abstract words (M = 5.8, SD = 1.8), t(118) = 4.89, p < .001, d = 0.85."
-
-**6. This summary effectively includes:**
-
-`r mcq(c(answer = "The sample, comparison, and key statistics", "Only the p-value", "Just the research question", "Only qualitative information"))`
-
-**7. The effect size (d = 0.85) tells us:**
-
-`r mcq(c("The result is statistically significant", answer = "The effect is large by Cohen's guidelines", "The sample size is adequate", "The experiment was well designed"))`
-
-True or False: You should include every study you find in your literature review. `r torf(FALSE)`
-
-True or False: Summarizing means putting findings in your own words while maintaining accuracy. `r torf(TRUE)`
-
----
-
-## Activity 4: Building Your Argument (20 min)
-
-### Structuring a Literature Review
-
-A literature review isn't just a list of summaries - it builds an argument!
-
-**1. A good literature review should:**
-
-`r mcq(c("List studies in alphabetical order", answer = "Organise studies thematically to support your research question", "Include only studies that agree with each other", "Focus on the oldest research first"))`
-
-**2. "Synthesising" literature means:**
-
-`r mcq(c("Summarizing each study separately", answer = "Connecting findings across studies to identify patterns", "Copying from multiple sources", "Only using recent papers"))`
-
-**3. When studies have conflicting findings, you should:**
-
-`r mcq(c("Ignore the conflicting studies", "Only cite studies that agree", answer = "Acknowledge the disagreement and discuss possible reasons", "Give up on the topic"))`
-
-### Creating a Coherent Narrative
-
-**4. A good opening sentence for a literature review paragraph is:**
-
-`r mcq(c("Smith (2020) found that...", answer = "Research has consistently shown that concrete words are easier to remember than abstract words (Smith, 2020; Jones, 2021).", "This paragraph will discuss memory research.", "Memory is interesting."))`
-
-**5. Transition words like "however", "similarly", and "in contrast" help to:**
-
-`r mcq(c("Make the writing longer", answer = "Show relationships between different findings", "Avoid plagiarism", "Sound more academic"))`
-
-**6. Your literature review should end by:**
-
-`r mcq(c("Summarizing every study mentioned", answer = "Identifying the gap your research will address", "Stating your results", "Listing your references"))`
-
-### Your Project
-
-::: {.webex-check .webex-box}
-
-**How does your research question connect to existing literature?**
-
-`r mcq(c(answer = "It fills a gap in current knowledge", "It repeats exactly what's been done before", "It has no connection to previous research", "I haven't thought about this yet"))`
-
-**How many sources do you plan to cite?**
-
-`r mcq(c("1-2", "3-4", answer = "5 or more", "As many as possible"))`
-
-**What is the main theme of your literature review?**
-
-`r mcq(c(answer = "It focuses on my research question and key variables", "It covers everything related to psychology", "It only mentions studies that support my hypothesis", "I don't have a main theme yet"))`
+::: {.callout-tip}
+## Try This Now
+1. Go to [Goldsmiths Library](https://www.gold.ac.uk/library/) and access PsycINFO
+2. Search for terms related to your project topic
+3. Try at least **three different search term combinations**
+4. Aim to find **3–5 relevant papers** as a group
 :::
 
-True or False: A literature review should only include sources that support your hypothesis. `r torf(FALSE)`
+True or False: Wikipedia is an acceptable source for your Research Report reference list. `r torf(FALSE)`
 
-True or False: Your literature review should lead logically to your research question. `r torf(TRUE)`
+True or False: A paper published in 2010 can still be a useful source if it's highly cited and relevant. `r torf(TRUE)`
 
 ---
 
-## Group Discussion Points
+## Part 4: Evaluating and Recording Sources (20 min)
 
-Work with your project group to discuss these questions:
+### Reading Papers Strategically
+
+You don't need to read every paper cover to cover. Read strategically:
+
+**1. When you first find a paper, you should read:**
+
+`r mcq(c("The entire paper carefully", answer = "The abstract first, to check relevance", "Only the results", "The reference list"))`
+
+**2. The Introduction of a paper is most useful for:**
+
+`r mcq(c("Finding statistical results", answer = "Understanding background theory and finding other relevant papers", "Learning how to do the analysis", "Checking the sample size"))`
+
+**3. The Method section of a relevant paper helps you because:**
+
+`r mcq(c("You can copy their procedure", answer = "It shows how similar studies have been designed and measured the DV", "It tells you what results to expect", "It's not useful for your project"))`
+
+**4. A peer-reviewed source means:**
+
+`r mcq(c("It was published online", "The author is a professor", answer = "Independent experts evaluated it before publication", "It has been cited many times"))`
+
+### Recording What You Find
+
+For each paper you find, record:
 
 ::: {.callout-note}
-## Discussion 1: Research Question
-Take turns stating your research question. Is it:
-- Specific enough?
-- Testable with the DataLab data?
-- Connected to existing literature?
+## Source Record Template
+For each relevant paper, note:
+
+1. **Full reference** (authors, year, title, journal)
+2. **What they studied** (research question / hypothesis)
+3. **How they studied it** (design, participants, key method details)
+4. **What they found** (key results, effect sizes if reported)
+5. **Why it matters for your project** (how does it connect to your topic?)
 :::
 
-::: {.callout-note}
-## Discussion 2: Literature Search
-- What search terms have you tried?
-- Which databases are you using?
-- Have you found the most relevant papers?
-:::
+### Self-Check: Source Quality
+
+**5. Which of these is the STRONGEST source for your Introduction?**
+
+`r mcq(c("A newspaper article about memory research", "A YouTube lecture on the topic", answer = "A peer-reviewed journal article reporting an experiment", "A textbook chapter on general psychology"))`
+
+**6. How many quality sources should you aim for in your Introduction?**
+
+`r mcq(c("1-2", "3-4", answer = "5-8", "As many as possible"))`
+
+True or False: You should only cite papers that support your hypothesis. `r torf(FALSE)`
+
+True or False: Reading the reference lists of relevant papers is a good way to find more sources. `r torf(TRUE)`
+
+---
+
+## Part 5: From Sources to Hypothesis (10 min)
+
+### Developing Your Hypothesis
+
+Based on the literature you've found, you should be able to start forming a hypothesis.
+
+**1. A hypothesis should be:**
+
+`r mcq(c("Vague and general", answer = "Specific, testable, and directional (or explicitly non-directional)", "Based on what you hope will happen", "The same as the research question"))`
+
+**2. "Concrete words will be recalled better than abstract words" is:**
+
+`r mcq(c("A research question", answer = "A one-tailed (directional) hypothesis", "A two-tailed hypothesis", "A null hypothesis"))`
+
+**3. Your hypothesis should be based on:**
+
+`r mcq(c("Your personal opinion", "What would be most interesting", answer = "What previous research suggests is likely", "What's easiest to test"))`
+
+### Group Discussion
 
 ::: {.callout-note}
-## Discussion 3: Building Your Argument
-- What are the main themes in your literature?
-- Are there conflicting findings?
-- What gap does your research address?
+## Discuss With Your Group
+1. Based on the papers you've found, what does the literature suggest?
+2. What direction do you predict your results will go?
+3. Is your hypothesis one-tailed or two-tailed? Why?
+4. How does your hypothesis connect to the theory you've read about?
 :::
+
+True or False: A hypothesis must always predict a specific direction of effect. `r torf(FALSE)`
+
+True or False: Your hypothesis should be informed by previous research, not just a guess. `r torf(TRUE)`
 
 ---
 
 ## Summary
 
 ::: {.callout-important}
-## Key Takeaways
+## What You Should Have Done Today
 
-**Research Questions:**
-- Should be specific, testable, and relevant
-- Connected to existing literature
-- Answerable with your data
-
-**Finding Papers:**
-- Use academic databases (PsycINFO, Google Scholar)
-- Use Boolean operators and specific terms
-- Evaluate sources for quality and relevance
-
-**Summarizing:**
-- Read strategically (abstract, introduction, discussion)
-- Paraphrase in your own words
-- Include key details: who, what, with whom, findings
-
-**Building Arguments:**
-- Organise thematically, not chronologically
-- Synthesise across studies
-- Acknowledge conflicting findings
-- End with the gap your research fills
+- [ ] Formed a group of 3–4 students
+- [ ] Exchanged contact details and set up a communication channel
+- [ ] Received your project topic
+- [ ] Identified your IV, DV, and design
+- [ ] Searched PsycINFO and/or Google Scholar for relevant papers
+- [ ] Found at least 3–5 potentially relevant sources
+- [ ] Started recording key information from each source
+- [ ] Begun discussing a hypothesis based on the literature
 :::
 
 ---
 
 ## Next Steps
 
-1. Complete the [Week 16 Self-Assessment](self-assessment.qmd)
-2. Continue developing your literature review
-3. Meet with your group to finalise your research question
-4. Prepare for Week 17: Research Plan submissions
+1. **Tomorrow (Friday):** Submit your **Research Plan** by **12 noon** via Learn
+2. Complete the [Research Plan Self-Assessment Checklist](self-assessment.qmd) before submitting
+3. Continue reading the papers you found today
+4. Start thinking about how the literature connects to form an argument
+5. **Next week (Week 17):** Your group will finalise methodology and research design

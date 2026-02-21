@@ -1,5 +1,5 @@
 ---
-title: "Project Groups: Literature Review"
+title: "Group Formation & Literature Review"
 subtitle: "PS50008A Week 16 | Lab Walkthrough"
 author: "Gordon Wright"
 date: "2026-02-26"
@@ -18,19 +18,24 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## Project Groups: Literature Review
+## Group Formation & Literature Review
 
 ---
 
-## Today's Focus
+## Today's Priorities
 
 ::: {.objectives-box}
-**A different kind of lab today.** You will:
+**Two things matter today:**
 
-- Work in your Research Report project groups
-- Search for relevant literature using PsycINFO and Google Scholar
-- Evaluate sources for quality and relevance
-- Begin building your reference list
+1. **Form your project groups** (3–4 students)
+2. **Begin your literature review** — find papers related to your project topic
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+## Research Plan Due Tomorrow
+**Friday 27 February, 12 noon** via Learn.
+:::
 :::
 
 ---
@@ -39,154 +44,242 @@ format:
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:15 | These slides + group formation |
-| 10:15-10:45 | Part 1: Database searching |
-| 10:45-11:15 | Part 2: Evaluating sources |
-| 11:15-11:45 | Part 3: Group work time |
-| 11:45-12:00 | Wrap-up + next steps |
+| 10:00–10:15 | These slides + group formation |
+| 10:15–10:30 | Receive project topics, identify variables |
+| 10:30–11:00 | Literature searching (PsycINFO + Google Scholar) |
+| 11:00–11:30 | Evaluating sources + recording findings |
+| 11:30–11:50 | Group discussion: hypothesis development |
+| 11:50–12:00 | Wrap-up + next steps |
 
 ---
 
-## Important Reminders
+# Part 1: Group Formation {background-color="#275882"}
 
-::: {.callout-warning}
-## Research Plan Due Tomorrow!
-**Friday 27 February at 4pm** via Learn.
+## Finding Your People (~15 min)
 
-This lab focuses on your Research Report, which uses the same research question.
+---
+
+## Form Groups of 3–4
+
+::: {.incremental}
+- Look around — find 2–3 people to work with
+- You'll work together for the **rest of the term**
+- Data collection, methodology, procedure — all done as a group
+- The **Research Report is individual** — you share data, not words
+:::
+
+::: {.fragment}
+::: {.callout-important}
+## Mandatory Attendance
+Students who don't attend today and haven't signalled intent to participate will be **allocated to a group on Monday of Week 17**.
+:::
 :::
 
 ---
 
-# Part 1: Database Searching {background-color="#275882"}
+## Once You've Formed a Group
 
-## Finding Relevant Literature (~30 min)
+::: {.exercise-box}
+**Do these now:**
+
+1. Exchange contact details (email / phone / WhatsApp)
+2. Set up a group chat
+3. Agree on when you can meet outside of labs
+4. Note each member's name and student number
+:::
 
 ---
 
-## Key Databases
+## How Group Work → Individual Report
 
 ::: {.definition-box}
-**Primary sources:**
+**Together:** Design study → Collect data → Share raw data
 
-- **PsycINFO** - Psychology-specific, peer-reviewed
-- **Google Scholar** - Broader coverage, citation tracking
+**Individually:** Write your own 2,000-word Research Report
 
-**Access via Goldsmiths Library**
+Same data, different reports. Do NOT share written drafts.
 :::
 
 ---
 
-## Search Strategy Tips
+# Part 2: Your Project Topic {background-color="#275882"}
 
-1. **Start broad**, then narrow down
-2. **Use key terms** from your research question
-3. **Boolean operators**: AND, OR, NOT
-4. **Filters**: Date range, peer-reviewed, full text
+## Understanding What You're Investigating (~15 min)
 
 ---
 
-## Example Search
+## Receiving Your Topic
 
-If your topic is memory and word type:
+Each group receives a project topic with:
 
-```
-"memory" AND "concrete words" AND "abstract words"
+::: {.incremental}
+- A research area and specific question
+- A specified design (between-subjects or within-subjects)
+- Materials and word lists / stimuli
+- A procedure guide
+:::
 
-"recall" AND "word type" OR "imageability"
-```
+::: {.fragment}
+Read through your project documents as a group before moving on.
+:::
+
+---
+
+## Identify Your Variables
+
+::: {.exercise-box}
+**As a group, confirm:**
+
+- What is the **independent variable**? How many levels?
+- What is the **dependent variable**? How is it measured?
+- What **design** are you using? Between or within?
+- What is the **statistical test** you'll use?
+:::
+
+::: {.fragment}
+If you're unsure about any of these, ask your tutor now.
+:::
+
+---
+
+# Part 3: Literature Searching {background-color="#275882"}
+
+## Finding Relevant Research (~30 min)
+
+---
+
+## Where to Search
+
+::: {.definition-box}
+**PsycINFO** (via Goldsmiths Library)
+
+- Psychology-specific, peer-reviewed
+- Best for targeted research
+
+**Google Scholar** (scholar.google.com)
+
+- Broader coverage, citation tracking
+- Set up Goldsmiths Library Links for full-text access
+:::
+
+---
+
+## Search Strategy
+
+1. **Start with your key variables** as search terms
+2. Use **Boolean operators**: AND, OR, NOT
+3. Use **quotation marks** for exact phrases
+4. **Filter** by date, peer-reviewed, English language
+
+::: {.fragment}
+::: {.example-box}
+**Example:** If your topic is word concreteness and memory:
+
+`"concrete words" AND "abstract words" AND recall`
+
+`"word concreteness" AND memory AND "free recall"`
+:::
+:::
 
 ---
 
 ## What to Look For
 
-Prioritise:
+::: {.incremental}
+- **Peer-reviewed journal articles** — the gold standard
+- **Recent papers** (last 10–15 years)
+- **Highly cited classic papers** — foundational work everyone references
+- **Review articles** — for broad overviews
+:::
 
-- **Peer-reviewed journal articles**
-- **Recent publications** (last 10-15 years)
-- **Highly cited papers** (foundational work)
-- **Review articles** (for broad overview)
-
----
-
-# Part 2: Evaluating Sources {background-color="#275882"}
-
-## Quality and Relevance (~30 min)
-
----
-
-## The CRAAP Test
-
-::: {.definition-box}
-- **C**urrency - When was it published?
-- **R**elevance - Does it address your question?
-- **A**uthority - Who are the authors?
-- **A**ccuracy - Is it peer-reviewed?
-- **P**urpose - Why was it written?
+::: {.fragment}
+**Aim for 3–5 relevant papers per group today.**
 :::
 
 ---
 
 ## Reading Strategically
 
-You don't need to read everything in detail:
+You do NOT need to read every paper word-for-word:
 
-1. **Abstract** - Is it relevant?
-2. **Introduction** - Background and rationale
-3. **Method** - Similar to your study?
-4. **Results** - Key findings
-5. **Discussion** - Implications
+::: {.incremental}
+1. **Abstract** — Is it relevant? What did they find?
+2. **Introduction** — What's the argument? What other papers do they cite?
+3. **Method** — Similar design to yours?
+4. **Results** — Key findings and effect sizes
+5. **Discussion** — Implications and limitations
+:::
+
+---
+
+# Part 4: Recording and Evaluating {background-color="#275882"}
+
+## Building Your Source Library (~30 min)
+
+---
+
+## For Each Paper, Record
+
+::: {.exercise-box}
+1. **Full reference** (authors, year, title, journal)
+2. **What they studied** (research question)
+3. **How** (design, participants, key methods)
+4. **What they found** (key results, effect sizes)
+5. **Why it matters** for your project
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+## Reference Manager
+Install **Zotero** (free) — it saves references directly from your browser and formats them automatically.
+:::
+:::
 
 ---
 
 ## How Many Sources?
 
-For your Research Report introduction:
+For your Research Report Introduction:
 
-- **Minimum 5-8 sources** for a solid literature review
-- **Mix of classic and recent** studies
-- **Focus on quality** over quantity
-
----
-
-# Part 3: Group Work Time {background-color="#275882"}
-
-## Collaborative Searching (~30 min)
+- **5–8 quality sources** is the target
+- Mix of **classic and recent** papers
+- **Quality over quantity** — 5 well-integrated sources beat 10 listed without connection
 
 ---
 
-## Group Tasks
+# Part 5: Developing Your Hypothesis {background-color="#275882"}
 
-Work together to:
-
-1. **Identify 3-5 relevant papers** each
-2. **Share and discuss** with your group
-3. **Create a shared reference list** (e.g., Google Doc)
-4. **Note key findings** from each paper
+## From Literature to Prediction (~20 min)
 
 ---
 
-## Division of Labour
+## Group Discussion
 
-Consider splitting by:
+::: {.exercise-box}
+**Discuss with your group:**
 
-- Different search terms
-- Different databases
-- Different aspects of your research question
-
-Then come together to compile.
+1. What does the literature suggest will happen?
+2. What direction do you predict?
+3. Is your hypothesis **one-tailed** (directional) or **two-tailed**?
+4. What **theory** supports your prediction?
+:::
 
 ---
 
-## Reference Management
+## A Good Hypothesis
 
-::: {.callout-tip}
-## Recommended Tools
-- **Zotero** (free, integrates with Word)
-- **Mendeley** (free, PDF organiser)
-- **EndNote** (via Goldsmiths)
+::: {.definition-box}
+A hypothesis should be:
 
-Start organising your references NOW.
+- **Specific** — names the IV, DV, and predicted direction
+- **Testable** — can be confirmed or disconfirmed with data
+- **Grounded** — based on previous research, not just a guess
+:::
+
+::: {.fragment}
+::: {.example-box}
+"Participants will recall significantly more concrete words than abstract words in a free recall task."
+:::
 :::
 
 ---
@@ -195,48 +288,51 @@ Start organising your references NOW.
 
 ---
 
-## Key Takeaways
+## Before You Leave
 
 ::: {.callout-important}
-## Today We Learned
+## Checklist
 
-1. **PsycINFO and Google Scholar** are your primary search tools
-2. **Evaluate sources** using the CRAAP criteria
-3. **Read strategically** - abstracts, methods, key findings
-4. **Organise references** from the start
+- [ ] Formed a group (3–4 students) and exchanged contact details
+- [ ] Received your project topic and understood the variables
+- [ ] Searched for and found at least 3–5 relevant papers
+- [ ] Started recording key findings from each source
+- [ ] Discussed a provisional hypothesis with your group
 :::
 
 ---
 
-## Next Steps
+## Key Reminders
 
-Before next week:
+::: {.step-1}
+**Tomorrow (Friday 27 Feb, 12 noon):** Research Plan due via Learn
+:::
 
-1. **Submit Research Plan** by Friday 4pm
-2. **Continue literature searching** independently
-3. **Start drafting** introduction paragraph outlines
-4. **Prepare for Week 17**: APA Format and Academic Writing
+::: {.fragment}
+::: {.step-2}
+**This week onwards:** Continue reading papers independently
+:::
+:::
+
+::: {.fragment}
+::: {.step-3}
+**Next week (Week 17):** Finalise methodology and research design with your group
+:::
+:::
 
 ---
 
 ## Research Report Timeline
 
-| Week | Milestone |
-|------|-----------|
-| 16 (this week) | Literature search begins |
-| 17-19 | Writing and analysis |
-| 20 | Peer review |
-| 21 | Final submission |
-
----
-
-## Questions About Literature Review?
-
-Common concerns:
-
-- "How do I know if a source is good enough?" - Use CRAAP test
-- "What if I can't find relevant papers?" - Broaden search terms
-- "How do I cite correctly?" - Use APA 7th edition
+| Week | Group Milestone |
+|------|----------------|
+| **16 (now)** | Form groups, begin literature review |
+| **17** | Finalise methodology and design |
+| **18** | Develop procedure and materials |
+| **19** | Collect data |
+| **20** | Analyse data, begin write-up |
+| Easter | Individual report writing |
+| **1 April** | Research Report due (12 noon) |
 
 ---
 
@@ -245,5 +341,12 @@ Common concerns:
 ## Then let's form groups and begin!
 
 ::: {.notes}
-Instructor slides complete. This is a collaborative lab session. Circulate among groups to help with search strategies and source evaluation. Remind students about the Research Plan deadline.
+Circulate among groups to help with:
+
+- Group formation for any students without a group
+- Clarifying project topics and variables
+- Search strategies on PsycINFO
+- Evaluating source relevance
+
+Note any students who haven't formed a group by the end — they'll need allocation on Monday.
 :::

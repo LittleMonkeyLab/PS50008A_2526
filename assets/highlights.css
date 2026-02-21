@@ -1,0 +1,274 @@
+/*
+ * Academic Highlights - PS50008A
+ *
+ * Multi-colour inline highlight system for Quarto documents.
+ * Works in HTML pages, RevealJS slides, and print/PDF.
+ *
+ * Usage: [your text]{.hl-classname}
+ *
+ * Paired with highlights-typst.typ (PDF) and highlight-spans.lua (filter).
+ */
+
+
+/* =============================================================================
+   SEMANTIC HIGHLIGHTS — use these by meaning
+   ============================================================================= */
+
+/* --- Key Term: for definitions, vocabulary, glossary words --- */
+/* Navy background — matches brand primary */
+.hl-term {
+  background-color: #d4e4f1;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  border-bottom: 2px solid #275882;
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Emphasis: for important points, takeaways --- */
+/* Yellow background — classic highlight */
+.hl-emphasis {
+  background-color: #fff3cd;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Statistic: for APA stats, test results, numbers --- */
+/* Green background — stands out in results text */
+.hl-stat {
+  background-color: #d1e7dd;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Warning: for common mistakes, things to avoid --- */
+/* Red background — draws attention to errors/cautions */
+.hl-warning {
+  background-color: #f8d7da;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Example: for worked examples, sample text --- */
+/* Indigo/purple background — distinguishes examples from main text */
+.hl-example {
+  background-color: #e8eaf6;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Citation: for in-text references, author names --- */
+/* Subtle with dotted underline — scholarly feel */
+.hl-cite {
+  background-color: rgba(255, 248, 220, 0.5);
+  padding: 0.05em 0.15em;
+  border-bottom: 1px dotted #b8860b;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- New/Added: for new content, additions, corrections --- */
+/* Blue background — signals something added */
+.hl-new {
+  background-color: #cfe2ff;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Removed/Struck: for corrections, old text to replace --- */
+/* Pale red with strikethrough */
+.hl-removed {
+  background-color: #f8d7da;
+  text-decoration: line-through;
+  text-decoration-color: #dc3545;
+  text-decoration-thickness: 2px;
+  padding: 0.1em 0.2em;
+  opacity: 0.7;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+
+/* =============================================================================
+   COLOUR HIGHLIGHTS — use these when you just need a colour
+   ============================================================================= */
+
+/* --- Yellow --- */
+.hl-yellow {
+  background-color: #fff3cd;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Blue --- */
+.hl-blue {
+  background-color: #cfe2ff;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Green --- */
+.hl-green {
+  background-color: #d1e7dd;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Red --- */
+.hl-red {
+  background-color: #f8d7da;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Purple --- */
+.hl-purple {
+  background-color: #e8eaf6;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Orange --- */
+.hl-orange {
+  background-color: #ffe5cc;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Gray --- */
+.hl-gray {
+  background-color: #e9ecef;
+  padding: 0.1em 0.25em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+
+/* =============================================================================
+   STYLE VARIANTS — decorative options
+   ============================================================================= */
+
+/* --- Marker: hand-drawn highlighter look --- */
+.hl-marker {
+  background: linear-gradient(
+    104deg,
+    rgba(255, 235, 59, 0) 0.9%,
+    rgba(255, 235, 59, 1.0) 2.4%,
+    rgba(255, 235, 59, 0.5) 5.8%,
+    rgba(255, 235, 59, 0.2) 93%,
+    rgba(255, 235, 59, 0.6) 96%,
+    rgba(255, 235, 59, 0) 98%
+  );
+  padding: 0.1em 0.3em;
+  margin: 0 -0.1em;
+  border-radius: 0.8em 0.3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Marker Blue: hand-drawn highlighter in blue --- */
+.hl-marker-blue {
+  background: linear-gradient(
+    104deg,
+    rgba(100, 181, 246, 0) 0.9%,
+    rgba(100, 181, 246, 1.0) 2.4%,
+    rgba(100, 181, 246, 0.5) 5.8%,
+    rgba(100, 181, 246, 0.2) 93%,
+    rgba(100, 181, 246, 0.6) 96%,
+    rgba(100, 181, 246, 0) 98%
+  );
+  padding: 0.1em 0.3em;
+  margin: 0 -0.1em;
+  border-radius: 0.8em 0.3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Marker Red: hand-drawn highlighter in red --- */
+.hl-marker-red {
+  background: linear-gradient(
+    104deg,
+    rgba(239, 154, 154, 0) 0.9%,
+    rgba(239, 154, 154, 1.0) 2.4%,
+    rgba(239, 154, 154, 0.5) 5.8%,
+    rgba(239, 154, 154, 0.2) 93%,
+    rgba(239, 154, 154, 0.6) 96%,
+    rgba(239, 154, 154, 0) 98%
+  );
+  padding: 0.1em 0.3em;
+  margin: 0 -0.1em;
+  border-radius: 0.8em 0.3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Underline: coloured underline only, no background --- */
+.hl-underline {
+  border-bottom: 3px solid #EA8439;
+  padding-bottom: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --- Box: bordered box for maximum emphasis --- */
+.hl-box {
+  background-color: #fff8dc;
+  border: 2px solid #ffc107;
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+
+/* =============================================================================
+   PRINT STYLES — ensures highlights render in PDF/print
+   ============================================================================= */
+
+@media print {
+  .hl-term, .hl-emphasis, .hl-stat, .hl-warning, .hl-example, .hl-cite,
+  .hl-new, .hl-removed,
+  .hl-yellow, .hl-blue, .hl-green, .hl-red, .hl-purple, .hl-orange, .hl-gray,
+  .hl-marker, .hl-marker-blue, .hl-marker-red, .hl-box {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Simplify gradient for print */
+  .hl-marker {
+    background: #fff3cd;
+  }
+  .hl-marker-blue {
+    background: #bbdefb;
+  }
+  .hl-marker-red {
+    background: #ffcdd2;
+  }
+}
