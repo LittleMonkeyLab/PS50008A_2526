@@ -17,7 +17,7 @@ project:
   - week13/
   - week14/
   - week15/
-  # - week16/
+  - week16/
   # - week17/
   # - week18/
   # - week19/
@@ -33,8 +33,8 @@ project:
   - textbook/chapters/w14-lab.qmd
   - textbook/chapters/w15-lecture.qmd
   - textbook/chapters/w15-lab.qmd
-  # - textbook/chapters/w16-lecture.qmd
-  # - textbook/chapters/w16-lab.qmd
+  - textbook/chapters/w16-lecture.qmd
+  - textbook/chapters/w16-lab.qmd
   # - textbook/chapters/w17-lecture.qmd
   # - textbook/chapters/w17-lab.qmd
   # - textbook/chapters/w18-lecture.qmd
@@ -48,7 +48,7 @@ project:
   - textbook/quizzes/w13-quiz.qmd
   - textbook/quizzes/w14-quiz.qmd
   - textbook/quizzes/w15-quiz.qmd
-  # - textbook/quizzes/w16-quiz.qmd
+  - textbook/quizzes/w16-quiz.qmd
   # - textbook/quizzes/w17-quiz.qmd
   # - textbook/quizzes/w18-quiz.qmd
   # - textbook/quizzes/w19-quiz.qmd
@@ -222,26 +222,26 @@ website:
             href: week15/lab/activity.qmd
           - text: Reading
             href: week15/lab/reading.qmd
-      # - section: 'Week 16: Regression'
-      #   contents:
-      #   - text: Overview
-      #     href: week16/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week16/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week16/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week16/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week16/lab/activity.qmd
-      #     - text: Reading
-      #       href: week16/lab/reading.qmd
+      - section: 'Week 16: APA Lab Reports'
+        contents:
+        - text: Overview
+          href: week16/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week16/lecture/reading.qmd
+          - text: Slides
+            href: week16/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week16/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week16/lab/activity.qmd
+          - text: Reading
+            href: week16/lab/reading.qmd
       # - section: 'Week 17: Interpretation & Credibility'
       #   contents:
       #   - text: Overview
@@ -353,12 +353,12 @@ website:
           href: textbook/chapters/w15-lecture.qmd
         - text: 'Lab: Correlation in R'
           href: textbook/chapters/w15-lab.qmd
-      # - section: Week 16
-      #   contents:
-      #   - text: 'Lecture: Regression'
-      #     href: textbook/chapters/w16-lecture.qmd
-      #   - text: 'Lab: Project Groups'
-      #     href: textbook/chapters/w16-lab.qmd
+      - section: Week 16
+        contents:
+        - text: 'Lecture: Regression'
+          href: textbook/chapters/w16-lecture.qmd
+        - text: 'Lab: Project Groups'
+          href: textbook/chapters/w16-lab.qmd
       # - section: Week 17
       #   contents:
       #   - text: 'Lecture: Interpretation & Credibility'
@@ -395,8 +395,8 @@ website:
           href: textbook/quizzes/w14-quiz.qmd
         - text: Week 15 Quiz
           href: textbook/quizzes/w15-quiz.qmd
-        # - text: Week 16 Quiz
-        #   href: textbook/quizzes/w16-quiz.qmd
+        - text: Week 16 Quiz
+          href: textbook/quizzes/w16-quiz.qmd
         # - text: Week 17 Quiz
         #   href: textbook/quizzes/w17-quiz.qmd
         # - text: Week 18 Quiz
