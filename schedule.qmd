@@ -159,5 +159,5 @@ Feb 27        Research Plan due (noon)
 Mar 11         MCQ Exam (lecture slot)
 Mar 20        EDS Assignment due (noon)
 
-May 1         Research Report due (noon)
+April 1         Research Report due (noon)
 ```

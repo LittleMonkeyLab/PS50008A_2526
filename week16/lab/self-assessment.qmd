@@ -27,7 +27,7 @@ library(knitr)
 Use this self-assessment **before you submit**. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it's a tool to help you submit your best work.
 :::
 
-Your Research Plan (1,000–1,200 words) is essentially your Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification.
+Your Research Plan (1,000–1,200 words) is structured like a Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification.
 
 ---
 

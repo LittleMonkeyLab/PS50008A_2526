@@ -12,7 +12,7 @@ date: "2026-02-23"
 Your **[Research Plan](../assessments/research-plan.qmd)** is due **Friday 27 February 2026, 12 noon**. Submit via Learn. This is your first assessed piece of coursework for the module.
 :::
 
-**This week**: Learn how to structure an APA-style research report and see how the Research Plan you're submitting this week is the foundation of your Method section. We'll walk through the full report structure that you'll need for your [Research Report](../assessments/research-report.qmd) (due 1 April).
+**This week**: Learn how to structure an APA-style research report and how to write a Method section (using your Research Plan as a worked example). We also launch the group research project — a **separate study** from your Research Plan — which will become your [Research Report](../assessments/research-report.qmd) (due 1 April).
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
 **Lab**: Thursday 10:00-12:00 WB304A and WB304B
@@ -26,8 +26,8 @@ By the end of this week, you will be able to:
 - Understand the purpose and content of each section
 - Recognise how sections connect to tell a coherent research story
 
-### The Research Plan as a Method Section
-- See how your Research Plan maps directly onto the Method section of a lab report
+### Writing a Method Section
+- See how a Method section is structured (using your Research Plan as a worked example)
 - Understand what makes a good Design, Participants, Materials, and Procedure subsection
 - Identify common mistakes in method writing and how to avoid them
 
@@ -55,17 +55,17 @@ By the end of this week, you will be able to:
 This week answers the question: **How do psychologists communicate their research?**
 
 ::: {.callout-tip}
-## Your Research Plan IS Your Method Section
-The Research Plan you're submitting this week — hypothesis, design, participants, materials, procedure — is essentially the Method section of your final Research Report. Everything you write now will feed directly into your 2,000-word report due after Easter.
+## Your Research Plan Practises Method Writing
+Your Research Plan and your Research Report are **separate assessments on different topics**. But the Research Plan is structured exactly like a Method section — the same skills apply when you write your Research Report later. Think of it as a rehearsal.
 :::
 
-The lecture walks through the full anatomy of an APA lab report, using your Research Plan as a worked example of the Method section. By the end of the lecture, you'll understand not just what to submit this Friday, but how it fits into the bigger picture of the Research Report.
+The lecture walks through the full anatomy of an APA lab report, using your Research Plan as a worked example of Method section writing. We also introduce the group research project, which is a **different study** that will become your Research Report.
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
-| [Lecture Slides](lecture/slides.html){target="_blank"} | APA report structure, Method section writing, Research Plan guidance |
+| [Lecture Slides](lecture/slides.html){target="_blank"} | APA report structure, Method section writing, group project introduction |
 | [Lecture Reading](lecture/reading.qmd) | Guide to APA report sections |
 | [Research Plan Brief](../assessments/research-plan.qmd) | Full assessment brief — due this Friday |
 | [Research Report Brief](../assessments/research-report.qmd) | Final assessment brief — due 1 April |
@@ -76,7 +76,7 @@ The lecture walks through the full anatomy of an APA lab report, using your Rese
 
 | Day | Session | Focus |
 |-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | APA report structure, Research Plan as Method section, Research Project briefing |
+| Wednesday | Lecture (2 hrs) | APA report structure, Method section writing, Research Project introduction |
 | Thursday | Lab (2 hrs) | Group formation + Literature Review for Research Project |
 | **Friday** | **Deadline** | **Research Plan due 12 noon via Learn** |
 
@@ -132,7 +132,7 @@ This week's content directly supports your assessments:
 | **[Research Plan](../assessments/research-plan.qmd)** | Due this week! The lecture shows you exactly how to structure it |
 | **MCQ Exam** | APA conventions, research design terminology |
 | **EDS Assignment** | Method section understanding, APA reporting |
-| **[Research Report](../assessments/research-report.qmd)** | Your Research Plan becomes your Method section; this week's lecture covers the full report structure |
+| **[Research Report](../assessments/research-report.qmd)** | A different study based on your group project; this week's lecture covers the full report structure you'll need |
 
 ## Lab Focus: Group Formation & Literature Review
 
@@ -158,7 +158,7 @@ Your Research Plan this week is step one of a journey toward the Research Report
 
 | When | What |
 |------|------|
-| **Week 16 (now)** | Research Plan due — your Method section draft |
+| **Week 16 (now)** | Research Plan due (separate assessment); form groups, receive project topic |
 | Week 17 | Methodology development in project groups |
 | Week 18 | MCQ Exam + Procedure development |
 | Week 19 | Data collection |

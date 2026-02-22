@@ -5,15 +5,15 @@ subtitle: "APA Report Writing & Your Research Project"
 
 ::: {.callout-tip}
 ## What This Chapter Covers
-This reading accompanies the Week 16 lecture on APA report writing. It explains the structure of an APA-style lab report, how your Research Plan maps onto the Method section, and the writing conventions you'll need for the Research Report due 1 April.
+This reading accompanies the Week 16 lecture on APA report writing. It explains the structure of an APA-style lab report, how to write a Method section (using your Research Plan as a worked example), and the writing conventions you'll need for academic psychology writing.
 
 - The sections of an APA lab report and what goes in each
-- How your Research Plan IS your Method section
+- How to write a Method section (the same structure as your Research Plan)
 - APA writing conventions (tense, person, statistical notation)
 - Common mistakes and how to avoid them
 :::
 
-This chapter is your reference guide for writing in psychology. You'll come back to it repeatedly over the coming weeks as you build your Research Report section by section.
+This chapter is your reference guide for writing in psychology. You'll come back to it repeatedly over the coming weeks as you write your Research Report.
 
 ---
 
@@ -101,8 +101,8 @@ The Introduction builds a logical argument from existing literature to your spec
 The Method section describes what you did in enough detail that another researcher could replicate your study. It has four standard subsections.
 
 ::: {.callout-important}
-## Your Research Plan IS Your Method Section
-The Research Plan you're submitting this week covers the same four subsections. Everything you write for the Research Plan feeds directly into your Research Report.
+## Your Research Plan Practises Method Writing
+The Research Plan you're submitting this week is a **standalone assessment** on its own topic. But it's structured exactly like a Method section — the same four subsections you'll use when you write the Method for your Research Report (which is on a different topic, based on your group project).
 :::
 
 #### Design
@@ -256,29 +256,30 @@ Key rules:
 
 ---
 
-## Your Research Plan → Your Research Report
+## Two Assessments, Two Studies
 
-Your Research Plan (due Friday 27 February) is the first building block of your Research Report (due Friday 1 April). Here's how each component maps:
+::: {.callout-important}
+Your **Research Plan** (due this Friday) and your **Research Report** (due 1 April) are about **different topics**.
 
-| Research Plan component | Becomes this in the Report |
-|------------------------|---------------------------|
-| Hypothesis | End of Introduction + referenced in Design |
-| Design choice + justification | **Design** subsection of Method |
-| Participant plan | **Participants** subsection |
-| Materials description | **Materials** subsection |
-| Step-by-step procedure | **Procedure** subsection |
-| Statistical test choice | Referenced in Design, used in Results |
+- The Research Plan is on the topic you chose (font difficulty, hydration, or eye contact)
+- The Research Report is based on your **group project** (a different study you'll design and run together)
+:::
 
-Over the remaining weeks, you'll add the other sections:
+The Research Plan practises the same skills — hypothesis, design, participants, materials, procedure — that you'll use again when writing the Method section of your Research Report. Think of it as a rehearsal.
 
-| Week | What you'll write |
-|------|-------------------|
-| **16 (this week)** | Method section (= Research Plan) |
-| **17** | Begin Introduction (literature review) |
-| **18-19** | Results (after data collection) |
-| **20** | Discussion |
-| **Easter** | Abstract, Title, References, polish |
-| **1 April** | Submit Research Report (2,000 words) |
+### Research Report Timeline
+
+Your group project builds week by week:
+
+| Week | What happens |
+|------|-------------|
+| **16 (this week)** | Form groups, receive project topic, begin literature review |
+| **17** | Finalise methodology and design |
+| **18** | Develop procedure and materials |
+| **19** | Collect data |
+| **20** | Analyse data, begin writing |
+| **Easter** | Individual write-up |
+| **1 April** | Submit Research Report (2,000 words, 12 noon) |
 
 ---
 
@@ -316,7 +317,7 @@ Use this checklist before submitting on Friday:
 
 - APA lab reports follow a **standard seven-section structure**: Title, Abstract, Introduction, Method, Results, Discussion, References
 - The report has an **hourglass shape** — broad to narrow to broad
-- Your **Research Plan is your Method section** — hypothesis, design, participants, materials, procedure
+- Your Research Plan **practises Method writing** — the same structure you'll use for your Research Report
 - Use **past tense** for Method and Results, **present tense** for established findings
 - **Italicise** statistical symbols; no leading zero for *p* and *r*
 - **Justify** every decision — don't just say *what*, explain *why*

@@ -18,7 +18,7 @@ format-links:
 
 | | |
 |---|---|
-| **Deadline** | Friday 1 May 2026, 12 noon |
+| **Deadline** | Friday 1 April 2026, 12 noon |
 | **Submission** | Via Moodle submission link |
 | **Word count** | 2,500 words (±10%) |
 | **Format** | Individual lab report in APA format |
@@ -87,11 +87,11 @@ We build report-writing skills progressively throughout the term:
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends Week 20) |
 | Easter | Individual report writing |
-| Post-term | **Research Report due** Friday 1 May |
+| Post-term | **Research Report due** Friday 1 April |
 
 ::: {.callout-note}
 ## Post-Term Deadline
-The Research Report deadline (1 May 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.
+The Research Report deadline (1 April 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.
 :::
 
 ---

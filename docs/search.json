@@ -1735,7 +1735,7 @@
     "href": "week16/lecture/reading.html",
     "title": "Week 16 Lecture Reading",
     "section": "",
-    "text": "TipWhat This Chapter Covers\n\n\n\nThis reading accompanies the Week 16 lecture on APA report writing. It explains the structure of an APA-style lab report, how your Research Plan maps onto the Method section, and the writing conventions you’ll need for the Research Report due 1 April.\n\nThe sections of an APA lab report and what goes in each\nHow your Research Plan IS your Method section\nAPA writing conventions (tense, person, statistical notation)\nCommon mistakes and how to avoid them\nThis chapter is your reference guide for writing in psychology. You’ll come back to it repeatedly over the coming weeks as you build your Research Report section by section.",
+    "text": "TipWhat This Chapter Covers\n\n\n\nThis reading accompanies the Week 16 lecture on APA report writing. It explains the structure of an APA-style lab report, how to write a Method section (using your Research Plan as a worked example), and the writing conventions you’ll need for academic psychology writing.\n\nThe sections of an APA lab report and what goes in each\nHow to write a Method section (the same structure as your Research Plan)\nAPA writing conventions (tense, person, statistical notation)\nCommon mistakes and how to avoid them\nThis chapter is your reference guide for writing in psychology. You’ll come back to it repeatedly over the coming weeks as you write your Research Report.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1763,7 +1763,7 @@
     "href": "week16/lecture/reading.html#section-by-section",
     "title": "Week 16 Lecture Reading",
     "section": "Section by Section",
-    "text": "Section by Section\n\nTitle Page\nYour title should be concise and informative. It should include your key variables.\n\nGood title: “The Effect of Word Concreteness on Free Recall Performance”\n\n\nPoor title: “My Psychology Experiment” or “Memory Study”\n\nInclude your name, student number, and the module code (PS50008A).\n\n\nAbstract\nThe abstract is a brief summary of the entire study, typically around 150 words. It should cover:\n\nOne or two sentences of background and rationale\nOne sentence on method (design, participants, key task)\nOne or two sentences on key results (with statistics)\nOne sentence on conclusion and implications\n\n\n\n\n\n\n\nTipWhen to Write the Abstract\n\n\n\nWrite the abstract last — after every other section is complete. It’s a summary, not a preview. You can’t summarise something you haven’t written yet.\n\n\n\n\nIntroduction\nThe Introduction builds a logical argument from existing literature to your specific research question. Think of it as a funnel:\n\nGeneral topic area — What is the broad field? (e.g., memory research)\nKey research findings — What have other researchers found? (cite specific studies)\nGap or question — What hasn’t been addressed or needs further investigation?\nYour study — What are you investigating and why?\nHypothesis — Your specific, testable prediction\n\n\nCommon mistakes in Introductions:\n\nStarting with a dictionary definition (“The Oxford Dictionary defines memory as…”)\nListing studies without connecting them (“Smith found X. Jones found Y. Brown found Z.”)\nIncluding your results\nMaking claims without citing evidence\n\n\n\n\nMethod\nThe Method section describes what you did in enough detail that another researcher could replicate your study. It has four standard subsections.\n\n\n\n\n\n\nImportantYour Research Plan IS Your Method Section\n\n\n\nThe Research Plan you’re submitting this week covers the same four subsections. Everything you write for the Research Plan feeds directly into your Research Report.\n\n\n\nDesign\nState your experimental design and justify it. Include:\n\nType of design (between-subjects or within-subjects)\nIndependent variable and its levels\nDependent variable and how it’s measured\n\n\nWeak: “We used a between-subjects design.”\n\n\nStrong: “A between-subjects design was used. The independent variable was word type with two levels: concrete words and abstract words. The dependent variable was the number of words correctly recalled out of 15. A between-subjects design was chosen to avoid practice and fatigue effects that could confound recall performance.”\n\nNotice the strong version includes justification — it explains why this design was chosen, not just what it is.\n\n\nParticipants\nDescribe who took part and how they were recruited:\n\nTotal number of participants (and per condition if between-subjects)\nRecruitment method (e.g., opportunity sampling)\nKey demographics (age range, mean age, gender breakdown)\nAny inclusion or exclusion criteria\n\n\nGood example: “Twenty participants (15 female, 5 male; Mage = 21.3, SD = 2.1) were recruited via opportunity sampling from the student population at Goldsmiths, University of London. All were native English speakers aged 18 or over. Ten participants were randomly allocated to each condition.”\n\n\n\nMaterials\nDescribe everything you used to run the study:\n\nStimuli (word lists, images, questionnaires — with examples)\nHow materials were created or sourced\nKey properties (e.g., word frequency, number of items)\nEquipment (if relevant)\n\n\nGood example: “Two word lists were constructed, each containing 15 words. The concrete list contained words referring to physical objects (e.g., hammer, bicycle, elephant). The abstract list contained words referring to concepts or qualities (e.g., freedom, honesty, courage). Lists were matched for word frequency and syllable count using the MRC Psycholinguistic Database.”\n\n\n\nProcedure\nDescribe what happened, step by step, in chronological order:\n\nWhat participants experienced from start to finish\nTiming of each phase\nStandardised instructions (summarised, not verbatim)\nEthical safeguards — informed consent and debriefing\n\n\nGood example: “Participants were tested individually in a quiet room. After providing written informed consent, they were presented with their assigned word list displayed on a computer screen and given two minutes to study the words. The list was then removed and participants counted backwards from 100 for one minute as a distractor task. They were then given two minutes to write down as many words as they could recall, in any order. Finally, participants were fully debriefed about the purpose of the study and thanked for their participation.”\n\n\nCommon mistakes in Method sections:\n\nToo vague — “Participants did a memory test” (What kind? How long? How scored?)\nIncluding results — Method describes what you did, not what you found\nMissing justification — State your design AND explain why\nWrong tense — Method uses past tense\nForgetting ethics — Always mention consent and debriefing\n\n\n\n\n\nResults\nThe Results section reports what you found using both descriptive and inferential statistics. A standard results paragraph for a t-test includes:\n\nDescriptive statistics — means and standard deviations for each condition\nInferential test — the t-test result with full APA notation\nEffect size — Cohen’s d with 95% confidence interval\nBrief interpretation — what the numbers mean in words\n\n\nComplete results paragraph: “Participants in the concrete word condition recalled significantly more words (M = 11.2, SD = 2.4) than those in the abstract word condition (M = 8.7, SD = 2.1). An independent-samples t-test confirmed this difference was statistically significant, t(18) = 2.48, p = .023, d = 1.11, 95% CI [0.17, 2.03]. This represents a large effect, suggesting that word concreteness has a substantial influence on free recall performance.”\n\nWe’ll cover Results reporting in full detail in Week 19.\n\n\nDiscussion\nThe Discussion interprets your findings and places them in context:\n\nRestate key findings (in words, not statistics)\nInterpret — what do the results mean? Were your hypotheses supported?\nRelate to literature — do your findings support or contradict previous research?\nLimitations — what could have affected the results? What would you do differently?\nFuture directions — what should researchers investigate next?\nConclusion — a brief take-home message\n\nWe’ll cover Discussion writing in Week 20.\n\n\nReferences\nEvery source you cite in-text must appear in the reference list, and vice versa. Use APA 7th edition format.\n\nJournal article format:\nWalker, I., & Hulme, C. (1999). Concrete words are easier to recall than abstract words: Evidence for a semantic contribution to short-term serial recall. Journal of Experimental Psychology: Learning, Memory, and Cognition, 25(5), 1256–1271. https://doi.org/10.1037/0278-7393.25.5.1256\n\n\n\n\n\n\n\nTipUse a Reference Manager\n\n\n\nZotero (free) or Mendeley (free) will format your references automatically and save you hours of manual formatting. Install one now if you haven’t already.",
+    "text": "Section by Section\n\nTitle Page\nYour title should be concise and informative. It should include your key variables.\n\nGood title: “The Effect of Word Concreteness on Free Recall Performance”\n\n\nPoor title: “My Psychology Experiment” or “Memory Study”\n\nInclude your name, student number, and the module code (PS50008A).\n\n\nAbstract\nThe abstract is a brief summary of the entire study, typically around 150 words. It should cover:\n\nOne or two sentences of background and rationale\nOne sentence on method (design, participants, key task)\nOne or two sentences on key results (with statistics)\nOne sentence on conclusion and implications\n\n\n\n\n\n\n\nTipWhen to Write the Abstract\n\n\n\nWrite the abstract last — after every other section is complete. It’s a summary, not a preview. You can’t summarise something you haven’t written yet.\n\n\n\n\nIntroduction\nThe Introduction builds a logical argument from existing literature to your specific research question. Think of it as a funnel:\n\nGeneral topic area — What is the broad field? (e.g., memory research)\nKey research findings — What have other researchers found? (cite specific studies)\nGap or question — What hasn’t been addressed or needs further investigation?\nYour study — What are you investigating and why?\nHypothesis — Your specific, testable prediction\n\n\nCommon mistakes in Introductions:\n\nStarting with a dictionary definition (“The Oxford Dictionary defines memory as…”)\nListing studies without connecting them (“Smith found X. Jones found Y. Brown found Z.”)\nIncluding your results\nMaking claims without citing evidence\n\n\n\n\nMethod\nThe Method section describes what you did in enough detail that another researcher could replicate your study. It has four standard subsections.\n\n\n\n\n\n\nImportantYour Research Plan Practises Method Writing\n\n\n\nThe Research Plan you’re submitting this week is a standalone assessment on its own topic. But it’s structured exactly like a Method section — the same four subsections you’ll use when you write the Method for your Research Report (which is on a different topic, based on your group project).\n\n\n\nDesign\nState your experimental design and justify it. Include:\n\nType of design (between-subjects or within-subjects)\nIndependent variable and its levels\nDependent variable and how it’s measured\n\n\nWeak: “We used a between-subjects design.”\n\n\nStrong: “A between-subjects design was used. The independent variable was word type with two levels: concrete words and abstract words. The dependent variable was the number of words correctly recalled out of 15. A between-subjects design was chosen to avoid practice and fatigue effects that could confound recall performance.”\n\nNotice the strong version includes justification — it explains why this design was chosen, not just what it is.\n\n\nParticipants\nDescribe who took part and how they were recruited:\n\nTotal number of participants (and per condition if between-subjects)\nRecruitment method (e.g., opportunity sampling)\nKey demographics (age range, mean age, gender breakdown)\nAny inclusion or exclusion criteria\n\n\nGood example: “Twenty participants (15 female, 5 male; Mage = 21.3, SD = 2.1) were recruited via opportunity sampling from the student population at Goldsmiths, University of London. All were native English speakers aged 18 or over. Ten participants were randomly allocated to each condition.”\n\n\n\nMaterials\nDescribe everything you used to run the study:\n\nStimuli (word lists, images, questionnaires — with examples)\nHow materials were created or sourced\nKey properties (e.g., word frequency, number of items)\nEquipment (if relevant)\n\n\nGood example: “Two word lists were constructed, each containing 15 words. The concrete list contained words referring to physical objects (e.g., hammer, bicycle, elephant). The abstract list contained words referring to concepts or qualities (e.g., freedom, honesty, courage). Lists were matched for word frequency and syllable count using the MRC Psycholinguistic Database.”\n\n\n\nProcedure\nDescribe what happened, step by step, in chronological order:\n\nWhat participants experienced from start to finish\nTiming of each phase\nStandardised instructions (summarised, not verbatim)\nEthical safeguards — informed consent and debriefing\n\n\nGood example: “Participants were tested individually in a quiet room. After providing written informed consent, they were presented with their assigned word list displayed on a computer screen and given two minutes to study the words. The list was then removed and participants counted backwards from 100 for one minute as a distractor task. They were then given two minutes to write down as many words as they could recall, in any order. Finally, participants were fully debriefed about the purpose of the study and thanked for their participation.”\n\n\nCommon mistakes in Method sections:\n\nToo vague — “Participants did a memory test” (What kind? How long? How scored?)\nIncluding results — Method describes what you did, not what you found\nMissing justification — State your design AND explain why\nWrong tense — Method uses past tense\nForgetting ethics — Always mention consent and debriefing\n\n\n\n\n\nResults\nThe Results section reports what you found using both descriptive and inferential statistics. A standard results paragraph for a t-test includes:\n\nDescriptive statistics — means and standard deviations for each condition\nInferential test — the t-test result with full APA notation\nEffect size — Cohen’s d with 95% confidence interval\nBrief interpretation — what the numbers mean in words\n\n\nComplete results paragraph: “Participants in the concrete word condition recalled significantly more words (M = 11.2, SD = 2.4) than those in the abstract word condition (M = 8.7, SD = 2.1). An independent-samples t-test confirmed this difference was statistically significant, t(18) = 2.48, p = .023, d = 1.11, 95% CI [0.17, 2.03]. This represents a large effect, suggesting that word concreteness has a substantial influence on free recall performance.”\n\nWe’ll cover Results reporting in full detail in Week 19.\n\n\nDiscussion\nThe Discussion interprets your findings and places them in context:\n\nRestate key findings (in words, not statistics)\nInterpret — what do the results mean? Were your hypotheses supported?\nRelate to literature — do your findings support or contradict previous research?\nLimitations — what could have affected the results? What would you do differently?\nFuture directions — what should researchers investigate next?\nConclusion — a brief take-home message\n\nWe’ll cover Discussion writing in Week 20.\n\n\nReferences\nEvery source you cite in-text must appear in the reference list, and vice versa. Use APA 7th edition format.\n\nJournal article format:\nWalker, I., & Hulme, C. (1999). Concrete words are easier to recall than abstract words: Evidence for a semantic contribution to short-term serial recall. Journal of Experimental Psychology: Learning, Memory, and Cognition, 25(5), 1256–1271. https://doi.org/10.1037/0278-7393.25.5.1256\n\n\n\n\n\n\n\nTipUse a Reference Manager\n\n\n\nZotero (free) or Mendeley (free) will format your references automatically and save you hours of manual formatting. Install one now if you haven’t already.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1787,11 +1787,11 @@
     ]
   },
   {
-    "objectID": "week16/lecture/reading.html#your-research-plan-your-research-report",
-    "href": "week16/lecture/reading.html#your-research-plan-your-research-report",
+    "objectID": "week16/lecture/reading.html#two-assessments-two-studies",
+    "href": "week16/lecture/reading.html#two-assessments-two-studies",
     "title": "Week 16 Lecture Reading",
-    "section": "Your Research Plan → Your Research Report",
-    "text": "Your Research Plan → Your Research Report\nYour Research Plan (due Friday 27 February) is the first building block of your Research Report (due Friday 1 April). Here’s how each component maps:\n\n\n\nResearch Plan component\nBecomes this in the Report\n\n\n\n\nHypothesis\nEnd of Introduction + referenced in Design\n\n\nDesign choice + justification\nDesign subsection of Method\n\n\nParticipant plan\nParticipants subsection\n\n\nMaterials description\nMaterials subsection\n\n\nStep-by-step procedure\nProcedure subsection\n\n\nStatistical test choice\nReferenced in Design, used in Results\n\n\n\nOver the remaining weeks, you’ll add the other sections:\n\n\n\nWeek\nWhat you’ll write\n\n\n\n\n16 (this week)\nMethod section (= Research Plan)\n\n\n17\nBegin Introduction (literature review)\n\n\n18-19\nResults (after data collection)\n\n\n20\nDiscussion\n\n\nEaster\nAbstract, Title, References, polish\n\n\n1 April\nSubmit Research Report (2,000 words)",
+    "section": "Two Assessments, Two Studies",
+    "text": "Two Assessments, Two Studies\n\n\n\n\n\n\nImportant\n\n\n\nYour Research Plan (due this Friday) and your Research Report (due 1 April) are about different topics.\n\nThe Research Plan is on the topic you chose (font difficulty, hydration, or eye contact)\nThe Research Report is based on your group project (a different study you’ll design and run together)\n\n\n\nThe Research Plan practises the same skills — hypothesis, design, participants, materials, procedure — that you’ll use again when writing the Method section of your Research Report. Think of it as a rehearsal.\n\nResearch Report Timeline\nYour group project builds week by week:\n\n\n\n\n\n\n\nWeek\nWhat happens\n\n\n\n\n16 (this week)\nForm groups, receive project topic, begin literature review\n\n\n17\nFinalise methodology and design\n\n\n18\nDevelop procedure and materials\n\n\n19\nCollect data\n\n\n20\nAnalyse data, begin writing\n\n\nEaster\nIndividual write-up\n\n\n1 April\nSubmit Research Report (2,000 words, 12 noon)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -1833,7 +1833,7 @@
     "href": "week16/lecture/reading.html#summary",
     "title": "Week 16 Lecture Reading",
     "section": "Summary",
-    "text": "Summary\n\nAPA lab reports follow a standard seven-section structure: Title, Abstract, Introduction, Method, Results, Discussion, References\nThe report has an hourglass shape — broad to narrow to broad\nYour Research Plan is your Method section — hypothesis, design, participants, materials, procedure\nUse past tense for Method and Results, present tense for established findings\nItalicise statistical symbols; no leading zero for p and r\nJustify every decision — don’t just say what, explain why\nThe Research Report builds week by week from now until 1 April",
+    "text": "Summary\n\nAPA lab reports follow a standard seven-section structure: Title, Abstract, Introduction, Method, Results, Discussion, References\nThe report has an hourglass shape — broad to narrow to broad\nYour Research Plan practises Method writing — the same structure you’ll use for your Research Report\nUse past tense for Method and Results, present tense for established findings\nItalicise statistical symbols; no leading zero for p and r\nJustify every decision — don’t just say what, explain why\nThe Research Report builds week by week from now until 1 April",
     "crumbs": [
       "Home",
       "Term 2",
@@ -6872,7 +6872,7 @@
     "href": "assessments/research-report.html",
     "title": "Research Report",
     "section": "",
-    "text": "Deadline\nFriday 1 May 2026, 12 noon\n\n\nSubmission\nVia Moodle submission link\n\n\nWord count\n2,500 words (±10%)\n\n\nFormat\nIndividual lab report in APA format\n\n\nWeight\n40%",
+    "text": "Deadline\nFriday 1 April 2026, 12 noon\n\n\nSubmission\nVia Moodle submission link\n\n\nWord count\n2,500 words (±10%)\n\n\nFormat\nIndividual lab report in APA format\n\n\nWeight\n40%",
     "crumbs": [
       "Home",
       "Overview",
@@ -6885,7 +6885,7 @@
     "href": "assessments/research-report.html#key-information",
     "title": "Research Report",
     "section": "",
-    "text": "Deadline\nFriday 1 May 2026, 12 noon\n\n\nSubmission\nVia Moodle submission link\n\n\nWord count\n2,500 words (±10%)\n\n\nFormat\nIndividual lab report in APA format\n\n\nWeight\n40%",
+    "text": "Deadline\nFriday 1 April 2026, 12 noon\n\n\nSubmission\nVia Moodle submission link\n\n\nWord count\n2,500 words (±10%)\n\n\nFormat\nIndividual lab report in APA format\n\n\nWeight\n40%",
     "crumbs": [
       "Home",
       "Overview",
@@ -6950,7 +6950,7 @@
     "href": "assessments/research-report.html#project-timeline",
     "title": "Research Report",
     "section": "Project Timeline",
-    "text": "Project Timeline\n\n\n\nWeek\nMilestone\n\n\n\n\n11\nForm groups (3-4 students)\n\n\n12-15\nDevelop research question and design\n\n\n—\nReading Week — Work on Research Plan\n\n\n16\nResearch Plan due; Begin data collection\n\n\n17-18\nData collection and initial analysis\n\n\n19-20\nComplete analysis; Develop write-up (term ends Week 20)\n\n\nEaster\nIndividual report writing\n\n\nPost-term\nResearch Report due Friday 1 May\n\n\n\n\n\n\n\n\n\nNotePost-Term Deadline\n\n\n\nThe Research Report deadline (1 May 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.",
+    "text": "Project Timeline\n\n\n\nWeek\nMilestone\n\n\n\n\n11\nForm groups (3-4 students)\n\n\n12-15\nDevelop research question and design\n\n\n—\nReading Week — Work on Research Plan\n\n\n16\nResearch Plan due; Begin data collection\n\n\n17-18\nData collection and initial analysis\n\n\n19-20\nComplete analysis; Develop write-up (term ends Week 20)\n\n\nEaster\nIndividual report writing\n\n\nPost-term\nResearch Report due Friday 1 April\n\n\n\n\n\n\n\n\n\nNotePost-Term Deadline\n\n\n\nThe Research Report deadline (1 April 2026) is after teaching ends. Use the Easter break to complete your write-up based on skills developed during term.",
     "crumbs": [
       "Home",
       "Overview",
@@ -7139,7 +7139,7 @@
     "href": "schedule.html#key-dates-summary",
     "title": "Schedule",
     "section": "Key Dates Summary",
-    "text": "Key Dates Summary\nJan 12-16     Week 11: DataLab (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 11         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nMay 1         Research Report due (noon)",
+    "text": "Key Dates Summary\nJan 12-16     Week 11: DataLab (first contact)\nJan 19-23     Week 12: First lecture\n\nFeb 13        Last day before Reading Week\nFeb 16-20     Reading Week\nFeb 27        Research Plan due (noon)\n\nMar 11         MCQ Exam (lecture slot)\nMar 20        EDS Assignment due (noon)\n\nApril 1         Research Report due (noon)",
     "crumbs": [
       "Home",
       "Overview",
@@ -16515,7 +16515,7 @@
     "href": "week16/lecture/slides.html#learning-outcomes",
     "title": "APA Report Writing & Your Research Project",
     "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nBy the end of this lecture you will be able to:\n\nIdentify the sections of an APA-style lab report and their purpose\nUnderstand how your Research Plan maps onto a Method section\nApply APA writing conventions (tense, person, statistical notation)\nPlan your approach from Research Plan to Research Report",
+    "text": "Learning Outcomes\nBy the end of this lecture you will be able to:\n\nIdentify the sections of an APA-style lab report and their purpose\nUnderstand how a Method section is structured (using your Research Plan as an example)\nApply APA writing conventions (tense, person, statistical notation)\nUnderstand the Research Report and your group project",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16529,7 +16529,7 @@
     "href": "week16/lecture/slides.html#after-reading-week",
     "title": "APA Report Writing & Your Research Project",
     "section": "After Reading Week",
-    "text": "After Reading Week\n\nWelcome back from Reading Week\nHopefully you’ve been working on your Research Plan\nToday we connect that work to the bigger picture\n\n\n\n\n\n\n\n\nResearch Plan Due This Friday\n\n\nFriday 27 February, 12 noon — Submit via Learn\nView the full assessment brief",
+    "text": "After Reading Week\n\nWelcome back from Reading Week\nHopefully you’ve been working on your Research Plan\nToday: APA report format, how to write a Method section, and your group project\n\n\n\n\n\n\n\n\nResearch Plan Due This Friday\n\n\nFriday 27 February, 12 noon — Submit via Learn\nView the full assessment brief",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16543,7 +16543,7 @@
     "href": "week16/lecture/slides.html#todays-plan",
     "title": "APA Report Writing & Your Research Project",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nPart 1: The APA Lab Report — what goes where and why\n\n\n\nPart 2: Your Research Plan IS a Method section\n\n\n\n\nPart 3: APA writing conventions — the rules of the game\n\n\n\n\nPart 4: From Research Plan to Research Report — the full journey",
+    "text": "Today’s Plan\n\nPart 1: The APA Lab Report — what goes where and why\n\n\n\nPart 2: Writing a Method section — using your Research Plan as an example\n\n\n\n\nPart 3: APA writing conventions — the rules of the game\n\n\n\n\nPart 4: Your Research Report — a new study with your group",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16613,7 +16613,7 @@
     "href": "week16/lecture/slides.html#when-will-you-write-each-section",
     "title": "APA Report Writing & Your Research Project",
     "section": "When Will You Write Each Section?",
-    "text": "When Will You Write Each Section?\n\n\n\nSection\nWhat it does\nWhen you’ll write it\n\n\n\n\nTitle Page\nIdentifies the study\nWeek 20 onwards\n\n\nAbstract\n~150-word summary\nWrite last\n\n\nIntroduction\nBackground + hypothesis\nWeeks 17-18\n\n\nMethod\nWhat you did\nThis week\n\n\nResults\nWhat you found\nWeek 19-20\n\n\nDiscussion\nWhat it means\nWeek 20 onwards\n\n\nReferences\nSource list\nThroughout\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nYou don’t write it all at once. We build it section by section over the coming weeks.",
+    "text": "When Will You Write Each Section?\n\n\n\nSection\nWhat it does\nWhen you’ll write it\n\n\n\n\nTitle Page\nIdentifies the study\nWeek 20 onwards\n\n\nAbstract\n~150-word summary\nWrite last\n\n\nIntroduction\nBackground + hypothesis\nWeeks 17-18\n\n\nMethod\nWhat you did\nWeeks 17-18\n\n\nResults\nWhat you found\nWeek 19-20\n\n\nDiscussion\nWhat it means\nWeek 20 onwards\n\n\nReferences\nSource list\nThroughout\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nYou don’t write it all at once. We build it section by section over the coming weeks.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16683,7 +16683,7 @@
     "href": "week16/lecture/slides.html#section-4-method",
     "title": "APA Report Writing & Your Research Project",
     "section": "Section 4: Method",
-    "text": "Section 4: Method\n\nPurpose: Describe what you did in enough detail that someone could replicate your study.\n\n\n\n\n\n\n\n\nThis Is Your Research Plan!\n\n\nThe Method section has four subsections. Your Research Plan covers all of them.",
+    "text": "Section 4: Method\n\nPurpose: Describe what you did in enough detail that someone could replicate your study.\n\n\n\n\n\n\n\n\nSound Familiar?\n\n\nThe Method section has four subsections — the same ones you’ve been writing in your Research Plan. Let’s use your Research Plan as a worked example.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16735,11 +16735,11 @@
     ]
   },
   {
-    "objectID": "week16/lecture/slides.html#making-the-connection",
-    "href": "week16/lecture/slides.html#making-the-connection",
+    "objectID": "week16/lecture/slides.html#your-research-plan-as-a-worked-example",
+    "href": "week16/lecture/slides.html#your-research-plan-as-a-worked-example",
     "title": "APA Report Writing & Your Research Project",
-    "section": "Making the Connection",
-    "text": "Making the Connection",
+    "section": "Your Research Plan as a Worked Example",
+    "text": "Your Research Plan as a Worked Example",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16753,7 +16753,7 @@
     "href": "week16/lecture/slides.html#the-key-insight",
     "title": "APA Report Writing & Your Research Project",
     "section": "The Key Insight",
-    "text": "The Key Insight\n\n\n\n\n\n\nYour Research Plan = Your Method Section\n\n\nThe Research Plan you’re submitting this Friday is not a separate exercise — it IS the Method section of your final Research Report, written in advance.\n\n\n\n\nEverything you write for the Research Plan feeds directly into your 2,000-word Research Report due 1 April.",
+    "text": "The Key Insight\n\n\n\n\n\n\nYour Research Plan Practises Method Writing\n\n\nThe Research Plan you’re submitting this Friday is a standalone assessment on its own topic. But the skills are identical — it’s structured exactly like a Method section.\n\n\n\n\nWhen you write your Research Report later (on a different topic, with your group), you’ll use the same structure. Let’s walk through it now.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16763,11 +16763,11 @@
     ]
   },
   {
-    "objectID": "week16/lecture/slides.html#research-plan-method-section",
-    "href": "week16/lecture/slides.html#research-plan-method-section",
+    "objectID": "week16/lecture/slides.html#method-section-structure",
+    "href": "week16/lecture/slides.html#method-section-structure",
     "title": "APA Report Writing & Your Research Project",
-    "section": "Research Plan → Method Section",
-    "text": "Research Plan → Method Section\n\n\n\nYour Research Plan asks for…\nThis becomes your…\n\n\n\n\nHypothesis (one-tailed/two-tailed)\nEnd of Introduction + Design\n\n\nDesign choice + justification\nDesign subsection\n\n\nWho you’d test, how many\nParticipants subsection\n\n\nWhat you’d need\nMaterials subsection\n\n\nStep-by-step what happens\nProcedure subsection\n\n\nStatistical test + justification\nDesign + Results",
+    "section": "Method Section Structure",
+    "text": "Method Section Structure\n\n\n\n\n\n\n\n\nA Method section needs…\nIn your Research Plan…\nIn your Research Report…\n\n\n\n\nHypothesis\nYour chosen topic\nYour group project topic\n\n\nDesign + justification\nDesign subsection\nDesign subsection\n\n\nWho takes part\nParticipants subsection\nParticipants subsection\n\n\nWhat you use\nMaterials subsection\nMaterials subsection\n\n\nStep-by-step process\nProcedure subsection\nProcedure subsection\n\n\nStatistical test\nNamed + justified\nNamed + justified",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16959,11 +16959,25 @@
     ]
   },
   {
-    "objectID": "week16/lecture/slides.html#the-full-journey",
-    "href": "week16/lecture/slides.html#the-full-journey",
+    "objectID": "week16/lecture/slides.html#a-new-study-with-your-group",
+    "href": "week16/lecture/slides.html#a-new-study-with-your-group",
     "title": "APA Report Writing & Your Research Project",
-    "section": "The Full Journey",
-    "text": "The Full Journey",
+    "section": "A New Study With Your Group",
+    "text": "A New Study With Your Group",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 16: APA Lab Reports",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "week16/lecture/slides.html#two-assessments-two-studies",
+    "href": "week16/lecture/slides.html#two-assessments-two-studies",
+    "title": "APA Report Writing & Your Research Project",
+    "section": "Two Assessments, Two Studies",
+    "text": "Two Assessments, Two Studies\n\n\n\n\n\n\nResearch Plan ≠ Research Report\n\n\nThese are separate assessments on different topics.\n\nResearch Plan (due this Friday) — your chosen topic (font/hydration/eye contact)\nResearch Report (due 1 April) — your group project topic (assigned in Thursday’s lab)\n\n\n\n\n\nThe Research Plan practises the skills. The Research Report applies them to real data you collect as a group.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16977,7 +16991,7 @@
     "href": "week16/lecture/slides.html#your-research-report",
     "title": "APA Report Writing & Your Research Project",
     "section": "Your Research Report",
-    "text": "Your Research Report\n\nAssessment 4: Research Report\n\nDue: Friday 1 April 2026, 12 noon\nWord count: 2,000 words\nFormat: Individual APA-style lab report\nWeight: 40% of module mark (double-weighted)\nBased on: Your group project data\n\n\n\nView the full assessment brief",
+    "text": "Your Research Report\n\nAssessment 4: Research Report\n\nDue: Friday 1 April 2026, 12 noon\nWord count: 2,000 words\nFormat: Individual APA-style lab report\nWeight: 40% of module mark (double-weighted)\nBased on: Your group project data (a different study from your Research Plan)\n\n\n\nView the full assessment brief",
     "crumbs": [
       "Home",
       "Term 2",
@@ -16987,11 +17001,11 @@
     ]
   },
   {
-    "objectID": "week16/lecture/slides.html#the-timeline",
-    "href": "week16/lecture/slides.html#the-timeline",
+    "objectID": "week16/lecture/slides.html#how-it-works",
+    "href": "week16/lecture/slides.html#how-it-works",
     "title": "APA Report Writing & Your Research Project",
-    "section": "The Timeline",
-    "text": "The Timeline\n\n\n\nWhen\nWhat you’ll write\nSupport\n\n\n\n\nWk 16 (now)\nMethod (= Research Plan)\nToday’s lecture\n\n\nWk 17\nBegin Introduction\nLecture + lab\n\n\nWk 18\nContinue Introduction\nLab (post-MCQ)\n\n\nWk 19\nResults section\nAPA reporting lecture\n\n\nWk 20\nDiscussion section\nReport writing workshop\n\n\nEaster\nPull it all together\nOffice hours available\n\n\n1 April\nSubmit final report\n12 noon via Learn",
+    "section": "How It Works",
+    "text": "How It Works\n\nThursday’s lab: Form groups (3–4 students), receive your project topic\nWeeks 17–18: Design your study, find literature, develop methodology\nWeek 19: Collect data as a group\nWeek 20: Analyse data, begin writing\nEaster: Write your individual Research Report\n1 April: Submit (12 noon via Learn)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17015,11 +17029,11 @@
     ]
   },
   {
-    "objectID": "week16/lecture/slides.html#building-it-week-by-week",
-    "href": "week16/lecture/slides.html#building-it-week-by-week",
+    "objectID": "week16/lecture/slides.html#the-timeline",
+    "href": "week16/lecture/slides.html#the-timeline",
     "title": "APA Report Writing & Your Research Project",
-    "section": "Building It Week by Week",
-    "text": "Building It Week by Week\n\nThink of each remaining week as adding a section:\n\nWeek 16: Method ← your Research Plan (due Friday!)\nWeek 17: Introduction (literature + rationale)\nWeeks 18-19: Results (data collection + analysis)\nWeek 20: Discussion (interpretation + evaluation)\nEaster: Abstract + Title + References + Polish\n\n\n\nBy the time teaching ends, you’ll have a draft of every section.",
+    "section": "The Timeline",
+    "text": "The Timeline\n\n\n\n\n\n\n\n\nWhen\nWhat happens\nWhat you’ll write\n\n\n\n\nWk 16 (now)\nForm groups, receive topic, begin lit review\n—\n\n\nWk 17\nFinalise methodology and design\nIntroduction drafting\n\n\nWk 18\nDevelop procedure and materials\nMethod section\n\n\nWk 19\nCollect data\nResults section\n\n\nWk 20\nAnalyse data, report writing workshop\nDiscussion section\n\n\nEaster\nIndividual write-up\nPull it all together\n\n\n1 April\nSubmit final report\n12 noon via Learn",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17075,7 +17089,7 @@
     "href": "week16/lecture/slides.html#project-timeline",
     "title": "APA Report Writing & Your Research Project",
     "section": "Project Timeline",
-    "text": "Project Timeline\n\n\n\nWeek\nGroup milestone\n\n\n\n\n16 (now)\nForm groups, begin literature review\n\n\n17\nFinalise methodology and design\n\n\n18\nDevelop procedure and materials\n\n\n19\nCollect data\n\n\n20\nAnalyse data, begin write-up\n\n\nEaster\nIndividual report writing\n\n\n1 April\nResearch Report due",
+    "text": "Project Timeline\n\n\n\n\n\n\n\nWeek\nGroup milestone\n\n\n\n\n16 (now)\nForm groups, begin literature review\n\n\n17\nFinalise methodology and design\n\n\n18\nDevelop procedure and materials, submit documents \n\n\n19\nCollect data, upload data \n\n\n20\nReceive results, begin write-up\n\n\nEaster\nIndividual report writing\n\n\n1 April\nResearch Report due",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17089,7 +17103,7 @@
     "href": "week16/lecture/slides.html#key-takeaways",
     "title": "APA Report Writing & Your Research Project",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nAPA reports follow a standard structure: Title, Abstract, Introduction, Method, Results, Discussion, References\nYour Research Plan is your Method section — hypothesis, design, participants, materials, procedure\nUse past tense for Method/Results, present tense for established findings\nItalicise statistical symbols; no leading zero for p and r\nThe Research Report builds week by week from now until 1 April",
+    "text": "Key Takeaways\n\nAPA reports follow a standard structure: Title, Abstract, Introduction, Method, Results, Discussion, References\nYour Research Plan practises Method writing — the same structure applies to your Research Report (on a different topic)\nUse past tense for Method/Results, present tense for established findings\nItalicise statistical symbols; no leading zero for p and r\nYour Research Report is a new study with your group — builds week by week until 1 April",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17103,7 +17117,7 @@
     "href": "week16/lecture/slides.html#this-weeks-priorities",
     "title": "APA Report Writing & Your Research Project",
     "section": "This Week’s Priorities",
-    "text": "This Week’s Priorities\n\nWednesday (today): Understand APA format and how your Research Plan fits\n\n\nThursday (lab): Form your project group and begin literature review\n\n\nFriday 12 noon: Submit your Research Plan via Learn",
+    "text": "This Week’s Priorities\n\nWednesday (today): Understand APA format and Method section writing\n\n\nThursday (lab): Form your project group and begin literature review for your Research Report \n\n\nFriday 12 noon: Submit your Research Plan via Learn.gold",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17117,7 +17131,7 @@
     "href": "week16/lecture/slides.html#questions",
     "title": "APA Report Writing & Your Research Project",
     "section": "Questions?",
-    "text": "Questions?\n\nQuestions?\n\n\nResearch Plan due Friday 27 February, 12 noon\nAssessment brief | Research Report brief\n\nSee you in the lab on Thursday!",
+    "text": "Questions?\n\nQuestions?\n\n\nResearch Plan due Friday 27 February, 12 noon\nAssessment brief | Research Report brief\n\nBence will see you in the lab on Thursday!",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17131,14 +17145,14 @@
     "href": "week16/lab/self-assessment.html",
     "title": "Research Plan Self-Assessment",
     "section": "",
-    "text": "ImportantResearch Plan Due Friday 27 February, 12 noon\n\n\n\nUse this self-assessment before you submit. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it’s a tool to help you submit your best work.\n\n\nYour Research Plan (1,000–1,200 words) is essentially your Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification."
+    "text": "ImportantResearch Plan Due Friday 27 February, 12 noon\n\n\n\nUse this self-assessment before you submit. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it’s a tool to help you submit your best work.\n\n\nYour Research Plan (1,000–1,200 words) is structured like a Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification."
   },
   {
     "objectID": "week16/lab/self-assessment.html#overview",
     "href": "week16/lab/self-assessment.html#overview",
     "title": "Research Plan Self-Assessment",
     "section": "",
-    "text": "ImportantResearch Plan Due Friday 27 February, 12 noon\n\n\n\nUse this self-assessment before you submit. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it’s a tool to help you submit your best work.\n\n\nYour Research Plan (1,000–1,200 words) is essentially your Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification."
+    "text": "ImportantResearch Plan Due Friday 27 February, 12 noon\n\n\n\nUse this self-assessment before you submit. Work through each section to check your Research Plan covers everything it needs to. This is not graded — it’s a tool to help you submit your best work.\n\n\nYour Research Plan (1,000–1,200 words) is structured like a Method section. It should include: a hypothesis, design, participants, materials, procedure, and statistical test — all with justification."
   },
   {
     "objectID": "week16/lab/self-assessment.html#section-1-hypothesis",
@@ -17320,7 +17334,7 @@
     "href": "week16/index.html",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "",
-    "text": "ImportantResearch Plan Due This Week\n\n\n\nYour Research Plan is due Friday 27 February 2026, 12 noon. Submit via Learn. This is your first assessed piece of coursework for the module.\n\n\nThis week: Learn how to structure an APA-style research report and see how the Research Plan you’re submitting this week is the foundation of your Method section. We’ll walk through the full report structure that you’ll need for your Research Report (due 1 April).\nLecture: Wednesday 10:00-12:00 RHBD 143 (2 hours) Lab: Thursday 10:00-12:00 WB304A and WB304B",
+    "text": "ImportantResearch Plan Due This Week\n\n\n\nYour Research Plan is due Friday 27 February 2026, 12 noon. Submit via Learn. This is your first assessed piece of coursework for the module.\n\n\nThis week: Learn how to structure an APA-style research report and how to write a Method section (using your Research Plan as a worked example). We also launch the group research project — a separate study from your Research Plan — which will become your Research Report (due 1 April).\nLecture: Wednesday 10:00-12:00 RHBD 143 (2 hours) Lab: Thursday 10:00-12:00 WB304A and WB304B",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17333,7 +17347,7 @@
     "href": "week16/index.html#overview",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "",
-    "text": "ImportantResearch Plan Due This Week\n\n\n\nYour Research Plan is due Friday 27 February 2026, 12 noon. Submit via Learn. This is your first assessed piece of coursework for the module.\n\n\nThis week: Learn how to structure an APA-style research report and see how the Research Plan you’re submitting this week is the foundation of your Method section. We’ll walk through the full report structure that you’ll need for your Research Report (due 1 April).\nLecture: Wednesday 10:00-12:00 RHBD 143 (2 hours) Lab: Thursday 10:00-12:00 WB304A and WB304B",
+    "text": "ImportantResearch Plan Due This Week\n\n\n\nYour Research Plan is due Friday 27 February 2026, 12 noon. Submit via Learn. This is your first assessed piece of coursework for the module.\n\n\nThis week: Learn how to structure an APA-style research report and how to write a Method section (using your Research Plan as a worked example). We also launch the group research project — a separate study from your Research Plan — which will become your Research Report (due 1 April).\nLecture: Wednesday 10:00-12:00 RHBD 143 (2 hours) Lab: Thursday 10:00-12:00 WB304A and WB304B",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17346,7 +17360,7 @@
     "href": "week16/index.html#learning-objectives",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this week, you will be able to:\n\nAPA Report Structure\n\nIdentify the sections of an APA-style lab report (Title, Abstract, Introduction, Method, Results, Discussion, References)\nUnderstand the purpose and content of each section\nRecognise how sections connect to tell a coherent research story\n\n\n\nThe Research Plan as a Method Section\n\nSee how your Research Plan maps directly onto the Method section of a lab report\nUnderstand what makes a good Design, Participants, Materials, and Procedure subsection\nIdentify common mistakes in method writing and how to avoid them\n\n\n\nWriting for Psychology\n\nUse appropriate academic tone and APA conventions\nReport statistical information correctly (notation, formatting)\nStructure paragraphs effectively in scientific writing\n\n\n\nLooking Ahead to the Research Report\n\nUnderstand the full timeline from Research Plan to Research Report\nSee how group project work feeds into an individual write-up\nPlan your approach to the Research Report (due Friday 1 April)",
+    "text": "Learning Objectives\nBy the end of this week, you will be able to:\n\nAPA Report Structure\n\nIdentify the sections of an APA-style lab report (Title, Abstract, Introduction, Method, Results, Discussion, References)\nUnderstand the purpose and content of each section\nRecognise how sections connect to tell a coherent research story\n\n\n\nWriting a Method Section\n\nSee how a Method section is structured (using your Research Plan as a worked example)\nUnderstand what makes a good Design, Participants, Materials, and Procedure subsection\nIdentify common mistakes in method writing and how to avoid them\n\n\n\nWriting for Psychology\n\nUse appropriate academic tone and APA conventions\nReport statistical information correctly (notation, formatting)\nStructure paragraphs effectively in scientific writing\n\n\n\nLooking Ahead to the Research Report\n\nUnderstand the full timeline from Research Plan to Research Report\nSee how group project work feeds into an individual write-up\nPlan your approach to the Research Report (due Friday 1 April)",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17372,7 +17386,7 @@
     "href": "week16/index.html#the-big-picture",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "The Big Picture",
-    "text": "The Big Picture\nThis week answers the question: How do psychologists communicate their research?\n\n\n\n\n\n\nTipYour Research Plan IS Your Method Section\n\n\n\nThe Research Plan you’re submitting this week — hypothesis, design, participants, materials, procedure — is essentially the Method section of your final Research Report. Everything you write now will feed directly into your 2,000-word report due after Easter.\n\n\nThe lecture walks through the full anatomy of an APA lab report, using your Research Plan as a worked example of the Method section. By the end of the lecture, you’ll understand not just what to submit this Friday, but how it fits into the bigger picture of the Research Report.",
+    "text": "The Big Picture\nThis week answers the question: How do psychologists communicate their research?\n\n\n\n\n\n\nTipYour Research Plan Practises Method Writing\n\n\n\nYour Research Plan and your Research Report are separate assessments on different topics. But the Research Plan is structured exactly like a Method section — the same skills apply when you write your Research Report later. Think of it as a rehearsal.\n\n\nThe lecture walks through the full anatomy of an APA lab report, using your Research Plan as a worked example of Method section writing. We also introduce the group research project, which is a different study that will become your Research Report.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17385,7 +17399,7 @@
     "href": "week16/index.html#materials",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "Materials",
-    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nLecture Slides\nAPA report structure, Method section writing, Research Plan guidance\n\n\nLecture Reading\nGuide to APA report sections\n\n\nResearch Plan Brief\nFull assessment brief — due this Friday\n\n\nResearch Report Brief\nFinal assessment brief — due 1 April\n\n\nLab Reading\nIntroduction to project literature review\n\n\nLab Activity\nGroup formation and literature review",
+    "text": "Materials\n\n\n\nResource\nDescription\n\n\n\n\nLecture Slides\nAPA report structure, Method section writing, group project introduction\n\n\nLecture Reading\nGuide to APA report sections\n\n\nResearch Plan Brief\nFull assessment brief — due this Friday\n\n\nResearch Report Brief\nFinal assessment brief — due 1 April\n\n\nLab Reading\nIntroduction to project literature review\n\n\nLab Activity\nGroup formation and literature review",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17398,7 +17412,7 @@
     "href": "week16/index.html#week-at-a-glance",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "Week at a Glance",
-    "text": "Week at a Glance\n\n\n\n\n\n\n\n\nDay\nSession\nFocus\n\n\n\n\nWednesday\nLecture (2 hrs)\nAPA report structure, Research Plan as Method section, Research Project briefing\n\n\nThursday\nLab (2 hrs)\nGroup formation + Literature Review for Research Project\n\n\nFriday\nDeadline\nResearch Plan due 12 noon via Learn",
+    "text": "Week at a Glance\n\n\n\n\n\n\n\n\nDay\nSession\nFocus\n\n\n\n\nWednesday\nLecture (2 hrs)\nAPA report structure, Method section writing, Research Project introduction\n\n\nThursday\nLab (2 hrs)\nGroup formation + Literature Review for Research Project\n\n\nFriday\nDeadline\nResearch Plan due 12 noon via Learn",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17424,7 +17438,7 @@
     "href": "week16/index.html#connecting-to-assessments",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "Connecting to Assessments",
-    "text": "Connecting to Assessments\n\n\n\n\n\n\nWarningResearch Plan Due Friday 27 February, 12 noon\n\n\n\nThis is your first assessed submission. Make sure to:\n\nSubmit via Learn by 12 noon\nInclude all required sections: hypothesis, method (design, participants, materials, procedure), draft results\nJustify your choices throughout — show you understand why, not just what\nUse terminology from Weeks 12-15\nSee the full assessment brief for details\n\n\n\nThis week’s content directly supports your assessments:\n\n\n\nAssessment\nConnection\n\n\n\n\nResearch Plan\nDue this week! The lecture shows you exactly how to structure it\n\n\nMCQ Exam\nAPA conventions, research design terminology\n\n\nEDS Assignment\nMethod section understanding, APA reporting\n\n\nResearch Report\nYour Research Plan becomes your Method section; this week’s lecture covers the full report structure",
+    "text": "Connecting to Assessments\n\n\n\n\n\n\nWarningResearch Plan Due Friday 27 February, 12 noon\n\n\n\nThis is your first assessed submission. Make sure to:\n\nSubmit via Learn by 12 noon\nInclude all required sections: hypothesis, method (design, participants, materials, procedure), draft results\nJustify your choices throughout — show you understand why, not just what\nUse terminology from Weeks 12-15\nSee the full assessment brief for details\n\n\n\nThis week’s content directly supports your assessments:\n\n\n\nAssessment\nConnection\n\n\n\n\nResearch Plan\nDue this week! The lecture shows you exactly how to structure it\n\n\nMCQ Exam\nAPA conventions, research design terminology\n\n\nEDS Assignment\nMethod section understanding, APA reporting\n\n\nResearch Report\nA different study based on your group project; this week’s lecture covers the full report structure you’ll need",
     "crumbs": [
       "Home",
       "Term 2",
@@ -17450,7 +17464,7 @@
     "href": "week16/index.html#research-report-timeline",
     "title": "Week 16: APA Report Writing & Research Project",
     "section": "Research Report Timeline",
-    "text": "Research Report Timeline\nYour Research Plan this week is step one of a journey toward the Research Report:\n\n\n\nWhen\nWhat\n\n\n\n\nWeek 16 (now)\nResearch Plan due — your Method section draft\n\n\nWeek 17\nMethodology development in project groups\n\n\nWeek 18\nMCQ Exam + Procedure development\n\n\nWeek 19\nData collection\n\n\nWeek 20\nReport writing workshop\n\n\nEaster break\nIndividual write-up\n\n\nFriday 1 April\nResearch Report due (2,000 words, 12 noon)",
+    "text": "Research Report Timeline\nYour Research Plan this week is step one of a journey toward the Research Report:\n\n\n\n\n\n\n\nWhen\nWhat\n\n\n\n\nWeek 16 (now)\nResearch Plan due (separate assessment); form groups, receive project topic\n\n\nWeek 17\nMethodology development in project groups\n\n\nWeek 18\nMCQ Exam + Procedure development\n\n\nWeek 19\nData collection\n\n\nWeek 20\nReport writing workshop\n\n\nEaster break\nIndividual write-up\n\n\nFriday 1 April\nResearch Report due (2,000 words, 12 noon)",
     "crumbs": [
       "Home",
       "Term 2",
