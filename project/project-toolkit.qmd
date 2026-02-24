@@ -1,0 +1,684 @@
+---
+title: "Project Toolkit"
+subtitle: "PS50008A — Everything you need for your group project"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: cosmo
+    embed-resources: true
+---
+
+<style>
+@media screen {
+  body {
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+/* ── Brand Banner ── */
+.brand-banner {
+  background: linear-gradient(135deg, #275882 0%, #1B365D 60%, #0F2A44 100%);
+  color: white;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 8px;
+  margin: -1rem -1rem 2rem -1rem;
+  box-shadow: 0 4px 20px rgba(27, 54, 93, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 40%, rgba(234, 132, 57, 0.08) 100%);
+  pointer-events: none;
+}
+
+.brand-banner .banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand-banner .foundations-logo img {
+  height: 50px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.brand-banner .lml-badge {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-banner .lml-badge .monkey {
+  font-size: 1.2rem;
+}
+
+.brand-banner .banner-title {
+  font-family: 'Atkinson Hyperlegible', -apple-system, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.2;
+}
+
+.brand-banner .banner-subtitle {
+  font-family: 'Atkinson Hyperlegible', -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 1.5rem 0;
+}
+
+.brand-banner .banner-divider {
+  height: 3px;
+  background: linear-gradient(90deg, #EA8439, rgba(234,132,57,0.2));
+  border: none;
+  border-radius: 2px;
+  margin: 0 0 1rem 0;
+}
+
+.brand-banner .banner-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── Intro Box ── */
+.intro-box {
+  background: #e7f3ff;
+  border-left: 4px solid #3498db;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.intro-box strong {
+  color: #2c3e50;
+}
+
+/* ── Timeline Table ── */
+.timeline-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.timeline-table th {
+  background: #275882;
+  color: white;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.timeline-table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.timeline-table tr:nth-child(even) td {
+  background: #f8f9fa;
+}
+
+.timeline-table tr:hover td {
+  background: #e7f3ff;
+}
+
+.timeline-table .current-week td {
+  background: #fff3e0;
+  border-left: 3px solid #EA8439;
+  font-weight: 600;
+}
+
+/* ── Document Cards ── */
+details.doc-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 1rem 0;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s ease;
+}
+
+details.doc-card[open] {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+details.doc-card summary {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  list-style: none;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+details.doc-card summary::-webkit-details-marker { display: none; }
+details.doc-card summary::marker { display: none; content: ''; }
+
+details.doc-card summary:hover {
+  background: #f8f9fa;
+}
+
+details.doc-card summary .doc-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+details.doc-card summary .doc-info {
+  flex: 1;
+}
+
+details.doc-card summary .doc-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+details.doc-card summary .doc-meta {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.1rem;
+}
+
+details.doc-card summary .chevron {
+  font-size: 1.2rem;
+  color: #aaa;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+details.doc-card[open] summary .chevron {
+  transform: rotate(90deg);
+}
+
+details.doc-card .doc-body {
+  padding: 0 1.2rem 1.2rem;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+details.doc-card .doc-body h4 {
+  color: #275882;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Tags ── */
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.tag-participant { background: #e8f4f8; color: #2980b9; }
+.tag-ethics { background: #fef3e2; color: #e67e22; }
+.tag-researcher { background: #f3e8f9; color: #8e44ad; }
+.tag-shared { background: #e8f5e9; color: #2e7d32; }
+.tag-between { background: #fff3e0; color: #e65100; }
+.tag-within { background: #e8f4f8; color: #0277bd; }
+
+/* ── Download Links ── */
+.download-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.download-list li {
+  padding: 0.4rem 0;
+}
+
+.download-list a {
+  color: #275882;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.download-list a:hover {
+  color: #EA8439;
+  text-decoration: underline;
+}
+
+.example-badge {
+  display: inline-block;
+  background: #fef3e2;
+  color: #e65100;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+/* ── Section Dividers ── */
+.section-header {
+  background: #275882;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin: 2.5rem 0 1rem 0;
+}
+
+.section-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.section-header p {
+  color: rgba(255,255,255,0.8);
+  margin: 0.3rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* ── Warning Box ── */
+.example-warning {
+  background: #fff8e1;
+  border: 2px solid #EA8439;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.example-warning strong {
+  color: #e65100;
+}
+</style>
+
+<div class="brand-banner">
+<div class="banner-top">
+<div class="foundations-logo">
+<img src="../assets/foundations-26-logo.svg" alt="Foundations '26">
+</div>
+<div class="lml-badge">
+<span class="monkey">🐒</span> LittleMonkeyLab
+</div>
+</div>
+<div class="banner-title">Group Project Toolkit</div>
+<div class="banner-subtitle">PS50008A — Everything you need to prepare for data collection</div>
+<hr class="banner-divider">
+<div class="banner-footer">
+<span>Research Methods & Experimental Design &middot; Goldsmiths, University of London</span>
+</div>
+</div>
+
+<div class="intro-box">
+<strong>What is this page?</strong> This is your one-stop shop for preparing your group project. It contains a <strong>week-by-week timeline</strong>, a <strong>document checklist</strong> with guidance on each document, a complete <strong>worked example</strong> study for reference, and <strong>blank templates</strong> you can download and adapt for your own project. Bookmark this page — you'll come back to it often.
+</div>
+
+# Week-by-Week Timeline
+
+Use this to track what you should be working on each week. Documents don't all need to be finished at once — the timeline shows when each piece fits in.
+
+<div class="timeline-table">
+
+| Week | Dates | Focus | Key tasks |
+|:----:|:-----:|-------|-----------|
+| **16** | 24–28 Feb | **Form groups & choose project** | Form your group of 4–5. Read the [Project Options](group-project-options.qmd). Agree on a project and design (between or within). Submit your **Research Plan** (Fri 27 Feb, 12 noon). |
+| **17** | 3–7 Mar | **Draft core documents** | Draft: Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions. Start your Researcher Procedure. |
+| **18** | 10–14 Mar | **Prepare materials & practice** | Finalise stimulus materials. Complete Researcher Procedure. Practice running the study on each other. **MCQ Exam** (Wed 11 Mar). |
+| **19** | 17–21 Mar | **Final checks & order resources** | Complete Research Study Order Form. Finalise all documents. Print or request printing. **EDS Assignment** (Fri 20 Mar, 12 noon). |
+| | 24 Mar – 1 Apr | **Easter break** | Any final preparation. Review all documents one last time. |
+| **20** | 1–3 Apr | **Data collection** | Run your study! Collect data in the lab session. **Research Report deadline** (Fri 1 Apr, 12 noon). |
+
+</div>
+
+# Document Checklist
+
+Your group needs to prepare **9 documents** before data collection day. Click each one for details on what it is, who sees it, and tips for getting it right.
+
+<details class="doc-card" open>
+<summary>
+<span class="doc-icon">📋</span>
+<div class="doc-info">
+<div class="doc-title">1. Participant Information Sheet</div>
+<div class="doc-meta"><span class="tag tag-participant">Given to participant</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A formal document explaining the study to potential participants *before* they agree to take part. Required for informed consent.
+
+**Who sees it:** Every participant — they read this before deciding whether to participate. They keep a copy.
+
+**When needed:** Draft by Week 17, finalised by Week 19.
+
+#### Tips
+
+- Describe the study in general terms — do **not** reveal your hypothesis
+- Include: purpose, what participation involves, time required, risks/benefits, confidentiality, right to withdraw
+- Keep the language accessible — no jargon
+- The template has the standard boilerplate sections; you mainly need to customise the "purpose" and "what will happen" sections
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">✅</span>
+<div class="doc-info">
+<div class="doc-title">2. Consent Form</div>
+<div class="doc-meta"><span class="tag tag-participant">Given to participant</span> <span class="tag tag-ethics">Ethics requirement</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A checklist the participant signs to confirm they understand the study and agree to take part. A legal and ethical requirement.
+
+**Who sees it:** Every participant signs one. You keep the signed copies securely.
+
+**When needed:** Draft by Week 17, finalised by Week 19.
+
+#### Tips
+
+- You mostly just need to update the **study title** — the checklist items are standardised
+- Make sure the study title matches across all your documents
+- Print plenty of spare copies (aim for 30)
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">📝</span>
+<div class="doc-info">
+<div class="doc-title">3. Debrief Form</div>
+<div class="doc-meta"><span class="tag tag-participant">Given to participant</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A document given to participants *after* the study explaining its true purpose, including the hypothesis and relevant theory.
+
+**Who sees it:** Every participant — they receive this after completing the study.
+
+**When needed:** Draft by Week 17, finalised by Week 19.
+
+#### Tips
+
+- Unlike the Information Sheet, you **can** (and should) reveal the hypothesis here
+- Briefly explain the theory behind your study (e.g., dual coding, anchoring)
+- Include the data withdrawal instructions and support service contacts
+- Keep it to about one page
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">🗣️</span>
+<div class="doc-info">
+<div class="doc-title">4. Recruitment Script</div>
+<div class="doc-meta"><span class="tag tag-researcher">Researcher use</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A short script your group uses to approach potential participants and invite them to take part.
+
+**Who sees it:** Researchers only — you read or paraphrase this when recruiting.
+
+**When needed:** Finalise by Week 19.
+
+#### Tips
+
+- Keep it brief and friendly — 3–4 sentences
+- Mention: who you are, what the study involves (briefly), how long it takes, where to go, and any incentive (snacks!)
+- Print several copies so multiple group members can recruit simultaneously
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">📊</span>
+<div class="doc-info">
+<div class="doc-title">5. Data Recording Sheet</div>
+<div class="doc-meta"><span class="tag tag-researcher">Researcher use</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A table where you record each participant's data (condition, DV score, optional demographics).
+
+**Who sees it:** Researchers only — you fill this in after scoring each participant.
+
+**When needed:** Draft by Week 18, finalised by Week 19.
+
+#### Tips
+
+- Include columns for: participant number, condition (if between-subjects), DV score, and any optional demographics
+- Include a **scoring guide** so all group members score consistently
+- The template has tables for both between- and within-subjects designs — delete the one you don't need
+- This is where your raw data comes from, so accuracy matters!
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">🧪</span>
+<div class="doc-info">
+<div class="doc-title">6. Stimulus Materials</div>
+<div class="doc-meta"><span class="tag tag-participant">Used in study</span> <span class="tag tag-shared">Study-specific</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** The actual materials participants interact with during the study — word lists, images, passages, rating sheets, questionnaires, etc.
+
+**Who sees it:** Participants (during the study) and researchers.
+
+**When needed:** Draft by Week 17, finalised by Week 18.
+
+#### Tips
+
+- This varies hugely by project — see the [Project Options](group-project-options.qmd) for what your chosen project needs
+- Make sure materials are matched across conditions (word frequency, difficulty, length, etc.)
+- The example study uses word lists; your project might need photos, passages, anagrams, or rating scales
+- Test your materials on each other before data collection day
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">📄</span>
+<div class="doc-info">
+<div class="doc-title">7. Participant Instructions</div>
+<div class="doc-meta"><span class="tag tag-participant">Given to participant</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A clear, step-by-step sheet telling the participant exactly what they will do during the study.
+
+**Who sees it:** Every participant reads this before the study begins.
+
+**When needed:** Draft by Week 17, finalised by Week 18.
+
+#### Tips
+
+- Write in plain, simple language — no jargon or technical terms
+- Use numbered steps
+- Do **not** reveal the hypothesis or what you expect to find
+- Keep it short — half a page is usually enough
+- If your between- and within-subjects variants have different procedures, you may need separate instruction sheets
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">📓</span>
+<div class="doc-info">
+<div class="doc-title">8. Researcher Procedure</div>
+<div class="doc-meta"><span class="tag tag-researcher">Researcher use</span> <span class="tag tag-shared">Design-specific</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A detailed step-by-step guide for the researcher running the study. Includes exact wording, timing, and the full procedure.
+
+**Who sees it:** Researchers only — this is your "recipe" for running the study identically every time.
+
+**When needed:** Draft by Week 17–18, finalised by Week 19.
+
+#### Tips
+
+- Be extremely detailed — include exact words to say to participants (in italics or quotes)
+- Include timing for each phase (study period, distractor, recall, etc.)
+- Include the **checklist of materials** to prepare before testing begins
+- Any group member should be able to run the study from this document alone
+- You will need a different procedure document for between-subjects vs within-subjects designs
+
+</div>
+</details>
+
+<details class="doc-card">
+<summary>
+<span class="doc-icon">🛒</span>
+<div class="doc-info">
+<div class="doc-title">9. Research Study Order Form</div>
+<div class="doc-meta"><span class="tag tag-researcher">Submit to Gordon</span> <span class="tag tag-shared">Both designs</span></div>
+</div>
+<span class="chevron">&#9654;</span>
+</summary>
+<div class="doc-body">
+
+**What it is:** A form listing everything your group needs printed or provided for data collection day.
+
+**Who sees it:** You submit this to Gordon so resources can be prepared in advance.
+
+**When needed:** Submit by **end of Week 19** at the latest.
+
+#### Tips
+
+- List every document and how many copies you need (err on the side of printing more)
+- Include any special requirements (e.g., colour printing, speaker, specific paper size)
+- Don't forget consumables: pens, blank paper for recall sheets, snacks
+- Submit this early to avoid last-minute problems
+
+</div>
+</details>
+
+
+<div class="section-header">
+<h2>Worked Example: Concrete vs Abstract Words</h2>
+<p>A complete set of documents for one study — use this as a reference for quality and format</p>
+</div>
+
+<div class="example-warning">
+<strong>This is an EXAMPLE, not your project.</strong> The documents below are for the study "The Effect of Word Type on Recall (Concrete vs Abstract Words)". They show you what a complete, well-prepared set of project documents looks like. <strong>Do not copy these for your own project</strong> — use the blank templates further down instead, and adapt them for your chosen study.
+</div>
+
+**Study summary:** Participants study a list of words and then recall as many as they can. The IV is word type (concrete vs abstract); the DV is the number of words correctly recalled (out of 15). The study has both a between-subjects variant (different participants get different word lists) and a within-subjects variant (all participants study a mixed list; concrete and abstract recall scored separately).
+
+### Shared Documents (used by both designs)
+
+These documents are the same regardless of whether the group runs the between- or within-subjects version.
+
+<ul class="download-list">
+<li>📥 <a href="../files/project-docs/examples/example-participant-information-sheet.docx">Participant Information Sheet</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-consent-form.docx">Consent Form</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-debrief-form.docx">Debrief Form</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-recruitment-script.docx">Recruitment Script</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-word-lists.docx">Word Lists (Stimulus Materials)</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-data-recording-sheet.docx">Data Recording Sheet</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-research-study-order-form.docx">Research Study Order Form</a> <span class="example-badge">Example</span></li>
+</ul>
+
+### Between-Subjects Documents
+
+These are specific to the between-subjects version of the example study.
+
+<ul class="download-list">
+<li>📥 <a href="../files/project-docs/examples/example-between-participant-instructions.docx">Participant Instructions (Between)</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-between-procedure.docx">Researcher Procedure (Between)</a> <span class="example-badge">Example</span></li>
+</ul>
+
+### Within-Subjects Documents
+
+These are specific to the within-subjects version of the example study.
+
+<ul class="download-list">
+<li>📥 <a href="../files/project-docs/examples/example-within-participant-instructions.docx">Participant Instructions (Within)</a> <span class="example-badge">Example</span></li>
+<li>📥 <a href="../files/project-docs/examples/example-within-procedure.docx">Researcher Procedure (Within)</a> <span class="example-badge">Example</span></li>
+</ul>
+
+
+<div class="section-header">
+<h2>Blank Templates</h2>
+<p>Download, rename, and adapt these for your own project</p>
+</div>
+
+<div class="intro-box">
+<strong>How to use these templates:</strong> Download each file, open it in Word or Google Docs, and replace the placeholder text (in [square brackets]) with your own content. The structure and standard sections are already in place — you just need to fill in the details specific to your study. Refer to the worked example above to see what a completed version looks like.
+</div>
+
+<ul class="download-list">
+<li>📥 <a href="../files/project-docs/templates/template-participant-information-sheet.docx">Participant Information Sheet — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-consent-form.docx">Consent Form — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-debrief-form.docx">Debrief Form — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-recruitment-script.docx">Recruitment Script — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-stimulus-materials.docx">Stimulus Materials — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-data-recording-sheet.docx">Data Recording Sheet — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-participant-instructions.docx">Participant Instructions — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-researcher-procedure.docx">Researcher Procedure — Template</a></li>
+<li>📥 <a href="../files/project-docs/templates/template-research-study-order-form.docx">Research Study Order Form — Template</a></li>
+</ul>

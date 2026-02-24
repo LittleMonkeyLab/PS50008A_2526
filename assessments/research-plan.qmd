@@ -90,5 +90,5 @@ Your Research Plan will be assessed on:
 - Clarity and appropriateness of hypothesis
 - Justification of design choices
 - Feasibility and detail of procedure
-- Appropriate selection and justification of statistical test
+- Appropriate set up of results data
 - Overall coherence and scientific reasoning

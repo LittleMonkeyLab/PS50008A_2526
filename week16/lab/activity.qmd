@@ -20,20 +20,106 @@ library(webexercises)
 library(knitr)
 ```
 
-## Overview
+## The Road Ahead
+
+Before we get started on today's lab, let's take stock of where you are and what's coming up between now and the end of term.
 
 ::: {.callout-important}
-## Two Key Tasks Today
+## Your Four Assessments
 
-1. **Form your project group** (3–4 students) — this is your group for the Research Report
-2. **Begin your literature review** — searching for papers related to your project topic
+| Assessment | Weight | Deadline | Status |
+|---|---|---|---|
+| **Research Plan** | 20% | Fri 27 Feb, 12 noon | **Due tomorrow!** |
+| **MCQ Exam** | 20% | Wed 11 Mar, in lecture | Week 18 |
+| **EDS Assignment** | 20% | Fri 20 Mar, 12 noon | Week 19 |
+| **Research Report** | 40% | Fri 1 Apr, 12 noon | Post-Easter |
 
-You **must** attend this lab. If you don't attend and haven't signalled your intent to participate, you will be allocated to a group on Monday of Week 17.
+All submissions are via Learn. All written submissions are due at **12 noon**.
 :::
 
+### Week-by-Week: What Happens When
+
+This is the plan for the rest of the term. Keep this somewhere you can refer back to it.
+
+| Week | What's Happening in Class | Assessment Events | What Your Group Needs to Do |
+|------|--------------------------|-------------------|----------------------------|
+| **16 (this week)** | APA report writing & research project launch | **Research Plan due Fri 27 Feb** | Form groups, receive topic, begin lit review |
+| **17** (2–6 Mar) | Credibility & replication crisis | MCQ revision begins | Finalise methodology and research design |
+| **18** (9–13 Mar) | MCQ Exam week | **MCQ Exam Wed 11 Mar** | Develop procedure and materials; pilot run |
+| **19** (16–20 Mar) | Data analysis | **EDS Assignment due Fri 20 Mar** | **Collect data** |
+| **20** (23–27 Mar) | Report writing workshop | — | Analyse data, begin drafting report |
+| Easter break | — | — | Write your individual Research Report |
+| **1 April** | — | **Research Report due 12 noon** | — |
+
+### Quick Check: Do You Know What's Coming?
+
+**1. Which assessment is due tomorrow?**
+
+`r mcq(c(answer = "Research Plan", "MCQ Exam", "EDS Assignment", "Research Report"))`
+
+**2. When is the MCQ Exam?**
+
+`r mcq(c("Friday 27 February", answer = "Wednesday 11 March", "Friday 20 March", "Friday 1 April"))`
+
+**3. Which assessment is worth the most?**
+
+`r mcq(c("Research Plan (20%)", "MCQ Exam (20%)", "EDS Assignment (20%)", answer = "Research Report (40%)"))`
+
+**4. When does your group need to collect data?**
+
+`r mcq(c("This week", "Week 17", "Week 18", answer = "Week 19"))`
+
+---
+
+## What Your Group Does Together vs. Individually
+
+This is important — make sure you understand the distinction.
+
 ::: {.callout-warning}
-## Research Plan Due Tomorrow
-Your **Research Plan** is due **Friday 27 February, 12 noon** via Learn. This is your first assessed submission. See the [assessment brief](../../assessments/research-plan.qmd) for details.
+## Group vs. Individual Work
+
+**Together (Weeks 16–20):** Your group designs the study, creates materials, collects data, and shares the raw dataset.
+
+**Individually (Easter):** Each person writes their own 2,500-word Research Report using the group's data. Same data, different reports. You must NOT share written drafts with each other.
+:::
+
+**5. The Research Report is:**
+
+`r mcq(c("A group submission", answer = "An individual submission using group data", "Optional", "Due before Easter"))`
+
+**6. You should share with your group members:**
+
+`r mcq(c("Your written report draft", answer = "Data collection responsibilities and raw data", "Your introduction paragraphs", "Your reference list only"))`
+
+**7. If two group members submit very similar reports, this is:**
+
+`r mcq(c("Expected since they used the same data", "Fine as long as the data is the same", answer = "An academic misconduct concern — reports must be independently written", "Only a problem if they have the same hypothesis"))`
+
+True or False: Every group member must write their own report, even though the data is shared. `r torf(TRUE)`
+
+True or False: You can copy your group member's Introduction as long as you change a few words. `r torf(FALSE)`
+
+---
+
+### What You'll Get Back: Data Analysis I
+
+After your group collects data in Week 19, you'll receive a one-page analysis summary. Here's what it will look like — depending on whether your group has a between-subjects or within-subjects design:
+
+::: {.panel-tabset}
+
+#### Between-Subjects Version
+
+![Preview of analysis return for between-subjects groups](analysis-preview-between.png){width="90%"}
+
+#### Within-Subjects Version
+
+![Preview of analysis return for within-subjects groups](analysis-preview-within.png){width="90%"}
+
+:::
+
+::: {.callout-tip}
+## You Don't Run the Analysis
+I provide the statistical output — your job in the Research Report is to **interpret and discuss** these results, not to generate them. The analysis return includes descriptive statistics, the t-test result, confidence interval, effect size, and visualisations.
 :::
 
 ---
@@ -46,36 +132,10 @@ Your group will work together for the rest of the term to design and run a study
 
 **Group size:** 3–4 students
 
-**What your group will do together:**
-
-- Develop your research methodology (Week 17)
-- Create your procedure and materials (Week 18)
-- Collect data (Week 19)
-- Analyse data (Week 20)
-
-**What you do individually:**
-
-- Write your own Research Report (2,000 words, due 1 April)
-
-### Self-Check: Understanding Group Work
-
-**1. The Research Report is:**
-
-`r mcq(c("A group submission", answer = "An individual submission using group data", "Optional", "Due before Easter"))`
-
-**2. You should share with your group members:**
-
-`r mcq(c("Your written report draft", answer = "Data collection responsibilities and raw data", "Your introduction paragraphs", "Your reference list only"))`
-
-**3. If two group members submit very similar reports, this is:**
-
-`r mcq(c("Expected since they used the same data", "Fine as long as the data is the same", answer = "An academic misconduct concern — reports must be independently written", "Only a problem if they have the same hypothesis"))`
-
-True or False: Every group member must write their own report, even though the data is shared. `r torf(TRUE)`
-
-True or False: You can copy your group member's Introduction as long as you change a few words. `r torf(FALSE)`
-
----
+::: {.callout-important}
+## You Must Attend This Lab
+If you don't attend today and haven't signalled your intent to participate, you will be allocated to a group on Monday of Week 17.
+:::
 
 ### Group Agreement
 
@@ -292,10 +352,22 @@ True or False: Your hypothesis should be informed by previous research, not just
 
 ---
 
+## Key Dates Reminder
+
+| When | What |
+|------|------|
+| **Tomorrow** Fri 27 Feb, 12 noon | Research Plan due via Learn |
+| **Week 17** Thu 5 Mar | Group: finalise methodology |
+| **Week 18** Wed 11 Mar | **MCQ Exam** (in lecture) |
+| **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due |
+| **Week 19** Thu 19 Mar | Group: **collect data** |
+| **Week 20** Thu 26 Mar | Report writing workshop |
+| **Fri 1 April**, 12 noon | **Research Report** due |
+
 ## Next Steps
 
 1. **Tomorrow (Friday):** Submit your **Research Plan** by **12 noon** via Learn
 2. Complete the [Research Plan Self-Assessment Checklist](self-assessment.qmd) before submitting
 3. Continue reading the papers you found today
 4. Start thinking about how the literature connects to form an argument
-5. **Next week (Week 17):** Your group will finalise methodology and research design
+5. **Next week (Week 17):** Your group will finalise methodology and research design — come with at least 2–3 papers read

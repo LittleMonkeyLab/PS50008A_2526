@@ -1,5 +1,5 @@
 ---
-title: "Group Formation & Literature Review"
+title: "Group Formation & Topic Selection"
 subtitle: "PS50008A Week 16 | Lab Walkthrough"
 author: "Gordon Wright"
 date: "2026-02-26"
@@ -9,6 +9,7 @@ format:
     slide-number: c/t
     progress: true
     transition: fade
+    scrollable: true
     embed-resources: true
     width: 1050
     height: 700
@@ -16,9 +17,142 @@ format:
     center-title-slide: true
 ---
 
-# Welcome to Lab {background-color="#275882"}
+# The Road Ahead {background-color="#275882"}
 
-## Group Formation & Literature Review
+## Where We Are and Where We're Going
+
+---
+
+## Your Four Assessments
+
+| Assessment | Weight | Deadline | Status |
+|---|---|---|---|
+| **Research Plan** | 20% | Fri 27 Feb, 12 noon | **Due tomorrow!** |
+| **MCQ Exam** | 20% | Wed 11 Mar, ~1 hour (in lecture) | Week 18 |
+| **EDS Assignment** | 20% | Fri 20 Mar, 12 noon (~1-2 hours) | Week 19 |
+| **Research Report** | 40% | Mid–late April, 12 noon | Post-Easter |
+
+::: {.fragment}
+::: {.callout-important}
+## Research Plan
+Your first submission is due **tomorrow at noon**. Make sure it's uploaded to Learn before you go to bed tonight.
+:::
+:::
+
+---
+
+## The Next 5 Weeks — What Happens When {.smaller}
+
+| Week | Lab Focus | Milestone |
+|------|-----------|-----------|
+| **16 (now)** | Group formation, topic selection | Group registration |
+| **17** | Finalising methodology | Methodology agreed |
+| **18** | Finalising procedure, piloting with Gordon | Procedure complete |
+| **19** | Data collection | Data collected |
+| **20** | Write-up support | Report drafting begins |
+
+::: {.fragment}
+::: {.callout-note}
+## Assessments During This Period
+- **MCQ Exam** — Wed 11 Mar (~1 hour, in lecture)
+- **EDS Assignment** — paper released on Monday, due Fri 20 Mar, 12 noon (~1-2 hours)
+- **Research Report** — Mid–late April, 12 noon
+:::
+:::
+
+---
+
+## Your Group Project Timeline
+
+::: {.definition-box}
+**The group project feeds directly into your Research Report (40%).**
+
+You work together to design and run a study. Then each person writes their own individual report.
+:::
+
+---
+
+## What Your Group Does Together vs. Individually
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.exercise-box}
+**Together (Weeks 16–20)**
+
+- Topic selection
+- Literature review
+- Design the study
+- Create materials & procedure
+- Collect data
+- Review results
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-warning}
+## Individually
+
+- Write your own 2,500-word Research Report
+- Same data, **different reports**
+- Do NOT share written drafts
+- Sharing text = academic misconduct
+:::
+:::
+
+::::
+
+---
+
+## What You'll Get Back: Data Analysis I — Between-Subjects
+
+After your group collects data in **Week 19**, I'll run the analysis and return a one-page summary like this:
+
+![](analysis-preview-between.png){width="75%" fig-align="center"}
+
+---
+
+## What You'll Get Back: Data Analysis I — Within-Subjects
+
+![](analysis-preview-within.png){width="75%" fig-align="center"}
+
+::: {.callout-tip}
+## Your Job
+You don't need to run the analysis yourself — I provide the output. Your Research Report interprets and discusses these results.
+:::
+
+---
+
+## What You Need to Do This Week
+
+::: {.step-1}
+**Today (Thursday):** Form your group, choose your topic, find a key paper
+:::
+
+::: {.fragment}
+::: {.step-2}
+**Tomorrow (Friday 27 Feb, 12 noon):** Submit your Research Plan via Learn.Gold
+:::
+:::
+
+::: {.fragment}
+::: {.step-3}
+**Next week onwards:** Work collaboratively to complete each week's milestones — see the projects documents on the VLE for more information.
+:::
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## OneDrive Group Folder
+Each group will be given a shared folder on OneDrive. All project documents and materials must be submitted there.
+:::
+:::
+
+---
+
+# Today's Lab {background-color="#275882"}
+
+## Group Formation & Topic Selection
 
 ---
 
@@ -28,14 +162,7 @@ format:
 **Two things matter today:**
 
 1. **Form your project groups** (3–4 students)
-2. **Begin your literature review** — find papers related to your project topic
-:::
-
-::: {.fragment}
-::: {.callout-warning}
-## Research Plan Due Tomorrow
-**Friday 27 February, 12 noon** via Learn.
-:::
+2. **Choose your project topic** — from the example list or create your own
 :::
 
 ---
@@ -45,7 +172,7 @@ format:
 | Time | Activity |
 |------|----------|
 | 10:00–10:15 | These slides + group formation |
-| 10:15–10:30 | Receive project topics, identify variables |
+| 10:15–10:30 | Topic selection, identify variables |
 | 10:30–11:00 | Literature searching (PsycINFO + Google Scholar) |
 | 11:00–11:30 | Evaluating sources + recording findings |
 | 11:30–11:50 | Group discussion: hypothesis development |
@@ -69,9 +196,9 @@ format:
 :::
 
 ::: {.fragment}
-::: {.callout-important}
-## Mandatory Attendance
-Students who don't attend today and haven't signalled intent to participate will be **allocated to a group on Monday of Week 17**.
+::: {.callout-warning}
+## Group Allocation
+Students not part of a registered group this week will be **allocated to a group on Monday of Week 17**.
 :::
 :::
 
@@ -84,8 +211,8 @@ Students who don't attend today and haven't signalled intent to participate will
 
 1. Exchange contact details (email / phone / WhatsApp)
 2. Set up a group chat
-3. Agree on when you can meet outside of labs
-4. Note each member's name and student number
+3. Agree on how you're going to work together
+4. Familiarise yourself with the weekly milestones
 :::
 
 ---
@@ -95,32 +222,34 @@ Students who don't attend today and haven't signalled intent to participate will
 ::: {.definition-box}
 **Together:** Design study → Collect data → Share raw data
 
-**Individually:** Write your own 2,000-word Research Report
+**Individually:** Write your own 2,500-word Research Report
 
 Same data, different reports. Do NOT share written drafts.
 :::
 
 ---
 
-# Part 2: Your Project Topic {background-color="#275882"}
+# Part 2: Topic Selection {background-color="#275882"}
 
-## Understanding What You're Investigating (~15 min)
+## Choosing What You'll Investigate (~15 min)
 
 ---
 
-## Receiving Your Topic
+## Choosing Your Topic
 
-Each group receives a project topic with:
+Each group needs a project topic. You can:
 
 ::: {.incremental}
-- A research area and specific question
-- A specified design (between-subjects or within-subjects)
-- Materials and word lists / stimuli
-- A procedure guide
+- **Choose from the example list** in the project documents — these are ready-made topics with suggested variables
+- **Adapt an example** — modify it slightly to suit your interests
+- **Propose your own** — as long as it meets the key requirement below
 :::
 
 ::: {.fragment}
-Read through your project documents as a group before moving on.
+::: {.callout-important}
+## Key Requirement
+Your topic must be testable using a **two-group t-test design** (between-subjects or within-subjects). Look at the project directory folder for guidance and examples.
+:::
 :::
 
 ---
@@ -133,7 +262,6 @@ Read through your project documents as a group before moving on.
 - What is the **independent variable**? How many levels?
 - What is the **dependent variable**? How is it measured?
 - What **design** are you using? Between or within?
-- What is the **statistical test** you'll use?
 :::
 
 ::: {.fragment}
@@ -145,6 +273,19 @@ If you're unsure about any of these, ask your tutor now.
 # Part 3: Literature Searching {background-color="#275882"}
 
 ## Finding Relevant Research (~30 min)
+
+---
+
+## Starting Points
+
+I've included some possible starting-point papers in your project documents — but they may not be the best fit for your specific topic.
+
+::: {.fragment}
+::: {.callout-tip}
+## Do a Quick Search
+A short literature search will often turn up papers that are more relevant, more recent, or a better methodological match than the supplied ones. Use them as a springboard, not the final word.
+:::
+:::
 
 ---
 
@@ -193,7 +334,7 @@ If you're unsure about any of these, ask your tutor now.
 :::
 
 ::: {.fragment}
-**Aim for 3–5 relevant papers per group today.**
+**A single key paper that closely matches your topic is more valuable than three vaguely related ones.**
 :::
 
 ---
@@ -212,9 +353,24 @@ You do NOT need to read every paper word-for-word:
 
 ---
 
-# Part 4: Recording and Evaluating {background-color="#275882"}
+# Part 4: Building Your Reference List {background-color="#275882"}
 
-## Building Your Source Library (~30 min)
+## Keeping Track of What You Find (~30 min)
+
+---
+
+## An Average Report Contains 3–5 Papers (or More)
+
+Your Research Report Introduction needs to build an argument from the literature. That typically means citing **3–5 quality sources**.
+
+Keeping track of those from the start is a good skill — don't leave it until Easter to find your references again.
+
+::: {.fragment}
+::: {.callout-tip}
+## Reference Manager
+Install **Zotero** (free) — it saves references directly from your browser and formats them automatically.
+:::
+:::
 
 ---
 
@@ -228,22 +384,15 @@ You do NOT need to read every paper word-for-word:
 5. **Why it matters** for your project
 :::
 
-::: {.fragment}
-::: {.callout-tip}
-## Reference Manager
-Install **Zotero** (free) — it saves references directly from your browser and formats them automatically.
-:::
-:::
-
 ---
 
 ## How Many Sources?
 
 For your Research Report Introduction:
 
-- **5–8 quality sources** is the target
+- **3–5 quality sources** is a fair target
 - Mix of **classic and recent** papers
-- **Quality over quantity** — 5 well-integrated sources beat 10 listed without connection
+- **Quality over quantity** — 3 well-integrated sources beat 10 listed without connection
 
 ---
 
@@ -294,57 +443,37 @@ A hypothesis should be:
 ## Checklist
 
 - [ ] Formed a group (3–4 students) and exchanged contact details
-- [ ] Received your project topic and understood the variables
-- [ ] Searched for and found at least 3–5 relevant papers
+- [ ] Identified your project topic (from list or your own)
+- [ ] Searched for or found some relevant literature
 - [ ] Started recording key findings from each source
 - [ ] Discussed a provisional hypothesis with your group
 :::
 
 ---
 
-## Key Reminders
+## Key Dates — Don't Forget
 
-::: {.step-1}
-**Tomorrow (Friday 27 Feb, 12 noon):** Research Plan due via Learn
-:::
-
-::: {.fragment}
-::: {.step-2}
-**This week onwards:** Continue reading papers independently
-:::
-:::
-
-::: {.fragment}
-::: {.step-3}
-**Next week (Week 17):** Finalise methodology and research design with your group
-:::
-:::
-
----
-
-## Research Report Timeline
-
-| Week | Group Milestone |
-|------|----------------|
-| **16 (now)** | Form groups, begin literature review |
-| **17** | Finalise methodology and design |
-| **18** | Develop procedure and materials |
-| **19** | Collect data |
-| **20** | Analyse data, begin write-up |
-| Easter | Individual report writing |
-| **1 April** | Research Report due (12 noon) |
+| When | What |
+|------|------|
+| **Tomorrow** Fri 27 Feb, 12 noon | Research Plan due via Learn |
+| **Week 17** Thu 5 Mar | Group: finalise methodology |
+| **Week 18** Wed 11 Mar | **MCQ Exam** (~1 hour, in lecture) |
+| **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due (~1 hour) |
+| **Week 19** Thu 19 Mar | Group: **collect data** |
+| **Week 20** Thu 26 Mar | Write-up support |
+| **Mid–late April**, 12 noon | **Research Report** due |
 
 ---
 
 # Questions? {background-color="#275882"}
 
-## Then let's form groups and begin!
+## Then let's form groups and choose topics!
 
 ::: {.notes}
 Circulate among groups to help with:
 
 - Group formation for any students without a group
-- Clarifying project topics and variables
+- Topic selection and scoping
 - Search strategies on PsycINFO
 - Evaluating source relevance
 

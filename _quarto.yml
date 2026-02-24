@@ -12,6 +12,7 @@ project:
   - assessments/
   - glossary/
   - resources.qmd
+  - project/
   - week11/
   - week12/
   - week13/
@@ -75,14 +76,14 @@ website:
       - text: Overview
         href: assessments.qmd
       - text: '---'
-      - text: Research Plan
-        href: assessments/research-plan.qmd
-      - text: MCQ Exam
-        href: assessments/mcq-exam.qmd
-      - text: EDS Assignment
-        href: assessments/eds-assignment.qmd
-      - text: Research Report
-        href: assessments/research-report.qmd
+      - text: Assessment Handbook
+        href: assessments/assessment-handbook.qmd
+    - text: Group Project
+      menu:
+      - text: Project Toolkit
+        href: project/project-toolkit.qmd
+      - text: Project Options
+        href: project/group-project-options.qmd
     - text: Resources
       href: resources.qmd
     - text: Textbook
@@ -105,14 +106,14 @@ website:
         contents:
         - text: Overview
           href: assessments.qmd
-        - text: Research Plan
-          href: assessments/research-plan.qmd
-        - text: MCQ Exam
-          href: assessments/mcq-exam.qmd
-        - text: EDS Assignment
-          href: assessments/eds-assignment.qmd
-        - text: Research Report
-          href: assessments/research-report.qmd
+        - text: Assessment Handbook
+          href: assessments/assessment-handbook.qmd
+      - section: Group Project
+        contents:
+        - text: Project Toolkit
+          href: project/project-toolkit.qmd
+        - text: Project Options
+          href: project/group-project-options.qmd
       - resources.qmd
       - text: Glossary           
         href: glossary/index.qmd

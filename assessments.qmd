@@ -18,14 +18,16 @@ format-links:
 
 | Assessment | Weight | Deadline | Week |
 |------------|--------|----------|:----:|
-| [Research Plan](assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
-| [MCQ Exam](assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
-| [EDS Assignment](assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
-| [Research Report](assessments/research-report.qmd) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+| Research Plan | 20% | Fri 27 Feb 2026, 12 noon | 16 |
+| MCQ Exam | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
+| EDS Assignment | 20% | Fri 20 Mar 2026, 12 noon | 20 |
+| Research Report | 40% | Fri 1 Apr 2026, 12 noon | Post-term |
+
+Full details of all assessments are in the [Assessment Handbook](assessments/assessment-handbook.qmd).
 
 ---
 
-### Practice Assessments
+### Practice Materials & Examples
 
 ::: {.callout-tip}
 ## Examples of all assessments will be provided
@@ -33,14 +35,35 @@ format-links:
 Examples of all assessments will be provided with plenty of support. We cannot give marks for these, but we will work through examples in class.
 :::
 
+#### Research Plan
+
+- [Research Plan — Worked Example (PDF)](files/research_plan_worked_example.pdf)
+- [Research Plan — Submission Example (PDF)](files/research_plan_submission_example.pdf)
+- [Research Plan — Submission Example (Word)](files/research_plan_submission_example.docx)
+
+#### MCQ Exam
+
+- [Practice MCQ Test (PDF)](files/PS50008A_Practice_MCQ_Test.pdf)
+- [Practice MCQ Test with Answers (PDF)](files/PS50008A_Practice_MCQ_Test_with_ANSWERS.pdf)
+
+#### EDS Assignment
+
+- [EDS Practice Paper 2026 (PDF)](files/eds-practice-paper_2026.pdf)
+
+#### Research Report
+
+- [Research Reports in APA Format — Guide (PDF)](files/Research_Reports_in_APA_Format.pdf)
+
 ---
 
 ## Group Project
 
 The group project is **not separately assessed** but feeds into two assessments:
 
-- **[Research Plan](assessments/research-plan.qmd)** (due Week 16): Based on a choice of research ideas - you provide a research plan.
-- **[Research Report](assessments/research-report.qmd)** (due 1 May, post-term): Individual write-up of group project data
+- **Research Plan** (due Week 16): Based on a choice of research ideas - you provide a research plan.
+- **Research Report** (due 1 Apr, post-term): Individual write-up of group project data
+
+See the [Assessment Handbook](assessments/assessment-handbook.qmd) for full briefs and marking criteria.
 
 ### Project Timeline
 
@@ -53,7 +76,7 @@ The group project is **not separately assessed** but feeds into two assessments:
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends Week 20) |
 | Easter | Individual report writing |
-| Post-term | **Research Report due** Friday 1 May |
+| Post-term | **Research Report due** Friday 1 April |
 
 ::: {.callout-important}
 ## Individual Responsibility

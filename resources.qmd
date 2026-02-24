@@ -73,6 +73,7 @@ If you want to install R on your own computer:
 
 ### APA Format
 
+- [Research Reports in APA Format — Guide (PDF)](files/Research_Reports_in_APA_Format.pdf) — Detailed guide to writing APA-style lab reports
 - [Purdue OWL APA Guide](https://owl.purdue.edu/owl/research_and_citation/apa_style/) — Comprehensive APA formatting guide
 - [APA Style Website](https://apastyle.apa.org/) — Official APA resources
 
@@ -80,6 +81,12 @@ If you want to install R on your own computer:
 
 - [Goldsmiths Academic Skills](https://www.gold.ac.uk/students/skills/) — Writing support
 - [Phrasebank](https://www.phrasebank.manchester.ac.uk/) — Academic phrases and structures
+
+## Module Articles & Readings
+
+Journal articles and key readings for the module are available on the VLE:
+
+- [PS50008A Articles Folder on Learn](https://learn.gold.ac.uk/course/section.php?id=588322#) — All journal articles for the module (Goldsmiths login required)
 
 ## Goldsmiths Resources
 

@@ -1,0 +1,547 @@
+---
+format:
+  typst:
+    mainfont: "Atkinson Hyperlegible"
+    margin:
+      top: "2.5cm"
+      bottom: "2.5cm"
+      left: "2.5cm"
+      right: "2.5cm"
+include-before-body:
+  - file: ../assets/highlights-typst.typ
+  - text: |
+      #let navy = rgb("#275882")
+      #let orange = rgb("#EA8439")
+
+      #set page(
+        header: context {
+          if counter(page).get().first() > 1 [
+            #block(width: 100%, fill: navy, inset: (x: 12pt, y: 8pt))[
+              #text(fill: white, weight: "bold", size: 9pt)[Assessment Handbook — PS50008A Research Methods]
+            ]
+            #v(-4pt)
+            #line(length: 100%, stroke: 2pt + orange)
+          ]
+        },
+        footer: context {
+          let pg = counter(page).get().first()
+          if pg > 1 [
+            #line(length: 100%, stroke: 0.5pt + luma(180))
+            #v(4pt)
+            #grid(
+              columns: (1fr, auto),
+              text(size: 8pt, fill: luma(120))[PS50008A | Goldsmiths, University of London],
+              text(size: 8pt, fill: luma(120))[#pg],
+            )
+          ]
+        },
+      )
+
+      // Section divider page helper
+      #let section-divider(title, subtitle: none) = {
+        pagebreak()
+        page(
+          header: none,
+          footer: none,
+        )[
+          #block(width: 100%, height: 100%, fill: navy, inset: 40pt)[
+            #v(1fr)
+            #text(fill: white, size: 36pt, weight: "bold")[#title]
+            #if subtitle != none [
+              #v(8pt)
+              #text(fill: orange, size: 16pt)[#subtitle]
+            ]
+            #v(1fr)
+          ]
+        ]
+      }
+
+      // At-a-glance info box helper
+      #let info-box(..pairs) = {
+        block(
+          width: 100%,
+          stroke: 1pt + navy,
+          radius: 4pt,
+          inset: 12pt,
+        )[
+          #for (key, value) in pairs.pos() [
+            #text(weight: "bold", fill: navy)[#key:] #value #h(1fr) \
+          ]
+        ]
+      }
+
+      // Title page
+      #page(header: none, footer: none)[
+        #v(2fr)
+        #align(center)[
+          #block(width: 85%)[
+            #line(length: 100%, stroke: 3pt + navy)
+            #v(16pt)
+            #text(size: 30pt, weight: "bold", fill: navy)[Assessment Handbook]
+            #v(8pt)
+            #text(size: 14pt, fill: luma(80))[PS50008A Research Methods & Experimental Design]
+            #v(4pt)
+            #text(size: 12pt, fill: luma(100))[Term 2 · Spring 2026]
+            #v(16pt)
+            #line(length: 100%, stroke: 3pt + orange)
+            #v(24pt)
+            #text(size: 13pt)[Gordon Wright]
+            #v(4pt)
+            #text(size: 11pt, fill: luma(100))[Goldsmiths, University of London]
+          ]
+        ]
+        #v(3fr)
+      ]
+---
+
+```{=typst}
+#pagebreak()
+```
+
+## How to Use This Handbook
+
+This handbook is your single reference for all assessed work in PS50008A. It contains the brief, structure, marking information, and preparation advice for each of the four assessments.
+
+Keep it handy throughout the term — everything you need is here.
+
+```{=typst}
+#v(12pt)
+```
+
+## Assessment Overview
+
+| Assessment | Weight | Deadline | Format |
+|---|---|---|---|
+| Research Plan | 20% | Fri 27 Feb 2026, 12 noon | ~1,000 word plan |
+| MCQ Exam | 20% | Wed 11 Mar 2026, in lecture | 1 hr paper-based MCQ |
+| EDS Assignment | 20% | Fri 20 Mar 2026, 12 noon | 1-2 hrs open-book results interpretation|
+| Research Report | 40% | mid-late April| 2,500 word APA report |
+
+: {tbl-colwidths="[30,10,30,30]"}
+
+All coursework submissions are via **Moodle** by **12 noon** on the stated deadline. The MCQ Exam takes place in your normal lecture slot (10-12 Wednesday RHBD 143).
+
+```{=typst}
+#v(12pt)
+```
+
+### How Assessments Fit Together
+
+The four assessments are designed to build on each other progressively. The **Research Plan** gets you thinking about design; the **MCQ Exam** tests your conceptual understanding; the **EDS Assignment** checks you can interpret and report statistical output; and the **Research Report** brings everything together in a full write-up.
+
+Your **group project**, which runs in labs in the second half of term, is the real experiment you design and run about which you write the Research Report — although this is group work, the Research Report is written and submitted individually.
+
+<!-- ============================================================ -->
+<!-- ASSESSMENT 1: RESEARCH PLAN                                   -->
+<!-- ============================================================ -->
+
+```{=typst}
+#section-divider("Research Plan", subtitle: "Assessment 1 · 20%")
+```
+
+### At a Glance
+
+| | |
+|---|---|
+| **Weight** | 20% |
+| **Deadline** | Friday 27 February 2026, 12 noon |
+| **Submission** | Via Moodle |
+| **Word count** | Approximately 1,000 words |
+| **Format** | Written plan (no data collection) |
+
+### The Task
+
+Describe how you would investigate **one** of the following research topics:
+
+1. The effect of font difficulty on memory for information
+2. The effect of hydration on cognitive performance
+3. The effect of eye contact on perceived trustworthiness
+
+This is a *plan*, not a real study. You do **not** collect data or invent results. This is SEPARATE from the Group Project.
+
+### Structure & Marking
+
+Your plan should contain three sections:
+
+**a) Experimental Hypothesis**
+
+- State your hypothesis clearly
+- Specify whether it is one-tailed or two-tailed
+- Explain why you chose this direction
+
+**b) Method Section**
+
+- **Design**: Type of design and why it is appropriate
+- **Participants**: Who, how many, how recruited
+- **Materials/Stimuli**: What you would need
+- **Procedure**: Step-by-step with appropriate controls
+
+**c) Draft Results Section**
+
+- A summary data table with appropriate headings only (do **not** invent data)
+- State which statistical test should be used
+- Justify your choice of test
+
+### Assessment Criteria
+
+- Clarity and appropriateness of hypothesis
+- Justification of design choices
+- Feasibility and detail of procedure
+- Accurate results/data layout
+- Overall coherence and evidence of learning outcomes
+
+### Curriculum Connection
+
+| Week | Topic | How It Helps |
+|---|---|---|
+| 11 | The Big Picture | Overall design framework |
+| 12 | Variables & Hypotheses | Writing hypotheses, identifying IVs/DVs |
+| 13 | Experimental Design | Between/within designs, controls |
+| 15 | Correlation  | Understanding alternative designs |
+
+### How to Prepare
+
+1. **Choose your topic from the 3 options early** — they are all equally tricky
+2. **Revisit lecture materials** from Weeks 11–13 on design and variables
+3. **Practice coming up with hypotheses** — make them specific and testable
+4. **Use the design** to guide the analytic approach
+5. **Use your lab instructor well** — does the procedure make sense to them?
+
+### FAQs
+
+**Q: Do I need to find published references?**
+A: References are not required throughout, but a single real reference is required to demonstrate your ability to find a relevant paper and present APA format references and in-text citation.
+
+**Q: Should I invent results?**
+A: No. Your data table should have column headings (e.g., Condition, Mean, SD) but leave the cells empty or use placeholder labels. The point is to show you know *what* to measure. This is clearly demonstrated in the example and worked example.
+
+**Q: Can I choose a topic not on the list?**
+A: No — you must choose one of the three listed topics.
+
+**Q: How detailed should the procedure be?**
+A: Detailed enough that someone could replicate your study from the description alone.
+
+### Common Pitfalls
+
+- Choosing a two-tailed hypothesis without justification (or vice versa)
+- Describing a design that doesn't match the chosen statistical test
+- Forgetting to mention controls (randomisation, counterbalancing, standardised instructions)
+- Inventing data when the brief explicitly says not to
+- Writing a methods section that is too vague to replicate
+
+<!-- ============================================================ -->
+<!-- ASSESSMENT 2: MCQ EXAM                                        -->
+<!-- ============================================================ -->
+
+```{=typst}
+#section-divider("MCQ Exam", subtitle: "Assessment 2 · 20%")
+```
+
+### At a Glance
+
+| | |
+|---|---|
+| **Weight** | 20% |
+| **Date** | Wednesday 11 March 2026 |
+| **Time** | 10:00-12:00|
+| **Duration** | 1 hour |
+| **Location** | RHBD 143 |
+| **Format** | Paper-based, multiple choice |
+
+### The Task
+
+Answer a series of multiple-choice questions based on research scenarios ("Investigations"). Each Investigation describes a short study and asks you to identify the design, variables, hypothesis, appropriate test, and interpretation.
+
+There will also be additional MCQs testing comprehension of broader course material up to that point.
+
+### Structure & Marking
+
+Each Investigation typically has **5 or 6 questions**:
+
+| Question | What You Identify |
+|---|---|
+| 1 | Design (between / within / matched / correlational) |
+| 2 | Independent variable (or recognise no IV) |
+| 3 | Dependent variable |
+| 4 | Appropriate hypothesis type |
+| 5 | Appropriate statistical test |
+| 6 | Interpretation of results |
+
+You need to know the following test selection framework:
+
+| Design | Parametric | Non-parametric |
+|---|---|---|
+| Between-participants | Independent *t*-test |  |
+| Within-participants | Paired *t*-test |  |
+| Correlational | Pearson's *r* | Spearman's rho |
+
+### Assessment Criteria
+
+- Correct identification of designs, variables, and hypotheses
+- Appropriate test selection with understanding of the decision framework
+- Accurate interpretation of statistical results
+
+### Curriculum Connection
+
+| Week | Topic | How It Helps |
+|---|---|---|
+| 11 | The Big Picture | Design framework overview |
+| 12 | Variables & Hypotheses | IVs, DVs, hypothesis types |
+| 13 | Experimental Design | Between/within/matched designs |
+| 14 | *t*-tests | Paired and independent tests |
+| 15 | Correlation & Regression | Correlational design and tests |
+| 16 | Non-parametric Tests | Mann-Whitney, Wilcoxon, Spearman's |
+| 17 | Revision & Integration | Pulling it all together |
+
+### How to Prepare
+
+1. **Complete weekly self-assessment activities** — they mirror the exam format exactly
+2. **Link designs to relevant tests**: Design → Variables → Hypothesis → Test → Interpret
+3. **Don't memorise — understand** the logic behind test selection
+4. **Work through scenarios** with a study buddy — explain *why* you'd choose each test
+5. **Run the example MCQ in exam conditions** you will be able to do pretty well, just by attending class
+
+### FAQs
+
+**Q: Is it open-book?**
+A: No. Closed-book, no notes, no collaboration.
+
+**Q: Do I need to calculate anything?**
+A: No. No calculations required.
+
+**Q: What should I bring?**
+A: A pen (not pencil). Nothing else is needed.
+
+**Q: How many Investigations will there be?**
+A: The exact number may vary, but expect several scenarios plus additional standalone questions.
+
+**Q: Will there be negative marking?**
+A: No. Unanswered or incorrect questions score zero — there is no penalty for guessing.
+
+### Common Pitfalls
+
+- Confusing between-participants and within-participants designs
+- Selecting the wrong t-test variety for the design
+- Misidentifying the IV and DV (read the scenario carefully)
+- Rushing through scenarios without reading all the details
+- Forgetting that correlational designs do not have an IV
+
+<!-- ============================================================ -->
+<!-- ASSESSMENT 3: EDS ASSIGNMENT                                  -->
+<!-- ============================================================ -->
+
+```{=typst}
+#section-divider("EDS Assignment", subtitle: "Assessment 3 · 20%")
+```
+
+### At a Glance
+
+| | |
+|---|---|
+| **Weight** | 20% |
+| **Deadline** | Friday 20 March 2026, 12 noon |
+| **Submission** | Via Moodle |
+| **Format** | 1-2 hrs open book Worked data interpretation assignment |
+| **Pass mark** | 50% |
+
+### The Task
+
+You will receive a research scenario with **pre-generated results**. Your task is to interpret the output and demonstrate your understanding of the statistical analysis. No coding or hand calculations required.
+
+### Structure & Marking
+
+**Section A: Statistical Mechanics (50 marks)**
+
+| Question | What You Do | Marks |
+|---|---|---|
+| 1 | State the researcher's hypothesis | 5 |
+| 2 | Identify design type, IV, DV, data type | 16–20 |
+| 3 | Interpret R descriptive output and report in APA format | 10 |
+| 4 | Interpret R `t.test()` output and justify test choice | 15 |
+| 5 | Write a full APA results paragraph from R output | 5 |
+| 6 | Error detection — identify what's wrong with a given analysis | 5 |
+
+**Section B: Methods and Theory (50 marks)**
+
+| Question | What You Do |
+|---|---|
+| 7 | Suggest two methodological improvements |
+| 8 | Discuss individual differences or extensions |
+| 9 | Propose a more ecologically valid alternative |
+
+### Assessment Criteria
+
+- Correct identification of design, variables, and hypothesis
+- Accurate reading and reporting of R output in APA format
+- Sound justification for test selection (not just the right answer — explain *why*)
+- Ability to detect errors and improvements in research
+- Thoughtful, specific, and feasible methodological suggestions
+
+### Curriculum Connection
+
+| Week | Topic | How It Helps |
+|---|---|---|
+| 14 | *t*-tests in R | Reading `t.test()` output, APA reporting |
+| 15 | Correlation in R | Interpreting correlation output |
+| 12–13 | Design & Variables | Identifying design features from scenarios |
+
+### How to Prepare
+
+1. **Practice interpreting R output** from lab exercises (Weeks 12–16)
+2. **Learn APA format** for reporting *t*-tests and correlations
+3. **Understand test selection logic** — *why* a particular test, not just which one
+4. **Practice figure interpretation** — look at visuals and use these to inform practice
+5. **For Section B**, practice writing about methodology — think improvements, not just descriptions
+
+### FAQs
+
+**Q: Do I need to write R code or do calculations?**
+A: No. All R output is provided. You need only interpret it.
+
+**Q: How long should Section B answers be?**
+A: Questions 7 and 8 can be concise (a solid paragraph each). Question 9 requires a little bit more usually.
+
+**Q: Is there punitive marking?**
+A: No. No punitive marking — if you get something wrong it doesn't reduce marks elsewhere. Think about all assessments as opportunities to win marks!
+
+### Common Pitfalls
+
+- Reporting the wrong or imprecise numbers - you only have a couple of results to report, so be super-careful
+- Forgetting to include all elements required for APA reporting of test results
+- Thinking something is so obvious you don't need to include it. Just show your thinking
+- In Section B, suggesting vague improvements ("use more participants") instead of specific ones
+- Not answering all the questions
+
+<!-- ============================================================ -->
+<!-- ASSESSMENT 4: RESEARCH REPORT                                 -->
+<!-- ============================================================ -->
+
+```{=typst}
+#section-divider("Research Report", subtitle: "Assessment 4 · 40%")
+```
+
+### At a Glance
+
+| | |
+|---|---|
+| **Weight** | 40% |
+| **Deadline** | Date TBC mid-late April |
+| **Submission** | Via Moodle |
+| **Word count** | 2,500 words (±10%) |
+| **Format** | Individual lab report in APA format |
+
+### The Task
+
+Write an individual research report based on your **group project data**. While your group collects data together, the report is written and submitted individually — each group member produces their own independent write-up.
+
+### Structure & Marking
+
+Your report should follow standard APA format:
+
+| Section | What to Include |
+|---|---|
+| **Title Page** | Informative title, your name and student number |
+| **Abstract** | ~150 words summarising the study |
+| **Introduction** | Background, rationale, hypothesis |
+| **Method** | Design, Participants, Materials, Procedure |
+| **Results** | Descriptives, inferential tests, effect sizes |
+| **Discussion** | Interpretation, limitations, future directions |
+| **References** | APA format |
+
+**Statistical reporting in APA format:**
+
+- **t-test**: *t*(df) = X.XX, *p* = .XXX, *d* = X.XX
+- Include 95% confidence intervals
+
+### Assessment Criteria
+
+- Clarity and structure of writing
+- Appropriate use of APA format throughout
+- Quality and accuracy of statistical reporting
+- Interpretation and discussion of findings
+- Critical evaluation and suggestions for future research
+
+### Curriculum Connection
+
+| Week | Topic | How It Helps |
+|---|---|---|
+| 12–15 | Statistics & R labs | Results section: descriptives, CIs, tests |
+| 16–17 | Methods & Introduction | Writing these sections with proper structure |
+| 18–19 | Introduction continued | Building a literature-based rationale |
+| 20 | Discussion | Interpreting findings and evaluating limitations |
+
+### How to Prepare
+
+1. **Start writing early** — draft your Method section as soon as your group finalises the design
+2. **Keep notes during data collection** — you'll need procedural details for the Method
+3. **Use lab exercises as templates** for your Results section formatting
+4. **Read published papers** in your topic area for Introduction and Discussion models
+5. **Leave time for revision** — the Easter break is your writing window, not your starting point
+
+### FAQs
+
+**Q: Can group members have the same Introduction?**
+A: No. Each report must be entirely your own work. You may cite the same sources, but the writing must be independent.
+
+**Q: What if our group project doesn't produce significant results?**
+A: That's fine. Non-significant results are just as valid. Focus on accurate reporting and thoughtful discussion of what the findings mean (or don't mean).
+
+**Q: Do I need to include raw data?**
+A: No. Report summary statistics and inferential test results. Raw data is not required. Gordon will supply your data output to you.
+
+**Q: How many references do I need?**
+A: There is no set number, but a good Introduction typically draws on 3-5 relevant sources. If unsure - discuss this with your lab instructor or Gordon
+
+**Q: Does the word count include the reference list?**
+A: No. The 2,500-word limit covers the main text (Abstract through Discussion including in-text citations!). Title page and Reference list are excluded.
+
+### Common Pitfalls
+
+- Submitting a report that reads identically to a group member's (this is an academic integrity issue)
+- Leaving the entire write-up to the Easter break without any earlier drafting
+- Reporting results without effect sizes or confidence intervals
+- Writing a Discussion that just repeats the Results instead of interpreting them
+- Not linking back to the hypothesis in the Discussion
+- Forgetting APA formatting conventions (italics for statistics, proper citation style)
+
+<!-- ============================================================ -->
+<!-- BACK MATTER                                                   -->
+<!-- ============================================================ -->
+
+```{=typst}
+#section-divider("Reference", subtitle: "Timelines, Policies & Support")
+```
+
+## Academic Integrity & AI Policy
+
+All assessments must be your own work:
+
+- **Research Plan**: Individual submission based on a set topic
+- **MCQ Exam**: Closed-book, no collaboration
+- **EDS Assignment**: Individual open-book, no collaboration on answers
+- **Research Report**: Individual write-up, even though data comes from your group
+
+**AI Policy:** Using AI tools to generate your submitted work is not permitted. You may use AI to help understand concepts, but all submitted work must be written by you.
+
+If you are unsure whether something constitutes academic misconduct, ask before submitting — not after.
+
+## Support & Resources
+
+| Resource | Details |
+|---|---|
+| **Lectures** | Core concepts, worked examples, exam preparation |
+| **Labs** | Hands-on practice and group discussions |
+| **Office hours** | Individual or small-group questions (check Moodle for times) |
+| **Moodle VLE** | Assessment briefs, practice materials, discussion forum |
+| **Course website** | Lecture slides, lab activities, readings |
+
+Practice versions of all assessments will be provided with full support. We cannot give marks for practice attempts, but we will work through examples together in class.
+
+```{=typst}
+#v(1fr)
+#align(center)[
+  #line(length: 60%, stroke: 1pt + luma(200))
+  #v(8pt)
+  #text(size: 9pt, fill: luma(120))[End of Assessment Handbook · PS50008A · Spring 2026]
+]
+```
