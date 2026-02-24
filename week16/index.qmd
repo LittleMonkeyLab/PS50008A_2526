@@ -12,10 +12,10 @@ date: "2026-02-23"
 Your **[Research Plan](../assessments/research-plan.qmd)** is due **Friday 27 February 2026, 12 noon**. Submit via Learn. This is your first assessed piece of coursework for the module.
 :::
 
-**This week**: Learn how to structure an APA-style research report and how to write a Method section (using your Research Plan as a worked example). We also launch the group research project — a **separate study** from your Research Plan — which will become your [Research Report](../assessments/research-report.qmd) (due 1 April).
+**This week**: Learn how to structure an APA-style research report and how to write a Method section (using your Research Plan as a worked example). We also launch the group research project — a **separate study** from your Research Plan — which will become your [Research Report](../assessments/research-report.qmd) (due mid-late April).
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143 (2 hours)
-**Lab**: Thursday 10:00-12:00 WB304A and WB304B
+**Lab**: Thursday 10:00-12:00 WB304A
 
 ## Learning Objectives
 
@@ -39,15 +39,15 @@ By the end of this week, you will be able to:
 ### Looking Ahead to the Research Report
 - Understand the full timeline from Research Plan to Research Report
 - See how group project work feeds into an individual write-up
-- Plan your approach to the Research Report (due Friday 1 April)
+- Plan your approach to the Research Report (due mid-late April)
 
 ## Before the Lecture
 
 ::: {.callout-important}
 ## Required Preparation
 1. **Review your Research Plan draft** — bring it to the lecture for reference
-2. **Read the [Research Plan assessment brief](../assessments/research-plan.qmd)** — make sure you understand what's required
-3. **Look at the [Research Report assessment brief](../assessments/research-report.qmd)** — see where this is all heading
+2. **Read the [Research Plan assessment brief](../assessments/assessment-handbook.qmd)** — make sure you understand what's required
+3. **Look at the [Research Report assessment brief](../assessments/assessment-handbook.qmd)** — see where this is all heading
 :::
 
 ## The Big Picture
@@ -67,8 +67,8 @@ The lecture walks through the full anatomy of an APA lab report, using your Rese
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | APA report structure, Method section writing, group project introduction |
 | [Lecture Reading](lecture/reading.qmd) | Guide to APA report sections |
-| [Research Plan Brief](../assessments/research-plan.qmd) | Full assessment brief — due this Friday |
-| [Research Report Brief](../assessments/research-report.qmd) | Final assessment brief — due 1 April |
+| [Research Plan Brief](../assessments/assessment-handbook.qmd) | Full assessment brief — due this Friday |
+| [Research Report Brief](../assessments/assessment-handbook.qmd) | Final assessment brief — due mid-late April |
 | [Lab Reading](lab/reading.qmd) | Introduction to project literature review |
 | [Lab Activity](lab/activity.qmd) | Group formation and literature review |
 
@@ -122,17 +122,17 @@ This is your first assessed submission. Make sure to:
 - Include all required sections: hypothesis, method (design, participants, materials, procedure), draft results
 - Justify your choices throughout — show you understand *why*, not just *what*
 - Use terminology from Weeks 12-15
-- See the [full assessment brief](../assessments/research-plan.qmd) for details
+- See the [full assessment brief](../assessments/assessment-handbook.qmd) for details
 :::
 
 This week's content directly supports your assessments:
 
 | Assessment | Connection |
 |------------|------------|
-| **[Research Plan](../assessments/research-plan.qmd)** | Due this week! The lecture shows you exactly how to structure it |
+| **[Research Plan](../assessments/assessment-handbook.qmd)** | Due this week! The lecture shows you exactly how to structure it |
 | **MCQ Exam** | APA conventions, research design terminology |
 | **EDS Assignment** | Method section understanding, APA reporting |
-| **[Research Report](../assessments/research-report.qmd)** | A different study based on your group project; this week's lecture covers the full report structure you'll need |
+| **[Research Report](../assessments/assessment-handbook.qmd)** | A different study based on your group project; this week's lecture covers the full report structure you'll need |
 
 ## Lab Focus: Group Formation & Literature Review
 
@@ -146,8 +146,8 @@ This is where you form your project groups (3-4 students). If you do not attend 
 This week's lab focuses on launching your Research Report project. You will:
 
 - **Form your project groups** (3-4 students)
-- Receive your **project topic** (one per group)
-- Begin a **literature review** — searching PsycINFO and Google Scholar
+- Identify **project topic** (one per group)
+- Find a key paper
 - Start generating an **experimental hypothesis** based on previous findings
 - Begin thinking about your **research design**
 :::
@@ -164,8 +164,8 @@ Your Research Plan this week is step one of a journey toward the Research Report
 | Week 19 | Data collection |
 | Week 20 | Report writing workshop |
 | Easter break | Individual write-up |
-| **Friday 1 April** | **Research Report due (2,000 words, 12 noon)** |
+| **Mid-late April** | **Research Report due (2,500 words, 12 noon)** |
 
 ## What's Next?
 
-**Week 17**: Interpretation & Credibility — p-hacking, HARKing, and the replication crisis. Plus MCQ exam preparation. Your project groups will finalise methodology.
+**Week 17**: MCQ exam preparation. Your project groups will finalise methodology.

@@ -44,9 +44,9 @@ By the end of this lecture you will be able to:
 ::: callout-important
 ## Research Plan Due This Friday
 
-**Friday 27 February, 12 noon** — Submit via Learn
+**Friday 27 February, 12 noon** — Submit via Learn.gold
 
-[View the full assessment brief](../../assessments/research-plan.qmd)
+[View the full assessment brief](../../assessments/assessment-handbook.qmd)
 :::
 ::::
 
@@ -113,9 +113,11 @@ Think of it as telling a **story** — background, what you did, what you found,
 
 ## The Hourglass Shape
 
-![Alt text](../images/APA_hourglass.png)
+![The hourglass](APA_hourglass.png){width="800"}
 
-::: fragment
+## Details
+
+::: {.fragment .smaller}
 **Introduction** — Broad to narrow
 
 -   Start with the big picture
@@ -123,14 +125,14 @@ Think of it as telling a **story** — background, what you did, what you found,
 -   End with your hypothesis
 :::
 
-::: fragment
+::: {.fragment .smaller}
 **Method & Results** — The narrow middle
 
 -   Precise and specific
 -   Exactly what you did and found
 :::
 
-::: fragment
+::: {.fragment .smaller}
 **Discussion** — Narrow to broad
 
 -   Start with your findings
@@ -581,15 +583,15 @@ The Research Plan practises the skills. The Research Report applies them to real
 ::: definition-box
 **Assessment 4: Research Report**
 
--   **Due**: Friday 1 April 2026, 12 noon
--   **Word count**: 2,000 words
+-   **Due**: mid-late April
+-   **Word count**: 2,500 words
 -   **Format**: Individual APA-style lab report
 -   **Weight**: 40% of module mark (double-weighted)
 -   **Based on**: Your group project data (a **different** study from your Research Plan)
 :::
 
 ::: fragment
-[View the full assessment brief](../../assessments/research-report.qmd)
+[View the full assessment brief](../../assessments/assessment-handbook.qmd)
 :::
 
 ## How It Works
@@ -600,7 +602,7 @@ The Research Plan practises the skills. The Research Report applies them to real
 3.  **Week 19**: Collect data as a group
 4.  **Week 20**: Analyse data, begin writing
 5.  **Easter**: Write your individual Research Report
-6.  **1 April**: Submit (12 noon via Learn)
+6.  **mid-late April**: Submit
 :::
 
 ## Individual Report, Group Data
@@ -621,14 +623,14 @@ While data comes from your group project, the Research Report is an **individual
 ## The Timeline
 
 | When | What happens | What you'll write |
-|----------------|-----------------------|---------------------------------|
+|------------------|-----------------------|--------------------------------|
 | **Wk 16 (now)** | Form groups, receive topic, begin lit review | — |
 | **Wk 17** | Finalise methodology and design | Introduction drafting |
 | **Wk 18** | Develop procedure and materials | Method section |
 | **Wk 19** | Collect data | Results section |
 | **Wk 20** | Analyse data, report writing workshop | Discussion section |
 | **Easter** | Individual write-up | Pull it all together |
-| **1 April** | Submit final report | 12 noon via Learn |
+| **Mid-late April** | Submit final report |  |
 
 # Your Research Project {background-color="#275882"}
 
@@ -648,7 +650,7 @@ If you do not attend and have not signalled your intent to participate, you will
 
 ::: incremental
 1.  **Form groups** — find 2-3 other people to work with
-2.  **Receive your project topic** — one topic per group
+2.  **Identify your project topic** — one topic per group
 3.  **Begin your literature review** — search PsycINFO and Google Scholar
 4.  **Start generating a hypothesis** — based on what you find
 5.  **Begin thinking about design** — how will you test it?
@@ -656,15 +658,15 @@ If you do not attend and have not signalled your intent to participate, you will
 
 ## Project Timeline
 
-| Week | Group milestone |
-|----|----|
-| **16 (now)** | Form groups, begin literature review |
-| **17** | Finalise methodology and design |
-| **18** | Develop procedure and materials, submit documents <!--# include mention of ethics --> |
-| **19** | Collect data, upload data <!--# make clear that Gordon will analyse --> |
-| **20** | Receive results, begin write-up |
-| Easter | Individual report writing |
-| **1 April** | Research Report due |
+| Week         | Group milestone                                    |
+|--------------|----------------------------------------------------|
+| **16 (now)** | Form groups, begin literature review               |
+| **17**       | Finalise methodology and design                    |
+| **18**       | Develop procedure and materials, submit documents  |
+| **19**       | Collect data, upload data                          |
+| **20**       | Receive results, begin write-up                    |
+| Easter       | Individual report writing                          |
+| **1 April**  | Research Report due                                |
 
 # Summary {background-color="#275882"}
 
@@ -675,7 +677,7 @@ If you do not attend and have not signalled your intent to participate, you will
 -   Your Research Plan **practises Method writing** — the same structure applies to your Research Report (on a different topic)
 -   Use **past tense** for Method/Results, **present tense** for established findings
 -   **Italicise** statistical symbols; no leading zero for *p* and *r*
--   Your **Research Report** is a new study with your group — builds week by week until 1 April
+-   Your **Research Report** is a new study with your group — builds week by week
 :::
 
 ## This Week's Priorities
@@ -685,7 +687,7 @@ If you do not attend and have not signalled your intent to participate, you will
 :::
 
 ::: step-2
-**Thursday (lab)**: Form your project group and begin literature review for your Research Report <!--# need to support this with Lab Report examples and literature links -->
+**Thursday (lab)**: Form your project group and begin literature review for your Research Report
 :::
 
 ::: step-3
@@ -700,8 +702,6 @@ Questions?
 
 ::: fragment
 **Research Plan due Friday 27 February, 12 noon**
-
-[Assessment brief](../../assessments/research-plan.qmd) \| [Research Report brief](../../assessments/research-report.qmd)
 :::
 
 Bence will see you in the lab on Thursday!

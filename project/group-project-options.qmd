@@ -386,6 +386,8 @@ made with <span class="tool-pill quarto">Quarto</span> + <span class="tool-pill 
 <div class="intro-box">
 <strong>How to use this guide:</strong> Each project below has a <strong>between-subjects</strong> and <strong>within-subjects</strong> variant. All use a two-condition design testable with an independent or paired t-test. All are designed to be completable in one lab session (~20 participants, ~5–10 min per participant) with minimal/free materials.<br><br>
 <strong>These study plans show the shape and size of a good group project!</strong> You do not need to get any more complex than this, and marks are <strong>NOT</strong> related to complexity — usually, the other way around!
+
+📚 **Suggested readings for all projects** are available in the <a href="https://learn.gold.ac.uk/mod/folder/view.php?id=1795121" target="_blank"><strong>Project Articles folder on Learn.gold</strong></a>.
 </div>
 
 # Projects
@@ -835,5 +837,25 @@ Erwin, P. G. (2006). Children's evaluative stereotypes of masculine, feminine, a
 | **G** | Social facilitation | Social | Small–medium | Low (confederates) |
 | **H** | Anchoring & estimates | Social/Cognitive | Large | Very low (paper only) |
 | **I** | Name stereotypes & competence | Social | Small–medium | Very low (paper only) |
+
+</div>
+
+# Suggested Readings
+
+These resources are just to help you get started — there are no doubt more useful and more current papers out there. All articles are available in the [**Project Articles folder on Learn.gold**](https://learn.gold.ac.uk/mod/folder/view.php?id=1795121){target="_blank"}.
+
+<div class="summary-table">
+
+| Project | Suggested Readings |
+|:-------:|:-------------------|
+| **A** | Hess et al. (2000), Willis & Todorov (2006) |
+| **B** | Salamé & Baddeley (1989), Perham & Vizard (2011) |
+| **C** | Dzulkifli & Mustafar (2013), Kuhbandner & Pekrun (2013) |
+| **D** | Bower (1970), Clark & Paivio (1987) |
+| **E** | Ward et al. (2017), Thornton et al. (2014) |
+| **F** | Roediger & Karpicke (2006), Rowland (2014) |
+| **G** | Zajonc (1965), Bond & Titus (1983) |
+| **H** | Furnham & Boo (2011), Tversky & Kahneman (1974) |
+| **I** | Bertrand & Mullainathan (2004), Erwin (2006) |
 
 </div>

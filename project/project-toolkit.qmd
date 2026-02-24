@@ -351,6 +351,8 @@ details.doc-card .doc-body h4 {
 
 <div class="intro-box">
 <strong>What is this page?</strong> This is your one-stop shop for preparing your group project. It contains a <strong>week-by-week timeline</strong>, a <strong>document checklist</strong> with guidance on each document, a complete <strong>worked example</strong> study for reference, and <strong>blank templates</strong> you can download and adapt for your own project. Bookmark this page — you'll come back to it often.
+
+📚 **Suggested readings for all projects** are available in the <a href="https://learn.gold.ac.uk/mod/folder/view.php?id=1795121" target="_blank"><strong>Project Articles folder on Learn.gold</strong></a>.
 </div>
 
 # Week-by-Week Timeline

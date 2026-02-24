@@ -21,7 +21,7 @@ format-links:
 | Research Plan | 20% | Fri 27 Feb 2026, 12 noon | 16 |
 | MCQ Exam | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
 | EDS Assignment | 20% | Fri 20 Mar 2026, 12 noon | 20 |
-| Research Report | 40% | Fri 1 Apr 2026, 12 noon | Post-term |
+| Research Report | 40% | mid-late April | Post-term |
 
 Full details of all assessments are in the [Assessment Handbook](assessments/assessment-handbook.qmd).
 
@@ -61,7 +61,7 @@ Examples of all assessments will be provided with plenty of support. We cannot g
 The group project is **not separately assessed** but feeds into two assessments:
 
 - **Research Plan** (due Week 16): Based on a choice of research ideas - you provide a research plan.
-- **Research Report** (due 1 Apr, post-term): Individual write-up of group project data
+- **Research Report** (due mid-late April, post-term): Individual write-up of group project data
 
 See the [Assessment Handbook](assessments/assessment-handbook.qmd) for full briefs and marking criteria.
 
@@ -76,7 +76,7 @@ See the [Assessment Handbook](assessments/assessment-handbook.qmd) for full brie
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends Week 20) |
 | Easter | Individual report writing |
-| Post-term | **Research Report due** Friday 1 April |
+| Post-term | **Research Report due** mid-late April |
 
 ::: {.callout-important}
 ## Individual Responsibility
