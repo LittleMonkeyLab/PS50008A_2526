@@ -1,5 +1,5 @@
 ---
-title: "Group Formation & Literature Review"
+title: "Group Formation & Topic Selection"
 subtitle: "PS50008A Week 16 Lab Activity"
 author: "Gordon Wright"
 date: "2026-02-26"
@@ -20,98 +20,243 @@ library(webexercises)
 library(knitr)
 ```
 
-## The Road Ahead
+## What This Lab Is About
 
-Before we get started on today's lab, let's take stock of where you are and what's coming up between now and the end of term.
+This isn't a gruelling lab — but it's an important one. By the end of today you need to have done three things:
 
 ::: {.callout-important}
-## Your Four Assessments
+## Today's Three Goals
 
-| Assessment | Weight | Deadline | Status |
-|---|---|---|---|
-| **Research Plan** | 20% | Fri 27 Feb, 12 noon | **Due tomorrow!** |
-| **MCQ Exam** | 20% | Wed 11 Mar, in lecture | Week 18 |
-| **EDS Assignment** | 20% | Fri 20 Mar, 12 noon | Week 19 |
-| **Research Report** | 40% | Fri 1 Apr, 12 noon | Post-Easter |
-
-All submissions are via Learn. All written submissions are due at **12 noon**.
+1. **Form your group** (3–4 is ideal, but more or fewer is fine — the key thing is that you join a group)
+2. **Choose your project topic** (from the example list, or propose your own)
+3. **Find a key paper** — something to anchor your methodology, procedure, or hypothesis to
 :::
 
-### Week-by-Week: What Happens When
+That's it. Get those three things done and you're set up for the rest of the term.
 
-This is the plan for the rest of the term. Keep this somewhere you can refer back to it.
+---
 
-| Week | What's Happening in Class | Assessment Events | What Your Group Needs to Do |
-|------|--------------------------|-------------------|----------------------------|
-| **16 (this week)** | APA report writing & research project launch | **Research Plan due Fri 27 Feb** | Form groups, receive topic, begin lit review |
-| **17** (2–6 Mar) | Credibility & replication crisis | MCQ revision begins | Finalise methodology and research design |
-| **18** (9–13 Mar) | MCQ Exam week | **MCQ Exam Wed 11 Mar** | Develop procedure and materials; pilot run |
-| **19** (16–20 Mar) | Data analysis | **EDS Assignment due Fri 20 Mar** | **Collect data** |
-| **20** (23–27 Mar) | Report writing workshop | — | Analyse data, begin drafting report |
-| Easter break | — | — | Write your individual Research Report |
-| **1 April** | — | **Research Report due 12 noon** | — |
+## The Road Ahead
 
-### Quick Check: Do You Know What's Coming?
+Before we dive in, here's where everything sits between now and the end of term.
+
+### Your Four Assessments
+
+| Assessment | Weight | Deadline |
+|---|---|---|
+| **Research Plan** | 20% | Fri 27 Feb, 12 noon — **due tomorrow!** |
+| **MCQ Exam** | 20% | Wed 11 Mar (~1 hour, in lecture) |
+| **EDS Assignment** | 20% | Fri 20 Mar, 12 noon (~1 hour) |
+| **Research Report** | 40% | Mid–late April, 12 noon |
+
+### Your Group Project Milestones
+
+| Week | Lab Focus | Milestone |
+|------|-----------|-----------|
+| **16 (now)** | Group formation, topic selection | Group registration |
+| **17** | Finalising methodology | Methodology agreed |
+| **18** | Finalising procedure, piloting with Gordon | Procedure complete |
+| **19** | Data collection | Data collected |
+| **20** | Write-up support | Report drafting begins |
+
+### Quick Check
 
 **1. Which assessment is due tomorrow?**
 
 `r mcq(c(answer = "Research Plan", "MCQ Exam", "EDS Assignment", "Research Report"))`
 
-**2. When is the MCQ Exam?**
-
-`r mcq(c("Friday 27 February", answer = "Wednesday 11 March", "Friday 20 March", "Friday 1 April"))`
-
-**3. Which assessment is worth the most?**
+**2. Which assessment is worth the most?**
 
 `r mcq(c("Research Plan (20%)", "MCQ Exam (20%)", "EDS Assignment (20%)", answer = "Research Report (40%)"))`
 
-**4. When does your group need to collect data?**
+**3. When does your group need to collect data?**
 
 `r mcq(c("This week", "Week 17", "Week 18", answer = "Week 19"))`
 
 ---
 
-## What Your Group Does Together vs. Individually
+## Part 1: Form Your Group
 
-This is important — make sure you understand the distinction.
+### Why This Matters
+
+Your group will work together for the rest of the term — choosing a topic, designing a study, collecting data, and sharing results. Each person then writes their own individual Research Report (2,000 words, due mid–late April).
+
+**Group size:** 3–4 students is ideal, but larger or smaller groups are fine. The most important thing is that **everyone joins a group**.
 
 ::: {.callout-warning}
-## Group vs. Individual Work
-
-**Together (Weeks 16–20):** Your group designs the study, creates materials, collects data, and shares the raw dataset.
-
-**Individually (Easter):** Each person writes their own 2,500-word Research Report using the group's data. Same data, different reports. You must NOT share written drafts with each other.
+## Group Allocation
+Students not part of a registered group this week will be **allocated to a group** if they emerge down the line. So please register today — even if your plans are still forming.
 :::
 
-**5. The Research Report is:**
+### Register Your Group
+
+Once you've found your people, **register your group using this form**:
+
+::: {.callout-important}
+## Group Registration Form
+
+**[Register your group here](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u)**
+
+Enter your group members' names and any preliminary topic ideas. You can change your topic later — the important thing is to register.
+:::
+
+### Group Setup Checklist
+
+::: {.callout-note}
+## Do These Now
+- [ ] Exchange contact details (email, phone, WhatsApp)
+- [ ] Set up a group chat
+- [ ] Agree on how you're going to work together
+- [ ] Familiarise yourself with the weekly milestones (see table above)
+:::
+
+### Together vs. Individually
+
+**Together (Weeks 16–20):** Choose topic, find papers, design the study, create materials, collect data, review results.
+
+**Individually (after term):** Write your own 2,000-word Research Report using the group's shared data. Same data, different reports. **Do NOT share written drafts** — that's academic misconduct.
+
+**1. The Research Report is:**
 
 `r mcq(c("A group submission", answer = "An individual submission using group data", "Optional", "Due before Easter"))`
 
-**6. You should share with your group members:**
+**2. You should share with your group members:**
 
 `r mcq(c("Your written report draft", answer = "Data collection responsibilities and raw data", "Your introduction paragraphs", "Your reference list only"))`
 
-**7. If two group members submit very similar reports, this is:**
+**3. If two group members submit very similar reports, this is:**
 
 `r mcq(c("Expected since they used the same data", "Fine as long as the data is the same", answer = "An academic misconduct concern — reports must be independently written", "Only a problem if they have the same hypothesis"))`
 
-True or False: Every group member must write their own report, even though the data is shared. `r torf(TRUE)`
+---
 
-True or False: You can copy your group member's Introduction as long as you change a few words. `r torf(FALSE)`
+## Part 2: Choose Your Topic
+
+### What Makes a Good Topic?
+
+Your project needs to be:
+
+- **Testable with a t-test** — either a between-groups comparison (independent samples) or a within-subjects comparison (repeated measures) across two conditions
+- **Feasible in scale** — your group of 3–4 should be able to run ~15–20 participants in a couple of hours. Think short tasks: memorise 20 words, 2-minute distractor, 2-minute recall — that sort of size
+- **Ethically straightforward** — no deception that could cause distress, no sensitive topics, nothing requiring specialist equipment
+
+### Option 1: Choose from the Example List
+
+I've put together **9 fully scoped project options**, all ready to go. You're welcome to pick one directly.
+
+**[View the Project Options](https://littlemonkeylab.github.io/PS50008A_2526/project/group-project-options.html)**
+
+Here's a quick comparison:
+
+| Project | Topic | Domain | Expected Effect | Materials |
+|---------|-------|--------|----------------|-----------|
+| A | Smiling & approachability | Social | Medium–large | Low (photos + paper) |
+| B | Background music & recall | Cognitive | Medium | Low (speaker + phone) |
+| C | Colour & memory | Cognitive | Small–medium | Low (colour printer) |
+| D | Imagery vs repetition | Cognitive | Medium–large | Very low (paper only) |
+| E | Phone presence & attention | Social/Cognitive | Small–medium | Very low (own phones) |
+| F | Testing effect on learning | Cognitive | Medium–large | Low (paper only) |
+| G | Social facilitation | Social | Small–medium | Low (confederates) |
+| H | Anchoring & estimates | Social/Cognitive | Large | Very low (paper only) |
+| I | Name stereotypes & competence | Social | Small–medium | Very low (paper only) |
+
+### Option 2: Propose Your Own
+
+If none of the examples appeal, you can propose your own topic. You'll need to:
+
+1. **Identify a clear IV with two levels** (e.g., music vs silence, phone visible vs hidden)
+2. **Identify a measurable DV** (e.g., number of words recalled, response time, rating score)
+3. **Find at least one paper** to anchor your hypothesis and methodology to
+4. **Check it's ethically straightforward** — if in doubt, ask Gordon
+
+**4. A good project topic for this module must be testable with:**
+
+`r mcq(c("Any statistical test", "A correlation", answer = "A two-group t-test (between or within subjects)", "An ANOVA"))`
+
+**5. In a between-subjects design:**
+
+`r mcq(c("Each participant does all conditions", answer = "Different participants are in each condition", "There is no control group", "The IV is measured, not manipulated"))`
+
+**6. In a within-subjects design:**
+
+`r mcq(c(answer = "Each participant does all conditions", "Different participants are in each condition", "Only one condition is used", "The DV changes between groups"))`
 
 ---
 
-### What You'll Get Back: Data Analysis I
+## Part 3: Find a Key Paper
 
-After your group collects data in Week 19, you'll receive a one-page analysis summary. Here's what it will look like — depending on whether your group has a between-subjects or within-subjects design:
+### Why You Need One
+
+Every project needs a foundation — a paper that gives you:
+
+- A **concept or theory** to base your hypothesis on
+- An **operationalisation** you can adapt (how did they measure the DV? What stimuli did they use?)
+- A **procedure** you can build from or simplify
+
+A single well-chosen paper is more valuable than three vaguely related ones.
+
+### Where to Look
+
+**Starting-point papers** are available on Learn for each of the 9 example topics:
+
+- **[Project papers folder on Learn](https://learn.gold.ac.uk/mod/folder/view.php?id=1795121)** — a couple of papers per topic. They're not all perfect, but they offer a starting point for operationalisation, background, or methodology.
+
+These may not be the ideal paper for your specific angle — a quick literature search may turn up something better:
+
+::: {.callout-tip}
+## Quick Search Tips
+- **PsycINFO** (via [Goldsmiths Library](https://www.gold.ac.uk/library/)) — psychology-specific, peer-reviewed
+- **Google Scholar** (scholar.google.com) — broader coverage, citation tracking
+- Start with your key variables as search terms
+- Use **quotation marks** for exact phrases (e.g., `"background music" AND recall`)
+:::
+
+If your group has chosen its own topic (not from the list), finding a source paper is essential — it's what your methodology and hypothesis will be built on.
+
+**1. When you first find a paper, you should read:**
+
+`r mcq(c("The entire paper carefully", answer = "The abstract first, to check relevance", "Only the results", "The reference list"))`
+
+**2. The Method section of a relevant paper helps you because:**
+
+`r mcq(c("You can copy their procedure", answer = "It shows how similar studies have been designed and measured the DV", "It tells you what results to expect", "It's not useful for your project"))`
+
+True or False: A paper published in 2010 can still be a useful source if it's highly cited and relevant. `r torf(TRUE)`
+
+True or False: Wikipedia is an acceptable source for your Research Report reference list. `r torf(FALSE)`
+
+---
+
+## Project Resources
+
+All the documents and templates you need are in one place:
+
+| Resource | What it is |
+|----------|------------|
+| **[Project Options](https://littlemonkeylab.github.io/PS50008A_2526/project/group-project-options.html)** | 9 example topics, fully scoped |
+| **[Project Toolkit](https://littlemonkeylab.github.io/PS50008A_2526/project/project-toolkit.html)** | Overview of each project with more detail |
+| **[Papers Folder (Learn)](https://learn.gold.ac.uk/mod/folder/view.php?id=1795121)** | Starting-point papers for each topic |
+| **[Template Documents (Learn)](https://learn.gold.ac.uk/mod/folder/view.php?id=1795124)** | Templates you need to complete, with worked examples |
+| **[Project Directory (Learn)](https://learn.gold.ac.uk/course/section.php?id=588322)** | Full project section on Learn |
+
+::: {.callout-note}
+## OneDrive Group Folder
+Each group will be given a shared folder on OneDrive. All your project documents and materials must be submitted there as you go.
+:::
+
+---
+
+## What You'll Get Back: Data Analysis I
+
+After your group collects data in Week 19, I'll run the analysis and return a one-page summary like this — personalised to your group:
 
 ::: {.panel-tabset}
 
-#### Between-Subjects Version
+### Between-Subjects Example
 
 ![Preview of analysis return for between-subjects groups](analysis-preview-between.png){width="90%"}
 
-#### Within-Subjects Version
+### Within-Subjects Example
 
 ![Preview of analysis return for within-subjects groups](analysis-preview-within.png){width="90%"}
 
@@ -119,235 +264,21 @@ After your group collects data in Week 19, you'll receive a one-page analysis su
 
 ::: {.callout-tip}
 ## You Don't Run the Analysis
-I provide the statistical output — your job in the Research Report is to **interpret and discuss** these results, not to generate them. The analysis return includes descriptive statistics, the t-test result, confidence interval, effect size, and visualisations.
+I provide the statistical output — your job in the Research Report is to **interpret and discuss** these results, not to generate them.
 :::
 
 ---
 
-## Part 1: Group Formation (20 min)
-
-### Forming Your Group
-
-Your group will work together for the rest of the term to design and run a study. Each member will then write their own individual Research Report (due 1 April) using the group's shared data.
-
-**Group size:** 3–4 students
+## Before You Leave
 
 ::: {.callout-important}
-## You Must Attend This Lab
-If you don't attend today and haven't signalled your intent to participate, you will be allocated to a group on Monday of Week 17.
-:::
-
-### Group Agreement
-
-Once you've formed your group, discuss and agree on:
-
-::: {.callout-note}
-## Group Setup Checklist
-- [ ] Exchange contact details (email, phone, WhatsApp)
-- [ ] Set up a group communication channel
-- [ ] Agree on when you can meet outside of labs
-- [ ] Discuss expectations — how will you divide the work?
-- [ ] Note each member's name and student number
-:::
-
----
-
-## Part 2: Your Project Topic (15 min)
-
-Your group will receive a project topic from your lab tutor. Each topic involves a simple experiment that can be analysed with an independent-samples or paired-samples t-test.
-
-### Understanding Your Topic
-
-Once you have your topic, work through these questions with your group:
-
-**1. An independent variable (IV) is:**
-
-`r mcq(c("What you measure", answer = "What you manipulate or compare", "The result of the study", "The participant's age"))`
-
-**2. A dependent variable (DV) is:**
-
-`r mcq(c("What you manipulate", answer = "What you measure as the outcome", "The number of participants", "The type of design"))`
-
-**3. In a between-subjects design:**
-
-`r mcq(c("Each participant does all conditions", answer = "Different participants are in each condition", "There is no control group", "The IV is measured, not manipulated"))`
-
-**4. In a within-subjects design:**
-
-`r mcq(c(answer = "Each participant does all conditions", "Different participants are in each condition", "Only one condition is used", "The DV changes between groups"))`
-
-### Your Project Variables
-
-::: {.webex-check .webex-box}
-
-**For your project topic, identify:**
-
-**What is the independent variable?**
-`r mcq(c(answer = "I can identify my IV and its levels", "I think I know but I'm not sure", "I need to ask my tutor"))`
-
-**What is the dependent variable?**
-`r mcq(c(answer = "I can identify my DV and how it's measured", "I think I know but I'm not sure", "I need to ask my tutor"))`
-
-**What type of design will you use?**
-`r mcq(c("Between-subjects", "Within-subjects", answer = "My project documents specify the design"))`
-:::
-
----
-
-## Part 3: Literature Searching (25 min)
-
-Now that you have your topic, it's time to find relevant published research. This will form the basis of your Introduction section.
-
-### Where to Search
-
-**1. The best starting point for psychology-specific research is:**
-
-`r mcq(c("Google", answer = "PsycINFO via the Goldsmiths Library", "Wikipedia", "ChatGPT"))`
-
-**2. Google Scholar is useful because:**
-
-`r mcq(c("It only shows peer-reviewed papers", answer = "It covers many disciplines and shows citation counts", "It's the same as PsycINFO", "It writes summaries for you"))`
-
-**3. To access full-text articles through Goldsmiths, you should:**
-
-`r mcq(c("Pay for each article", answer = "Use the library's database access or set up Google Scholar Library Links", "Only read abstracts", "Search on general Google instead"))`
-
-### Search Strategy Practice
-
-Your group should now search for papers on your topic. Try the following:
-
-**4. Boolean AND is used to:**
-
-`r mcq(c("Find either term", answer = "Require both terms to appear", "Exclude a term", "Search for an exact phrase"))`
-
-**5. Putting quotation marks around a phrase (e.g., "free recall") means:**
-
-`r mcq(c("The words can appear separately", answer = "The exact phrase must appear together", "The phrase is excluded", "It searches titles only"))`
-
-**6. If your initial search returns 5,000+ results, you should:**
-
-`r mcq(c("Read them all", "Give up on that topic", answer = "Add more specific terms or apply filters", "Only look at the first page"))`
-
-**7. If your search returns very few results, you should:**
-
-`r mcq(c("Conclude there's no research on the topic", answer = "Try broader or alternative search terms", "Submit your report without references", "Only use textbook citations"))`
-
-### Practice Search
-
-::: {.callout-tip}
-## Try This Now
-1. Go to [Goldsmiths Library](https://www.gold.ac.uk/library/) and access PsycINFO
-2. Search for terms related to your project topic
-3. Try at least **three different search term combinations**
-4. Aim to find **3–5 relevant papers** as a group
-:::
-
-True or False: Wikipedia is an acceptable source for your Research Report reference list. `r torf(FALSE)`
-
-True or False: A paper published in 2010 can still be a useful source if it's highly cited and relevant. `r torf(TRUE)`
-
----
-
-## Part 4: Evaluating and Recording Sources (20 min)
-
-### Reading Papers Strategically
-
-You don't need to read every paper cover to cover. Read strategically:
-
-**1. When you first find a paper, you should read:**
-
-`r mcq(c("The entire paper carefully", answer = "The abstract first, to check relevance", "Only the results", "The reference list"))`
-
-**2. The Introduction of a paper is most useful for:**
-
-`r mcq(c("Finding statistical results", answer = "Understanding background theory and finding other relevant papers", "Learning how to do the analysis", "Checking the sample size"))`
-
-**3. The Method section of a relevant paper helps you because:**
-
-`r mcq(c("You can copy their procedure", answer = "It shows how similar studies have been designed and measured the DV", "It tells you what results to expect", "It's not useful for your project"))`
-
-**4. A peer-reviewed source means:**
-
-`r mcq(c("It was published online", "The author is a professor", answer = "Independent experts evaluated it before publication", "It has been cited many times"))`
-
-### Recording What You Find
-
-For each paper you find, record:
-
-::: {.callout-note}
-## Source Record Template
-For each relevant paper, note:
-
-1. **Full reference** (authors, year, title, journal)
-2. **What they studied** (research question / hypothesis)
-3. **How they studied it** (design, participants, key method details)
-4. **What they found** (key results, effect sizes if reported)
-5. **Why it matters for your project** (how does it connect to your topic?)
-:::
-
-### Self-Check: Source Quality
-
-**5. Which of these is the STRONGEST source for your Introduction?**
-
-`r mcq(c("A newspaper article about memory research", "A YouTube lecture on the topic", answer = "A peer-reviewed journal article reporting an experiment", "A textbook chapter on general psychology"))`
-
-**6. How many quality sources should you aim for in your Introduction?**
-
-`r mcq(c("1-2", "3-4", answer = "5-8", "As many as possible"))`
-
-True or False: You should only cite papers that support your hypothesis. `r torf(FALSE)`
-
-True or False: Reading the reference lists of relevant papers is a good way to find more sources. `r torf(TRUE)`
-
----
-
-## Part 5: From Sources to Hypothesis (10 min)
-
-### Developing Your Hypothesis
-
-Based on the literature you've found, you should be able to start forming a hypothesis.
-
-**1. A hypothesis should be:**
-
-`r mcq(c("Vague and general", answer = "Specific, testable, and directional (or explicitly non-directional)", "Based on what you hope will happen", "The same as the research question"))`
-
-**2. "Concrete words will be recalled better than abstract words" is:**
-
-`r mcq(c("A research question", answer = "A one-tailed (directional) hypothesis", "A two-tailed hypothesis", "A null hypothesis"))`
-
-**3. Your hypothesis should be based on:**
-
-`r mcq(c("Your personal opinion", "What would be most interesting", answer = "What previous research suggests is likely", "What's easiest to test"))`
-
-### Group Discussion
-
-::: {.callout-note}
-## Discuss With Your Group
-1. Based on the papers you've found, what does the literature suggest?
-2. What direction do you predict your results will go?
-3. Is your hypothesis one-tailed or two-tailed? Why?
-4. How does your hypothesis connect to the theory you've read about?
-:::
-
-True or False: A hypothesis must always predict a specific direction of effect. `r torf(FALSE)`
-
-True or False: Your hypothesis should be informed by previous research, not just a guess. `r torf(TRUE)`
-
----
-
-## Summary
-
-::: {.callout-important}
-## What You Should Have Done Today
-
-- [ ] Formed a group of 3–4 students
-- [ ] Exchanged contact details and set up a communication channel
-- [ ] Received your project topic
-- [ ] Identified your IV, DV, and design
-- [ ] Searched PsycINFO and/or Google Scholar for relevant papers
-- [ ] Found at least 3–5 potentially relevant sources
-- [ ] Started recording key information from each source
-- [ ] Begun discussing a hypothesis based on the literature
+## Checklist
+
+- [ ] Formed a group and **[registered it](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u)**
+- [ ] Chosen your project topic (from the list or your own)
+- [ ] Found or identified a key paper to anchor your project
+- [ ] Exchanged contact details and set up a group chat
+- [ ] Looked at the [template documents](https://learn.gold.ac.uk/mod/folder/view.php?id=1795124) on Learn
 :::
 
 ---
@@ -358,16 +289,15 @@ True or False: Your hypothesis should be informed by previous research, not just
 |------|------|
 | **Tomorrow** Fri 27 Feb, 12 noon | Research Plan due via Learn |
 | **Week 17** Thu 5 Mar | Group: finalise methodology |
-| **Week 18** Wed 11 Mar | **MCQ Exam** (in lecture) |
-| **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due |
+| **Week 18** Wed 11 Mar | **MCQ Exam** (~1 hour, in lecture) |
+| **Week 18** Thu 12 Mar | Group: finalise procedure, pilot with Gordon |
+| **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due (~1 hour) |
 | **Week 19** Thu 19 Mar | Group: **collect data** |
-| **Week 20** Thu 26 Mar | Report writing workshop |
-| **Fri 1 April**, 12 noon | **Research Report** due |
+| **Week 20** Thu 26 Mar | Write-up support |
+| **Mid–late April**, 12 noon | **Research Report** due |
 
 ## Next Steps
 
 1. **Tomorrow (Friday):** Submit your **Research Plan** by **12 noon** via Learn
-2. Complete the [Research Plan Self-Assessment Checklist](self-assessment.qmd) before submitting
-3. Continue reading the papers you found today
-4. Start thinking about how the literature connects to form an argument
-5. **Next week (Week 17):** Your group will finalise methodology and research design — come with at least 2–3 papers read
+2. **Next week onwards:** Work collaboratively with your group to hit each week's milestone — see the [project toolkit](https://littlemonkeylab.github.io/PS50008A_2526/project/project-toolkit.html) for guidance
+3. If you have questions before Thursday, Gordon is available — or post in the module discussion forum

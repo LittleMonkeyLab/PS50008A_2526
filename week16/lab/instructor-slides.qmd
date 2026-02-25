@@ -159,10 +159,11 @@ Each group will be given a shared folder on OneDrive. All project documents and 
 ## Today's Priorities
 
 ::: {.objectives-box}
-**Two things matter today:**
+**Three things matter today:**
 
-1. **Form your project groups** (3–4 students)
-2. **Choose your project topic** — from the example list or create your own
+1. **Form your group** (3–4 is ideal, but the key thing is you join one)
+2. **Choose your project topic** — from the [example list](https://littlemonkeylab.github.io/PS50008A_2526/project/group-project-options.html) or create your own
+3. **Find a key paper** — something to anchor your methodology or hypothesis
 :::
 
 ---
@@ -204,15 +205,24 @@ Students not part of a registered group this week will be **allocated to a group
 
 ---
 
-## Once You've Formed a Group
+## Register Your Group
 
+::: {.callout-important}
+## Group Registration Form
+**[Register your group here](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u)**
+
+Enter your group members and any preliminary topic ideas.
+:::
+
+::: {.fragment}
 ::: {.exercise-box}
-**Do these now:**
+**Also do these now:**
 
 1. Exchange contact details (email / phone / WhatsApp)
 2. Set up a group chat
 3. Agree on how you're going to work together
 4. Familiarise yourself with the weekly milestones
+:::
 :::
 
 ---
@@ -222,7 +232,7 @@ Students not part of a registered group this week will be **allocated to a group
 ::: {.definition-box}
 **Together:** Design study → Collect data → Share raw data
 
-**Individually:** Write your own 2,500-word Research Report
+**Individually:** Write your own 2,000-word Research Report
 
 Same data, different reports. Do NOT share written drafts.
 :::
@@ -240,7 +250,7 @@ Same data, different reports. Do NOT share written drafts.
 Each group needs a project topic. You can:
 
 ::: {.incremental}
-- **Choose from the example list** in the project documents — these are ready-made topics with suggested variables
+- **Choose from the [9 example topics](https://littlemonkeylab.github.io/PS50008A_2526/project/group-project-options.html)** — fully scoped, ready to go
 - **Adapt an example** — modify it slightly to suit your interests
 - **Propose your own** — as long as it meets the key requirement below
 :::
@@ -248,7 +258,7 @@ Each group needs a project topic. You can:
 ::: {.fragment}
 ::: {.callout-important}
 ## Key Requirement
-Your topic must be testable using a **two-group t-test design** (between-subjects or within-subjects). Look at the project directory folder for guidance and examples.
+Your topic must be testable using a **two-group t-test** (between-subjects or within-subjects). Think small-scale: ~15–20 participants, short tasks (~5–10 min per person).
 :::
 :::
 
@@ -278,12 +288,19 @@ If you're unsure about any of these, ask your tutor now.
 
 ## Starting Points
 
-I've included some possible starting-point papers in your project documents — but they may not be the best fit for your specific topic.
+I've included some starting-point papers on Learn for each example topic:
+
+**[Papers folder on Learn](https://learn.gold.ac.uk/mod/folder/view.php?id=1795121)** — a couple of papers per topic
 
 ::: {.fragment}
-::: {.callout-tip}
-## Do a Quick Search
-A short literature search will often turn up papers that are more relevant, more recent, or a better methodological match than the supplied ones. Use them as a springboard, not the final word.
+They're not all perfect — a quick literature search may turn up something more relevant, more recent, or a better methodological match. Use them as a springboard.
+:::
+
+::: {.fragment}
+::: {.callout-note}
+## More Resources
+- **[Template documents on Learn](https://learn.gold.ac.uk/mod/folder/view.php?id=1795124)** — with worked examples
+- **[Project Toolkit](https://littlemonkeylab.github.io/PS50008A_2526/project/project-toolkit.html)** — overview of each project
 :::
 :::
 
@@ -442,11 +459,11 @@ A hypothesis should be:
 ::: {.callout-important}
 ## Checklist
 
-- [ ] Formed a group (3–4 students) and exchanged contact details
-- [ ] Identified your project topic (from list or your own)
-- [ ] Searched for or found some relevant literature
-- [ ] Started recording key findings from each source
-- [ ] Discussed a provisional hypothesis with your group
+- [ ] Formed a group and **[registered it](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u)**
+- [ ] Chosen your project topic (from list or your own)
+- [ ] Found or identified a key paper to anchor your project
+- [ ] Exchanged contact details and set up a group chat
+- [ ] Looked at the [template documents](https://learn.gold.ac.uk/mod/folder/view.php?id=1795124) on Learn
 :::
 
 ---
