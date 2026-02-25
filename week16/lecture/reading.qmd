@@ -273,7 +273,7 @@ Your group project builds week by week:
 
 | Week | What happens |
 |------|-------------|
-| **16 (this week)** | Form groups, receive project topic, begin literature review |
+| **16 (this week)** | Form groups ([register here](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u){target="_blank"}), receive project topic, begin literature review |
 | **17** | Finalise methodology and design |
 | **18** | Develop procedure and materials |
 | **19** | Collect data |

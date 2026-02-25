@@ -650,10 +650,11 @@ If you do not attend and have not signalled your intent to participate, you will
 
 ::: incremental
 1.  **Form groups** — find 2-3 other people to work with
-2.  **Identify your project topic** — one topic per group
-3.  **Begin your literature review** — search PsycINFO and Google Scholar
-4.  **Start generating a hypothesis** — based on what you find
-5.  **Begin thinking about design** — how will you test it?
+2.  **[Register your group](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u){target="_blank"}**
+3.  **Identify your project topic** — one topic per group
+4.  **Begin your literature review** — search PsycINFO and Google Scholar
+5.  **Start generating a hypothesis** — based on what you find
+6.  **Begin thinking about design** — how will you test it?
 :::
 
 ## Project Timeline

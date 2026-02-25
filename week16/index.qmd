@@ -71,6 +71,7 @@ The lecture walks through the full anatomy of an APA lab report, using your Rese
 | [Research Report Brief](../assessments/assessment-handbook.qmd) | Final assessment brief — due mid-late April |
 | [Lab Reading](lab/reading.qmd) | Introduction to project literature review |
 | [Lab Activity](lab/activity.qmd) | Group formation and literature review |
+| **[Group Registration Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u){target="_blank"}** | Register your project group |
 
 ## Week at a Glance
 
@@ -139,6 +140,8 @@ This week's content directly supports your assessments:
 ::: {.callout-important}
 ## You MUST Attend This Lab
 This is where you form your project groups (3-4 students). If you do not attend and have not signalled your intent to participate, you will be **allocated to a group on Monday of Week 17**.
+
+**[Register your group here](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u){target="_blank"}**
 :::
 
 ::: {.callout-note}
@@ -146,6 +149,7 @@ This is where you form your project groups (3-4 students). If you do not attend 
 This week's lab focuses on launching your Research Report project. You will:
 
 - **Form your project groups** (3-4 students)
+- **[Register your group](https://forms.office.com/Pages/ResponsePage.aspx?id=Px9DDcEgHEaVikaynU4CG8gqdkQ5QElOkXjIDHSz7DVURjBMUUo1TFNBUElCUEpGWVlZRzFSMDdYVy4u){target="_blank"}**
 - Identify **project topic** (one per group)
 - Find a key paper
 - Start generating an **experimental hypothesis** based on previous findings
