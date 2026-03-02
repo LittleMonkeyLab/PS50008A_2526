@@ -168,7 +168,6 @@ Attendance at all lectures and labs is expected and required. This module builds
 
 - **Attendance** is recorded via SEATS in both lectures and labs
 - **Preparation** and independent study are expected each week
-- **Preview videos** should be watched before lectures
 - **Readings** should be completed as specified
 
 ::: {.callout-warning}

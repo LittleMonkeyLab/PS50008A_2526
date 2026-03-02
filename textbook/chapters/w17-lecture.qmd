@@ -1,404 +1,184 @@
 ---
-title: "Chapter 13: Interpretation & Credibility"
-subtitle: "P-Hacking, Publication Bias, and the Replication Crisis"
+title: "Chapter 17: MCQ & EDS Preparation"
+subtitle: "Consolidation for the MCQ Exam and EDS Assignment"
 ---
 
 ## Overview
 
-::: {.callout-tip}
-## Before You Begin
-This reading might challenge some of your assumptions about how science works. That's intentional. Understanding these issues makes you a more critical consumer of research and a more ethical producer of it.
-:::
+**EDS = Experimental Design & Statistics** — the assignment due 20 March where you interpret R output and answer questions on design, analysis, and methods.
 
-This reading covers:
+This chapter consolidates the content you need for two assessments:
 
-- P-hacking and researcher degrees of freedom
-- HARKing (Hypothesizing After Results Known)
-- Publication bias
-- The replication crisis
-- Open science solutions
+1. **MCQ Exam** (Wednesday 11 March): 36 questions — 5 scenario-based investigations (design, IV/DV, hypothesis, test, interpretation) plus 6 general questions.
+2. **EDS Assignment** (Due 20 March): Interpret R output and answer questions on hypothesis, design, descriptives, t-test, APA results, data quality, methodological improvements, individual differences, and ecological validity.
 
-These topics matter because they explain why some published findings turn out to be false and what the scientific community is doing about it.
+The same concepts underpin both: design types, variables, hypotheses, choosing the right test, interpreting p-values and confidence intervals, and clear reporting.
 
 ---
 
-## Part 1: The Problem with Flexibility
+## Part 1: MCQ — Design Types and Variables
 
-### What Is P-Hacking?
+### Design Types
 
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**P-hacking**: Exploiting flexibility in data collection, analysis, or reporting to obtain statistically significant results (p < .05).
-:::
+| Design | Description | IV? | Statistical test |
+|--------|-------------|-----|------------------|
+| **Between-participants** (independent groups) | Different participants in each condition; random allocation. | Yes — the condition (e.g. warm vs cool room). | Independent-samples t-test |
+| **Within-participants** (repeated measures) | Same participants in all conditions; order often counterbalanced. | Yes — the condition (e.g. gum vs no gum). | Paired-samples t-test |
+| **Correlational** | Two variables measured; no manipulation of an IV. | **No** — there is no independent variable. | Pearson's r (or Spearman's rho for ordinal/non-normal) |
 
-Imagine you collect data and your main hypothesis does not reach significance (p = .08). What might you be tempted to do?
+**Matched pairs**: Different people but matched (e.g. on age); sometimes analysed with a paired test if the pairing is meaningful.
 
-- Remove "outliers" until the result becomes significant
-- Try different statistical tests until one works
-- Add more participants until p drops below .05
-- Analyse subgroups until you find a significant effect somewhere
+### Independent and Dependent Variables
 
-Each of these exploits **researcher degrees of freedom** — the many small decisions researchers make during a study that can influence results.
+- **IV**: What the researcher manipulates or uses to form groups. Only in experimental designs.
+- **DV**: The outcome that is measured.
+- In **correlational** designs, do not label one variable as the IV — both are measured variables.
 
-### Researcher Degrees of Freedom
+### One-Tailed vs Two-Tailed Hypotheses
 
-Every study involves countless decisions:
-
-| Stage | Decisions |
-|-------|-----------|
-| **Design** | Sample size, exclusion criteria, which conditions to include |
-| **Data collection** | When to stop collecting, how to handle missing data |
-| **Analysis** | Which statistical test, how to handle outliers, which covariates |
-| **Reporting** | Which analyses to highlight, which to omit |
-
-When these decisions are made **after** seeing the data, researchers can (often unconsciously) make choices that favour their preferred outcome.
-
-### A Demonstration: False Positive Psychology
-
-In a famous paper, Simmons, Nelson, and Simonsohn (2011) demonstrated how flexible analysis can produce absurd results. Using standard practices, they "proved" that listening to the Beatles song "When I'm Sixty-Four" literally made people younger.
-
-Their point was not that this result was real, but that [the combination of flexibility and selective reporting can make almost anything appear significant]{style="background-color: #FFF3CD"}.
-
-::: {.callout-warning}
-## The Garden of Forking Paths
-Statistician Andrew Gelman calls this "the garden of forking paths" — at each decision point, researchers take one path, but could have taken others. If you try enough paths, you will find something significant by chance alone.
-:::
-
-### Why P-Hacking Is a Problem
-
-P-hacking inflates the false positive rate far beyond 5%:
-
-- With one test at alpha = .05, you have a 5% chance of a false positive
-- With 20 tests, you have about a 64% chance of at least one false positive
-- With selective reporting, only the "successful" tests get published
-
-The result: journals become filled with findings that capitalise on chance rather than revealing true effects.
+- **One-tailed**: Predicts the direction (e.g. "cool room will score higher"; "negative correlation between social media and self-esteem").
+- **Two-tailed**: Predicts a difference or relationship without direction (e.g. "there will be a significant difference in test scores between the two temperature conditions").
 
 ---
 
-## Part 2: HARKing
+## Part 2: MCQ — Choosing the Test and Interpreting p
 
-### What Is HARKing?
+### Choosing the Right Test
 
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**HARKing** (Hypothesizing After Results are Known): Presenting post-hoc findings as if they were predicted from the start.
-:::
+1. **Correlational design?** (two measured variables, no manipulation) → **Pearson's r** (or Spearman's rho if data are ordinal or not normal).
+2. **Same participants in both conditions?** → **Paired-samples t-test**.
+3. **Different participants in each condition?** → **Independent-samples t-test**.
 
-Here is how it works:
+### p-Values and Significance
 
-1. Researcher predicts effect A, but it does not materialise
-2. Unexpected effect B emerges in the data
-3. Researcher writes paper presenting B as the original prediction
-4. Reader has no way to know the hypothesis was developed after seeing results
+- **p < .05**: Statistically significant at α = .05; reject the null hypothesis; "results support the hypothesis" (if the hypothesis predicted a difference/effect).
+- **p > .05**: Not statistically significant; do not reject the null.
+- **p < .01**: Significant; the pattern would occur by chance less than or equal to 1 time in 100.
 
-### Why HARKing Is Problematic
+### Correlation
 
-Science relies on **prediction**. The reason a confirmed prediction is impressive is that the researcher could have been wrong. If you formulate your "prediction" after seeing the data, you cannot be wrong.
+- **Positive correlation**: Higher on one variable tends to go with higher on the other (e.g. study hours and grades).
+- **Negative correlation**: Higher on one tends to go with lower on the other (e.g. social media use and self-esteem).
+- **Correlation does not imply causation** — you cannot conclude that X causes Y from a correlation alone (confounds, direction of cause, third variables).
 
-Consider this analogy:
+### Counterbalancing
 
-::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Prediction**: "I bet the next card will be the seven of hearts." (50/52 chance of being wrong)
-
-**Postdiction**: "I knew it would be the seven of hearts all along." (Cannot be wrong — you already saw it)
-:::
-
-HARKing turns postdiction into prediction, making ordinary chance findings appear impressive.
-
-### The Exploratory/Confirmatory Distinction
-
-::: {.callout-important}
-## A Critical Distinction
-**Exploratory research**: Looking for patterns in data without specific predictions — useful for generating hypotheses.
-
-**Confirmatory research**: Testing specific predictions made before seeing the data — provides stronger evidence.
-
-Both are valuable, but they must not be confused. HARKing disguises exploration as confirmation.
-:::
+Used in within-participants designs to control for **order effects** (e.g. practice, fatigue) by varying the order of conditions across participants.
 
 ---
 
-## Part 3: Publication Bias
+## Part 3: MCQ — General Concepts
 
-### The File Drawer Problem
-
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Publication bias**: The tendency for studies with positive/significant results to be published more often than those with null results.
-:::
-
-Imagine 20 research groups independently test whether a particular vitamin improves memory. By chance (at alpha = .05), about one study will find a significant effect even if the vitamin does nothing.
-
-- The 19 null results go into file drawers, unpublished
-- The one "positive" result gets published
-- The published literature now suggests the vitamin works
-
-This is sometimes called the **file drawer problem** — we only see the studies that "worked."
-
-### Evidence for Publication Bias
-
-Studies examining published research consistently find:
-
-1. **Journals prefer significant results**: Papers with p < .05 are far more likely to be accepted
-2. **Authors self-censor**: Researchers often do not bother submitting null results
-3. **Suspiciously clustered p-values**: Published studies show too many p-values just below .05
-
-::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #275882;"}
-**The "Too Good to Be True" Pattern**
-
-If you plot p-values from published studies, you would expect a relatively smooth distribution. Instead, there is typically a suspicious spike just below .05 — suggesting results that just missed significance were "massaged" to cross the threshold, or that just-significant results were selectively published.
-:::
-
-### Why Publication Bias Matters
-
-When published evidence systematically overestimates effects:
-
-- Textbooks and courses teach findings that may not replicate
-- Practitioners implement interventions that may not work
-- Subsequent researchers waste resources building on shaky foundations
-- Public trust in science erodes when "facts" keep changing
+| Concept | What you need to know |
+|--------|------------------------|
+| **Operationalisation** | Defining a construct by how it is measured (e.g. intelligence = score on a standardised IQ test). |
+| **Replication** | Another researcher repeating the study; **detailed procedure and materials** help most for replication. |
+| **Confounding variable** | An uncontrolled variable that co-varies with the IV (e.g. time of day when one group is tested in the morning and the other in the evening). |
+| **Null hypothesis** | States that there is no significant difference or effect in the population. |
+| **p > .05** | Result is **not** statistically significant at α = .05. |
+| **Population** | The larger group we want to generalise to; the **sample** is the subset we actually test. |
 
 ---
 
-## Part 4: The Replication Crisis
+## Part 4: EDS Section A — Statistical Mechanics
 
-### What Is Replication?
+### Stating the Experimental Hypothesis (Q1)
 
-::: {style="background-color: #CFE2FF; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Replication**: Repeating a study to see if the same results emerge. If a finding is real, it should replicate.
-:::
+Write a clear hypothesis that refers to both the IV and the DV. It can be directional or non-directional.
 
-Replication is science's self-correction mechanism. A single study might be flawed or capitalise on chance, but if independent researchers consistently find the same result, we can be more confident it is real.
+- **Good**: "Participants will score higher on the working memory task when their phone is in their bag than when it is visible on the desk."
+- **Good**: "The presence of a smartphone will affect working memory performance."
+- **Avoid**: Stating the null hypothesis or a hypothesis that does not reference both variables.
 
-### The Reproducibility Project
+### Design, IV, DV, Data Type (Q2)
 
-In 2015, the Open Science Collaboration published a landmark paper attempting to replicate 100 psychology studies from top journals.
+- **Design**: Repeated measures / within-subjects (same participants, two conditions).
+- **IV**: Name the variable and **both levels** (e.g. phone visible on desk vs phone in bag).
+- **DV**: The measured outcome (e.g. working memory score out of 25).
+- **Data type**: Ratio or interval (numeric scale suitable for means and t-tests).
 
-**The results were sobering:**
+### APA Descriptives and Interpretation (Q3)
 
-| Original Studies | Replication |
-|-----------------|-------------|
-| 97% reported significant results | Only 36% replicated |
-| Average effect size: r = .40 | Average in replications: r = .20 |
+- **Report**: "Participants scored higher when their phone was in their bag (M = 20.30, SD = 1.49) than when their phone was visible (M = 16.90, SD = 4.77)."
+- **Interpret**: Describe the pattern (which condition had higher/lower scores, approximate difference) and note any striking difference in variability (e.g. larger SD in one condition).
 
-[More than half of the findings that psychologists thought were established facts failed to replicate.]{style="background-color: #FFF3CD; font-weight: bold;"}
+### Paired t-Test: Why, Report, Significance, CI (Q4)
 
-### Why Did So Many Studies Fail to Replicate?
+- **Why paired?** Same participants completed both conditions; scores are naturally paired.
+- **Report**: t = −2.36, df = 9, p = .042 (from output).
+- **Significant at α = .05?** Yes — p = .042 < .05; reject the null.
+- **95% CI**: The interval (e.g. [−6.66, −0.14]) estimates the true mean difference. If it excludes zero, the result is consistent with significance. A fully negative interval indicates lower scores in the first condition (e.g. phone visible) than the second (e.g. phone in bag).
 
-Several factors contributed:
+### Full APA Results Paragraph (Q5)
 
-1. **Small samples**: Original studies often had insufficient power to detect true effects reliably
-2. **P-hacking**: Flexible analysis inflated the original results
-3. **Publication bias**: Only the most impressive-looking results were published
-4. **HARKing**: Post-hoc hypotheses presented as predictions
-5. **True variation**: Some effects genuinely differ across populations or contexts
+Include: name of test, descriptive statistics (M, SD) for each condition, t(df) = value, p = value, 95% CI, and a one-sentence conclusion (e.g. whether the hypothesis was supported).
 
-### The Crisis Is Not Limited to Psychology
+### Data Quality (Q6)
 
-Similar problems have emerged in:
-
-- Cancer biology (only 11% of landmark findings replicated)
-- Economics (40% replication rate)
-- Medicine (many drug trials fail to replicate)
-
-This is not "psychology's problem" — it is a problem with how science has been practiced across many fields.
+- **Identify outlier**: Which participant, scores in each condition, and how their difference compares to others (e.g. one participant with a much larger drop in one condition).
+- **Plausible reason**: e.g. high distraction, phone dependency, procedural issue.
+- **Effect on SD**: An extreme score far from the mean increases the SD of that condition; removing it typically reduces SD.
+- **Sensitivity**: Report both with and without the outlier if appropriate; explain that removing an extreme case can sometimes make the test *more* significant (less variability in differences). Justify whether to report one or both analyses and note that the main conclusion may hold either way.
 
 ---
 
-## Part 5: Why Did This Happen?
+## Part 5: EDS Section B — Methods and Theory
 
-### Incentive Structures
+### Methodological Improvements (Q7)
 
-The academic system inadvertently rewards questionable practices:
+Suggest **two** improvements with clear justification. Examples: larger sample size (power, generalisability); controlling for notifications (phones silenced); measuring phone dependency; longer break between conditions; multiple cognitive tasks; screening for engagement.
 
-::: {style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #EA8439;"}
-**The Pressure to Publish**
+### Individual Differences (Q8)
 
-- Jobs, promotions, and grants depend on publishing in prestigious journals
-- Prestigious journals want novel, significant findings
-- Null results and replications are harder to publish
-- Researchers face intense competition for limited positions
+Discuss how **heavy vs light phone users** or **younger vs older adults** might differ in the effect, with reasoned theoretical or empirical support (e.g. attentional bias, habituation, age-related cognitive change). Marks are for quality of reasoning, not for a specific prediction.
 
-This creates pressure to produce impressive results, sometimes at the cost of rigour.
-:::
+### Ecological Validity (Q9)
 
-### Good Intentions, Bad Outcomes
-
-Most researchers do not deliberately fake data or lie. The problems are more subtle:
-
-- **Motivated reasoning**: We tend to find what we expect (or hope) to find
-- **Confirmation bias**: We scrutinise unexpected results more than expected ones
-- **Normalisation**: "Everyone does it" — practices like HARKing became standard
-
-The replication crisis revealed that standard practices, followed with good intentions, could produce unreliable science.
+Propose a **more ecologically valid** study: real-world setting and task, with a clear **hypothesis**, **IV** (with levels), **DV**, and **procedure**. Explain why it is more ecologically valid (e.g. real classroom, real learning, natural phone use).
 
 ---
 
-## Part 6: Open Science Solutions
+## Part 6: Credibility (Brief Context)
 
-The research community has responded with reforms designed to increase transparency and reliability.
+Understanding why methods matter helps you see why the MCQ and EDS emphasise correct design, test choice, and reporting:
 
-### Pre-registration
+- **P-hacking**: Using flexibility in analysis to obtain p < .05 inflates false positives.
+- **HARKing**: Presenting post-hoc ideas as if they were pre-registered predictions undermines credibility.
+- **Replication**: Many findings fail to replicate; clear methods and appropriate statistics support replicability.
 
-::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Pre-registration**: Publicly documenting your hypotheses, methods, and analysis plan *before* collecting data.
-:::
-
-Pre-registration prevents:
-
-- **P-hacking**: You commit to specific analyses in advance
-- **HARKing**: Your predictions are time-stamped before you see results
-- **Selective reporting**: The record shows what you planned to analyse
-
-**Where to pre-register:**
-
-- [OSF (Open Science Framework)](https://osf.io) — Free, widely used
-- [AsPredicted](https://aspredicted.org) — Simple, streamlined
-- [ClinicalTrials.gov](https://clinicaltrials.gov) — For medical research
-
-### Registered Reports
-
-::: {style="background-color: #D1E7DD; padding: 1rem; border-radius: 8px; margin: 1rem 0;"}
-**Registered reports**: A publication format where journals accept papers *before* data collection, based on the importance of the question and quality of the method.
-:::
-
-This is powerful because:
-
-- Acceptance does not depend on results
-- Null results get published
-- Eliminates publication bias at the source
-- Researchers can pursue risky but important questions
-
-### Open Data and Materials
-
-Sharing your:
-
-- **Data**: Allows others to verify your analyses and conduct new ones
-- **Materials**: Enables exact replication
-- **Code**: Makes analysis transparent and reproducible
-
-Many journals now require or encourage data sharing.
-
-### Larger Samples and Multi-Site Studies
-
-The replication crisis revealed that many classic studies were underpowered:
-
-- Small samples produce noisy estimates
-- Noisy estimates that reach significance tend to overestimate effects
-- Larger samples provide more stable, accurate estimates
-
-**Multi-site replications** — where many labs run the same study simultaneously — help distinguish genuine effects from local flukes.
-
-### Statistical Reforms
-
-Researchers are reconsidering how they use statistics:
-
-| Old Practice | Reform |
-|-------------|--------|
-| Dichotomous p < .05 decisions | Focus on effect sizes and confidence intervals |
-| Claiming "no effect" from non-significance | Bayesian methods that can support null hypothesis |
-| Ignoring power | Conducting power analyses before data collection |
-| Selective reporting | Reporting all planned analyses |
+For more on p-hacking, HARKing, and the replication crisis, see the open science and credibility resources in the module.
 
 ---
 
-## Part 7: What This Means for You
+## Summary Tables
 
-### As a Consumer of Research
+### MCQ: Design → Test
 
-When reading published research, ask:
+| Design | Test |
+|--------|------|
+| Between-participants (2 groups) | Independent-samples t-test |
+| Within-participants (same people, 2 conditions) | Paired-samples t-test |
+| Correlational (2 measured variables) | Pearson's r |
 
-1. **Was the study pre-registered?** Look for pre-registration statements
-2. **Is the data available?** Transparency enables verification
-3. **Has it replicated?** Single studies are weak evidence
-4. **How large was the sample?** Small samples produce unreliable results
-5. **Does the analysis match the hypothesis?** Watch for signs of HARKing
+### EDS Section A Checklist
 
-::: {.callout-tip}
-## Reading Critically
-A healthy dose of scepticism is appropriate. Even published findings may not replicate. Look for converging evidence across multiple studies and methods.
-:::
+- [ ] Experimental hypothesis (IV + DV)
+- [ ] Design type, IV with levels, DV, data type
+- [ ] APA descriptives (M, SD) and interpretation
+- [ ] Why paired t-test; report t, df, p; significance at α = .05; interpret 95% CI
+- [ ] Full APA results paragraph
+- [ ] Outlier: identify, reason, effect on SD, sensitivity (with/without)
 
-### As a Producer of Research
+### EDS Section B Checklist
 
-When conducting your own research (including your project):
-
-1. **Pre-register** your hypotheses and analysis plan
-2. **Distinguish exploration from confirmation** — it is fine to explore data, but label it as such
-3. **Report everything** you planned to analyse, including null results
-4. **Use adequate sample sizes** — discuss power with your supervisor
-5. **Share your data and materials** when possible
-
-### The Silver Lining
-
-::: {style="background-color: #D1E7DD; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;"}
-**Psychology is leading the reform**
-
-While the replication crisis was uncomfortable, psychology has responded more vigorously than most fields. Open science practices are becoming standard. The research you read now is, on average, more reliable than research from a decade ago.
-
-You are entering the field at an exciting time — when doing research *right* is increasingly valued over doing research *fast*.
-:::
-
----
-
-## Case Study: The Many Labs Project
-
-The Many Labs project illustrates both the problem and the solution:
-
-**Many Labs 1 (2014):**
-- 36 labs across 12 countries
-- Replicated 13 classic effects
-- 10 replicated reliably; 3 did not
-- Effect sizes were typically smaller than originally reported
-
-**Many Labs 2 (2018):**
-- 186 labs
-- Tested 28 effects
-- Only 14 (50%) replicated
-- Variation across contexts was substantial
-
-**What we learned:**
-
-1. Some classic effects are robust and replicable
-2. Others were likely false positives or highly context-dependent
-3. Large-scale collaboration can provide definitive answers
-4. Science can self-correct, even if slowly
-
----
-
-## Summary
-
-| Concept | Key Point |
-|---------|-----------|
-| **P-hacking** | Exploiting analytical flexibility to achieve significance |
-| **Researcher degrees of freedom** | Many decisions that can influence results |
-| **HARKing** | Presenting post-hoc findings as predictions |
-| **Publication bias** | Significant results are more likely to be published |
-| **Replication crisis** | Many published findings fail to replicate |
-| **Pre-registration** | Documenting hypotheses before data collection |
-| **Registered reports** | Acceptance before results are known |
-| **Open data** | Sharing data for verification and reuse |
-
----
-
-## Check Your Understanding
-
-Before the lecture, make sure you can answer:
-
-1. What is p-hacking and why does it inflate the false positive rate?
-2. What is HARKing and why is it problematic for science?
-3. What is publication bias and how does it distort the literature?
-4. What did the Reproducibility Project find?
-5. How does pre-registration help prevent questionable research practices?
-6. What is a registered report and why does it address publication bias?
-7. As a reader of research, what questions should you ask to evaluate credibility?
+- [ ] Two methodological improvements with justification
+- [ ] Individual differences (e.g. heavy/light users, age) — reasoned discussion
+- [ ] Ecological validity: hypothesis, IV, DV, procedure, and why more ecologically valid
 
 ---
 
 ## Further Reading
 
-For additional depth:
-
-- Simmons, J. P., Nelson, L. D., & Simonsohn, U. (2011). False-positive psychology. *Psychological Science*, 22(11), 1359-1366. [The classic "listening to Beatles makes you younger" paper]
-- Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science*, 349(6251). [The landmark replication study]
-- Nosek, B. A., et al. (2015). Promoting an open research culture. *Science*, 348(6242), 1422-1425. [Guidelines for transparency]
-- [OSF Pre-registration Tutorial](https://help.osf.io/hc/en-us/articles/360019738834-Create-a-Preregistration)
-
+- Module materials for Weeks 11–16 (design, t-tests, correlation).
+- EDS marking scheme (for Section A and B mark allocation and model answers).
+- Open science and credibility: pre-registration, replication, effect sizes (see course resources).

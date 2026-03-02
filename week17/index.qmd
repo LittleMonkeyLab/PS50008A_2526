@@ -1,5 +1,5 @@
 ---
-title: "Week 17: Interpretation & Credibility"
+title: "Week 17: MCQ & EDS Preparation"
 subtitle: "PS50008A Research Methods | 2-6 March 2026"
 author: "Gordon Wright"
 date: "2026-03-02"
@@ -8,119 +8,112 @@ date: "2026-03-02"
 ## Overview
 
 ::: {.callout-warning}
-## MCQ Exam Next Week
-This is your final preparation week before the MCQ Exam on Monday 9th March. Use this week to consolidate your knowledge and identify any gaps.
+## Assessments This Fortnight
+- **MCQ Exam**: Wednesday 11 March — 36 questions (5 investigations + 6 general)
+- **EDS Assignment** (Experimental Design & Statistics): Due 20 March — interpret R output, answer methods questions (100 marks)
 :::
 
-**This week**: Explore critical issues in research credibility including p-hacking, HARKing, and the replication crisis. Plus, focused MCQ exam preparation.
+**Lecture** (Wednesday): Focused on **Experimental Design & Statistics (EDS)** and MCQ preparation — everything you need for both assessments.
 
-**Lecture**: Wednesday 10:00-12:00 RHBD 143
-**Lab**: Thursday 10:00-12:00 WB304A and WB304B
+**Lab** (Thursday): **Project Toolkit — Phase 1**. You work through the [Project Toolkit](project/project-toolkit.qmd): draft core documents (Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions) and start the Researcher Procedure. These labs (17 and 18) complete the toolkit so you are ready for **data collection in Week 20** (no lab in Week 19 due to testing).
+
+**Lecture**: Wednesday 10:00-12:00 RHBD 143  
+**Lab**: Thursday 10:00-12:00 WB304A
 
 ## Learning Objectives
 
 By the end of this week, you will be able to:
 
-### Research Credibility
-- Define p-hacking and explain how it inflates false positive rates
-- Explain what HARKing is and why it's problematic for science
-- Describe the replication crisis and its implications for psychology
-- Identify questionable research practices (QRPs) in published work
+### For the MCQ Exam
+- Identify design type (between-participants, within-participants, correlational) from a study description
+- State the independent and dependent variable (or recognise "no IV" in correlational designs)
+- Distinguish one-tailed and two-tailed hypotheses and match them to scenarios
+- Choose the correct statistical test (independent-samples t-test, paired-samples t-test, Pearson's r) for each design
+- Interpret p-values and significance (p < .05, p > .05, p < .01)
+- Explain correlation (positive/negative) and why correlation does not imply causation
+- Define operationalisation, replication, confounding variable, null hypothesis, population
 
-### MCQ Preparation
-- Apply research methods concepts to multiple-choice questions
-- Identify common misconceptions and traps in MCQ items
-- Demonstrate knowledge across all topics covered this term
+### For the EDS Assignment
+- State a clear experimental hypothesis (directional or non-directional) with IV and DV
+- Identify design type, IV (with levels), DV, and type of data (ratio/interval)
+- Report descriptive statistics in APA format (M, SD) and interpret the pattern
+- Justify use of paired vs independent t-test; report t, df, p; interpret significance at α = .05
+- Interpret a 95% confidence interval and relate it to significance
+- Write a full APA-style results paragraph (descriptives + inferential + conclusion)
+- Identify outliers, explain their effect on SD, and discuss reporting with/without (sensitivity)
+- Suggest methodological improvements with justification
+- Discuss individual differences (e.g. heavy vs light users, age) and ecological validity
 
 ## The Big Picture
 
-This week answers the question: **How do we know if research findings are credible?**
-
-The replication crisis has fundamentally changed how psychologists conduct and evaluate research. Understanding these issues isn't just academic — it's essential for being a critical consumer of psychological research.
+Week 17 ties together **design**, **analysis**, and **interpretation** so you can perform under exam conditions and complete the EDS paper. Both assessments reward precise use of terminology and clear reasoning.
 
 ::: {.callout-tip}
-## Connecting Theory and Practice
-The questionable research practices we discuss (p-hacking, HARKing) are exactly why preregistration and transparent reporting are now considered best practice. Your Research Plan assignment embodies these principles.
+## Connecting the Two Assessments
+The MCQ tests recognition and application (e.g. "What design?" "What test?"). The **EDS (Experimental Design & Statistics)** assignment tests deeper interpretation (e.g. "Why is a paired t-test appropriate?" "What does this CI tell us?"). The same concepts underpin both.
 :::
 
 ## Before the Lecture
 
 ::: {.callout-note}
 ## Required Preparation
-1. **Review all lecture readings from Weeks 12-16** — the MCQ will test across all topics
-2. **Complete any outstanding self-assessments** — use these to identify weak areas
-3. **Read the lecture reading** — introduces the credibility crisis
+1. **Review Weeks 11–16** — design types, IV/DV, hypotheses, t-tests, correlation
+2. **Read the lecture reading** — MCQ and EDS content summary
+3. **Bring questions** — anything unclear from earlier weeks
 :::
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
-| [Lecture Slides](lecture/slides.html){target="_blank"} | P-hacking, HARKing, and the replication crisis |
-| [Lecture Reading](lecture/reading.qmd) | Background on research credibility |
-| [Lab Slides](lab/slides.html){target="_blank"} | Project methodology guidance |
-| [Lab Activity](lab/activity.qmd) | Methodology development for your project |
-| [Lab Reading](lab/reading.qmd) | Methodology planning resources |
-| [Self-Assessment](lab/self-assessment.qmd) | MCQ practice questions |
+| [Lecture Slides](lecture/slides.html){target="_blank"} | EDS & MCQ preparation: designs, tests, APA, data quality |
+| [Lecture Reading](lecture/reading.qmd) | Consolidation guide for EDS and MCQ |
+| [Project Toolkit](project/project-toolkit.qmd) | **Start here** — week-by-week timeline, document checklist, templates |
+| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Phase 1: Draft core documents (Info Sheet, Consent, Debrief, Instructions, start Procedure) |
+| [Lab Activity](lab/activity.qmd) | Phase 1 checklist and document drafting |
+| [Lab Reading](lab/reading.qmd) | Phase 1 reading: participant-facing documents and Researcher Procedure |
+| [Self-Assessment](lab/self-assessment.qmd) | MCQ & EDS practice (for your own revision) |
 
 ## Week at a Glance
 
 | Day | Session | Focus |
-|-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | Interpretation & Credibility: p-hacking, HARKing, replication crisis, MCQ prep |
-| Thursday | Lab (2 hrs) | Project Groups: Methodology development |
+|-----|---------|--------|
+| Wednesday | Lecture (2 hrs) | EDS & MCQ: designs, IV/DV, hypotheses, test choice, p-values; EDS assignment (hypothesis, APA, t-test, CI, results paragraph, data quality, Section B) |
+| Thursday | Lab (2 hrs) | Project Toolkit Phase 1: draft Information Sheet, Consent, Debrief, Participant Instructions; start Researcher Procedure |
 
-## Key Concepts
+## Key Concepts at a Glance
 
-### P-Hacking
-- **Definition**: Manipulating data analysis until you get p < .05
-- **Examples**: Selective reporting, optional stopping, excluding outliers post-hoc
-- **Consequence**: Dramatically inflates false positive rates
+### Design → Test (MCQ)
+| Design | IV/DV | Typical test |
+|--------|--------|--------------|
+| Between-participants | One IV (2 levels), one DV | Independent-samples t-test |
+| Within-participants (repeated measures) | One IV (2 levels), one DV | Paired-samples t-test |
+| Correlational | No IV; two measured variables | Pearson's r |
 
-### HARKing
-- **Definition**: Hypothesizing After Results are Known
-- **Problem**: Presents exploratory findings as if they were predicted
-- **Solution**: Preregistration of hypotheses and analysis plans
+### EDS Section A (Mechanics)
+- **Hypothesis**: Clear statement with IV and DV (directional or non-directional).
+- **Design/IV/DV/Data**: Repeated measures; IV with levels; DV; ratio/interval data.
+- **APA descriptives**: M and SD per condition; interpret pattern.
+- **Paired t-test**: Why paired; report t, df, p; significant at α = .05?; interpret 95% CI.
+- **Results paragraph**: Test name, descriptives, statistic, conclusion.
+- **Data quality**: Identify outlier; reason; effect on SD; report both analyses.
 
-### The Replication Crisis
-- **What happened**: Many classic psychology findings failed to replicate
-- **Why it matters**: Questions the reliability of psychological knowledge
-- **Moving forward**: Open science practices, preregistration, larger samples
-
-### Questionable Research Practices (QRPs)
-- Selective reporting of results
-- Excluding data points after seeing results
-- Adding covariates to achieve significance
-- Not reporting failed replications
-
-## Project Groups: Methodology
-
-In the lab this week, your project group will:
-
-1. **Finalise your research question** from last week
-2. **Choose your design** — between-subjects, within-subjects, or correlational
-3. **Define your variables** precisely — operationalise your IV and DV
-4. **Plan your sampling** — who will you test and how many participants?
-5. **Consider ethical issues** — consent, debriefing, data protection
-
-::: {.callout-important}
-## Methodology Due
-Your methodology section should be complete by the end of this lab. Next week (after the MCQ), you'll focus on procedure.
-:::
+### EDS Section B (Theory)
+- **Improvements**: Two methodological changes with clear justification.
+- **Individual differences**: e.g. heavy vs light users, younger vs older — reasoned discussion.
+- **Ecological validity**: New study with hypothesis, IV (levels), DV, procedure.
 
 ## Connecting to Assessments
 
 | Assessment | Connection |
 |------------|------------|
-| **MCQ Exam** | FINAL PREPARATION — exam is next Monday! |
-| **Research Plan** | Methodology section development |
-| **Research Report** | Understanding credibility issues for your discussion |
+| **MCQ Exam** (11 March) | Lecture covers content; self-assessment for practice |
+| **EDS Assignment** (Due 20 March) | Lecture covers all Section A & B content; self-assessment for practice |
+| **Research Plan** | Already submitted (Week 16). Lab: Project Toolkit Phase 1 — draft participant documents and start procedure |
 
 ## What's Next?
 
-::: {.callout-important}
-## MCQ Exam: Monday 9th March
-**Week 18** begins with the MCQ Exam. The lecture slot will be the exam itself. Make sure you know the time and location.
-:::
-
-- **Week 18**: MCQ Exam (Monday) + Project Groups: Procedure (Thursday)
+- **Week 18**: **No lecture** — MCQ Exam (Wednesday 11 March). **Lab**: Project Toolkit Phase 2 (materials, complete procedure, practice run).
+- **Week 19**: Lecture only (no lab — testing). EDS due 20 March. Finalise toolkit documents and submit Research Study Order Form.
+- **Week 20**: Lecture + Lab (data collection in the lab).
+- **EDS**: Due 20 March — use lecture and self-assessment for revision.

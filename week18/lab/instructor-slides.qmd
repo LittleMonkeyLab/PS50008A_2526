@@ -1,5 +1,5 @@
 ---
-title: "Project Groups: Procedure"
+title: "Project Toolkit — Phase 2: Materials & Practice"
 subtitle: "PS50008A Week 18 Lab"
 author: "Gordon Wright"
 date: "2026-03-12"
@@ -18,464 +18,155 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## Project Groups: Procedure
+## Project Toolkit — Phase 2
 
 ---
 
-## How Was the MCQ?
+## Well Done on the MCQ
 
 ::: {.callout-note}
-## MCQ Complete!
-
-Well done on completing your MCQ exam on Monday!
-
-Results will be available within 2 weeks. Today, let's focus forward on your project.
+## Wednesday was the MCQ exam
+Results will be available in due course. Today we focus on **completing the Project Toolkit** so you're ready for data collection in **Week 20**.
 :::
+
+**Reminder:** No Week 19 lab (testing). Week 20 = lecture + **data collection lab**. Everything must be ready after today.
 
 ---
 
-## Today's Focus
+## Phase 2: What You're Completing Today
 
-::: {.objectives-box}
-**Procedure Development Session**
+| # | Document | Action today |
+|---|----------|--------------|
+| 4 | **Recruitment Script** | Finalise (short script for approaching participants) |
+| 5 | **Data Recording Sheet** | Draft/finalise (participant ID, condition, DV, scoring guide) |
+| 6 | **Stimulus Materials** | Finalise (word lists, images, questionnaires, etc.) |
+| 7 | **Participant Instructions** | Finalise if not done in Phase 1 |
+| 8 | **Researcher Procedure** | **Complete** (data recording, scoring, full script) |
+| 9 | **Research Study Order Form** | Complete; submit by **end of Week 19** |
 
-By the end of this lab, your group will have:
-
-- A complete step-by-step procedure
-- Standardised instructions for participants
-- Materials ready (or a plan to create them)
-- A debriefing script
-- Completed a pilot run within your group
-:::
+Plus: **Practice run** — run the study on each other.
 
 ---
 
-## Session Structure (~90 min)
+## Session Structure
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:10 | Review methodology from Week 17 |
-| 10:10-10:40 | Procedure development workshop |
-| 10:40-11:10 | Materials and instructions creation |
-| 11:10-11:40 | Pilot run within groups |
-| 11:40-12:00 | Debrief and troubleshooting |
+| 10:00–10:20 | Phase 1 check + Recruitment Script + Data Recording Sheet |
+| 10:20–10:50 | Finalise Stimulus Materials + Participant Instructions |
+| 10:50–11:25 | **Complete** Researcher Procedure; practice run within group |
+| 11:25–11:50 | Research Study Order Form (list everything to print/order) |
+| 11:50–12:00 | Checkpoint and next steps (Week 19: no lab; Week 20: data collection) |
 
 ---
 
-# Methodology Review {background-color="#275882"}
-
-## Where We Left Off (~10 min)
-
----
-
-## Quick Review
-
-::: {.poll-box}
-**Each group: confirm you have these from Week 17**
-
-- Research question
-- Design type (between/within/correlational)
-- Operationally defined IV and DV
-- Sampling plan
-- Ethical considerations
-:::
-
----
-
-## From Methodology to Procedure
+## Document 4: Recruitment Script
 
 ::: {.definition-box}
-**Methodology** answers: What will you study and why?
+**What it is:** A short script for approaching potential participants and inviting them to take part.
 
-**Procedure** answers: How exactly will you do it?
-
-Today we turn your plan into actionable steps.
+**Tips:** Brief and friendly (3–4 sentences). Mention: who you are, what the study involves (briefly), how long it takes, where to go, any incentive (e.g. snacks). Print several copies so multiple people can recruit at once.
 :::
 
 ---
 
-# Procedure Development {background-color="#275882"}
-
-## Step by Step (~30 min)
-
----
-
-## What is a Procedure?
-
-A procedure is a detailed, **replicable** description of what happens from the moment a participant arrives until they leave.
-
-::: {.callout-tip}
-## The Test
-
-Could someone who has never seen your study run it identically from your procedure alone?
-:::
-
----
-
-## Procedure Template
-
-| Phase | What Happens | Time |
-|-------|--------------|------|
-| 1. Arrival | Greet participant, explain study | 2 min |
-| 2. Consent | Participant reads and signs consent | 2 min |
-| 3. Instructions | Explain task, check understanding | 2 min |
-| 4. Condition 1 | [Describe what happens] | ? min |
-| 5. Condition 2* | [If within-subjects] | ? min |
-| 6. Measures | Complete questionnaire/test | ? min |
-| 7. Debriefing | Explain purpose, answer questions | 3 min |
-
----
-
-## Key Questions to Answer
-
-::: {.exercise-box}
-**Your procedure must specify:**
-
-1. What does the participant do first?
-2. What are the exact instructions given?
-3. How long does each part take?
-4. What does the experimenter do/say?
-5. How is data recorded?
-6. What happens if something goes wrong?
-:::
-
----
-
-## Activity: Draft Your Procedure
-
-::: {.exercise-box}
-**In your groups (20 minutes):**
-
-1. List every step from arrival to departure
-2. Estimate timing for each step
-3. Note who does what (participant vs experimenter)
-4. Identify any decision points or contingencies
-
-**Write this on your procedure worksheet!**
-:::
-
----
-
-## Checkpoint 1
-
-::: {.poll-box}
-**Instructor Check:**
-
-Circulate and verify:
-
-- Every step is documented
-- Timings are realistic (total under 30 min ideally)
-- Both participant and experimenter actions are clear
-- Nothing is ambiguous or left to interpretation
-:::
-
----
-
-# Materials & Instructions {background-color="#275882"}
-
-## Creating Your Resources (~30 min)
-
----
-
-## Types of Materials
-
-Depending on your study, you may need:
-
-| Material | Example |
-|----------|---------|
-| Stimuli | Images, sounds, videos, word lists |
-| Questionnaires | Self-report measures, demographics |
-| Data sheets | Recording forms for experimenter |
-| Consent form | Information sheet and signature |
-| Debriefing sheet | Explanation of true purpose |
-
----
-
-## Standardised Instructions
+## Document 5: Data Recording Sheet
 
 ::: {.definition-box}
-**Standardised Instructions**: The exact words you say to every participant
+**What it is:** A table where you record each participant's data (condition, DV score, optional demographics).
 
-Why standardise?
-
-- Reduces experimenter effects
-- Ensures consistency across testers
-- Makes your study replicable
+**Tips:** Columns for participant number, condition (if between-subjects), DV score, optional demographics. Include a **scoring guide** so all group members score consistently. Delete the between- or within-subjects table you don't need from the template. Accuracy matters — this is your raw data.
 :::
 
 ---
 
-## Writing Good Instructions
-
-::: {.example-box}
-**Poor**: "Do the memory task."
-
-**Better**: "You will see a list of words. Try to remember them."
-
-**Best**: "In a moment, you will see 10 words appear on the screen, one at a time. Each word will be shown for 3 seconds. Your task is to try to remember as many words as you can. After all 10 words have been shown, you will have 60 seconds to write down as many as you can remember. Please do not write anything until I tell you to begin. Do you have any questions?"
-:::
-
----
-
-## Activity: Create Instructions
-
-::: {.exercise-box}
-**In your groups (15 minutes):**
-
-1. Write the exact instructions you will read to participants
-2. Include instructions for EACH phase of your procedure
-3. Write a comprehension check question
-
-**Remember**: Write as if you are reading a script!
-:::
-
----
-
-## Materials Checklist
+## Document 6: Stimulus Materials
 
 ::: {.definition-box}
-**Before your pilot, confirm you have:**
+**What it is:** The actual materials participants see or use — word lists, images, passages, rating sheets, questionnaires.
 
-- [ ] Consent form (even a draft version)
-- [ ] Standardised instructions (written out)
-- [ ] All stimuli/materials ready (or clear plan to create)
-- [ ] Data recording sheet
-- [ ] Debriefing explanation
+**Tips:** Match materials across conditions (e.g. word frequency, difficulty, length). Use the [Project Options](project/group-project-options.qmd) and worked example in the toolkit. Test on each other before data collection day.
 :::
 
 ---
 
-## Checkpoint 2
-
-::: {.poll-box}
-**Instructor Check:**
-
-Verify each group has:
-
-- Written standardised instructions
-- Materials identified (even if not all created yet)
-- Consent and debriefing planned
-:::
-
----
-
-# Pilot Run {background-color="#275882"}
-
-## Test Your Procedure (~30 min)
-
----
-
-## Why Pilot?
-
-::: {.callout-important}
-## Every Study Needs Piloting
-
-Piloting reveals:
-
-- Confusing instructions
-- Technical problems
-- Timing issues
-- Unexpected participant questions
-- Missing materials
-:::
-
----
-
-## How to Pilot Today
-
-:::: {.columns}
-::: {.column width="50%"}
-**Roles:**
-
-- One person acts as **experimenter**
-- One person acts as **participant**
-- Others **observe and take notes**
-
-Rotate so everyone experiences both roles!
-:::
-
-::: {.column width="50%"}
-**Focus on:**
-
-- Are instructions clear?
-- Is the timing right?
-- Does anything feel awkward?
-- What questions might real participants ask?
-:::
-::::
-
----
-
-## Pilot Feedback Form
-
-| Issue | What Happened | How to Fix |
-|-------|---------------|------------|
-| Instructions unclear | Participant asked what "stimulus" meant | Change to "the picture" |
-| Timing | Task took 8 min not 5 min | Reduce trials or extend procedure |
-| Materials | Screen too small to read | Use larger font or different device |
-| Flow | Awkward pause between sections | Add transition script |
-
----
-
-## Activity: Run Your Pilot
-
-::: {.exercise-box}
-**In your groups (25 minutes):**
-
-1. Assign roles (experimenter, participant, observers)
-2. Run through your ENTIRE procedure
-3. Observers note any issues on the feedback form
-4. Rotate roles if time permits
-5. Discuss improvements as a group
-:::
-
----
-
-## Checkpoint 3
-
-::: {.poll-box}
-**Instructor Check:**
-
-After pilot runs:
-
-- What worked well?
-- What needs revision?
-- Are there any fundamental problems?
-:::
-
----
-
-# Debrief & Troubleshooting {background-color="#275882"}
-
-## Finalising Your Procedure (~20 min)
-
----
-
-## Common Pilot Issues
-
-| Issue | Solution |
-|-------|----------|
-| Instructions confusing | Simplify language, add examples |
-| Takes too long | Cut non-essential elements |
-| Participant got bored | Add variety, shorter tasks |
-| Data not recording properly | Test technology in advance |
-| Ethical concerns emerged | Revise consent/debriefing |
-
----
-
-## Revise Your Procedure
-
-::: {.exercise-box}
-**Based on your pilot (10 minutes):**
-
-1. List all issues identified
-2. Decide on solutions for each
-3. Update your procedure document
-4. Note any materials that need revision
-:::
-
----
-
-## Debriefing Script
+## Document 8: Complete Researcher Procedure
 
 ::: {.definition-box}
-**Your debriefing should include:**
+**Finish** what you started in Phase 1:
+- Full step-by-step with **exact wording** (in quotes)
+- **Timing** for every phase
+- **Data recording**: when and how you fill in the Data Recording Sheet
+- **Scoring**: how you score the DV (reference to scoring guide)
+- **Checklist** of materials to prepare before each session
 
-1. Thank participant for taking part
-2. Explain the true purpose of the study
-3. Explain any deception (if applicable)
-4. Provide your contact details for questions
-5. Remind them of right to withdraw data
+Any group member should be able to run the study from this document alone.
 :::
 
 ---
 
-## Example Debriefing
+## Practice Run
 
-::: {.example-box}
-"Thank you for participating. This study was investigating whether background music affects memory performance. Half of participants completed the task with music, and half in silence. We predicted that music would impair memory due to cognitive load.
+::: {.exercise-box}
+**In your group (20–30 min):**
 
-If you have any questions, please contact [name] at [email]. You may withdraw your data at any time before [date]. Thank you again for your contribution to this research."
+1. One person plays **researcher**, others play **participants**.
+2. Run through the full procedure: consent → instructions → task → debrief.
+3. Use a **timer**; record "data" on your Data Recording Sheet.
+4. Note: What was unclear? What took too long or too little time? Did the instructions make sense?
+5. **Swap** so someone else runs it; repeat if time.
+6. Update the Researcher Procedure and Participant Instructions with any fixes.
 :::
 
 ---
 
-# Summary {background-color="#275882"}
+## Document 9: Research Study Order Form
+
+::: {.definition-box}
+**What it is:** A form listing everything your group needs **printed or provided** for data collection day. You submit this to Gordon so resources can be prepared in advance.
+
+**When:** Submit by **end of Week 19** at latest (no lab that week — do it in your own time).
+
+**Tips:** List every document and how many copies (err on the side of more). Include special requirements (e.g. colour printing, specific paper). Don't forget consumables: pens, blank paper, snacks.
+:::
 
 ---
 
-## What You Should Have Now
+## Activity: Phase 2 Checklist
 
-::: {.example-box}
-**Completed procedure package:**
+::: {.poll-box}
+**By the end of the lab, each group should have:**
 
-1. Step-by-step procedure with timings
-2. Standardised instructions (scripted)
-3. Materials list (with status: ready/to create)
-4. Consent form (draft)
-5. Debriefing script
-6. Pilot feedback and revisions
+- [ ] Recruitment Script finalised  
+- [ ] Data Recording Sheet with scoring guide  
+- [ ] Stimulus materials finalised  
+- [ ] Researcher Procedure **complete**  
+- [ ] At least one **practice run** done and procedure updated  
+- [ ] Research Study Order Form completed (submit by end of Week 19)
+
+Get sign-off from an instructor if required.
 :::
+
+---
+
+## Timeline Reminder
+
+| Week | Lecture | Lab |
+|------|---------|-----|
+| **19** | Lecture 19 | **No lab** (testing) — EDS due 20 Mar; finalise docs; submit Order Form |
+| **20** | Lecture 20 | **Data collection** — run your study |
 
 ---
 
 ## Before You Leave
 
-::: {.callout-important}
-## Checkpoint Before Leaving
-
-1. Show your procedure to an instructor
-2. Confirm your pilot run is complete
-3. List any materials still needed before Week 19
-4. Ensure ALL group members have the updated procedure
-:::
+- All documents in a **shared folder**; everyone has access.
+- **Research Study Order Form** — submit by end of Week 19 (no lab that week).
+- **EDS** due 20 March — use Week 17 materials and self-assessment to revise.
+- Week 20: come ready to collect data with all printed materials and a clear procedure.
 
 ---
 
-## Next Week: Data Collection
+# You're Ready for Data Collection {background-color="#275882"}
 
-::: {.callout-note}
-## Week 19 Focus
-
-- Finalise any remaining materials
-- Begin actual data collection
-- Conduct your study with real participants
-- Practice being consistent experimenters
-
-**Come prepared with ALL materials ready!**
-:::
-
----
-
-## Homework Before Week 19
-
-1. **Create any missing materials** (stimuli, questionnaires, etc.)
-2. **Print consent and data sheets** (if using paper)
-3. **Rehearse the procedure** with group members
-4. **Identify participants** you will test next week
-
----
-
-## EDS Assignment Reminder
-
-::: {.callout-warning}
-## EDS DUE: Friday 20th March
-
-Your Experimental Design Skills assignment is due next Friday!
-
-Use your time wisely between project work and EDS preparation.
-:::
-
----
-
-# See you next week! {background-color="#275882"}
-
-::: {.notes}
-**Instructor Notes:**
-
-- Ensure all groups complete procedure worksheets
-- Document groups that still need significant materials
-- Check that pilot runs actually happened
-- Flag any groups with ethical concerns for follow-up
-- Remind about EDS deadline next Friday
-:::
+Complete any final tweaks and the Order Form in Week 19. Good luck with the MCQ results and the EDS!

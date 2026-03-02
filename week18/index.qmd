@@ -1,5 +1,5 @@
 ---
-title: "Week 18: MCQ Exam"
+title: "Week 18: MCQ Exam & Project Toolkit Phase 2"
 subtitle: "PS50008A Research Methods | 9-13 March 2026"
 author: "Gordon Wright"
 date: "2026-03-09"
@@ -8,127 +8,95 @@ date: "2026-03-09"
 ## Overview
 
 ::: {.callout-important appearance="simple"}
-## MCQ EXAM: MONDAY 9TH MARCH
+## MCQ EXAM: Wednesday 11 March
 
-**Date**: Monday 9th March 2026
+**Date**: Wednesday 11 March 2026  
+**Time**: Check your timetable  
+**Location**: Check your exam allocation  
+**Duration**: 1 hour  
 
-**Time**: Check your timetable
-
-**Location**: Check your exam allocation
-
-**Duration**: 1 hour
-
-This is a summative assessment worth **20%** of your module grade.
+This is a summative assessment worth **20%** of your module grade. **There is no lecture this week** — the Wednesday session is the exam.
 :::
 
-**This week**: Complete your MCQ Exam on Monday. Thursday's lab continues project group work focusing on your experimental procedure.
+**Thursday lab**: **Project Toolkit — Phase 2**. Finalise stimulus materials, complete the Researcher Procedure, add Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form. By the end of this lab you should be ready for data collection (Week 20). **There is no Week 19 lab** (testing); Week 20 is lecture + data collection lab.
 
-**Monday**: MCQ EXAM (not a lecture)
-**Lab**: Thursday 10:00-12:00 WB304A and WB304B
+**Wednesday**: MCQ Exam (no lecture)  
+**Lab**: Thursday 10:00-12:00 WB304A / WB304B
 
 ## Exam Information
 
 ### What to Expect
 
 ::: {.callout-note}
-## Exam Format
-- **Number of questions**: 40 multiple-choice questions
-- **Time allowed**: 60 minutes
-- **Topics covered**: All content from Weeks 11-17
+## Exam format
+- **Number of questions**: 36 multiple-choice questions (5 investigations + 6 general)
+- **Time allowed**: Check exam instructions
+- **Topics**: All content from Weeks 11–17 (designs, IV/DV, hypotheses, test choice, p-values, correlation, operationalisation, replication, confounding, null hypothesis, population)
 - **Format**: Paper-based exam
 :::
-
-### Topics Covered
-
-The MCQ exam covers all material from Term 2:
-
-| Week | Topic |
-|------|-------|
-| 11 | DataLab introduction |
-| 12 | Research design framework: variables, designs, hypotheses |
-| 13 | Correlation and relationships |
-| 14 | Distributions and descriptive statistics |
-| 15 | Significance testing and t-tests |
-| 16 | Practice assignment review |
-| 17 | P-hacking, HARKing, and the replication crisis |
 
 ### Exam Tips
 
 ::: {.callout-tip}
-## Last-Minute Advice
+## Last-minute advice
 1. **Read each question carefully** — look for key words like "NOT", "EXCEPT", "ALWAYS"
 2. **Eliminate obviously wrong answers** — narrow down your choices
-3. **Don't change answers** unless you're certain — first instinct is often correct
-4. **Manage your time** — don't spend too long on any single question
-5. **Answer every question** — no penalty for guessing
+3. **Manage your time** — don't spend too long on any single question
+4. **Answer every question** — no penalty for guessing
 :::
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
-| [Lab Slides](lab/slides.html){target="_blank"} | Project procedure guidance |
-| [Lab Activity](lab/activity.qmd) | Procedure development for your project |
-| [Lab Reading](lab/reading.qmd) | Procedure planning resources |
-| [Self-Assessment](lab/self-assessment.qmd) | Additional practice (post-exam) |
+| [Project Toolkit](project/project-toolkit.qmd) | Timeline, document checklist, templates — **Phase 2 this week** |
+| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Phase 2: materials, procedure, practice run, order form |
+| [Lab Activity](lab/activity.qmd) | Phase 2 checklist and practice run |
+| [Lab Reading](lab/reading.qmd) | Phase 2 reading: materials, data recording, practice |
 
 ::: {.callout-note}
-## No Lecture Materials This Week
-Monday's session is the MCQ Exam — there are no lecture slides or readings this week.
+## No lecture materials this week
+Wednesday's session is the MCQ Exam. Use Week 17 lecture and self-assessment for revision.
 :::
 
 ## Week at a Glance
 
 | Day | Session | Focus |
-|-----|---------|-------|
-| **Monday** | **MCQ EXAM** | **Summative assessment (20% of module)** |
-| Thursday | Lab (2 hrs) | Project Groups: Procedure development |
+|-----|---------|--------|
+| **Wednesday** | **MCQ Exam** | **Summative assessment (20% of module)** — no lecture |
+| Thursday | Lab (2 hrs) | Project Toolkit Phase 2: materials, complete procedure, practice run, order form |
 
-## Project Groups: Procedure
+## Project Toolkit — Phase 2 (Thursday Lab)
 
-After the exam, Thursday's lab focuses on developing your experimental procedure.
+Phase 2 completes the toolkit so you are ready for **data collection in Week 20**.
 
-Your project group will:
+Your group will:
 
-1. **Draft your procedure** — step-by-step what happens to each participant
-2. **Create your materials** — stimuli, questionnaires, instructions
-3. **Write standardised instructions** — what will you say to participants?
-4. **Plan your debriefing** — how will you explain the study afterwards?
-5. **Conduct a pilot run** — test the procedure within your group
+1. **Recruitment Script** — Short script for approaching participants (template in toolkit)
+2. **Data Recording Sheet** — Table for participant number, condition, DV score, scoring guide (draft in Week 18, finalise by Week 19)
+3. **Stimulus materials** — Finalise word lists, images, questionnaires, etc. (toolkit has templates and examples)
+4. **Researcher Procedure** — **Complete** the procedure you started in Week 17 (data recording, scoring, full script)
+5. **Practice run** — Run the study on each other; fix any problems with timing, instructions, or materials
+6. **Research Study Order Form** — List everything you need printed or provided for data collection day; submit by **end of Week 19** at latest
 
 ::: {.callout-tip}
-## Procedure Checklist
-A good procedure section answers:
-
-- What happens first, second, third?
-- What do participants see/hear/do?
-- How long does each part take?
-- What are the exact instructions given?
-- How is data recorded?
+## Timeline reminder
+| Week | Lecture | Lab |
+|------|---------|-----|
+| 18 | **MCQ** (no lecture) | Phase 2 |
+| 19 | Lecture 19 | **No lab** (testing) — finalise docs, submit Order Form; EDS due 20 Mar |
+| 20 | Lecture 20 | **Data collection** |
 :::
-
-## After the Exam
-
-::: {.callout-note}
-## Results and Feedback
-MCQ results will be available within 2 weeks. Check Learn for your score and item-level feedback.
-:::
-
-Take time to reflect on:
-
-- Which topics felt comfortable?
-- Which areas need more work for the Research Report?
-- How can you apply what you've learned to your project?
 
 ## Connecting to Assessments
 
 | Assessment | Connection |
 |------------|------------|
-| **MCQ Exam** | **COMPLETED THIS WEEK** |
-| **Research Plan** | Procedure section development in lab |
-| **Research Report** | Method section: procedure writing practice |
+| **MCQ Exam** | **Completed this week** (Wednesday) |
+| **EDS** (Due 20 March) | Revise using Week 17 materials and self-assessment |
+| **Research Report** | Group project data collected in Week 20 lab |
 
 ## What's Next?
 
-- **Week 19**: Focus shifts to data collection and analysis preparation
-- Your project group should have a complete procedure ready for ethics review
+- **Week 19**: Lecture only (no lab). EDS due 20 March. Finalise all toolkit documents; submit Research Study Order Form by end of week.
+- **Week 20**: Lecture + **data collection lab** — run your study.

@@ -1,245 +1,116 @@
 ---
-title: "Chapter 14: Project Groups - Research Methodology"
-subtitle: "Designing Your Study and Writing Methods"
+title: "Chapter 17 Lab: Project Toolkit — Phase 1"
+subtitle: "Drafting Core Documents for Data Collection"
 ---
 
 ## Overview
 
-This reading prepares you for the second project group session, where you'll finalise your **research design** and begin writing your **methods section**. A well-designed study is the foundation of good research --- it determines what conclusions you can draw from your data.
+This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the core documents your group needs before data collection day. **Labs 17 and 18** complete all toolkit materials so you are ready for **data collection in Week 20**. (There is no Week 19 lab due to testing; Week 20 is lecture + data collection lab.)
 
-::: {.callout-note}
-## What You'll Learn
-By the end of this lab, you'll be able to:
+**Phase 1 (Week 17):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
 
-- Articulate your study design (experimental vs correlational, between vs within)
-- Define your variables operationally
-- Describe your sample and sampling method
-- Begin drafting a clear, replicable methods section
-:::
+**Phase 2 (Week 18):** Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, practice run, Research Study Order Form.
 
-## The Purpose of the Methods Section
+---
 
-The methods section answers: **How did you do the study?**
+## Why These Documents Matter
 
-A good methods section is:
+Your group must prepare **9 documents** (see the Project Toolkit checklist). In Phase 1 you focus on the **participant-facing** documents and the beginning of the **Researcher Procedure**. These ensure:
 
-- **Clear**: Anyone could understand what you did
-- **Complete**: All necessary details are included
-- **Replicable**: Someone else could repeat your study exactly
+- **Ethics**: Informed consent (Information Sheet + Consent) and debriefing (Debrief Form) are required.
+- **Standardisation**: Participant Instructions and Researcher Procedure ensure every participant is treated the same way.
+- **Replicability**: A clear procedure allows others (and your future selves) to run the study exactly the same way.
 
-::: {.callout-important}
-## Golden Rule
-Write your methods so that a researcher who knows nothing about your study could replicate it exactly. If they'd have to guess anything, add more detail.
-:::
+---
 
-## Identifying Your Design
+## Document 1: Participant Information Sheet
 
-### Experimental vs Correlational
+**What it is:** A formal document given to potential participants *before* they agree. It explains the study in general terms so they can give informed consent.
 
-| Design | You... | Can claim... |
-|--------|--------|--------------|
-| **Experimental** | Manipulate an IV | Causation (if controlled) |
-| **Correlational** | Measure existing differences | Association only |
+**Who sees it:** Every participant; they read it before signing consent and keep a copy.
 
-**Question to ask**: Are you assigning participants to conditions, or measuring them as they naturally are?
+**Tips:**
 
-### Between-Subjects vs Within-Subjects
+- Describe **purpose** and **what will happen** in plain language. Do **not** reveal your hypothesis.
+- Include: time required, risks/benefits, confidentiality, right to withdraw, contact for questions.
+- Use the toolkit template and customise the purpose and "what will happen" sections. Refer to the worked example for tone and length.
 
-| Design | Each participant... | Advantage | Disadvantage |
-|--------|---------------------|-----------|--------------|
-| **Between-subjects** | Experiences one condition | No carryover effects | Needs more participants |
-| **Within-subjects** | Experiences all conditions | More statistical power | Order effects possible |
+---
 
-**Question to ask**: Will each person be in one group or multiple groups?
+## Document 2: Consent Form
 
-## Defining Your Variables
+**What it is:** The form the participant signs to confirm they have read the information, understand the study, and agree to take part. A legal and ethical requirement.
 
-### Independent Variable (IV)
+**Who sees it:** Every participant signs one; you keep the signed copies securely.
 
-The variable you manipulate or use to categorise participants.
+**Tips:**
 
-**Operational definition needed**: How exactly are groups distinguished?
+- Update the **study title** only if needed; the checklist items are standard.
+- Use the **same study title** on every document (Information Sheet, Consent, Debrief, Procedure).
+- Plan to print plenty of copies (e.g. 30) for data collection.
 
-Example:
-> **Conceptual**: Social media use
-> **Operational**: Self-reported daily social media use, categorised as "low" (< 1 hour), "moderate" (1-3 hours), or "high" (> 3 hours)
+---
 
-### Dependent Variable (DV)
+## Document 3: Debrief Form
 
-The outcome you measure.
+**What it is:** A document given to participants *after* the study explaining its true purpose, including the hypothesis and relevant theory.
 
-**Operational definition needed**: How exactly is it measured?
+**Who sees it:** Every participant receives this after completing the study.
 
-Example:
-> **Conceptual**: Sleep quality
-> **Operational**: Score on the Pittsburgh Sleep Quality Index (PSQI), where higher scores indicate poorer sleep quality (range 0-21)
+**Tips:**
 
-::: {.callout-tip}
-## Why Operational Definitions Matter
-"Social media use" could mean many things --- time spent, number of posts, types of platforms. Without an operational definition, your study isn't replicable, and readers can't evaluate whether your measure is valid.
-:::
+- Here you **can** (and should) reveal the hypothesis and explain the theory (e.g. dual coding, anchoring).
+- Include data withdrawal instructions and support service contacts.
+- Keep it to about one page. Use the template and worked example.
 
-## Writing the Methods Section
+---
 
-The methods section typically has four subsections:
+## Document 7: Participant Instructions
 
-### 1. Participants
+**What it is:** A clear, step-by-step sheet telling the participant exactly what to do during the study (e.g. "Read the list of words", "You have 2 minutes", "Write down as many as you can remember").
 
-Describe who took part:
+**Who sees it:** Every participant reads this before the study begins.
 
-- **Sample size**: How many participants? (Include how you determined this)
-- **Demographics**: Age, gender, other relevant characteristics
-- **Recruitment**: How were they recruited? (convenience sample, random sample, etc.)
-- **Inclusion/exclusion criteria**: Who was eligible? Who was excluded and why?
+**Tips:**
 
-Example:
-> Participants were 60 undergraduate psychology students (45 female, 14 male, 1 non-binary; M_age = 19.2, SD = 1.3) recruited through the department participant pool. Participants received course credit for participation. Inclusion criteria required participants to be aged 18-25 and to own a smartphone.
+- Use **numbered steps** and plain language. No jargon; no hypothesis.
+- Keep it short (about half a page). If your between- and within-subjects procedures differ, use separate instruction sheets.
+- Do **not** reveal what you expect to find.
 
-### 2. Design
+---
 
-State your design clearly:
+## Document 8: Researcher Procedure (Start in Phase 1)
 
-- Type of design (experimental/correlational, between/within)
-- Independent variable(s) and levels
-- Dependent variable(s)
+**What it is:** A detailed step-by-step guide for the researcher running the study. Includes exact wording, timing, and the full procedure. Your "recipe" for running the study.
 
-Example:
-> This study used a between-subjects experimental design with one independent variable (social media condition: restricted vs. unrestricted) and one dependent variable (sleep quality as measured by PSQI score).
+**Who sees it:** Researchers only.
 
-### 3. Materials
+**Tips:**
 
-Describe all materials and measures:
+- **Phase 1:** Write the materials checklist, the sequence (greeting → consent → instructions → main task → debrief), timing for each phase, and exact words to say to participants (in quotes or italics).
+- **Phase 2 (Week 18):** Complete with data recording, scoring, and any final details. Any group member should be able to run the study from this document alone.
+- Use the template; refer to the between- or within-subjects example procedure in the toolkit.
 
-- **Questionnaires**: Name, what they measure, number of items, example items, reliability
-- **Stimuli**: What participants saw/heard, how created
-- **Equipment**: Any technology used
+---
 
-Example:
-> Sleep quality was measured using the Pittsburgh Sleep Quality Index (PSQI; Buysse et al., 1989), a 19-item self-report questionnaire. The PSQI assesses sleep quality over the past month across seven domains (e.g., "During the past month, how would you rate your sleep quality overall?"). Scores range from 0-21, with higher scores indicating poorer sleep quality. The PSQI has good internal consistency (Cronbach's alpha = .83).
+## Preparation for the Lab
 
-### 4. Procedure
+Before the lab:
 
-Describe what happened step-by-step:
+- Re-read the [Project Toolkit](project/project-toolkit.qmd) timeline and document checklist (documents 1, 2, 3, 7, 8).
+- Have your **research question**, **design** (between/within), and **main task** (what participants do) clear from your Research Plan.
+- Download the relevant **templates** from the toolkit so you can start drafting in the lab.
 
-- What did participants do, in what order?
-- How long did each part take?
-- What instructions were given?
-- Any standardisation procedures?
-
-Example:
-> Participants attended a single 30-minute session. After providing informed consent, participants completed a demographics questionnaire and the baseline PSQI. Participants in the restricted condition were then asked to limit their social media use to 30 minutes per day for one week, tracked using the Screen Time app. Participants in the unrestricted condition received no instructions about their social media use. After one week, all participants returned to complete the PSQI again and were debriefed.
-
-## Common Methodological Issues
-
-### Confounding Variables
-
-A **confound** is an uncontrolled variable that varies systematically with your IV.
-
-Example: If your "high social media" group happens to also be younger, you can't tell if effects are due to social media or age.
-
-**Solutions**:
-
-- Random assignment (in experiments)
-- Measuring and controlling for confounds statistically
-- Matching groups on key variables
-
-### Demand Characteristics
-
-Participants might guess your hypothesis and change their behaviour.
-
-**Solutions**:
-
-- Don't reveal the hypothesis until debriefing
-- Use cover stories when appropriate
-- Include attention checks
-
-### Order Effects
-
-In within-subjects designs, doing one condition first might affect performance in the next.
-
-**Solutions**:
-
-- Counterbalancing (half do A-then-B, half do B-then-A)
-- Randomising order for each participant
-
-## Common Errors and How to Avoid Them
-
-### Being too vague
-
-**Problem**: "Participants completed a questionnaire about their feelings."
-
-**Solution**: "Participants completed the Positive and Negative Affect Schedule (PANAS; Watson et al., 1988), a 20-item questionnaire measuring positive affect (10 items, e.g., 'enthusiastic') and negative affect (10 items, e.g., 'distressed') on a 5-point scale."
-
-### Missing procedural details
-
-**Problem**: Leaving out timing, order, or instructions.
-
-**Solution**: Walk through your procedure mentally. What would someone need to know to do exactly what you did?
-
-### Confusing the reader
-
-**Problem**: Jumping between design elements without structure.
-
-**Solution**: Use the standard subheadings (Participants, Design, Materials, Procedure). Be systematic.
-
-### Not justifying sample size
-
-**Problem**: "We recruited 40 participants."
-
-**Solution**: "We recruited 40 participants (20 per condition). A power analysis (G*Power; Faul et al., 2007) indicated that this sample size would provide 80% power to detect a medium effect (d = 0.5) with alpha = .05."
-
-## Preparation Checklist
-
-Before arriving at the lab:
-
-::: {.callout-warning}
-## Before You Arrive
-
-- [ ] Have your research question and hypothesis finalised
-- [ ] Know your design (experimental/correlational, between/within)
-- [ ] Have operational definitions for your IV and DV
-- [ ] Research any standardised measures you plan to use
-- [ ] Think through your procedure step-by-step
-:::
-
-### Questions to Discuss with Your Group
-
-- What is our exact design?
-- How will we operationalise our variables?
-- What materials/measures do we need?
-- What's our procedure from start to finish?
-- What could go wrong and how do we prevent it?
-
-### What to Bring
-
-- Your literature review notes (methods of similar studies)
-- Draft operational definitions
-- Any questionnaires or measures you're considering
-- Questions about design choices
+---
 
 ## Summary
 
-| Section | What to Include |
-|---------|-----------------|
-| **Participants** | N, demographics, recruitment, inclusion/exclusion criteria |
-| **Design** | Type, IV(s) and levels, DV(s) |
-| **Materials** | All measures described in detail with reliability |
-| **Procedure** | Step-by-step what happened, in order |
+| Document | Phase 1 action |
+|----------|-----------------|
+| 1. Participant Information Sheet | Draft (purpose, what happens, no hypothesis) |
+| 2. Consent Form | Draft (study title consistent) |
+| 3. Debrief Form | Draft (hypothesis + theory + withdrawal/support) |
+| 7. Participant Instructions | Draft (numbered steps, no hypothesis) |
+| 8. Researcher Procedure | **Start** (checklist, sequence, timing, script); complete in Week 18 |
 
-## Methods Section Checklist
-
-Use this to review your draft:
-
-- [ ] Could someone replicate my study from this description?
-- [ ] Is my design clearly stated (type, variables)?
-- [ ] Are all variables operationally defined?
-- [ ] Are all measures described with citations?
-- [ ] Is the procedure in chronological order?
-- [ ] Have I addressed potential confounds?
-- [ ] Is my sample size justified?
-
-## Additional Resources
-
-- [APA Style: Method Section](https://apastyle.apa.org/instructional-aids/method-section-guide.pdf) --- Official guidance
-- [Writing the Methods Section](https://www.scribbr.com/research-paper/methods-section/) --- Practical tips
-- [G*Power Software](https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower) --- For power analysis
+All templates and the worked example are in the [Project Toolkit](project/project-toolkit.qmd).

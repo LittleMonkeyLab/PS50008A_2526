@@ -1,5 +1,5 @@
 ---
-title: "Project Groups: Procedure"
+title: "Project Toolkit — Phase 2"
 subtitle: "PS50008A Week 18 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-11"
@@ -14,286 +14,135 @@ execute:
   message: false
 ---
 
-```{r}
-#| label: setup
-library(webexercises)
-library(tidyverse)
-library(knitr)
-```
-
 ## Overview
 
 ::: {.callout-important}
-## Focus for Today
-This session focuses on **developing your study procedure**. By the end, your group should have:
-
-- A detailed step-by-step procedure
-- Draft materials ready for pilot testing
-- A pilot testing plan
-- A data collection timeline
+## Focus for today
+This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. There is **no Week 19 lab** (testing); **Week 20** is data collection. Everything must be ready after this session.
 :::
 
 ---
 
-## Activity 1: Step-by-Step Procedure (20 min)
+## Before You Start
 
-### Procedure Detail Check
+1. Bring your **Phase 1 drafts** (Information Sheet, Consent, Debrief, Participant Instructions, Researcher Procedure draft).
+2. Open the [Project Toolkit](project/project-toolkit.qmd) and have the **templates** for documents 4, 5, 6, 9 to hand.
+3. Agree who will run the practice (researcher vs participants) and who will take notes on timing and clarity.
 
-A good procedure should be detailed enough that another researcher could replicate your study exactly.
+---
 
-**Which level of detail is appropriate for a procedure?**
+## Phase 2 Checklist
 
-`r mcq(c("Participants completed a questionnaire", "Participants answered questions about their mood", answer = "Participants completed the 10-item Perceived Stress Scale (Cohen et al., 1983), responding on a 5-point scale from 0 (never) to 4 (very often)"))`
+Use this checklist as you work. Tick off each item as your group completes it.
 
-### Timing Your Procedure
+### 4. Recruitment Script
 
-Estimate the time for each component of your study:
+- [ ] Downloaded template: [Recruitment Script — Template](../../files/project-docs/templates/template-recruitment-script.docx)
+- [ ] Script is 3–4 sentences: who you are, what the study is (briefly), how long, where to go, incentive if any
+- [ ] Friendly and clear; printed or saved for use on data collection day
+- [ ] Saved
 
-| Component | Estimated Time |
-|-----------|---------------|
-| Consent form | ___ min |
-| Instructions | ___ min |
-| Practice trials | ___ min |
-| Main task/measures | ___ min |
-| Debriefing | ___ min |
-| **TOTAL** | ___ min |
+**Reference:** [Project Toolkit](project/project-toolkit.qmd) → 4. Recruitment Script.
 
-**True or False: It's better to underestimate how long your study will take.** `r torf(FALSE)`
+---
 
-**Why is accurate timing important?**
+### 5. Data Recording Sheet
 
-`r mcq(c("It doesn't matter", answer = "Participants need to know how long to expect, and long studies cause fatigue", "Only for ethics applications", "To impress supervisors"))`
+- [ ] Downloaded template: [Data Recording Sheet — Template](../../files/project-docs/templates/template-data-recording-sheet.docx)
+- [ ] Columns: participant number, condition (if between-subjects), DV score, optional demographics
+- [ ] **Scoring guide** included so all scorers use the same rules
+- [ ] Deleted the between- or within-subjects table you don't need
+- [ ] Saved
 
-### Standardisation Check
+**Reference:** Project Toolkit → 5. Data Recording Sheet.
+
+---
+
+### 6. Stimulus Materials
+
+- [ ] Downloaded or created materials: [Stimulus Materials — Template](../../files/project-docs/templates/template-stimulus-materials.docx) or project-specific (word lists, images, etc.)
+- [ ] Materials **matched across conditions** (e.g. word frequency, difficulty, length)
+- [ ] Tested on each other; any changes noted
+- [ ] Final version saved and ready to print or display
+
+**Reference:** Project Toolkit → 6. Stimulus Materials; [Project Options](project/group-project-options.qmd).
+
+---
+
+### 7. Participant Instructions (finalise if needed)
+
+- [ ] Reviewed and updated from Phase 1 if the procedure changed
+- [ ] Numbered steps, plain language, no hypothesis
+- [ ] Separate sheets for between vs within if your procedures differ
+- [ ] Saved
+
+**Reference:** Project Toolkit → 7. Participant Instructions.
+
+---
+
+### 8. Researcher Procedure — Complete
+
+- [ ] **Completed** the procedure you started in Phase 1
+- [ ] **Data recording**: when and how you fill in the Data Recording Sheet (e.g. after each participant)
+- [ ] **Scoring**: how you score the DV; reference to the scoring guide on the Data Recording Sheet
+- [ ] **Full script**: exact words for greeting, instructions, debrief (in quotes)
+- [ ] **Timing**: every phase has a duration
+- [ ] **Materials checklist**: everything needed before each session
+- [ ] Any group member could run the study from this document alone
+- [ ] Saved
+
+**Reference:** Project Toolkit → 8. Researcher Procedure.
+
+---
+
+### 9. Research Study Order Form
+
+- [ ] Downloaded template: [Research Study Order Form — Template](../../files/project-docs/templates/template-research-study-order-form.docx)
+- [ ] Listed **every document** and **number of copies** (e.g. Consent × 30, Debrief × 30)
+- [ ] Included **special requirements** (e.g. colour printing, paper size)
+- [ ] Included **consumables** (pens, blank paper, snacks)
+- [ ] **Submit to Gordon by end of Week 19** (no lab that week — submit in your own time)
+- [ ] Saved and submitted
+
+**Reference:** Project Toolkit → 9. Research Study Order Form.
+
+---
+
+## Practice Run
 
 ::: {.callout-warning}
-## Standardisation Matters
-Every participant should experience the same procedure. Variations introduce **confounds**.
+## Essential
+Run the full study at least **once** within your group before data collection day.
 :::
 
-**Which of these is a potential confound?**
+**Steps:**
 
-`r mcq(c("Using the same instructions for everyone", answer = "Some participants tested in quiet rooms, others in noisy corridors", "Randomising condition assignment", "Using validated measures"))`
-
-**To avoid experimenter effects, instructions should be:**
-
-`r mcq(c("Made up on the spot", "Different for each participant", answer = "Standardised (scripted or pre-recorded)", "As brief as possible"))`
-
----
-
-## Activity 2: Creating Materials (20 min)
-
-### Materials Checklist
-
-Identify all materials your study requires:
-
-::: {.callout-note}
-## Common Materials
-- [ ] Information sheet
-- [ ] Consent form
-- [ ] Demographic questionnaire
-- [ ] Standardised measures (with permission/citation)
-- [ ] Task stimuli
-- [ ] Response sheets or digital forms
-- [ ] Debriefing sheet
-:::
-
-### Consent Form Elements
-
-**A valid consent form must include:**
-
-`r mcq(c("Just a signature line", "Only the study title", answer = "Information about the study, risks, rights to withdraw, and data handling", "Only researcher contact details"))`
-
-**True or False: Participants can withdraw at any time without giving a reason.** `r torf(TRUE)`
-
-**True or False: Once participants consent, they cannot change their mind.** `r torf(FALSE)`
-
-### Questionnaire Design
-
-If using questionnaires, check these common issues:
-
-**Which is a leading question?**
-
-`r mcq(c("How satisfied are you with your sleep?", answer = "Don't you agree that sleep is important for health?", "How many hours did you sleep last night?", "Rate your sleep quality from 1-10"))`
-
-**Double-barrelled questions should be avoided because:**
-
-`r mcq(c("They are too long", answer = "Participants cannot answer accurately if they agree with one part but not the other", "They use complicated words", "They are unethical"))`
-
-**Example of a double-barrelled question:**
-
-> "Do you find statistics interesting and easy?"
-
-**What's wrong with this question?**
-
-`r mcq(c("Nothing, it's fine", "It's too short", answer = "Someone might find it interesting but NOT easy, or vice versa", "Statistics isn't relevant"))`
+1. **Researcher**: One person runs the study using the Researcher Procedure (consent → instructions → task → debrief). Use a timer.
+2. **Participants**: Others take part as participants; follow the Participant Instructions.
+3. **Data**: Record "data" on the Data Recording Sheet; use the scoring guide.
+4. **Debrief**: Note what was unclear, too slow, or too fast. Did the instructions make sense?
+5. **Update**: Revise the Researcher Procedure and/or Participant Instructions with any fixes.
+6. **Swap** (if time): Another person runs it to check consistency.
 
 ---
 
-## Activity 3: Pilot Testing (20 min)
+## Consistency and Order Form
 
-### Why Pilot Test?
-
-::: {.callout-important}
-## Pilot Testing Benefits
-- Identifies unclear instructions
-- Reveals timing problems
-- Catches technical issues
-- Tests your data collection system
-- Allows you to practice
-:::
-
-**The main purpose of a pilot test is to:**
-
-`r mcq(c("Collect data for your results", "Increase your sample size", answer = "Identify and fix problems before the main study", "Satisfy ethics requirements only"))`
-
-### Pilot Testing Checklist
-
-Plan your pilot test:
-
-1. **Number of pilot participants**: ___ (typically 3-5)
-2. **Who**: ___ (NOT people who will be in your main study)
-3. **What feedback to collect**:
-   - [ ] Were instructions clear?
-   - [ ] How long did it take?
-   - [ ] Any confusing items?
-   - [ ] Any technical problems?
-   - [ ] How did they feel during the study?
-
-**True or False: Pilot participants should be included in your final sample.** `r torf(FALSE)`
-
-**After pilot testing, you should:**
-
-`r mcq(c("Immediately start data collection", "Ignore any feedback", answer = "Review feedback and make necessary changes", "Submit for publication"))`
-
-### Common Pilot Findings
-
-Match the problem to the solution:
-
-**"Participants didn't understand what to do in Task 2"**
-
-`r mcq(c("Remove Task 2", answer = "Revise instructions and add examples", "Ignore it - some confusion is normal", "Reduce the sample size"))`
-
-**"The study took 45 minutes but we told participants 20 minutes"**
-
-`r mcq(c("Keep the 20-minute estimate", answer = "Update the time estimate and consider shortening the study", "Don't mention timing at all", "Only recruit very patient participants"))`
+- **Study title** still consistent across all documents?
+- **Procedure** in the Information Sheet still matches the final Researcher Procedure?
+- **Order Form** lists everything you will need on the day (including spare copies)?
 
 ---
 
-## Activity 4: Data Collection Plan (20 min)
+## What's Next
 
-### Timeline Planning
-
-Create a realistic data collection schedule:
-
-| Week | Activity | Target n |
-|------|----------|----------|
-| Week 19 | Pilot testing complete | 5 |
-| Week 19 | Data collection begins | 10 |
-| Week 20 | Continue collection | 30 |
-| Week 21 | Data collection ends | Total: ___ |
-
-**True or False: It's fine to collect all your data on the last possible day.** `r torf(FALSE)`
-
-### Recruitment Strategy
-
-**Where will you recruit participants?**
-
-`r mcq(c("Only from this class", "Only from friends", answer = "From appropriate populations based on your research question", "Anyone who walks by"))`
-
-**SONA systems are used for:**
-
-`r mcq(c("Online surveys only", answer = "Recruiting psychology students who receive course credit", "Paying participants", "Ethics approval"))`
-
-### Data Management
-
-::: {.callout-warning}
-## GDPR and Data Protection
-- Store data securely (encrypted if possible)
-- Separate identifying information from responses
-- Use participant codes, not names
-- Have a data retention plan
-:::
-
-**Participant data should be:**
-
-`r mcq(c("Posted publicly for transparency", "Stored on personal social media", answer = "Stored securely with anonymisation", "Shared with anyone who asks"))`
-
-**True or False: You should keep a link between participant names and codes indefinitely.** `r torf(FALSE)`
-
----
-
-## Group Task: Procedure Document
-
-Create a detailed procedure document using this template:
-
-### Pre-Study Setup
-
-1. Room/location booking: ___
-2. Equipment needed: ___
-3. Materials prepared: ___
-
-### Participant Arrival (Script what you will say)
-
-> "Welcome to our study. My name is ___ and I'll be guiding you through today's session..."
-
-### Consent Process
-
-1. ___
-2. ___
-3. ___
-
-### Task/Measure Administration
-
-1. ___
-2. ___
-3. ___
-
-### Debriefing (Script what you will say)
-
-> "Thank you for participating. This study was investigating..."
-
-### Data Recording
-
-1. Where data is stored: ___
-2. Backup procedure: ___
-3. Who has access: ___
-
----
-
-## Pre-Pilot Checklist
-
-Before pilot testing, confirm:
-
-- [ ] All materials are prepared
-- [ ] Instructions are scripted/standardised
-- [ ] Consent form is complete
-- [ ] Data collection method is tested
-- [ ] Debrief is prepared
-- [ ] Team roles are assigned
-
-**True or False: Every team member should be able to run the study independently.** `r torf(TRUE)`
+- **Week 19**: Lecture only (no lab). EDS due 20 March. Finalise any documents; **submit Research Study Order Form** by end of week.
+- **Week 20**: Lecture + **data collection lab** — run your study with real participants.
 
 ---
 
 ## Key Takeaways
 
-::: {.callout-important}
-## Summary
-
-1. **Detailed procedures** enable replication and reduce confounds
-2. **Standardised materials** ensure consistency across participants
-3. **Pilot testing** identifies problems before they affect your data
-4. **Data management** must follow ethical and legal requirements
-:::
-
----
-
-## Next Steps
-
-- Complete all study materials
-- Conduct pilot testing with 3-5 participants
-- Revise based on pilot feedback
-- Prepare for data collection in Week 19
-- Ensure all team members can run the procedure
-
+1. Phase 2 = Recruitment Script, Data Recording Sheet, Stimulus Materials, **complete** Researcher Procedure, practice run, Research Study Order Form.
+2. The **practice run** catches unclear instructions, timing issues, and scoring problems before data collection.
+3. Submit the **Order Form** by end of Week 19 so printing/resources can be ready for Week 20.

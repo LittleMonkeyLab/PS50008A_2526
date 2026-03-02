@@ -1,5 +1,5 @@
 ---
-title: "Project Groups: Methodology"
+title: "Project Toolkit — Phase 1"
 subtitle: "PS50008A Week 17 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-04"
@@ -14,250 +14,127 @@ execute:
   message: false
 ---
 
-```{r}
-#| label: setup
-library(webexercises)
-library(tidyverse)
-library(knitr)
-```
-
 ## Overview
 
 ::: {.callout-important}
-## Focus for Today
-This session focuses on **finalising your research methodology**. By the end, your group should have a clear, documented research design ready for implementation.
-
-- Finalise your experimental/study design
-- Specify your variables and measures
-- Define your sample and procedure
-- Draft your Methods section
+## Focus for today
+This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 20** (no lab in Week 19 due to testing).
 :::
+
+**Phase 1 (this week):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
+
+**Phase 2 (Week 18):** Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, practice run, Research Study Order Form.
 
 ---
 
-## Activity 1: Finalizing Your Design (20 min)
+## Before You Start
 
-### Design Type Confirmation
-
-Before proceeding, confirm your study design is clearly defined.
-
-**Quick Check - Which design best describes your study?**
-
-`r mcq(c("Between-subjects experimental", "Within-subjects experimental", "Mixed design", "Correlational/survey", answer = "We need to discuss this as a group"))`
-
-::: {.callout-note}
-## Design Decision Checklist
-Work through these questions as a group:
-
-1. Are you **manipulating** anything (experimental) or **observing** relationships (correlational)?
-2. If experimental: Are participants in ONE condition (between) or ALL conditions (within)?
-3. How many independent variables do you have?
-4. How many levels does each IV have?
-:::
-
-### Design Documentation
-
-Complete the following template with your group:
-
-| Design Element | Your Study |
-|----------------|------------|
-| Study type | Experimental / Correlational |
-| Design | Between / Within / Mixed |
-| Number of IVs | |
-| IV1 name and levels | |
-| Number of DVs | |
-| DV1 name | |
-
-**True or False: A correlational study can establish causation.** `r torf(FALSE)`
-
-**True or False: A within-subjects design uses fewer participants than a between-subjects design with the same power.** `r torf(TRUE)`
+1. Open the [Project Toolkit](project/project-toolkit.qmd) and bookmark it.
+2. Download the **blank templates** from the toolkit (or use the links in the checklist below).
+3. Have your **research question**, **design** (between/within), and **procedure** (what participants do) clear — from your Research Plan (submitted Week 16).
 
 ---
 
-## Activity 2: Variables and Measures (20 min)
+## Phase 1 Checklist
 
-### Operationalising Your Variables
+Use this checklist as you work through the session. Tick off each item as your group completes it.
 
-Your variables need to be **operationally defined** - stated in terms of how they will be measured.
+### 1. Participant Information Sheet
 
-**Example:**
+- [ ] Downloaded template: [Participant Information Sheet — Template](../../files/project-docs/templates/template-participant-information-sheet.docx)
+- [ ] Filled in **purpose** of the study (general terms — no hypothesis)
+- [ ] Described **what will happen** (steps, approximate time)
+- [ ] Included **right to withdraw**, **confidentiality**, **contact for questions**
+- [ ] Language is accessible (no jargon)
+- [ ] Saved with a consistent filename (e.g. `YourProject_Participant_Information_Sheet`)
 
-- **Conceptual variable**: Stress
-- **Operational definition**: Score on the Perceived Stress Scale (PSS-10)
-
-**Which of these is an operational definition?**
-
-`r mcq(c("How happy someone is", answer = "Score on the Subjective Happiness Scale (1-7)", "Participant's mood", "Emotional wellbeing"))`
-
-### Variable Documentation
-
-For each variable, complete:
-
-::: {.callout-tip}
-## Variable Template
-**Variable name:**
-
-**Conceptual definition:**
-
-**Operational definition:**
-
-**Scale type:** `r mcq(c("Nominal", "Ordinal", "Interval", "Ratio"))`
-
-**How measured:**
-:::
-
-### Measurement Considerations
-
-**Which scale type allows us to calculate a meaningful mean?**
-
-`r mcq(c("Nominal", "Ordinal", answer = "Interval or Ratio", "Any scale type"))`
-
-**A Likert scale (1 = Strongly Disagree to 5 = Strongly Agree) is typically treated as:**
-
-`r mcq(c("Nominal", answer = "Ordinal (or interval by convention)", "Ratio", "Categorical"))`
-
-**Reaction time in milliseconds is measured on what scale?**
-
-`r mcq(c("Nominal", "Ordinal", "Interval", answer = "Ratio"))`
+**Reference:** Worked example in [Project Toolkit](project/project-toolkit.qmd) → Document checklist → 1. Participant Information Sheet.
 
 ---
 
-## Activity 3: Sample and Procedure (20 min)
+### 2. Consent Form
 
-### Sample Planning
+- [ ] Downloaded template: [Consent Form — Template](../../files/project-docs/templates/template-consent-form.docx)
+- [ ] **Study title** matches the Information Sheet and all other documents
+- [ ] Saved; plan to print ~30 copies for data collection
 
-Define your target sample:
-
-**Sampling Method Quiz:**
-
-**If you recruit participants who happen to be available (e.g., classmates), this is called:**
-
-`r mcq(c("Random sampling", answer = "Convenience sampling", "Stratified sampling", "Snowball sampling"))`
-
-**True or False: Convenience sampling limits the generalisability of findings.** `r torf(TRUE)`
-
-### Sample Size Considerations
-
-::: {.callout-warning}
-## Sample Size Planning
-For a simple between-subjects t-test with medium effect size (d = 0.5):
-
-- Minimum recommended: ~64 per group (128 total)
-- For smaller effects, you need MORE participants
-- For larger effects, you need FEWER participants
-:::
-
-**If your study has 3 groups (conditions), you need:**
-
-`r mcq(c("The same number as a 2-group study", answer = "More participants to maintain power", "Fewer participants", "It doesn't matter"))`
-
-### Procedure Flowchart
-
-Document your procedure step-by-step:
-
-1. **Recruitment**: How will you find participants?
-2. **Consent**: How will informed consent be obtained?
-3. **Instructions**: What will participants be told?
-4. **Task/Measures**: What will participants do?
-5. **Debriefing**: How will you explain the study afterwards?
-
-**Which step should ALWAYS come before data collection begins?**
-
-`r mcq(c("Debriefing", "Data analysis", answer = "Informed consent", "Results reporting"))`
+**Reference:** Project Toolkit → 2. Consent Form.
 
 ---
 
-## Activity 4: Drafting Methods Section (20 min)
+### 3. Debrief Form
 
-### Methods Section Structure
+- [ ] Downloaded template: [Debrief Form — Template](../../files/project-docs/templates/template-debrief-form.docx)
+- [ ] Explained **true purpose** and **hypothesis** (you may reveal these here)
+- [ ] Brief **theory** or background (e.g. why this design)
+- [ ] **Data withdrawal** instructions and **support** contacts included
+- [ ] Kept to about one page
+- [ ] Saved
 
-A standard Methods section includes:
-
-::: {.callout-note}
-## APA Methods Structure
-1. **Participants**: Who, how many, how recruited
-2. **Design**: IV(s), DV(s), design type
-3. **Materials**: Measures, stimuli, equipment
-4. **Procedure**: Step-by-step what happened
-:::
-
-### Practice Identifying Components
-
-Read this excerpt and identify the components:
-
-> *"Forty undergraduate students (28 female, 12 male; M age = 20.3 years) participated for course credit. Participants were randomly assigned to either the music condition or the silence condition."*
-
-**This excerpt describes:**
-
-`r mcq(c(answer = "Participants section", "Design section", "Materials section", "Procedure section"))`
-
-**The phrase "randomly assigned" tells us this is:**
-
-`r mcq(c("A correlational study", answer = "An experimental study", "A within-subjects design", "A case study"))`
-
-### Writing Check
-
-**True or False: The Methods section should be written in past tense.** `r torf(TRUE)`
-
-**True or False: You should include your hypotheses in the Methods section.** `r torf(FALSE)`
-
-**Where should hypotheses appear in an APA-style report?**
-
-`r mcq(c("Abstract", answer = "Introduction (end)", "Methods", "Results"))`
+**Reference:** Project Toolkit → 3. Debrief Form.
 
 ---
 
-## Group Task: Method Template
+### 4. Participant Instructions
 
-Complete this template as a group. You can use this as the skeleton for your actual Methods section.
+- [ ] Downloaded template: [Participant Instructions — Template](../../files/project-docs/templates/template-participant-instructions.docx)
+- [ ] **Numbered steps** in plain language
+- [ ] **No hypothesis** or what you expect to find
+- [ ] Short (about half a page)
+- [ ] If between- and within-subjects differ, separate instruction sheets as needed
+- [ ] Saved
 
-### Participants
+**Reference:** Project Toolkit → 7. Participant Instructions.
 
-- **Sample size**: ___
-- **Demographics**: ___
-- **Recruitment method**: ___
-- **Inclusion/exclusion criteria**: ___
+---
 
-### Design
+### 5. Researcher Procedure (Start)
 
-- **Study design**: ___
-- **Independent variable(s)**: ___
-- **Dependent variable(s)**: ___
-- **Control variables**: ___
+- [ ] Downloaded template: [Researcher Procedure — Template](../../files/project-docs/templates/template-researcher-procedure.docx)
+- [ ] **Materials checklist** completed (everything needed on the day)
+- [ ] **Sequence** written: greeting → consent → instructions → main task → debrief
+- [ ] **Timing** for each phase (study period, distractor, recall, etc.)
+- [ ] **Exact wording** for key instructions (in quotes or italics)
+- [ ] Saved — you will **complete** this in Week 18 (data recording, scoring, etc.)
 
-### Materials/Measures
+**Reference:** Project Toolkit → 8. Researcher Procedure.
 
-- **Primary measure**: ___
-- **Additional measures**: ___
-- **Equipment needed**: ___
+---
 
-### Procedure
+## Group Roles (Optional)
 
-1. ___
-2. ___
-3. ___
-4. ___
-5. ___
+To speed things up, you can divide tasks:
+
+| Role | Focus |
+|------|--------|
+| Person A | Information Sheet + Consent |
+| Person B | Debrief Form |
+| Person C | Participant Instructions |
+| Person D | Researcher Procedure (start) |
+
+Then **swap and review** so everyone agrees on wording and consistency (especially study title).
+
+---
+
+## Consistency Check
+
+Before you leave, verify:
+
+- **Study title** is identical on Information Sheet, Consent Form, Debrief, and Procedure.
+- **Procedure** in the Information Sheet matches what you wrote in the Researcher Procedure (steps, time).
+- **No hypothesis** in the Information Sheet or Participant Instructions; **hypothesis is** in the Debrief.
+
+---
+
+## What's Next (Week 18 — Phase 2)
+
+- **Wednesday**: MCQ Exam (no lecture).
+- **Thursday lab**: Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, **practice run** with your group, Research Study Order Form.
 
 ---
 
 ## Key Takeaways
 
-::: {.callout-important}
-## Summary
-
-1. Your **design type** (experimental vs correlational, between vs within) determines what conclusions you can draw
-2. **Operational definitions** specify exactly HOW variables are measured
-3. **Sample planning** affects statistical power and generalisability
-4. The **Methods section** follows a standard APA structure: Participants, Design, Materials, Procedure
-:::
-
----
-
-## Next Steps
-
-- Complete your group's Methods template
-- Prepare materials for Week 18 (Procedure development)
-- Review ethics requirements for your study
-- Schedule group meetings before next lab
-
+1. The [Project Toolkit](project/project-toolkit.qmd) is your single reference: timeline, checklist, worked example, templates.
+2. Phase 1 = participant-facing documents + start of Researcher Procedure.
+3. Phase 2 (Week 18) = researcher-facing documents, materials, practice run, and order form. Finish both phases so you're ready for data collection in Week 20.

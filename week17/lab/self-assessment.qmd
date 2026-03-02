@@ -1,6 +1,6 @@
 ---
 title: "Week 17 Self-Assessment"
-subtitle: "Error Detection Practice"
+subtitle: "MCQ & EDS Practice"
 author: "Gordon Wright"
 date: "2026-03-04"
 format:
@@ -11,16 +11,107 @@ format:
 
 ## Overview
 
-This self-assessment focuses on **error detection** - a key skill for Question 6 of the EDS Assignment. You'll practice identifying common mistakes in statistical analyses and explaining their consequences.
+This self-assessment is for **your own revision** for the MCQ Exam and the **EDS (Experimental Design & Statistics)** assignment. The **lab session** this week is for **group project work** (Methods section); use this page in your own time to practise assessment-style questions.
+
+1. **Part A: MCQ-style questions** — Design, IV/DV, hypotheses, test choice, p-values, correlation, and general concepts (mirrors the MCQ exam format).
+2. **Part B: Error detection** — Wrong test type, CI misinterpretation, direction errors, df errors (mirrors EDS Section A, especially Q6).
 
 ::: {.callout-note}
-## Formative Assessment
-This self-assessment directly prepares you for the error detection question on the EDS Assignment.
+## Formative assessment
+Use this to prepare for the **MCQ Exam** (11 March) and the **EDS Assignment** (due 20 March). The lecture covers the content; this gives you practice.
 :::
 
 ---
 
-## Part 1: Wrong Test Type Errors
+## Part A: MCQ-Style Questions
+
+### A1: Design and Variables
+
+**Scenario:** A researcher randomly assigned 60 students to either handwrite notes or type notes during a lecture. One week later, everyone took a test on the lecture content.
+
+- What design is this?  
+- What is the IV (and its levels)?  
+- What is the DV?  
+- What statistical test should be used?
+
+::: {.callout-tip collapse="true"}
+## Answers
+Design: Between-participants (independent groups). IV: Note-taking method (handwriting vs typing). DV: Test score on lecture content. Test: Independent-samples t-test.
+:::
+
+### A2: Correlational Design
+
+**Scenario:** A researcher measured weekly study hours and end-of-year grades for 80 students. A significant positive correlation was found (p < .01).
+
+- What design is this?  
+- Is there an independent variable?  
+- What does "significant positive correlation" mean here?  
+- What test was used?
+
+::: {.callout-tip collapse="true"}
+## Answers
+Design: Correlational. There is no IV — both variables are measured. Positive correlation: more study hours is associated with higher grades. Test: Pearson's r.
+:::
+
+### A3: Within-Participants and Counterbalancing
+
+**Scenario:** A researcher had 28 participants complete a spot-the-difference puzzle once with gum and once without; order was counterbalanced.
+
+- What design?  
+- Why counterbalance?  
+- What test?
+
+::: {.callout-tip collapse="true"}
+## Answers
+Design: Within-participants (repeated measures). Counterbalancing: To control for practice or fatigue (order) effects. Test: Paired-samples t-test.
+:::
+
+### A4: Hypotheses
+
+- What is a two-tailed hypothesis? (Give an example for a study comparing two conditions.)  
+- What is a one-tailed hypothesis? (Give an example for a correlation study.)
+
+::: {.callout-tip collapse="true"}
+## Answers
+Two-tailed: Predicts a significant difference without specifying direction (e.g. "There will be a significant difference in test scores between the two groups"). One-tailed: Predicts direction (e.g. "There will be a significant negative correlation between social media use and self-esteem").
+:::
+
+### A5: p-Values and Significance
+
+- If p = .03, is the result significant at α = .05? Do we reject the null hypothesis?  
+- If p > .05, what do we conclude?  
+- If p < .01, how often might this pattern occur by chance?
+
+::: {.callout-tip collapse="true"}
+## Answers
+p = .03: Yes, significant; reject the null. p > .05: Not significant; do not reject the null. p < .01: Less than or equal to 1 time in 100 by chance.
+:::
+
+### A6: Correlation and Causation
+
+- Can a researcher conclude that X causes Y from a significant correlation alone? Why or why not?
+
+::: {.callout-tip collapse="true"}
+## Answer
+No. Correlation does not imply causation. Confounding variables, direction of cause, and third variables could explain the association. Experimental designs are needed to support causal claims.
+:::
+
+### A7: General Concepts
+
+- What is operationalisation? (Example: "intelligence".)  
+- What helps most for replication — hypothesis, procedure/materials, or participant names?  
+- What is a confounding variable? (Example: caffeine group tested in morning, control in evening.)  
+- What does the null hypothesis state?  
+- The larger group we want to generalise to is called the ___?
+
+::: {.callout-tip collapse="true"}
+## Answers
+Operationalisation: Defining a construct by how it is measured (e.g. intelligence = score on an IQ test). Replication: Detailed procedure and materials. Confounding: An uncontrolled variable that co-varies with the IV (e.g. time of day). Null: No significant difference or effect in the population. Population.
+:::
+
+---
+
+## Part B: Error Detection (EDS Q6 Style)
 
 ### Exercise 1: Paired vs Independent
 
@@ -357,23 +448,33 @@ For each scenario, identify the error type:
 
 After completing this self-assessment, you should be able to:
 
+**MCQ (Part A):**
+- Identify design type, IV, DV, and correct test from a scenario
+- Distinguish one-tailed and two-tailed hypotheses
+- Interpret p-values and significance; explain correlation and causation
+- Define operationalisation, replication, confounding, null hypothesis, population
+
+**EDS (Part B):**
 - Identify when paired vs independent t-tests are misapplied
-- Recognize misinterpretations of confidence intervals
-- Detect direction errors in result reporting
-- Verify degrees of freedom match the analysis
+- Recognise misinterpretations of confidence intervals
+- Detect direction errors and degrees of freedom errors
 - Spot contradictions between statistics and interpretations
 
 ---
 
-## Final Preparation for EDS
+## Final Preparation
 
 ::: {.callout-important}
-## Before the Assessment
-1. Review all self-assessments from Weeks 12-17
-2. Practice reading R output quickly and accurately
-3. Memorize APA format for reporting t-tests
-4. Know when to use paired vs independent tests
-5. Understand what CIs mean and how they relate to significance
+## Before the MCQ (11 March)
+- Revise design → test (independent t, paired t, Pearson's r)
+- Practise IV/DV, hypothesis type, p-value interpretation
+- Review general concepts (operationalisation, replication, confounding, null, population)
+
+## Before the EDS (Due 20 March)
+- Review all self-assessments from Weeks 12-17
+- Practise reading R output and writing APA results paragraphs
+- Know when to use paired vs independent tests; interpret CIs
+- Practise data quality (outlier, SD, sensitivity) and Section B (improvements, individual differences, ecological validity)
 :::
 
-Good luck on your EDS Assignment!
+Good luck on the MCQ Exam and EDS Assignment!

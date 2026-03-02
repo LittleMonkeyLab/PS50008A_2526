@@ -22,15 +22,21 @@ convert_slide() {
     npx decktape reveal "$html_file" "$OUTPUT_DIR/$pdf_name" --size 1920x1080
 }
 
+# Weeks 11-16 (Term 2)
+WEEKS="11 12 13 14 15 16"
+
 if [ "$1" = "all" ]; then
-    # Convert all slides
-    for slides in "$DOCS_DIR"/week*/lecture/slides.html "$DOCS_DIR"/week*/lab/slides.html; do
-        [ -f "$slides" ] && convert_slide "$slides"
+    # Convert all slides for weeks 11-16 (lecture + lab instructor slides)
+    for w in $WEEKS; do
+        week="week$w"
+        for slides in "$DOCS_DIR/$week/lecture/slides.html" "$DOCS_DIR/$week/lab/instructor-slides.html"; do
+            [ -f "$slides" ] && convert_slide "$slides"
+        done
     done
 elif [ -n "$1" ]; then
     # Convert specific week
     week="week$1"
-    for slides in "$DOCS_DIR/$week"/lecture/slides.html "$DOCS_DIR/$week"/lab/slides.html; do
+    for slides in "$DOCS_DIR/$week/lecture/slides.html" "$DOCS_DIR/$week/lab/instructor-slides.html"; do
         [ -f "$slides" ] && convert_slide "$slides"
     done
 else

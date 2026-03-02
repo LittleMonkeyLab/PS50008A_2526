@@ -1,5 +1,5 @@
 ---
-title: "Project Groups: Methodology"
+title: "Project Toolkit — Phase 1: Draft Core Documents"
 subtitle: "PS50008A Week 17 Lab"
 author: "Gordon Wright"
 date: "2026-03-05"
@@ -18,427 +18,221 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## Project Groups: Methodology
+## Project Toolkit — Phase 1
 
 ---
 
-## Today's Focus
+## Why We're Here
 
-::: {.objectives-box}
-**Methodology Development Session**
+::: {.callout-important}
+## Labs 17 & 18 = complete the Project Toolkit
 
-By the end of this lab, your group will have:
+**Week 19 lab** is data collection. There is **no Week 19 lab** (testing) — so **Week 20** is lecture + data collection lab.
 
-- A clear, testable research question
-- A defined research design (between, within, or correlational)
-- Operationally defined IV and DV
-- A sampling plan
-- Initial ethical considerations documented
+You must finish all toolkit documents in **Weeks 17 and 18** so you're ready to collect data.
+:::
+
+**Today (Phase 1):** Draft the core participant-facing documents and start the Researcher Procedure.
+
+---
+
+## Your One-Stop: Project Toolkit
+
+::: {.callout-note}
+## Bookmark this page
+[Project Toolkit](project/project-toolkit.qmd) — timeline, document checklist (9 documents), worked example, blank templates.
+
+Use the **templates** and **example** documents; refer to the checklist for tips.
 :::
 
 ---
 
-## Session Structure (~90 min)
+## Phase 1: What You're Drafting Today
+
+| # | Document | Who sees it | By when |
+|---|----------|-------------|---------|
+| 1 | **Participant Information Sheet** | Every participant (before consent) | Draft today |
+| 2 | **Consent Form** | Participant signs; you keep | Draft today |
+| 3 | **Debrief Form** | Every participant (after study) | Draft today |
+| 7 | **Participant Instructions** | Every participant (what to do in study) | Draft today |
+| 8 | **Researcher Procedure** | Researchers only (your "recipe") | **Start** today |
+
+---
+
+## Session Structure
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:15 | Group check-in and overview |
-| 10:15-10:45 | Research question refinement |
-| 10:45-11:15 | Design and variables workshop |
-| 11:15-11:40 | Sampling and ethics planning |
-| 11:40-12:00 | Group presentations and feedback |
+| 10:00–10:15 | Toolkit overview and templates |
+| 10:15–10:45 | Information Sheet + Consent Form |
+| 10:45–11:15 | Debrief Form + Participant Instructions |
+| 11:15–11:45 | Start Researcher Procedure (step-by-step, timing, script) |
+| 11:45–12:00 | Checkpoint and next steps (Phase 2 in Week 18) |
 
 ---
 
-## MCQ Exam Reminder
+## Assessment Reminders
 
 ::: {.callout-important}
-## MCQ EXAM: Monday 9th March
-
-This is your final week before the exam! Use any spare moments today to:
-
-- Review lecture content from Weeks 11-17
-- Complete self-assessment quizzes
-- Ask questions about anything unclear
+- **MCQ Exam**: Wednesday 11 March (no Week 18 lecture)
+- **EDS** (Experimental Design & Statistics): Due 20 March
 :::
 
 ---
 
-# Group Check-In {background-color="#275882"}
+# Document 1 & 2: Information Sheet + Consent {background-color="#275882"}
 
-## Where Are You Now? (~15 min)
-
----
-
-## Group Status Check
-
-Each group should briefly share:
-
-1. **Your research area** (1 sentence)
-2. **Current progress** on your research question
-3. **Any blockers** or questions you have
-
-::: {.callout-tip}
-## Quick Around the Room
-Each group: 2 minutes maximum
-:::
-
----
-
-## Today's Deliverables
+## Participant Information Sheet
 
 ::: {.definition-box}
-**By the end of today, you must have:**
+**What it is:** A formal document explaining the study to potential participants *before* they agree. Required for informed consent.
 
-1. Written research question
-2. Design type identified
-3. IV and DV operationally defined
-4. Sampling plan outlined
-5. Ethical considerations listed
-:::
-
-These form the methodology section of your Research Plan.
-
----
-
-# Research Question Refinement {background-color="#275882"}
-
-## Making It Testable (~30 min)
-
----
-
-## Good Research Questions
-
-::: {.example-box}
-**Poor**: "Does music affect mood?"
-
-**Better**: "Does listening to upbeat music improve self-reported mood compared to silence?"
-
-**Best**: "Does 10 minutes of listening to major-key pop music (120+ BPM) increase positive affect scores (measured by PANAS) compared to a silent control condition?"
+**Tips:** Describe the study in general terms — do **not** reveal your hypothesis. Include: purpose, what participation involves, time, risks/benefits, confidentiality, right to withdraw. Use the template and customise the "purpose" and "what will happen" sections.
 :::
 
 ---
 
-## The FINER Criteria
-
-| Criterion | Question to Ask |
-|-----------|-----------------|
-| **F**easible | Can we actually do this in 2 weeks with available resources? |
-| **I**nteresting | Does this matter? Will people care about the answer? |
-| **N**ovel | Does it add something to existing knowledge? |
-| **E**thical | Can we do this without harming participants? |
-| **R**elevant | Does it connect to psychological theory or real-world issues? |
-
----
-
-## Activity: Question Refinement
-
-::: {.exercise-box}
-**In your groups (15 minutes):**
-
-1. Write your current research question on the worksheet
-2. Evaluate it against FINER criteria
-3. Revise to address any weaknesses
-4. Have ALL group members agree on the final version
-:::
-
----
-
-## Checkpoint 1
-
-::: {.poll-box}
-**Instructor Check:**
-
-Ask each group to read their refined research question aloud.
-
-Provide brief feedback on:
-
-- Is it specific enough?
-- Is it actually testable?
-- Can they realistically conduct this study?
-:::
-
----
-
-# Design & Variables Workshop {background-color="#275882"}
-
-## Defining Your Study (~30 min)
-
----
-
-## Which Design?
-
-:::: {.columns}
-::: {.column width="33%"}
-### Between-Subjects
-
-Different people in each condition
-
-**Example**: Group A hears music, Group B has silence
-
-**Pro**: No order effects
-
-**Con**: Need more participants
-:::
-
-::: {.column width="33%"}
-### Within-Subjects
-
-Same people in all conditions
-
-**Example**: Everyone does music AND silence
-
-**Pro**: Fewer participants needed
-
-**Con**: Order effects, fatigue
-:::
-
-::: {.column width="34%"}
-### Correlational
-
-Measuring relationships, no manipulation
-
-**Example**: Hours of music vs mood scores
-
-**Pro**: Natural behaviours
-
-**Con**: Cannot infer causation
-:::
-::::
-
----
-
-## Operationalising Variables
+## Consent Form
 
 ::: {.definition-box}
-**Operational Definition**: Defining a variable by how you measure it
+**What it is:** The checklist the participant signs to confirm they understand and agree. Legal and ethical requirement.
 
-**Abstract concept**: Anxiety
-
-**Operational definition**: Score on the State-Trait Anxiety Inventory (STAI)
+**Tips:** Update the **study title** to match across all documents. The checklist items are standard. Print plenty of spare copies (aim for 30).
 :::
 
 ---
 
-## IV and DV Checklist
-
-::: {.example-box}
-**Independent Variable (IV)**:
-
-- What are you manipulating or grouping by?
-- How many levels/conditions?
-- How will you implement it?
-
-**Dependent Variable (DV)**:
-
-- What are you measuring?
-- What scale/units?
-- How will you measure it?
-:::
-
----
-
-## Activity: Design Your Study
+## Activity: Info Sheet + Consent
 
 ::: {.exercise-box}
-**In your groups (15 minutes):**
+**In your group (25–30 min):**
 
-1. Identify your design type
-2. Write operational definitions for your IV and DV
-3. If experimental: describe your conditions clearly
-4. If correlational: identify both variables you will measure
-
-**Document this on your methodology worksheet!**
+1. Open the **template** (or example) from the [Project Toolkit](project/project-toolkit.qmd).
+2. Draft the **Participant Information Sheet**: purpose, what will happen, time, right to withdraw, confidentiality.
+3. Draft the **Consent Form**: same study title everywhere.
+4. Save in a shared folder; one person can take the lead.
 :::
 
 ---
 
-## Checkpoint 2
+# Document 3 & 7: Debrief + Instructions {background-color="#275882"}
 
-::: {.poll-box}
-**Instructor Check:**
-
-Circulate and verify each group has:
-
-- Clear design type chosen
-- IV with operational definition (or both variables for correlational)
-- DV with operational definition
-- Measurement method specified
-:::
-
----
-
-# Sampling & Ethics {background-color="#275882"}
-
-## Planning the Practical Details (~25 min)
-
----
-
-## Sampling Considerations
-
-| Question | Your Answer |
-|----------|-------------|
-| Who is your target population? | |
-| Who will you actually sample? | |
-| How many participants do you need? | |
-| How will you recruit them? | |
-| Are there any inclusion/exclusion criteria? | |
-
----
-
-## Sample Size Guidance
-
-::: {.callout-tip}
-## Rule of Thumb
-
-For between-subjects: Aim for **20+ per group**
-
-For within-subjects: Aim for **30+ total**
-
-For correlations: Aim for **30+ pairs of observations**
-
-Larger is better, but work within your constraints!
-:::
-
----
-
-## Ethics Checklist
+## Debrief Form
 
 ::: {.definition-box}
-**Every study needs:**
+**What it is:** Given *after* the study. Explains true purpose, hypothesis, and theory.
 
-- Informed consent (what will you tell participants?)
-- Right to withdraw (how will they know they can stop?)
-- Debriefing (what will you explain afterwards?)
-- Data protection (how will you keep data anonymous?)
-- Risk assessment (could anyone be harmed?)
+**Tips:** Here you **can** (and should) reveal the hypothesis. Briefly explain the theory. Include data withdrawal instructions and support contacts. About one page.
 :::
 
 ---
 
-## Activity: Sampling & Ethics
+## Participant Instructions
+
+::: {.definition-box}
+**What it is:** Step-by-step sheet telling the participant exactly what to do during the study.
+
+**Tips:** Plain language, numbered steps. Do **not** reveal the hypothesis. Keep short (about half a page). Different procedures for between vs within may need separate instruction sheets.
+:::
+
+---
+
+## Activity: Debrief + Participant Instructions
 
 ::: {.exercise-box}
-**In your groups (15 minutes):**
+**In your group (25–30 min):**
 
-1. Complete the sampling section of your worksheet
-2. Write a brief informed consent statement (2-3 sentences)
-3. List any ethical considerations specific to your study
-4. Identify any potential risks and how you will mitigate them
+1. Draft the **Debrief Form**: true purpose, hypothesis, theory, withdrawal info, support.
+2. Draft **Participant Instructions**: what the participant does, in order, in simple language.
+3. Check: no hypothesis in the instructions; hypothesis is in the debrief.
 :::
 
 ---
 
-## Checkpoint 3
+# Document 8: Researcher Procedure (Start) {background-color="#275882"}
+
+## Researcher Procedure
+
+::: {.definition-box}
+**What it is:** Your detailed "recipe" for running the study. Researchers only. Includes exact wording, timing, and full procedure.
+
+**Tips:** Be very detailed — exact words to say (in quotes/italics). Include timing for each phase. Include a checklist of materials to prepare. Any group member should be able to run the study from this alone.
+:::
+
+---
+
+## What to Include (Start Today)
+
+- **Checklist**: What to prepare before testing (forms, stimuli, timer, etc.)
+- **Opening**: What you say when you greet the participant
+- **Order of steps**: Consent → Instructions → [your task] → Debrief
+- **Timing**: How long for study phase, distractor, recall, etc.
+- **Exact script**: Key phrases participants hear (in quotes)
+
+You will **complete** this document in Week 18 (Phase 2).
+
+---
+
+## Activity: Start Researcher Procedure
+
+::: {.exercise-box}
+**In your group (25–30 min):**
+
+1. Open the **Researcher Procedure** template from the Project Toolkit.
+2. Write the **materials checklist** (everything you need on the day).
+3. Write the **sequence**: greeting → consent → instructions → main task (with timings) → debrief.
+4. Add **exact wording** for the key instructions you will read to participants.
+5. Save; you will finalise and add data-recording details in Week 18.
+:::
+
+---
+
+# Checkpoint & Next Steps {background-color="#275882"}
+
+## Phase 1 Checkpoint
 
 ::: {.poll-box}
-**Instructor Check:**
+**Before you leave, each group should have:**
 
-Verify each group has:
+- [ ] Draft Participant Information Sheet  
+- [ ] Draft Consent Form (study title consistent)  
+- [ ] Draft Debrief Form  
+- [ ] Draft Participant Instructions  
+- [ ] Started Researcher Procedure (sequence, timing, script)
 
-- Target sample size stated
-- Recruitment strategy planned
-- Consent process outlined
-- Ethical considerations documented
+Get sign-off from an instructor if required.
 :::
 
 ---
 
-# Group Presentations {background-color="#275882"}
+## Week 18: Phase 2 (No Lecture — MCQ)
 
-## Share Your Methodology (~20 min)
-
----
-
-## Presentation Format
-
-Each group presents (3 minutes):
-
-1. **Research question** (30 seconds)
-2. **Design type and justification** (30 seconds)
-3. **IV and DV definitions** (1 minute)
-4. **Sampling plan** (30 seconds)
-5. **Key ethical consideration** (30 seconds)
-
-::: {.callout-note}
-Other groups should note questions and feedback
+::: {.callout-warning}
+## Next week
+- **Wednesday**: MCQ Exam (no lecture).
+- **Thursday lab**: Phase 2 — Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, **practice run** on each other, Research Study Order Form.
 :::
 
 ---
 
-## Feedback Focus
+## Timeline Reminder
 
-When listening to other groups, consider:
-
-- Is their research question clear and testable?
-- Does the design match the question?
-- Are the variables well-defined?
-- Is the sample size realistic?
-- Have they missed any ethical issues?
-
----
-
-# Summary {background-color="#275882"}
-
----
-
-## What You Should Have Now
-
-::: {.example-box}
-**Completed methodology worksheet with:**
-
-1. Refined, testable research question
-2. Research design type with justification
-3. Operational definitions for all variables
-4. Sampling plan with target N
-5. Ethical considerations and consent outline
-:::
+| Week | Lecture | Lab |
+|------|---------|-----|
+| 18 | **MCQ Exam** (no lecture) | Phase 2: materials & practice run |
+| 19 | Lecture 19 | **No lab** (testing) — finalise docs, submit Order Form |
+| 20 | Lecture 20 | **Data collection** |
 
 ---
 
 ## Before You Leave
 
-::: {.callout-important}
-## Checkpoint Before Leaving
-
-1. Show your methodology worksheet to an instructor
-2. Get sign-off that you are ready for next week
-3. Ensure ALL group members have a copy
-:::
+- Ensure all drafts are in a **shared folder**.
+- **EDS** due 20 March; **MCQ** 11 March — use lecture and self-assessment to revise.
+- Next lab: bring your Phase 1 drafts and be ready to complete Procedure and do a practice run.
 
 ---
 
-## Next Week: Procedure
+# Good luck with Phase 1 {background-color="#275882"}
 
-::: {.callout-warning}
-## Remember
-
-**MCQ EXAM: Monday 9th March**
-
-Then on Thursday:
-
-- Develop your step-by-step procedure
-- Create materials and instructions
-- Conduct a pilot run within your group
-:::
-
----
-
-## Homework Before Week 18 Lab
-
-1. **Study for MCQ** (exam Monday!)
-2. **Draft materials** for your study
-3. **Think through** the exact steps participants will follow
-
----
-
-# Good luck with the MCQ! {background-color="#275882"}
-
-::: {.notes}
-**Instructor Notes:**
-
-- Ensure all groups complete methodology worksheets before leaving
-- Document any groups that need additional support
-- Remind students about MCQ exam location and time
-- Collect worksheets or have students photograph them
-:::
+Use the [Project Toolkit](project/project-toolkit.qmd) templates and worked example throughout.

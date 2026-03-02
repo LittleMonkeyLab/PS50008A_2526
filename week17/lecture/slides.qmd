@@ -1,5 +1,5 @@
 ---
-title: "Interpretation & Credibility"
+title: "Experimental Design & Statistics (EDS) & MCQ"
 subtitle: "PS50008A Week 17 | Lecture"
 author: "Gordon Wright"
 date: "2026-03-04"
@@ -18,243 +18,266 @@ format:
 
 ## Learning Objectives
 
+**EDS = Experimental Design & Statistics** (the assignment due 20 March)
+
 By the end of this lecture, you will be able to:
 
 ::: {.incremental}
-- Explain why statistical significance alone is insufficient for drawing conclusions
-- Define p-hacking and identify researcher degrees of freedom
-- Recognise HARKing and understand its implications for research credibility
-- Describe the replication crisis and its causes
-- Prepare effectively for the MCQ exam
+- Apply design types, IV/DV, hypotheses, and test choice to MCQ-style investigations
+- Interpret p-values, significance, and correlation for the MCQ
+- Answer EDS Section A: hypothesis, design/IV/DV/data, APA descriptives, paired t-test, results paragraph, data quality
+- Answer EDS Section B: methodological improvements, individual differences, ecological validity
 :::
 
-# Beyond p < .05 {background-color="#275882"}
+# MCQ Preparation: Design & Variables {background-color="#275882"}
 
-## What Does p < .05 Actually Mean?
-
-::: {.definition-box}
-**p-value**: The probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true.
-:::
-
-::: {.fragment}
-What it does NOT mean:
-
-- The probability that the null hypothesis is true
-- The probability that your results are due to chance
-- That your effect is important or meaningful
-:::
-
-## Statistical vs Practical Significance
-
-:::: {.columns}
-
-::: {.column width="50%"}
-**Statistical Significance**
-
-- p < .05 threshold
-- Depends on sample size
-- Can be achieved with tiny effects
-:::
-
-::: {.column width="50%"}
-**Practical Significance**
-
-- Effect size matters
-- Real-world importance
-- Clinical or applied relevance
-:::
-
-::::
-
-## Effect Sizes Matter
-
-::: {.concept-box}
-A statistically significant result with a tiny effect size may not be meaningful in practice.
-:::
-
-- Cohen's d for group differences
-- r for correlations
-- Confidence intervals for precision
-
-# P-hacking and Researcher Degrees of Freedom {background-color="#275882"}
-
-## What is P-hacking?
-
-::: {.definition-box}
-**P-hacking**: The practice of collecting or selecting data or statistical analyses until non-significant results become significant.
-:::
-
-::: {.fragment}
-Also known as:
-
-- Data dredging
-- Fishing expeditions
-- Significance chasing
-:::
-
-## Researcher Degrees of Freedom
-
-Decisions researchers make that can inflate false positive rates:
-
-::: {.incremental}
-- When to stop collecting data
-- Which variables to include/exclude
-- How to handle outliers
-- Which statistical test to use
-- Which comparisons to report
-:::
-
-## The Garden of Forking Paths
-
-::: {.example-box}
-**Example**: If you make 5 arbitrary decisions, each with 2 options, you have 32 possible analysis paths.
-:::
-
-::: {.fragment}
-Many of these paths may produce p < .05 by chance alone.
-:::
-
-# HARKing {background-color="#275882"}
-
-## What is HARKing?
-
-::: {.definition-box}
-**HARKing**: Hypothesizing After Results are Known - presenting post-hoc hypotheses as if they were a priori predictions.
-:::
-
-## Why is HARKing Problematic?
-
-::: {.incremental}
-- Confirmation bias masquerading as prediction
-- Inflates apparent success of theories
-- Makes research seem more compelling than it is
-- Undermines the scientific method
-:::
-
-## Exploratory vs Confirmatory Research
-
-:::: {.columns}
-
-::: {.column width="50%"}
-**Exploratory**
-
-- Generating hypotheses
-- Data-driven discovery
-- Should be clearly labelled
-:::
-
-::: {.column width="50%"}
-**Confirmatory**
-
-- Testing pre-specified predictions
-- Theory-driven
-- Requires pre-registration
-:::
-
-::::
-
-# The Replication Crisis {background-color="#275882"}
-
-## What is the Replication Crisis?
-
-::: {.concept-box}
-Many published psychological findings fail to replicate when other researchers attempt to reproduce them.
-:::
-
-## Key Evidence
-
-::: {.incremental}
-- Open Science Collaboration (2015): Only 36% of psychology studies replicated
-- Many textbook findings questioned
-- High-profile retractions and fraud cases
-:::
-
-## Causes of the Crisis
-
-- Publication bias (positive results only)
-- P-hacking and flexible analyses
-- HARKing
-- Small sample sizes
-- Underpowered studies
-- Lack of pre-registration
-
-## Solutions and Open Science
-
-::: {.incremental}
-- Pre-registration of studies
-- Registered reports
-- Open data and materials
-- Replication studies valued
-- Effect size reporting
-- Larger sample sizes
-:::
-
-# MCQ Exam Preparation {background-color="#275882"}
-
-## Exam Format
+## MCQ Format Reminder
 
 ::: {.callout-important}
-## MCQ Exam Details
-- Date: Week 18 (Wednesday 11 March 2026)
-- Duration: TBC
-- Format: Multiple choice questions
-- Covers: Weeks 11-17 content
+## Exam: Wednesday 11 March
+- **36 questions** total
+- **5 investigations** (6 questions each) — scenario + design, IV, DV, hypothesis, test, interpretation
+- **6 general questions** — operationalisation, replication, confounding, null hypothesis, p-value, population
 :::
 
-## What to Revise
+## Design Types (MCQ)
 
-:::: {.columns}
+| Design | What happens | IV? | Test |
+|--------|--------------|-----|------|
+| **Between-participants** | Different people in each condition | Yes (condition) | Independent-samples t-test |
+| **Within-participants** (repeated measures) | Same people in all conditions | Yes (condition) | Paired-samples t-test |
+| **Correlational** | Two variables measured; no manipulation | **No IV** | Pearson's r |
 
-::: {.column width="50%"}
-**Key Topics**
-
-- Research design concepts
-- Variables and measurement
-- Hypothesis testing
-- Statistical concepts
-- Ethical considerations
+::: {.fragment}
+**Matched pairs** = different people but matched (e.g. on age); often analysed like paired if matching is used.
 :::
 
-::: {.column width="50%"}
-**Skills to Practice**
+## Independent and Dependent Variables
 
-- Identifying IV and DV
-- Recognising study designs
-- Interpreting statistics
-- Spotting methodological issues
+::: {.definition-box}
+**IV**: What the researcher manipulates or uses to form groups (experiments only).  
+**DV**: What is measured as the outcome.
 :::
 
-::::
-
-## Exam Strategies
-
-::: {.incremental}
-- Read each question carefully
-- Eliminate obviously wrong answers
-- Watch for absolute terms (always, never)
-- Manage your time
-- Review flagged questions
+::: {.fragment}
+- **Between/within**: IV = condition (e.g. warm vs cool room); DV = outcome (e.g. test score).  
+- **Correlational**: There is **no IV** — only two measured variables. Do not call one variable the IV.
 :::
 
-# Summary {background-color="#275882"}
+## One-Tailed vs Two-Tailed Hypotheses
+
+| Type | Prediction | Example |
+|------|-------------|---------|
+| **One-tailed** | Direction specified | "Cool room will score *higher*" or "Negative correlation between social media and self-esteem" |
+| **Two-tailed** | Difference only, no direction | "There will be a *significant difference* in scores between the two conditions" |
+
+::: {.fragment}
+MCQ often asks: "What was the researcher's two-tailed hypothesis?" → Look for the option that states a *difference* without specifying which group is higher.
+:::
+
+## Choosing the Statistical Test
+
+::: {.example-box}
+**Decision rule:**
+1. **Correlational design?** → Pearson's r (two continuous variables).
+2. **Same participants in both conditions?** → Paired-samples t-test.
+3. **Different participants in each condition?** → Independent-samples t-test.
+:::
+
+::: {.fragment}
+Use **Spearman's rho** when data are ordinal or not normally distributed; MCQ often uses Pearson's r for correlation scenarios.
+:::
+
+# MCQ: Interpreting Results & General Concepts {background-color="#275882"}
+
+## p-Values and Significance
+
+::: {.definition-box}
+**p < .05**: Result is *statistically significant* at α = .05; reject the null hypothesis.  
+**p > .05**: Result is *not* statistically significant; do not reject the null.
+:::
+
+::: {.fragment}
+- **p < .01**: Same as significant, but even fewer times by chance (e.g. "less than or equal to 1 time in a hundred").  
+- **"Did the results support the hypothesis?"** — If the hypothesis predicted a difference and p < .05, yes (for that prediction).
+:::
+
+## Correlation: Positive and Negative
+
+| Result | Meaning (in context) |
+|--------|------------------------|
+| **Significant positive correlation** | Higher values on one variable tend to go with higher values on the other (e.g. more study hours ↔ higher grades). |
+| **Significant negative correlation** | Higher values on one tend to go with lower on the other (e.g. more social media ↔ lower self-esteem). |
+
+::: {.fragment}
+**Correlation does not imply causation** — cannot conclude that X *causes* Y from a correlation alone (confounding, direction, third variables).
+:::
+
+## Counterbalancing
+
+::: {.definition-box}
+**Counterbalancing**: Varying the order of conditions (e.g. half do A then B, half do B then A) so that order effects (practice, fatigue) are balanced and do not confound the IV.
+:::
+
+::: {.fragment}
+MCQ: "Why did the researcher counterbalance?" → To control for **practice or fatigue effects** (or order effects).
+:::
+
+## General MCQ Concepts
+
+| Concept | Key point |
+|---------|-----------|
+| **Operationalisation** | Defining a construct by *how it is measured* (e.g. intelligence = score on an IQ test). |
+| **Replication** | Another researcher repeating the study; **detailed procedure and materials** help most. |
+| **Confounding variable** | Uncontrolled variable that varies with the IV (e.g. time of day when testing caffeine vs control). |
+| **Null hypothesis** | No significant difference or effect in the population. |
+| **Population** | The larger group we want to generalise to (sample is the subset we test). |
+
+# EDS Preparation: Section A (Mechanics) {background-color="#275882"}
+
+## EDS Assignment Reminder (Experimental Design & Statistics)
+
+::: {.callout-important}
+## Due: 20 March | 100 marks
+- **Section A (50 marks)**: Statistical mechanics — hypothesis, design/IV/DV/data, descriptives, t-test, APA results paragraph, data quality
+- **Section B (50 marks)**: Methods and theory — improvements, individual differences, ecological validity
+- You interpret **R output**; no coding or hand calculations
+:::
+
+## Stating the Experimental Hypothesis (EDS Q1)
+
+::: {.definition-box}
+State a **clear** hypothesis that references both the IV and the DV. Can be directional or non-directional.
+:::
+
+**Example (phone presence study):**  
+"That participants will score higher on the working memory task when their phone is in their bag compared to when it is visible on the desk."  
+Or: "That the presence of a smartphone will affect working memory performance."
+
+::: {.fragment}
+Avoid: null hypothesis, or hypothesis with no IV/DV.
+:::
+
+## Design, IV, DV, Type of Data (EDS Q2)
+
+| Component | What to state |
+|-----------|----------------|
+| **Design** | Repeated measures / within-subjects (same participants, two conditions). |
+| **IV** | Phone condition — phone visible on desk vs phone in bag (both levels). |
+| **DV** | Working memory score (e.g. out of 25). |
+| **Data type** | Ratio (or interval) — numeric scale with meaningful zero and equal intervals. |
+
+::: {.fragment}
+Nominal/ordinal are not appropriate for t-tests on means; ratio/interval are.
+:::
+
+## APA Descriptives and Interpretation (EDS Q3)
+
+**Report:**  
+"Participants scored higher when their phone was in their bag (M = 20.30, SD = 1.49) than when their phone was visible (M = 16.90, SD = 4.77)."
+
+**Interpret:**  
+Having the phone visible was associated with lower working memory performance on average; the difference is about 3.4 points. Note the larger SD in the phone-visible condition (more variability).
+
+## Why Paired t-Test? (EDS Q4a)
+
+::: {.example-box}
+A **paired t-test** is appropriate because the **same participants** completed both conditions. Each participant has two scores (phone visible, phone in bag) that are naturally paired.
+:::
+
+Independent-samples t-test would be wrong — that is for *different* people in each condition.
+
+## Reporting t, df, p and Significance (EDS Q4b–c)
+
+- **Report:** t = −2.36, df = 9, p = .042 (from R output).  
+- **Significant at α = .05?** Yes — p = .042 is less than .05, so we reject the null hypothesis.  
+- It is acceptable to note that .042 is only just significant.
+
+## Interpreting the 95% CI (EDS Q4d)
+
+::: {.definition-box}
+The **95% confidence interval** for the difference (e.g. [−6.66, −0.14]) is the range within which the true mean difference is likely to lie.
+:::
+
+- If the interval **excludes zero**, the result is consistent with a significant difference (as here).  
+- The interval is entirely negative → scores were **lower** in the phone-visible condition.  
+- Do not say "CI includes zero" when it does not.
+
+## Full APA Results Paragraph (EDS Q5)
+
+::: {.example-box}
+A paired-samples t-test showed that participants scored significantly lower on the working memory task when their phone was visible (M = 16.90, SD = 4.77) than when it was in their bag (M = 20.30, SD = 1.49), t(9) = −2.36, p = .042, 95% CI [−6.66, −0.14]. The hypothesis that smartphone presence impairs performance was supported.
+:::
+
+Include: test name, descriptives for both conditions, t, df, p, CI, and a brief conclusion.
+
+# EDS: Data Quality & Section B {background-color="#275882"}
+
+## Identifying and Explaining an Outlier (EDS Q6a–b)
+
+- **Identify:** e.g. Participant 7 scored 5 (phone visible) vs 20 (phone in bag) — difference of 15; much larger than other participants' differences.  
+- **Plausible reason:** e.g. particularly distracted by phone (notifications, anxiety), high phone dependency, or a procedural glitch.
+
+## How the Outlier Affects SD (EDS Q6c)
+
+::: {.definition-box}
+An **extreme score** far from the group mean increases the standard deviation of that condition. Removing it reduces SD (e.g. phone-visible SD drops from 4.77 toward the range of the other scores).
+:::
+
+The other participants had a tight range; the one very low score pulls the mean down and spreads the scores.
+
+## Sensitivity: With vs Without the Outlier (EDS Q6d)
+
+- **With outlier:** e.g. t(9) = −2.36, p = .042.  
+- **Without:** e.g. t(8) = −2.95, p = .018 — *more* significant because the extreme difference added variability and inflated the standard error.  
+- **Reporting:** Ideally report both analyses and explain; main conclusion (significant effect) holds either way. Justify whether to exclude (e.g. procedural reason) or keep and report both.
+
+## Methodological Improvements (EDS Q7)
+
+::: {.example-box}
+Suggest **two** improvements with clear justification. Examples:  
+- Larger sample size (power and generalisability).  
+- Control for notifications (phones silenced in both conditions).  
+- Measure phone dependency (e.g. scale) as a covariate.  
+- Longer break between conditions to reduce carryover.  
+- Multiple cognitive tasks for a broader measure.
+:::
+
+Award marks for **sensible** and **well-justified** suggestions.
+
+## Individual Differences (EDS Q8)
+
+**Heavy vs light phone users:**  
+e.g. Heavy users may be more affected (attentional bias, habit) or alternatively more habituated; either direction is fine if well reasoned with theory (e.g. attentional capture, addiction research).
+
+**Younger vs older adults:**  
+e.g. Younger adults may be more distracted (digital natives, FOMO) or older adults more impacted by any extra load (age-related decline). Again, reasoning and consistency with theory matter.
+
+## Ecological Validity (EDS Q9)
+
+::: {.definition-box}
+Propose a **more ecologically valid** study: real-world setting, naturalistic task, and clear hypothesis, IV (with levels), DV, and procedure.
+:::
+
+**Example:** Hypothesis — students with phone on desk during a real lecture will recall fewer key points than those with phone in bag. IV: phone location (on desk vs in bag). DV: score on surprise quiz on lecture content. Procedure: during an actual lecture, assign condition; surprise quiz at end. Explain why this is more ecologically valid (real context, real learning, natural notifications).
+
+# Summary & Next Steps {background-color="#275882"}
 
 ## Key Takeaways
 
 ::: {.concept-box}
-1. Statistical significance (p < .05) is necessary but not sufficient
-2. P-hacking and researcher degrees of freedom inflate false positives
-3. HARKing undermines scientific credibility
-4. The replication crisis calls for better practices
-5. Open science practices help address these issues
+1. **MCQ**: Design → IV/DV → hypothesis type → test (independent t, paired t, Pearson's r) → interpret p and correlation.  
+2. **EDS Section A**: Clear hypothesis; design/IV/DV/data; APA M, SD; paired t (why, t, df, p, CI); full results paragraph; outlier and sensitivity.  
+3. **EDS Section B**: Two justified improvements; individual differences (reasoned); ecological validity (hypothesis, IV, DV, procedure).
 :::
 
 ## Next Week
 
-::: {.callout-note}
-## Week 18: MCQ Exam
-The in-class MCQ exam will take place during the lecture slot.
-
-Make sure to review all materials from Weeks 11-17.
+::: {.callout-important}
+## Wednesday 11 March: MCQ Exam
+- Bring student ID  
+- Revise using this week’s materials and self-assessment  
+- **EDS due 20 March** — use lab activity and marking-scheme guidance to check your answers
 :::
 
 ## Questions?
@@ -263,4 +286,4 @@ Make sure to review all materials from Weeks 11-17.
 Questions?
 :::
 
-Good luck with your exam preparation!
+Good luck with the MCQ and EDS!
