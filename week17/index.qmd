@@ -15,7 +15,7 @@ date: "2026-03-02"
 
 **Lecture** (Wednesday): Focused on **Experimental Design & Statistics (EDS)** and MCQ preparation — everything you need for both assessments.
 
-**Lab** (Thursday): **Project Toolkit — Phase 1**. You work through the [Project Toolkit](project/project-toolkit.qmd): draft core documents (Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions) and start the Researcher Procedure. These labs (17 and 18) complete the toolkit so you are ready for **data collection in Week 20** (no lab in Week 19 due to testing).
+**Lab** (Thursday): **Project Toolkit — Phase 1**. You work through the [Project Toolkit](project/project-toolkit.qmd): draft core documents (Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions) and start the Researcher Procedure. These labs (17 and 18) complete the toolkit so you are ready for **data collection in Week 19**.
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143  
 **Lab**: Thursday 10:00-12:00 WB304A
@@ -113,7 +113,7 @@ The MCQ tests recognition and application (e.g. "What design?" "What test?"). Th
 
 ## What's Next?
 
-- **Week 18**: **No lecture** — MCQ Exam (Wednesday 11 March). **Lab**: Project Toolkit Phase 2 (materials, complete procedure, practice run).
-- **Week 19**: Lecture only (no lab — testing). EDS due 20 March. Finalise toolkit documents and submit Research Study Order Form.
-- **Week 20**: Lecture + Lab (data collection in the lab).
+- **Week 18**: **MCQ Exam** (Wednesday 11 March). **Lab**: Project Toolkit Phase 2 (materials, complete procedure, practice run, submit Research Study Order Form).
+- **Week 19**: **Data collection in the lab.** EDS due 20 March.
+- **Week 20**: Gordon analyses and returns data to groups. Start writing your Research Report.
 - **EDS**: Due 20 March — use lecture and self-assessment for revision.

@@ -227,7 +227,7 @@ Then the cycle continues...
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends) |
 | Spring Break | Individual report writing |
-| Post-term | **Research Report due** Friday 1 May |
+| Post-term | **Research Report due** mid-late April (date TBC) |
 
 ## Lectures vs Labs
 
@@ -284,7 +284,7 @@ Find an [overview](../../assessments.qmd) here
 | [Research Plan](../../assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
 | [MCQ Exam](../../assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
 | [EDS Assignment](../../assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
-| [Research Report](../../assessments/research-report.qmd) | 40% | Fri 1 May 2026, 12 noon | Post-term |
+| [Research Report](../../assessments/research-report.qmd) | 40% | Mid-late April 2026, 12 noon (date TBC) | Post-term |
 
 # Key Concepts {.center}
 

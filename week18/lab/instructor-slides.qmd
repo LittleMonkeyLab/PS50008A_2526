@@ -22,14 +22,14 @@ format:
 
 ---
 
-## Well Done on the MCQ
+## Well Done on the MCQ!
 
 ::: {.callout-note}
-## Wednesday was the MCQ exam
-Results will be available in due course. Today we focus on **completing the Project Toolkit** so you're ready for data collection in **Week 20**.
+## Yesterday was the MCQ Exam
+Results will be available in due course. Today we focus on **completing the Project Toolkit** so you're ready for data collection in **Week 19**.
 :::
 
-**Reminder:** No Week 19 lab (testing). Week 20 = lecture + **data collection lab**. Everything must be ready after today.
+**Remember:** **Week 19 lab is data collection.** Everything must be ready after today.
 
 ---
 
@@ -42,7 +42,7 @@ Results will be available in due course. Today we focus on **completing the Proj
 | 6 | **Stimulus Materials** | Finalise (word lists, images, questionnaires, etc.) |
 | 7 | **Participant Instructions** | Finalise if not done in Phase 1 |
 | 8 | **Researcher Procedure** | **Complete** (data recording, scoring, full script) |
-| 9 | **Research Study Order Form** | Complete; submit by **end of Week 19** |
+| 9 | **Research Study Order Form** | Complete; submit by **end of this week** |
 
 Plus: **Practice run** — run the study on each other.
 
@@ -56,7 +56,7 @@ Plus: **Practice run** — run the study on each other.
 | 10:20–10:50 | Finalise Stimulus Materials + Participant Instructions |
 | 10:50–11:25 | **Complete** Researcher Procedure; practice run within group |
 | 11:25–11:50 | Research Study Order Form (list everything to print/order) |
-| 11:50–12:00 | Checkpoint and next steps (Week 19: no lab; Week 20: data collection) |
+| 11:50–12:00 | Checkpoint and next steps (Week 19: data collection!) |
 
 ---
 
@@ -125,7 +125,7 @@ Any group member should be able to run the study from this document alone.
 ::: {.definition-box}
 **What it is:** A form listing everything your group needs **printed or provided** for data collection day. You submit this to Gordon so resources can be prepared in advance.
 
-**When:** Submit by **end of Week 19** at latest (no lab that week — do it in your own time).
+**When:** Submit by **end of this week** at latest (Week 19 lab is data collection).
 
 **Tips:** List every document and how many copies (err on the side of more). Include special requirements (e.g. colour printing, specific paper). Don't forget consumables: pens, blank paper, snacks.
 :::
@@ -142,7 +142,7 @@ Any group member should be able to run the study from this document alone.
 - [ ] Stimulus materials finalised  
 - [ ] Researcher Procedure **complete**  
 - [ ] At least one **practice run** done and procedure updated  
-- [ ] Research Study Order Form completed (submit by end of Week 19)
+- [ ] Research Study Order Form completed (submit by end of this week)
 
 Get sign-off from an instructor if required.
 :::
@@ -153,20 +153,20 @@ Get sign-off from an instructor if required.
 
 | Week | Lecture | Lab |
 |------|---------|-----|
-| **19** | Lecture 19 | **No lab** (testing) — EDS due 20 Mar; finalise docs; submit Order Form |
-| **20** | Lecture 20 | **Data collection** — run your study |
+| **19** | Lecture 19 | **Data collection** — run your study! EDS due 20 Mar |
+| **20** | — | Gordon returns analysed data; start writing Research Report |
 
 ---
 
 ## Before You Leave
 
 - All documents in a **shared folder**; everyone has access.
-- **Research Study Order Form** — submit by end of Week 19 (no lab that week).
+- **Research Study Order Form** — submit by end of this week.
 - **EDS** due 20 March — use Week 17 materials and self-assessment to revise.
-- Week 20: come ready to collect data with all printed materials and a clear procedure.
+- Week 19: come ready to collect data with all printed materials and a clear procedure.
 
 ---
 
 # You're Ready for Data Collection {background-color="#275882"}
 
-Complete any final tweaks and the Order Form in Week 19. Good luck with the MCQ results and the EDS!
+Next week is data collection — you're ready! Good luck with the EDS!

@@ -1,55 +1,52 @@
 ---
 title: "Week 20 Self-Assessment"
-subtitle: "MCQ Feedback + Lab Report Briefing & Data Analysis and Reporting"
+subtitle: "Report Writing & Module Reflection"
 author: "Gordon Wright"
 date: "2026-03-25"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w20-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-03-29"
-  labels: ['assessment', 'writing', 'statistics', 'apa-style', 'self-assessment']
-  depends_on:
-    - rm0-w20-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-03-29"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 20.
+This self-assessment is a **reflective exercise** — there are no right or wrong answers. Use it to think about what you've learned across the whole module and how it will help you next year when you join the undergraduate programme.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-03-29.
-:::
+## Part 1: Reflecting on Report Writing
 
-## Part 1: Conceptual Questions
+Think about your experience in today's report writing workshop.
 
-TBC
+1. **Which section of the lab report do you feel most confident writing?** (Title, Abstract, Introduction, Method, Results, Discussion, References) Why?
 
-## Part 2: Practical Exercises
+2. **Which section do you think will be the most challenging?** What specifically about it concerns you?
 
-TBC
+3. **How do you plan to organise your time between now and the submission deadline?** What will you write first?
 
-## Part 3: Reflection
+4. **What support do you think you'll need to complete your report?** (e.g., office hours, writing centre, peer feedback, online resources)
 
-TBC
+## Part 2: Reflecting on the Module
+
+Think about PS50008A as a whole — from Week 11 to now.
+
+1. **What is the single most important thing you've learned in this module?**
+
+2. **How has your understanding of "research methods" changed since the start of the module?** What did you think research methods was about before, and what do you think now?
+
+3. **Which assessment (MCQ, EDS, Research Report) taught you the most?** Why?
+
+4. **Was there a moment in the module where something "clicked" for you?** What was it?
+
+## Part 3: Looking Ahead to Year 1
+
+1. **How do you think this module has prepared you for undergraduate psychology?** What feels like a head start?
+
+2. **What skills from this module are you most glad to have developed?** (e.g., reading research, understanding statistics, working in groups, writing scientifically, thinking critically)
+
+3. **What would you tell next year's Foundation students about this module?**
+
+4. **Is there anything you wish had been covered that wasn't, or anything you'd like to learn more about?**
 
 ## Submission
 
-TBC - Submission instructions
-
-## Marking Criteria
-
-This is a **formative** assignment.
+This is a **formative** self-assessment for your own reflection. You do not need to submit it — but keeping your answers will help you when writing your Research Report and reflecting on your development as a researcher.

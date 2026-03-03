@@ -18,7 +18,7 @@ execute:
 
 ::: {.callout-important}
 ## Focus for today
-This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 20** (no lab in Week 19 due to testing).
+This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 19**.
 :::
 
 **Phase 1 (this week):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
@@ -128,8 +128,8 @@ Before you leave, verify:
 
 ## What's Next (Week 18 — Phase 2)
 
-- **Wednesday**: MCQ Exam (no lecture).
-- **Thursday lab**: Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, **practice run** with your group, Research Study Order Form.
+- **Wednesday**: **MCQ Exam** (11 March).
+- **Thursday lab**: Phase 2 — Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, **practice run** with your group, Research Study Order Form.
 
 ---
 
@@ -137,4 +137,4 @@ Before you leave, verify:
 
 1. The [Project Toolkit](project/project-toolkit.qmd) is your single reference: timeline, checklist, worked example, templates.
 2. Phase 1 = participant-facing documents + start of Researcher Procedure.
-3. Phase 2 (Week 18) = researcher-facing documents, materials, practice run, and order form. Finish both phases so you're ready for data collection in Week 20.
+3. Phase 2 (Week 18) = researcher-facing documents, materials, practice run, and order form. Finish both phases so you're ready for data collection in Week 19.

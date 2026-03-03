@@ -18,7 +18,7 @@ execute:
 
 ::: {.callout-important}
 ## Focus for today
-This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. There is **no Week 19 lab** (testing); **Week 20** is data collection. Everything must be ready after this session.
+This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. **Week 19 lab is data collection** — everything must be ready after this session.
 :::
 
 ---
@@ -101,7 +101,7 @@ Use this checklist as you work. Tick off each item as your group completes it.
 - [ ] Listed **every document** and **number of copies** (e.g. Consent × 30, Debrief × 30)
 - [ ] Included **special requirements** (e.g. colour printing, paper size)
 - [ ] Included **consumables** (pens, blank paper, snacks)
-- [ ] **Submit to Gordon by end of Week 19** (no lab that week — submit in your own time)
+- [ ] **Submit to Gordon by end of this week** (Week 19 lab is data collection)
 - [ ] Saved and submitted
 
 **Reference:** Project Toolkit → 9. Research Study Order Form.
@@ -136,8 +136,8 @@ Run the full study at least **once** within your group before data collection da
 
 ## What's Next
 
-- **Week 19**: Lecture only (no lab). EDS due 20 March. Finalise any documents; **submit Research Study Order Form** by end of week.
-- **Week 20**: Lecture + **data collection lab** — run your study with real participants.
+- **Week 19**: **Data collection in the lab.** EDS due 20 March.
+- **Week 20**: Gordon analyses and returns data to groups. Start writing your Research Report.
 
 ---
 
@@ -145,4 +145,4 @@ Run the full study at least **once** within your group before data collection da
 
 1. Phase 2 = Recruitment Script, Data Recording Sheet, Stimulus Materials, **complete** Researcher Procedure, practice run, Research Study Order Form.
 2. The **practice run** catches unclear instructions, timing issues, and scoring problems before data collection.
-3. Submit the **Order Form** by end of Week 19 so printing/resources can be ready for Week 20.
+3. Submit the **Order Form** by end of this week so printing/resources can be ready for Week 19 data collection.

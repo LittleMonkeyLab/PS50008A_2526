@@ -27,7 +27,7 @@ format:
 ::: {.callout-warning}
 ## EDS DUE: Tomorrow!
 
-**Friday 20th March by 4pm**
+**Friday 20th March by 12 noon**
 
 Submit via Learn.gold. If you have last-minute questions, ask now!
 :::
@@ -327,17 +327,16 @@ As you circulate, note:
 
 ---
 
-## Data Collection Continues
+## Data Collection Ends Today
 
-::: {.callout-note}
-## Between Now and Week 20
+::: {.callout-important}
+## Hand Your Data to Gordon
 
-You should continue collecting data:
+All data collection finishes today. At the end of the session:
 
-- Recruit friends, flatmates, classmates
-- Aim to complete your target sample
-- Keep following the same procedure exactly
-- Store data safely (use participant numbers only)
+- Collect all data sheets and organise them
+- Hand your completed data to Gordon
+- Gordon will analyse the data and return it to you in Week 20
 :::
 
 ---
@@ -349,24 +348,22 @@ You should continue collecting data:
 
 - Use participant numbers, never names
 - Store consent forms separately from data
-- Keep physical forms in a secure location
-- Digital data should be password protected
-- Bring ALL data to Week 20 lab
+- Hand all data sheets to Gordon at the end of the session
+- Gordon will analyse and return results in Week 20
 :::
 
 ---
 
 ## Preparing for Week 20
 
-Next week is the final lab: **Report Writing Workshop**
+Next week: Gordon returns your analysed data and you start the **Report Writing Workshop**.
 
 ::: {.callout-tip}
-## Bring to Week 20
+## Week 20
 
-1. All collected data (organised!)
-2. Laptop for writing
-3. Questions about your Research Report
-4. Preliminary ideas about your results
+1. Gordon returns your analysed data
+2. Bring a laptop for writing
+3. Bring questions about your Research Report
 :::
 
 ---
@@ -375,8 +372,7 @@ Next week is the final lab: **Report Writing Workshop**
 
 | Activity | Description |
 |----------|-------------|
-| Data compilation | Bring together all group data |
-| Preliminary analysis | Start looking at your results |
+| Data returned | Gordon returns your analysed data |
 | Report structure | Overview of lab report sections |
 | Writing workshop | Begin drafting your report |
 
@@ -385,7 +381,7 @@ Next week is the final lab: **Report Writing Workshop**
 ## EDS Final Reminder
 
 ::: {.callout-warning}
-## EDS DUE: Tomorrow, 4pm
+## EDS DUE: Tomorrow, 12 noon
 
 - Submit via Learn.gold
 - Check file format requirements
@@ -398,12 +394,11 @@ Next week is the final lab: **Report Writing Workshop**
 
 | Date | Milestone |
 |------|-----------|
-| This week | Complete data collection |
-| Week 20 | Compile data, begin analysis |
-| Early April | Draft Method and Results |
-| Mid April | Write Introduction and Discussion |
+| This week | Complete data collection; hand data to Gordon |
+| Week 20 | Gordon returns analysed data; start writing |
+| Easter break | Draft Method and Results; write Introduction and Discussion |
 | Late April | Proofread and format |
-| **1 May** | **Submit Research Report** |
+| **Mid-late April** | **Submit Research Report** (exact date TBC) |
 
 ---
 
@@ -413,9 +408,9 @@ Next week is the final lab: **Report Writing Workshop**
 ## Checkpoint
 
 1. Count your data sheets and record total N
-2. Store data safely
-3. Note how many more participants you need
-4. Plan when/where to continue data collection
+2. Hand all data to Gordon
+3. Note any issues or observations for your report
+4. Check EDS submission is ready for tomorrow
 :::
 
 ---

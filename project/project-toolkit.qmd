@@ -364,11 +364,12 @@ Use this to track what you should be working on each week. Documents don't all n
 | Week | Dates | Focus | Key tasks |
 |:----:|:-----:|-------|-----------|
 | **16** | 24–28 Feb | **Form groups & choose project** | Form your group of 4–5. Read the [Project Options](group-project-options.qmd). Agree on a project and design (between or within). Submit your **Research Plan** (Fri 27 Feb, 12 noon). |
-| **17** | 3–7 Mar | **Draft core documents** | Draft: Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions. Start your Researcher Procedure. |
-| **18** | 10–14 Mar | **Prepare materials & practice** | Finalise stimulus materials. Complete Researcher Procedure. Practice running the study on each other. **MCQ Exam** (Wed 11 Mar). |
-| **19** | 17–21 Mar | **Final checks & order resources** | Complete Research Study Order Form. Finalise all documents. Print or request printing. **EDS Assignment** (Fri 20 Mar, 12 noon). |
-| | 24 Mar – 1 Apr | **Easter break** | Any final preparation. Review all documents one last time. |
-| **20** | 1–3 Apr | **Data collection** | Run your study! Collect data in the lab session. **Research Report deadline** (Fri 1 Apr, 12 noon). |
+| **17** | 3–7 Mar | **Draft documents & start materials** | Draft: Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions. Start your Researcher Procedure and Stimulus Materials. |
+| **18** | 9–13 Mar | **Finalise everything & practice** | **MCQ Exam** (Wed 11 Mar). Finalise all documents and stimulus materials. Complete Researcher Procedure. Practice running the study on each other. Submit Research Study Order Form. |
+| **19** | 17–21 Mar | **Data collection** | Run your study! Collect data in the lab session. **EDS Assignment** (Fri 20 Mar, 12 noon). |
+| **20** | 24–28 Mar | **Data returned & start writing** | Gordon analyses and returns data to groups. Start writing your Research Report. |
+|  | | **Easter break** | Keep working on your Research Report. |
+| | | | **Research Report deadline** (mid-late April — exact date TBC). |
 
 </div>
 
@@ -391,7 +392,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Every participant — they read this before deciding whether to participate. They keep a copy.
 
-**When needed:** Draft by Week 17, finalised by Week 19.
+**When needed:** Draft by Week 17, finalised by Week 18.
 
 #### Tips
 
@@ -418,7 +419,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Every participant signs one. You keep the signed copies securely.
 
-**When needed:** Draft by Week 17, finalised by Week 19.
+**When needed:** Draft by Week 17, finalised by Week 18.
 
 #### Tips
 
@@ -444,7 +445,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Every participant — they receive this after completing the study.
 
-**When needed:** Draft by Week 17, finalised by Week 19.
+**When needed:** Draft by Week 17, finalised by Week 18.
 
 #### Tips
 
@@ -471,7 +472,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Researchers only — you read or paraphrase this when recruiting.
 
-**When needed:** Finalise by Week 19.
+**When needed:** Finalise by Week 18.
 
 #### Tips
 
@@ -497,7 +498,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Researchers only — you fill this in after scoring each participant.
 
-**When needed:** Draft by Week 18, finalised by Week 19.
+**When needed:** Draft by Week 17, finalised by Week 18.
 
 #### Tips
 
@@ -524,7 +525,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Participants (during the study) and researchers.
 
-**When needed:** Draft by Week 17, finalised by Week 18.
+**When needed:** Draft by Week 17, finalised by end of Week 18.
 
 #### Tips
 
@@ -551,7 +552,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Every participant reads this before the study begins.
 
-**When needed:** Draft by Week 17, finalised by Week 18.
+**When needed:** Draft by Week 17, finalised by end of Week 18.
 
 #### Tips
 
@@ -579,7 +580,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** Researchers only — this is your "recipe" for running the study identically every time.
 
-**When needed:** Draft by Week 17–18, finalised by Week 19.
+**When needed:** Draft by Week 17, finalised by end of Week 18.
 
 #### Tips
 
@@ -607,7 +608,7 @@ Your group needs to prepare **9 documents** before data collection day. Click ea
 
 **Who sees it:** You submit this to Gordon so resources can be prepared in advance.
 
-**When needed:** Submit by **end of Week 19** at the latest.
+**When needed:** Submit by **end of Week 18** at the latest.
 
 #### Tips
 

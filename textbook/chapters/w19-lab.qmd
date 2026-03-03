@@ -1,20 +1,42 @@
 ---
-title: "Chapter 18: Project Workshop Lab"
-subtitle: "Live Data Collection"
+title: "Chapter 19: Data Collection"
+subtitle: "Running Your Study with Real Participants"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Lab-specific reading material
+This chapter supports your data collection session. By this point you have prepared all your documents and practised your procedure — now it's time to run your study for real.
 
-## Reading Guide
+## Key Points
 
-### Key Points to Focus On
+### Before You Start
 
-1. TBC
-2. TBC
-3. TBC
+1. **Check all materials** — consent forms, instruction sheets, stimulus materials, data recording sheets, debrief forms, pens, timer
+2. **Assign roles** — who is experimenter, assistant, and recruiter for each rotation?
+3. **Quick rehearsal** — run through the procedure one more time verbally
+
+### During Data Collection
+
+1. **Follow your Researcher Procedure exactly** — read instructions verbatim, keep timing consistent
+2. **Stay neutral** — don't react to participant responses, nod encouragingly, or hint at expected answers
+3. **Record data immediately** — fill in the Data Recording Sheet after each participant, don't rely on memory
+4. **Debrief every participant** — hand them the Debrief Form and answer any questions
+
+### Common Issues
+
+- **Participant asks "What's the right answer?"** — explain there are no right or wrong answers
+- **Participant wants to stop** — thank them, remind them they can withdraw, destroy their data
+- **Something goes wrong with materials** — note the issue, try to continue, record what happened
+- **Timing is off** — complete the session, adjust for the next participant
+
+### After Data Collection
+
+- Count your completed data sheets
+- Check for missing entries or unclear handwriting
+- Hand all data to Gordon at the end of the session
+- Gordon will analyse the data and return your results in Week 20
 
 ## Additional Resources
 
-- TBC
+- [Project Toolkit](../../project/project-toolkit.qmd) — your complete document reference
+- Your Researcher Procedure — follow it step by step

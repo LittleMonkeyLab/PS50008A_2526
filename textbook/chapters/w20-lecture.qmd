@@ -1,26 +1,64 @@
 ---
-title: "Chapter 19: EDS Preparation"
-subtitle: "MCQ Feedback + Lab Report Briefing"
+title: "Chapter 20: Writing Your Research Report"
+subtitle: "Lab Report Structure, Discussion Sections, and Report Writing"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Textbook chapter or article details
+This chapter provides guidance on writing your Research Report — the final assessment for PS50008A. Your report follows the standard APA lab report structure.
 
-## Reading Guide
+## Lab Report Structure
 
-### Key Points to Focus On
+Your report should include the following sections, in order:
 
-1. TBC
-2. TBC
-3. TBC
+### Title Page
+- A clear, informative title that includes your key variables
+- Your name and student number
 
-### Questions to Consider
+### Abstract
+- 150–250 words summarising the entire study
+- Includes: aim, method (brief), key result, conclusion
+- Written last — after everything else is done
 
-- TBC
-- TBC
-- TBC
+### Introduction
+- **Funnel structure**: Start broad (topic area), narrow down (specific theory and previous research), end with your hypothesis
+- Define key terms and concepts
+- Explain why this research question matters
+- State your hypothesis clearly at the end
+
+### Method
+- **Participants**: How many, how recruited, any relevant demographics
+- **Design**: Between- or within-subjects, IV (with levels), DV
+- **Materials**: What stimuli/measures you used
+- **Procedure**: Step-by-step what happened (past tense)
+
+### Results
+- Descriptive statistics (M, SD) for each condition
+- Inferential test result in APA format
+- A figure or table if appropriate
+- State whether the hypothesis was supported
+
+### Discussion
+- Restate your key finding (without statistics)
+- Interpret what the result means
+- Connect to theory and previous research from your Introduction
+- Acknowledge limitations honestly
+- Suggest future directions
+- Brief conclusion
+
+### References
+- APA format for all sources cited in the report
+
+## Writing Tips
+
+1. **Start with Method** — it's the most straightforward section to write
+2. **Then Results** — use your analysed data from Gordon
+3. **Then Introduction** — build the argument for your hypothesis
+4. **Then Discussion** — interpret your findings
+5. **Abstract last** — summarise everything once it's written
+6. **Proofread** — check APA formatting, spelling, and clarity
 
 ## Additional Resources
 
-- TBC
+- Lecture slides from Week 20
+- APA results reporting guide from Week 19 lecture reading

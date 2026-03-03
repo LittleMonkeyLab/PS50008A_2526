@@ -1,55 +1,50 @@
 ---
 title: "Week 18 Self-Assessment"
-subtitle: "Running Experiments Ethically and Effectively & Project Groups: Procedure"
+subtitle: "MCQ Exam & Project Toolkit Phase 2"
 author: "Gordon Wright"
 date: "2026-03-11"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w18-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-03-15"
-  labels: ['ethics', 'experimental-design', 'project', 'procedure', 'self-assessment']
-  depends_on:
-    - rm0-w18-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-03-15"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 18.
+This self-assessment is a **reflective exercise** — there are no right or wrong answers. Use it to think about what you've learned this week and how it might help you next year when you join the undergraduate programme.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-03-15.
-:::
+## Part 1: Reflecting on the MCQ Exam
 
-## Part 1: Conceptual Questions
+Think about your experience of the MCQ exam this week.
 
-TBC
+1. **Which topics did you feel most confident about?** (e.g., design types, IV/DV, hypotheses, test choice, p-values, correlation)
 
-## Part 2: Practical Exercises
+2. **Which topics did you find most challenging?** What made them difficult?
 
-TBC
+3. **If you could go back and revise differently, what would you change?** Think about revision strategies, not just content.
 
-## Part 3: Reflection
+4. **How might this experience help you prepare for exams in Year 1?** What study habits would you start earlier?
 
-TBC
+## Part 2: Reflecting on the Project Toolkit
+
+Think about your group's progress on the Project Toolkit this week.
+
+1. **Which documents were easiest to draft? Which were hardest?** Why do you think that was?
+
+2. **How well did your group work together?** What went well? What could improve?
+
+3. **Did you do a practice run?** If so, what did it reveal about your procedure? If not, what concerns do you have?
+
+4. **How confident are you that your group is ready for data collection next week?** What would make you more confident?
+
+## Part 3: Looking Ahead
+
+1. **What is one thing you learned this week that you think will be most useful in your undergraduate studies?**
+
+2. **What advice would you give to next year's students about preparing for the MCQ exam and getting their project documents ready?**
+
+3. **Is there anything you wish you had done differently in the first half of this module that would have made this week easier?**
 
 ## Submission
 
-TBC - Submission instructions
-
-## Marking Criteria
-
-This is a **formative** assignment.
+This is a **formative** self-assessment for your own reflection. You do not need to submit it — but keeping your answers will help you when writing your Research Report and preparing for Year 1.

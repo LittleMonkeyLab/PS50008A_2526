@@ -7,7 +7,7 @@ subtitle: "Materials, Complete Procedure, and Practice Run"
 
 This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form.
 
-**There is no Week 19 lab** (testing). **Week 20** is lecture + **data collection lab**. You must finish all toolkit documents in **Weeks 17 and 18** so you are ready to collect data in Week 20.
+**Week 19 lab is data collection.** You must finish all toolkit documents in **Weeks 17 and 18** so you are ready to collect data in Week 19.
 
 ---
 
@@ -36,7 +36,7 @@ This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). Y
 
 **Who sees it:** Researchers only — you fill it in after scoring each participant.
 
-**Tips:** Include a **scoring guide** so all group members score the DV consistently. The template has tables for both between- and within-subjects designs — delete the one you don't need. This is your raw data, so accuracy and consistency matter. Draft in Week 18, finalise by Week 19.
+**Tips:** Include a **scoring guide** so all group members score the DV consistently. The template has tables for both between- and within-subjects designs — delete the one you don't need. This is your raw data, so accuracy and consistency matter. Finalise by end of Week 18.
 
 ---
 
@@ -83,7 +83,7 @@ Running the study on each other **before** data collection day helps you:
 
 **What it is:** A form listing everything your group needs printed or provided for data collection day. You submit it to Gordon so resources can be prepared in advance.
 
-**When:** Submit by **end of Week 19** at latest. There is no Week 19 lab, so submit in your own time (e.g. by email or Learn).
+**When:** Submit by **end of Week 18** at latest (Week 19 lab is data collection).
 
 **Tips:** List every document and how many copies (err on the side of more). Include any special requirements (e.g. colour printing, specific paper size). Don't forget consumables: pens, blank paper for recall, snacks. Use the toolkit template.
 
@@ -107,7 +107,7 @@ Running the study on each other **before** data collection day helps you:
 | 6. Stimulus Materials | Finalise; test on each other |
 | 7. Participant Instructions | Finalise if needed |
 | 8. Researcher Procedure | **Complete** (data recording, scoring, full script) |
-| 9. Research Study Order Form | Complete; submit by end of Week 19 |
+| 9. Research Study Order Form | Complete; submit by end of Week 18 |
 
 Plus: **Practice run** within the group and update procedure/instructions as needed.
 

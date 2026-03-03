@@ -19,10 +19,10 @@ project:
   - week14/
   - week15/
   - week16/
-  # - week17/
-  # - week18/
-  # - week19/
-  # - week20/
+  - week17/
+  - week18/
+  - week19/
+  - week20/
   - textbook/index.qmd
   - textbook/chapters/w11-lecture.qmd
   - textbook/chapters/w11-lab.qmd
@@ -36,24 +36,24 @@ project:
   - textbook/chapters/w15-lab.qmd
   - textbook/chapters/w16-lecture.qmd
   - textbook/chapters/w16-lab.qmd
-  # - textbook/chapters/w17-lecture.qmd
-  # - textbook/chapters/w17-lab.qmd
-  # - textbook/chapters/w18-lecture.qmd
-  # - textbook/chapters/w18-lab.qmd
-  # - textbook/chapters/w19-lecture.qmd
-  # - textbook/chapters/w19-lab.qmd
-  # - textbook/chapters/w20-lecture.qmd
-  # - textbook/chapters/w20-lab.qmd
+  - textbook/chapters/w17-lecture.qmd
+  - textbook/chapters/w17-lab.qmd
+  - textbook/chapters/w18-lecture.qmd
+  - textbook/chapters/w18-lab.qmd
+  - textbook/chapters/w19-lecture.qmd
+  - textbook/chapters/w19-lab.qmd
+  - textbook/chapters/w20-lecture.qmd
+  - textbook/chapters/w20-lab.qmd
   - textbook/quizzes/w11-quiz.qmd
   - textbook/quizzes/w12-quiz.qmd
   - textbook/quizzes/w13-quiz.qmd
   - textbook/quizzes/w14-quiz.qmd
   - textbook/quizzes/w15-quiz.qmd
   - textbook/quizzes/w16-quiz.qmd
-  # - textbook/quizzes/w17-quiz.qmd
-  # - textbook/quizzes/w18-quiz.qmd
-  # - textbook/quizzes/w19-quiz.qmd
-  # - textbook/quizzes/w20-quiz.qmd
+  - textbook/quizzes/w17-quiz.qmd
+  - textbook/quizzes/w18-quiz.qmd
+  - textbook/quizzes/w19-quiz.qmd
+  - textbook/quizzes/w20-quiz.qmd
 website:
   title: PS50008A Research Methods & Experimental Design
   description: Term 2 Spring 2026
@@ -243,83 +243,83 @@ website:
             href: week16/lab/activity.qmd
           - text: Reading
             href: week16/lab/reading.qmd
-      # - section: 'Week 17: Interpretation & Credibility'
-      #   contents:
-      #   - text: Overview
-      #     href: week17/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week17/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week17/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week17/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week17/lab/activity.qmd
-      #     - text: Reading
-      #       href: week17/lab/reading.qmd
-      # - section: 'Week 18: MCQ Exam'
-      #   contents:
-      #   - text: Overview
-      #     href: week18/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week18/lecture/reading.qmd
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week18/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week18/lab/activity.qmd
-      #     - text: Reading
-      #       href: week18/lab/reading.qmd
-      # - section: 'Week 19: Project Workshop'
-      #   contents:
-      #   - text: Overview
-      #     href: week19/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week19/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week19/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week19/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week19/lab/activity.qmd
-      #     - text: Reading
-      #       href: week19/lab/reading.qmd
-      # - section: 'Week 20: Wrapping Up'
-      #   contents:
-      #   - text: Overview
-      #     href: week20/index.qmd
-      #   - section: Lecture
-      #     contents:
-      #     - text: Reading
-      #       href: week20/lecture/reading.qmd
-      #     - text: Slides
-      #       href: week20/lecture/slides.qmd
-      #       target: _blank
-      #   - section: Lab
-      #     contents:
-      #     - text: Instructor Slides
-      #       href: week20/lab/instructor-slides.qmd
-      #       target: _blank
-      #     - text: Activity
-      #       href: week20/lab/activity.qmd
-      #     - text: Reading
-      #       href: week20/lab/reading.qmd
+      - section: 'Week 17: MCQ & EDS Preparation'
+        contents:
+        - text: Overview
+          href: week17/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week17/lecture/reading.qmd
+          - text: Slides
+            href: week17/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week17/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week17/lab/activity.qmd
+          - text: Reading
+            href: week17/lab/reading.qmd
+      - section: 'Week 18: MCQ Exam'
+        contents:
+        - text: Overview
+          href: week18/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week18/lecture/reading.qmd
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week18/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week18/lab/activity.qmd
+          - text: Reading
+            href: week18/lab/reading.qmd
+      - section: 'Week 19: Project Workshop'
+        contents:
+        - text: Overview
+          href: week19/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week19/lecture/reading.qmd
+          - text: Slides
+            href: week19/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week19/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week19/lab/activity.qmd
+          - text: Reading
+            href: week19/lab/reading.qmd
+      - section: 'Week 20: Wrapping Up'
+        contents:
+        - text: Overview
+          href: week20/index.qmd
+        - section: Lecture
+          contents:
+          - text: Reading
+            href: week20/lecture/reading.qmd
+          - text: Slides
+            href: week20/lecture/slides.qmd
+            target: _blank
+        - section: Lab
+          contents:
+          - text: Instructor Slides
+            href: week20/lab/instructor-slides.qmd
+            target: _blank
+          - text: Activity
+            href: week20/lab/activity.qmd
+          - text: Reading
+            href: week20/lab/reading.qmd
     - section: Textbook
       contents:
       - text: Overview
@@ -360,30 +360,30 @@ website:
           href: textbook/chapters/w16-lecture.qmd
         - text: 'Lab: Project Groups'
           href: textbook/chapters/w16-lab.qmd
-      # - section: Week 17
-      #   contents:
-      #   - text: 'Lecture: Interpretation & Credibility'
-      #     href: textbook/chapters/w17-lecture.qmd
-      #   - text: 'Lab: Project Groups'
-      #     href: textbook/chapters/w17-lab.qmd
-      # - section: Week 18
-      #   contents:
-      #   - text: 'Lecture: MCQ Exam Prep'
-      #     href: textbook/chapters/w18-lecture.qmd
-      #   - text: 'Lab: Project Groups'
-      #     href: textbook/chapters/w18-lab.qmd
-      # - section: Week 19
-      #   contents:
-      #   - text: 'Lecture: Project Workshop'
-      #     href: textbook/chapters/w19-lecture.qmd
-      #   - text: 'Lab: Data Collection'
-      #     href: textbook/chapters/w19-lab.qmd
-      # - section: Week 20
-      #   contents:
-      #   - text: 'Lecture: Wrapping Up'
-      #     href: textbook/chapters/w20-lecture.qmd
-      #   - text: 'Lab: Report Writing'
-      #     href: textbook/chapters/w20-lab.qmd
+      - section: Week 17
+        contents:
+        - text: 'Lecture: Interpretation & Credibility'
+          href: textbook/chapters/w17-lecture.qmd
+        - text: 'Lab: Project Groups'
+          href: textbook/chapters/w17-lab.qmd
+      - section: Week 18
+        contents:
+        - text: 'Lecture: MCQ Exam Prep'
+          href: textbook/chapters/w18-lecture.qmd
+        - text: 'Lab: Project Groups'
+          href: textbook/chapters/w18-lab.qmd
+      - section: Week 19
+        contents:
+        - text: 'Lecture: Project Workshop'
+          href: textbook/chapters/w19-lecture.qmd
+        - text: 'Lab: Data Collection'
+          href: textbook/chapters/w19-lab.qmd
+      - section: Week 20
+        contents:
+        - text: 'Lecture: Wrapping Up'
+          href: textbook/chapters/w20-lecture.qmd
+        - text: 'Lab: Report Writing'
+          href: textbook/chapters/w20-lab.qmd
       - section: Self-Assessment Quizzes
         contents:
         - text: Week 11 Quiz
@@ -398,14 +398,14 @@ website:
           href: textbook/quizzes/w15-quiz.qmd
         - text: Week 16 Quiz
           href: textbook/quizzes/w16-quiz.qmd
-        # - text: Week 17 Quiz
-        #   href: textbook/quizzes/w17-quiz.qmd
-        # - text: Week 18 Quiz
-        #   href: textbook/quizzes/w18-quiz.qmd
-        # - text: Week 19 Quiz
-        #   href: textbook/quizzes/w19-quiz.qmd
-        # - text: Week 20 Quiz
-        #   href: textbook/quizzes/w20-quiz.qmd
+        - text: Week 17 Quiz
+          href: textbook/quizzes/w17-quiz.qmd
+        - text: Week 18 Quiz
+          href: textbook/quizzes/w18-quiz.qmd
+        - text: Week 19 Quiz
+          href: textbook/quizzes/w19-quiz.qmd
+        - text: Week 20 Quiz
+          href: textbook/quizzes/w20-quiz.qmd
   page-footer:
     left: PS50008A Research Methods & Experimental Design | Goldsmiths, University
       of London

@@ -268,14 +268,13 @@ Discuss as a group:
 
 ## Next Steps
 
-- Continue data collection through Week 20
-- Conduct daily/session quality checks
-- Document any issues in your log
-- Begin thinking about analysis once collection is complete
+- Hand all data sheets to Gordon at the end of today's session
+- Gordon will analyse the data over Easter and return it in Week 20
+- Start thinking about your Research Report structure
 - Prepare for the Report Writing Workshop (Week 20)
 
-::: {.callout-warning}
-## Data Collection Deadline
-All data collection must be complete by [DATE]. After this, you will move to analysis and writing.
+::: {.callout-important}
+## Data Collection Ends Today
+All data collection must be complete by the end of today's lab session. Hand your data to Gordon — he will analyse it and return your results in Week 20.
 :::
 

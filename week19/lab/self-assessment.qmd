@@ -1,55 +1,50 @@
 ---
 title: "Week 19 Self-Assessment"
-subtitle: "In-class MCQ Test & Live Data Collection"
+subtitle: "Data Collection & EDS Submission"
 author: "Gordon Wright"
 date: "2026-03-18"
 format:
   html:
     toc: true
     toc-depth: 2
-taskmistress:
-  id: rm0-w19-self-assessment
-  subtype: self-assessment
-  status: backlog
-  priority: 2
-  due: "2026-03-22"
-  labels: ['assessment', 'data-collection', 'project', 'self-assessment']
-  depends_on:
-    - rm0-w19-lab-activity
-  version:
-    number: "0.1"
-    status: draft
-    changelog:
-      - "2026-01-03: Initial structure"
-  properties:
-    deadline: "2026-03-22"
 ---
 
 ## Overview
 
-This self-assessment consolidates your learning from Week 19.
+This self-assessment is a **reflective exercise** — there are no right or wrong answers. Use it to think about what you've learned from running your study and how it might help you next year when you join the undergraduate programme.
 
-::: {.callout-important}
-## Deadline
-Complete this self-assessment by 2026-03-22.
-:::
+## Part 1: Reflecting on Data Collection
 
-## Part 1: Conceptual Questions
+Think about your experience of collecting data today.
 
-TBC
+1. **What was it like running your study with real participants?** Was it what you expected? What surprised you?
 
-## Part 2: Practical Exercises
+2. **Did anything go wrong during data collection?** How did you handle it? What would you do differently next time?
 
-TBC
+3. **How well did your group follow the Researcher Procedure?** Was it detailed enough? Were there gaps?
 
-## Part 3: Reflection
+4. **How did participants respond to your study?** Were the instructions clear? Did anyone seem confused or disengaged?
 
-TBC
+## Part 2: Reflecting on the Research Process
+
+Think about the whole process from choosing a project to collecting data.
+
+1. **What was the most valuable thing you learned from designing and running a study yourself?**
+
+2. **How did the experience change your understanding of research you read about?** Do you think about published studies differently now?
+
+3. **What would you do differently if you were designing another study?** Think about your design, materials, procedure, or recruitment.
+
+4. **How did working in a group affect the quality of your research?** What were the benefits and challenges?
+
+## Part 3: Looking Ahead
+
+1. **How will this experience help you in your undergraduate programme?** Think about research methods modules, dissertations, and reading journal articles.
+
+2. **What advice would you give to next year's students about data collection day?**
+
+3. **What is one skill from this module that you feel most confident about, and one you want to develop further?**
 
 ## Submission
 
-TBC - Submission instructions
-
-## Marking Criteria
-
-This is a **formative** assignment.
+This is a **formative** self-assessment for your own reflection. You do not need to submit it — but keeping your answers will help you when writing your Research Report and preparing for Year 1.

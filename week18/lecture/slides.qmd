@@ -1,6 +1,6 @@
 ---
 title: "MCQ Exam"
-subtitle: "PS50008A Week 18 | Lecture"
+subtitle: "PS50008A Week 18 | Wednesday 11 March"
 author: "Gordon Wright"
 date: "2026-03-11"
 format:
@@ -16,7 +16,7 @@ format:
     center-title-slide: true
 ---
 
-## MCQ Exam - No Lecture This Week
+## MCQ Exam — No Lecture This Week
 
 ::: {.callout-important}
 ## In-Class Assessment
@@ -28,10 +28,10 @@ There are no lecture slides for this week.
 ## Exam Information
 
 - **Date**: Wednesday 11 March 2026
-- **Time**: During lecture slot (10:00-12:00)
-- **Location**: Regular lecture room
-- **Format**: Multiple choice questions
-- **Content**: Weeks 11-17
+- **Time**: 10:00-12:00
+- **Location**: RHBD 143
+- **Format**: 36 multiple-choice questions (paper-based)
+- **Content**: Weeks 11–17
 
 ## Good Luck!
 
@@ -39,4 +39,4 @@ There are no lecture slides for this week.
 Good luck!
 :::
 
-See you next week for feedback and project workshop.
+See you in the lab tomorrow for Project Toolkit Phase 2.

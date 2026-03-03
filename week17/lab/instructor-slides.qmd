@@ -27,9 +27,9 @@ format:
 ::: {.callout-important}
 ## Labs 17 & 18 = complete the Project Toolkit
 
-**Week 19 lab** is data collection. There is **no Week 19 lab** (testing) — so **Week 20** is lecture + data collection lab.
+**Week 19 lab** is data collection day.
 
-You must finish all toolkit documents in **Weeks 17 and 18** so you're ready to collect data.
+You must finish all toolkit documents in **Weeks 17 and 18** so you're ready to collect data in Week 19.
 :::
 
 **Today (Phase 1):** Draft the core participant-facing documents and start the Researcher Procedure.
@@ -74,7 +74,7 @@ Use the **templates** and **example** documents; refer to the checklist for tips
 ## Assessment Reminders
 
 ::: {.callout-important}
-- **MCQ Exam**: Wednesday 11 March (no Week 18 lecture)
+- **MCQ Exam**: Wednesday 11 March
 - **EDS** (Experimental Design & Statistics): Due 20 March
 :::
 
@@ -205,11 +205,11 @@ Get sign-off from an instructor if required.
 
 ---
 
-## Week 18: Phase 2 (No Lecture — MCQ)
+## Week 18: MCQ Exam + Phase 2
 
 ::: {.callout-warning}
 ## Next week
-- **Wednesday**: MCQ Exam (no lecture).
+- **Wednesday**: **MCQ Exam** (11 March).
 - **Thursday lab**: Phase 2 — Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, **complete** Researcher Procedure, **practice run** on each other, Research Study Order Form.
 :::
 
@@ -219,9 +219,9 @@ Get sign-off from an instructor if required.
 
 | Week | Lecture | Lab |
 |------|---------|-----|
-| 18 | **MCQ Exam** (no lecture) | Phase 2: materials & practice run |
-| 19 | Lecture 19 | **No lab** (testing) — finalise docs, submit Order Form |
-| 20 | Lecture 20 | **Data collection** |
+| 18 | **MCQ Exam** (Wed) | Phase 2: materials & practice run |
+| **19** | Lecture 19 | **Data collection** |
+| 20 | — | Gordon returns analysed data; start Research Report |
 
 ---
 

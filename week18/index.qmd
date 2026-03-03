@@ -10,20 +10,21 @@ date: "2026-03-09"
 ::: {.callout-important appearance="simple"}
 ## MCQ EXAM: Wednesday 11 March
 
-**Date**: Wednesday 11 March 2026  
-**Time**: Check your timetable  
-**Location**: Check your exam allocation  
-**Duration**: 1 hour  
+**Date**: Wednesday 11 March 2026
+**Time**: 10:00-12:00
+**Location**: RHBD 143
 
-This is a summative assessment worth **20%** of your module grade. **There is no lecture this week** — the Wednesday session is the exam.
+This is a summative assessment worth **20%** of your module grade. The Wednesday lecture slot is the MCQ Exam — there is no lecture this week.
 :::
 
-**Thursday lab**: **Project Toolkit — Phase 2**. Finalise stimulus materials, complete the Researcher Procedure, add Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form. By the end of this lab you should be ready for data collection (Week 20). **There is no Week 19 lab** (testing); Week 20 is lecture + data collection lab.
+**Wednesday**: **MCQ Exam** (no lecture).
 
-**Wednesday**: MCQ Exam (no lecture)  
-**Lab**: Thursday 10:00-12:00 WB304A / WB304B
+**Lab** (Thursday): **Project Toolkit — Phase 2**. Finalise stimulus materials, complete the Researcher Procedure, add Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form. By the end of this lab you should be ready for **data collection in Week 19**.
 
-## Exam Information
+**Wednesday**: MCQ Exam 10:00-12:00 RHBD 143
+**Lab**: Thursday 10:00-12:00 WB 304a / WB 304b
+
+## MCQ Exam Information
 
 ### What to Expect
 
@@ -68,24 +69,24 @@ Wednesday's session is the MCQ Exam. Use Week 17 lecture and self-assessment for
 
 ## Project Toolkit — Phase 2 (Thursday Lab)
 
-Phase 2 completes the toolkit so you are ready for **data collection in Week 20**.
+Phase 2 completes the toolkit so you are ready for **data collection in Week 19**.
 
 Your group will:
 
 1. **Recruitment Script** — Short script for approaching participants (template in toolkit)
-2. **Data Recording Sheet** — Table for participant number, condition, DV score, scoring guide (draft in Week 18, finalise by Week 19)
+2. **Data Recording Sheet** — Table for participant number, condition, DV score, scoring guide
 3. **Stimulus materials** — Finalise word lists, images, questionnaires, etc. (toolkit has templates and examples)
 4. **Researcher Procedure** — **Complete** the procedure you started in Week 17 (data recording, scoring, full script)
 5. **Practice run** — Run the study on each other; fix any problems with timing, instructions, or materials
-6. **Research Study Order Form** — List everything you need printed or provided for data collection day; submit by **end of Week 19** at latest
+6. **Research Study Order Form** — List everything you need printed or provided for data collection day; submit by **end of this week**
 
 ::: {.callout-tip}
 ## Timeline reminder
 | Week | Lecture | Lab |
 |------|---------|-----|
-| 18 | **MCQ** (no lecture) | Phase 2 |
-| 19 | Lecture 19 | **No lab** (testing) — finalise docs, submit Order Form; EDS due 20 Mar |
-| 20 | Lecture 20 | **Data collection** |
+| 18 (this week) | **MCQ Exam** (no lecture) | Phase 2 |
+| **19** | Lecture 19 | **Data collection** |
+| 20 | — | Gordon returns analysed data; start writing Research Report |
 :::
 
 ## Connecting to Assessments
@@ -93,10 +94,10 @@ Your group will:
 | Assessment | Connection |
 |------------|------------|
 | **MCQ Exam** | **Completed this week** (Wednesday) |
-| **EDS** (Due 20 March) | Revise using Week 17 materials and self-assessment |
-| **Research Report** | Group project data collected in Week 20 lab |
+| **EDS** (Due 20 March, 12 noon) | Revise using Week 17 materials and self-assessment |
+| **Research Report** | Group project data collected in Week 19 lab |
 
 ## What's Next?
 
-- **Week 19**: Lecture only (no lab). EDS due 20 March. Finalise all toolkit documents; submit Research Study Order Form by end of week.
-- **Week 20**: Lecture + **data collection lab** — run your study.
+- **Week 19**: **Data collection in the lab.** EDS due 20 March, 12 noon.
+- **Week 20**: Gordon analyses and returns data to groups. Start writing your Research Report.

@@ -5,7 +5,7 @@ subtitle: "Drafting Core Documents for Data Collection"
 
 ## Overview
 
-This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the core documents your group needs before data collection day. **Labs 17 and 18** complete all toolkit materials so you are ready for **data collection in Week 20**. (There is no Week 19 lab due to testing; Week 20 is lecture + data collection lab.)
+This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the core documents your group needs before data collection day. **Labs 17 and 18** complete all toolkit materials so you are ready for **data collection in Week 19**.
 
 **Phase 1 (Week 17):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
 

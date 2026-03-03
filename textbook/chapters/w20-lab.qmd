@@ -1,20 +1,50 @@
 ---
-title: "Chapter 20: EDS Preparation Lab"
-subtitle: "Data Analysis and Reporting"
+title: "Chapter 20 Lab: Report Writing Workshop"
+subtitle: "Getting Started on Your Research Report"
 ---
 
-## Required Reading
+## Overview
 
-TBC - Lab-specific reading material
+This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.
 
-## Reading Guide
+## Getting Started
 
-### Key Points to Focus On
+### What You Have
 
-1. TBC
-2. TBC
-3. TBC
+- Your analysed data (from Gordon)
+- All your project documents (Information Sheet, Procedure, etc.)
+- The project articles and background reading
+- APA reporting guidelines from Week 19
+
+### Writing Order
+
+Don't write the report front-to-back. Instead:
+
+1. **Method** — you already have everything you need (participants, design, materials, procedure)
+2. **Results** — use your analysed data; report descriptive and inferential statistics in APA format
+3. **Introduction** — build the argument for your hypothesis using the suggested readings and your own research
+4. **Discussion** — interpret your results, connect to theory, discuss limitations
+5. **Abstract** — write this last, once everything else is done
+
+## Key Reminders
+
+### Results Section
+- Report M and SD for each condition
+- Report the inferential test (t-test) in APA format: *t*(df) = X.XX, *p* = .XXX
+- State whether the result was significant at α = .05
+- Include a figure (e.g., bar chart with error bars) if appropriate
+- State whether the hypothesis was supported
+
+### Discussion Section
+- Start by restating your main finding in plain language (no statistics)
+- Explain what the finding means in the context of the theory
+- Compare to previous research — does your result agree or disagree?
+- Be honest about limitations (sample size, materials, design)
+- Suggest what future research could investigate
+- End with a brief conclusion
 
 ## Additional Resources
 
-- TBC
+- [Project Toolkit](../../project/project-toolkit.qmd) — your document reference
+- Week 19 lecture reading — APA results reporting guidelines
+- Week 20 lecture slides — discussion section writing guidance

@@ -429,8 +429,8 @@ Use this time to:
 ::: {.definition-box}
 **Office Hours**
 
+- Thursdays 12:00-13:00, WHBD 200/2
 - Continue until submission deadline
-- Book via [system/method]
 
 **Discussion Board**
 
@@ -449,11 +449,10 @@ Use this time to:
 
 | Date | What to Do |
 |------|------------|
-| This week | Complete Method draft, run analysis |
-| Early April | Write Results with figures/tables |
-| Mid April | Draft Introduction and Discussion |
-| Late April | Revise, proofread, format |
-| **1 May, 4pm** | **SUBMIT via Learn.gold** |
+| This week | Gordon returns data; begin drafting Method and Results |
+| Easter break | Complete Introduction and Results with figures |
+| After Easter | Write Discussion section; final proofreading and formatting |
+| **Mid-late April** | **SUBMIT via Learn.gold by 12 noon** (exact date TBC) |
 
 ---
 
@@ -493,7 +492,7 @@ Good luck with your Research Report!
 
 # Good luck! {background-color="#275882"}
 
-## Research Report due: 1 May 2026
+## Research Report due: mid-late April (exact date TBC)
 
 ::: {.notes}
 **Instructor Notes:**

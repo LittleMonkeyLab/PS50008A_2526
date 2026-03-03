@@ -9,17 +9,17 @@ date: "2026-03-23"
 
 ::: {.callout-important}
 ## Final Week of Teaching
-This is your last week of PS50008A lectures and labs. Use this week to prepare for your Research Report submission.
+This is your last week of PS50008A lectures and labs. Gordon returns your analysed project data this week — use it to start your Research Report.
 :::
 
 ::: {.callout-warning}
 ## Upcoming Assessment
-**Research Report DUE: Friday 1 May 2026**
+**Research Report DUE: Mid-late April (exact date TBC)**
 
 Your final assessment. Start planning your write-up now!
 :::
 
-**This week**: Showcase your project data, learn to structure lab reports, and master discussion sections. The lab is a dedicated report writing workshop.
+**This week**: Gordon returns your analysed data. Learn to structure lab reports and master discussion sections. The lab is a dedicated report writing workshop.
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143
 **Lab**: Thursday 10:00-12:00 WB304A and WB304B
@@ -38,7 +38,7 @@ By the end of this week, you will be able to:
 
 ::: {.callout-note}
 ## Preparation
-1. **Review your project group data** — be ready to discuss findings
+1. **Review your project group data** — Gordon will return your analysed data this week
 2. **Read the lab report structure guide** — in the lecture reading
 3. **Bring questions about your Research Report** — final opportunity for guidance
 :::
@@ -59,7 +59,7 @@ The lab is a **Report Writing Workshop** where you'll begin drafting your Resear
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | Project showcase, report structure, discussion writing |
 | [Lecture Reading](lecture/reading.qmd) | Complete lab report structure guide |
-| [Lab Slides](lab/slides.html){target="_blank"} | Report writing workshop introduction |
+| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Report writing workshop |
 | [Lab Activity](lab/activity.qmd) | Report writing exercises and templates |
 | [Lab Reading](lab/reading.qmd) | Discussion section writing guide |
 
@@ -90,7 +90,7 @@ The lab is a **Report Writing Workshop** where you'll begin drafting your Resear
 
 ### Report Writing Tips
 - Start with the Method section (easiest to write)
-- Use your project data for the Results section
+- Use your analysed data for the Results section
 - Allow time for proofreading and formatting
 - Check APA guidelines for citations and references
 
@@ -98,11 +98,10 @@ The lab is a **Report Writing Workshop** where you'll begin drafting your Resear
 
 | Date | Milestone |
 |------|-----------|
-| Week 20 (Now) | Begin drafting Method and Results sections |
-| Early April | Complete Introduction and Results with figures |
-| Mid April | Write Discussion section |
-| Late April | Final proofreading and formatting |
-| **1 May 2026** | **Submit via Learn.gold by 4pm** |
+| Week 20 (Now) | Gordon returns data; begin drafting Method and Results |
+| Easter break | Complete Introduction and Results with figures |
+| After Easter | Write Discussion section; final proofreading and formatting |
+| **Mid-late April** | **Submit via Learn.gold by 12 noon** (exact date TBC) |
 
 ## Connecting to Assessments
 
@@ -115,7 +114,7 @@ The lab is a **Report Writing Workshop** where you'll begin drafting your Resear
 
 ::: {.callout-tip}
 ## Support After Teaching Ends
-- **Office hours** continue until the submission deadline
+- **Office hours**: Thursdays 12:00-13:00, WHBD 200/2 — continue until the submission deadline
 - **Discussion board** on Learn.gold remains active
 - **Writing Centre** appointments available for academic writing support
 :::
