@@ -1,5 +1,5 @@
 ---
-title: "Chapter 15: Project Workshop"
+title: "Chapter 17: Project Workshop"
 subtitle: "APA Results Reporting and Common Mistakes"
 ---
 

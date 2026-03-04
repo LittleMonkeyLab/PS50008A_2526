@@ -1,11 +1,11 @@
 ---
-title: "Chapter 17 Lab: Project Toolkit — Phase 1"
+title: "Chapter 14: Project Toolkit — Phase 1"
 subtitle: "Drafting Core Documents for Data Collection"
 ---
 
 ## Overview
 
-This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the core documents your group needs before data collection day. **Labs 17 and 18** complete all toolkit materials so you are ready for **data collection in Week 19**.
+This lab is **Phase 1** of the [Project Toolkit](../../project/project-toolkit.qmd). You will draft the core documents your group needs before data collection day. **Labs 17 and 18** complete all toolkit materials so you are ready for **data collection in Week 19**.
 
 **Phase 1 (Week 17):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
 
@@ -97,7 +97,7 @@ Your group must prepare **9 documents** (see the Project Toolkit checklist). In 
 
 Before the lab:
 
-- Re-read the [Project Toolkit](project/project-toolkit.qmd) timeline and document checklist (documents 1, 2, 3, 7, 8).
+- Re-read the [Project Toolkit](../../project/project-toolkit.qmd) timeline and document checklist (documents 1, 2, 3, 7, 8).
 - Have your **research question**, **design** (between/within), and **main task** (what participants do) clear from your Research Plan.
 - Download the relevant **templates** from the toolkit so you can start drafting in the lab.
 
@@ -113,4 +113,4 @@ Before the lab:
 | 7. Participant Instructions | Draft (numbered steps, no hypothesis) |
 | 8. Researcher Procedure | **Start** (checklist, sequence, timing, script); complete in Week 18 |
 
-All templates and the worked example are in the [Project Toolkit](project/project-toolkit.qmd).
+All templates and the worked example are in the [Project Toolkit](../../project/project-toolkit.qmd).

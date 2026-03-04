@@ -1,5 +1,5 @@
 ---
-title: "Chapter 19: Data Collection"
+title: "Chapter 18: Data Collection"
 subtitle: "Running Your Study with Real Participants"
 ---
 

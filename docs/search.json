@@ -496,7 +496,7 @@
   {
     "objectID": "textbook/chapters/w20-lab.html",
     "href": "textbook/chapters/w20-lab.html",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "",
     "text": "This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.",
     "crumbs": [
@@ -509,7 +509,7 @@
   {
     "objectID": "textbook/chapters/w20-lab.html#overview",
     "href": "textbook/chapters/w20-lab.html#overview",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "",
     "text": "This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.",
     "crumbs": [
@@ -522,7 +522,7 @@
   {
     "objectID": "textbook/chapters/w20-lab.html#getting-started",
     "href": "textbook/chapters/w20-lab.html#getting-started",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "2 Getting Started",
     "text": "2 Getting Started\n\n2.1 What You Have\n\nYour analysed data (from Gordon)\nAll your project documents (Information Sheet, Procedure, etc.)\nThe project articles and background reading\nAPA reporting guidelines from Week 19\n\n\n\n2.2 Writing Order\nDon’t write the report front-to-back. Instead:\n\nMethod — you already have everything you need (participants, design, materials, procedure)\nResults — use your analysed data; report descriptive and inferential statistics in APA format\nIntroduction — build the argument for your hypothesis using the suggested readings and your own research\nDiscussion — interpret your results, connect to theory, discuss limitations\nAbstract — write this last, once everything else is done",
     "crumbs": [
@@ -535,7 +535,7 @@
   {
     "objectID": "textbook/chapters/w20-lab.html#key-reminders",
     "href": "textbook/chapters/w20-lab.html#key-reminders",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "3 Key Reminders",
     "text": "3 Key Reminders\n\n3.1 Results Section\n\nReport M and SD for each condition\nReport the inferential test (t-test) in APA format: t(df) = X.XX, p = .XXX\nState whether the result was significant at α = .05\nInclude a figure (e.g., bar chart with error bars) if appropriate\nState whether the hypothesis was supported\n\n\n\n3.2 Discussion Section\n\nStart by restating your main finding in plain language (no statistics)\nExplain what the finding means in the context of the theory\nCompare to previous research — does your result agree or disagree?\nBe honest about limitations (sample size, materials, design)\nSuggest what future research could investigate\nEnd with a brief conclusion",
     "crumbs": [
@@ -548,7 +548,7 @@
   {
     "objectID": "textbook/chapters/w20-lab.html#additional-resources",
     "href": "textbook/chapters/w20-lab.html#additional-resources",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "4 Additional Resources",
     "text": "4 Additional Resources\n\nProject Toolkit — your document reference\nWeek 19 lecture reading — APA results reporting guidelines\nWeek 20 lecture slides — discussion section writing guidance",
     "crumbs": [
@@ -561,7 +561,7 @@
   {
     "objectID": "textbook/chapters/w19-lab.html",
     "href": "textbook/chapters/w19-lab.html",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "",
     "text": "This chapter supports your data collection session. By this point you have prepared all your documents and practised your procedure — now it’s time to run your study for real.",
     "crumbs": [
@@ -574,7 +574,7 @@
   {
     "objectID": "textbook/chapters/w19-lab.html#overview",
     "href": "textbook/chapters/w19-lab.html#overview",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "",
     "text": "This chapter supports your data collection session. By this point you have prepared all your documents and practised your procedure — now it’s time to run your study for real.",
     "crumbs": [
@@ -587,7 +587,7 @@
   {
     "objectID": "textbook/chapters/w19-lab.html#key-points",
     "href": "textbook/chapters/w19-lab.html#key-points",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "2 Key Points",
     "text": "2 Key Points\n\n2.1 Before You Start\n\nCheck all materials — consent forms, instruction sheets, stimulus materials, data recording sheets, debrief forms, pens, timer\nAssign roles — who is experimenter, assistant, and recruiter for each rotation?\nQuick rehearsal — run through the procedure one more time verbally\n\n\n\n2.2 During Data Collection\n\nFollow your Researcher Procedure exactly — read instructions verbatim, keep timing consistent\nStay neutral — don’t react to participant responses, nod encouragingly, or hint at expected answers\nRecord data immediately — fill in the Data Recording Sheet after each participant, don’t rely on memory\nDebrief every participant — hand them the Debrief Form and answer any questions\n\n\n\n2.3 Common Issues\n\nParticipant asks “What’s the right answer?” — explain there are no right or wrong answers\nParticipant wants to stop — thank them, remind them they can withdraw, destroy their data\nSomething goes wrong with materials — note the issue, try to continue, record what happened\nTiming is off — complete the session, adjust for the next participant\n\n\n\n2.4 After Data Collection\n\nCount your completed data sheets\nCheck for missing entries or unclear handwriting\nHand all data to Gordon at the end of the session\nGordon will analyse the data and return your results in Week 20",
     "crumbs": [
@@ -600,7 +600,7 @@
   {
     "objectID": "textbook/chapters/w19-lab.html#additional-resources",
     "href": "textbook/chapters/w19-lab.html#additional-resources",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "3 Additional Resources",
     "text": "3 Additional Resources\n\nProject Toolkit — your complete document reference\nYour Researcher Procedure — follow it step by step",
     "crumbs": [
@@ -613,7 +613,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html",
     "href": "textbook/chapters/w18-lab.html",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "",
     "text": "This lab is Phase 2 of the Project Toolkit. You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, practice running the study on each other, and complete the Research Study Order Form.\nWeek 19 lab is data collection. You must finish all toolkit documents in Weeks 17 and 18 so you are ready to collect data in Week 19.",
     "crumbs": [
@@ -626,7 +626,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#overview",
     "href": "textbook/chapters/w18-lab.html#overview",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "",
     "text": "This lab is Phase 2 of the Project Toolkit. You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, practice running the study on each other, and complete the Research Study Order Form.\nWeek 19 lab is data collection. You must finish all toolkit documents in Weeks 17 and 18 so you are ready to collect data in Week 19.",
     "crumbs": [
@@ -639,7 +639,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#why-phase-2-matters",
     "href": "textbook/chapters/w18-lab.html#why-phase-2-matters",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "2 Why Phase 2 Matters",
     "text": "2 Why Phase 2 Matters\n\nStimulus materials and Data Recording Sheet ensure you have consistent, scorable data.\nA complete Researcher Procedure ensures every session is run the same way.\nA practice run reveals unclear instructions, timing problems, and scoring issues before real participants arrive.\nThe Research Study Order Form ensures everything is printed and available on data collection day.",
     "crumbs": [
@@ -652,7 +652,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#document-4-recruitment-script",
     "href": "textbook/chapters/w18-lab.html#document-4-recruitment-script",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "3 Document 4: Recruitment Script",
     "text": "3 Document 4: Recruitment Script\nWhat it is: A short script your group uses to approach potential participants and invite them to take part.\nWho sees it: Researchers only — you read or paraphrase it when recruiting.\nTips: Keep it brief and friendly (3–4 sentences). Mention: who you are, what the study involves (briefly), how long it takes, where to go, and any incentive (e.g. snacks). Print several copies so multiple group members can recruit at once. Use the toolkit template.",
     "crumbs": [
@@ -665,7 +665,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#document-5-data-recording-sheet",
     "href": "textbook/chapters/w18-lab.html#document-5-data-recording-sheet",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "4 Document 5: Data Recording Sheet",
     "text": "4 Document 5: Data Recording Sheet\nWhat it is: A table where you record each participant’s data: participant number, condition (if between-subjects), DV score, and any optional demographics.\nWho sees it: Researchers only — you fill it in after scoring each participant.\nTips: Include a scoring guide so all group members score the DV consistently. The template has tables for both between- and within-subjects designs — delete the one you don’t need. This is your raw data, so accuracy and consistency matter. Finalise by end of Week 18.",
     "crumbs": [
@@ -678,7 +678,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#document-6-stimulus-materials",
     "href": "textbook/chapters/w18-lab.html#document-6-stimulus-materials",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "5 Document 6: Stimulus Materials",
     "text": "5 Document 6: Stimulus Materials\nWhat it is: The actual materials participants interact with — word lists, images, passages, rating sheets, questionnaires, etc.\nWho sees it: Participants (during the study) and researchers.\nTips: Match materials across conditions (e.g. word frequency, difficulty, length). See the Project Options and the worked example in the toolkit for your project type. Test your materials on each other before data collection day. Finalise by the end of Week 18.",
     "crumbs": [
@@ -691,7 +691,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#document-8-researcher-procedure-complete",
     "href": "textbook/chapters/w18-lab.html#document-8-researcher-procedure-complete",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "6 Document 8: Researcher Procedure (Complete)",
     "text": "6 Document 8: Researcher Procedure (Complete)\nWhat it is: The full step-by-step guide for the researcher. You started this in Phase 1; in Phase 2 you complete it.\nAdd or finalise:\n\nData recording: When and how you fill in the Data Recording Sheet (e.g. after each participant; where to write condition and score).\nScoring: How you score the DV; reference to the scoring guide on the Data Recording Sheet.\nFull script: Every phrase the participant hears (in quotes or italics), including greeting, instructions, and debrief.\nTiming: Duration for each phase (study period, distractor, recall, etc.).\nMaterials checklist: Everything to prepare before each testing session.\n\nAny group member should be able to run the study from this document alone. Use the between- or within-subjects example procedure in the toolkit as a reference.",
     "crumbs": [
@@ -704,7 +704,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#practice-run",
     "href": "textbook/chapters/w18-lab.html#practice-run",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "7 Practice Run",
     "text": "7 Practice Run\nRunning the study on each other before data collection day helps you:\n\nCheck that timing is realistic (not too long or too short).\nFind unclear instructions or missing steps.\nAgree on scoring (everyone uses the scoring guide the same way).\nUpdate the Researcher Procedure and Participant Instructions with any fixes.\n\nHow: One person runs as researcher, others as participants. Use a timer and the Data Recording Sheet. Debrief: what was confusing? Then swap if time, and update the documents.",
     "crumbs": [
@@ -717,7 +717,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#document-9-research-study-order-form",
     "href": "textbook/chapters/w18-lab.html#document-9-research-study-order-form",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "8 Document 9: Research Study Order Form",
     "text": "8 Document 9: Research Study Order Form\nWhat it is: A form listing everything your group needs printed or provided for data collection day. You submit it to Gordon so resources can be prepared in advance.\nWhen: Submit by end of Week 18 at latest (Week 19 lab is data collection).\nTips: List every document and how many copies (err on the side of more). Include any special requirements (e.g. colour printing, specific paper size). Don’t forget consumables: pens, blank paper for recall, snacks. Use the toolkit template.",
     "crumbs": [
@@ -730,7 +730,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#preparation-for-the-lab",
     "href": "textbook/chapters/w18-lab.html#preparation-for-the-lab",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "9 Preparation for the Lab",
     "text": "9 Preparation for the Lab\n\nBring your Phase 1 drafts (Information Sheet, Consent, Debrief, Participant Instructions, Researcher Procedure).\nRe-read the Project Toolkit checklist for documents 4, 5, 6, 8, 9.\nDownload the templates for Recruitment Script, Data Recording Sheet, Stimulus Materials (if using template), and Research Study Order Form.\nHave your design (between/within) and DV (and scoring rule) clear so you can complete the Data Recording Sheet and procedure.",
     "crumbs": [
@@ -743,7 +743,7 @@
   {
     "objectID": "textbook/chapters/w18-lab.html#summary",
     "href": "textbook/chapters/w18-lab.html#summary",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "10 Summary",
     "text": "10 Summary\n\n\n\n\n\n\n\nDocument\nPhase 2 action\n\n\n\n\n4. Recruitment Script\nFinalise\n\n\n5. Data Recording Sheet\nDraft/finalise with scoring guide\n\n\n6. Stimulus Materials\nFinalise; test on each other\n\n\n7. Participant Instructions\nFinalise if needed\n\n\n8. Researcher Procedure\nComplete (data recording, scoring, full script)\n\n\n9. Research Study Order Form\nComplete; submit by end of Week 18\n\n\n\nPlus: Practice run within the group and update procedure/instructions as needed.\nAll templates and the worked example are in the Project Toolkit.",
     "crumbs": [
@@ -756,7 +756,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html",
     "href": "textbook/chapters/w17-lab.html",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "",
     "text": "This lab is Phase 1 of the Project Toolkit. You will draft the core documents your group needs before data collection day. Labs 17 and 18 complete all toolkit materials so you are ready for data collection in Week 19.\nPhase 1 (Week 17): Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and start the Researcher Procedure.\nPhase 2 (Week 18): Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, complete Researcher Procedure, practice run, Research Study Order Form.",
     "crumbs": [
@@ -769,7 +769,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#overview",
     "href": "textbook/chapters/w17-lab.html#overview",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "",
     "text": "This lab is Phase 1 of the Project Toolkit. You will draft the core documents your group needs before data collection day. Labs 17 and 18 complete all toolkit materials so you are ready for data collection in Week 19.\nPhase 1 (Week 17): Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and start the Researcher Procedure.\nPhase 2 (Week 18): Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, complete Researcher Procedure, practice run, Research Study Order Form.",
     "crumbs": [
@@ -782,7 +782,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#why-these-documents-matter",
     "href": "textbook/chapters/w17-lab.html#why-these-documents-matter",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "2 Why These Documents Matter",
     "text": "2 Why These Documents Matter\nYour group must prepare 9 documents (see the Project Toolkit checklist). In Phase 1 you focus on the participant-facing documents and the beginning of the Researcher Procedure. These ensure:\n\nEthics: Informed consent (Information Sheet + Consent) and debriefing (Debrief Form) are required.\nStandardisation: Participant Instructions and Researcher Procedure ensure every participant is treated the same way.\nReplicability: A clear procedure allows others (and your future selves) to run the study exactly the same way.",
     "crumbs": [
@@ -795,7 +795,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#document-1-participant-information-sheet",
     "href": "textbook/chapters/w17-lab.html#document-1-participant-information-sheet",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "3 Document 1: Participant Information Sheet",
     "text": "3 Document 1: Participant Information Sheet\nWhat it is: A formal document given to potential participants before they agree. It explains the study in general terms so they can give informed consent.\nWho sees it: Every participant; they read it before signing consent and keep a copy.\nTips:\n\nDescribe purpose and what will happen in plain language. Do not reveal your hypothesis.\nInclude: time required, risks/benefits, confidentiality, right to withdraw, contact for questions.\nUse the toolkit template and customise the purpose and “what will happen” sections. Refer to the worked example for tone and length.",
     "crumbs": [
@@ -808,7 +808,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#document-2-consent-form",
     "href": "textbook/chapters/w17-lab.html#document-2-consent-form",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "4 Document 2: Consent Form",
     "text": "4 Document 2: Consent Form\nWhat it is: The form the participant signs to confirm they have read the information, understand the study, and agree to take part. A legal and ethical requirement.\nWho sees it: Every participant signs one; you keep the signed copies securely.\nTips:\n\nUpdate the study title only if needed; the checklist items are standard.\nUse the same study title on every document (Information Sheet, Consent, Debrief, Procedure).\nPlan to print plenty of copies (e.g. 30) for data collection.",
     "crumbs": [
@@ -821,7 +821,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#document-3-debrief-form",
     "href": "textbook/chapters/w17-lab.html#document-3-debrief-form",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "5 Document 3: Debrief Form",
     "text": "5 Document 3: Debrief Form\nWhat it is: A document given to participants after the study explaining its true purpose, including the hypothesis and relevant theory.\nWho sees it: Every participant receives this after completing the study.\nTips:\n\nHere you can (and should) reveal the hypothesis and explain the theory (e.g. dual coding, anchoring).\nInclude data withdrawal instructions and support service contacts.\nKeep it to about one page. Use the template and worked example.",
     "crumbs": [
@@ -834,7 +834,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#document-7-participant-instructions",
     "href": "textbook/chapters/w17-lab.html#document-7-participant-instructions",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "6 Document 7: Participant Instructions",
     "text": "6 Document 7: Participant Instructions\nWhat it is: A clear, step-by-step sheet telling the participant exactly what to do during the study (e.g. “Read the list of words”, “You have 2 minutes”, “Write down as many as you can remember”).\nWho sees it: Every participant reads this before the study begins.\nTips:\n\nUse numbered steps and plain language. No jargon; no hypothesis.\nKeep it short (about half a page). If your between- and within-subjects procedures differ, use separate instruction sheets.\nDo not reveal what you expect to find.",
     "crumbs": [
@@ -847,7 +847,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#document-8-researcher-procedure-start-in-phase-1",
     "href": "textbook/chapters/w17-lab.html#document-8-researcher-procedure-start-in-phase-1",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "7 Document 8: Researcher Procedure (Start in Phase 1)",
     "text": "7 Document 8: Researcher Procedure (Start in Phase 1)\nWhat it is: A detailed step-by-step guide for the researcher running the study. Includes exact wording, timing, and the full procedure. Your “recipe” for running the study.\nWho sees it: Researchers only.\nTips:\n\nPhase 1: Write the materials checklist, the sequence (greeting → consent → instructions → main task → debrief), timing for each phase, and exact words to say to participants (in quotes or italics).\nPhase 2 (Week 18): Complete with data recording, scoring, and any final details. Any group member should be able to run the study from this document alone.\nUse the template; refer to the between- or within-subjects example procedure in the toolkit.",
     "crumbs": [
@@ -860,7 +860,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#preparation-for-the-lab",
     "href": "textbook/chapters/w17-lab.html#preparation-for-the-lab",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "8 Preparation for the Lab",
     "text": "8 Preparation for the Lab\nBefore the lab:\n\nRe-read the Project Toolkit timeline and document checklist (documents 1, 2, 3, 7, 8).\nHave your research question, design (between/within), and main task (what participants do) clear from your Research Plan.\nDownload the relevant templates from the toolkit so you can start drafting in the lab.",
     "crumbs": [
@@ -873,7 +873,7 @@
   {
     "objectID": "textbook/chapters/w17-lab.html#summary",
     "href": "textbook/chapters/w17-lab.html#summary",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "9 Summary",
     "text": "9 Summary\n\n\n\n\n\n\n\nDocument\nPhase 1 action\n\n\n\n\n1. Participant Information Sheet\nDraft (purpose, what happens, no hypothesis)\n\n\n2. Consent Form\nDraft (study title consistent)\n\n\n3. Debrief Form\nDraft (hypothesis + theory + withdrawal/support)\n\n\n7. Participant Instructions\nDraft (numbered steps, no hypothesis)\n\n\n8. Researcher Procedure\nStart (checklist, sequence, timing, script); complete in Week 18\n\n\n\nAll templates and the worked example are in the Project Toolkit.",
     "crumbs": [
@@ -2472,7 +2472,7 @@
   {
     "objectID": "week20/lecture/reading.html",
     "href": "week20/lecture/reading.html",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "",
     "text": "This chapter provides guidance on writing your Research Report — the final assessment for PS50008A. Your report follows the standard APA lab report structure.",
     "crumbs": [
@@ -2486,7 +2486,7 @@
   {
     "objectID": "week20/lecture/reading.html#overview",
     "href": "week20/lecture/reading.html#overview",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "",
     "text": "This chapter provides guidance on writing your Research Report — the final assessment for PS50008A. Your report follows the standard APA lab report structure.",
     "crumbs": [
@@ -2500,7 +2500,7 @@
   {
     "objectID": "week20/lecture/reading.html#lab-report-structure",
     "href": "week20/lecture/reading.html#lab-report-structure",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "Lab Report Structure",
     "text": "Lab Report Structure\nYour report should include the following sections, in order:\n\nTitle Page\n\nA clear, informative title that includes your key variables\nYour name and student number\n\n\n\nAbstract\n\n150–250 words summarising the entire study\nIncludes: aim, method (brief), key result, conclusion\nWritten last — after everything else is done\n\n\n\nIntroduction\n\nFunnel structure: Start broad (topic area), narrow down (specific theory and previous research), end with your hypothesis\nDefine key terms and concepts\nExplain why this research question matters\nState your hypothesis clearly at the end\n\n\n\nMethod\n\nParticipants: How many, how recruited, any relevant demographics\nDesign: Between- or within-subjects, IV (with levels), DV\nMaterials: What stimuli/measures you used\nProcedure: Step-by-step what happened (past tense)\n\n\n\nResults\n\nDescriptive statistics (M, SD) for each condition\nInferential test result in APA format\nA figure or table if appropriate\nState whether the hypothesis was supported\n\n\n\nDiscussion\n\nRestate your key finding (without statistics)\nInterpret what the result means\nConnect to theory and previous research from your Introduction\nAcknowledge limitations honestly\nSuggest future directions\nBrief conclusion\n\n\n\nReferences\n\nAPA format for all sources cited in the report",
     "crumbs": [
@@ -2514,7 +2514,7 @@
   {
     "objectID": "week20/lecture/reading.html#writing-tips",
     "href": "week20/lecture/reading.html#writing-tips",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "Writing Tips",
     "text": "Writing Tips\n\nStart with Method — it’s the most straightforward section to write\nThen Results — use your analysed data from Gordon\nThen Introduction — build the argument for your hypothesis\nThen Discussion — interpret your findings\nAbstract last — summarise everything once it’s written\nProofread — check APA formatting, spelling, and clarity",
     "crumbs": [
@@ -2528,7 +2528,7 @@
   {
     "objectID": "week20/lecture/reading.html#additional-resources",
     "href": "week20/lecture/reading.html#additional-resources",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nLecture slides from Week 20\nAPA results reporting guide from Week 19 lecture reading",
     "crumbs": [
@@ -2672,7 +2672,7 @@
   {
     "objectID": "week19/lab/reading.html",
     "href": "week19/lab/reading.html",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "",
     "text": "This chapter supports your data collection session. By this point you have prepared all your documents and practised your procedure — now it’s time to run your study for real.",
     "crumbs": [
@@ -2686,7 +2686,7 @@
   {
     "objectID": "week19/lab/reading.html#overview",
     "href": "week19/lab/reading.html#overview",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "",
     "text": "This chapter supports your data collection session. By this point you have prepared all your documents and practised your procedure — now it’s time to run your study for real.",
     "crumbs": [
@@ -2700,7 +2700,7 @@
   {
     "objectID": "week19/lab/reading.html#key-points",
     "href": "week19/lab/reading.html#key-points",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "Key Points",
     "text": "Key Points\n\nBefore You Start\n\nCheck all materials — consent forms, instruction sheets, stimulus materials, data recording sheets, debrief forms, pens, timer\nAssign roles — who is experimenter, assistant, and recruiter for each rotation?\nQuick rehearsal — run through the procedure one more time verbally\n\n\n\nDuring Data Collection\n\nFollow your Researcher Procedure exactly — read instructions verbatim, keep timing consistent\nStay neutral — don’t react to participant responses, nod encouragingly, or hint at expected answers\nRecord data immediately — fill in the Data Recording Sheet after each participant, don’t rely on memory\nDebrief every participant — hand them the Debrief Form and answer any questions\n\n\n\nCommon Issues\n\nParticipant asks “What’s the right answer?” — explain there are no right or wrong answers\nParticipant wants to stop — thank them, remind them they can withdraw, destroy their data\nSomething goes wrong with materials — note the issue, try to continue, record what happened\nTiming is off — complete the session, adjust for the next participant\n\n\n\nAfter Data Collection\n\nCount your completed data sheets\nCheck for missing entries or unclear handwriting\nHand all data to Gordon at the end of the session\nGordon will analyse the data and return your results in Week 20",
     "crumbs": [
@@ -2714,7 +2714,7 @@
   {
     "objectID": "week19/lab/reading.html#additional-resources",
     "href": "week19/lab/reading.html#additional-resources",
-    "title": "Chapter 19: Data Collection",
+    "title": "Chapter 18: Data Collection",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nProject Toolkit — your complete document reference\nYour Researcher Procedure — follow it step by step",
     "crumbs": [
@@ -3386,7 +3386,7 @@
   {
     "objectID": "week18/lecture/reading.html",
     "href": "week18/lecture/reading.html",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading is designed to help you consolidate your learning and prepare for the MCQ examination. It is not a substitute for understanding the material — it is a tool for organising what you already know.\n\n\nThis reading covers:\n\nA review of key concepts from the module\nCommon misconceptions and how to avoid them\nStrategies for approaching MCQ questions\nWhat to expect on exam day",
     "crumbs": [
@@ -3400,7 +3400,7 @@
   {
     "objectID": "week18/lecture/reading.html#overview",
     "href": "week18/lecture/reading.html#overview",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading is designed to help you consolidate your learning and prepare for the MCQ examination. It is not a substitute for understanding the material — it is a tool for organising what you already know.\n\n\nThis reading covers:\n\nA review of key concepts from the module\nCommon misconceptions and how to avoid them\nStrategies for approaching MCQ questions\nWhat to expect on exam day",
     "crumbs": [
@@ -3414,7 +3414,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-1-core-concepts-review",
     "href": "week18/lecture/reading.html#part-1-core-concepts-review",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 1: Core Concepts Review",
     "text": "Part 1: Core Concepts Review\n\nThe Scientific Method\nThe scientific method provides a systematic approach to understanding behaviour:\n\nKey Steps:\n\nIdentify a question — What do you want to understand?\nReview existing literature — What is already known?\nFormulate a hypothesis — Make a specific, testable prediction\nDesign a study — Plan your method carefully\nCollect data — Gather observations systematically\nAnalyse results — Use statistics to evaluate findings\nDraw conclusions — Interpret what the results mean\nReport findings — Share methods and results transparently\n\n\n\n\n\n\n\n\nNoteExam Tip\n\n\n\nQuestions may present a research scenario and ask you to identify which step of the scientific method is being described. Focus on the key action: predicting = hypothesis, measuring = data collection, interpreting = conclusions.\n\n\n\n\nVariables\nVariable: Anything that can take different values.\n\n\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nIndependent Variable (IV)\nWhat the researcher manipulates\nWord type (abstract vs concrete)\n\n\nDependent Variable (DV)\nWhat the researcher measures\nNumber of words recalled\n\n\nConfounding Variable\nAn uncontrolled variable that could explain results\nTime of day, participant fatigue\n\n\nExtraneous Variable\nAny variable other than the IV that could affect the DV\nNoise levels, room temperature\n\n\n\n\n\n\n\n\n\nImportantKey Distinction\n\n\n\n\nIV = manipulated (what the researcher changes)\nDV = measured (what the researcher records)\n\nThe DV depends on the IV. Ask yourself: “Does [DV] depend on [IV]?”\n\n\n\n\nResearch Designs\n\n\n\n\n\n\n\n\nDesign\nDefinition\nKey Feature\n\n\n\n\nBetween-subjects\nDifferent participants in each condition\nCompare between groups\n\n\nWithin-subjects\nSame participants in all conditions\nCompare within individuals\n\n\nMatched pairs\nParticipants paired on key variables, then assigned to conditions\nCombines features of both\n\n\nCorrelational\nMeasures relationship between variables without manipulation\nNo IV, no causation\n\n\n\n\n\n\n\n\n\nWarningCommon Confusion\n\n\n\nIn a within-subjects design, the same person provides data for all conditions (e.g., before AND after).\nIn a between-subjects design, different people are in each condition (e.g., Group A OR Group B).\n\n\n\n\nHypotheses\n\n\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nExperimental (H1)\nPredicts an effect or difference\n“Concrete words will be recalled better than abstract words”\n\n\nNull (H0)\nPredicts no effect or no difference\n“There will be no difference in recall between word types”\n\n\nOne-tailed\nPredicts direction\n“…will be better”\n\n\nTwo-tailed\nPredicts difference without direction\n“…will differ”\n\n\n\n\n\nSampling\n\nPopulation: The entire group you want to generalise to.\nSample: The subset you actually study.\nSampling frame: The list from which you draw your sample.\n\n\n\n\n\n\n\n\n\n\nMethod\nDefinition\nStrength\nWeakness\n\n\n\n\nRandom\nEvery member has equal chance of selection\nUnbiased\nOften impractical\n\n\nStratified\nDivide population into subgroups, sample from each\nEnsures representation\nRequires population information\n\n\nConvenience\nWhoever is available\nEasy\nMay be unrepresentative\n\n\nSnowball\nParticipants recruit other participants\nReaches hidden populations\nNot random\n\n\n\n\n\nExperimental Control\n\nWhy control matters: If variables other than the IV differ between conditions, you cannot conclude the IV caused the difference.\nRandom assignment: Randomly allocating participants to conditions — distributes individual differences evenly across groups.\nCounterbalancing: Varying the order of conditions across participants to control for order effects.\nStandardisation: Keeping procedures identical across conditions (same instructions, same environment).",
     "crumbs": [
@@ -3428,7 +3428,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-2-statistics-concepts",
     "href": "week18/lecture/reading.html#part-2-statistics-concepts",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 2: Statistics Concepts",
     "text": "Part 2: Statistics Concepts\n\nDescriptive Statistics\n\n\n\n\n\n\n\n\nStatistic\nWhat It Tells You\nFormula\n\n\n\n\nMean\nAverage value\nSum of values / number of values\n\n\nStandard Deviation\nSpread from the mean\nHow much scores typically differ from the mean\n\n\nVariance\nAverage squared deviation\nSD squared\n\n\n\n\n\n\n\n\n\nNoteExam Tip\n\n\n\nYou may be asked to calculate a mean or identify what SD represents. Remember: SD tells you about variability — low SD means scores cluster together; high SD means scores are spread out.\n\n\n\n\nThe Normal Distribution\nKey properties:\n\nSymmetrical and bell-shaped\nMean, median, and mode are equal\n68% of values within 1 SD of the mean\n95% within 2 SDs\n99.7% within 3 SDs\n\n\n\nInferential Statistics\nThe goal: Determine whether observed differences are likely due to the IV or could have occurred by chance.\n\n\n\n\n\n\n\nConcept\nDefinition\n\n\n\n\np-value\nProbability of obtaining results at least this extreme if the null hypothesis were true\n\n\nAlpha level\nThe threshold for significance (typically .05)\n\n\nSignificance\nIf p &lt; alpha, we reject the null hypothesis\n\n\nType I error\nFalse positive — rejecting H0 when it is true\n\n\nType II error\nFalse negative — failing to reject H0 when it is false\n\n\n\n\n\n\n\n\n\nImportantCritical Understanding\n\n\n\np &lt; .05 does NOT mean:\n\nThere is a 95% chance the hypothesis is true\nThe effect is large or important\nThe study will replicate\n\nIt DOES mean: If H0 were true, results this extreme would occur less than 5% of the time by chance.\n\n\n\n\nWhich Test When?\n\n\n\n\n\n\n\n\nComparison\nTest\nExample\n\n\n\n\nTwo groups (between)\nIndependent t-test\nLab A vs Lab B recall\n\n\nTwo conditions (within)\nPaired t-test\nPre vs post mood\n\n\nRelationship between variables\nCorrelation\nSelf-rating and actual accuracy\n\n\n\n\n\nEffect Size\n\nEffect size tells you the magnitude of an effect, independent of sample size.\n\nCohen’s d: For differences between means (small = 0.2, medium = 0.5, large = 0.8)\nPearson’s r: For correlations (small = 0.1, medium = 0.3, large = 0.5)\n\nA significant result with a tiny effect size may not be practically meaningful.",
     "crumbs": [
@@ -3442,7 +3442,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-3-research-credibility",
     "href": "week18/lecture/reading.html#part-3-research-credibility",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 3: Research Credibility",
     "text": "Part 3: Research Credibility\n\nReliability and Validity\n\n\n\n\n\n\n\n\nConcept\nDefinition\nQuestion It Answers\n\n\n\n\nReliability\nConsistency of measurement\nDo you get the same result each time?\n\n\nValidity\nAccuracy of measurement\nAre you measuring what you intend to?\n\n\n\nTypes of reliability:\n\nTest-retest: Same results over time\nInter-rater: Same results across different observers\nInternal consistency: Items within a scale measure the same construct\n\nTypes of validity:\n\nFace validity: Appears to measure what it should (weakest form)\nContent validity: Covers all aspects of the construct\nCriterion validity: Predicts or correlates with relevant outcomes\nConstruct validity: Actually measures the theoretical construct\n\n\n\nInternal vs External Validity\n\nInternal validity: Can you conclude that the IV caused changes in the DV?\n\nThreatened by confounds, lack of control, order effects\n\nExternal validity: Can you generalise findings beyond this specific study?\n\nThreatened by unrepresentative samples, artificial settings\n\n\n\n\nReplication and Open Science\nKey concepts from Week 17:\n\nReplication crisis: Many published findings fail to replicate\nP-hacking: Exploiting flexibility to achieve significance\nHARKing: Presenting post-hoc hypotheses as predictions\nPublication bias: Significant results more likely to be published\nPre-registration: Documenting hypotheses before data collection",
     "crumbs": [
@@ -3456,7 +3456,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-4-common-misconceptions",
     "href": "week18/lecture/reading.html#part-4-common-misconceptions",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 4: Common Misconceptions",
     "text": "Part 4: Common Misconceptions\n\nMisconception 1: Correlation Equals Causation\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The study found a correlation between screen time and depression, so screen time causes depression.”\n\nCorrect\nA correlation shows two variables are related, but does not establish that one causes the other. There could be reverse causation (depression leads to more screen time) or a third variable explaining both.\n\n\n\n\n\nMisconception 2: Non-significance Means “No Effect”\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The study found p = .08, so there is no relationship between the variables.”\n\nCorrect\nNon-significance means we cannot confidently reject the null hypothesis. It does not prove H0 is true. The study may have lacked power to detect a real effect.\n\n\n\n\n\nMisconception 3: p-value Is the Probability the Hypothesis Is True\n\n\n\n\n\n\nWarningWrong\n\n\n\n“p = .03 means there is a 97% chance the hypothesis is correct.”\n\nCorrect\nThe p-value is the probability of the data (or more extreme) given that H0 is true. It is not the probability that H1 is true.\n\n\n\n\n\nMisconception 4: Random Assignment and Random Sampling Are the Same\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Participants were randomly assigned, so the sample is representative of the population.”\n\nCorrect\nRandom assignment (allocating to conditions) ensures groups are equivalent.\nRandom sampling (selecting from population) ensures representativeness.\nThey serve different purposes and are often confused.\n\n\n\n\n\nMisconception 5: Larger Sample Size Makes a Study “Better”\n\n\n\n\n\n\nWarningWrong\n\n\n\n“This study had 10,000 participants, so the findings must be important.”\n\nCorrect\nLarge samples can detect very small effects. A statistically significant but tiny effect may have no practical importance. Always consider effect size alongside significance.\n\n\n\n\n\nMisconception 6: Within-subjects Designs Are Always Better\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Within-subjects designs control for individual differences, so they are always preferable.”\n\nCorrect\nWithin-subjects designs have their own problems: order effects, practice effects, fatigue, and demand characteristics. The best design depends on the research question.",
     "crumbs": [
@@ -3470,7 +3470,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct",
     "href": "week18/lecture/reading.html#correct",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nA correlation shows two variables are related, but does not establish that one causes the other. There could be reverse causation (depression leads to more screen time) or a third variable explaining both.",
     "crumbs": [
@@ -3484,7 +3484,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct-1",
     "href": "week18/lecture/reading.html#correct-1",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nNon-significance means we cannot confidently reject the null hypothesis. It does not prove H0 is true. The study may have lacked power to detect a real effect.",
     "crumbs": [
@@ -3498,7 +3498,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct-2",
     "href": "week18/lecture/reading.html#correct-2",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nThe p-value is the probability of the data (or more extreme) given that H0 is true. It is not the probability that H1 is true.",
     "crumbs": [
@@ -3512,7 +3512,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct-3",
     "href": "week18/lecture/reading.html#correct-3",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nRandom assignment (allocating to conditions) ensures groups are equivalent.\nRandom sampling (selecting from population) ensures representativeness.\nThey serve different purposes and are often confused.",
     "crumbs": [
@@ -3526,7 +3526,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct-4",
     "href": "week18/lecture/reading.html#correct-4",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nLarge samples can detect very small effects. A statistically significant but tiny effect may have no practical importance. Always consider effect size alongside significance.",
     "crumbs": [
@@ -3540,7 +3540,7 @@
   {
     "objectID": "week18/lecture/reading.html#correct-5",
     "href": "week18/lecture/reading.html#correct-5",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Correct",
     "text": "Correct\nWithin-subjects designs have their own problems: order effects, practice effects, fatigue, and demand characteristics. The best design depends on the research question.",
     "crumbs": [
@@ -3554,7 +3554,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-5-exam-strategies",
     "href": "week18/lecture/reading.html#part-5-exam-strategies",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 5: Exam Strategies",
     "text": "Part 5: Exam Strategies\n\nBefore the Exam\n\nEffective preparation:\n\nReview actively — Do not just re-read. Test yourself, explain concepts aloud, create your own examples\nFocus on understanding — If you understand why, you can work out the answer even to unfamiliar questions\nKnow the terminology — Many questions hinge on precise definitions\nPractice with examples — Apply concepts to the DataLab tasks you completed\n\n\n\n\nReading MCQ Questions\n\nStep 1: Read the question stem carefully\n\nWhat exactly is being asked?\nAre there key words like “BEST,” “ALWAYS,” “NEVER,” “EXCEPT”?\n\nStep 2: Try to answer before looking at options\n\nIf you know the material, your answer should match one option\nThis prevents being misled by plausible-sounding distractors\n\nStep 3: Evaluate all options\n\nEven if one looks correct, check the others\nSometimes two options are similar and one is more precise\n\nStep 4: Eliminate clearly wrong answers\n\nIf unsure, narrowing down improves your odds\n\n\n\n\nCommon Question Types\nDefinition questions: &gt; “Which of the following best defines the dependent variable?”\nStrategy: Know precise definitions. The DV is what is measured, not manipulated.\nScenario questions: &gt; “A researcher compares memory performance in quiet vs noisy conditions. What is the IV?”\nStrategy: Identify what was manipulated (noise level) vs measured (memory).\n“Best” questions: &gt; “Which is the BEST example of random sampling?”\nStrategy: Look for the option that most closely matches the textbook definition. “Best” implies comparison.\n“EXCEPT” questions: &gt; “All of the following are true about correlational research EXCEPT…”\nStrategy: Find the one false statement. Mark these questions carefully — it is easy to get confused.\nInterpretation questions: &gt; “A t-test produced p = .03. Which statement is correct?”\nStrategy: Know what p-values do and do not mean. Eliminate options that make common misinterpretations.\n\n\nTime Management\n\n\n\n\n\n\nTipPacing\n\n\n\n\nNote the total number of questions and time available\nCalculate roughly how long per question\nDo not spend too long on any single question\nMark uncertain questions and return if time permits\nLeave time to review\n\n\n\n\n\nWhen You Are Unsure\n\nEliminate obviously wrong options — Even guessing from 2 instead of 4 doubles your odds\nLook for absolute language — Options with “always,” “never,” “only” are often wrong\nConsider what the question is testing — What concept does this relate to?\nTrust your preparation — Your first instinct, based on study, is often correct\nDo not overthink — Sometimes the straightforward interpretation is correct",
     "crumbs": [
@@ -3568,7 +3568,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-6-quick-reference-tables",
     "href": "week18/lecture/reading.html#part-6-quick-reference-tables",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 6: Quick Reference Tables",
     "text": "Part 6: Quick Reference Tables\n\nDesign Identification\n\n\n\n\n\n\n\nScenario\nDesign\n\n\n\n\nGroup A gets treatment, Group B does not\nBetween-subjects\n\n\nSame participants tested before and after\nWithin-subjects\n\n\nParticipants matched on IQ, then split into conditions\nMatched pairs\n\n\nMeasuring relationship between two variables\nCorrelational\n\n\n\n\n\nStatistical Test Selection\n\n\n\n\n\n\n\nSituation\nTest\n\n\n\n\nComparing two independent groups\nIndependent t-test\n\n\nComparing two related conditions (same participants)\nPaired t-test\n\n\nExamining relationship between two continuous variables\nCorrelation\n\n\nComparing more than two groups\nANOVA (beyond this module)\n\n\n\n\n\nValidity Threats\n\n\n\n\n\n\n\nThreat\nDefinition\n\n\n\n\nConfound\nVariable that varies with the IV and could explain results\n\n\nSelection bias\nNon-random assignment leads to non-equivalent groups\n\n\nAttrition\nParticipants drop out differentially across conditions\n\n\nOrder effects\nPerformance affected by sequence of conditions\n\n\nDemand characteristics\nParticipants guess the hypothesis and change behaviour\n\n\nExperimenter effects\nResearcher unintentionally influences results",
     "crumbs": [
@@ -3582,7 +3582,7 @@
   {
     "objectID": "week18/lecture/reading.html#part-7-what-to-expect",
     "href": "week18/lecture/reading.html#part-7-what-to-expect",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Part 7: What to Expect",
     "text": "Part 7: What to Expect\n\nExam Format\n\nMultiple-choice questions\nEach question has one correct answer\nQuestions cover material from lectures, readings, and labs\nSome questions test recall; others test application\n\n\n\nContent Coverage\nThe exam will include questions on:\n\nThe scientific method and why it matters\nVariables: IV, DV, confounds, extraneous\nResearch designs: between, within, correlational\nHypotheses: experimental, null, one-tailed, two-tailed\nSampling methods\nDescriptive statistics: mean, SD\nInferential statistics: p-values, significance, Type I/II errors\nReliability and validity\nResearch credibility: replication, open science\n\n\n\nOn the Day\n\nPractical advice:\n\nArrive early — Rushing increases anxiety\nRead instructions carefully — Note how many questions, how much time\nPace yourself — Do not get stuck on difficult questions\nStay calm — If you have studied, you are prepared\nTrust your preparation — You know more than you think",
     "crumbs": [
@@ -3596,7 +3596,7 @@
   {
     "objectID": "week18/lecture/reading.html#summary",
     "href": "week18/lecture/reading.html#summary",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Summary",
     "text": "Summary\n\n\n\n\n\n\n\nArea\nKey Points to Review\n\n\n\n\nVariables\nIV (manipulated), DV (measured), confounds\n\n\nDesigns\nBetween, within, correlational — know the differences\n\n\nHypotheses\nExperimental vs null, directional vs non-directional\n\n\nStatistics\nMean, SD, p-values, significance\n\n\nCredibility\nReliability, validity, replication",
     "crumbs": [
@@ -3610,7 +3610,7 @@
   {
     "objectID": "week18/lecture/reading.html#check-your-understanding",
     "href": "week18/lecture/reading.html#check-your-understanding",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Check Your Understanding",
     "text": "Check Your Understanding\nTest yourself on these questions:\n\nWhat is the difference between an IV and a DV?\nWhen would you use a within-subjects design vs a between-subjects design?\nWhat does a p-value actually tell you?\nWhat is the difference between reliability and validity?\nWhy does correlation not imply causation?\nWhat is pre-registration and why does it matter?\nWhat is the difference between Type I and Type II errors?\n\nIf you can explain each of these clearly, you are well prepared.",
     "crumbs": [
@@ -3624,7 +3624,7 @@
   {
     "objectID": "week18/lecture/reading.html#final-thoughts",
     "href": "week18/lecture/reading.html#final-thoughts",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "Final Thoughts",
     "text": "Final Thoughts\n\n\n\n\n\n\nTipRemember\n\n\n\nThe exam tests understanding, not memorisation. If you understand why things work the way they do — why we need control conditions, why p-values are not probabilities of hypotheses being true, why replication matters — you can reason your way through most questions.\nGood luck!",
     "crumbs": [
@@ -3768,7 +3768,7 @@
   {
     "objectID": "week17/lab/reading.html",
     "href": "week17/lab/reading.html",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "",
     "text": "This lab is Phase 1 of the Project Toolkit. You will draft the core documents your group needs before data collection day. Labs 17 and 18 complete all toolkit materials so you are ready for data collection in Week 19.\nPhase 1 (Week 17): Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and start the Researcher Procedure.\nPhase 2 (Week 18): Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, complete Researcher Procedure, practice run, Research Study Order Form.",
     "crumbs": [
@@ -3782,7 +3782,7 @@
   {
     "objectID": "week17/lab/reading.html#overview",
     "href": "week17/lab/reading.html#overview",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "",
     "text": "This lab is Phase 1 of the Project Toolkit. You will draft the core documents your group needs before data collection day. Labs 17 and 18 complete all toolkit materials so you are ready for data collection in Week 19.\nPhase 1 (Week 17): Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and start the Researcher Procedure.\nPhase 2 (Week 18): Recruitment Script, Data Recording Sheet, finalise Stimulus Materials, complete Researcher Procedure, practice run, Research Study Order Form.",
     "crumbs": [
@@ -3796,7 +3796,7 @@
   {
     "objectID": "week17/lab/reading.html#why-these-documents-matter",
     "href": "week17/lab/reading.html#why-these-documents-matter",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Why These Documents Matter",
     "text": "Why These Documents Matter\nYour group must prepare 9 documents (see the Project Toolkit checklist). In Phase 1 you focus on the participant-facing documents and the beginning of the Researcher Procedure. These ensure:\n\nEthics: Informed consent (Information Sheet + Consent) and debriefing (Debrief Form) are required.\nStandardisation: Participant Instructions and Researcher Procedure ensure every participant is treated the same way.\nReplicability: A clear procedure allows others (and your future selves) to run the study exactly the same way.",
     "crumbs": [
@@ -3810,7 +3810,7 @@
   {
     "objectID": "week17/lab/reading.html#document-1-participant-information-sheet",
     "href": "week17/lab/reading.html#document-1-participant-information-sheet",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Document 1: Participant Information Sheet",
     "text": "Document 1: Participant Information Sheet\nWhat it is: A formal document given to potential participants before they agree. It explains the study in general terms so they can give informed consent.\nWho sees it: Every participant; they read it before signing consent and keep a copy.\nTips:\n\nDescribe purpose and what will happen in plain language. Do not reveal your hypothesis.\nInclude: time required, risks/benefits, confidentiality, right to withdraw, contact for questions.\nUse the toolkit template and customise the purpose and “what will happen” sections. Refer to the worked example for tone and length.",
     "crumbs": [
@@ -3824,7 +3824,7 @@
   {
     "objectID": "week17/lab/reading.html#document-2-consent-form",
     "href": "week17/lab/reading.html#document-2-consent-form",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Document 2: Consent Form",
     "text": "Document 2: Consent Form\nWhat it is: The form the participant signs to confirm they have read the information, understand the study, and agree to take part. A legal and ethical requirement.\nWho sees it: Every participant signs one; you keep the signed copies securely.\nTips:\n\nUpdate the study title only if needed; the checklist items are standard.\nUse the same study title on every document (Information Sheet, Consent, Debrief, Procedure).\nPlan to print plenty of copies (e.g. 30) for data collection.",
     "crumbs": [
@@ -3838,7 +3838,7 @@
   {
     "objectID": "week17/lab/reading.html#document-3-debrief-form",
     "href": "week17/lab/reading.html#document-3-debrief-form",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Document 3: Debrief Form",
     "text": "Document 3: Debrief Form\nWhat it is: A document given to participants after the study explaining its true purpose, including the hypothesis and relevant theory.\nWho sees it: Every participant receives this after completing the study.\nTips:\n\nHere you can (and should) reveal the hypothesis and explain the theory (e.g. dual coding, anchoring).\nInclude data withdrawal instructions and support service contacts.\nKeep it to about one page. Use the template and worked example.",
     "crumbs": [
@@ -3852,7 +3852,7 @@
   {
     "objectID": "week17/lab/reading.html#document-7-participant-instructions",
     "href": "week17/lab/reading.html#document-7-participant-instructions",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Document 7: Participant Instructions",
     "text": "Document 7: Participant Instructions\nWhat it is: A clear, step-by-step sheet telling the participant exactly what to do during the study (e.g. “Read the list of words”, “You have 2 minutes”, “Write down as many as you can remember”).\nWho sees it: Every participant reads this before the study begins.\nTips:\n\nUse numbered steps and plain language. No jargon; no hypothesis.\nKeep it short (about half a page). If your between- and within-subjects procedures differ, use separate instruction sheets.\nDo not reveal what you expect to find.",
     "crumbs": [
@@ -3866,7 +3866,7 @@
   {
     "objectID": "week17/lab/reading.html#document-8-researcher-procedure-start-in-phase-1",
     "href": "week17/lab/reading.html#document-8-researcher-procedure-start-in-phase-1",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Document 8: Researcher Procedure (Start in Phase 1)",
     "text": "Document 8: Researcher Procedure (Start in Phase 1)\nWhat it is: A detailed step-by-step guide for the researcher running the study. Includes exact wording, timing, and the full procedure. Your “recipe” for running the study.\nWho sees it: Researchers only.\nTips:\n\nPhase 1: Write the materials checklist, the sequence (greeting → consent → instructions → main task → debrief), timing for each phase, and exact words to say to participants (in quotes or italics).\nPhase 2 (Week 18): Complete with data recording, scoring, and any final details. Any group member should be able to run the study from this document alone.\nUse the template; refer to the between- or within-subjects example procedure in the toolkit.",
     "crumbs": [
@@ -3880,7 +3880,7 @@
   {
     "objectID": "week17/lab/reading.html#preparation-for-the-lab",
     "href": "week17/lab/reading.html#preparation-for-the-lab",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Preparation for the Lab",
     "text": "Preparation for the Lab\nBefore the lab:\n\nRe-read the Project Toolkit timeline and document checklist (documents 1, 2, 3, 7, 8).\nHave your research question, design (between/within), and main task (what participants do) clear from your Research Plan.\nDownload the relevant templates from the toolkit so you can start drafting in the lab.",
     "crumbs": [
@@ -3894,7 +3894,7 @@
   {
     "objectID": "week17/lab/reading.html#summary",
     "href": "week17/lab/reading.html#summary",
-    "title": "Chapter 17 Lab: Project Toolkit — Phase 1",
+    "title": "Chapter 14: Project Toolkit — Phase 1",
     "section": "Summary",
     "text": "Summary\n\n\n\n\n\n\n\nDocument\nPhase 1 action\n\n\n\n\n1. Participant Information Sheet\nDraft (purpose, what happens, no hypothesis)\n\n\n2. Consent Form\nDraft (study title consistent)\n\n\n3. Debrief Form\nDraft (hypothesis + theory + withdrawal/support)\n\n\n7. Participant Instructions\nDraft (numbered steps, no hypothesis)\n\n\n8. Researcher Procedure\nStart (checklist, sequence, timing, script); complete in Week 18\n\n\n\nAll templates and the worked example are in the Project Toolkit.",
     "crumbs": [
@@ -3983,11 +3983,25 @@
     "text": "Before the EDS (Due 20 March)\n\nReview all self-assessments from Weeks 12-17\nPractise reading R output and writing APA results paragraphs\nKnow when to use paired vs independent tests; interpret CIs\nPractise data quality (outlier, SD, sensitivity) and Section B (improvements, individual differences, ecological validity)"
   },
   {
+    "objectID": "week17/lecture/slides.html#the-road-ahead",
+    "href": "week17/lecture/slides.html#the-road-ahead",
+    "title": "Experimental Design & Statistics (EDS) & MCQ",
+    "section": "The Road Ahead",
+    "text": "The Road Ahead\n\n\n\nWeek\nLecture\nLab\n\n\n\n\n17\nEDS & MCQ prep\nToolkit Phase 1\n\n\n18\nMCQ Exam\nToolkit Phase 2\n\n\n19\nResults & feedback\nData collection\n\n\n20\nReport writing\nWriting workshop",
+    "crumbs": [
+      "Home",
+      "Term 2",
+      "Week 17: MCQ & EDS Preparation",
+      "Lecture",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "week17/lecture/slides.html#learning-objectives",
     "href": "week17/lecture/slides.html#learning-objectives",
     "title": "Experimental Design & Statistics (EDS) & MCQ",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nEDS = Experimental Design & Statistics (the assignment due 20 March)\nBy the end of this lecture, you will be able to:\n\nApply design types, IV/DV, hypotheses, and test choice to MCQ-style investigations\nInterpret p-values, significance, and correlation for the MCQ\nAnswer EDS Section A: hypothesis, design/IV/DV/data, APA descriptives, paired t-test, results paragraph, data quality\nAnswer EDS Section B: methodological improvements, individual differences, ecological validity",
+    "text": "Learning Objectives\nEDS = Experimental Design & Statistics (the assignment due 20 March - paper released after this session)\nBy the end of this lecture, you will be able to:\n\nApply design types, IV/DV, hypotheses, and test choice to MCQ-style investigations\nInterpret p-values, significance, and correlation for the MCQ\nAnswer EDS Section A: hypothesis, design/IV/DV/data, APA descriptives, paired t-test, results paragraph, data quality\nAnswer EDS Section B: methodological improvements, individual differences, ecological validity",
     "crumbs": [
       "Home",
       "Term 2",
@@ -4057,7 +4071,7 @@
     "href": "week17/lecture/slides.html#choosing-the-statistical-test",
     "title": "Experimental Design & Statistics (EDS) & MCQ",
     "section": "Choosing the Statistical Test",
-    "text": "Choosing the Statistical Test\n\nDecision rule: 1. Correlational design? → Pearson’s r (two continuous variables). 2. Same participants in both conditions? → Paired-samples t-test. 3. Different participants in each condition? → Independent-samples t-test.\n\n\nUse Spearman’s rho when data are ordinal or not normally distributed; MCQ often uses Pearson’s r for correlation scenarios.",
+    "text": "Choosing the Statistical Test\n\nDecision rule:\n\nCorrelational design? → Pearson’s r (two continuous variables).\nSame participants in both conditions? → Paired-samples t-test.\nDifferent participants in each condition? → Independent-samples t-test.\n\n\n\nUse Spearman’s rho when data are ordinal or not normally distributed; MCQ often uses Pearson’s r for correlation scenarios.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -4127,7 +4141,7 @@
     "href": "week17/lecture/slides.html#eds-assignment-reminder-experimental-design-statistics",
     "title": "Experimental Design & Statistics (EDS) & MCQ",
     "section": "EDS Assignment Reminder (Experimental Design & Statistics)",
-    "text": "EDS Assignment Reminder (Experimental Design & Statistics)\n\n\n\n\n\n\nDue: 20 March | 100 marks\n\n\n\nSection A (50 marks): Statistical mechanics — hypothesis, design/IV/DV/data, descriptives, t-test, APA results paragraph, data quality\nSection B (50 marks): Methods and theory — improvements, individual differences, ecological validity\nYou interpret R output; no coding or hand calculations",
+    "text": "EDS Assignment Reminder (Experimental Design & Statistics)\nPaper released after this session today!\n\n\n\n\n\n\nDue: 20 March | 100 marks\n\n\n\nSection A (50 marks): Statistical mechanics — hypothesis, design/IV/DV/data, descriptives, t-test, APA results paragraph, data quality\nSection B (50 marks): Methods and theory — improvements, individual differences, ecological validity\nYou interpret R output; no coding or hand calculations",
     "crumbs": [
       "Home",
       "Term 2",
@@ -20492,7 +20506,7 @@
   {
     "objectID": "week17/lecture/reading.html",
     "href": "week17/lecture/reading.html",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "",
     "text": "EDS = Experimental Design & Statistics — the assignment due 20 March where you interpret R output and answer questions on design, analysis, and methods.\nThis chapter consolidates the content you need for two assessments:\n\nMCQ Exam (Wednesday 11 March): 36 questions — 5 scenario-based investigations (design, IV/DV, hypothesis, test, interpretation) plus 6 general questions.\nEDS Assignment (Due 20 March): Interpret R output and answer questions on hypothesis, design, descriptives, t-test, APA results, data quality, methodological improvements, individual differences, and ecological validity.\n\nThe same concepts underpin both: design types, variables, hypotheses, choosing the right test, interpreting p-values and confidence intervals, and clear reporting.",
     "crumbs": [
@@ -20506,7 +20520,7 @@
   {
     "objectID": "week17/lecture/reading.html#overview",
     "href": "week17/lecture/reading.html#overview",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "",
     "text": "EDS = Experimental Design & Statistics — the assignment due 20 March where you interpret R output and answer questions on design, analysis, and methods.\nThis chapter consolidates the content you need for two assessments:\n\nMCQ Exam (Wednesday 11 March): 36 questions — 5 scenario-based investigations (design, IV/DV, hypothesis, test, interpretation) plus 6 general questions.\nEDS Assignment (Due 20 March): Interpret R output and answer questions on hypothesis, design, descriptives, t-test, APA results, data quality, methodological improvements, individual differences, and ecological validity.\n\nThe same concepts underpin both: design types, variables, hypotheses, choosing the right test, interpreting p-values and confidence intervals, and clear reporting.",
     "crumbs": [
@@ -20520,7 +20534,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-1-mcq-design-types-and-variables",
     "href": "week17/lecture/reading.html#part-1-mcq-design-types-and-variables",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 1: MCQ — Design Types and Variables",
     "text": "Part 1: MCQ — Design Types and Variables\n\nDesign Types\n\n\n\n\n\n\n\n\n\nDesign\nDescription\nIV?\nStatistical test\n\n\n\n\nBetween-participants (independent groups)\nDifferent participants in each condition; random allocation.\nYes — the condition (e.g. warm vs cool room).\nIndependent-samples t-test\n\n\nWithin-participants (repeated measures)\nSame participants in all conditions; order often counterbalanced.\nYes — the condition (e.g. gum vs no gum).\nPaired-samples t-test\n\n\nCorrelational\nTwo variables measured; no manipulation of an IV.\nNo — there is no independent variable.\nPearson’s r (or Spearman’s rho for ordinal/non-normal)\n\n\n\nMatched pairs: Different people but matched (e.g. on age); sometimes analysed with a paired test if the pairing is meaningful.\n\n\nIndependent and Dependent Variables\n\nIV: What the researcher manipulates or uses to form groups. Only in experimental designs.\nDV: The outcome that is measured.\nIn correlational designs, do not label one variable as the IV — both are measured variables.\n\n\n\nOne-Tailed vs Two-Tailed Hypotheses\n\nOne-tailed: Predicts the direction (e.g. “cool room will score higher”; “negative correlation between social media and self-esteem”).\nTwo-tailed: Predicts a difference or relationship without direction (e.g. “there will be a significant difference in test scores between the two temperature conditions”).",
     "crumbs": [
@@ -20534,7 +20548,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-2-mcq-choosing-the-test-and-interpreting-p",
     "href": "week17/lecture/reading.html#part-2-mcq-choosing-the-test-and-interpreting-p",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 2: MCQ — Choosing the Test and Interpreting p",
     "text": "Part 2: MCQ — Choosing the Test and Interpreting p\n\nChoosing the Right Test\n\nCorrelational design? (two measured variables, no manipulation) → Pearson’s r (or Spearman’s rho if data are ordinal or not normal).\nSame participants in both conditions? → Paired-samples t-test.\nDifferent participants in each condition? → Independent-samples t-test.\n\n\n\np-Values and Significance\n\np &lt; .05: Statistically significant at α = .05; reject the null hypothesis; “results support the hypothesis” (if the hypothesis predicted a difference/effect).\np &gt; .05: Not statistically significant; do not reject the null.\np &lt; .01: Significant; the pattern would occur by chance less than or equal to 1 time in 100.\n\n\n\nCorrelation\n\nPositive correlation: Higher on one variable tends to go with higher on the other (e.g. study hours and grades).\nNegative correlation: Higher on one tends to go with lower on the other (e.g. social media use and self-esteem).\nCorrelation does not imply causation — you cannot conclude that X causes Y from a correlation alone (confounds, direction of cause, third variables).\n\n\n\nCounterbalancing\nUsed in within-participants designs to control for order effects (e.g. practice, fatigue) by varying the order of conditions across participants.",
     "crumbs": [
@@ -20548,7 +20562,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-3-mcq-general-concepts",
     "href": "week17/lecture/reading.html#part-3-mcq-general-concepts",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 3: MCQ — General Concepts",
     "text": "Part 3: MCQ — General Concepts\n\n\n\n\n\n\n\nConcept\nWhat you need to know\n\n\n\n\nOperationalisation\nDefining a construct by how it is measured (e.g. intelligence = score on a standardised IQ test).\n\n\nReplication\nAnother researcher repeating the study; detailed procedure and materials help most for replication.\n\n\nConfounding variable\nAn uncontrolled variable that co-varies with the IV (e.g. time of day when one group is tested in the morning and the other in the evening).\n\n\nNull hypothesis\nStates that there is no significant difference or effect in the population.\n\n\np &gt; .05\nResult is not statistically significant at α = .05.\n\n\nPopulation\nThe larger group we want to generalise to; the sample is the subset we actually test.",
     "crumbs": [
@@ -20562,7 +20576,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-4-eds-section-a-statistical-mechanics",
     "href": "week17/lecture/reading.html#part-4-eds-section-a-statistical-mechanics",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 4: EDS Section A — Statistical Mechanics",
     "text": "Part 4: EDS Section A — Statistical Mechanics\n\nStating the Experimental Hypothesis (Q1)\nWrite a clear hypothesis that refers to both the IV and the DV. It can be directional or non-directional.\n\nGood: “Participants will score higher on the working memory task when their phone is in their bag than when it is visible on the desk.”\nGood: “The presence of a smartphone will affect working memory performance.”\nAvoid: Stating the null hypothesis or a hypothesis that does not reference both variables.\n\n\n\nDesign, IV, DV, Data Type (Q2)\n\nDesign: Repeated measures / within-subjects (same participants, two conditions).\nIV: Name the variable and both levels (e.g. phone visible on desk vs phone in bag).\nDV: The measured outcome (e.g. working memory score out of 25).\nData type: Ratio or interval (numeric scale suitable for means and t-tests).\n\n\n\nAPA Descriptives and Interpretation (Q3)\n\nReport: “Participants scored higher when their phone was in their bag (M = 20.30, SD = 1.49) than when their phone was visible (M = 16.90, SD = 4.77).”\nInterpret: Describe the pattern (which condition had higher/lower scores, approximate difference) and note any striking difference in variability (e.g. larger SD in one condition).\n\n\n\nPaired t-Test: Why, Report, Significance, CI (Q4)\n\nWhy paired? Same participants completed both conditions; scores are naturally paired.\nReport: t = −2.36, df = 9, p = .042 (from output).\nSignificant at α = .05? Yes — p = .042 &lt; .05; reject the null.\n95% CI: The interval (e.g. [−6.66, −0.14]) estimates the true mean difference. If it excludes zero, the result is consistent with significance. A fully negative interval indicates lower scores in the first condition (e.g. phone visible) than the second (e.g. phone in bag).\n\n\n\nFull APA Results Paragraph (Q5)\nInclude: name of test, descriptive statistics (M, SD) for each condition, t(df) = value, p = value, 95% CI, and a one-sentence conclusion (e.g. whether the hypothesis was supported).\n\n\nData Quality (Q6)\n\nIdentify outlier: Which participant, scores in each condition, and how their difference compares to others (e.g. one participant with a much larger drop in one condition).\nPlausible reason: e.g. high distraction, phone dependency, procedural issue.\nEffect on SD: An extreme score far from the mean increases the SD of that condition; removing it typically reduces SD.\nSensitivity: Report both with and without the outlier if appropriate; explain that removing an extreme case can sometimes make the test more significant (less variability in differences). Justify whether to report one or both analyses and note that the main conclusion may hold either way.",
     "crumbs": [
@@ -20576,7 +20590,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-5-eds-section-b-methods-and-theory",
     "href": "week17/lecture/reading.html#part-5-eds-section-b-methods-and-theory",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 5: EDS Section B — Methods and Theory",
     "text": "Part 5: EDS Section B — Methods and Theory\n\nMethodological Improvements (Q7)\nSuggest two improvements with clear justification. Examples: larger sample size (power, generalisability); controlling for notifications (phones silenced); measuring phone dependency; longer break between conditions; multiple cognitive tasks; screening for engagement.\n\n\nIndividual Differences (Q8)\nDiscuss how heavy vs light phone users or younger vs older adults might differ in the effect, with reasoned theoretical or empirical support (e.g. attentional bias, habituation, age-related cognitive change). Marks are for quality of reasoning, not for a specific prediction.\n\n\nEcological Validity (Q9)\nPropose a more ecologically valid study: real-world setting and task, with a clear hypothesis, IV (with levels), DV, and procedure. Explain why it is more ecologically valid (e.g. real classroom, real learning, natural phone use).",
     "crumbs": [
@@ -20590,7 +20604,7 @@
   {
     "objectID": "week17/lecture/reading.html#part-6-credibility-brief-context",
     "href": "week17/lecture/reading.html#part-6-credibility-brief-context",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Part 6: Credibility (Brief Context)",
     "text": "Part 6: Credibility (Brief Context)\nUnderstanding why methods matter helps you see why the MCQ and EDS emphasise correct design, test choice, and reporting:\n\nP-hacking: Using flexibility in analysis to obtain p &lt; .05 inflates false positives.\nHARKing: Presenting post-hoc ideas as if they were pre-registered predictions undermines credibility.\nReplication: Many findings fail to replicate; clear methods and appropriate statistics support replicability.\n\nFor more on p-hacking, HARKing, and the replication crisis, see the open science and credibility resources in the module.",
     "crumbs": [
@@ -20604,7 +20618,7 @@
   {
     "objectID": "week17/lecture/reading.html#summary-tables",
     "href": "week17/lecture/reading.html#summary-tables",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Summary Tables",
     "text": "Summary Tables\n\nMCQ: Design → Test\n\n\n\n\n\n\n\nDesign\nTest\n\n\n\n\nBetween-participants (2 groups)\nIndependent-samples t-test\n\n\nWithin-participants (same people, 2 conditions)\nPaired-samples t-test\n\n\nCorrelational (2 measured variables)\nPearson’s r\n\n\n\n\n\nEDS Section A Checklist\n\nExperimental hypothesis (IV + DV)\nDesign type, IV with levels, DV, data type\nAPA descriptives (M, SD) and interpretation\nWhy paired t-test; report t, df, p; significance at α = .05; interpret 95% CI\nFull APA results paragraph\nOutlier: identify, reason, effect on SD, sensitivity (with/without)\n\n\n\nEDS Section B Checklist\n\nTwo methodological improvements with justification\nIndividual differences (e.g. heavy/light users, age) — reasoned discussion\nEcological validity: hypothesis, IV, DV, procedure, and why more ecologically valid",
     "crumbs": [
@@ -20618,7 +20632,7 @@
   {
     "objectID": "week17/lecture/reading.html#further-reading",
     "href": "week17/lecture/reading.html#further-reading",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "Further Reading",
     "text": "Further Reading\n\nModule materials for Weeks 11–16 (design, t-tests, correlation).\nEDS marking scheme (for Section A and B mark allocation and model answers).\nOpen science and credibility: pre-registration, replication, effect sizes (see course resources).",
     "crumbs": [
@@ -21073,7 +21087,7 @@
   {
     "objectID": "week18/lab/reading.html",
     "href": "week18/lab/reading.html",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "",
     "text": "This lab is Phase 2 of the Project Toolkit. You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, practice running the study on each other, and complete the Research Study Order Form.\nWeek 19 lab is data collection. You must finish all toolkit documents in Weeks 17 and 18 so you are ready to collect data in Week 19.",
     "crumbs": [
@@ -21087,7 +21101,7 @@
   {
     "objectID": "week18/lab/reading.html#overview",
     "href": "week18/lab/reading.html#overview",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "",
     "text": "This lab is Phase 2 of the Project Toolkit. You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, practice running the study on each other, and complete the Research Study Order Form.\nWeek 19 lab is data collection. You must finish all toolkit documents in Weeks 17 and 18 so you are ready to collect data in Week 19.",
     "crumbs": [
@@ -21101,7 +21115,7 @@
   {
     "objectID": "week18/lab/reading.html#why-phase-2-matters",
     "href": "week18/lab/reading.html#why-phase-2-matters",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Why Phase 2 Matters",
     "text": "Why Phase 2 Matters\n\nStimulus materials and Data Recording Sheet ensure you have consistent, scorable data.\nA complete Researcher Procedure ensures every session is run the same way.\nA practice run reveals unclear instructions, timing problems, and scoring issues before real participants arrive.\nThe Research Study Order Form ensures everything is printed and available on data collection day.",
     "crumbs": [
@@ -21115,7 +21129,7 @@
   {
     "objectID": "week18/lab/reading.html#document-4-recruitment-script",
     "href": "week18/lab/reading.html#document-4-recruitment-script",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Document 4: Recruitment Script",
     "text": "Document 4: Recruitment Script\nWhat it is: A short script your group uses to approach potential participants and invite them to take part.\nWho sees it: Researchers only — you read or paraphrase it when recruiting.\nTips: Keep it brief and friendly (3–4 sentences). Mention: who you are, what the study involves (briefly), how long it takes, where to go, and any incentive (e.g. snacks). Print several copies so multiple group members can recruit at once. Use the toolkit template.",
     "crumbs": [
@@ -21129,7 +21143,7 @@
   {
     "objectID": "week18/lab/reading.html#document-5-data-recording-sheet",
     "href": "week18/lab/reading.html#document-5-data-recording-sheet",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Document 5: Data Recording Sheet",
     "text": "Document 5: Data Recording Sheet\nWhat it is: A table where you record each participant’s data: participant number, condition (if between-subjects), DV score, and any optional demographics.\nWho sees it: Researchers only — you fill it in after scoring each participant.\nTips: Include a scoring guide so all group members score the DV consistently. The template has tables for both between- and within-subjects designs — delete the one you don’t need. This is your raw data, so accuracy and consistency matter. Finalise by end of Week 18.",
     "crumbs": [
@@ -21143,7 +21157,7 @@
   {
     "objectID": "week18/lab/reading.html#document-6-stimulus-materials",
     "href": "week18/lab/reading.html#document-6-stimulus-materials",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Document 6: Stimulus Materials",
     "text": "Document 6: Stimulus Materials\nWhat it is: The actual materials participants interact with — word lists, images, passages, rating sheets, questionnaires, etc.\nWho sees it: Participants (during the study) and researchers.\nTips: Match materials across conditions (e.g. word frequency, difficulty, length). See the Project Options and the worked example in the toolkit for your project type. Test your materials on each other before data collection day. Finalise by the end of Week 18.",
     "crumbs": [
@@ -21157,7 +21171,7 @@
   {
     "objectID": "week18/lab/reading.html#document-8-researcher-procedure-complete",
     "href": "week18/lab/reading.html#document-8-researcher-procedure-complete",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Document 8: Researcher Procedure (Complete)",
     "text": "Document 8: Researcher Procedure (Complete)\nWhat it is: The full step-by-step guide for the researcher. You started this in Phase 1; in Phase 2 you complete it.\nAdd or finalise:\n\nData recording: When and how you fill in the Data Recording Sheet (e.g. after each participant; where to write condition and score).\nScoring: How you score the DV; reference to the scoring guide on the Data Recording Sheet.\nFull script: Every phrase the participant hears (in quotes or italics), including greeting, instructions, and debrief.\nTiming: Duration for each phase (study period, distractor, recall, etc.).\nMaterials checklist: Everything to prepare before each testing session.\n\nAny group member should be able to run the study from this document alone. Use the between- or within-subjects example procedure in the toolkit as a reference.",
     "crumbs": [
@@ -21171,7 +21185,7 @@
   {
     "objectID": "week18/lab/reading.html#practice-run",
     "href": "week18/lab/reading.html#practice-run",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Practice Run",
     "text": "Practice Run\nRunning the study on each other before data collection day helps you:\n\nCheck that timing is realistic (not too long or too short).\nFind unclear instructions or missing steps.\nAgree on scoring (everyone uses the scoring guide the same way).\nUpdate the Researcher Procedure and Participant Instructions with any fixes.\n\nHow: One person runs as researcher, others as participants. Use a timer and the Data Recording Sheet. Debrief: what was confusing? Then swap if time, and update the documents.",
     "crumbs": [
@@ -21185,7 +21199,7 @@
   {
     "objectID": "week18/lab/reading.html#document-9-research-study-order-form",
     "href": "week18/lab/reading.html#document-9-research-study-order-form",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Document 9: Research Study Order Form",
     "text": "Document 9: Research Study Order Form\nWhat it is: A form listing everything your group needs printed or provided for data collection day. You submit it to Gordon so resources can be prepared in advance.\nWhen: Submit by end of Week 18 at latest (Week 19 lab is data collection).\nTips: List every document and how many copies (err on the side of more). Include any special requirements (e.g. colour printing, specific paper size). Don’t forget consumables: pens, blank paper for recall, snacks. Use the toolkit template.",
     "crumbs": [
@@ -21199,7 +21213,7 @@
   {
     "objectID": "week18/lab/reading.html#preparation-for-the-lab",
     "href": "week18/lab/reading.html#preparation-for-the-lab",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Preparation for the Lab",
     "text": "Preparation for the Lab\n\nBring your Phase 1 drafts (Information Sheet, Consent, Debrief, Participant Instructions, Researcher Procedure).\nRe-read the Project Toolkit checklist for documents 4, 5, 6, 8, 9.\nDownload the templates for Recruitment Script, Data Recording Sheet, Stimulus Materials (if using template), and Research Study Order Form.\nHave your design (between/within) and DV (and scoring rule) clear so you can complete the Data Recording Sheet and procedure.",
     "crumbs": [
@@ -21213,7 +21227,7 @@
   {
     "objectID": "week18/lab/reading.html#summary",
     "href": "week18/lab/reading.html#summary",
-    "title": "Chapter 18 Lab: Project Toolkit — Phase 2",
+    "title": "Chapter 16: Project Toolkit — Phase 2",
     "section": "Summary",
     "text": "Summary\n\n\n\n\n\n\n\nDocument\nPhase 2 action\n\n\n\n\n4. Recruitment Script\nFinalise\n\n\n5. Data Recording Sheet\nDraft/finalise with scoring guide\n\n\n6. Stimulus Materials\nFinalise; test on each other\n\n\n7. Participant Instructions\nFinalise if needed\n\n\n8. Researcher Procedure\nComplete (data recording, scoring, full script)\n\n\n9. Research Study Order Form\nComplete; submit by end of Week 18\n\n\n\nPlus: Practice run within the group and update procedure/instructions as needed.\nAll templates and the worked example are in the Project Toolkit.",
     "crumbs": [
@@ -21331,7 +21345,7 @@
   {
     "objectID": "week19/lecture/reading.html",
     "href": "week19/lecture/reading.html",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading provides the practical guidance you need to write the Results section of your research report. Keep it open while drafting. The examples here follow APA 7th edition format, which is the standard for psychology.\n\n\nThis reading covers:\n\nThe structure and purpose of a Results section\nHow to report t-tests in APA format\nHow to report correlations in APA format\nCreating effective tables and figures\nCommon mistakes and how to avoid them",
     "crumbs": [
@@ -21345,7 +21359,7 @@
   {
     "objectID": "week19/lecture/reading.html#overview",
     "href": "week19/lecture/reading.html#overview",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading provides the practical guidance you need to write the Results section of your research report. Keep it open while drafting. The examples here follow APA 7th edition format, which is the standard for psychology.\n\n\nThis reading covers:\n\nThe structure and purpose of a Results section\nHow to report t-tests in APA format\nHow to report correlations in APA format\nCreating effective tables and figures\nCommon mistakes and how to avoid them",
     "crumbs": [
@@ -21359,7 +21373,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-1-the-purpose-of-a-results-section",
     "href": "week19/lecture/reading.html#part-1-the-purpose-of-a-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 1: The Purpose of a Results Section",
     "text": "Part 1: The Purpose of a Results Section\n\nWhat Goes in Results?\nThe Results section answers one question: What did you find?\n\nInclude:\n\nDescriptive statistics (means, standard deviations)\nInferential statistics (test results, p-values)\nEffect sizes\nTables and figures summarising key findings\n\nDo NOT include:\n\nInterpretation of what the results mean (save for Discussion)\nMethodological details (those belong in Method)\nRaw data or individual scores\nLengthy prose when a table would be clearer\n\n\n\n\nThe Logic of Results Reporting\nThink of your Results section as telling a story with numbers:\n\nDescribe the data (what do the numbers look like?)\nTest the hypothesis (is the difference/relationship significant?)\nQuantify the effect (how big is it?)\n\nEach analysis follows this pattern: descriptives, then inferential test, then effect size.",
     "crumbs": [
@@ -21373,7 +21387,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-2-reporting-descriptive-statistics",
     "href": "week19/lecture/reading.html#part-2-reporting-descriptive-statistics",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 2: Reporting Descriptive Statistics",
     "text": "Part 2: Reporting Descriptive Statistics\n\nBasic Format\nAlways report both the mean AND standard deviation:\n\nFormat: (M = value, SD = value)\nExample: Memory scores were moderate (M = 6.80, SD = 1.58).\n\n\n\nAPA Conventions for Numbers\n\n\n\n\n\n\n\nRule\nExample\n\n\n\n\nUse numerals for statistics\nM = 6.80 (not “six point eight”)\n\n\nTwo decimal places typically\nSD = 1.58\n\n\nNo leading zero when value cannot exceed 1\np = .023 (not p = 0.023)\n\n\nUse leading zero when value can exceed 1\nd = 0.45\n\n\nItalicise statistical symbols\nM, SD, t, p, r, d, F, N, n\n\n\n\n\n\nReporting for Two Groups\nWhen comparing conditions, report descriptives for both:\n\nExample:\nParticipants who studied concrete words (M = 7.40, SD = 1.35) recalled more words than those who studied abstract words (M = 5.80, SD = 1.62).\n\n\n\nReporting for Two Conditions (Within-Subjects)\nFor pre-post or repeated measures:\n\nExample:\nMood ratings increased from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72).",
     "crumbs": [
@@ -21387,7 +21401,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-3-reporting-t-tests",
     "href": "week19/lecture/reading.html#part-3-reporting-t-tests",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 3: Reporting t-Tests",
     "text": "Part 3: Reporting t-Tests\n\nThe Independent Samples t-Test\nUse when comparing two different groups (between-subjects design).\n\nAPA Format:\nt(df) = value, p = value, d = value\nComponents:\n\nt = the t-statistic\ndf = degrees of freedom (total N - 2 for independent t-test)\np = p-value\nd = Cohen’s d effect size\n\n\n\n\nIndependent t-Test: Full Example\n\nScenario: Comparing memory scores between Lab A (abstract words) and Lab B (concrete words).\nFull write-up:\nParticipants who studied concrete words (M = 7.40, SD = 1.35) recalled significantly more words than those who studied abstract words (M = 5.80, SD = 1.62), t(38) = 3.40, p = .002, d = 1.07. This represents a large effect.\n\n\n\nThe Paired Samples t-Test\nUse when comparing two conditions from the same participants (within-subjects design).\n\nAPA Format:\nt(df) = value, p = value, d = value\nNote: df = N - 1 for paired t-test (number of pairs minus 1)\n\n\n\nPaired t-Test: Full Example\n\nScenario: Comparing mood before and after the lab session.\nFull write-up:\nMood ratings increased significantly from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72), t(29) = 2.84, p = .008, d = 0.52. This represents a medium effect.\n\n\n\nReporting Non-Significant Results\nNon-significant results are still results and should be reported:\n\nExample:\nThere was no significant difference in stress ratings between pre-session (M = 4.30, SD = 2.10) and post-session (M = 4.50, SD = 1.95), t(29) = 0.58, p = .567, d = 0.10.\n\n\n\n\n\n\n\nImportantKey Point\n\n\n\nDo NOT say “there was no effect” or “the IV had no effect.” Say “there was no significant difference.” The null result could reflect a true absence of effect, or insufficient power to detect a real effect.",
     "crumbs": [
@@ -21401,7 +21415,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-4-reporting-correlations",
     "href": "week19/lecture/reading.html#part-4-reporting-correlations",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 4: Reporting Correlations",
     "text": "Part 4: Reporting Correlations\n\nThe Pearson Correlation\nUse when examining the relationship between two continuous variables.\n\nAPA Format:\nr(df) = value, p = value\nComponents:\n\nr = correlation coefficient (-1 to +1)\ndf = N - 2\np = p-value\n\n\n\n\nInterpreting Correlation Strength\n\n\n\nr value\nInterpretation\n\n\n\n\n.10 - .29\nSmall/weak\n\n\n.30 - .49\nMedium/moderate\n\n\n.50 +\nLarge/strong\n\n\n\nNote: These are guidelines, not rigid cutoffs.\n\n\nCorrelation: Full Example\n\nScenario: Examining relationship between self-rated throwing ability and actual accuracy.\nFull write-up:\nThere was a significant positive correlation between self-rated throwing ability and actual throwing accuracy, r(38) = .42, p = .007. Participants who rated themselves as better throwers tended to perform better on the task. This represents a medium effect.\n\n\n\nNon-Significant Correlation\n\nExample:\nThere was no significant correlation between extraversion scores and memory performance, r(38) = .15, p = .356.\n\n\n\n\n\n\n\nWarningRemember\n\n\n\nCorrelation does NOT imply causation. Even when reporting a significant correlation, do not use causal language. Say “X was associated with Y” or “X correlated with Y,” not “X caused Y.”",
     "crumbs": [
@@ -21415,7 +21429,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-5-effect-sizes",
     "href": "week19/lecture/reading.html#part-5-effect-sizes",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 5: Effect Sizes",
     "text": "Part 5: Effect Sizes\n\nWhy Report Effect Sizes?\n\nP-values tell you: Is the effect statistically significant?\nEffect sizes tell you: How big is the effect?\nA significant p-value with a tiny effect size may be trivial.\nA non-significant p-value with a large effect size may be important (and suggest the study was underpowered).\nAPA 7th edition requires effect sizes for all statistical tests.\n\n\n\nCohen’s d (for t-tests)\n\n\n\nd value\nInterpretation\n\n\n\n\n0.20\nSmall\n\n\n0.50\nMedium\n\n\n0.80\nLarge\n\n\n\nInterpretation: A d of 0.50 means the groups differ by half a standard deviation.\n\n\nPearson’s r (for correlations)\n\n\n\nr value\nInterpretation\n\n\n\n\n0.10\nSmall\n\n\n0.30\nMedium\n\n\n0.50\nLarge\n\n\n\nNote: r itself is the effect size for correlations.",
     "crumbs": [
@@ -21429,7 +21443,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-6-tables-and-figures",
     "href": "week19/lecture/reading.html#part-6-tables-and-figures",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 6: Tables and Figures",
     "text": "Part 6: Tables and Figures\n\nWhen to Use a Table\nUse tables when:\n\nYou have multiple statistics to report\nPresenting data for several groups or conditions\nThe information would be unwieldy in text\n\n\n\nTable Format (APA Style)\n\nTable 1\nDescriptive Statistics for Memory Task by Word Type\n\n\n\nCondition\nn\nM\nSD\n\n\n\n\nAbstract words\n20\n5.80\n1.62\n\n\nConcrete words\n20\n7.40\n1.35\n\n\n\nNote. Memory scores ranged from 0 to 10.\n\nAPA Table Rules:\n\nNumber tables sequentially (Table 1, Table 2…)\nProvide a descriptive title in italics\nUse horizontal lines only at top, below headers, and at bottom\nNo vertical lines\nInclude a note if needed for clarification\n\n\n\nWhen to Use a Figure\nUse figures when:\n\nYou want to show a pattern or trend visually\nComparing groups is easier to grasp visually\nShowing a correlation (scatterplot)\n\n\n\nFigure Format (APA Style)\n\nFigure 1\nMean Memory Scores by Word Type\n[Bar chart would appear here]\nNote. Error bars represent standard error of the mean. ** p &lt; .01.\n\nAPA Figure Rules:\n\nNumber figures sequentially (Figure 1, Figure 2…)\nProvide a descriptive title in italics\nLabel axes clearly\nInclude error bars for means (standard error or confidence interval)\nInclude a note explaining error bars and significance markers\n\n\n\nReferring to Tables and Figures in Text\nAlways refer to tables and figures in your text:\n\nGood: As shown in Table 1, participants in the concrete word condition recalled more words than those in the abstract word condition.\nGood: Figure 1 displays the mean memory scores by condition.",
     "crumbs": [
@@ -21443,7 +21457,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-7-structuring-your-results-section",
     "href": "week19/lecture/reading.html#part-7-structuring-your-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 7: Structuring Your Results Section",
     "text": "Part 7: Structuring Your Results Section\n\nRecommended Structure\n\n1. Opening statement (optional)\nBriefly orient the reader to what analyses you conducted.\n2. Descriptive statistics\nReport means and SDs for each condition/variable.\n3. Inferential test\nReport the statistical test, p-value, and effect size.\n4. Brief statement of finding\nOne sentence stating whether the result supports or does not support your hypothesis.\n5. Repeat for each analysis\nIf you have multiple hypotheses, address each in turn.\n\n\n\nFull Results Section Example\n\nResults\nMemory Task\nAn independent samples t-test was conducted to compare memory scores between conditions. Participants who studied concrete words (M = 7.40, SD = 1.35) recalled significantly more words than those who studied abstract words (M = 5.80, SD = 1.62), t(38) = 3.40, p = .002, d = 1.07. This large effect supports the hypothesis that concrete words are easier to remember than abstract words.\nPre-Post Mood\nA paired samples t-test compared mood ratings before and after the lab session. Mood ratings increased significantly from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72), t(29) = 2.84, p = .008, d = 0.52. This medium effect supports the hypothesis that mood would improve following the session.\nSelf-Rating and Performance\nA Pearson correlation examined the relationship between self-rated throwing ability and actual performance. There was a significant positive correlation, r(38) = .42, p = .007, indicating that participants who rated themselves as better throwers tended to achieve higher accuracy scores.",
     "crumbs": [
@@ -21457,7 +21471,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-8-common-mistakes-to-avoid",
     "href": "week19/lecture/reading.html#part-8-common-mistakes-to-avoid",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 8: Common Mistakes to Avoid",
     "text": "Part 8: Common Mistakes to Avoid\n\nMistake 1: Missing Descriptive Statistics\n\n\n\n\n\n\nWarningWrong\n\n\n\n“There was a significant difference between groups, t(38) = 3.40, p = .002.”\n\nCorrect\nInclude the means and SDs so readers know what the difference was and in which direction.\n\n\n\n\n\nMistake 2: Incorrect p-value Formatting\n\n\n\n\n\n\nWarningWrong\n\n\n\n\np = 0.023 (leading zero)\np = 0.00 (cannot equal zero)\np = .023 (not italicised)\n\n\nCorrect\n\np = .023\np &lt; .001 (for very small p-values)\n\n\n\n\n\n\nMistake 3: Interpreting in Results\n\n\n\n\n\n\nWarningWrong (in Results)\n\n\n\n“This significant difference shows that concrete words are processed more deeply, engaging semantic memory systems…”\n\nCorrect (in Results)\n“Concrete words were recalled significantly more often than abstract words.”\nSave the interpretation for the Discussion.\n\n\n\n\n\nMistake 4: Forgetting Effect Sizes\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The difference was significant, t(38) = 3.40, p = .002.”\n\nCorrect\nInclude Cohen’s d or another effect size measure.\n\n\n\n\n\nMistake 5: Overclaiming from Non-Significant Results\n\n\n\n\n\n\nWarningWrong\n\n\n\n“There was no relationship between X and Y, r(38) = .15, p = .356.”\n\nCorrect\n“There was no significant relationship…” or “The relationship was not statistically significant…”\n\n\n\n\n\nMistake 6: Causal Language for Correlations\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Higher extraversion caused better memory performance.”\n\nCorrect\n“Higher extraversion was associated with better memory performance.”\n\n\n\n\n\nMistake 7: Not Referring to Tables/Figures\n\n\n\n\n\n\nWarningWrong\n\n\n\nIncluding a table that is never mentioned in the text.\n\nCorrect\n“As shown in Table 1…” or “Figure 1 displays…”\n\n\n\n\n\nMistake 8: Rounding Errors\n\n\n\n\n\n\nWarningWrong\n\n\n\nReporting M = 6.8 when you mean M = 6.80 (use consistent decimal places).\n\nCorrect\nUse two decimal places consistently for means, SDs, and test statistics.",
     "crumbs": [
@@ -21471,7 +21485,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct",
     "href": "week19/lecture/reading.html#correct",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\nInclude the means and SDs so readers know what the difference was and in which direction.",
     "crumbs": [
@@ -21485,7 +21499,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-1",
     "href": "week19/lecture/reading.html#correct-1",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\n\np = .023\np &lt; .001 (for very small p-values)",
     "crumbs": [
@@ -21499,7 +21513,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-in-results",
     "href": "week19/lecture/reading.html#correct-in-results",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct (in Results)",
     "text": "Correct (in Results)\n“Concrete words were recalled significantly more often than abstract words.”\nSave the interpretation for the Discussion.",
     "crumbs": [
@@ -21513,7 +21527,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-2",
     "href": "week19/lecture/reading.html#correct-2",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\nInclude Cohen’s d or another effect size measure.",
     "crumbs": [
@@ -21527,7 +21541,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-3",
     "href": "week19/lecture/reading.html#correct-3",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\n“There was no significant relationship…” or “The relationship was not statistically significant…”",
     "crumbs": [
@@ -21541,7 +21555,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-4",
     "href": "week19/lecture/reading.html#correct-4",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\n“Higher extraversion was associated with better memory performance.”",
     "crumbs": [
@@ -21555,7 +21569,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-5",
     "href": "week19/lecture/reading.html#correct-5",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\n“As shown in Table 1…” or “Figure 1 displays…”",
     "crumbs": [
@@ -21569,7 +21583,7 @@
   {
     "objectID": "week19/lecture/reading.html#correct-6",
     "href": "week19/lecture/reading.html#correct-6",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Correct",
     "text": "Correct\nUse two decimal places consistently for means, SDs, and test statistics.",
     "crumbs": [
@@ -21583,7 +21597,7 @@
   {
     "objectID": "week19/lecture/reading.html#part-9-checklist-for-your-results-section",
     "href": "week19/lecture/reading.html#part-9-checklist-for-your-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Part 9: Checklist for Your Results Section",
     "text": "Part 9: Checklist for Your Results Section\n\nBefore submitting, check that you have:\nFor each analysis:\n\nReported means and SDs for all conditions\nReported the appropriate statistical test\nReported degrees of freedom\nReported the test statistic value\nReported the exact p-value (or p &lt; .001)\nReported the effect size\nStated whether the result was significant\nConnected findings to hypotheses\n\nFormatting:\n\nUsed italics for statistical symbols\nUsed two decimal places\nOmitted leading zeros for p-values\nNumbered and titled all tables and figures\nReferenced all tables and figures in text\n\nContent:\n\nAvoided interpretation (saved for Discussion)\nReported non-significant results too\nUsed appropriate language for correlations (not causal)",
     "crumbs": [
@@ -21597,7 +21611,7 @@
   {
     "objectID": "week19/lecture/reading.html#summary",
     "href": "week19/lecture/reading.html#summary",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Summary",
     "text": "Summary\n\n\n\nElement\nWhat to Include\n\n\n\n\nDescriptive statistics\nM, SD for each condition\n\n\nIndependent t-test\nt(df) = value, p = value, d = value\n\n\nPaired t-test\nt(df) = value, p = value, d = value\n\n\nCorrelation\nr(df) = value, p = value\n\n\nTables\nNumbered, titled, clean format\n\n\nFigures\nNumbered, titled, with error bars",
     "crumbs": [
@@ -21611,7 +21625,7 @@
   {
     "objectID": "week19/lecture/reading.html#check-your-understanding",
     "href": "week19/lecture/reading.html#check-your-understanding",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Check Your Understanding",
     "text": "Check Your Understanding\nBefore writing your Results:\n\nWhat information should you include for a t-test?\nHow do you report a correlation in APA format?\nWhy are effect sizes important alongside p-values?\nWhat is the difference between Results and Discussion content?\nHow do you refer to a table in your text?",
     "crumbs": [
@@ -21625,7 +21639,7 @@
   {
     "objectID": "week19/lecture/reading.html#further-reading",
     "href": "week19/lecture/reading.html#further-reading",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "Further Reading",
     "text": "Further Reading\nFor additional guidance:\n\nAmerican Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.). [The definitive reference]\nPurdue OWL APA Guide: https://owl.purdue.edu/owl/research_and_citation/apa_style/\nYour course handbook for specific requirements",
     "crumbs": [
@@ -22647,7 +22661,7 @@
   {
     "objectID": "week20/lab/reading.html",
     "href": "week20/lab/reading.html",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "",
     "text": "This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.",
     "crumbs": [
@@ -22661,7 +22675,7 @@
   {
     "objectID": "week20/lab/reading.html#overview",
     "href": "week20/lab/reading.html#overview",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "",
     "text": "This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.",
     "crumbs": [
@@ -22675,7 +22689,7 @@
   {
     "objectID": "week20/lab/reading.html#getting-started",
     "href": "week20/lab/reading.html#getting-started",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "Getting Started",
     "text": "Getting Started\n\nWhat You Have\n\nYour analysed data (from Gordon)\nAll your project documents (Information Sheet, Procedure, etc.)\nThe project articles and background reading\nAPA reporting guidelines from Week 19\n\n\n\nWriting Order\nDon’t write the report front-to-back. Instead:\n\nMethod — you already have everything you need (participants, design, materials, procedure)\nResults — use your analysed data; report descriptive and inferential statistics in APA format\nIntroduction — build the argument for your hypothesis using the suggested readings and your own research\nDiscussion — interpret your results, connect to theory, discuss limitations\nAbstract — write this last, once everything else is done",
     "crumbs": [
@@ -22689,7 +22703,7 @@
   {
     "objectID": "week20/lab/reading.html#key-reminders",
     "href": "week20/lab/reading.html#key-reminders",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "Key Reminders",
     "text": "Key Reminders\n\nResults Section\n\nReport M and SD for each condition\nReport the inferential test (t-test) in APA format: t(df) = X.XX, p = .XXX\nState whether the result was significant at α = .05\nInclude a figure (e.g., bar chart with error bars) if appropriate\nState whether the hypothesis was supported\n\n\n\nDiscussion Section\n\nStart by restating your main finding in plain language (no statistics)\nExplain what the finding means in the context of the theory\nCompare to previous research — does your result agree or disagree?\nBe honest about limitations (sample size, materials, design)\nSuggest what future research could investigate\nEnd with a brief conclusion",
     "crumbs": [
@@ -22703,7 +22717,7 @@
   {
     "objectID": "week20/lab/reading.html#additional-resources",
     "href": "week20/lab/reading.html#additional-resources",
-    "title": "Chapter 20 Lab: Report Writing Workshop",
+    "title": "Chapter 20: Report Writing Workshop",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nProject Toolkit — your document reference\nWeek 19 lecture reading — APA results reporting guidelines\nWeek 20 lecture slides — discussion section writing guidance",
     "crumbs": [
@@ -23757,9 +23771,9 @@
   {
     "objectID": "textbook/chapters/w16-lecture.html",
     "href": "textbook/chapters/w16-lecture.html",
-    "title": "Chapter 11: Regression",
+    "title": "Chapter 11: APA Report Writing",
     "section": "",
-    "text": "TBC - Textbook chapter or article details",
+    "text": "TipWhat This Chapter Covers\n\n\n\nThis chapter explains the structure of an APA-style lab report, how to write a Method section (using your Research Plan as a worked example), and the writing conventions you’ll need for academic psychology writing.\n\nThe sections of an APA lab report and what goes in each\nHow to write a Method section (the same structure as your Research Plan)\nAPA writing conventions (tense, person, statistical notation)\nCommon mistakes and how to avoid them\n\n\n\nThis chapter is your reference guide for writing in psychology. You’ll come back to it repeatedly over the coming weeks as you write your Research Report.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -23768,11 +23782,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w16-lecture.html#required-reading",
-    "href": "textbook/chapters/w16-lecture.html#required-reading",
-    "title": "Chapter 11: Regression",
+    "objectID": "textbook/chapters/w16-lecture.html#overview",
+    "href": "textbook/chapters/w16-lecture.html#overview",
+    "title": "Chapter 11: APA Report Writing",
     "section": "",
-    "text": "TBC - Textbook chapter or article details",
+    "text": "TipWhat This Chapter Covers\n\n\n\nThis chapter explains the structure of an APA-style lab report, how to write a Method section (using your Research Plan as a worked example), and the writing conventions you’ll need for academic psychology writing.\n\nThe sections of an APA lab report and what goes in each\nHow to write a Method section (the same structure as your Research Plan)\nAPA writing conventions (tense, person, statistical notation)\nCommon mistakes and how to avoid them\n\n\n\nThis chapter is your reference guide for writing in psychology. You’ll come back to it repeatedly over the coming weeks as you write your Research Report.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -23781,11 +23795,11 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w16-lecture.html#reading-guide",
-    "href": "textbook/chapters/w16-lecture.html#reading-guide",
-    "title": "Chapter 11: Regression",
-    "section": "2 Reading Guide",
-    "text": "2 Reading Guide\n\n2.1 Key Points to Focus On\n\nTBC\nTBC\nTBC\n\n\n\n2.2 Questions to Consider\n\nTBC\nTBC\nTBC",
+    "objectID": "textbook/chapters/w16-lecture.html#the-apa-lab-report",
+    "href": "textbook/chapters/w16-lecture.html#the-apa-lab-report",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "2 The APA Lab Report",
+    "text": "2 The APA Lab Report\nPsychology uses a standardised format for reporting research — the APA (American Psychological Association) style. Every lab report follows the same structure, which means readers always know where to find the information they need.\nYour Research Report (due mid-late April, 2,500 words) will follow this format exactly.\n\n2.1 The Seven Sections\n\n\n\n\n\n\n\n\nSection\nPurpose\nApproximate proportion\n\n\n\n\nTitle Page\nIdentifies the study, author, and institution\n—\n\n\nAbstract\n~150-word summary of the entire study\n~5%\n\n\nIntroduction\nBackground literature, rationale, and hypothesis\n~25-30%\n\n\nMethod\nWhat you did — design, participants, materials, procedure\n~25-30%\n\n\nResults\nWhat you found — descriptive and inferential statistics\n~15-20%\n\n\nDiscussion\nWhat it means — interpretation, limitations, future directions\n~20-25%\n\n\nReferences\nFull APA-formatted reference list\n—\n\n\n\n\n\n2.2 The Hourglass Shape\nAPA reports follow an hourglass shape:\n\nIntroduction moves from broad to narrow — starting with the general topic, reviewing specific research, and ending with your hypothesis\nMethod and Results are the narrow middle — precise, detailed, specific\nDiscussion moves from narrow to broad — starting with your findings, interpreting them, and ending with wider implications\n\nThis shape means you tell a story: here’s what we know, here’s what we did, here’s what we found, and here’s what it means.",
     "crumbs": [
       "Home",
       "Textbook",
@@ -23794,11 +23808,63 @@
     ]
   },
   {
-    "objectID": "textbook/chapters/w16-lecture.html#additional-resources",
-    "href": "textbook/chapters/w16-lecture.html#additional-resources",
-    "title": "Chapter 11: Regression",
-    "section": "3 Additional Resources",
-    "text": "3 Additional Resources\n\nTBC",
+    "objectID": "textbook/chapters/w16-lecture.html#section-by-section",
+    "href": "textbook/chapters/w16-lecture.html#section-by-section",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "3 Section by Section",
+    "text": "3 Section by Section\n\n3.1 Title Page\nYour title should be concise and informative. It should include your key variables.\n\nGood title: “The Effect of Word Concreteness on Free Recall Performance”\n\n\nPoor title: “My Psychology Experiment” or “Memory Study”\n\nInclude your name, student number, and the module code (PS50008A).\n\n\n3.2 Abstract\nThe abstract is a brief summary of the entire study, typically around 150 words. It should cover:\n\nOne or two sentences of background and rationale\nOne sentence on method (design, participants, key task)\nOne or two sentences on key results (with statistics)\nOne sentence on conclusion and implications\n\n\n\n\n\n\n\nTipWhen to Write the Abstract\n\n\n\nWrite the abstract last — after every other section is complete. It’s a summary, not a preview. You can’t summarise something you haven’t written yet.\n\n\n\n\n3.3 Introduction\nThe Introduction builds a logical argument from existing literature to your specific research question. Think of it as a funnel:\n\nGeneral topic area — What is the broad field? (e.g., memory research)\nKey research findings — What have other researchers found? (cite specific studies)\nGap or question — What hasn’t been addressed or needs further investigation?\nYour study — What are you investigating and why?\nHypothesis — Your specific, testable prediction\n\n\nCommon mistakes in Introductions:\n\nStarting with a dictionary definition (“The Oxford Dictionary defines memory as…”)\nListing studies without connecting them (“Smith found X. Jones found Y. Brown found Z.”)\nIncluding your results\nMaking claims without citing evidence\n\n\n\n\n3.4 Method\nThe Method section describes what you did in enough detail that another researcher could replicate your study. It has four standard subsections.\n\n\n\n\n\n\nImportantYour Research Plan Practises Method Writing\n\n\n\nThe Research Plan you’re submitting this week is a standalone assessment on its own topic. But it’s structured exactly like a Method section — the same four subsections you’ll use when you write the Method for your Research Report (which is on a different topic, based on your group project).\n\n\n\n3.4.1 Design\nState your experimental design and justify it. Include:\n\nType of design (between-subjects or within-subjects)\nIndependent variable and its levels\nDependent variable and how it’s measured\n\n\nWeak: “We used a between-subjects design.”\n\n\nStrong: “A between-subjects design was used. The independent variable was word type with two levels: concrete words and abstract words. The dependent variable was the number of words correctly recalled out of 15. A between-subjects design was chosen to avoid practice and fatigue effects that could confound recall performance.”\n\nNotice the strong version includes justification — it explains why this design was chosen, not just what it is.\n\n\n3.4.2 Participants\nDescribe who took part and how they were recruited:\n\nTotal number of participants (and per condition if between-subjects)\nRecruitment method (e.g., opportunity sampling)\nKey demographics (age range, mean age, gender breakdown)\nAny inclusion or exclusion criteria\n\n\nGood example: “Twenty participants (15 female, 5 male; Mage = 21.3, SD = 2.1) were recruited via opportunity sampling from the student population at Goldsmiths, University of London. All were native English speakers aged 18 or over. Ten participants were randomly allocated to each condition.”\n\n\n\n3.4.3 Materials\nDescribe everything you used to run the study:\n\nStimuli (word lists, images, questionnaires — with examples)\nHow materials were created or sourced\nKey properties (e.g., word frequency, number of items)\nEquipment (if relevant)\n\n\nGood example: “Two word lists were constructed, each containing 15 words. The concrete list contained words referring to physical objects (e.g., hammer, bicycle, elephant). The abstract list contained words referring to concepts or qualities (e.g., freedom, honesty, courage). Lists were matched for word frequency and syllable count using the MRC Psycholinguistic Database.”\n\n\n\n3.4.4 Procedure\nDescribe what happened, step by step, in chronological order:\n\nWhat participants experienced from start to finish\nTiming of each phase\nStandardised instructions (summarised, not verbatim)\nEthical safeguards — informed consent and debriefing\n\n\nGood example: “Participants were tested individually in a quiet room. After providing written informed consent, they were presented with their assigned word list displayed on a computer screen and given two minutes to study the words. The list was then removed and participants counted backwards from 100 for one minute as a distractor task. They were then given two minutes to write down as many words as they could recall, in any order. Finally, participants were fully debriefed about the purpose of the study and thanked for their participation.”\n\n\nCommon mistakes in Method sections:\n\nToo vague — “Participants did a memory test” (What kind? How long? How scored?)\nIncluding results — Method describes what you did, not what you found\nMissing justification — State your design AND explain why\nWrong tense — Method uses past tense\nForgetting ethics — Always mention consent and debriefing\n\n\n\n\n\n3.5 Results\nThe Results section reports what you found using both descriptive and inferential statistics. A standard results paragraph for a t-test includes:\n\nDescriptive statistics — means and standard deviations for each condition\nInferential test — the t-test result with full APA notation\nEffect size — Cohen’s d with 95% confidence interval\nBrief interpretation — what the numbers mean in words\n\n\nComplete results paragraph: “Participants in the concrete word condition recalled significantly more words (M = 11.2, SD = 2.4) than those in the abstract word condition (M = 8.7, SD = 2.1). An independent-samples t-test confirmed this difference was statistically significant, t(18) = 2.48, p = .023, d = 1.11, 95% CI [0.17, 2.03]. This represents a large effect, suggesting that word concreteness has a substantial influence on free recall performance.”\n\nWe’ll cover Results reporting in full detail in the Week 19 lecture reading.\n\n\n3.6 Discussion\nThe Discussion interprets your findings and places them in context:\n\nRestate key findings (in words, not statistics)\nInterpret — what do the results mean? Were your hypotheses supported?\nRelate to literature — do your findings support or contradict previous research?\nLimitations — what could have affected the results? What would you do differently?\nFuture directions — what should researchers investigate next?\nConclusion — a brief take-home message\n\nWe’ll cover Discussion writing in the Week 20 lecture reading.\n\n\n3.7 References\nEvery source you cite in-text must appear in the reference list, and vice versa. Use APA 7th edition format.\n\nJournal article format:\nWalker, I., & Hulme, C. (1999). Concrete words are easier to recall than abstract words: Evidence for a semantic contribution to short-term serial recall. Journal of Experimental Psychology: Learning, Memory, and Cognition, 25(5), 1256–1271. https://doi.org/10.1037/0278-7393.25.5.1256\n\n\n\n\n\n\n\nTipUse a Reference Manager\n\n\n\nZotero (free) or Mendeley (free) will format your references automatically and save you hours of manual formatting. Install one now if you haven’t already.",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 16",
+      "Lecture: Regression"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w16-lecture.html#apa-writing-conventions",
+    "href": "textbook/chapters/w16-lecture.html#apa-writing-conventions",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "4 APA Writing Conventions",
+    "text": "4 APA Writing Conventions\n\n4.1 Tense\n\n\n\n\n\n\n\n\nSection\nTense\nExample\n\n\n\n\nIntroduction (established findings)\nPresent\n“Research suggests that…”\n\n\nIntroduction (specific past studies)\nPast\n“Walker and Hulme (1999) found that…”\n\n\nMethod\nPast\n“Participants were randomly allocated…”\n\n\nResults\nPast\n“The difference was statistically significant…”\n\n\nDiscussion (your findings)\nPast\n“The results showed that…”\n\n\nDiscussion (implications)\nPresent\n“These findings suggest that…”\n\n\n\n\n\n4.2 Person and Voice\n\nThird person is preferred throughout\n\n“Participants were asked to…” (not “I asked participants to…”)\n“The study aimed to…” (not “We aimed to…”)\n\nPassive voice is acceptable in Method and Results\n\n“Words were presented for two minutes”\n\nActive voice for describing others’ research\n\n“Walker and Hulme (1999) demonstrated that…”\n\n\n\n\n4.3 Statistical Notation\nKey rules:\n\nItalicise all statistical symbols: t, F, r, p, M, SD, d, n, N\nNo leading zero for statistics bounded by ±1: p = .023, r = .72\nLeading zero for statistics that can exceed ±1: M = 0.45\nExact p-values to three decimal places: p = .023 (not p &lt; .05)\nException: when p &lt; .001, report as p &lt; .001 (never p = .000)\n\n\nAPA t-test format: t(18) = 2.48, p = .023, d = 1.11, 95% CI [0.17, 2.03]",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 16",
+      "Lecture: Regression"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w16-lecture.html#two-assessments-two-studies",
+    "href": "textbook/chapters/w16-lecture.html#two-assessments-two-studies",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "5 Two Assessments, Two Studies",
+    "text": "5 Two Assessments, Two Studies\n\n\n\n\n\n\nImportant\n\n\n\nYour Research Plan (due this Friday) and your Research Report (due mid-late April) are about different topics.\n\nThe Research Plan is on the topic you chose (font difficulty, hydration, or eye contact)\nThe Research Report is based on your group project (a different study you’ll design and run together)\n\n\n\nThe Research Plan practises the same skills — hypothesis, design, participants, materials, procedure — that you’ll use again when writing the Method section of your Research Report. Think of it as a rehearsal.",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 16",
+      "Lecture: Regression"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w16-lecture.html#key-terms",
+    "href": "textbook/chapters/w16-lecture.html#key-terms",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "6 Key Terms",
+    "text": "6 Key Terms\n\nAPA format — The standardised style for writing and formatting psychology research reports, set by the American Psychological Association.\nReplication — The ability of another researcher to repeat a study using the same method. A good Method section enables replication.\nOperationalisation — Defining a variable in terms of how it is measured. For example, “memory” operationalised as “number of words correctly recalled out of 15.”\nEffect size — A standardised measure of the magnitude of a difference or relationship, independent of sample size. Cohen’s d is used for comparing two means.",
+    "crumbs": [
+      "Home",
+      "Textbook",
+      "Week 16",
+      "Lecture: Regression"
+    ]
+  },
+  {
+    "objectID": "textbook/chapters/w16-lecture.html#summary",
+    "href": "textbook/chapters/w16-lecture.html#summary",
+    "title": "Chapter 11: APA Report Writing",
+    "section": "7 Summary",
+    "text": "7 Summary\n\nAPA lab reports follow a standard seven-section structure: Title, Abstract, Introduction, Method, Results, Discussion, References\nThe report has an hourglass shape — broad to narrow to broad\nYour Research Plan practises Method writing — the same structure you’ll use for your Research Report\nUse past tense for Method and Results, present tense for established findings\nItalicise statistical symbols; no leading zero for p and r\nJustify every decision — don’t just say what, explain why\nThe Research Report builds week by week from now",
     "crumbs": [
       "Home",
       "Textbook",
@@ -23809,7 +23875,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html",
     "href": "textbook/chapters/w17-lecture.html",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "",
     "text": "EDS = Experimental Design & Statistics — the assignment due 20 March where you interpret R output and answer questions on design, analysis, and methods.\nThis chapter consolidates the content you need for two assessments:\n\nMCQ Exam (Wednesday 11 March): 36 questions — 5 scenario-based investigations (design, IV/DV, hypothesis, test, interpretation) plus 6 general questions.\nEDS Assignment (Due 20 March): Interpret R output and answer questions on hypothesis, design, descriptives, t-test, APA results, data quality, methodological improvements, individual differences, and ecological validity.\n\nThe same concepts underpin both: design types, variables, hypotheses, choosing the right test, interpreting p-values and confidence intervals, and clear reporting.",
     "crumbs": [
@@ -23822,7 +23888,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#overview",
     "href": "textbook/chapters/w17-lecture.html#overview",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "",
     "text": "EDS = Experimental Design & Statistics — the assignment due 20 March where you interpret R output and answer questions on design, analysis, and methods.\nThis chapter consolidates the content you need for two assessments:\n\nMCQ Exam (Wednesday 11 March): 36 questions — 5 scenario-based investigations (design, IV/DV, hypothesis, test, interpretation) plus 6 general questions.\nEDS Assignment (Due 20 March): Interpret R output and answer questions on hypothesis, design, descriptives, t-test, APA results, data quality, methodological improvements, individual differences, and ecological validity.\n\nThe same concepts underpin both: design types, variables, hypotheses, choosing the right test, interpreting p-values and confidence intervals, and clear reporting.",
     "crumbs": [
@@ -23835,7 +23901,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-1-mcq-design-types-and-variables",
     "href": "textbook/chapters/w17-lecture.html#part-1-mcq-design-types-and-variables",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "2 Part 1: MCQ — Design Types and Variables",
     "text": "2 Part 1: MCQ — Design Types and Variables\n\n2.1 Design Types\n\n\n\n\n\n\n\n\n\nDesign\nDescription\nIV?\nStatistical test\n\n\n\n\nBetween-participants (independent groups)\nDifferent participants in each condition; random allocation.\nYes — the condition (e.g. warm vs cool room).\nIndependent-samples t-test\n\n\nWithin-participants (repeated measures)\nSame participants in all conditions; order often counterbalanced.\nYes — the condition (e.g. gum vs no gum).\nPaired-samples t-test\n\n\nCorrelational\nTwo variables measured; no manipulation of an IV.\nNo — there is no independent variable.\nPearson’s r (or Spearman’s rho for ordinal/non-normal)\n\n\n\nMatched pairs: Different people but matched (e.g. on age); sometimes analysed with a paired test if the pairing is meaningful.\n\n\n2.2 Independent and Dependent Variables\n\nIV: What the researcher manipulates or uses to form groups. Only in experimental designs.\nDV: The outcome that is measured.\nIn correlational designs, do not label one variable as the IV — both are measured variables.\n\n\n\n2.3 One-Tailed vs Two-Tailed Hypotheses\n\nOne-tailed: Predicts the direction (e.g. “cool room will score higher”; “negative correlation between social media and self-esteem”).\nTwo-tailed: Predicts a difference or relationship without direction (e.g. “there will be a significant difference in test scores between the two temperature conditions”).",
     "crumbs": [
@@ -23848,7 +23914,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-2-mcq-choosing-the-test-and-interpreting-p",
     "href": "textbook/chapters/w17-lecture.html#part-2-mcq-choosing-the-test-and-interpreting-p",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "3 Part 2: MCQ — Choosing the Test and Interpreting p",
     "text": "3 Part 2: MCQ — Choosing the Test and Interpreting p\n\n3.1 Choosing the Right Test\n\nCorrelational design? (two measured variables, no manipulation) → Pearson’s r (or Spearman’s rho if data are ordinal or not normal).\nSame participants in both conditions? → Paired-samples t-test.\nDifferent participants in each condition? → Independent-samples t-test.\n\n\n\n3.2 p-Values and Significance\n\np &lt; .05: Statistically significant at α = .05; reject the null hypothesis; “results support the hypothesis” (if the hypothesis predicted a difference/effect).\np &gt; .05: Not statistically significant; do not reject the null.\np &lt; .01: Significant; the pattern would occur by chance less than or equal to 1 time in 100.\n\n\n\n3.3 Correlation\n\nPositive correlation: Higher on one variable tends to go with higher on the other (e.g. study hours and grades).\nNegative correlation: Higher on one tends to go with lower on the other (e.g. social media use and self-esteem).\nCorrelation does not imply causation — you cannot conclude that X causes Y from a correlation alone (confounds, direction of cause, third variables).\n\n\n\n3.4 Counterbalancing\nUsed in within-participants designs to control for order effects (e.g. practice, fatigue) by varying the order of conditions across participants.",
     "crumbs": [
@@ -23861,7 +23927,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-3-mcq-general-concepts",
     "href": "textbook/chapters/w17-lecture.html#part-3-mcq-general-concepts",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "4 Part 3: MCQ — General Concepts",
     "text": "4 Part 3: MCQ — General Concepts\n\n\n\n\n\n\n\nConcept\nWhat you need to know\n\n\n\n\nOperationalisation\nDefining a construct by how it is measured (e.g. intelligence = score on a standardised IQ test).\n\n\nReplication\nAnother researcher repeating the study; detailed procedure and materials help most for replication.\n\n\nConfounding variable\nAn uncontrolled variable that co-varies with the IV (e.g. time of day when one group is tested in the morning and the other in the evening).\n\n\nNull hypothesis\nStates that there is no significant difference or effect in the population.\n\n\np &gt; .05\nResult is not statistically significant at α = .05.\n\n\nPopulation\nThe larger group we want to generalise to; the sample is the subset we actually test.",
     "crumbs": [
@@ -23874,7 +23940,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-4-eds-section-a-statistical-mechanics",
     "href": "textbook/chapters/w17-lecture.html#part-4-eds-section-a-statistical-mechanics",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "5 Part 4: EDS Section A — Statistical Mechanics",
     "text": "5 Part 4: EDS Section A — Statistical Mechanics\n\n5.1 Stating the Experimental Hypothesis (Q1)\nWrite a clear hypothesis that refers to both the IV and the DV. It can be directional or non-directional.\n\nGood: “Participants will score higher on the working memory task when their phone is in their bag than when it is visible on the desk.”\nGood: “The presence of a smartphone will affect working memory performance.”\nAvoid: Stating the null hypothesis or a hypothesis that does not reference both variables.\n\n\n\n5.2 Design, IV, DV, Data Type (Q2)\n\nDesign: Repeated measures / within-subjects (same participants, two conditions).\nIV: Name the variable and both levels (e.g. phone visible on desk vs phone in bag).\nDV: The measured outcome (e.g. working memory score out of 25).\nData type: Ratio or interval (numeric scale suitable for means and t-tests).\n\n\n\n5.3 APA Descriptives and Interpretation (Q3)\n\nReport: “Participants scored higher when their phone was in their bag (M = 20.30, SD = 1.49) than when their phone was visible (M = 16.90, SD = 4.77).”\nInterpret: Describe the pattern (which condition had higher/lower scores, approximate difference) and note any striking difference in variability (e.g. larger SD in one condition).\n\n\n\n5.4 Paired t-Test: Why, Report, Significance, CI (Q4)\n\nWhy paired? Same participants completed both conditions; scores are naturally paired.\nReport: t = −2.36, df = 9, p = .042 (from output).\nSignificant at α = .05? Yes — p = .042 &lt; .05; reject the null.\n95% CI: The interval (e.g. [−6.66, −0.14]) estimates the true mean difference. If it excludes zero, the result is consistent with significance. A fully negative interval indicates lower scores in the first condition (e.g. phone visible) than the second (e.g. phone in bag).\n\n\n\n5.5 Full APA Results Paragraph (Q5)\nInclude: name of test, descriptive statistics (M, SD) for each condition, t(df) = value, p = value, 95% CI, and a one-sentence conclusion (e.g. whether the hypothesis was supported).\n\n\n5.6 Data Quality (Q6)\n\nIdentify outlier: Which participant, scores in each condition, and how their difference compares to others (e.g. one participant with a much larger drop in one condition).\nPlausible reason: e.g. high distraction, phone dependency, procedural issue.\nEffect on SD: An extreme score far from the mean increases the SD of that condition; removing it typically reduces SD.\nSensitivity: Report both with and without the outlier if appropriate; explain that removing an extreme case can sometimes make the test more significant (less variability in differences). Justify whether to report one or both analyses and note that the main conclusion may hold either way.",
     "crumbs": [
@@ -23887,7 +23953,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-5-eds-section-b-methods-and-theory",
     "href": "textbook/chapters/w17-lecture.html#part-5-eds-section-b-methods-and-theory",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "6 Part 5: EDS Section B — Methods and Theory",
     "text": "6 Part 5: EDS Section B — Methods and Theory\n\n6.1 Methodological Improvements (Q7)\nSuggest two improvements with clear justification. Examples: larger sample size (power, generalisability); controlling for notifications (phones silenced); measuring phone dependency; longer break between conditions; multiple cognitive tasks; screening for engagement.\n\n\n6.2 Individual Differences (Q8)\nDiscuss how heavy vs light phone users or younger vs older adults might differ in the effect, with reasoned theoretical or empirical support (e.g. attentional bias, habituation, age-related cognitive change). Marks are for quality of reasoning, not for a specific prediction.\n\n\n6.3 Ecological Validity (Q9)\nPropose a more ecologically valid study: real-world setting and task, with a clear hypothesis, IV (with levels), DV, and procedure. Explain why it is more ecologically valid (e.g. real classroom, real learning, natural phone use).",
     "crumbs": [
@@ -23900,7 +23966,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#part-6-credibility-brief-context",
     "href": "textbook/chapters/w17-lecture.html#part-6-credibility-brief-context",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "7 Part 6: Credibility (Brief Context)",
     "text": "7 Part 6: Credibility (Brief Context)\nUnderstanding why methods matter helps you see why the MCQ and EDS emphasise correct design, test choice, and reporting:\n\nP-hacking: Using flexibility in analysis to obtain p &lt; .05 inflates false positives.\nHARKing: Presenting post-hoc ideas as if they were pre-registered predictions undermines credibility.\nReplication: Many findings fail to replicate; clear methods and appropriate statistics support replicability.\n\nFor more on p-hacking, HARKing, and the replication crisis, see the open science and credibility resources in the module.",
     "crumbs": [
@@ -23913,7 +23979,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#summary-tables",
     "href": "textbook/chapters/w17-lecture.html#summary-tables",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "8 Summary Tables",
     "text": "8 Summary Tables\n\n8.1 MCQ: Design → Test\n\n\n\n\n\n\n\nDesign\nTest\n\n\n\n\nBetween-participants (2 groups)\nIndependent-samples t-test\n\n\nWithin-participants (same people, 2 conditions)\nPaired-samples t-test\n\n\nCorrelational (2 measured variables)\nPearson’s r\n\n\n\n\n\n8.2 EDS Section A Checklist\n\nExperimental hypothesis (IV + DV)\nDesign type, IV with levels, DV, data type\nAPA descriptives (M, SD) and interpretation\nWhy paired t-test; report t, df, p; significance at α = .05; interpret 95% CI\nFull APA results paragraph\nOutlier: identify, reason, effect on SD, sensitivity (with/without)\n\n\n\n8.3 EDS Section B Checklist\n\nTwo methodological improvements with justification\nIndividual differences (e.g. heavy/light users, age) — reasoned discussion\nEcological validity: hypothesis, IV, DV, procedure, and why more ecologically valid",
     "crumbs": [
@@ -23926,7 +23992,7 @@
   {
     "objectID": "textbook/chapters/w17-lecture.html#further-reading",
     "href": "textbook/chapters/w17-lecture.html#further-reading",
-    "title": "Chapter 17: MCQ & EDS Preparation",
+    "title": "Chapter 13: MCQ & EDS Preparation",
     "section": "9 Further Reading",
     "text": "9 Further Reading\n\nModule materials for Weeks 11–16 (design, t-tests, correlation).\nEDS marking scheme (for Section A and B mark allocation and model answers).\nOpen science and credibility: pre-registration, replication, effect sizes (see course resources).",
     "crumbs": [
@@ -23939,7 +24005,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html",
     "href": "textbook/chapters/w18-lecture.html",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading is designed to help you consolidate your learning and prepare for the MCQ examination. It is not a substitute for understanding the material — it is a tool for organising what you already know.\n\n\nThis reading covers:\n\nA review of key concepts from the module\nCommon misconceptions and how to avoid them\nStrategies for approaching MCQ questions\nWhat to expect on exam day",
     "crumbs": [
@@ -23952,7 +24018,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#overview",
     "href": "textbook/chapters/w18-lecture.html#overview",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading is designed to help you consolidate your learning and prepare for the MCQ examination. It is not a substitute for understanding the material — it is a tool for organising what you already know.\n\n\nThis reading covers:\n\nA review of key concepts from the module\nCommon misconceptions and how to avoid them\nStrategies for approaching MCQ questions\nWhat to expect on exam day",
     "crumbs": [
@@ -23965,7 +24031,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-1-core-concepts-review",
     "href": "textbook/chapters/w18-lecture.html#part-1-core-concepts-review",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "2 Part 1: Core Concepts Review",
     "text": "2 Part 1: Core Concepts Review\n\n2.1 The Scientific Method\nThe scientific method provides a systematic approach to understanding behaviour:\n\nKey Steps:\n\nIdentify a question — What do you want to understand?\nReview existing literature — What is already known?\nFormulate a hypothesis — Make a specific, testable prediction\nDesign a study — Plan your method carefully\nCollect data — Gather observations systematically\nAnalyse results — Use statistics to evaluate findings\nDraw conclusions — Interpret what the results mean\nReport findings — Share methods and results transparently\n\n\n\n\n\n\n\n\nNoteExam Tip\n\n\n\nQuestions may present a research scenario and ask you to identify which step of the scientific method is being described. Focus on the key action: predicting = hypothesis, measuring = data collection, interpreting = conclusions.\n\n\n\n\n2.2 Variables\nVariable: Anything that can take different values.\n\n\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nIndependent Variable (IV)\nWhat the researcher manipulates\nWord type (abstract vs concrete)\n\n\nDependent Variable (DV)\nWhat the researcher measures\nNumber of words recalled\n\n\nConfounding Variable\nAn uncontrolled variable that could explain results\nTime of day, participant fatigue\n\n\nExtraneous Variable\nAny variable other than the IV that could affect the DV\nNoise levels, room temperature\n\n\n\n\n\n\n\n\n\nImportantKey Distinction\n\n\n\n\nIV = manipulated (what the researcher changes)\nDV = measured (what the researcher records)\n\nThe DV depends on the IV. Ask yourself: “Does [DV] depend on [IV]?”\n\n\n\n\n2.3 Research Designs\n\n\n\n\n\n\n\n\nDesign\nDefinition\nKey Feature\n\n\n\n\nBetween-subjects\nDifferent participants in each condition\nCompare between groups\n\n\nWithin-subjects\nSame participants in all conditions\nCompare within individuals\n\n\nMatched pairs\nParticipants paired on key variables, then assigned to conditions\nCombines features of both\n\n\nCorrelational\nMeasures relationship between variables without manipulation\nNo IV, no causation\n\n\n\n\n\n\n\n\n\nWarningCommon Confusion\n\n\n\nIn a within-subjects design, the same person provides data for all conditions (e.g., before AND after).\nIn a between-subjects design, different people are in each condition (e.g., Group A OR Group B).\n\n\n\n\n2.4 Hypotheses\n\n\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nExperimental (H1)\nPredicts an effect or difference\n“Concrete words will be recalled better than abstract words”\n\n\nNull (H0)\nPredicts no effect or no difference\n“There will be no difference in recall between word types”\n\n\nOne-tailed\nPredicts direction\n“…will be better”\n\n\nTwo-tailed\nPredicts difference without direction\n“…will differ”\n\n\n\n\n\n2.5 Sampling\n\nPopulation: The entire group you want to generalise to.\nSample: The subset you actually study.\nSampling frame: The list from which you draw your sample.\n\n\n\n\n\n\n\n\n\n\nMethod\nDefinition\nStrength\nWeakness\n\n\n\n\nRandom\nEvery member has equal chance of selection\nUnbiased\nOften impractical\n\n\nStratified\nDivide population into subgroups, sample from each\nEnsures representation\nRequires population information\n\n\nConvenience\nWhoever is available\nEasy\nMay be unrepresentative\n\n\nSnowball\nParticipants recruit other participants\nReaches hidden populations\nNot random\n\n\n\n\n\n2.6 Experimental Control\n\nWhy control matters: If variables other than the IV differ between conditions, you cannot conclude the IV caused the difference.\nRandom assignment: Randomly allocating participants to conditions — distributes individual differences evenly across groups.\nCounterbalancing: Varying the order of conditions across participants to control for order effects.\nStandardisation: Keeping procedures identical across conditions (same instructions, same environment).",
     "crumbs": [
@@ -23978,7 +24044,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-2-statistics-concepts",
     "href": "textbook/chapters/w18-lecture.html#part-2-statistics-concepts",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "3 Part 2: Statistics Concepts",
     "text": "3 Part 2: Statistics Concepts\n\n3.1 Descriptive Statistics\n\n\n\n\n\n\n\n\nStatistic\nWhat It Tells You\nFormula\n\n\n\n\nMean\nAverage value\nSum of values / number of values\n\n\nStandard Deviation\nSpread from the mean\nHow much scores typically differ from the mean\n\n\nVariance\nAverage squared deviation\nSD squared\n\n\n\n\n\n\n\n\n\nNoteExam Tip\n\n\n\nYou may be asked to calculate a mean or identify what SD represents. Remember: SD tells you about variability — low SD means scores cluster together; high SD means scores are spread out.\n\n\n\n\n3.2 The Normal Distribution\nKey properties:\n\nSymmetrical and bell-shaped\nMean, median, and mode are equal\n68% of values within 1 SD of the mean\n95% within 2 SDs\n99.7% within 3 SDs\n\n\n\n3.3 Inferential Statistics\nThe goal: Determine whether observed differences are likely due to the IV or could have occurred by chance.\n\n\n\n\n\n\n\nConcept\nDefinition\n\n\n\n\np-value\nProbability of obtaining results at least this extreme if the null hypothesis were true\n\n\nAlpha level\nThe threshold for significance (typically .05)\n\n\nSignificance\nIf p &lt; alpha, we reject the null hypothesis\n\n\nType I error\nFalse positive — rejecting H0 when it is true\n\n\nType II error\nFalse negative — failing to reject H0 when it is false\n\n\n\n\n\n\n\n\n\nImportantCritical Understanding\n\n\n\np &lt; .05 does NOT mean:\n\nThere is a 95% chance the hypothesis is true\nThe effect is large or important\nThe study will replicate\n\nIt DOES mean: If H0 were true, results this extreme would occur less than 5% of the time by chance.\n\n\n\n\n3.4 Which Test When?\n\n\n\n\n\n\n\n\nComparison\nTest\nExample\n\n\n\n\nTwo groups (between)\nIndependent t-test\nLab A vs Lab B recall\n\n\nTwo conditions (within)\nPaired t-test\nPre vs post mood\n\n\nRelationship between variables\nCorrelation\nSelf-rating and actual accuracy\n\n\n\n\n\n3.5 Effect Size\n\nEffect size tells you the magnitude of an effect, independent of sample size.\n\nCohen’s d: For differences between means (small = 0.2, medium = 0.5, large = 0.8)\nPearson’s r: For correlations (small = 0.1, medium = 0.3, large = 0.5)\n\nA significant result with a tiny effect size may not be practically meaningful.",
     "crumbs": [
@@ -23991,7 +24057,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-3-research-credibility",
     "href": "textbook/chapters/w18-lecture.html#part-3-research-credibility",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "4 Part 3: Research Credibility",
     "text": "4 Part 3: Research Credibility\n\n4.1 Reliability and Validity\n\n\n\n\n\n\n\n\nConcept\nDefinition\nQuestion It Answers\n\n\n\n\nReliability\nConsistency of measurement\nDo you get the same result each time?\n\n\nValidity\nAccuracy of measurement\nAre you measuring what you intend to?\n\n\n\nTypes of reliability:\n\nTest-retest: Same results over time\nInter-rater: Same results across different observers\nInternal consistency: Items within a scale measure the same construct\n\nTypes of validity:\n\nFace validity: Appears to measure what it should (weakest form)\nContent validity: Covers all aspects of the construct\nCriterion validity: Predicts or correlates with relevant outcomes\nConstruct validity: Actually measures the theoretical construct\n\n\n\n4.2 Internal vs External Validity\n\nInternal validity: Can you conclude that the IV caused changes in the DV?\n\nThreatened by confounds, lack of control, order effects\n\nExternal validity: Can you generalise findings beyond this specific study?\n\nThreatened by unrepresentative samples, artificial settings\n\n\n\n\n4.3 Replication and Open Science\nKey concepts from Week 17:\n\nReplication crisis: Many published findings fail to replicate\nP-hacking: Exploiting flexibility to achieve significance\nHARKing: Presenting post-hoc hypotheses as predictions\nPublication bias: Significant results more likely to be published\nPre-registration: Documenting hypotheses before data collection",
     "crumbs": [
@@ -24004,7 +24070,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-4-common-misconceptions",
     "href": "textbook/chapters/w18-lecture.html#part-4-common-misconceptions",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "5 Part 4: Common Misconceptions",
     "text": "5 Part 4: Common Misconceptions\n\n5.1 Misconception 1: Correlation Equals Causation\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The study found a correlation between screen time and depression, so screen time causes depression.”\n\n6 Correct\nA correlation shows two variables are related, but does not establish that one causes the other. There could be reverse causation (depression leads to more screen time) or a third variable explaining both.\n\n\n\n\n\n6.1 Misconception 2: Non-significance Means “No Effect”\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The study found p = .08, so there is no relationship between the variables.”\n\n7 Correct\nNon-significance means we cannot confidently reject the null hypothesis. It does not prove H0 is true. The study may have lacked power to detect a real effect.\n\n\n\n\n\n7.1 Misconception 3: p-value Is the Probability the Hypothesis Is True\n\n\n\n\n\n\nWarningWrong\n\n\n\n“p = .03 means there is a 97% chance the hypothesis is correct.”\n\n8 Correct\nThe p-value is the probability of the data (or more extreme) given that H0 is true. It is not the probability that H1 is true.\n\n\n\n\n\n8.1 Misconception 4: Random Assignment and Random Sampling Are the Same\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Participants were randomly assigned, so the sample is representative of the population.”\n\n9 Correct\nRandom assignment (allocating to conditions) ensures groups are equivalent.\nRandom sampling (selecting from population) ensures representativeness.\nThey serve different purposes and are often confused.\n\n\n\n\n\n9.1 Misconception 5: Larger Sample Size Makes a Study “Better”\n\n\n\n\n\n\nWarningWrong\n\n\n\n“This study had 10,000 participants, so the findings must be important.”\n\n10 Correct\nLarge samples can detect very small effects. A statistically significant but tiny effect may have no practical importance. Always consider effect size alongside significance.\n\n\n\n\n\n10.1 Misconception 6: Within-subjects Designs Are Always Better\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Within-subjects designs control for individual differences, so they are always preferable.”\n\n11 Correct\nWithin-subjects designs have their own problems: order effects, practice effects, fatigue, and demand characteristics. The best design depends on the research question.",
     "crumbs": [
@@ -24017,7 +24083,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct",
     "href": "textbook/chapters/w18-lecture.html#correct",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "6 Correct",
     "text": "6 Correct\nA correlation shows two variables are related, but does not establish that one causes the other. There could be reverse causation (depression leads to more screen time) or a third variable explaining both.",
     "crumbs": [
@@ -24030,7 +24096,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct-1",
     "href": "textbook/chapters/w18-lecture.html#correct-1",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "7 Correct",
     "text": "7 Correct\nNon-significance means we cannot confidently reject the null hypothesis. It does not prove H0 is true. The study may have lacked power to detect a real effect.",
     "crumbs": [
@@ -24043,7 +24109,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct-2",
     "href": "textbook/chapters/w18-lecture.html#correct-2",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "8 Correct",
     "text": "8 Correct\nThe p-value is the probability of the data (or more extreme) given that H0 is true. It is not the probability that H1 is true.",
     "crumbs": [
@@ -24056,7 +24122,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct-3",
     "href": "textbook/chapters/w18-lecture.html#correct-3",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "9 Correct",
     "text": "9 Correct\nRandom assignment (allocating to conditions) ensures groups are equivalent.\nRandom sampling (selecting from population) ensures representativeness.\nThey serve different purposes and are often confused.",
     "crumbs": [
@@ -24069,7 +24135,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct-4",
     "href": "textbook/chapters/w18-lecture.html#correct-4",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "10 Correct",
     "text": "10 Correct\nLarge samples can detect very small effects. A statistically significant but tiny effect may have no practical importance. Always consider effect size alongside significance.",
     "crumbs": [
@@ -24082,7 +24148,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#correct-5",
     "href": "textbook/chapters/w18-lecture.html#correct-5",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "11 Correct",
     "text": "11 Correct\nWithin-subjects designs have their own problems: order effects, practice effects, fatigue, and demand characteristics. The best design depends on the research question.",
     "crumbs": [
@@ -24095,7 +24161,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-5-exam-strategies",
     "href": "textbook/chapters/w18-lecture.html#part-5-exam-strategies",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "12 Part 5: Exam Strategies",
     "text": "12 Part 5: Exam Strategies\n\n12.1 Before the Exam\n\nEffective preparation:\n\nReview actively — Do not just re-read. Test yourself, explain concepts aloud, create your own examples\nFocus on understanding — If you understand why, you can work out the answer even to unfamiliar questions\nKnow the terminology — Many questions hinge on precise definitions\nPractice with examples — Apply concepts to the DataLab tasks you completed\n\n\n\n\n12.2 Reading MCQ Questions\n\nStep 1: Read the question stem carefully\n\nWhat exactly is being asked?\nAre there key words like “BEST,” “ALWAYS,” “NEVER,” “EXCEPT”?\n\nStep 2: Try to answer before looking at options\n\nIf you know the material, your answer should match one option\nThis prevents being misled by plausible-sounding distractors\n\nStep 3: Evaluate all options\n\nEven if one looks correct, check the others\nSometimes two options are similar and one is more precise\n\nStep 4: Eliminate clearly wrong answers\n\nIf unsure, narrowing down improves your odds\n\n\n\n\n12.3 Common Question Types\nDefinition questions: &gt; “Which of the following best defines the dependent variable?”\nStrategy: Know precise definitions. The DV is what is measured, not manipulated.\nScenario questions: &gt; “A researcher compares memory performance in quiet vs noisy conditions. What is the IV?”\nStrategy: Identify what was manipulated (noise level) vs measured (memory).\n“Best” questions: &gt; “Which is the BEST example of random sampling?”\nStrategy: Look for the option that most closely matches the textbook definition. “Best” implies comparison.\n“EXCEPT” questions: &gt; “All of the following are true about correlational research EXCEPT…”\nStrategy: Find the one false statement. Mark these questions carefully — it is easy to get confused.\nInterpretation questions: &gt; “A t-test produced p = .03. Which statement is correct?”\nStrategy: Know what p-values do and do not mean. Eliminate options that make common misinterpretations.\n\n\n12.4 Time Management\n\n\n\n\n\n\nTipPacing\n\n\n\n\nNote the total number of questions and time available\nCalculate roughly how long per question\nDo not spend too long on any single question\nMark uncertain questions and return if time permits\nLeave time to review\n\n\n\n\n\n12.5 When You Are Unsure\n\nEliminate obviously wrong options — Even guessing from 2 instead of 4 doubles your odds\nLook for absolute language — Options with “always,” “never,” “only” are often wrong\nConsider what the question is testing — What concept does this relate to?\nTrust your preparation — Your first instinct, based on study, is often correct\nDo not overthink — Sometimes the straightforward interpretation is correct",
     "crumbs": [
@@ -24108,7 +24174,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-6-quick-reference-tables",
     "href": "textbook/chapters/w18-lecture.html#part-6-quick-reference-tables",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "13 Part 6: Quick Reference Tables",
     "text": "13 Part 6: Quick Reference Tables\n\n13.1 Design Identification\n\n\n\n\n\n\n\nScenario\nDesign\n\n\n\n\nGroup A gets treatment, Group B does not\nBetween-subjects\n\n\nSame participants tested before and after\nWithin-subjects\n\n\nParticipants matched on IQ, then split into conditions\nMatched pairs\n\n\nMeasuring relationship between two variables\nCorrelational\n\n\n\n\n\n13.2 Statistical Test Selection\n\n\n\n\n\n\n\nSituation\nTest\n\n\n\n\nComparing two independent groups\nIndependent t-test\n\n\nComparing two related conditions (same participants)\nPaired t-test\n\n\nExamining relationship between two continuous variables\nCorrelation\n\n\nComparing more than two groups\nANOVA (beyond this module)\n\n\n\n\n\n13.3 Validity Threats\n\n\n\n\n\n\n\nThreat\nDefinition\n\n\n\n\nConfound\nVariable that varies with the IV and could explain results\n\n\nSelection bias\nNon-random assignment leads to non-equivalent groups\n\n\nAttrition\nParticipants drop out differentially across conditions\n\n\nOrder effects\nPerformance affected by sequence of conditions\n\n\nDemand characteristics\nParticipants guess the hypothesis and change behaviour\n\n\nExperimenter effects\nResearcher unintentionally influences results",
     "crumbs": [
@@ -24121,7 +24187,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#part-7-what-to-expect",
     "href": "textbook/chapters/w18-lecture.html#part-7-what-to-expect",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "14 Part 7: What to Expect",
     "text": "14 Part 7: What to Expect\n\n14.1 Exam Format\n\nMultiple-choice questions\nEach question has one correct answer\nQuestions cover material from lectures, readings, and labs\nSome questions test recall; others test application\n\n\n\n14.2 Content Coverage\nThe exam will include questions on:\n\nThe scientific method and why it matters\nVariables: IV, DV, confounds, extraneous\nResearch designs: between, within, correlational\nHypotheses: experimental, null, one-tailed, two-tailed\nSampling methods\nDescriptive statistics: mean, SD\nInferential statistics: p-values, significance, Type I/II errors\nReliability and validity\nResearch credibility: replication, open science\n\n\n\n14.3 On the Day\n\nPractical advice:\n\nArrive early — Rushing increases anxiety\nRead instructions carefully — Note how many questions, how much time\nPace yourself — Do not get stuck on difficult questions\nStay calm — If you have studied, you are prepared\nTrust your preparation — You know more than you think",
     "crumbs": [
@@ -24134,7 +24200,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#summary",
     "href": "textbook/chapters/w18-lecture.html#summary",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "15 Summary",
     "text": "15 Summary\n\n\n\n\n\n\n\nArea\nKey Points to Review\n\n\n\n\nVariables\nIV (manipulated), DV (measured), confounds\n\n\nDesigns\nBetween, within, correlational — know the differences\n\n\nHypotheses\nExperimental vs null, directional vs non-directional\n\n\nStatistics\nMean, SD, p-values, significance\n\n\nCredibility\nReliability, validity, replication",
     "crumbs": [
@@ -24147,7 +24213,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#check-your-understanding",
     "href": "textbook/chapters/w18-lecture.html#check-your-understanding",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "16 Check Your Understanding",
     "text": "16 Check Your Understanding\nTest yourself on these questions:\n\nWhat is the difference between an IV and a DV?\nWhen would you use a within-subjects design vs a between-subjects design?\nWhat does a p-value actually tell you?\nWhat is the difference between reliability and validity?\nWhy does correlation not imply causation?\nWhat is pre-registration and why does it matter?\nWhat is the difference between Type I and Type II errors?\n\nIf you can explain each of these clearly, you are well prepared.",
     "crumbs": [
@@ -24160,7 +24226,7 @@
   {
     "objectID": "textbook/chapters/w18-lecture.html#final-thoughts",
     "href": "textbook/chapters/w18-lecture.html#final-thoughts",
-    "title": "Chapter 14: MCQ Exam Preparation",
+    "title": "Chapter 15: MCQ Exam Preparation",
     "section": "17 Final Thoughts",
     "text": "17 Final Thoughts\n\n\n\n\n\n\nTipRemember\n\n\n\nThe exam tests understanding, not memorisation. If you understand why things work the way they do — why we need control conditions, why p-values are not probabilities of hypotheses being true, why replication matters — you can reason your way through most questions.\nGood luck!",
     "crumbs": [
@@ -24173,7 +24239,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html",
     "href": "textbook/chapters/w19-lecture.html",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading provides the practical guidance you need to write the Results section of your research report. Keep it open while drafting. The examples here follow APA 7th edition format, which is the standard for psychology.\n\n\nThis reading covers:\n\nThe structure and purpose of a Results section\nHow to report t-tests in APA format\nHow to report correlations in APA format\nCreating effective tables and figures\nCommon mistakes and how to avoid them",
     "crumbs": [
@@ -24186,7 +24252,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#overview",
     "href": "textbook/chapters/w19-lecture.html#overview",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "",
     "text": "TipBefore You Begin\n\n\n\nThis reading provides the practical guidance you need to write the Results section of your research report. Keep it open while drafting. The examples here follow APA 7th edition format, which is the standard for psychology.\n\n\nThis reading covers:\n\nThe structure and purpose of a Results section\nHow to report t-tests in APA format\nHow to report correlations in APA format\nCreating effective tables and figures\nCommon mistakes and how to avoid them",
     "crumbs": [
@@ -24199,7 +24265,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-1-the-purpose-of-a-results-section",
     "href": "textbook/chapters/w19-lecture.html#part-1-the-purpose-of-a-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "2 Part 1: The Purpose of a Results Section",
     "text": "2 Part 1: The Purpose of a Results Section\n\n2.1 What Goes in Results?\nThe Results section answers one question: What did you find?\n\nInclude:\n\nDescriptive statistics (means, standard deviations)\nInferential statistics (test results, p-values)\nEffect sizes\nTables and figures summarising key findings\n\nDo NOT include:\n\nInterpretation of what the results mean (save for Discussion)\nMethodological details (those belong in Method)\nRaw data or individual scores\nLengthy prose when a table would be clearer\n\n\n\n\n2.2 The Logic of Results Reporting\nThink of your Results section as telling a story with numbers:\n\nDescribe the data (what do the numbers look like?)\nTest the hypothesis (is the difference/relationship significant?)\nQuantify the effect (how big is it?)\n\nEach analysis follows this pattern: descriptives, then inferential test, then effect size.",
     "crumbs": [
@@ -24212,7 +24278,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-2-reporting-descriptive-statistics",
     "href": "textbook/chapters/w19-lecture.html#part-2-reporting-descriptive-statistics",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "3 Part 2: Reporting Descriptive Statistics",
     "text": "3 Part 2: Reporting Descriptive Statistics\n\n3.1 Basic Format\nAlways report both the mean AND standard deviation:\n\nFormat: (M = value, SD = value)\nExample: Memory scores were moderate (M = 6.80, SD = 1.58).\n\n\n\n3.2 APA Conventions for Numbers\n\n\n\n\n\n\n\nRule\nExample\n\n\n\n\nUse numerals for statistics\nM = 6.80 (not “six point eight”)\n\n\nTwo decimal places typically\nSD = 1.58\n\n\nNo leading zero when value cannot exceed 1\np = .023 (not p = 0.023)\n\n\nUse leading zero when value can exceed 1\nd = 0.45\n\n\nItalicise statistical symbols\nM, SD, t, p, r, d, F, N, n\n\n\n\n\n\n3.3 Reporting for Two Groups\nWhen comparing conditions, report descriptives for both:\n\nExample:\nParticipants who studied concrete words (M = 7.40, SD = 1.35) recalled more words than those who studied abstract words (M = 5.80, SD = 1.62).\n\n\n\n3.4 Reporting for Two Conditions (Within-Subjects)\nFor pre-post or repeated measures:\n\nExample:\nMood ratings increased from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72).",
     "crumbs": [
@@ -24225,7 +24291,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-3-reporting-t-tests",
     "href": "textbook/chapters/w19-lecture.html#part-3-reporting-t-tests",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "4 Part 3: Reporting t-Tests",
     "text": "4 Part 3: Reporting t-Tests\n\n4.1 The Independent Samples t-Test\nUse when comparing two different groups (between-subjects design).\n\nAPA Format:\nt(df) = value, p = value, d = value\nComponents:\n\nt = the t-statistic\ndf = degrees of freedom (total N - 2 for independent t-test)\np = p-value\nd = Cohen’s d effect size\n\n\n\n\n4.2 Independent t-Test: Full Example\n\nScenario: Comparing memory scores between Lab A (abstract words) and Lab B (concrete words).\nFull write-up:\nParticipants who studied concrete words (M = 7.40, SD = 1.35) recalled significantly more words than those who studied abstract words (M = 5.80, SD = 1.62), t(38) = 3.40, p = .002, d = 1.07. This represents a large effect.\n\n\n\n4.3 The Paired Samples t-Test\nUse when comparing two conditions from the same participants (within-subjects design).\n\nAPA Format:\nt(df) = value, p = value, d = value\nNote: df = N - 1 for paired t-test (number of pairs minus 1)\n\n\n\n4.4 Paired t-Test: Full Example\n\nScenario: Comparing mood before and after the lab session.\nFull write-up:\nMood ratings increased significantly from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72), t(29) = 2.84, p = .008, d = 0.52. This represents a medium effect.\n\n\n\n4.5 Reporting Non-Significant Results\nNon-significant results are still results and should be reported:\n\nExample:\nThere was no significant difference in stress ratings between pre-session (M = 4.30, SD = 2.10) and post-session (M = 4.50, SD = 1.95), t(29) = 0.58, p = .567, d = 0.10.\n\n\n\n\n\n\n\nImportantKey Point\n\n\n\nDo NOT say “there was no effect” or “the IV had no effect.” Say “there was no significant difference.” The null result could reflect a true absence of effect, or insufficient power to detect a real effect.",
     "crumbs": [
@@ -24238,7 +24304,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-4-reporting-correlations",
     "href": "textbook/chapters/w19-lecture.html#part-4-reporting-correlations",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "5 Part 4: Reporting Correlations",
     "text": "5 Part 4: Reporting Correlations\n\n5.1 The Pearson Correlation\nUse when examining the relationship between two continuous variables.\n\nAPA Format:\nr(df) = value, p = value\nComponents:\n\nr = correlation coefficient (-1 to +1)\ndf = N - 2\np = p-value\n\n\n\n\n5.2 Interpreting Correlation Strength\n\n\n\nr value\nInterpretation\n\n\n\n\n.10 - .29\nSmall/weak\n\n\n.30 - .49\nMedium/moderate\n\n\n.50 +\nLarge/strong\n\n\n\nNote: These are guidelines, not rigid cutoffs.\n\n\n5.3 Correlation: Full Example\n\nScenario: Examining relationship between self-rated throwing ability and actual accuracy.\nFull write-up:\nThere was a significant positive correlation between self-rated throwing ability and actual throwing accuracy, r(38) = .42, p = .007. Participants who rated themselves as better throwers tended to perform better on the task. This represents a medium effect.\n\n\n\n5.4 Non-Significant Correlation\n\nExample:\nThere was no significant correlation between extraversion scores and memory performance, r(38) = .15, p = .356.\n\n\n\n\n\n\n\nWarningRemember\n\n\n\nCorrelation does NOT imply causation. Even when reporting a significant correlation, do not use causal language. Say “X was associated with Y” or “X correlated with Y,” not “X caused Y.”",
     "crumbs": [
@@ -24251,7 +24317,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-5-effect-sizes",
     "href": "textbook/chapters/w19-lecture.html#part-5-effect-sizes",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "6 Part 5: Effect Sizes",
     "text": "6 Part 5: Effect Sizes\n\n6.1 Why Report Effect Sizes?\n\nP-values tell you: Is the effect statistically significant?\nEffect sizes tell you: How big is the effect?\nA significant p-value with a tiny effect size may be trivial.\nA non-significant p-value with a large effect size may be important (and suggest the study was underpowered).\nAPA 7th edition requires effect sizes for all statistical tests.\n\n\n\n6.2 Cohen’s d (for t-tests)\n\n\n\nd value\nInterpretation\n\n\n\n\n0.20\nSmall\n\n\n0.50\nMedium\n\n\n0.80\nLarge\n\n\n\nInterpretation: A d of 0.50 means the groups differ by half a standard deviation.\n\n\n6.3 Pearson’s r (for correlations)\n\n\n\nr value\nInterpretation\n\n\n\n\n0.10\nSmall\n\n\n0.30\nMedium\n\n\n0.50\nLarge\n\n\n\nNote: r itself is the effect size for correlations.",
     "crumbs": [
@@ -24264,7 +24330,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-6-tables-and-figures",
     "href": "textbook/chapters/w19-lecture.html#part-6-tables-and-figures",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "7 Part 6: Tables and Figures",
     "text": "7 Part 6: Tables and Figures\n\n7.1 When to Use a Table\nUse tables when:\n\nYou have multiple statistics to report\nPresenting data for several groups or conditions\nThe information would be unwieldy in text\n\n\n\n7.2 Table Format (APA Style)\n\nTable 1\nDescriptive Statistics for Memory Task by Word Type\n\n\n\nCondition\nn\nM\nSD\n\n\n\n\nAbstract words\n20\n5.80\n1.62\n\n\nConcrete words\n20\n7.40\n1.35\n\n\n\nNote. Memory scores ranged from 0 to 10.\n\nAPA Table Rules:\n\nNumber tables sequentially (Table 1, Table 2…)\nProvide a descriptive title in italics\nUse horizontal lines only at top, below headers, and at bottom\nNo vertical lines\nInclude a note if needed for clarification\n\n\n\n7.3 When to Use a Figure\nUse figures when:\n\nYou want to show a pattern or trend visually\nComparing groups is easier to grasp visually\nShowing a correlation (scatterplot)\n\n\n\n7.4 Figure Format (APA Style)\n\nFigure 1\nMean Memory Scores by Word Type\n[Bar chart would appear here]\nNote. Error bars represent standard error of the mean. ** p &lt; .01.\n\nAPA Figure Rules:\n\nNumber figures sequentially (Figure 1, Figure 2…)\nProvide a descriptive title in italics\nLabel axes clearly\nInclude error bars for means (standard error or confidence interval)\nInclude a note explaining error bars and significance markers\n\n\n\n7.5 Referring to Tables and Figures in Text\nAlways refer to tables and figures in your text:\n\nGood: As shown in Table 1, participants in the concrete word condition recalled more words than those in the abstract word condition.\nGood: Figure 1 displays the mean memory scores by condition.",
     "crumbs": [
@@ -24277,7 +24343,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-7-structuring-your-results-section",
     "href": "textbook/chapters/w19-lecture.html#part-7-structuring-your-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "8 Part 7: Structuring Your Results Section",
     "text": "8 Part 7: Structuring Your Results Section\n\n8.1 Recommended Structure\n\n1. Opening statement (optional)\nBriefly orient the reader to what analyses you conducted.\n2. Descriptive statistics\nReport means and SDs for each condition/variable.\n3. Inferential test\nReport the statistical test, p-value, and effect size.\n4. Brief statement of finding\nOne sentence stating whether the result supports or does not support your hypothesis.\n5. Repeat for each analysis\nIf you have multiple hypotheses, address each in turn.\n\n\n\n8.2 Full Results Section Example\n\nResults\nMemory Task\nAn independent samples t-test was conducted to compare memory scores between conditions. Participants who studied concrete words (M = 7.40, SD = 1.35) recalled significantly more words than those who studied abstract words (M = 5.80, SD = 1.62), t(38) = 3.40, p = .002, d = 1.07. This large effect supports the hypothesis that concrete words are easier to remember than abstract words.\nPre-Post Mood\nA paired samples t-test compared mood ratings before and after the lab session. Mood ratings increased significantly from pre-session (M = 5.20, SD = 1.85) to post-session (M = 6.10, SD = 1.72), t(29) = 2.84, p = .008, d = 0.52. This medium effect supports the hypothesis that mood would improve following the session.\nSelf-Rating and Performance\nA Pearson correlation examined the relationship between self-rated throwing ability and actual performance. There was a significant positive correlation, r(38) = .42, p = .007, indicating that participants who rated themselves as better throwers tended to achieve higher accuracy scores.",
     "crumbs": [
@@ -24290,7 +24356,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-8-common-mistakes-to-avoid",
     "href": "textbook/chapters/w19-lecture.html#part-8-common-mistakes-to-avoid",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "9 Part 8: Common Mistakes to Avoid",
     "text": "9 Part 8: Common Mistakes to Avoid\n\n9.1 Mistake 1: Missing Descriptive Statistics\n\n\n\n\n\n\nWarningWrong\n\n\n\n“There was a significant difference between groups, t(38) = 3.40, p = .002.”\n\n10 Correct\nInclude the means and SDs so readers know what the difference was and in which direction.\n\n\n\n\n\n10.1 Mistake 2: Incorrect p-value Formatting\n\n\n\n\n\n\nWarningWrong\n\n\n\n\np = 0.023 (leading zero)\np = 0.00 (cannot equal zero)\np = .023 (not italicised)\n\n\n11 Correct\n\np = .023\np &lt; .001 (for very small p-values)\n\n\n\n\n\n\n11.1 Mistake 3: Interpreting in Results\n\n\n\n\n\n\nWarningWrong (in Results)\n\n\n\n“This significant difference shows that concrete words are processed more deeply, engaging semantic memory systems…”\n\n12 Correct (in Results)\n“Concrete words were recalled significantly more often than abstract words.”\nSave the interpretation for the Discussion.\n\n\n\n\n\n12.1 Mistake 4: Forgetting Effect Sizes\n\n\n\n\n\n\nWarningWrong\n\n\n\n“The difference was significant, t(38) = 3.40, p = .002.”\n\n13 Correct\nInclude Cohen’s d or another effect size measure.\n\n\n\n\n\n13.1 Mistake 5: Overclaiming from Non-Significant Results\n\n\n\n\n\n\nWarningWrong\n\n\n\n“There was no relationship between X and Y, r(38) = .15, p = .356.”\n\n14 Correct\n“There was no significant relationship…” or “The relationship was not statistically significant…”\n\n\n\n\n\n14.1 Mistake 6: Causal Language for Correlations\n\n\n\n\n\n\nWarningWrong\n\n\n\n“Higher extraversion caused better memory performance.”\n\n15 Correct\n“Higher extraversion was associated with better memory performance.”\n\n\n\n\n\n15.1 Mistake 7: Not Referring to Tables/Figures\n\n\n\n\n\n\nWarningWrong\n\n\n\nIncluding a table that is never mentioned in the text.\n\n16 Correct\n“As shown in Table 1…” or “Figure 1 displays…”\n\n\n\n\n\n16.1 Mistake 8: Rounding Errors\n\n\n\n\n\n\nWarningWrong\n\n\n\nReporting M = 6.8 when you mean M = 6.80 (use consistent decimal places).\n\n17 Correct\nUse two decimal places consistently for means, SDs, and test statistics.",
     "crumbs": [
@@ -24303,7 +24369,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct",
     "href": "textbook/chapters/w19-lecture.html#correct",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "10 Correct",
     "text": "10 Correct\nInclude the means and SDs so readers know what the difference was and in which direction.",
     "crumbs": [
@@ -24316,7 +24382,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-1",
     "href": "textbook/chapters/w19-lecture.html#correct-1",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "11 Correct",
     "text": "11 Correct\n\np = .023\np &lt; .001 (for very small p-values)",
     "crumbs": [
@@ -24329,7 +24395,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-in-results",
     "href": "textbook/chapters/w19-lecture.html#correct-in-results",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "12 Correct (in Results)",
     "text": "12 Correct (in Results)\n“Concrete words were recalled significantly more often than abstract words.”\nSave the interpretation for the Discussion.",
     "crumbs": [
@@ -24342,7 +24408,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-2",
     "href": "textbook/chapters/w19-lecture.html#correct-2",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "13 Correct",
     "text": "13 Correct\nInclude Cohen’s d or another effect size measure.",
     "crumbs": [
@@ -24355,7 +24421,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-3",
     "href": "textbook/chapters/w19-lecture.html#correct-3",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "14 Correct",
     "text": "14 Correct\n“There was no significant relationship…” or “The relationship was not statistically significant…”",
     "crumbs": [
@@ -24368,7 +24434,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-4",
     "href": "textbook/chapters/w19-lecture.html#correct-4",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "15 Correct",
     "text": "15 Correct\n“Higher extraversion was associated with better memory performance.”",
     "crumbs": [
@@ -24381,7 +24447,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-5",
     "href": "textbook/chapters/w19-lecture.html#correct-5",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "16 Correct",
     "text": "16 Correct\n“As shown in Table 1…” or “Figure 1 displays…”",
     "crumbs": [
@@ -24394,7 +24460,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#correct-6",
     "href": "textbook/chapters/w19-lecture.html#correct-6",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "17 Correct",
     "text": "17 Correct\nUse two decimal places consistently for means, SDs, and test statistics.",
     "crumbs": [
@@ -24407,7 +24473,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#part-9-checklist-for-your-results-section",
     "href": "textbook/chapters/w19-lecture.html#part-9-checklist-for-your-results-section",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "18 Part 9: Checklist for Your Results Section",
     "text": "18 Part 9: Checklist for Your Results Section\n\nBefore submitting, check that you have:\nFor each analysis:\n\nReported means and SDs for all conditions\nReported the appropriate statistical test\nReported degrees of freedom\nReported the test statistic value\nReported the exact p-value (or p &lt; .001)\nReported the effect size\nStated whether the result was significant\nConnected findings to hypotheses\n\nFormatting:\n\nUsed italics for statistical symbols\nUsed two decimal places\nOmitted leading zeros for p-values\nNumbered and titled all tables and figures\nReferenced all tables and figures in text\n\nContent:\n\nAvoided interpretation (saved for Discussion)\nReported non-significant results too\nUsed appropriate language for correlations (not causal)",
     "crumbs": [
@@ -24420,7 +24486,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#summary",
     "href": "textbook/chapters/w19-lecture.html#summary",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "19 Summary",
     "text": "19 Summary\n\n\n\nElement\nWhat to Include\n\n\n\n\nDescriptive statistics\nM, SD for each condition\n\n\nIndependent t-test\nt(df) = value, p = value, d = value\n\n\nPaired t-test\nt(df) = value, p = value, d = value\n\n\nCorrelation\nr(df) = value, p = value\n\n\nTables\nNumbered, titled, clean format\n\n\nFigures\nNumbered, titled, with error bars",
     "crumbs": [
@@ -24433,7 +24499,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#check-your-understanding",
     "href": "textbook/chapters/w19-lecture.html#check-your-understanding",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "20 Check Your Understanding",
     "text": "20 Check Your Understanding\nBefore writing your Results:\n\nWhat information should you include for a t-test?\nHow do you report a correlation in APA format?\nWhy are effect sizes important alongside p-values?\nWhat is the difference between Results and Discussion content?\nHow do you refer to a table in your text?",
     "crumbs": [
@@ -24446,7 +24512,7 @@
   {
     "objectID": "textbook/chapters/w19-lecture.html#further-reading",
     "href": "textbook/chapters/w19-lecture.html#further-reading",
-    "title": "Chapter 15: Project Workshop",
+    "title": "Chapter 17: Project Workshop",
     "section": "21 Further Reading",
     "text": "21 Further Reading\nFor additional guidance:\n\nAmerican Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.). [The definitive reference]\nPurdue OWL APA Guide: https://owl.purdue.edu/owl/research_and_citation/apa_style/\nYour course handbook for specific requirements",
     "crumbs": [
@@ -24459,7 +24525,7 @@
   {
     "objectID": "textbook/chapters/w20-lecture.html",
     "href": "textbook/chapters/w20-lecture.html",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "",
     "text": "This chapter provides guidance on writing your Research Report — the final assessment for PS50008A. Your report follows the standard APA lab report structure.",
     "crumbs": [
@@ -24472,7 +24538,7 @@
   {
     "objectID": "textbook/chapters/w20-lecture.html#overview",
     "href": "textbook/chapters/w20-lecture.html#overview",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "",
     "text": "This chapter provides guidance on writing your Research Report — the final assessment for PS50008A. Your report follows the standard APA lab report structure.",
     "crumbs": [
@@ -24485,7 +24551,7 @@
   {
     "objectID": "textbook/chapters/w20-lecture.html#lab-report-structure",
     "href": "textbook/chapters/w20-lecture.html#lab-report-structure",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "2 Lab Report Structure",
     "text": "2 Lab Report Structure\nYour report should include the following sections, in order:\n\n2.1 Title Page\n\nA clear, informative title that includes your key variables\nYour name and student number\n\n\n\n2.2 Abstract\n\n150–250 words summarising the entire study\nIncludes: aim, method (brief), key result, conclusion\nWritten last — after everything else is done\n\n\n\n2.3 Introduction\n\nFunnel structure: Start broad (topic area), narrow down (specific theory and previous research), end with your hypothesis\nDefine key terms and concepts\nExplain why this research question matters\nState your hypothesis clearly at the end\n\n\n\n2.4 Method\n\nParticipants: How many, how recruited, any relevant demographics\nDesign: Between- or within-subjects, IV (with levels), DV\nMaterials: What stimuli/measures you used\nProcedure: Step-by-step what happened (past tense)\n\n\n\n2.5 Results\n\nDescriptive statistics (M, SD) for each condition\nInferential test result in APA format\nA figure or table if appropriate\nState whether the hypothesis was supported\n\n\n\n2.6 Discussion\n\nRestate your key finding (without statistics)\nInterpret what the result means\nConnect to theory and previous research from your Introduction\nAcknowledge limitations honestly\nSuggest future directions\nBrief conclusion\n\n\n\n2.7 References\n\nAPA format for all sources cited in the report",
     "crumbs": [
@@ -24498,7 +24564,7 @@
   {
     "objectID": "textbook/chapters/w20-lecture.html#writing-tips",
     "href": "textbook/chapters/w20-lecture.html#writing-tips",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "3 Writing Tips",
     "text": "3 Writing Tips\n\nStart with Method — it’s the most straightforward section to write\nThen Results — use your analysed data from Gordon\nThen Introduction — build the argument for your hypothesis\nThen Discussion — interpret your findings\nAbstract last — summarise everything once it’s written\nProofread — check APA formatting, spelling, and clarity",
     "crumbs": [
@@ -24511,7 +24577,7 @@
   {
     "objectID": "textbook/chapters/w20-lecture.html#additional-resources",
     "href": "textbook/chapters/w20-lecture.html#additional-resources",
-    "title": "Chapter 20: Writing Your Research Report",
+    "title": "Chapter 19: Writing Your Research Report",
     "section": "4 Additional Resources",
     "text": "4 Additional Resources\n\nLecture slides from Week 20\nAPA results reporting guide from Week 19 lecture reading",
     "crumbs": [

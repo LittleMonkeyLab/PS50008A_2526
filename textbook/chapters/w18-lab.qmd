@@ -1,11 +1,11 @@
 ---
-title: "Chapter 18 Lab: Project Toolkit — Phase 2"
+title: "Chapter 16: Project Toolkit — Phase 2"
 subtitle: "Materials, Complete Procedure, and Practice Run"
 ---
 
 ## Overview
 
-This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form.
+This lab is **Phase 2** of the [Project Toolkit](../../project/project-toolkit.qmd). You will finalise stimulus materials, complete the Researcher Procedure, add the Recruitment Script and Data Recording Sheet, **practice running the study** on each other, and complete the Research Study Order Form.
 
 **Week 19 lab is data collection.** You must finish all toolkit documents in **Weeks 17 and 18** so you are ready to collect data in Week 19.
 
@@ -46,7 +46,7 @@ This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). Y
 
 **Who sees it:** Participants (during the study) and researchers.
 
-**Tips:** Match materials across conditions (e.g. word frequency, difficulty, length). See the [Project Options](project/group-project-options.qmd) and the worked example in the toolkit for your project type. Test your materials on each other before data collection day. Finalise by the end of Week 18.
+**Tips:** Match materials across conditions (e.g. word frequency, difficulty, length). See the [Project Options](../../project/group-project-options.qmd) and the worked example in the toolkit for your project type. Test your materials on each other before data collection day. Finalise by the end of Week 18.
 
 ---
 
@@ -111,4 +111,4 @@ Running the study on each other **before** data collection day helps you:
 
 Plus: **Practice run** within the group and update procedure/instructions as needed.
 
-All templates and the worked example are in the [Project Toolkit](project/project-toolkit.qmd).
+All templates and the worked example are in the [Project Toolkit](../../project/project-toolkit.qmd).

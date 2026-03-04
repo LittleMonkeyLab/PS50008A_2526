@@ -1,5 +1,5 @@
 ---
-title: "Chapter 20 Lab: Report Writing Workshop"
+title: "Chapter 20: Report Writing Workshop"
 subtitle: "Getting Started on Your Research Report"
 ---
 

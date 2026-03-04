@@ -1,6 +1,6 @@
 ---
 title: "Week 17 Lecture Reading"
-subtitle: "Interpretation & Credibility"
+subtitle: "MCQ & EDS Preparation"
 ---
 
 {{< include ../../textbook/chapters/w17-lecture.qmd >}}

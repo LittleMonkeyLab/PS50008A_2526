@@ -1,5 +1,5 @@
 ---
-title: "Chapter 20: Writing Your Research Report"
+title: "Chapter 19: Writing Your Research Report"
 subtitle: "Lab Report Structure, Discussion Sections, and Report Writing"
 ---
 

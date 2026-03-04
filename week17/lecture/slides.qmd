@@ -9,6 +9,7 @@ format:
     slide-number: c/t
     progress: true
     transition: fade
+    scrollable: true
     width: 1050
     embed-resources: true
     height: 700
@@ -16,9 +17,18 @@ format:
     center-title-slide: true
 ---
 
+## The Road Ahead
+
+| Week | Lecture | Lab |
+|------|---------|-----|
+| **17** | **EDS & MCQ prep** | **Toolkit Phase 1** |
+| 18 | MCQ Exam | Toolkit Phase 2 |
+| 19 | Results & feedback | Data collection |
+| 20 | Report writing | Writing workshop |
+
 ## Learning Objectives
 
-**EDS = Experimental Design & Statistics** (the assignment due 20 March)
+**EDS = Experimental Design & Statistics** (the assignment due 20 March - paper released after this session)
 
 By the end of this lecture, you will be able to:
 
@@ -35,6 +45,7 @@ By the end of this lecture, you will be able to:
 
 ::: {.callout-important}
 ## Exam: Wednesday 11 March
+
 - **36 questions** total
 - **5 investigations** (6 questions each) — scenario + design, IV, DV, hypothesis, test, interpretation
 - **6 general questions** — operationalisation, replication, confounding, null hypothesis, p-value, population
@@ -79,6 +90,7 @@ MCQ often asks: "What was the researcher's two-tailed hypothesis?" → Look for 
 
 ::: {.example-box}
 **Decision rule:**
+
 1. **Correlational design?** → Pearson's r (two continuous variables).
 2. **Same participants in both conditions?** → Paired-samples t-test.
 3. **Different participants in each condition?** → Independent-samples t-test.
@@ -137,8 +149,11 @@ MCQ: "Why did the researcher counterbalance?" → To control for **practice or f
 
 ## EDS Assignment Reminder (Experimental Design & Statistics)
 
+Paper released after this session today!
+
 ::: {.callout-important}
 ## Due: 20 March | 100 marks
+
 - **Section A (50 marks)**: Statistical mechanics — hypothesis, design/IV/DV/data, descriptives, t-test, APA results paragraph, data quality
 - **Section B (50 marks)**: Methods and theory — improvements, individual differences, ecological validity
 - You interpret **R output**; no coding or hand calculations
@@ -151,6 +166,7 @@ State a **clear** hypothesis that references both the IV and the DV. Can be dire
 :::
 
 **Example (phone presence study):**  
+
 "That participants will score higher on the working memory task when their phone is in their bag compared to when it is visible on the desk."  
 Or: "That the presence of a smartphone will affect working memory performance."
 
@@ -174,9 +190,11 @@ Nominal/ordinal are not appropriate for t-tests on means; ratio/interval are.
 ## APA Descriptives and Interpretation (EDS Q3)
 
 **Report:**  
+
 "Participants scored higher when their phone was in their bag (M = 20.30, SD = 1.49) than when their phone was visible (M = 16.90, SD = 4.77)."
 
 **Interpret:**  
+
 Having the phone visible was associated with lower working memory performance on average; the difference is about 3.4 points. Note the larger SD in the phone-visible condition (more variability).
 
 ## Why Paired t-Test? (EDS Q4a)
