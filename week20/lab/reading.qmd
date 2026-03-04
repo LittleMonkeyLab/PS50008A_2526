@@ -1,6 +1,23 @@
 ---
 title: "Week 20 Lab Reading"
-subtitle: "Report Writing"
+subtitle: "APA Results, module evaluation, and report workshop"
 ---
+
+## This week on the site
+
+::: {.callout-note}
+## Your analysis return
+**[Data Analysis I — Group Returns](../analysis-showcase.qmd)** replaces the Wednesday lecture. Each group has a **preview image** with descriptives, tests, and a plot — use it to draft **Results** in prose (and build proper figures for submission).
+:::
+
+## Module evaluation
+
+::: {.callout-tip}
+## Please complete the evaluation
+Goldsmiths runs **module evaluations** each term. Your honest feedback (what worked, what didn’t) is **anonymous** and directly shapes how we teach next year.
+
+- Check **Learn.gold** for the link and deadline (often flagged in the module menu or announcements).
+- It only takes a few minutes — thank you if you’ve already done it.
+:::
 
 {{< include ../../textbook/chapters/w20-lab.qmd >}}

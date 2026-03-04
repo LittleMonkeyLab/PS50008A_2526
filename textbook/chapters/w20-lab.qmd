@@ -5,7 +5,7 @@ subtitle: "Getting Started on Your Research Report"
 
 ## Overview
 
-This chapter supports the report writing workshop. By this point Gordon has returned your analysed data — now you need to write it up as a complete Research Report.
+This chapter supports the **final lab**: turning your **returned analysis** (see the Week 20 **[analysis showcase](../../week20/analysis-showcase.qmd)** on the site) into clean **APA-style Results** text and finishing the rest of the Research Report.
 
 ## Getting Started
 
@@ -29,11 +29,12 @@ Don't write the report front-to-back. Instead:
 ## Key Reminders
 
 ### Results Section
-- Report M and SD for each condition
-- Report the inferential test (t-test) in APA format: *t*(df) = X.XX, *p* = .XXX
+- Report *M* and *SD* for each condition (from your return sheet or your own tables)
+- Report the inferential test in APA format: *t*(df) = X.XX, *p* = .XXX (or *F*, *r*, etc., as appropriate)
 - State whether the result was significant at α = .05
-- Include a figure (e.g., bar chart with error bars) if appropriate
-- State whether the hypothesis was supported
+- **Figures**: the website **preview** is a guide — for submission, use a **proper figure** (e.g. bar chart with error bars) with an APA **Figure caption** below the figure (number, title, note if needed)
+- Do **not** paste the preview PNG as your only Results content; **write** the statistics into sentences and paragraphs
+- State whether the hypothesis was supported (still in Results: factual alignment with prediction; deeper interpretation belongs in Discussion)
 
 ### Discussion Section
 - Start by restating your main finding in plain language (no statistics)
@@ -47,4 +48,5 @@ Don't write the report front-to-back. Instead:
 
 - [Project Toolkit](../../project/project-toolkit.qmd) — your document reference
 - Week 19 lecture reading — APA results reporting guidelines
-- Week 20 lecture slides — discussion section writing guidance
+- Week 20 **analysis showcase** — group-level analysis previews
+- Week 20 lecture reading — discussion section writing guidance (optional)

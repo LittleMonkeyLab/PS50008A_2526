@@ -3,4 +3,9 @@ title: "Week 20 Lecture Reading"
 subtitle: "Wrapping Up"
 ---
 
+::: {.callout-important}
+## Wednesday lecture cancelled
+There is **no on-campus lecture** this week. Start from **[Data Analysis I — Group Returns](../analysis-showcase.qmd)** for your returned analysis previews, then use **Thursday lab** materials for APA integration.
+:::
+
 {{< include ../../textbook/chapters/w20-lecture.qmd >}}

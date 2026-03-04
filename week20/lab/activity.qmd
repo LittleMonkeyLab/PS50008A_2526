@@ -1,5 +1,5 @@
 ---
-title: "Report Writing Workshop"
+title: "APA Results, Evaluations, and Report Workshop"
 subtitle: "PS50008A Week 20 Lab Activity"
 author: "Gordon Wright"
 date: "2026-03-25"
@@ -24,14 +24,40 @@ library(knitr)
 ## Overview
 
 ::: {.callout-important}
-## Focus for Today
-This workshop focuses on **writing up your research**. By the end, you should understand:
+## Final lab — thank you
+This is our **last scheduled lab**. Today we focus on turning your **returned analysis** (the **[group preview images](../analysis-showcase.qmd)** on the site) into proper **APA Results** prose, remind everyone about the **module evaluation**, and give you time to write with support.
 
-- How to structure a Results section
-- How to create effective figures
-- How to write a Discussion section
-- How to integrate all sections into a coherent report
+**Thank you** for your energy, questions, and teamwork this year — it’s been a pleasure.
 :::
+
+::: {.callout-note}
+## Module evaluation
+Please complete the **module evaluation** on **Learn.gold** when you can (link is usually in the module menu or an announcement). It’s short, anonymous, and genuinely useful for next year’s students.
+:::
+
+---
+
+## Activity 0: From preview image to Results paragraph (20 min)
+
+### Your task
+
+1. Open **[Data Analysis I — Group Returns](../analysis-showcase.qmd)** and find **your group**.
+2. On paper or in a draft document, **list every number** you might report: *N*, *M*, *SD* per condition/cell, test statistic, *df*, *p*, effect size (if shown).
+3. Write **one paragraph** of Results text that:
+   - States the design in one short phrase (e.g. independent groups / repeated measures) if needed
+   - Gives descriptives (*M*, *SD*) for each relevant condition
+   - Reports the inferential test in **APA format** (*t*, *F*, or *r* with *df* and *p*)
+   - States clearly whether the test was **significant at α = .05** (without interpreting *why* — that’s Discussion)
+
+::: {.callout-tip collapse="true"}
+## Checklist — APA Results (quick)
+- Italicise *t*, *F*, *r*, *p*, *M*, *SD*, *N*
+- Degrees of freedom in parentheses: *t*(df), *F*(df1, df2)
+- Exact *p* when available (e.g. *p* = .023), or *p* \< .001
+- No causal claims or theory in Results — only what the test showed
+:::
+
+**Peer check (10 min):** Swap paragraphs with someone from **another** group. Can they see *M*/*SD*, test, and *p* without looking at your image?
 
 ---
 

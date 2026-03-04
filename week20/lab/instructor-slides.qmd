@@ -1,5 +1,5 @@
 ---
-title: "Report Writing Workshop"
+title: "APA Results, Evals, and Goodbye"
 subtitle: "PS50008A Week 20 Lab"
 author: "Gordon Wright"
 date: "2026-03-26"
@@ -18,22 +18,39 @@ format:
 
 # Welcome to Lab {background-color="#275882"}
 
-## Report Writing Workshop
+## Final lab — PS50008A
 
 ---
 
-## Final Lab of the Module!
+## Thank you
 
-::: {.callout-important}
-## Last Teaching Session
+::: {.concept-box}
+**Seriously — thank you.**
 
-This is your final PS50008A lab session. Use it well!
+You’ve run a real study, wrestled with design and data, and stuck with it through a packed term. That takes effort and courage. It’s been a **fab year** — I’ve loved teaching this group.
+:::
 
-After today, support continues via:
+---
 
-- Office hours (until submission deadline)
-- Discussion board on Learn.gold
-- Writing Centre appointments
+## Wednesday lecture
+
+::: {.callout-note}
+## Cancelled on campus — material is online
+**No live lecture.** Replacements: **[Data Analysis I — Group Returns](../analysis-showcase.qmd)** — one **preview image per group** (descriptives, tests, plot).
+
+Today = how to turn that into **APA Results** (and the rest of the report).
+:::
+
+---
+
+## Module evaluation
+
+::: {.poll-box}
+**Learn.gold — module evaluation**
+
+- Link usually in the module menu or an announcement
+- Short, **anonymous**, shapes next year’s teaching
+- If you’ve already done it: thank you; if not: please do when you can
 :::
 
 ---
@@ -41,109 +58,57 @@ After today, support continues via:
 ## Today's Focus
 
 ::: {.objectives-box}
-**Report Writing Workshop**
+**This session**
 
-Today you will:
-
-- Compile and review your group data
-- Begin preliminary analysis
-- Understand the lab report structure
-- Start drafting sections of your Research Report
-- Identify remaining questions and get answers
+- Extract statistics from your **returned preview** (or your own R output)
+- Write **Results** in **APA prose** — not just screenshots
+- **Figures** for submission: proper chart + **caption** (preview is a guide)
+- Time to **draft** with support + **Q&A**
 :::
 
 ---
 
-## Session Structure (~90 min)
+## Session structure (~2 hrs)
 
 | Time | Activity |
 |------|----------|
-| 10:00-10:20 | Data compilation and review |
-| 10:20-10:40 | Lab report structure overview |
-| 10:40-11:20 | Guided writing workshop |
-| 11:20-11:45 | Individual writing time with support |
-| 11:45-12:00 | Final Q&A and next steps |
+| 10:00–10:15 | Welcome, evals, roadmap |
+| 10:15–10:35 | From preview PNG → Results paragraph (see activity) |
+| 10:35–11:15 | Report structure recap + APA examples |
+| 11:15–11:45 | Writing time + circulation |
+| 11:45–12:00 | Final Q&A, submission timeline, goodbye |
 
 ---
 
-# Data Compilation {background-color="#275882"}
+# From image to APA {background-color="#275882"}
 
-## Bringing It Together (~20 min)
-
----
-
-## Data Status Check
-
-::: {.poll-box}
-**Quick check around the room:**
-
-- How many participants did each group collect in total?
-- Did everyone reach their target N?
-- Any groups with data collection issues?
-:::
+## The preview is not your Results section
 
 ---
 
-## Compiling Your Data
+## Do / Don’t
 
 ::: {.definition-box}
-**If you used paper data sheets:**
+**Do**
 
-1. Gather all sheets together
-2. Check for completeness
-3. Enter into a spreadsheet (Excel/Google Sheets)
-4. Double-check entries against original
+- Copy **numbers** into sentences (*M*, *SD*, *t*, *df*, *p*, effect sizes)
+- Rebuild **figures** cleanly for the report + **Figure 1.** caption below
 
-**If you used digital collection:**
+**Don’t**
 
-1. Export your data
-2. Check for missing values
-3. Verify all participants are included
+- Paste the website PNG as the only “results”
+- Interpret theory or “prove” hypotheses in Results — save for **Discussion**
 :::
 
 ---
 
-## Data Organisation
-
-::: {.example-box}
-**Good spreadsheet structure:**
-
-| participant_id | condition | dv_score | age | gender |
-|----------------|-----------|----------|-----|--------|
-| 1 | music | 7 | 19 | F |
-| 2 | silence | 9 | 20 | M |
-| 3 | music | 6 | 19 | F |
-
-- One row per participant
-- One column per variable
-- Clear variable names
-- No merged cells
-:::
-
----
-
-## Activity: Compile Data
-
-::: {.exercise-box}
-**In your groups (15 minutes):**
-
-1. Pool all data from group members
-2. Enter into a single spreadsheet (if not already)
-3. Calculate your total N
-4. Check for any obvious errors or outliers
-5. Note any excluded participants and why
-:::
-
----
-
-## Checkpoint 1
+## Checkpoint
 
 ::: {.poll-box}
-**Instructor Check:**
+**Quick room check**
 
-- Is everyone's data compiled?
-- Any groups with N below target?
-- Any data quality concerns?
+- Who has opened their group’s preview on the site?
+- Any questions on which test or which *df* to report?
 :::
 
 ---

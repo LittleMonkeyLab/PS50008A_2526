@@ -248,17 +248,25 @@ Each group will be given a shared folder on OneDrive. All your project documents
 
 ## What You'll Get Back: Data Analysis I
 
-After your group collects data in Week 19, I'll run the analysis and return a one-page summary like this — personalised to your group:
+After your group collects data, I'll run the analysis and return a one-page summary like this — personalised to your group. The tabbed examples below show the **layout** you can expect (between-subjects, within-subjects / paired, and a second between-subjects style).
 
 ::: {.panel-tabset}
 
-### Between-Subjects Example
+### TedImoBea (between-subjects)
 
-![Preview of analysis return for between-subjects groups](analysis-preview-between.png){width="90%"}
+![Data Analysis I return — TedImoBea](analysis-preview-TedImoBea.png){width="90%"}
 
-### Within-Subjects Example
+### JFKz Girlies (between-subjects)
 
-![Preview of analysis return for within-subjects groups](analysis-preview-within.png){width="90%"}
+![Data Analysis I return — JFKz Girlies](analysis-preview-JFKz-Girlies.png){width="90%"}
+
+### DNM (within-subjects / paired)
+
+![Data Analysis I return — DNM](analysis-preview-DNM.png){width="90%"}
+
+### The Boyz (between-subjects — wide CSV: one column per group)
+
+![Data Analysis I return — The Boyz](analysis-preview-The-Boyz.png){width="90%"}
 
 :::
 

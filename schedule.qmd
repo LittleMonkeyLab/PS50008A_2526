@@ -142,9 +142,9 @@ There is no lecture in Week 11 due to employability events.
 **Week 20: Wrapping Up**
 
 - **EDS Assignment due Friday**
-- Lecture: Project data showcase, lab report structure, discussion sections
-- Lab: Final analysis support and report writing
-- *Report writing: Discussion section — interpreting findings, limitations, implications*
+- **Lecture cancelled** — *Data Analysis I* group returns on the site (preview images); use Thursday lab for APA Results integration
+- Lab: APA-style Results from returned output, module evaluation, report workshop & thank you
+- *Report writing: Results from returned summaries; Discussion — interpreting findings, limitations, implications*
 
 ## Key Dates Summary
 

@@ -104,17 +104,33 @@ You work together to design and run a study. Then each person writes their own i
 
 ---
 
-## What You'll Get Back: Data Analysis I — Between-Subjects
+## What You'll Get Back: Data Analysis I — Layout examples
 
-After your group collects data in **Week 19**, I'll run the analysis and return a one-page summary like this:
-
-![](analysis-preview-between.png){width="75%" fig-align="center"}
+After your group collects data, I'll run the analysis and return a one-page summary like this — **personalised to your group**. The slides that follow show example layouts only (between-subjects, paired / within-subjects).
 
 ---
 
-## What You'll Get Back: Data Analysis I — Within-Subjects
+## TedImoBea (between-subjects layout)
 
-![](analysis-preview-within.png){width="75%" fig-align="center"}
+![](analysis-preview-TedImoBea.png){width="75%" fig-align="center"}
+
+---
+
+## JFKz Girlies (between-subjects layout)
+
+![](analysis-preview-JFKz-Girlies.png){width="75%" fig-align="center"}
+
+---
+
+## DNM (paired / within-subjects layout)
+
+![](analysis-preview-DNM.png){width="75%" fig-align="center"}
+
+---
+
+## The Boyz (between-subjects — two columns = two independent groups)
+
+![](analysis-preview-The-Boyz.png){width="75%" fig-align="center"}
 
 ::: {.callout-tip}
 ## Your Job

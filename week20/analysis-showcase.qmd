@@ -1,0 +1,59 @@
+---
+title: "Data Analysis I — Group Returns"
+subtitle: "Preview summaries for your Research Report (Week 20)"
+author: "Gordon Wright"
+date: "2026-03-23"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+::: {.callout-important}
+## Wednesday lecture — not running on campus
+There is **no live lecture** this week. Use this page instead: it shows **preview images** of the analysis run on your group’s pooled data (Data Analysis I). Use the numbers and plots here to help draft your **Results** section in APA format — see the **Thursday lab** materials for integration tips.
+:::
+
+## How to use these previews
+
+Each image is a **static summary** (descriptive statistics, assumption checks where relevant, inferential test, and a simple plot). They are **starting points** for your write-up:
+
+- Copy **M**, **SD**, *N*, test statistics, *p*-values, and effect sizes into your Results text (don’t screenshot the image as your only “result”).
+- **Figures in your report** should be high quality (your own reproduction in R or equivalent), with a **Figure caption** below the figure (APA style).
+- If anything looks unclear, bring questions to **lab** or **office hours**.
+
+---
+
+## TedImoBea
+
+![Analysis preview: TedImoBea](../week16/lab/analysis-preview-TedImoBea.png){fig-alt="Summary of descriptive statistics, tests, and plot for group TedImoBea" width="100%"}
+
+---
+
+## JFKz Girlies
+
+![Analysis preview: JFKz Girlies](../week16/lab/analysis-preview-JFKz-Girlies.png){fig-alt="Summary of descriptive statistics, tests, and plot for group JFKz Girlies" width="100%"}
+
+---
+
+## DNM
+
+![Analysis preview: DNM](../week16/lab/analysis-preview-DNM.png){fig-alt="Summary of descriptive statistics, tests, and plot for group DNM" width="100%"}
+
+---
+
+## The Boyz
+
+::: {.callout-note collapse="true"}
+## Design note
+This study was **two independent groups** (not smiling vs smiling). The original spreadsheet used **one column per group** (wide format) rather than one row per participant — that’s fine for a first project; the preview analysis treats each column as a separate sample and uses an **independent samples** *t*-test.
+:::
+
+![Analysis preview: The Boyz](../week16/lab/analysis-preview-The-Boyz.png){fig-alt="Summary of descriptive statistics, tests, and plot for group The Boyz" width="100%"}
+
+---
+
+## Next steps
+
+- **Thursday lab**: integrating these outputs into APA-style Results paragraphs, module evaluation, and final Q&A.
+- **Research Report**: continue with Method → Results → Introduction → Discussion → Abstract (see [Lab reading](lab/reading.qmd) and the [Project toolkit](../project/project-toolkit.qmd)).

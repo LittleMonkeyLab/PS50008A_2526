@@ -1,6 +1,6 @@
 ---
 title: "Week 20: Wrapping Up"
-subtitle: "PS50008A Research Methods | 23-27 March 2026"
+subtitle: "PS50008A Research Methods | 23–27 March 2026"
 author: "Gordon Wright"
 date: "2026-03-23"
 ---
@@ -8,115 +8,77 @@ date: "2026-03-23"
 ## Overview
 
 ::: {.callout-important}
-## Final Week of Teaching
-This is your last week of PS50008A lectures and labs. Gordon returns your analysed project data this week — use it to start your Research Report.
+## Final week of scheduled teaching
+This is the last **lab** week of PS50008A. Your **Data Analysis I** returns are on the site — use them to draft your **Results** section. **Thank you** for a brilliant year of curiosity, graft, and good humour.
 :::
 
 ::: {.callout-warning}
-## Upcoming Assessment
-**Research Report DUE: Mid-late April (exact date TBC)**
-
-Your final assessment. Start planning your write-up now!
+## Upcoming assessment
+**Research Report — due mid–late April** (exact date on Learn.gold). Start your write-up now if you haven’t already.
 :::
 
-**This week**: Gordon returns your analysed data. Learn to structure lab reports and master discussion sections. The lab is a dedicated report writing workshop.
+**This week**
 
-**Lecture**: Wednesday 10:00-12:00 RHBD 143
-**Lab**: Thursday 10:00-12:00 WB304A and WB304B
+- **Wednesday lecture — cancelled (no on-campus session).** Instead, use **[Data Analysis I — Group Returns](analysis-showcase.qmd)**: preview images of the analysis on each group’s data.
+- **Thursday lab (10:00–12:00, WB304A / WB304B)**: weaving analysis outputs (like the returned summaries / your own plots) into **APA-style Results** text, **module evaluation** reminder, and a proper send-off.
 
-## Learning Objectives
+## Learning objectives
 
 By the end of this week, you will be able to:
 
-- Present and interpret your project group's data
-- Structure a complete APA-style lab report
-- Write an effective discussion section
-- Identify common pitfalls in research report writing
-- Create a realistic timeline for report completion
+- Read your group’s returned analysis preview and extract statistics for reporting
+- Integrate **numbers, tests, and figures** into an APA-style **Results** section
+- Know where and how to complete the **module evaluation**
+- Plan a realistic timeline to finish the **Research Report**
 
-## Before the Lecture
+## Before Thursday lab
 
 ::: {.callout-note}
 ## Preparation
-1. **Review your project group data** — Gordon will return your analysed data this week
-2. **Read the lab report structure guide** — in the lecture reading
-3. **Bring questions about your Research Report** — final opportunity for guidance
+1. Open **[your group’s preview](analysis-showcase.qmd)** and note *M*, *SD*, *N*, test results, and what the plot shows.
+2. Skim the [lab reading](lab/reading.qmd) — Results reminders and report order.
+3. Bring **questions** about APA wording or your specific analysis.
 :::
 
-## The Big Picture
+## The big picture
 
-This week brings everything together:
-
-- **Project Data Showcase**: See what different groups discovered and compare approaches
-- **Lab Report Structure**: Complete overview of all sections (Title, Abstract, Introduction, Method, Results, Discussion, References)
-- **Discussion Sections**: The most challenging section — how to interpret findings and connect to theory
-
-The lab is a **Report Writing Workshop** where you'll begin drafting your Research Report with support available.
+- **Returned summaries** → **Results section** (APA prose + proper figures/tables)
+- **Discussion** still interprets meaning; **Results** only states what was found
+- **Module evaluation** — your feedback genuinely improves the module for next year
 
 ## Materials
 
 | Resource | Description |
 |----------|-------------|
-| [Lecture Slides](lecture/slides.html){target="_blank"} | Project showcase, report structure, discussion writing |
-| [Lecture Reading](lecture/reading.qmd) | Complete lab report structure guide |
-| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Report writing workshop |
-| [Lab Activity](lab/activity.qmd) | Report writing exercises and templates |
-| [Lab Reading](lab/reading.qmd) | Discussion section writing guide |
+| **[Data Analysis I returns (showcase)](analysis-showcase.qmd)** | **Replaces Wednesday lecture** — preview images per group |
+| [Lecture reading](lecture/reading.qmd) | Report structure / discussion support (optional reading) |
+| [Lecture slides](lecture/slides.html){target="_blank"} | Short notice: session cancelled — use showcase |
+| [Lab slides](lab/instructor-slides.html){target="_blank"} | APA Results integration, evals, wrap-up |
+| [Lab activity](lab/activity.qmd) | Checklists and practice |
+| [Lab reading](lab/reading.qmd) | APA Results + full workshop chapter |
 
-## Week at a Glance
+## Week at a glance
 
 | Day | Session | Focus |
-|-----|---------|-------|
-| Wednesday | Lecture (2 hrs) | Project data showcase, lab report structure, discussion sections |
-| Thursday | Lab (2 hrs) | Report writing workshop |
+|-----|---------|--------|
+| Wednesday | *Lecture cancelled* | Use **[analysis showcase](analysis-showcase.qmd)** online |
+| Thursday | Lab (2 hrs) | APA Results from returned output, module eval, thank you |
 
-## Key Concepts
+## Research report timeline
 
-### Lab Report Structure
-- **Title**: Concise, informative, includes key variables
-- **Abstract**: 150-250 words summarising the entire study
-- **Introduction**: Funnel structure — broad to specific, ending with hypotheses
-- **Method**: Participants, Design, Materials, Procedure
-- **Results**: Descriptives, inferential statistics, figures/tables
-- **Discussion**: Interpret, compare to literature, limitations, implications
-
-### Discussion Section Writing
-- **Restate key findings**: What did you find? (without statistics)
-- **Interpret results**: What do they mean?
-- **Connect to literature**: How do findings relate to previous research?
-- **Acknowledge limitations**: What could have been done differently?
-- **Future directions**: What should researchers investigate next?
-- **Conclusion**: Take-home message
-
-### Report Writing Tips
-- Start with the Method section (easiest to write)
-- Use your analysed data for the Results section
-- Allow time for proofreading and formatting
-- Check APA guidelines for citations and references
-
-## Research Report Timeline
-
-| Date | Milestone |
+| When | Milestone |
 |------|-----------|
-| Week 20 (Now) | Gordon returns data; begin drafting Method and Results |
-| Easter break | Complete Introduction and Results with figures |
-| After Easter | Write Discussion section; final proofreading and formatting |
-| **Mid-late April** | **Submit via Learn.gold by 12 noon** (exact date TBC) |
+| Week 20 | Returns on site; draft **Results**; complete **module evaluation** |
+| After teaching | **Discussion**, **Introduction**, **Abstract**; figures polished |
+| **Submission** | Learn.gold by **12:00 noon** on the published deadline |
 
-## Connecting to Assessments
-
-| Assessment | Connection |
-|------------|------------|
-| **Research Report** | This week provides the complete framework for your final submission |
-| **All previous weeks** | Your report integrates everything: design, analysis, APA reporting |
-
-## Final Reminders
+## Support after Thursday
 
 ::: {.callout-tip}
-## Support After Teaching Ends
-- **Office hours**: Thursdays 12:00-13:00, WHBD 200/2 — continue until the submission deadline
-- **Discussion board** on Learn.gold remains active
-- **Writing Centre** appointments available for academic writing support
+## Still here to help
+- **Office hours**: Thursdays 12:00–13:00, WHBD 200/2 — until the report deadline
+- **Learn.gold** discussion board
+- **Goldsmiths Writing Centre** for academic writing
 :::
 
-Thank you for your engagement throughout PS50008A. Good luck with your Research Report!
+Thank you again — it’s been a pleasure. Good luck with the Research Report.

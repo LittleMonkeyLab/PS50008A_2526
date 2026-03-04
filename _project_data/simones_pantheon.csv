@@ -1,0 +1,41 @@
+participant_id,condition,recall_score
+A01,No music,8
+A02,No music,7
+A03,No music,9
+A04,No music,6
+A05,No music,8
+A06,No music,7
+A07,No music,9
+A08,No music,8
+A09,No music,6
+A10,No music,7
+A11,No music,8
+A12,No music,9
+A13,No music,7
+A14,No music,8
+A15,No music,6
+A16,No music,9
+A17,No music,7
+A18,No music,8
+A19,No music,7
+A20,No music,8
+B01,Music,5
+B02,Music,4
+B03,Music,6
+B04,Music,3
+B05,Music,5
+B06,Music,4
+B07,Music,5
+B08,Music,6
+B09,Music,3
+B10,Music,4
+B11,Music,5
+B12,Music,4
+B13,Music,6
+B14,Music,3
+B15,Music,5
+B16,Music,4
+B17,Music,5
+B18,Music,6
+B19,Music,3
+B20,Music,4
