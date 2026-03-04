@@ -356,25 +356,25 @@ website:
           href: textbook/chapters/w15-lab.qmd
       - section: Week 16
         contents:
-        - text: 'Lecture: Regression'
+        - text: 'Lecture: APA Report Writing'
           href: textbook/chapters/w16-lecture.qmd
         - text: 'Lab: Project Groups'
           href: textbook/chapters/w16-lab.qmd
       - section: Week 17
         contents:
-        - text: 'Lecture: Interpretation & Credibility'
+        - text: 'Lecture: MCQ & EDS Review'
           href: textbook/chapters/w17-lecture.qmd
         - text: 'Lab: Project Groups'
           href: textbook/chapters/w17-lab.qmd
       - section: Week 18
         contents:
-        - text: 'Lecture: MCQ Exam Prep'
+        - text: 'Lecture: MCQ Exam'
           href: textbook/chapters/w18-lecture.qmd
         - text: 'Lab: Project Groups'
           href: textbook/chapters/w18-lab.qmd
       - section: Week 19
         contents:
-        - text: 'Lecture: Project Workshop'
+        - text: 'Lecture: MCQ Results & Feedback'
           href: textbook/chapters/w19-lecture.qmd
         - text: 'Lab: Data Collection'
           href: textbook/chapters/w19-lab.qmd
