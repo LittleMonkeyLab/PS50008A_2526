@@ -387,6 +387,22 @@ render_between_csv(
   fill_colours = c(BM = navy, NBM = light_orange)
 )
 
+# Perfume — sleep and identification accuracy (out of five); expanded from perfume.csv seed
+render_between_csv(
+  file.path(data_dir, "perfume_expanded.csv"),
+  file.path(lab_dir, "analysis-preview-Perfume.png"),
+  title_line = "Sleep and perfume identification accuracy",
+  group_line = "Perfume",
+  members_line = "",
+  var_grob_text = "IV: Sleep night before (\u22647 h vs \u22658 h)          DV: Identification accuracy (out of five)",
+  condition_col = "Sleep_group",
+  value_col = "Identification_accuracy",
+  level_order = c("Low", "High"),
+  ylab = "Identification accuracy (out of five)",
+  y_max = 6,
+  fill_colours = c(Low = navy, High = light_orange)
+)
+
 render_between_csv(
   file.path(data_dir, "jfk_expanded.csv"),
   file.path(lab_dir, "analysis-preview-JFKz-Girlies.png"),

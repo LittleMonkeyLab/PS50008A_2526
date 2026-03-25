@@ -11,7 +11,7 @@ format:
 
 ::: {.callout-important}
 ## Wednesday lecture — not running on campus
-There is **no live lecture** this week. Use this page instead: it shows **preview images** of the analysis run on your group’s pooled data (Data Analysis I). Use the numbers and plots here to help draft your **Results** section in APA format — see the **Thursday lab** materials for integration tips.
+There is **no live lecture** this week. Use this page instead: it shows **preview images** of the analysis run on your group’s pooled data (Data Analysis I), plus **two extra illustrative previews** (Simone’s Pantheon and Perfume) in the same layout. Use the numbers and plots here to help draft your **Results** section in APA format — see the **Thursday lab** materials for integration tips.
 :::
 
 ## How to use these previews
@@ -24,25 +24,27 @@ Each image is a **static summary** (descriptive statistics, assumption checks wh
 
 ---
 
-## TedImoBea
+## Project groups (class returns)
+
+### TedImoBea
 
 ![Analysis preview: TedImoBea](../week16/lab/analysis-preview-TedImoBea.png){fig-alt="Summary of descriptive statistics, tests, and plot for group TedImoBea" width="100%"}
 
 ---
 
-## JFKz Girlies
+### JFKz Girlies
 
 ![Analysis preview: JFKz Girlies](../week16/lab/analysis-preview-JFKz-Girlies.png){fig-alt="Summary of descriptive statistics, tests, and plot for group JFKz Girlies" width="100%"}
 
 ---
 
-## DNM
+### DNM
 
 ![Analysis preview: DNM](../week16/lab/analysis-preview-DNM.png){fig-alt="Summary of descriptive statistics, tests, and plot for group DNM" width="100%"}
 
 ---
 
-## The Boyz
+### The Boyz
 
 ::: {.callout-note collapse="true"}
 ## Design note
@@ -50,6 +52,32 @@ This study was **two independent groups** (not smiling vs smiling). The original
 :::
 
 ![Analysis preview: The Boyz](../week16/lab/analysis-preview-The-Boyz.png){fig-alt="Summary of descriptive statistics, tests, and plot for group The Boyz" width="100%"}
+
+---
+
+## Additional illustrative previews
+
+These use the **same Data Analysis I layout** as your returns. They are **worked examples** for comparison (not a substitute for your own group’s write-up).
+
+### Simone’s Pantheon
+
+::: {.callout-note collapse="true"}
+## Source
+Music vs no music; **person detail recall**. Data supplied as a single-column spreadsheet — refreshed from `simones_pantheon.xlsx` when previews are built.
+:::
+
+![Analysis preview: Simone’s Pantheon](../week16/lab/analysis-preview-Simones-Pantheon.png){fig-alt="Summary of descriptive statistics, tests, and plot for Simone's Pantheon" width="100%"}
+
+---
+
+### Perfume
+
+::: {.callout-note collapse="true"}
+## Source
+**Sleep** the night before (low vs high) and **identification accuracy (out of five)** — expanded teaching seed aligned with the module’s between-subjects workflow. Same statistical layout as the group previews.
+:::
+
+![Analysis preview: Perfume](../week16/lab/analysis-preview-Perfume.png){fig-alt="Summary of descriptive statistics, tests, and plot for Perfume example" width="100%"}
 
 ---
 

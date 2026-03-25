@@ -1,0 +1,16 @@
+Participant,Hours_sleep,Outcome,Sleep_group,Identification_accuracy
+1,7,Correct,Low,5
+2,6,Incorrect,Low,1
+3,7,Correct,Low,5
+4,10,Incorrect,High,1
+5,7,Incorrect,Low,1
+6,4,Correct,Low,5
+7,3,Incorrect,Low,1
+8,8,Correct,High,5
+9,9,Correct,High,5
+10,7,Incorrect,Low,1
+11,5,Incorrect,Low,1
+12,7,Correct,Low,5
+13,8,Correct,High,5
+14,6,Incorrect,Low,1
+15,9,Correct,High,5

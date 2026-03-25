@@ -48,7 +48,7 @@ Today = how to turn that into **APA Results** (and the rest of the report).
 ::: {.poll-box}
 **Learn.gold — module evaluation**
 
-- Link usually in the module menu or an announcement
+- Link on the VLE page
 - Short, **anonymous**, shapes next year’s teaching
 - If you’ve already done it: thank you; if not: please do when you can
 :::
@@ -62,7 +62,7 @@ Today = how to turn that into **APA Results** (and the rest of the report).
 
 - Extract statistics from your **returned preview** (or your own R output)
 - Write **Results** in **APA prose** — not just screenshots
-- **Figures** for submission: proper chart + **caption** (preview is a guide)
+- **Figures** for submission: copy and paste the preview (or you could make your own!) 
 - Time to **draft** with support + **Q&A**
 :::
 

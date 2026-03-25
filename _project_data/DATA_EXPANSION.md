@@ -1,6 +1,6 @@
 # Seed data expansion (teaching / analysis previews)
 
-The three small CSV files in this folder are **seed** datasets (real pilot-style snippets). For Week 16 “Data Analysis I” preview figures and for sensible teaching sample sizes, they are expanded into `*_expanded.csv` using a **reproducible** R script.
+Several small CSV files in this folder are **seed** datasets (real pilot-style snippets). For Week 16 “Data Analysis I” preview figures and for sensible teaching sample sizes, they are expanded into `*_expanded.csv` using a **reproducible** R script.
 
 ## Files
 
@@ -9,6 +9,9 @@ The three small CSV files in this folder are **seed** datasets (real pilot-style
 | `ImogenResults.csv` | `ImogenResults_expanded.csv` | Between-subjects (BM vs NBM) | 44 (22 per condition) |
 | `jfk.csv` | `jfk_expanded.csv` | Between-subjects (WPhone vs XPhone) | 44 (22 per group) |
 | `social_presence_throws.csv` | `social_presence_throws_expanded.csv` | Within-subjects / paired (High vs Low presence) | 40 pairs |
+| `perfume.csv` | `perfume_expanded.csv` | Between-subjects (Low vs High sleep night before; DV identification accuracy out of five) | 44 (22 per group) |
+
+**`perfume` seed:** `Outcome` (Correct / Incorrect) is mapped to **`Identification_accuracy`** on a **1–5** scale (Correct = 5, Incorrect = 1), i.e. **identification accuracy (out of five)**. **`Sleep_group`** is **Low** (≤7 h) vs **High** (≥8 h) from **`Hours_sleep`**. Expansion uses the same between-subjects logic with **clip 1–5**.
 
 **Original seeds are not modified.** Regeneration overwrites only the `*_expanded.csv` files.
 
@@ -21,6 +24,7 @@ The three small CSV files in this folder are **seed** datasets (real pilot-style
 3. Draw **new** observations from `Normal(mean, SD)`, **round** to integers, then **clip** to a plausible range:
    - `Words_Recalled`: 0–15  
    - `Score` (jfk): 0–20  
+   - `Identification_accuracy` (perfume): 1–5 (out of five)  
 4. **`set.seed(20260227)`** so every run produces the same expanded files.
 5. **Demographics** (`Age`, `Gender`) are **simulated** for realism only (not used in the t-tests); they are not derived from the seeds.
 
@@ -59,6 +63,7 @@ Requirements: R packages `readr`, `dplyr`, `tibble`, `ggplot2`, `grid`, `gridExt
 |-----|-------------|------|
 | `analysis-preview-TedImoBea.png` | `ImogenResults_expanded.csv` | Independent samples *t* |
 | `analysis-preview-JFKz-Girlies.png` | `jfk_expanded.csv` | Independent samples *t* |
+| `analysis-preview-Perfume.png` | `perfume_expanded.csv` | Independent samples *t* |
 | `analysis-preview-DNM.png` | `social_presence_throws_expanded.csv` | Paired samples *t* |
 | `analysis-preview-Simones-Pantheon.png` | `simones_pantheon.csv` (from `simones_pantheon.xlsx`) | Independent samples *t* |
 | `analysis-preview-The-Boyz.png` | `theboyz.csv` (as-is; two columns = two independent groups) | Independent samples *t* |

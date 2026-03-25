@@ -70,7 +70,7 @@ A Results section typically includes:
 1. **Preliminary analyses** (data cleaning, assumption checks)
 2. **Descriptive statistics** (means, SDs, sample characteristics)
 3. **Main analyses** (tests of your hypotheses)
-4. **Additional analyses** (if relevant)
+4. **Additional analyses** (not relevant!)
 
 **Which should come FIRST in a Results section?**
 

@@ -118,6 +118,24 @@ sp_exp <- expand_paired(
 
 readr::write_csv(sp_exp, file.path(pd, "social_presence_throws_expanded.csv"))
 
+# ── 4. perfume (between: Low vs High sleep, identification accuracy out of five) ─
+# Seed: Outcome Correct/Incorrect → Identification_accuracy on 1–5 (Correct=5, Incorrect=1).
+# Sleep_group: Low = ≤7 h, High = ≥8 h (from Hours_sleep).
+perf_path <- file.path(pd, "perfume.csv")
+perf <- readr::read_csv(perf_path, show_col_types = FALSE)
+perf_exp <- expand_between(
+  perf, "Sleep_group", "Identification_accuracy", n_each = 22,
+  clip_min = 1L, clip_max = 5L
+) %>%
+  mutate(
+    Age = sample(18:35, n(), replace = TRUE),
+    Gender = sample(c("F", "M", "NB"), n(), replace = TRUE, prob = c(0.55, 0.40, 0.05))
+  ) %>%
+  select(Participant, Sleep_group, Age, Gender, Identification_accuracy)
+
+readr::write_csv(perf_exp, file.path(pd, "perfume_expanded.csv"))
+
 message("Wrote:\n  ", file.path(pd, "ImogenResults_expanded.csv"), "\n  ",
         file.path(pd, "jfk_expanded.csv"), "\n  ",
-        file.path(pd, "social_presence_throws_expanded.csv"))
+        file.path(pd, "social_presence_throws_expanded.csv"), "\n  ",
+        file.path(pd, "perfume_expanded.csv"))

@@ -1886,7 +1886,7 @@
     "href": "week20/lab/activity.html#activity-1-results-section-structure-25-min",
     "title": "APA Results, Evaluations, and Report Workshop",
     "section": "Activity 1: Results Section Structure (25 min)",
-    "text": "Activity 1: Results Section Structure (25 min)\n\nResults Section Components\nA Results section typically includes:\n\nPreliminary analyses (data cleaning, assumption checks)\nDescriptive statistics (means, SDs, sample characteristics)\nMain analyses (tests of your hypotheses)\nAdditional analyses (if relevant)\n\nWhich should come FIRST in a Results section?\nThe most exciting findingDescriptive statistics and preliminary analysesThe discussion of resultsReferences\n\n\nReporting Statistics\nAPA format requires specific statistical reporting:\nWhich is correctly formatted (APA style)?\nT=2.34, p=.02t = 2.34, p = 0.02t(45) = 2.34, p = .021the t-test was significant\nFor a correlation, the correct format is:\nr = .45r(48) = .45, p = .002R = 0.45, p &lt; .05correlation was significant\n\n\n\n\n\n\nNoteKey APA Statistical Reporting Rules\n\n\n\n\nReport exact p-values (e.g., p = .034), not just p &lt; .05\nUse italics for statistical symbols (t, F, r, p)\nInclude degrees of freedom: t(df), F(df1, df2), r(N-2)\nReport effect sizes (Cohen’s d, eta-squared, etc.)\nRound to 2-3 decimal places (but p-values to 3)\n\n\n\n\n\nDescribing Results\nTrue or False: The Results section should interpret what the findings mean. TRUEFALSE\nThe Results section should:\nExplain why findings occurredCompare to other studiesReport what was found without interpretationInclude limitations\n\n\nPractice: Identify the Error\n\n“The t-test showed a significant difference (p &lt; .05), proving that music improves memory.”\n\nWhat’s wrong with this statement?\nNothing - it’s correctThe p-value format is wrongIt interprets/proves causation - should just report the findingT-tests can’t be significant",
+    "text": "Activity 1: Results Section Structure (25 min)\n\nResults Section Components\nA Results section typically includes:\n\nPreliminary analyses (data cleaning, assumption checks)\nDescriptive statistics (means, SDs, sample characteristics)\nMain analyses (tests of your hypotheses)\nAdditional analyses (not relevant!)\n\nWhich should come FIRST in a Results section?\nThe most exciting findingDescriptive statistics and preliminary analysesThe discussion of resultsReferences\n\n\nReporting Statistics\nAPA format requires specific statistical reporting:\nWhich is correctly formatted (APA style)?\nT=2.34, p=.02t = 2.34, p = 0.02t(45) = 2.34, p = .021the t-test was significant\nFor a correlation, the correct format is:\nr = .45r(48) = .45, p = .002R = 0.45, p &lt; .05correlation was significant\n\n\n\n\n\n\nNoteKey APA Statistical Reporting Rules\n\n\n\n\nReport exact p-values (e.g., p = .034), not just p &lt; .05\nUse italics for statistical symbols (t, F, r, p)\nInclude degrees of freedom: t(df), F(df1, df2), r(N-2)\nReport effect sizes (Cohen’s d, eta-squared, etc.)\nRound to 2-3 decimal places (but p-values to 3)\n\n\n\n\n\nDescribing Results\nTrue or False: The Results section should interpret what the findings mean. TRUEFALSE\nThe Results section should:\nExplain why findings occurredCompare to other studiesReport what was found without interpretationInclude limitations\n\n\nPractice: Identify the Error\n\n“The t-test showed a significant difference (p &lt; .05), proving that music improves memory.”\n\nWhat’s wrong with this statement?\nNothing - it’s correctThe p-value format is wrongIt interprets/proves causation - should just report the findingT-tests can’t be significant",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2040,7 +2040,7 @@
     "href": "week20/lab/instructor-slides.html#module-evaluation",
     "title": "APA Results, Evals, and Goodbye",
     "section": "Module evaluation",
-    "text": "Module evaluation\n\nLearn.gold — module evaluation\n\nLink usually in the module menu or an announcement\nShort, anonymous, shapes next year’s teaching\nIf you’ve already done it: thank you; if not: please do when you can",
+    "text": "Module evaluation\n\nLearn.gold — module evaluation\n\nLink on the VLE page\nShort, anonymous, shapes next year’s teaching\nIf you’ve already done it: thank you; if not: please do when you can",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2054,7 +2054,7 @@
     "href": "week20/lab/instructor-slides.html#todays-focus",
     "title": "APA Results, Evals, and Goodbye",
     "section": "Today’s Focus",
-    "text": "Today’s Focus\n\nThis session\n\nExtract statistics from your returned preview (or your own R output)\nWrite Results in APA prose — not just screenshots\nFigures for submission: proper chart + caption (preview is a guide)\nTime to draft with support + Q&A",
+    "text": "Today’s Focus\n\nThis session\n\nExtract statistics from your returned preview (or your own R output)\nWrite Results in APA prose — not just screenshots\nFigures for submission: copy and paste the preview (or you could make your own!)\nTime to draft with support + Q&A",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2474,7 +2474,7 @@
     "href": "week20/analysis-showcase.html",
     "title": "Data Analysis I — Group Returns",
     "section": "",
-    "text": "ImportantWednesday lecture — not running on campus\n\n\n\nThere is no live lecture this week. Use this page instead: it shows preview images of the analysis run on your group’s pooled data (Data Analysis I). Use the numbers and plots here to help draft your Results section in APA format — see the Thursday lab materials for integration tips.",
+    "text": "ImportantWednesday lecture — not running on campus\n\n\n\nThere is no live lecture this week. Use this page instead: it shows preview images of the analysis run on your group’s pooled data (Data Analysis I), plus two extra illustrative previews (Simone’s Pantheon and Perfume) in the same layout. Use the numbers and plots here to help draft your Results section in APA format — see the Thursday lab materials for integration tips.",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2496,11 +2496,11 @@
     ]
   },
   {
-    "objectID": "week20/analysis-showcase.html#tedimobea",
-    "href": "week20/analysis-showcase.html#tedimobea",
+    "objectID": "week20/analysis-showcase.html#project-groups-class-returns",
+    "href": "week20/analysis-showcase.html#project-groups-class-returns",
     "title": "Data Analysis I — Group Returns",
-    "section": "TedImoBea",
-    "text": "TedImoBea\n\n\n\nAnalysis preview: TedImoBea",
+    "section": "Project groups (class returns)",
+    "text": "Project groups (class returns)\n\nTedImoBea\n\n\n\nAnalysis preview: TedImoBea\n\n\n\n\n\nJFKz Girlies\n\n\n\nAnalysis preview: JFKz Girlies\n\n\n\n\n\nDNM\n\n\n\nAnalysis preview: DNM\n\n\n\n\n\nThe Boyz\n\n\n\n\n\n\nNoteDesign note\n\n\n\n\n\nThis study was two independent groups (not smiling vs smiling). The original spreadsheet used one column per group (wide format) rather than one row per participant — that’s fine for a first project; the preview analysis treats each column as a separate sample and uses an independent samples t-test.\n\n\n\n\n\n\nAnalysis preview: The Boyz",
     "crumbs": [
       "Home",
       "Term 2",
@@ -2509,37 +2509,11 @@
     ]
   },
   {
-    "objectID": "week20/analysis-showcase.html#jfkz-girlies",
-    "href": "week20/analysis-showcase.html#jfkz-girlies",
+    "objectID": "week20/analysis-showcase.html#additional-illustrative-previews",
+    "href": "week20/analysis-showcase.html#additional-illustrative-previews",
     "title": "Data Analysis I — Group Returns",
-    "section": "JFKz Girlies",
-    "text": "JFKz Girlies\n\n\n\nAnalysis preview: JFKz Girlies",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 20: Wrapping Up",
-      "Data Analysis I returns (showcase)"
-    ]
-  },
-  {
-    "objectID": "week20/analysis-showcase.html#dnm",
-    "href": "week20/analysis-showcase.html#dnm",
-    "title": "Data Analysis I — Group Returns",
-    "section": "DNM",
-    "text": "DNM\n\n\n\nAnalysis preview: DNM",
-    "crumbs": [
-      "Home",
-      "Term 2",
-      "Week 20: Wrapping Up",
-      "Data Analysis I returns (showcase)"
-    ]
-  },
-  {
-    "objectID": "week20/analysis-showcase.html#the-boyz",
-    "href": "week20/analysis-showcase.html#the-boyz",
-    "title": "Data Analysis I — Group Returns",
-    "section": "The Boyz",
-    "text": "The Boyz\n\n\n\n\n\n\nNoteDesign note\n\n\n\n\n\nThis study was two independent groups (not smiling vs smiling). The original spreadsheet used one column per group (wide format) rather than one row per participant — that’s fine for a first project; the preview analysis treats each column as a separate sample and uses an independent samples t-test.\n\n\n\n\n\n\nAnalysis preview: The Boyz",
+    "section": "Additional illustrative previews",
+    "text": "Additional illustrative previews\nThese use the same Data Analysis I layout as your returns. They are worked examples for comparison (not a substitute for your own group’s write-up).\n\nSimone’s Pantheon\n\n\n\n\n\n\nNoteSource\n\n\n\n\n\nMusic vs no music; person detail recall. Data supplied as a single-column spreadsheet — refreshed from simones_pantheon.xlsx when previews are built.\n\n\n\n\n\n\nAnalysis preview: Simone’s Pantheon\n\n\n\n\n\nPerfume\n\n\n\n\n\n\nNoteSource\n\n\n\n\n\nSleep the night before (low vs high) and identification accuracy (out of five) — expanded teaching seed aligned with the module’s between-subjects workflow. Same statistical layout as the group previews.\n\n\n\n\n\n\nAnalysis preview: Perfume",
     "crumbs": [
       "Home",
       "Term 2",
