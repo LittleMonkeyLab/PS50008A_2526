@@ -16,11 +16,11 @@ There is **no live lecture** this week. Use this page instead: it shows **previe
 
 ## How to use these previews
 
-Each image is a **static summary** (descriptive statistics, assumption checks where relevant, inferential test, and a simple plot). They are **starting points** for your write-up:
+Each image is a **static summary** (descriptive statistics, assumption checks where relevant, inferential test, and a simple plot). They are starting points for your write-up:
 
 - Copy **M**, **SD**, *N*, test statistics, *p*-values, and effect sizes into your Results text (don’t screenshot the image as your only “result”).
-- **Figures in your report** should be high quality (your own reproduction in R or equivalent), with a **Figure caption** below the figure (APA style).
-- If anything looks unclear, bring questions to **lab** or **office hours**.
+- **Figures in your report** can be copied from the preview, or you can make a modest effort to reproduce these if you wish to alter the colours, but there is no expectation to do this. Markers will be familiar with what you were given and there is no requirement to modify beyond this. You should include a figure caption below the figure (APA style).
+- If anything looks unclear, the forum on the VLE page is available and the place to get speediest help!
 
 ---
 
@@ -55,9 +55,9 @@ This study was **two independent groups** (not smiling vs smiling). The original
 
 ---
 
-## Additional illustrative previews
+## And more!
 
-These use the **same Data Analysis I layout** as your returns. They are **worked examples** for comparison (not a substitute for your own group’s write-up).
+Loving these!
 
 ### Simone’s Pantheon
 
@@ -103,7 +103,7 @@ Music vs no music; **person detail recall**. Data supplied as a single-column sp
 
 ---
 
-### AFM (Halo / horn)
+### AFM (Halo / horn effect)
 
 ::: {.callout-note collapse="true"}
 ## Design
