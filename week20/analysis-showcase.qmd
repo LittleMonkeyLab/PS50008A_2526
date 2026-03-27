@@ -11,7 +11,7 @@ format:
 
 ::: {.callout-important}
 ## Wednesday lecture — not running on campus
-There is **no live lecture** this week. Use this page instead: it shows **preview images** of the analysis run on your group’s pooled data (Data Analysis I), plus **two extra illustrative previews** (Simone’s Pantheon and Perfume) in the same layout. Use the numbers and plots here to help draft your **Results** section in APA format — see the **Thursday lab** materials for integration tips.
+There is **no live lecture** this week. Use this page instead: it shows **preview images** of the analysis run on your group’s pooled data (Data Analysis I), plus **extra illustrative previews** (Simone’s Pantheon, Perfume, and three **project design examples** — Memoral Colours, Doughnuts, AFM) in the same layout. Use the numbers and plots here to help draft your **Results** section in APA format — see the **Thursday lab** materials for integration tips.
 :::
 
 ## How to use these previews
@@ -78,6 +78,39 @@ Music vs no music; **person detail recall**. Data supplied as a single-column sp
 :::
 
 ![Analysis preview: Perfume](../week16/lab/analysis-preview-Perfume.png){fig-alt="Summary of descriptive statistics, tests, and plot for Perfume example" width="100%"}
+
+---
+
+### Memoral Colours
+
+::: {.callout-note collapse="true"}
+## Design
+**Between-subjects:** Yellow vs **Grey** screen background; DV = **words recalled** (raw **0–12**). Seed expanded for teaching — **Grey** higher than Yellow on average.
+:::
+
+![Analysis preview: Memoral Colours](../week16/lab/analysis-preview-Memoral-Colours.png){fig-alt="Summary of descriptive statistics, tests, and plot for Memoral Colours" width="100%"}
+
+---
+
+### Doughnuts
+
+::: {.callout-note collapse="true"}
+## Design
+**Within-subjects / paired:** **Smiling** vs **Neutral** target faces; DV = **approachability** (**1–10**).
+:::
+
+![Analysis preview: Doughnuts](../week16/lab/analysis-preview-Doughnuts.png){fig-alt="Summary of descriptive statistics, tests, and plot for Doughnuts" width="100%"}
+
+---
+
+### AFM (Halo / horn)
+
+::: {.callout-note collapse="true"}
+## Design
+**Within-subjects / paired:** **Smiling** vs **Scowling** targets; DV = **willingness to hire** (**1–10**).
+:::
+
+![Analysis preview: AFM](../week16/lab/analysis-preview-AFM.png){fig-alt="Summary of descriptive statistics, tests, and plot for AFM" width="100%"}
 
 ---
 

@@ -135,7 +135,45 @@ perf_exp <- expand_between(
 
 readr::write_csv(perf_exp, file.path(pd, "perfume_expanded.csv"))
 
+# ── 5. memoral_colours (between: Yellow vs Grey background, words recalled /12) ─
+mc_path <- file.path(pd, "memoral_colours.csv")
+mc <- readr::read_csv(mc_path, show_col_types = FALSE)
+mc_exp <- expand_between(
+  mc, "Condition", "Words_Recalled", n_each = 22,
+  clip_min = 0L, clip_max = 12L
+) %>%
+  mutate(
+    Age = sample(18:35, n(), replace = TRUE),
+    Gender = sample(c("F", "M", "NB"), n(), replace = TRUE, prob = c(0.55, 0.40, 0.05))
+  ) %>%
+  select(Participant, Condition, Age, Gender, Words_Recalled)
+
+readr::write_csv(mc_exp, file.path(pd, "memoral_colours_expanded.csv"))
+
+# ── 6. doughnuts (paired: smiling vs neutral approachability /10) ───────
+dn_path <- file.path(pd, "doughnuts.csv")
+dn <- readr::read_csv(dn_path, show_col_types = FALSE)
+dn_exp <- expand_paired(
+  dn, "Smiling", "Neutral", n_pairs = 40,
+  clip_min = 1L, clip_max = 10L
+)
+
+readr::write_csv(dn_exp, file.path(pd, "doughnuts_expanded.csv"))
+
+# ── 7. afm (paired: smiling vs scowling, willingness to hire /10) ────────
+afm_path <- file.path(pd, "afm.csv")
+afm <- readr::read_csv(afm_path, show_col_types = FALSE)
+afm_exp <- expand_paired(
+  afm, "Smiling", "Scowling", n_pairs = 40,
+  clip_min = 1L, clip_max = 10L
+)
+
+readr::write_csv(afm_exp, file.path(pd, "afm_expanded.csv"))
+
 message("Wrote:\n  ", file.path(pd, "ImogenResults_expanded.csv"), "\n  ",
         file.path(pd, "jfk_expanded.csv"), "\n  ",
         file.path(pd, "social_presence_throws_expanded.csv"), "\n  ",
-        file.path(pd, "perfume_expanded.csv"))
+        file.path(pd, "perfume_expanded.csv"), "\n  ",
+        file.path(pd, "memoral_colours_expanded.csv"), "\n  ",
+        file.path(pd, "doughnuts_expanded.csv"), "\n  ",
+        file.path(pd, "afm_expanded.csv"))

@@ -489,4 +489,51 @@ render_between_wide_two_col_csv(
   fill_colours = c(`Not smiling` = navy, Smiling = light_orange)
 )
 
+# ── Project design seeds (teaching) ──────────────────────────────────────
+
+render_between_csv(
+  file.path(data_dir, "memoral_colours_expanded.csv"),
+  file.path(lab_dir, "analysis-preview-Memoral-Colours.png"),
+  title_line = "Background colour and word recall",
+  group_line = "Memoral Colours",
+  members_line = "",
+  var_grob_text = "IV: Screen background (Yellow vs Grey)          DV: Words recalled (out of 12)",
+  condition_col = "Condition",
+  value_col = "Words_Recalled",
+  level_order = c("Yellow", "Grey"),
+  ylab = "Words recalled (max 12)",
+  y_max = 14,
+  fill_colours = c(Yellow = navy, Grey = light_orange)
+)
+
+render_within_csv(
+  file.path(data_dir, "doughnuts_expanded.csv"),
+  file.path(lab_dir, "analysis-preview-Doughnuts.png"),
+  title_line = "Approachability: smiling vs neutral targets",
+  group_line = "Doughnuts",
+  members_line = "",
+  var_grob_text = "IV: Target expression (Smiling vs Neutral)          DV: Approachability (1\u201310)",
+  col_a = "Smiling",
+  col_b = "Neutral",
+  level_a = "Smiling",
+  level_b = "Neutral",
+  ylab = "Approachability (1\u201310)",
+  y_max = 11
+)
+
+render_within_csv(
+  file.path(data_dir, "afm_expanded.csv"),
+  file.path(lab_dir, "analysis-preview-AFM.png"),
+  title_line = "Halo / horn: willingness to hire",
+  group_line = "AFM",
+  members_line = "",
+  var_grob_text = "IV: Target expression (Smiling vs Scowling)          DV: Willingness to hire (1\u201310)",
+  col_a = "Smiling",
+  col_b = "Scowling",
+  level_a = "Smiling",
+  level_b = "Scowling",
+  ylab = "Willingness to hire (1\u201310)",
+  y_max = 11
+)
+
 cat("Done.\n")
