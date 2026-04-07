@@ -224,7 +224,7 @@ Before data collection begins:
 
 1. Groups pair up to exchange participants
 2. Run your study with multiple participants
-3. Aim for **at least 5 participants** per group today
+3. Aim for **at least 5 participants** per group in this session
 4. Rotate experimenter roles within your group
 5. Record ALL data and any issues that arise
 
@@ -274,7 +274,7 @@ As you circulate, note:
 ::: {.exercise-box}
 **In your groups (10 minutes):**
 
-1. Collect all data sheets from today
+1. Collect all data sheets from this session
 2. Count total participants tested
 3. Check for any missing data
 4. Note any participants to exclude and why
@@ -316,7 +316,7 @@ As you circulate, note:
 ## What You Should Have Now
 
 ::: {.example-box}
-**After today:**
+**After this session:**
 
 - Data from multiple participants
 - Experience running your procedure
@@ -332,7 +332,7 @@ As you circulate, note:
 ::: {.callout-important}
 ## Hand Your Data to Gordon
 
-All data collection finishes today. At the end of the session:
+All data collection finishes in this session. At the end of the session:
 
 - Collect all data sheets and organise them
 - Hand your completed data to Gordon
@@ -398,7 +398,7 @@ Next week: Gordon returns your analysed data and you start the **Report Writing 
 | Week 20 | Gordon returns analysed data; start writing |
 | Easter break | Draft Method and Results; write Introduction and Discussion |
 | Late April | Proofread and format |
-| **Mid-late April** | **Submit Research Report** (exact date TBC) |
+| **1 May** | **Submit Research Report** |
 
 ---
 
@@ -410,7 +410,7 @@ Next week: Gordon returns your analysed data and you start the **Report Writing 
 1. Count your data sheets and record total N
 2. Hand all data to Gordon
 3. Note any issues or observations for your report
-4. Check EDS submission is ready for tomorrow
+4. Check EDS submission is ready for Friday 20 March
 :::
 
 ---
@@ -426,6 +426,6 @@ Next week: Gordon returns your analysed data and you start the **Report Writing 
 - Note any groups with procedural problems
 - Flag any ethical concerns observed
 - Ensure all groups have plan for completing data collection
-- Remind about EDS deadline tomorrow
+- Remind about EDS deadline Friday 20 March
 - Confirm everyone knows what to bring to Week 20
 :::

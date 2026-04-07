@@ -115,7 +115,7 @@ Keep it handy throughout the term — everything you need is here.
 | Research Plan | 20% | Fri 27 Feb 2026, 12 noon | ~1,000 word plan |
 | MCQ Exam | 20% | Wed 11 Mar 2026, in lecture | 1 hr paper-based MCQ |
 | EDS Assignment | 20% | Fri 20 Mar 2026, 12 noon | 1-2 hrs open-book results interpretation|
-| Research Report | 40% | mid-late April| 2,500 word APA report |
+| Research Report | 40% | 1 May 2026, 12 noon | 2,500 word APA report |
 
 : {tbl-colwidths="[30,10,30,30]"}
 
@@ -243,7 +243,7 @@ A: Detailed enough that someone could replicate your study from the description 
 |---|---|
 | **Weight** | 20% |
 | **Date** | Wednesday 11 March 2026 |
-| **Time** | 10:00-12:00|
+| **Time** | 10:00-12:00 (lecture slot) |
 | **Duration** | 1 hour |
 | **Location** | RHBD 143 |
 | **Format** | Paper-based, multiple choice |
@@ -285,13 +285,13 @@ You need to know the following test selection framework:
 
 | Week | Topic | How It Helps |
 |---|---|---|
-| 11 | The Big Picture | Design framework overview |
-| 12 | Variables & Hypotheses | IVs, DVs, hypothesis types |
-| 13 | Experimental Design | Between/within/matched designs |
-| 14 | *t*-tests | Paired and independent tests |
-| 15 | Correlation & Regression | Correlational design and tests |
-| 16 | Non-parametric Tests | Mann-Whitney, Wilcoxon, Spearman's |
-| 17 | Revision & Integration | Pulling it all together |
+| 11 | DataLab | Design framework overview; generating your dataset |
+| 12 | Research Design Framework | IVs, DVs, design types, hypothesis types, test selection |
+| 13 | Building Your Research | Operationalisation, design decisions, connecting design to analysis |
+| 14 | Is Your Effect Real? | NHST, p-values, t-tests, confidence intervals, effect sizes |
+| 15 | Correlation | Pearson's r, Spearman's rho, scatterplots, correlation vs causation |
+| 16 | APA Report Writing | APA structure, Methods section, academic writing conventions |
+| 17 | MCQ & EDS Preparation | Revision and integration of all concepts |
 
 ### How to Prepare
 
@@ -299,7 +299,7 @@ You need to know the following test selection framework:
 2. **Link designs to relevant tests**: Design → Variables → Hypothesis → Test → Interpret
 3. **Don't memorise — understand** the logic behind test selection
 4. **Work through scenarios** with a study buddy — explain *why* you'd choose each test
-5. **Run the example MCQ in exam conditions** you will be able to do pretty well, just by attending class
+5. **Run the example MCQ in exam conditions** — you will be able to do well just by attending class and engaging with the material
 
 ### FAQs
 
@@ -406,7 +406,7 @@ A: No. No punitive marking — if you get something wrong it doesn't reduce mark
 
 ### Common Pitfalls
 
-- Reporting the wrong or imprecise numbers - you only have a couple of results to report, so be super-careful
+- Reporting the wrong or imprecise numbers — you only have a couple of results to report, so check them carefully
 - Forgetting to include all elements required for APA reporting of test results
 - Thinking something is so obvious you don't need to include it. Just show your thinking
 - In Section B, suggesting vague improvements ("use more participants") instead of specific ones
@@ -425,7 +425,7 @@ A: No. No punitive marking — if you get something wrong it doesn't reduce mark
 | | |
 |---|---|
 | **Weight** | 40% |
-| **Deadline** | Date TBC mid-late April |
+| **Deadline** | 1 May 2026, 12 noon |
 | **Submission** | Via Moodle |
 | **Word count** | 2,500 words (±10%) |
 | **Format** | Individual lab report in APA format |

@@ -74,7 +74,9 @@ Detailed styling documentation lives in `.claude/`:
 **Term**: Definition here.
 :::
 ```
-Available: `.objectives-box`, `.definition-box`, `.example-box`, `.exercise-box`, `.solution-box`, `.poll-box`, `.research-box`, `.theory-box`
+In active use: `.objectives-box`, `.definition-box`, `.concept-box`, `.example-box`, `.exercise-box`, `.poll-box`, `.research-box`
+
+Defined but unused: `.solution-box`, `.theory-box`, `.casestudy-box`, `.discussion-box`, `.construct-box`, `.reference-box`, `.equation-box`
 
 **Quarto callouts** (preferred for readings):
 ```markdown

@@ -1,6 +1,8 @@
 ---
 title: "Week 20 Lecture Reading"
 subtitle: "Wrapping Up"
+author: "Gordon Wright"
+date: "2026-03-23"
 ---
 
 ::: {.callout-important}

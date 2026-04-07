@@ -33,15 +33,15 @@ By the end of this lecture, you will be able to:
 
 ::: {.callout-note}
 ## Performance Summary
-Overall class performance and key statistics will be shared here.
+Class performance statistics and grade distribution were shared in the live session.
 :::
 
 ## Common Mistakes
 
 ::: {.incremental}
-- TBC - Analysis of common errors
-- TBC - Conceptual misunderstandings
-- TBC - Areas for improvement
+- Confusing between-groups and within-groups designs when identifying IVs and DVs
+- Misidentifying the correct statistical test for a given research scenario
+- Confusing Type I and Type II errors, especially in relation to significance level
 :::
 
 ## Questions Most Found Difficult
@@ -49,17 +49,19 @@ Overall class performance and key statistics will be shared here.
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Topic Area 1**
+**Research Design**
 
-- Key concept review
-- Clarification of misunderstandings
+- Identifying confounding variables
+- Distinguishing correlation from causation
+- Recognising order effects and counterbalancing
 :::
 
 ::: {.column width="50%"}
-**Topic Area 2**
+**Statistical Concepts**
 
-- Key concept review
-- Clarification of misunderstandings
+- Choosing between parametric and non-parametric tests
+- Interpreting p-values and effect sizes
+- Understanding assumptions of t-tests
 :::
 
 ::::
@@ -252,7 +254,7 @@ Use this feedback to strengthen your understanding for the research report and f
 | Assessment | Due Date |
 |------------|----------|
 | EDS Assignment | Fri 20 March 2026, 12 noon |
-| Research Report | Mid-late April, 12 noon (exact date TBC) |
+| Research Report | 1 May 2026, 12 noon |
 
 ## Next Week
 

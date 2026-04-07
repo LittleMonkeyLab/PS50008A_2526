@@ -1,6 +1,8 @@
 ---
 title: "Week 19 Lecture Reading"
 subtitle: "Project Workshop"
+author: "Gordon Wright"
+date: "2026-03-16"
 ---
 
 {{< include ../../textbook/chapters/w19-lecture.qmd >}}

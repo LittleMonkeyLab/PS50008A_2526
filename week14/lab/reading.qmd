@@ -1,6 +1,8 @@
 ---
 title: "Week 14 Lab Reading"
 subtitle: "t-tests in R"
+author: "Gordon Wright"
+date: "2026-02-02"
 ---
 
 {{< include ../../textbook/chapters/w14-lab.qmd >}}

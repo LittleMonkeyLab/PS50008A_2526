@@ -23,7 +23,7 @@ This chapter is your reference guide for writing in psychology. You'll come back
 
 Psychology uses a standardised format for reporting research — the APA (American Psychological Association) style. Every lab report follows the same structure, which means readers always know where to find the information they need.
 
-Your Research Report (due mid-late April, 2,500 words) will follow this format exactly.
+Your Research Report (due 1 May, 2,500 words) will follow this format exactly.
 
 ### The Seven Sections
 
@@ -261,7 +261,7 @@ Key rules:
 ## Two Assessments, Two Studies
 
 ::: {.callout-important}
-Your **Research Plan** (due this Friday) and your **Research Report** (due mid-late April) are about **different topics**.
+Your **Research Plan** (due this Friday) and your **Research Report** (due 1 May) are about **different topics**.
 
 - The Research Plan is on the topic you chose (font difficulty, hydration, or eye contact)
 - The Research Report is based on your **group project** (a different study you'll design and run together)

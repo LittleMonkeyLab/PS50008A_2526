@@ -6,9 +6,7 @@ date: "2026-01-22"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
-    logo: ../../assets/foundations-26-logo.svg
     slide-number: c/t
-    show-slide-number: all
     progress: true
     transition: fade
     embed-resources: true
@@ -16,7 +14,6 @@ format:
     height: 700
     center: false
     center-title-slide: true
-    smaller: true
 execute:
   echo: false
   warning: false

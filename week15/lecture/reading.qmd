@@ -1,6 +1,8 @@
 ---
 title: "Week 15 Lecture Reading"
 subtitle: "Correlation"
+author: "Gordon Wright"
+date: "2026-02-09"
 ---
 
 {{< include ../../textbook/chapters/w15-lecture.qmd >}}

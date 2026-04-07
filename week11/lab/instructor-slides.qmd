@@ -1,13 +1,12 @@
 ---
 title: "DataLab"
-subtitle: "Grow Your Own Psychology Data"
+subtitle: "PS50008A Week 11 | Lab"
 author: "Gordon Wright & Bence Palfi"
 date: "2026-01-16"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
     slide-number: c/t
-    show-slide-number: all
     progress: true
     embed-resources: true
     transition: fade
@@ -15,9 +14,6 @@ format:
     height: 700
     center: false
     center-title-slide: true
-    smaller: true
-revealjs-plugins:
-  - countdown
 ---
 
 # Welcome to PS50008A {background-color="#275882"}

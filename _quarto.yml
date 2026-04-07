@@ -163,7 +163,7 @@ website:
             href: week12/lab/reading.qmd
           - text: Self-Assessment
             href: week12/lab/self-assessment.qmd
-      - section: 'Week 13: Building your Research (Plan)'
+      - section: 'Week 13: Building Your Research'
         contents:
         - text: Overview
           href: week13/index.qmd
@@ -183,6 +183,8 @@ website:
             href: week13/lab/activity.qmd
           - text: Reading
             href: week13/lab/reading.qmd
+          - text: Self-Assessment
+            href: week13/lab/self-assessment.qmd
       - section: 'Week 14: Inference & t-tests'
         contents:
         - text: Overview
@@ -203,6 +205,8 @@ website:
             href: week14/lab/activity.qmd
           - text: Reading
             href: week14/lab/reading.qmd
+          - text: Self-Assessment
+            href: week14/lab/self-assessment.qmd
       - section: 'Week 15: Correlation'
         contents:
         - text: Overview
@@ -223,7 +227,9 @@ website:
             href: week15/lab/activity.qmd
           - text: Reading
             href: week15/lab/reading.qmd
-      - section: 'Week 16: APA Lab Reports'
+          - text: Self-Assessment
+            href: week15/lab/self-assessment.qmd
+      - section: 'Week 16: APA Report Writing & Research Project'
         contents:
         - text: Overview
           href: week16/index.qmd
@@ -243,6 +249,8 @@ website:
             href: week16/lab/activity.qmd
           - text: Reading
             href: week16/lab/reading.qmd
+          - text: Self-Assessment
+            href: week16/lab/self-assessment.qmd
       - section: 'Week 17: MCQ & EDS Preparation'
         contents:
         - text: Overview
@@ -263,6 +271,8 @@ website:
             href: week17/lab/activity.qmd
           - text: Reading
             href: week17/lab/reading.qmd
+          - text: Self-Assessment
+            href: week17/lab/self-assessment.qmd
       - section: 'Week 18: MCQ Exam'
         contents:
         - text: Overview
@@ -280,6 +290,8 @@ website:
             href: week18/lab/activity.qmd
           - text: Reading
             href: week18/lab/reading.qmd
+          - text: Self-Assessment
+            href: week18/lab/self-assessment.qmd
       - section: 'Week 19: Project Workshop'
         contents:
         - text: Overview
@@ -300,6 +312,8 @@ website:
             href: week19/lab/activity.qmd
           - text: Reading
             href: week19/lab/reading.qmd
+          - text: Self-Assessment
+            href: week19/lab/self-assessment.qmd
       - section: 'Week 20: Wrapping Up'
         contents:
         - text: Overview
@@ -322,6 +336,8 @@ website:
             href: week20/lab/activity.qmd
           - text: Reading
             href: week20/lab/reading.qmd
+          - text: Self-Assessment
+            href: week20/lab/self-assessment.qmd
     - section: Textbook
       contents:
       - text: Overview
@@ -340,9 +356,9 @@ website:
           href: textbook/chapters/w12-lab.qmd
       - section: Week 13
         contents:
-        - text: 'Lecture: Design Decisions'
+        - text: 'Lecture: Building Your Research'
           href: textbook/chapters/w13-lecture.qmd
-        - text: 'Lab: Research Plan Work'
+        - text: 'Lab: Research Plan Workshop'
           href: textbook/chapters/w13-lab.qmd
       - section: Week 14
         contents:
@@ -366,13 +382,13 @@ website:
         contents:
         - text: 'Lecture: MCQ & EDS Review'
           href: textbook/chapters/w17-lecture.qmd
-        - text: 'Lab: Project Groups'
+        - text: 'Lab: Project Toolkit Phase 1'
           href: textbook/chapters/w17-lab.qmd
       - section: Week 18
         contents:
-        - text: 'Lecture: MCQ Exam'
+        - text: 'Lecture: MCQ Exam Preparation'
           href: textbook/chapters/w18-lecture.qmd
-        - text: 'Lab: Project Groups'
+        - text: 'Lab: Project Toolkit Phase 2'
           href: textbook/chapters/w18-lab.qmd
       - section: Week 19
         contents:

@@ -1,6 +1,6 @@
 ---
 title: "Group Formation & Topic Selection"
-subtitle: "PS50008A Week 16 | Lab Walkthrough"
+subtitle: "PS50008A Week 16 | Lab"
 author: "Gordon Wright"
 date: "2026-02-26"
 format:
@@ -27,15 +27,15 @@ format:
 
 | Assessment | Weight | Deadline | Status |
 |---|---|---|---|
-| **Research Plan** | 20% | Fri 27 Feb, 12 noon | **Due tomorrow!** |
+| **Research Plan** | 20% | Fri 27 Feb, 12 noon | **Due Fri 27 Feb** |
 | **MCQ Exam** | 20% | Wed 11 Mar, ~1 hour (in lecture) | Week 18 |
 | **EDS Assignment** | 20% | Fri 20 Mar, 12 noon (~1-2 hours) | Week 19 |
-| **Research Report** | 40% | Mid–late April, 12 noon | Post-Easter |
+| **Research Report** | 40% | 1 May, 12 noon | Post-Easter |
 
 ::: {.fragment}
 ::: {.callout-important}
 ## Research Plan
-Your first submission is due **tomorrow at noon**. Make sure it's uploaded to Learn before you go to bed tonight.
+Your first submission is due **Friday 27 February at noon**. Make sure it's uploaded to Learn before the deadline.
 :::
 :::
 
@@ -56,7 +56,7 @@ Your first submission is due **tomorrow at noon**. Make sure it's uploaded to Le
 ## Assessments During This Period
 - **MCQ Exam** — Wed 11 Mar (~1 hour, in lecture)
 - **EDS Assignment** — paper released on Monday, due Fri 20 Mar, 12 noon (~1-2 hours)
-- **Research Report** — Mid–late April, 12 noon
+- **Research Report** — 1 May, 12 noon
 :::
 :::
 
@@ -494,7 +494,7 @@ A hypothesis should be:
 | **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due (~1 hour) |
 | **Week 19** Thu 19 Mar | Group: **collect data** |
 | **Week 20** Thu 26 Mar | Write-up support |
-| **Mid–late April**, 12 noon | **Research Report** due |
+| **1 May**, 12 noon | **Research Report** due |
 
 ---
 

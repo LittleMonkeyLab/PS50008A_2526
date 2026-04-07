@@ -1,6 +1,6 @@
 ---
 title: "Week 11: DataLab"
-subtitle: "PS50008A Research Methods & Experimental Design | 12-16 January 2026"
+subtitle: "PS50008A Research Methods | 12-16 January 2026"
 author: "Gordon Wright"
 date: "2026-01-12"
 ---
@@ -72,21 +72,15 @@ By the end of this week, you will be able to:
 
 | Resource | Description |
 |----------|-------------|
-| [Week 11 Reading](lecture/reading.qmd) | Introduction to research methods |
-| *Lab Activity | DataLab stations and instructions |
-| *Lab Reading | Background on the DataLab tasks |
-| *Lab Slides| Opening slides for the lab session |
-| *Data Dictionary| Complete variable reference guide |
-<!-- | [*Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
-| [*Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
-| [*Instructor Slides](lab/instructor-slides.html){target="_blank"} | Opening slides for the lab session |
-| [*Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide | -->
-
-* Made available after the lab!
+| [Lecture Reading](lecture/reading.qmd) | Introduction to research methods |
+| [Lab Activity](lab/activity.qmd) | DataLab stations and instructions |
+| [Lab Reading](lab/reading.qmd) | Background on the DataLab tasks |
+| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Opening slides for the lab session |
+| [Data Dictionary](lab/data-dictionary.qmd) | Complete variable reference guide |
 
 ## What's Next?
 
-- **Week 12**: Your first lecture (2 hours). We'll get out feet wet with the DataLab data together.
+- **Week 12**: Your first lecture (2 hours). We'll get our feet wet with the DataLab data together.
 
 ## Key Concepts Introduced
 

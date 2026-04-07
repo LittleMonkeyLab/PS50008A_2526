@@ -28,14 +28,14 @@ format-links:
 | Week | Dates | Topic | Lecture | Lab | Assessment |
 |:----:|-------|-------|:-------:|:---:|:----------:|
 | 11 | 12-16 Jan | [DataLab](week11/index.qmd) | None | DataLab |  |
-| 12 | 19-23 Jan | Distributions & Variability | Yes | Descriptives in R | |
+| 12 | 19-23 Jan | Research Design Framework | Yes | Design Detectives | |
 | 13 | 26-30 Jan | Building Your Research | Yes | Research Plan Workshop | |
 | 14 | 2-6 Feb | Is Your Effect Real? | Yes | t-tests in R | |
 | 15 | 9-13 Feb | Correlation | Yes | Correlation in R | |
 | — | 16-20 Feb | **Reading Week** | — | — | Work on Research Plan |
-| 16 | 23-27 Feb | Regression | Yes | Project groups | **Research Plan due Fri 27 Feb** |
-| 17 | 2-6 Mar | Interpretation & Credibility | Yes | Project groups | |
-| 18 | 9-13 Mar | MCQ Exam | **MCQ Exam** | Project groups | **MCQ Exam Mon 9 Mar** |
+| 16 | 23-27 Feb | APA Report Writing & Research Project | Yes | Project groups | **Research Plan due Fri 27 Feb** |
+| 17 | 2-6 Mar | MCQ & EDS Preparation | Yes | Project groups | |
+| 18 | 9-13 Mar | MCQ Exam | **MCQ Exam** | Project groups | **MCQ Exam Wed 11 Mar** |
 | 19 | 16-20 Mar | Project Workshop | Yes | Project groups | **EDS due Fri 20 Mar** |
 | 20 | 23-27 Mar | Wrapping Up | Yes | Report writing | |
 
@@ -45,7 +45,7 @@ format-links:
 |---------|-----|------|----------|
 | Lecture | Wednesday | 10:00-12:00 | RHBD 143 |
 | Lab Group A | Thursday | 10:00-12:00 | WB 304a |
-| Lab Group B | Thursday | 10:00-12:00 | Wb 304b |
+| Lab Group B | Thursday | 10:00-12:00 | WB 304b |
 
 ::: {.callout-warning}
 ## Week 11 Note
@@ -59,7 +59,7 @@ There is no lecture in Week 11 due to employability events.
 | Research Plan | 20% | Friday 27 February 2026, 12 noon | 16 |
 | MCQ Exam | 20% | Wednesday 11 March 2026 | 18 |
 | EDS Assignment | 20% | Friday 20 March 2026, 12 noon | 19 |
-| Research Report | 40% | Mid-late April 2026, 12 noon, date TBC | Post-term |
+| Research Report | 40% | 1 May 2026, 12 noon | Post-term |
 
 ## Week-by-Week Detail
 
@@ -71,10 +71,10 @@ There is no lecture in Week 11 due to employability events.
 - Form your project groups
 - No lecture 
 
-**Week 12: Distributions & Variability**
+**Week 12: Research Design Framework**
 
 - First lecture (2 hours)
-- Mean, median, mode, standard deviation
+- Variables, design types, hypotheses
 - Introduction to R for descriptives
 - *Report writing: Descriptive statistics*
 
@@ -111,24 +111,24 @@ There is no lecture in Week 11 due to employability events.
 
 ### Second Half: Application & Assessment (Weeks 16-20)
 
-**Week 16: Regression**
+**Week 16: APA Report Writing & Research Project**
 
 - **Research Plan due Friday**
-- From correlation to prediction
-- Line of best fit
+- APA report structure and Method section writing
+- Group project formation and topic selection
 - Labs now in project groups
 - *Report writing: Methods section*
 
-**Week 17: Interpretation & Credibility**
+**Week 17: MCQ & EDS Preparation**
 
-- P-hacking and HARKing
-- Replication crisis
-- MCQ prep in lecture
-- *Report writing: Introduction section*
+- EDS assignment structure and expectations
+- MCQ revision and practice
+- Project Toolkit Phase 1
+- *Assessment focus: MCQ and EDS preparation*
 
 **Week 18: MCQ Exam**
 
-- **MCQ Exam Monday (in lecture slot)**
+- **MCQ Exam Wednesday (in lecture slot)**
 - Lab is project support
 - *Report writing: Introduction continued*
 
@@ -141,9 +141,8 @@ There is no lecture in Week 11 due to employability events.
 
 **Week 20: Wrapping Up**
 
-- **EDS Assignment due Friday**
-- **Lecture cancelled** — *Data Analysis I* group returns on the site (preview images); use Thursday lab for APA Results integration
-- Lab: APA-style Results from returned output, module evaluation, report workshop & thank you
+- **Lecture cancelled** — analysis previews returned via the site
+- Lab: APA-style Results from returned output, module evaluation, report workshop
 - *Report writing: Results from returned summaries; Discussion — interpreting findings, limitations, implications*
 
 ## Key Dates Summary
@@ -159,5 +158,5 @@ Feb 27        Research Plan due (noon)
 Mar 11         MCQ Exam (lecture slot)
 Mar 20        EDS Assignment due (noon)
 
-April 1         Research Report due (noon)
+May 1          Research Report due (noon)
 ```

@@ -18,11 +18,11 @@ format-links:
 
 ### Open Educational Resources
 
-I shall be providing sufficient reading materials to do well in class via the VLE, materials I have curated, remixed, or written myself - so that they are perfectly in line with the teaching on the course. However, if you like the smell of paper in the morning, you are welcome to consult any Psychology textbooks (most deal with the content we cover), but I highly recommend the 2 books below (free online via the Goldsmiths Library)
+Sufficient reading materials are provided via the course website — curated, remixed, or written to be perfectly in line with the teaching on the course. If you prefer physical textbooks, you are welcome to consult any Psychology research methods text (most cover the content we address), but I highly recommend the two books below (free online via the Goldsmiths Library).
 
 ### Recommended Texts (Available via Library)
 
-Both textbooks are available as e-books through the Reading List on the VLE Goldsmiths Library (login required) :
+Both textbooks are available as e-books through the VLE Reading List and the Goldsmiths Library (login required):
 
 - **Coolican, H. (2017). *Research methods and statistics in psychology* (6th Ed.). Hodder and Stoughton.**
 [Coolican *Research methods and statistics in psychology*](https://rl.talis.com/3/gold/items/8219BFAB-D96A-4F09-DCDA-3D08837C5F52.html?login=1)
@@ -37,7 +37,7 @@ You'll need to log in with your Goldsmiths credentials. If you have trouble acce
 
 ## Software
 
-We will discuss the need for software LONG before it arises, but some students really enjoy this part of the course. If you happen to be one of this group, or part of the group that doesn't find it fun... We've got you! Don't worry!
+Software requirements are introduced gradually throughout the course. Whether you enjoy the technical side or prefer step-by-step guidance, the course materials have you covered.
 
 ### WebR (In-Browser)
 
@@ -86,7 +86,7 @@ If you want to install R on your own computer:
 
 Journal articles and key readings for the module are available on the VLE:
 
-- [PS50008A Articles Folder on Learn](https://learn.gold.ac.uk/course/section.php?id=588322#) — All journal articles for the module (Goldsmiths login required)
+- [PS50008A Articles Folder on Learn](https://learn.gold.ac.uk/course/section.php?id=588322) — All journal articles for the module (Goldsmiths login required)
 
 ## Goldsmiths Resources
 

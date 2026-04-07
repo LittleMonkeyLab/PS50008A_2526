@@ -1,6 +1,6 @@
 ---
 title: "Research Plan Workshop"
-subtitle: "PS50008A Week 13 | Lab Walkthrough"
+subtitle: "PS50008A Week 13 | Lab"
 author: "Gordon Wright"
 date: "2026-01-30"
 format:
@@ -10,6 +10,7 @@ format:
     progress: true
     transition: fade
     scrollable: true
+    embed-resources: true
     width: 1050
     height: 700
     center: false

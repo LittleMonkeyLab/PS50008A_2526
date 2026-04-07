@@ -2,21 +2,18 @@
 title: "Your Data, Your Discoveries"
 subtitle: "PS50008A Week 12 | Research Design Framework"
 author: "Gordon Wright"
-date: "2026-01-19"
+date: "2026-01-21"
 format:
   revealjs:
     theme: [default, ../../assets/slides.scss]
-    logo: ../../assets/foundations-26-logo.svg
     slide-number: c/t
-    show-slide-number: all
     progress: true
     transition: fade
+    embed-resources: true
     width: 1050
     height: 700
-    embed-resources: true
     center: false
     center-title-slide: true
-    smaller: true
 execute:
   echo: false
   warning: false
@@ -169,7 +166,9 @@ Where do research questions come from?
 - Unexpected observations
 
 ::: {.fragment}
+::: {.example-box}
 **Example:** Do people lie more when texting than face-to-face?
+:::
 :::
 
 ## Step 2: The Hypothesis
@@ -238,7 +237,7 @@ Then the cycle continues...
 | 17-18 | Data collection and initial analysis |
 | 19-20 | Complete analysis; Develop write-up (term ends) |
 | Spring Break | Individual report writing |
-| Post-term | **Research Report due** mid-late April (date TBC) |
+| Post-term | **Research Report due** 1 May 2026 |
 
 ## Lectures vs Labs
 
@@ -295,7 +294,7 @@ Find an [overview](../../assessments.qmd) here
 | [Research Plan](../../assessments/research-plan.qmd) | 20% | Fri 27 Feb 2026, 12 noon | 16 |
 | [MCQ Exam](../../assessments/mcq-exam.qmd) | 20% | Wed 11 Mar 2026, in lecture slot | 18 |
 | [EDS Assignment](../../assessments/eds-assignment.qmd) | 20% | Fri 20 Mar 2026, 12 noon | 20 |
-| [Research Report](../../assessments/research-report.qmd) | 40% | Mid-late April 2026, 12 noon (date TBC) | Post-term |
+| [Research Report](../../assessments/research-report.qmd) | 40% | 1 May 2026, 12 noon | Post-term |
 
 ## Before We Begin
 

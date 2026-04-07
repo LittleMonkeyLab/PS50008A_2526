@@ -24,7 +24,7 @@ library(knitr)
 ## Overview
 
 ::: {.callout-important}
-## Focus for Today
+## Focus for This Session
 This session focuses on **running your study and managing data collection**. By the end, you should:
 
 - Begin or continue data collection
@@ -268,13 +268,13 @@ Discuss as a group:
 
 ## Next Steps
 
-- Hand all data sheets to Gordon at the end of today's session
+- Hand all data sheets to Gordon at the end of the lab session
 - Gordon will analyse the data over Easter and return it in Week 20
 - Start thinking about your Research Report structure
 - Prepare for the Report Writing Workshop (Week 20)
 
 ::: {.callout-important}
 ## Data Collection Ends Today
-All data collection must be complete by the end of today's lab session. Hand your data to Gordon — he will analyse it and return your results in Week 20.
+All data collection must be complete by the end of the Week 19 lab session. Hand your data to Gordon — he will analyse it and return your results in Week 20.
 :::
 

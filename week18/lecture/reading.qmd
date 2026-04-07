@@ -1,6 +1,8 @@
 ---
 title: "Week 18 Lecture Reading"
 subtitle: "MCQ Exam Preparation"
+author: "Gordon Wright"
+date: "2026-03-09"
 ---
 
 {{< include ../../textbook/chapters/w18-lecture.qmd >}}

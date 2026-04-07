@@ -51,11 +51,11 @@ Use the **templates** and **example** documents; refer to the checklist for tips
 
 | # | Document | Who sees it | By when |
 |---|----------|-------------|---------|
-| 1 | **Participant Information Sheet** | Every participant (before consent) | Draft today |
-| 2 | **Consent Form** | Participant signs; you keep | Draft today |
-| 3 | **Debrief Form** | Every participant (after study) | Draft today |
-| 7 | **Participant Instructions** | Every participant (what to do in study) | Draft today |
-| 8 | **Researcher Procedure** | Researchers only (your "recipe") | **Start** today |
+| 1 | **Participant Information Sheet** | Every participant (before consent) | Draft in this session |
+| 2 | **Consent Form** | Participant signs; you keep | Draft in this session |
+| 3 | **Debrief Form** | Every participant (after study) | Draft in this session |
+| 7 | **Participant Instructions** | Every participant (what to do in study) | Draft in this session |
+| 8 | **Researcher Procedure** | Researchers only (your "recipe") | **Start** in this session |
 
 ---
 

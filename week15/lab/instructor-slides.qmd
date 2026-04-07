@@ -1,6 +1,6 @@
 ---
 title: "Correlation in R"
-subtitle: "PS50008A Week 15 | Lab Walkthrough"
+subtitle: "PS50008A Week 15 | Lab"
 author: "Gordon Wright"
 date: "2026-02-12"
 format:

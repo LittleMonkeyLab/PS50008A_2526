@@ -29,12 +29,12 @@ Each chapter and quiz can be downloaded as a PDF for offline reading. Look for t
 |------|-----------------|-------------|------|
 | **11** | [Introduction to Research](chapters/w11-lecture.qmd) | [DataLab Foundations](chapters/w11-lab.qmd) | [Week 11 Quiz](quizzes/w11-quiz.qmd) |
 | **12** | [Research Design Framework](chapters/w12-lecture.qmd) | [Introduction to R](chapters/w12-lab.qmd) | [Week 12 Quiz](quizzes/w12-quiz.qmd) |
-| **13** | [Estimation & Confidence Intervals](chapters/w13-lecture.qmd) | [Bootstrap CIs in R](chapters/w13-lab.qmd) | [Week 13 Quiz](quizzes/w13-quiz.qmd) |
+| **13** | [Building Your Research](chapters/w13-lecture.qmd) | [Research Plan Workshop](chapters/w13-lab.qmd) | [Week 13 Quiz](quizzes/w13-quiz.qmd) |
 | **14** | [Inference & t-tests](chapters/w14-lecture.qmd) | [t-tests in R](chapters/w14-lab.qmd) | [Week 14 Quiz](quizzes/w14-quiz.qmd) |
 | **15** | [Correlation](chapters/w15-lecture.qmd) | [Correlation in R](chapters/w15-lab.qmd) | [Week 15 Quiz](quizzes/w15-quiz.qmd) |
 | — | *Reading Week* | *Research Plan work* | — |
-| **16** | [Regression](chapters/w16-lecture.qmd) | [Project Groups](chapters/w16-lab.qmd) | [Week 16 Quiz](quizzes/w16-quiz.qmd) |
-| **17** | [Interpretation & Credibility](chapters/w17-lecture.qmd) | [Project Groups](chapters/w17-lab.qmd) | [Week 17 Quiz](quizzes/w17-quiz.qmd) |
+| **16** | [APA Report Writing](chapters/w16-lecture.qmd) | [Group Formation & Topic Selection](chapters/w16-lab.qmd) | [Week 16 Quiz](quizzes/w16-quiz.qmd) |
+| **17** | [MCQ & EDS Preparation](chapters/w17-lecture.qmd) | [Project Toolkit Phase 1](chapters/w17-lab.qmd) | [Week 17 Quiz](quizzes/w17-quiz.qmd) |
 | **18** | [MCQ Exam Prep](chapters/w18-lecture.qmd) | [Project Groups](chapters/w18-lab.qmd) | [Week 18 Quiz](quizzes/w18-quiz.qmd) |
 | **19** | [Project Workshop](chapters/w19-lecture.qmd) | [Data Collection](chapters/w19-lab.qmd) | [Week 19 Quiz](quizzes/w19-quiz.qmd) |
 | **20** | [Wrapping Up](chapters/w20-lecture.qmd) | [Report Writing](chapters/w20-lab.qmd) | [Week 20 Quiz](quizzes/w20-quiz.qmd) |
@@ -53,7 +53,7 @@ Week 12 introduces ALL the terminology you need for your Research Plan: IV, DV, 
 | 16 | Research Plan due Fri 27 Feb (20%) |
 | 18 | MCQ Exam Wed 11 Mar (20%) |
 | 19 | EDS Assignment due Fri 20 Mar (20%) |
-| Post-term | Research Report due mid-late April, date TBC (40%) |
+| Post-term | Research Report due 1 May 2026 (40%) |
 
 ---
 

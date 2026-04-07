@@ -1,6 +1,8 @@
 ---
 title: "Week 16 Lab Reading"
 subtitle: "Group Formation & Literature Review"
+author: "Gordon Wright"
+date: "2026-02-23"
 ---
 
 ::: {.callout-tip}
@@ -18,7 +20,7 @@ This reading prepares you for Thursday's lab, where you'll form your Research Re
 
 ## Forming Your Project Group
 
-In Thursday's lab, you'll form groups of 3–4 students. Each group will work together on a research project, collecting data that every member will then use to write their own individual Research Report (due mid-late April).
+In Thursday's lab, you'll form groups of 3–4 students. Each group will work together on a research project, collecting data that every member will then use to write their own individual Research Report (due 1 May).
 
 ### How Groups Work
 

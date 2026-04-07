@@ -17,7 +17,7 @@ execute:
 ## Overview
 
 ::: {.callout-important}
-## Focus for today
+## Focus for this session
 This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 19**.
 :::
 

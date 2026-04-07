@@ -1,6 +1,8 @@
 ---
 title: "Week 19 Lab Reading"
 subtitle: "Project Groups - Data Collection"
+author: "Gordon Wright"
+date: "2026-03-16"
 ---
 
 {{< include ../../textbook/chapters/w19-lab.qmd >}}

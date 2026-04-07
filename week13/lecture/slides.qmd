@@ -9,6 +9,7 @@ format:
     slide-number: c/t
     progress: true
     transition: fade
+    embed-resources: true
     scrollable: true
     width: 1050
     height: 700

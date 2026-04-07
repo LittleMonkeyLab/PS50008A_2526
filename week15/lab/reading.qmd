@@ -1,6 +1,8 @@
 ---
 title: "Week 15 Lab Reading"
 subtitle: "Correlation in R"
+author: "Gordon Wright"
+date: "2026-02-09"
 ---
 
 {{< include ../../textbook/chapters/w15-lab.qmd >}}

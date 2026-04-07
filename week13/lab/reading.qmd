@@ -1,6 +1,8 @@
 ---
 title: "Week 13 Lab Reading"
 subtitle: "Bootstrap CIs in R"
+author: "Gordon Wright"
+date: "2026-01-26"
 ---
 
 {{< include ../../textbook/chapters/w13-lab.qmd >}}

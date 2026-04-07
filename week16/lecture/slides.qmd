@@ -583,7 +583,7 @@ The Research Plan practises the skills. The Research Report applies them to real
 ::: definition-box
 **Assessment 4: Research Report**
 
--   **Due**: mid-late April
+-   **Due**: 1 May
 -   **Word count**: 2,500 words
 -   **Format**: Individual APA-style lab report
 -   **Weight**: 40% of module mark (double-weighted)
@@ -602,7 +602,7 @@ The Research Plan practises the skills. The Research Report applies them to real
 3.  **Week 19**: Collect data as a group
 4.  **Week 20**: Analyse data, begin writing
 5.  **Easter**: Write your individual Research Report
-6.  **mid-late April**: Submit
+6.  **1 May**: Submit
 :::
 
 ## Individual Report, Group Data
@@ -630,7 +630,7 @@ While data comes from your group project, the Research Report is an **individual
 | **Wk 19** | Collect data | Results section |
 | **Wk 20** | Analyse data, report writing workshop | Discussion section |
 | **Easter** | Individual write-up | Pull it all together |
-| **Mid-late April** | Submit final report |  |
+| **1 May** | Submit final report |  |
 
 # Your Research Project {background-color="#275882"}
 

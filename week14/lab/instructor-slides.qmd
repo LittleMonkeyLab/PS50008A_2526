@@ -1,6 +1,6 @@
 ---
 title: "t-Tests in R"
-subtitle: "PS50008A Week 14 | Lab Walkthrough"
+subtitle: "PS50008A Week 14 | Lab"
 author: "Gordon Wright"
 date: "2026-02-05"
 format:

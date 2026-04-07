@@ -1,6 +1,8 @@
 ---
 title: "Week 17 Lab Reading"
 subtitle: "Project Groups - Methodology"
+author: "Gordon Wright"
+date: "2026-03-02"
 ---
 
 {{< include ../../textbook/chapters/w17-lab.qmd >}}

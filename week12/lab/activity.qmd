@@ -1,7 +1,7 @@
 ---
 title: "Design Detectives: DataLab"
 subtitle: "Week 12 Lab Activity"
-author: "PS50008A Research Methods"
+author: "Gordon Wright"
 date: "2026-01-22"
 format:
   html:

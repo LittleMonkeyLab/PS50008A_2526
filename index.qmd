@@ -58,7 +58,7 @@ There are four assessments, all in Term 2:
 | [Research Plan](assessments.qmd#research-plan) | 20% | Fri 27 Feb (Week 16) |
 | [MCQ Exam](assessments.qmd#mcq-exam) | 20% | Wed 11 Mar (Week 18) |
 | [EDS Assignment](assessments.qmd#eds-assignment) | 20% | Fri 20 Mar (Week 19) |
-| [Research Report](assessments.qmd#research-report) | 40% | Mid-late April, date TBC |
+| [Research Report](assessments.qmd#research-report) | 40% | 1 May 2026 |
 
 See the [Assessments](assessments.qmd) page for full details.
 

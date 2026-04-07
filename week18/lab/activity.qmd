@@ -17,7 +17,7 @@ execute:
 ## Overview
 
 ::: {.callout-important}
-## Focus for today
+## Focus for this session
 This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. **Week 19 lab is data collection** — everything must be ready after this session.
 :::
 

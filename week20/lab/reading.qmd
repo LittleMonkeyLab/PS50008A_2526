@@ -1,6 +1,8 @@
 ---
 title: "Week 20 Lab Reading"
 subtitle: "APA Results, module evaluation, and report workshop"
+author: "Gordon Wright"
+date: "2026-03-23"
 ---
 
 ## This week on the site

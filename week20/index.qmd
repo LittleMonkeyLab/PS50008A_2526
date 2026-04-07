@@ -1,6 +1,6 @@
 ---
 title: "Week 20: Wrapping Up"
-subtitle: "PS50008A Research Methods | 23–27 March 2026"
+subtitle: "PS50008A Research Methods | 23-27 March 2026"
 author: "Gordon Wright"
 date: "2026-03-23"
 ---
@@ -14,7 +14,7 @@ This is the last **lab** week of PS50008A. Your **Data Analysis I** returns are 
 
 ::: {.callout-warning}
 ## Upcoming assessment
-**Research Report — due mid–late April** (exact date on Learn.gold). Start your write-up now if you haven’t already.
+**Research Report — due 1 May 2026** by 12 noon via Learn.gold. Start your write-up now if you haven’t already.
 :::
 
 **This week**
@@ -22,7 +22,7 @@ This is the last **lab** week of PS50008A. Your **Data Analysis I** returns are 
 - **Wednesday lecture — cancelled (no on-campus session).** Instead, use **[Data Analysis I — Group Returns](analysis-showcase.qmd)**: preview images of the analysis on each group’s data.
 - **Thursday lab (10:00–12:00, WB304A / WB304B)**: weaving analysis outputs (like the returned summaries / your own plots) into **APA-style Results** text, **module evaluation** reminder, and a proper send-off.
 
-## Learning objectives
+## Learning Objectives
 
 By the end of this week, you will be able to:
 

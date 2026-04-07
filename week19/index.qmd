@@ -53,7 +53,7 @@ The lab continues group project work with a focus on **data collection** — put
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | APA reporting, MCQ feedback, analysis support |
 | [Lecture Reading](lecture/reading.qmd) | APA results section guidelines |
-| [Lab Slides](lab/slides.html){target="_blank"} | Data collection workshop |
+| [Lab Slides](lab/instructor-slides.html){target="_blank"} | Data collection workshop |
 | [Lab Activity](lab/activity.qmd) | Project group data collection guide |
 | [Lab Reading](lab/reading.qmd) | Data collection best practices |
 
@@ -93,4 +93,4 @@ The lab continues group project work with a focus on **data collection** — put
 
 ## What's Next?
 
-**Week 20**: Gordon analyses and returns your group data. Report writing workshop — lab report structure, discussion sections, and writing support. **Research Report deadline**: mid-late April (exact date TBC).
+**Week 20**: Gordon analyses and returns your group data. Report writing workshop — lab report structure, discussion sections, and writing support. **Research Report deadline**: 1 May 2026.

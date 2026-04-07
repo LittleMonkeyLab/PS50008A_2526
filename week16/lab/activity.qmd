@@ -22,7 +22,7 @@ library(knitr)
 
 ## What This Lab Is About
 
-This isn't a gruelling lab — but it's an important one. By the end of today you need to have done three things:
+This isn't a gruelling lab — but it's an important one. By the end of this lab you need to have done three things:
 
 ::: {.callout-important}
 ## Today's Three Goals
@@ -44,10 +44,10 @@ Before we dive in, here's where everything sits between now and the end of term.
 
 | Assessment | Weight | Deadline |
 |---|---|---|
-| **Research Plan** | 20% | Fri 27 Feb, 12 noon — **due tomorrow!** |
+| **Research Plan** | 20% | Fri 27 Feb 2026, 12 noon |
 | **MCQ Exam** | 20% | Wed 11 Mar (~1 hour, in lecture) |
 | **EDS Assignment** | 20% | Fri 20 Mar, 12 noon (~1 hour) |
-| **Research Report** | 40% | Mid–late April, 12 noon |
+| **Research Report** | 40% | 1 May, 12 noon |
 
 ### Your Group Project Milestones
 
@@ -61,7 +61,7 @@ Before we dive in, here's where everything sits between now and the end of term.
 
 ### Quick Check
 
-**1. Which assessment is due tomorrow?**
+**1. Which assessment is due this Friday?**
 
 `r mcq(c(answer = "Research Plan", "MCQ Exam", "EDS Assignment", "Research Report"))`
 
@@ -79,13 +79,13 @@ Before we dive in, here's where everything sits between now and the end of term.
 
 ### Why This Matters
 
-Your group will work together for the rest of the term — choosing a topic, designing a study, collecting data, and sharing results. Each person then writes their own individual Research Report (2,000 words, due mid–late April).
+Your group will work together for the rest of the term — choosing a topic, designing a study, collecting data, and sharing results. Each person then writes their own individual Research Report (2,000 words, due 1 May).
 
 **Group size:** 3–4 students is ideal, but larger or smaller groups are fine. The most important thing is that **everyone joins a group**.
 
 ::: {.callout-warning}
 ## Group Allocation
-Students not part of a registered group this week will be **allocated to a group** if they emerge down the line. So please register today — even if your plans are still forming.
+Students not part of a registered group this week will be **allocated to a group** if they emerge down the line. So please register during this lab — even if your plans are still forming.
 :::
 
 ### Register Your Group
@@ -302,7 +302,7 @@ I provide the statistical output — your job in the Research Report is to **int
 | **Week 19** Fri 20 Mar, 12 noon | **EDS Assignment** due (~1 hour) |
 | **Week 19** Thu 19 Mar | Group: **collect data** |
 | **Week 20** Thu 26 Mar | Write-up support |
-| **Mid–late April**, 12 noon | **Research Report** due |
+| **1 May**, 12 noon | **Research Report** due |
 
 ## Next Steps
 

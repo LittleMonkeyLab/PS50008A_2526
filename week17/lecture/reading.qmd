@@ -1,6 +1,8 @@
 ---
 title: "Week 17 Lecture Reading"
 subtitle: "MCQ & EDS Preparation"
+author: "Gordon Wright"
+date: "2026-03-02"
 ---
 
 {{< include ../../textbook/chapters/w17-lecture.qmd >}}
