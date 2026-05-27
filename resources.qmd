@@ -63,7 +63,7 @@ If you want to install R on your own computer:
 - [Learning Statistics with R](https://learningstatisticswithr.com/) (Danielle Navarro)  
   Probably the most psych-undergrad-friendly open textbook: concepts first, then R, with the usual psych stats sequence (t-tests, ANOVA, regression, etc.).
 
-- [R for Psychological Science](https://djnavarro.github.io/r4psych/) (Danielle Navarro)  
+- [R for Psychological Science](https://djnavarro.net/r4psych/) (Danielle Navarro)
   More “learn R programming in a psych context” (great alongside a stats course).
 
 - [PsyTeachR: Data Skills for Reproducible Research](https://psyteachr.github.io/) (PsyTeachR team)  
@@ -79,7 +79,7 @@ If you want to install R on your own computer:
 
 ### Academic Writing
 
-- [Goldsmiths Academic Skills](https://www.gold.ac.uk/students/skills/) — Writing support
+- [Goldsmiths Study Support](https://www.gold.ac.uk/library/studysupport/) — Writing support
 - [Phrasebank](https://www.phrasebank.manchester.ac.uk/) — Academic phrases and structures
 
 ## Module Articles & Readings
@@ -91,7 +91,7 @@ Journal articles and key readings for the module are available on the VLE:
 ## Goldsmiths Resources
 
 - [Library](https://www.gold.ac.uk/library/) — Books, journals, databases
-- [Academic Skills Centre](https://www.gold.ac.uk/students/skills/) — Study skills support
+- [Study Support](https://www.gold.ac.uk/library/studysupport/) — Study skills support
 - [Disability & Wellbeing](https://www.gold.ac.uk/students/wellbeing/) — Support services
 - [IT Services](https://www.gold.ac.uk/it/) — Technical support
 

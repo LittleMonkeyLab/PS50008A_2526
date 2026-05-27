@@ -59,7 +59,7 @@ By the end of this week, you will be able to:
 
 | Resource | Description |
 |----------|-------------|
-| [Project Toolkit](project/project-toolkit.qmd) | Timeline, document checklist, templates — **Phase 2 this week** |
+| [Project Toolkit](../project/project-toolkit.qmd) | Timeline, document checklist, templates — **Phase 2 this week** |
 | [Lab Slides](lab/instructor-slides.html){target="_blank"} | Phase 2: materials, procedure, practice run, order form |
 | [Lab Activity](lab/activity.qmd) | Phase 2 checklist and practice run |
 | [Lab Reading](lab/reading.qmd) | Phase 2 reading: materials, data recording, practice |

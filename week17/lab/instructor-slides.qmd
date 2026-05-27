@@ -40,7 +40,7 @@ You must finish all toolkit documents in **Weeks 17 and 18** so you're ready to 
 
 ::: {.callout-note}
 ## Bookmark this page
-[Project Toolkit](project/project-toolkit.qmd) — timeline, document checklist (9 documents), worked example, blank templates.
+[Project Toolkit](../../project/project-toolkit.qmd) — timeline, document checklist (9 documents), worked example, blank templates.
 
 Use the **templates** and **example** documents; refer to the checklist for tips.
 :::
@@ -107,7 +107,7 @@ Use the **templates** and **example** documents; refer to the checklist for tips
 ::: {.exercise-box}
 **In your group (25–30 min):**
 
-1. Open the **template** (or example) from the [Project Toolkit](project/project-toolkit.qmd).
+1. Open the **template** (or example) from the [Project Toolkit](../../project/project-toolkit.qmd).
 2. Draft the **Participant Information Sheet**: purpose, what will happen, time, right to withdraw, confidentiality.
 3. Draft the **Consent Form**: same study title everywhere.
 4. Save in a shared folder; one person can take the lead.
@@ -235,4 +235,4 @@ Get sign-off from an instructor if required.
 
 # Good luck with Phase 1 {background-color="#275882"}
 
-Use the [Project Toolkit](project/project-toolkit.qmd) templates and worked example throughout.
+Use the [Project Toolkit](../../project/project-toolkit.qmd) templates and worked example throughout.

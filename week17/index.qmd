@@ -15,7 +15,7 @@ date: "2026-03-02"
 
 **Lecture** (Wednesday): Focused on **Experimental Design & Statistics (EDS)** and MCQ preparation — everything you need for both assessments.
 
-**Lab** (Thursday): **Project Toolkit — Phase 1**. You work through the [Project Toolkit](project/project-toolkit.qmd): draft core documents (Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions) and start the Researcher Procedure. These labs (17 and 18) complete the toolkit so you are ready for **data collection in Week 19**.
+**Lab** (Thursday): **Project Toolkit — Phase 1**. You work through the [Project Toolkit](../project/project-toolkit.qmd): draft core documents (Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions) and start the Researcher Procedure. These labs (17 and 18) complete the toolkit so you are ready for **data collection in Week 19**.
 
 **Lecture**: Wednesday 10:00-12:00 RHBD 143  
 **Lab**: Thursday 10:00-12:00 WB304A
@@ -68,7 +68,7 @@ The MCQ tests recognition and application (e.g. "What design?" "What test?"). Th
 |----------|-------------|
 | [Lecture Slides](lecture/slides.html){target="_blank"} | EDS & MCQ preparation: designs, tests, APA, data quality |
 | [Lecture Reading](lecture/reading.qmd) | Consolidation guide for EDS and MCQ |
-| [Project Toolkit](project/project-toolkit.qmd) | **Start here** — week-by-week timeline, document checklist, templates |
+| [Project Toolkit](../project/project-toolkit.qmd) | **Start here** — week-by-week timeline, document checklist, templates |
 | [Lab Slides](lab/instructor-slides.html){target="_blank"} | Phase 1: Draft core documents (Info Sheet, Consent, Debrief, Instructions, start Procedure) |
 | [Lab Activity](lab/activity.qmd) | Phase 1 checklist and document drafting |
 | [Lab Reading](lab/reading.qmd) | Phase 1 reading: participant-facing documents and Researcher Procedure |

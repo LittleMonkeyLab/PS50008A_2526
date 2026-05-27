@@ -85,7 +85,7 @@ Plus: **Practice run** — run the study on each other.
 ::: {.definition-box}
 **What it is:** The actual materials participants see or use — word lists, images, passages, rating sheets, questionnaires.
 
-**Tips:** Match materials across conditions (e.g. word frequency, difficulty, length). Use the [Project Options](project/group-project-options.qmd) and worked example in the toolkit. Test on each other before data collection day.
+**Tips:** Match materials across conditions (e.g. word frequency, difficulty, length). Use the [Project Options](../../project/group-project-options.qmd) and worked example in the toolkit. Test on each other before data collection day.
 :::
 
 ---

@@ -194,4 +194,4 @@ Using AI tools to generate your work is not permitted. You may use AI to help un
 
 - [Resources Page](resources.qmd)
 - [Goldsmiths Library](https://www.gold.ac.uk/library/)
-- [Academic Skills Centre](https://www.gold.ac.uk/students/skills/)
+- [Study Support](https://www.gold.ac.uk/library/studysupport/)

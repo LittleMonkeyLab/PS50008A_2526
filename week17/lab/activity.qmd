@@ -18,7 +18,7 @@ execute:
 
 ::: {.callout-important}
 ## Focus for this session
-This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 19**.
+This lab is **Phase 1** of the [Project Toolkit](../../project/project-toolkit.qmd). You will draft the **core documents** needed before data collection. Labs 17 and 18 complete the toolkit so you are ready for **data collection in Week 19**.
 :::
 
 **Phase 1 (this week):** Draft Participant Information Sheet, Consent Form, Debrief Form, Participant Instructions, and **start** the Researcher Procedure.
@@ -29,7 +29,7 @@ This lab is **Phase 1** of the [Project Toolkit](project/project-toolkit.qmd). Y
 
 ## Before You Start
 
-1. Open the [Project Toolkit](project/project-toolkit.qmd) and bookmark it.
+1. Open the [Project Toolkit](../../project/project-toolkit.qmd) and bookmark it.
 2. Download the **blank templates** from the toolkit (or use the links in the checklist below).
 3. Have your **research question**, **design** (between/within), and **procedure** (what participants do) clear — from your Research Plan (submitted Week 16).
 
@@ -48,7 +48,7 @@ Use this checklist as you work through the session. Tick off each item as your g
 - [ ] Language is accessible (no jargon)
 - [ ] Saved with a consistent filename (e.g. `YourProject_Participant_Information_Sheet`)
 
-**Reference:** Worked example in [Project Toolkit](project/project-toolkit.qmd) → Document checklist → 1. Participant Information Sheet.
+**Reference:** Worked example in [Project Toolkit](../../project/project-toolkit.qmd) → Document checklist → 1. Participant Information Sheet.
 
 ---
 
@@ -135,6 +135,6 @@ Before you leave, verify:
 
 ## Key Takeaways
 
-1. The [Project Toolkit](project/project-toolkit.qmd) is your single reference: timeline, checklist, worked example, templates.
+1. The [Project Toolkit](../../project/project-toolkit.qmd) is your single reference: timeline, checklist, worked example, templates.
 2. Phase 1 = participant-facing documents + start of Researcher Procedure.
 3. Phase 2 (Week 18) = researcher-facing documents, materials, practice run, and order form. Finish both phases so you're ready for data collection in Week 19.

@@ -18,7 +18,7 @@ execute:
 
 ::: {.callout-important}
 ## Focus for this session
-This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. **Week 19 lab is data collection** — everything must be ready after this session.
+This lab is **Phase 2** of the [Project Toolkit](../../project/project-toolkit.qmd). You will **finalise materials**, **complete the Researcher Procedure**, **practice running the study** on each other, and complete the **Research Study Order Form**. **Week 19 lab is data collection** — everything must be ready after this session.
 :::
 
 ---
@@ -26,7 +26,7 @@ This lab is **Phase 2** of the [Project Toolkit](project/project-toolkit.qmd). Y
 ## Before You Start
 
 1. Bring your **Phase 1 drafts** (Information Sheet, Consent, Debrief, Participant Instructions, Researcher Procedure draft).
-2. Open the [Project Toolkit](project/project-toolkit.qmd) and have the **templates** for documents 4, 5, 6, 9 to hand.
+2. Open the [Project Toolkit](../../project/project-toolkit.qmd) and have the **templates** for documents 4, 5, 6, 9 to hand.
 3. Agree who will run the practice (researcher vs participants) and who will take notes on timing and clarity.
 
 ---
@@ -42,7 +42,7 @@ Use this checklist as you work. Tick off each item as your group completes it.
 - [ ] Friendly and clear; printed or saved for use on data collection day
 - [ ] Saved
 
-**Reference:** [Project Toolkit](project/project-toolkit.qmd) → 4. Recruitment Script.
+**Reference:** [Project Toolkit](../../project/project-toolkit.qmd) → 4. Recruitment Script.
 
 ---
 
@@ -65,7 +65,7 @@ Use this checklist as you work. Tick off each item as your group completes it.
 - [ ] Tested on each other; any changes noted
 - [ ] Final version saved and ready to print or display
 
-**Reference:** Project Toolkit → 6. Stimulus Materials; [Project Options](project/group-project-options.qmd).
+**Reference:** Project Toolkit → 6. Stimulus Materials; [Project Options](../../project/group-project-options.qmd).
 
 ---
 
